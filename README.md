@@ -1,34 +1,33 @@
-# Welcome to Remix + Vite!
+# 100Hunters
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+Group project
 
-## Development
+We will use rebase.
 
-Run the Express server with Vite dev middleware:
+## Folder structure
 
-```shellscript
-npm run dev
-```
+## Tech stack
+- TypeScript
+- Remix (SSR React) + Vite + Express
+- Tailwind CSS
+- MySQL + PlanetScale (no ORM)
+- Storybook
+- Vitest + React Testing Library + Playwright
 
-## Deployment
+## Features
+### MVP
+- Login (basic) > Login / Logout / Signup
+- Database
+- Fixed named columns
+- Cards draggable
+- Notes
+- Contact features within the card/company
+- Activities/Tasks
 
-First, build your app for production:
+### To go further
+- Login (Discord OAuth)
+- Add/rename columns
+- List of companies (Reviews)
+- Analytics
 
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Express applications you should be right at home. Just make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+### Tasks

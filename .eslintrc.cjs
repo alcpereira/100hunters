@@ -20,8 +20,8 @@ module.exports = {
     es6: true,
   },
 
-  // Base config
-  extends: ["eslint:recommended"],
+  // ⚠️ Keep "prettier" last to avoid conflicts with other configs ⚠️
+  extends: ["eslint:recommended", "plugin:storybook/recommended", "prettier"],
 
   overrides: [
     // React
@@ -74,7 +74,7 @@ module.exports = {
 
     // Node
     {
-      files: [".eslintrc.cjs", "server.js"],
+      files: [".eslintrc.cjs", "server.ts"],
       env: {
         node: true,
       },
