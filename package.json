@@ -12,7 +12,8 @@
     "format": "prettier . --write",
     "storybook": "cross-env VITE_CJS_IGNORE_WARNING=true storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "db:gen-schema": "sh ./utils/mermaid/generate-schema.sh"
+    "db:gen-schema": "sh ./utils/mermaid/generate-schema.sh",
+    "prepare": "husky"
   },
   "dependencies": {
     "@remix-run/express": "^2.8.0",
@@ -29,6 +30,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/types": "^19.0.3",
     "@mermaid-js/mermaid-cli": "^10.8.0",
     "@remix-run/dev": "^2.8.0",
     "@storybook/addon-essentials": "^7.6.17",
@@ -57,6 +61,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.0.11",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
