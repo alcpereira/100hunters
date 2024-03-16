@@ -6,8 +6,8 @@ type CardPropsTypes = {
 export default function Card({ title, content }: CardPropsTypes) {
   return (
     <div draggable className="border-2 bg-sky-50 text-xl">
-      <h1>{title}</h1>
-      <p>{content}</p>
+      <h1 data-testid="card-title">{title}</h1>
+      <p data-testid="card-body">{content}</p>
     </div>
   );
 }
