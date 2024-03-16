@@ -5,13 +5,17 @@ Instructions:
  - Complete the checklist but skip any if not applicable or not necessary
 -->
 
-# Title - #N°: [A clear and concise description of your changes]
+# Title - [A clear and concise description of your changes]
 <!-- 
 Examples
-  Docs - #123: Updated README documentation
-  Fix - #456: Fixed config screen error
-  Feat - #777: Integrated login screen 
+  chore: Update README documentation
+  fix: Fix config screen error
+  feat: Integrate login screen 
+For more details see `docs/commit-message.md#Documentation`
 -->
+
+<!-- Complete below the issue number, if relevant, that this PR closes -->
+Solves #
 
 ## Description
 <!-- 
