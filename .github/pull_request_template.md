@@ -59,4 +59,4 @@ Solves #
 - [] Automated test coverage is satisfactory. (If applicable)
 - [] PR is fully functional.
 - [] PR regressions tested.
-- [] Documentation is updated.
+- [] Documentation regarding the PR has been properly updated.
