@@ -4,6 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "remix vite:build",
     "dev": "tsx watch --ignore ./vite.config.ts.*.mjs --env-file=.env ./server.ts",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
