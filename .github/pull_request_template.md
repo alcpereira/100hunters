@@ -8,7 +8,7 @@ Instructions:
 # Title - [A clear and concise description of your changes]
 <!-- 
 Examples
-  chore: Update README documentation
+  docs: Update README documentation
   fix: Fix config screen error
   feat: Integrate login screen 
 For more details see `docs/commit-message.md#Documentation`
