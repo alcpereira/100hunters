@@ -12,6 +12,7 @@ export default function Card({ title, content, id, columnId }: CardPropsTypes) {
   const [isDragging, setIsDragging] = useState(false);
 
   const handleOnDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+    e.dataTransfer.clearData();
     e.dataTransfer.effectAllowed = "move";
     e.dataTransfer.setData("application/hunters-card", id.toString());
     e.dataTransfer.setData("application/hunters-column", columnId.toString());

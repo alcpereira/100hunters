@@ -35,7 +35,7 @@ export default function Column({ cards, columnId }: ColumnPropsTypes) {
   };
 
   const handleOnDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
-    e.dataTransfer.clearData("application/hunters-column");
+    e.dataTransfer.setData("application/hunters-column", "");
     setIsDraggedOver(false);
   };
 
