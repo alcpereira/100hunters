@@ -2,6 +2,16 @@
 
 Fork and open a PR
 
+## Get started
+
+### Local development
+
+```sh
+npm run db:seed
+npm install
+npm run dev
+```
+
 ## Commit message format
 
 We have very precise rules over how our Git commit messages must be formatted. This format leads to easier to read commit history.

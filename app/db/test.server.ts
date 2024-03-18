@@ -1,6 +1,6 @@
-import pool from "./pool.server";
+import pool from "./db.server";
 
 export async function getData() {
-  const [result] = await pool.execute("SELECT * FROM test");
-  return result;
+  const { rows } = await pool.execute("SELECT * FROM test");
+  return rows;
 }
