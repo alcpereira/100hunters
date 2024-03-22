@@ -1,17 +1,3 @@
-# 100Hunters
-
-# Table of contents
-- [100Hunters](#100hunters)
-- [Table of contents](#table-of-contents)
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies used](#technologies-used)
-- [Folder structure](#folder-structure)
-- [Setup Instructions](#setup-instructions)
-- [Contribute](#contribute)
-- [License](#license)
-
----
 
 # Overview
 
