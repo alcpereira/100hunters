@@ -17,11 +17,11 @@
 **Database**
 - [ ] As a user I expect my data to persist across sessions and devices (MVP)
 - [ ] As a user I expect my application to store my data securely in a database (MVP)
-- [ ] As a developer I should setup DB schema to store user accounts, columns, cards, notes, contacts and activities/tasks (MVP)
+- [ ] As a developer I should setup database schema to store user accounts, columns, cards, notes, contacts and activities/tasks (MVP)
 
 **Fixed named columns**
 - [ ] As a user I should see predefined columns on the board (MVP)
-- [ ] As a user I should not be able to add/remove these columns (MVP)
+- [ ] As a user I should not be able to add or remove these columns (MVP)
 
 **Add/rename/rearrange columns**
 - [ ] As a user I should be able to add new columns (future)
