@@ -1,12 +1,5 @@
-import {
-  useMediaQuery
-} from "./chunk-GRAIWROI.js";
-import {
-  computed,
-  ref,
-  shallowRef,
-  watch
-} from "./chunk-L7IPDLAJ.js";
+import { useMediaQuery } from "./chunk-GRAIWROI.js";
+import { computed, ref, shallowRef, watch } from "./chunk-L7IPDLAJ.js";
 import "./chunk-Y2F7D3TJ.js";
 
 // node_modules/.pnpm/vitepress@1.0.0-rc.45_@algolia+client-search@4.22.1_@types+node@20.11.30_@types+react@18.2.67_sftpqcrqxi7pyvwbk4tlvmblzy/node_modules/vitepress/dist/client/theme-default/index.js
@@ -54,18 +47,20 @@ function ensureStartingSlash(path) {
 
 // node_modules/.pnpm/vitepress@1.0.0-rc.45_@algolia+client-search@4.22.1_@types+node@20.11.30_@types+react@18.2.67_sftpqcrqxi7pyvwbk4tlvmblzy/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
 function getSidebar(_sidebar, path) {
-  if (Array.isArray(_sidebar))
-    return addBase(_sidebar);
-  if (_sidebar == null)
-    return [];
+  if (Array.isArray(_sidebar)) return addBase(_sidebar);
+  if (_sidebar == null) return [];
   path = ensureStartingSlash(path);
-  const dir = Object.keys(_sidebar).sort((a, b) => {
-    return b.split("/").length - a.split("/").length;
-  }).find((dir2) => {
-    return path.startsWith(ensureStartingSlash(dir2));
-  });
+  const dir = Object.keys(_sidebar)
+    .sort((a, b) => {
+      return b.split("/").length - a.split("/").length;
+    })
+    .find((dir2) => {
+      return path.startsWith(ensureStartingSlash(dir2));
+    });
   const sidebar = dir ? _sidebar[dir] : [];
-  return Array.isArray(sidebar) ? addBase(sidebar) : addBase(sidebar.items, sidebar.base);
+  return Array.isArray(sidebar)
+    ? addBase(sidebar)
+    : addBase(sidebar.items, sidebar.base);
 }
 function getSidebarGroups(sidebar) {
   const groups = [];
@@ -87,10 +82,8 @@ function addBase(items, _base) {
   return [...items].map((_item) => {
     const item = { ..._item };
     const base = item.base || _base;
-    if (base && item.link)
-      item.link = base + item.link;
-    if (item.items)
-      item.items = addBase(item.items, base);
+    if (base && item.link) item.link = base + item.link;
+    if (item.items) item.items = addBase(item.items, base);
     return item;
   });
 }
@@ -119,18 +112,22 @@ function useSidebar() {
       sidebar.value = _sidebar.value;
   });
   const hasSidebar = computed(() => {
-    return frontmatter.value.sidebar !== false && sidebar.value.length > 0 && frontmatter.value.layout !== "home";
+    return (
+      frontmatter.value.sidebar !== false &&
+      sidebar.value.length > 0 &&
+      frontmatter.value.layout !== "home"
+    );
   });
   const leftAside = computed(() => {
     if (hasAside)
-      return frontmatter.value.aside == null ? theme2.value.aside === "left" : frontmatter.value.aside === "left";
+      return frontmatter.value.aside == null
+        ? theme2.value.aside === "left"
+        : frontmatter.value.aside === "left";
     return false;
   });
   const hasAside = computed(() => {
-    if (frontmatter.value.layout === "home")
-      return false;
-    if (frontmatter.value.aside != null)
-      return !!frontmatter.value.aside;
+    if (frontmatter.value.layout === "home") return false;
+    if (frontmatter.value.aside != null) return !!frontmatter.value.aside;
     return theme2.value.aside !== false;
   });
   const isSidebarEnabled = computed(() => hasSidebar.value && is960.value);
@@ -156,7 +153,7 @@ function useSidebar() {
     isSidebarEnabled,
     open,
     close,
-    toggle
+    toggle,
   };
 }
 
@@ -168,23 +165,29 @@ import { getScrollOffset } from "vitepress";
 var resolvedHeaders = [];
 function getHeaders(range) {
   const headers = [
-    ...document.querySelectorAll(".VPDoc :where(h1,h2,h3,h4,h5,h6)")
-  ].filter((el) => el.id && el.hasChildNodes()).map((el) => {
-    const level = Number(el.tagName[1]);
-    return {
-      element: el,
-      title: serializeHeader(el),
-      link: "#" + el.id,
-      level
-    };
-  });
+    ...document.querySelectorAll(".VPDoc :where(h1,h2,h3,h4,h5,h6)"),
+  ]
+    .filter((el) => el.id && el.hasChildNodes())
+    .map((el) => {
+      const level = Number(el.tagName[1]);
+      return {
+        element: el,
+        title: serializeHeader(el),
+        link: "#" + el.id,
+        level,
+      };
+    });
   return resolveHeaders(headers, range);
 }
 function serializeHeader(h) {
   let ret = "";
   for (const node of h.childNodes) {
     if (node.nodeType === 1) {
-      if (node.classList.contains("VPBadge") || node.classList.contains("header-anchor") || node.classList.contains("ignore-header")) {
+      if (
+        node.classList.contains("VPBadge") ||
+        node.classList.contains("header-anchor") ||
+        node.classList.contains("ignore-header")
+      ) {
         continue;
       }
       ret += node.textContent;
@@ -198,31 +201,37 @@ function resolveHeaders(headers, range) {
   if (range === false) {
     return [];
   }
-  const levelsRange = (typeof range === "object" && !Array.isArray(range) ? range.level : range) || 2;
-  const [high, low] = typeof levelsRange === "number" ? [levelsRange, levelsRange] : levelsRange === "deep" ? [2, 6] : levelsRange;
+  const levelsRange =
+    (typeof range === "object" && !Array.isArray(range)
+      ? range.level
+      : range) || 2;
+  const [high, low] =
+    typeof levelsRange === "number"
+      ? [levelsRange, levelsRange]
+      : levelsRange === "deep"
+        ? [2, 6]
+        : levelsRange;
   headers = headers.filter((h) => h.level >= high && h.level <= low);
   resolvedHeaders.length = 0;
   for (const { element, link } of headers) {
     resolvedHeaders.push({ element, link });
   }
   const ret = [];
-  outer:
-    for (let i = 0; i < headers.length; i++) {
-      const cur = headers[i];
-      if (i === 0) {
-        ret.push(cur);
-      } else {
-        for (let j = i - 1; j >= 0; j--) {
-          const prev = headers[j];
-          if (prev.level < cur.level) {
-            ;
-            (prev.children || (prev.children = [])).push(cur);
-            continue outer;
-          }
+  outer: for (let i = 0; i < headers.length; i++) {
+    const cur = headers[i];
+    if (i === 0) {
+      ret.push(cur);
+    } else {
+      for (let j = i - 1; j >= 0; j--) {
+        const prev = headers[j];
+        if (prev.level < cur.level) {
+          (prev.children || (prev.children = [])).push(cur);
+          continue outer;
         }
-        ret.push(cur);
       }
+      ret.push(cur);
     }
+  }
   return ret;
 }
 
@@ -234,11 +243,13 @@ function useLocalNav() {
     return headers.value.length > 0;
   });
   onContentUpdated(() => {
-    headers.value = getHeaders(frontmatter.value.outline ?? theme2.value.outline);
+    headers.value = getHeaders(
+      frontmatter.value.outline ?? theme2.value.outline,
+    );
   });
   return {
     headers,
-    hasLocalNav
+    hasLocalNav,
   };
 }
 
@@ -247,7 +258,7 @@ var theme = {
   Layout,
   enhanceApp: ({ app }) => {
     app.component("Badge", VPBadge);
-  }
+  },
 };
 var without_fonts_default = theme;
 export {
@@ -265,6 +276,6 @@ export {
   default11 as VPTeamPageTitle,
   without_fonts_default as default,
   useLocalNav,
-  useSidebar
+  useSidebar,
 };
 //# sourceMappingURL=@theme_index.js.map

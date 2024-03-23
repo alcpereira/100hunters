@@ -157,7 +157,7 @@ import {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId
+  withScopeId,
 } from "./chunk-L7IPDLAJ.js";
 import "./chunk-Y2F7D3TJ.js";
 export {
@@ -319,6 +319,6 @@ export {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId
+  withScopeId,
 };
 //# sourceMappingURL=vue.js.map

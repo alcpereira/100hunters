@@ -1,8 +1,4 @@
-import {
-  isReactive,
-  isRef,
-  toRaw
-} from "./chunk-L7IPDLAJ.js";
+import { isReactive, isRef, toRaw } from "./chunk-L7IPDLAJ.js";
 import "./chunk-Y2F7D3TJ.js";
 
 // node_modules/.pnpm/@vue+devtools-shared@7.0.20/node_modules/@vue/devtools-shared/dist/index.js
@@ -12,35 +8,52 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __esm = (fn, res) => function __init() {
-  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
-};
-var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
+var __esm = (fn, res) =>
+  function __init() {
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])((fn = 0))), res;
+  };
+var __commonJS = (cb, mod) =>
+  function __require() {
+    return (
+      mod ||
+        (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod),
+      mod.exports
+    );
+  };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target2) => (target2 = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target2, "default", { value: mod, enumerable: true }) : target2,
-  mod
-));
+var __toESM = (mod, isNodeMode, target2) => (
+  (target2 = mod != null ? __create(__getProtoOf(mod)) : {}),
+  __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule
+      ? __defProp(target2, "default", { value: mod, enumerable: true })
+      : target2,
+    mod,
+  )
+);
 var init_esm_shims = __esm({
   "../../node_modules/.pnpm/tsup@8.0.2_postcss@8.4.35_typescript@5.4.2/node_modules/tsup/assets/esm_shims.js"() {
     "use strict";
-  }
+  },
 });
 var require_rfdc = __commonJS({
-  "../../node_modules/.pnpm/rfdc@1.3.1/node_modules/rfdc/index.js"(exports, module) {
+  "../../node_modules/.pnpm/rfdc@1.3.1/node_modules/rfdc/index.js"(
+    exports,
+    module,
+  ) {
     "use strict";
     init_esm_shims();
     module.exports = rfdc2;
@@ -48,12 +61,15 @@ var require_rfdc = __commonJS({
       if (cur instanceof Buffer) {
         return Buffer.from(cur);
       }
-      return new cur.constructor(cur.buffer.slice(), cur.byteOffset, cur.length);
+      return new cur.constructor(
+        cur.buffer.slice(),
+        cur.byteOffset,
+        cur.length,
+      );
     }
     function rfdc2(opts) {
       opts = opts || {};
-      if (opts.circles)
-        return rfdcCircles(opts);
+      if (opts.circles) return rfdcCircles(opts);
       return opts.proto ? cloneProto : clone;
       function cloneArray(a, fn) {
         var keys = Object.keys(a);
@@ -74,20 +90,14 @@ var require_rfdc = __commonJS({
         return a2;
       }
       function clone(o) {
-        if (typeof o !== "object" || o === null)
-          return o;
-        if (o instanceof Date)
-          return new Date(o);
-        if (Array.isArray(o))
-          return cloneArray(o, clone);
-        if (o instanceof Map)
-          return new Map(cloneArray(Array.from(o), clone));
-        if (o instanceof Set)
-          return new Set(cloneArray(Array.from(o), clone));
+        if (typeof o !== "object" || o === null) return o;
+        if (o instanceof Date) return new Date(o);
+        if (Array.isArray(o)) return cloneArray(o, clone);
+        if (o instanceof Map) return new Map(cloneArray(Array.from(o), clone));
+        if (o instanceof Set) return new Set(cloneArray(Array.from(o), clone));
         var o2 = {};
         for (var k in o) {
-          if (Object.hasOwnProperty.call(o, k) === false)
-            continue;
+          if (Object.hasOwnProperty.call(o, k) === false) continue;
           var cur = o[k];
           if (typeof cur !== "object" || cur === null) {
             o2[k] = cur;
@@ -106,12 +116,9 @@ var require_rfdc = __commonJS({
         return o2;
       }
       function cloneProto(o) {
-        if (typeof o !== "object" || o === null)
-          return o;
-        if (o instanceof Date)
-          return new Date(o);
-        if (Array.isArray(o))
-          return cloneArray(o, cloneProto);
+        if (typeof o !== "object" || o === null) return o;
+        if (o instanceof Date) return new Date(o);
+        if (Array.isArray(o)) return cloneArray(o, cloneProto);
         if (o instanceof Map)
           return new Map(cloneArray(Array.from(o), cloneProto));
         if (o instanceof Set)
@@ -164,22 +171,16 @@ var require_rfdc = __commonJS({
         return a2;
       }
       function clone(o) {
-        if (typeof o !== "object" || o === null)
-          return o;
-        if (o instanceof Date)
-          return new Date(o);
-        if (Array.isArray(o))
-          return cloneArray(o, clone);
-        if (o instanceof Map)
-          return new Map(cloneArray(Array.from(o), clone));
-        if (o instanceof Set)
-          return new Set(cloneArray(Array.from(o), clone));
+        if (typeof o !== "object" || o === null) return o;
+        if (o instanceof Date) return new Date(o);
+        if (Array.isArray(o)) return cloneArray(o, clone);
+        if (o instanceof Map) return new Map(cloneArray(Array.from(o), clone));
+        if (o instanceof Set) return new Set(cloneArray(Array.from(o), clone));
         var o2 = {};
         refs.push(o);
         refsNew.push(o2);
         for (var k in o) {
-          if (Object.hasOwnProperty.call(o, k) === false)
-            continue;
+          if (Object.hasOwnProperty.call(o, k) === false) continue;
           var cur = o[k];
           if (typeof cur !== "object" || cur === null) {
             o2[k] = cur;
@@ -205,12 +206,9 @@ var require_rfdc = __commonJS({
         return o2;
       }
       function cloneProto(o) {
-        if (typeof o !== "object" || o === null)
-          return o;
-        if (o instanceof Date)
-          return new Date(o);
-        if (Array.isArray(o))
-          return cloneArray(o, cloneProto);
+        if (typeof o !== "object" || o === null) return o;
+        if (o instanceof Date) return new Date(o);
+        if (Array.isArray(o)) return cloneArray(o, cloneProto);
         if (o instanceof Map)
           return new Map(cloneArray(Array.from(o), cloneProto));
         if (o instanceof Set)
@@ -244,15 +242,25 @@ var require_rfdc = __commonJS({
         return o2;
       }
     }
-  }
+  },
 });
 init_esm_shims();
 init_esm_shims();
 var isBrowser = typeof navigator !== "undefined";
-var target = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {};
-var isInChromePanel = typeof target.chrome !== "undefined" && !!target.chrome.devtools;
+var target =
+  typeof globalThis !== "undefined"
+    ? globalThis
+    : typeof window !== "undefined"
+      ? window
+      : typeof global !== "undefined"
+        ? global
+        : {};
+var isInChromePanel =
+  typeof target.chrome !== "undefined" && !!target.chrome.devtools;
 var isInIframe = isBrowser && target.self !== target.top;
-var isInElectron = typeof navigator !== "undefined" && navigator.userAgent.toLowerCase().includes("electron");
+var isInElectron =
+  typeof navigator !== "undefined" &&
+  navigator.userAgent.toLowerCase().includes("electron");
 init_esm_shims();
 var import_rfdc = __toESM(require_rfdc(), 1);
 var deepClone = (0, import_rfdc.default)({ circles: true });
@@ -273,13 +281,15 @@ function flatHooks(configHooks, hooks = {}, parentName) {
 }
 var defaultTask = { run: (function_) => function_() };
 var _createTask = () => defaultTask;
-var createTask = typeof console.createTask !== "undefined" ? console.createTask : _createTask;
+var createTask =
+  typeof console.createTask !== "undefined" ? console.createTask : _createTask;
 function serialTaskCaller(hooks, args) {
   const name = args.shift();
   const task = createTask(name);
   return hooks.reduce(
-    (promise, hookFunction) => promise.then(() => task.run(() => hookFunction(...args))),
-    Promise.resolve()
+    (promise, hookFunction) =>
+      promise.then(() => task.run(() => hookFunction(...args))),
+    Promise.resolve(),
   );
 }
 function parallelTaskCaller(hooks, args) {
@@ -305,8 +315,7 @@ var Hookable = class {
   }
   hook(name, function_, options = {}) {
     if (!name || typeof function_ !== "function") {
-      return () => {
-      };
+      return () => {};
     }
     const originalName = name;
     let dep;
@@ -317,7 +326,9 @@ var Hookable = class {
     if (dep && !options.allowDeprecated) {
       let message = dep.message;
       if (!message) {
-        message = `${originalName} hook has been deprecated` + (dep.to ? `, please use ${dep.to}` : "");
+        message =
+          `${originalName} hook has been deprecated` +
+          (dep.to ? `, please use ${dep.to}` : "");
       }
       if (!this._deprecatedMessages) {
         this._deprecatedMessages = /* @__PURE__ */ new Set();
@@ -331,10 +342,9 @@ var Hookable = class {
       try {
         Object.defineProperty(function_, "name", {
           get: () => "_" + name.replace(/\W+/g, "_") + "_hook_cb",
-          configurable: true
+          configurable: true,
         });
-      } catch {
-      }
+      } catch {}
     }
     this._hooks[name] = this._hooks[name] || [];
     this._hooks[name].push(function_);
@@ -370,7 +380,8 @@ var Hookable = class {
     }
   }
   deprecateHook(name, deprecated) {
-    this._deprecatedHooks[name] = typeof deprecated === "string" ? { to: deprecated } : deprecated;
+    this._deprecatedHooks[name] =
+      typeof deprecated === "string" ? { to: deprecated } : deprecated;
     const _hooks = this._hooks[name] || [];
     delete this._hooks[name];
     for (const hook2 of _hooks) {
@@ -385,8 +396,8 @@ var Hookable = class {
   }
   addHooks(configHooks) {
     const hooks = flatHooks(configHooks);
-    const removeFns = Object.keys(hooks).map(
-      (key) => this.hook(key, hooks[key])
+    const removeFns = Object.keys(hooks).map((key) =>
+      this.hook(key, hooks[key]),
     );
     return () => {
       for (const unreg of removeFns.splice(0, removeFns.length)) {
@@ -414,13 +425,16 @@ var Hookable = class {
     return this.callHookWith(parallelTaskCaller, name, ...arguments_);
   }
   callHookWith(caller, name, ...arguments_) {
-    const event = this._before || this._after ? { name, args: arguments_, context: {} } : void 0;
+    const event =
+      this._before || this._after
+        ? { name, args: arguments_, context: {} }
+        : void 0;
     if (this._before) {
       callEachWith(this._before, event);
     }
     const result = caller(
       name in this._hooks ? [...this._hooks[name]] : [],
-      arguments_
+      arguments_,
     );
     if (result instanceof Promise) {
       return result.finally(() => {
@@ -465,7 +479,7 @@ function createHooks() {
 
 // node_modules/.pnpm/perfect-debounce@1.0.0/node_modules/perfect-debounce/dist/index.mjs
 var DEBOUNCE_DEFAULTS = {
-  trailing: true
+  trailing: true,
 };
 function debounce(fn, wait = 25, options = {}) {
   options = { ...DEBOUNCE_DEFAULTS, ...options };
@@ -489,7 +503,7 @@ function debounce(fn, wait = 25, options = {}) {
     });
     return currentPromise;
   };
-  return function(...args) {
+  return function (...args) {
     if (currentPromise) {
       if (options.trailing) {
         trailingArgs = args;
@@ -527,157 +541,177 @@ var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames2 = Object.getOwnPropertyNames;
 var __getProtoOf2 = Object.getPrototypeOf;
 var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-var __esm2 = (fn, res) => function __init() {
-  return fn && (res = (0, fn[__getOwnPropNames2(fn)[0]])(fn = 0)), res;
-};
-var __commonJS2 = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames2(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
+var __esm2 = (fn, res) =>
+  function __init() {
+    return fn && (res = (0, fn[__getOwnPropNames2(fn)[0]])((fn = 0))), res;
+  };
+var __commonJS2 = (cb, mod) =>
+  function __require() {
+    return (
+      mod ||
+        (0, cb[__getOwnPropNames2(cb)[0]])(
+          (mod = { exports: {} }).exports,
+          mod,
+        ),
+      mod.exports
+    );
+  };
 var __copyProps2 = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames2(from))
       if (!__hasOwnProp2.call(to, key) && key !== except)
-        __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+        __defProp2(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toESM2 = (mod, isNodeMode, target9) => (target9 = mod != null ? __create2(__getProtoOf2(mod)) : {}, __copyProps2(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp2(target9, "default", { value: mod, enumerable: true }) : target9,
-  mod
-));
+var __toESM2 = (mod, isNodeMode, target9) => (
+  (target9 = mod != null ? __create2(__getProtoOf2(mod)) : {}),
+  __copyProps2(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule
+      ? __defProp2(target9, "default", { value: mod, enumerable: true })
+      : target9,
+    mod,
+  )
+);
 var init_esm_shims2 = __esm2({
   "../../node_modules/.pnpm/tsup@8.0.2_postcss@8.4.35_typescript@5.4.2/node_modules/tsup/assets/esm_shims.js"() {
     "use strict";
-  }
+  },
 });
 var require_speakingurl = __commonJS2({
-  "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/lib/speakingurl.js"(exports, module) {
+  "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/lib/speakingurl.js"(
+    exports,
+    module,
+  ) {
     "use strict";
     init_esm_shims2();
-    (function(root) {
+    (function (root) {
       "use strict";
       var charMap = {
         // latin
-        "À": "A",
-        "Á": "A",
-        "Â": "A",
-        "Ã": "A",
-        "Ä": "Ae",
-        "Å": "A",
-        "Æ": "AE",
-        "Ç": "C",
-        "È": "E",
-        "É": "E",
-        "Ê": "E",
-        "Ë": "E",
-        "Ì": "I",
-        "Í": "I",
-        "Î": "I",
-        "Ï": "I",
-        "Ð": "D",
-        "Ñ": "N",
-        "Ò": "O",
-        "Ó": "O",
-        "Ô": "O",
-        "Õ": "O",
-        "Ö": "Oe",
-        "Ő": "O",
-        "Ø": "O",
-        "Ù": "U",
-        "Ú": "U",
-        "Û": "U",
-        "Ü": "Ue",
-        "Ű": "U",
-        "Ý": "Y",
-        "Þ": "TH",
-        "ß": "ss",
-        "à": "a",
-        "á": "a",
-        "â": "a",
-        "ã": "a",
-        "ä": "ae",
-        "å": "a",
-        "æ": "ae",
-        "ç": "c",
-        "è": "e",
-        "é": "e",
-        "ê": "e",
-        "ë": "e",
-        "ì": "i",
-        "í": "i",
-        "î": "i",
-        "ï": "i",
-        "ð": "d",
-        "ñ": "n",
-        "ò": "o",
-        "ó": "o",
-        "ô": "o",
-        "õ": "o",
-        "ö": "oe",
-        "ő": "o",
-        "ø": "o",
-        "ù": "u",
-        "ú": "u",
-        "û": "u",
-        "ü": "ue",
-        "ű": "u",
-        "ý": "y",
-        "þ": "th",
-        "ÿ": "y",
-        "ẞ": "SS",
+        À: "A",
+        Á: "A",
+        Â: "A",
+        Ã: "A",
+        Ä: "Ae",
+        Å: "A",
+        Æ: "AE",
+        Ç: "C",
+        È: "E",
+        É: "E",
+        Ê: "E",
+        Ë: "E",
+        Ì: "I",
+        Í: "I",
+        Î: "I",
+        Ï: "I",
+        Ð: "D",
+        Ñ: "N",
+        Ò: "O",
+        Ó: "O",
+        Ô: "O",
+        Õ: "O",
+        Ö: "Oe",
+        Ő: "O",
+        Ø: "O",
+        Ù: "U",
+        Ú: "U",
+        Û: "U",
+        Ü: "Ue",
+        Ű: "U",
+        Ý: "Y",
+        Þ: "TH",
+        ß: "ss",
+        à: "a",
+        á: "a",
+        â: "a",
+        ã: "a",
+        ä: "ae",
+        å: "a",
+        æ: "ae",
+        ç: "c",
+        è: "e",
+        é: "e",
+        ê: "e",
+        ë: "e",
+        ì: "i",
+        í: "i",
+        î: "i",
+        ï: "i",
+        ð: "d",
+        ñ: "n",
+        ò: "o",
+        ó: "o",
+        ô: "o",
+        õ: "o",
+        ö: "oe",
+        ő: "o",
+        ø: "o",
+        ù: "u",
+        ú: "u",
+        û: "u",
+        ü: "ue",
+        ű: "u",
+        ý: "y",
+        þ: "th",
+        ÿ: "y",
+        ẞ: "SS",
         // language specific
         // Arabic
-        "ا": "a",
-        "أ": "a",
-        "إ": "i",
-        "آ": "aa",
-        "ؤ": "u",
-        "ئ": "e",
-        "ء": "a",
-        "ب": "b",
-        "ت": "t",
-        "ث": "th",
-        "ج": "j",
-        "ح": "h",
-        "خ": "kh",
-        "د": "d",
-        "ذ": "th",
-        "ر": "r",
-        "ز": "z",
-        "س": "s",
-        "ش": "sh",
-        "ص": "s",
-        "ض": "dh",
-        "ط": "t",
-        "ظ": "z",
-        "ع": "a",
-        "غ": "gh",
-        "ف": "f",
-        "ق": "q",
-        "ك": "k",
-        "ل": "l",
-        "م": "m",
-        "ن": "n",
-        "ه": "h",
-        "و": "w",
-        "ي": "y",
-        "ى": "a",
-        "ة": "h",
-        "ﻻ": "la",
-        "ﻷ": "laa",
-        "ﻹ": "lai",
-        "ﻵ": "laa",
+        ا: "a",
+        أ: "a",
+        إ: "i",
+        آ: "aa",
+        ؤ: "u",
+        ئ: "e",
+        ء: "a",
+        ب: "b",
+        ت: "t",
+        ث: "th",
+        ج: "j",
+        ح: "h",
+        خ: "kh",
+        د: "d",
+        ذ: "th",
+        ر: "r",
+        ز: "z",
+        س: "s",
+        ش: "sh",
+        ص: "s",
+        ض: "dh",
+        ط: "t",
+        ظ: "z",
+        ع: "a",
+        غ: "gh",
+        ف: "f",
+        ق: "q",
+        ك: "k",
+        ل: "l",
+        م: "m",
+        ن: "n",
+        ه: "h",
+        و: "w",
+        ي: "y",
+        ى: "a",
+        ة: "h",
+        ﻻ: "la",
+        ﻷ: "laa",
+        ﻹ: "lai",
+        ﻵ: "laa",
         // Persian additional characters than Arabic
-        "گ": "g",
-        "چ": "ch",
-        "پ": "p",
-        "ژ": "zh",
-        "ک": "k",
-        "ی": "y",
+        گ: "g",
+        چ: "ch",
+        پ: "p",
+        ژ: "zh",
+        ک: "k",
+        ی: "y",
         // Arabic diactrics
         "َ": "a",
         "ً": "an",
@@ -709,39 +743,39 @@ var require_speakingurl = __commonJS2({
         "۸": "8",
         "۹": "9",
         // Burmese consonants
-        "က": "k",
-        "ခ": "kh",
-        "ဂ": "g",
-        "ဃ": "ga",
-        "င": "ng",
-        "စ": "s",
-        "ဆ": "sa",
-        "ဇ": "z",
-        "စျ": "za",
-        "ည": "ny",
-        "ဋ": "t",
-        "ဌ": "ta",
-        "ဍ": "d",
-        "ဎ": "da",
-        "ဏ": "na",
-        "တ": "t",
-        "ထ": "ta",
-        "ဒ": "d",
-        "ဓ": "da",
-        "န": "n",
-        "ပ": "p",
-        "ဖ": "pa",
-        "ဗ": "b",
-        "ဘ": "ba",
-        "မ": "m",
-        "ယ": "y",
-        "ရ": "ya",
-        "လ": "l",
-        "ဝ": "w",
-        "သ": "th",
-        "ဟ": "h",
-        "ဠ": "la",
-        "အ": "a",
+        က: "k",
+        ခ: "kh",
+        ဂ: "g",
+        ဃ: "ga",
+        င: "ng",
+        စ: "s",
+        ဆ: "sa",
+        ဇ: "z",
+        စျ: "za",
+        ည: "ny",
+        ဋ: "t",
+        ဌ: "ta",
+        ဍ: "d",
+        ဎ: "da",
+        ဏ: "na",
+        တ: "t",
+        ထ: "ta",
+        ဒ: "d",
+        ဓ: "da",
+        န: "n",
+        ပ: "p",
+        ဖ: "pa",
+        ဗ: "b",
+        ဘ: "ba",
+        မ: "m",
+        ယ: "y",
+        ရ: "ya",
+        လ: "l",
+        ဝ: "w",
+        သ: "th",
+        ဟ: "h",
+        ဠ: "la",
+        အ: "a",
         // consonant character combos
         "ြ": "y",
         "ျ": "ya",
@@ -750,15 +784,15 @@ var require_speakingurl = __commonJS2({
         "ျွ": "ywa",
         "ှ": "h",
         // independent vowels
-        "ဧ": "e",
+        ဧ: "e",
         "၏": "-e",
-        "ဣ": "i",
-        "ဤ": "-i",
-        "ဉ": "u",
-        "ဦ": "-u",
-        "ဩ": "aw",
-        "သြော": "aw",
-        "ဪ": "aw",
+        ဣ: "i",
+        ဤ: "-i",
+        ဉ: "u",
+        ဦ: "-u",
+        ဩ: "aw",
+        သြော: "aw",
+        ဪ: "aw",
         // numbers
         "၀": "0",
         "၁": "1",
@@ -775,63 +809,63 @@ var require_speakingurl = __commonJS2({
         "့": "",
         "း": "",
         // Czech
-        "č": "c",
-        "ď": "d",
-        "ě": "e",
-        "ň": "n",
-        "ř": "r",
-        "š": "s",
-        "ť": "t",
-        "ů": "u",
-        "ž": "z",
-        "Č": "C",
-        "Ď": "D",
-        "Ě": "E",
-        "Ň": "N",
-        "Ř": "R",
-        "Š": "S",
-        "Ť": "T",
-        "Ů": "U",
-        "Ž": "Z",
+        č: "c",
+        ď: "d",
+        ě: "e",
+        ň: "n",
+        ř: "r",
+        š: "s",
+        ť: "t",
+        ů: "u",
+        ž: "z",
+        Č: "C",
+        Ď: "D",
+        Ě: "E",
+        Ň: "N",
+        Ř: "R",
+        Š: "S",
+        Ť: "T",
+        Ů: "U",
+        Ž: "Z",
         // Dhivehi
-        "ހ": "h",
-        "ށ": "sh",
-        "ނ": "n",
-        "ރ": "r",
-        "ބ": "b",
-        "ޅ": "lh",
-        "ކ": "k",
-        "އ": "a",
-        "ވ": "v",
-        "މ": "m",
-        "ފ": "f",
-        "ދ": "dh",
-        "ތ": "th",
-        "ލ": "l",
-        "ގ": "g",
-        "ޏ": "gn",
-        "ސ": "s",
-        "ޑ": "d",
-        "ޒ": "z",
-        "ޓ": "t",
-        "ޔ": "y",
-        "ޕ": "p",
-        "ޖ": "j",
-        "ޗ": "ch",
-        "ޘ": "tt",
-        "ޙ": "hh",
-        "ޚ": "kh",
-        "ޛ": "th",
-        "ޜ": "z",
-        "ޝ": "sh",
-        "ޞ": "s",
-        "ޟ": "d",
-        "ޠ": "t",
-        "ޡ": "z",
-        "ޢ": "a",
-        "ޣ": "gh",
-        "ޤ": "q",
-        "ޥ": "w",
+        ހ: "h",
+        ށ: "sh",
+        ނ: "n",
+        ރ: "r",
+        ބ: "b",
+        ޅ: "lh",
+        ކ: "k",
+        އ: "a",
+        ވ: "v",
+        މ: "m",
+        ފ: "f",
+        ދ: "dh",
+        ތ: "th",
+        ލ: "l",
+        ގ: "g",
+        ޏ: "gn",
+        ސ: "s",
+        ޑ: "d",
+        ޒ: "z",
+        ޓ: "t",
+        ޔ: "y",
+        ޕ: "p",
+        ޖ: "j",
+        ޗ: "ch",
+        ޘ: "tt",
+        ޙ: "hh",
+        ޚ: "kh",
+        ޛ: "th",
+        ޜ: "z",
+        ޝ: "sh",
+        ޞ: "s",
+        ޟ: "d",
+        ޠ: "t",
+        ޡ: "z",
+        ޢ: "a",
+        ޣ: "gh",
+        ޤ: "q",
+        ޥ: "w",
         "ަ": "a",
         "ާ": "aa",
         "ި": "i",
@@ -845,382 +879,382 @@ var require_speakingurl = __commonJS2({
         "ް": "",
         // Georgian https://en.wikipedia.org/wiki/Romanization_of_Georgian
         // National system (2002)
-        "ა": "a",
-        "ბ": "b",
-        "გ": "g",
-        "დ": "d",
-        "ე": "e",
-        "ვ": "v",
-        "ზ": "z",
-        "თ": "t",
-        "ი": "i",
-        "კ": "k",
-        "ლ": "l",
-        "მ": "m",
-        "ნ": "n",
-        "ო": "o",
-        "პ": "p",
-        "ჟ": "zh",
-        "რ": "r",
-        "ს": "s",
-        "ტ": "t",
-        "უ": "u",
-        "ფ": "p",
-        "ქ": "k",
-        "ღ": "gh",
-        "ყ": "q",
-        "შ": "sh",
-        "ჩ": "ch",
-        "ც": "ts",
-        "ძ": "dz",
-        "წ": "ts",
-        "ჭ": "ch",
-        "ხ": "kh",
-        "ჯ": "j",
-        "ჰ": "h",
+        ა: "a",
+        ბ: "b",
+        გ: "g",
+        დ: "d",
+        ე: "e",
+        ვ: "v",
+        ზ: "z",
+        თ: "t",
+        ი: "i",
+        კ: "k",
+        ლ: "l",
+        მ: "m",
+        ნ: "n",
+        ო: "o",
+        პ: "p",
+        ჟ: "zh",
+        რ: "r",
+        ს: "s",
+        ტ: "t",
+        უ: "u",
+        ფ: "p",
+        ქ: "k",
+        ღ: "gh",
+        ყ: "q",
+        შ: "sh",
+        ჩ: "ch",
+        ც: "ts",
+        ძ: "dz",
+        წ: "ts",
+        ჭ: "ch",
+        ხ: "kh",
+        ჯ: "j",
+        ჰ: "h",
         // Greek
-        "α": "a",
-        "β": "v",
-        "γ": "g",
-        "δ": "d",
-        "ε": "e",
-        "ζ": "z",
-        "η": "i",
-        "θ": "th",
-        "ι": "i",
-        "κ": "k",
-        "λ": "l",
-        "μ": "m",
-        "ν": "n",
-        "ξ": "ks",
-        "ο": "o",
-        "π": "p",
-        "ρ": "r",
-        "σ": "s",
-        "τ": "t",
-        "υ": "y",
-        "φ": "f",
-        "χ": "x",
-        "ψ": "ps",
-        "ω": "o",
-        "ά": "a",
-        "έ": "e",
-        "ί": "i",
-        "ό": "o",
-        "ύ": "y",
-        "ή": "i",
-        "ώ": "o",
-        "ς": "s",
-        "ϊ": "i",
-        "ΰ": "y",
-        "ϋ": "y",
-        "ΐ": "i",
-        "Α": "A",
-        "Β": "B",
-        "Γ": "G",
-        "Δ": "D",
-        "Ε": "E",
-        "Ζ": "Z",
-        "Η": "I",
-        "Θ": "TH",
-        "Ι": "I",
-        "Κ": "K",
-        "Λ": "L",
-        "Μ": "M",
-        "Ν": "N",
-        "Ξ": "KS",
-        "Ο": "O",
-        "Π": "P",
-        "Ρ": "R",
-        "Σ": "S",
-        "Τ": "T",
-        "Υ": "Y",
-        "Φ": "F",
-        "Χ": "X",
-        "Ψ": "PS",
-        "Ω": "O",
-        "Ά": "A",
-        "Έ": "E",
-        "Ί": "I",
-        "Ό": "O",
-        "Ύ": "Y",
-        "Ή": "I",
-        "Ώ": "O",
-        "Ϊ": "I",
-        "Ϋ": "Y",
+        α: "a",
+        β: "v",
+        γ: "g",
+        δ: "d",
+        ε: "e",
+        ζ: "z",
+        η: "i",
+        θ: "th",
+        ι: "i",
+        κ: "k",
+        λ: "l",
+        μ: "m",
+        ν: "n",
+        ξ: "ks",
+        ο: "o",
+        π: "p",
+        ρ: "r",
+        σ: "s",
+        τ: "t",
+        υ: "y",
+        φ: "f",
+        χ: "x",
+        ψ: "ps",
+        ω: "o",
+        ά: "a",
+        έ: "e",
+        ί: "i",
+        ό: "o",
+        ύ: "y",
+        ή: "i",
+        ώ: "o",
+        ς: "s",
+        ϊ: "i",
+        ΰ: "y",
+        ϋ: "y",
+        ΐ: "i",
+        Α: "A",
+        Β: "B",
+        Γ: "G",
+        Δ: "D",
+        Ε: "E",
+        Ζ: "Z",
+        Η: "I",
+        Θ: "TH",
+        Ι: "I",
+        Κ: "K",
+        Λ: "L",
+        Μ: "M",
+        Ν: "N",
+        Ξ: "KS",
+        Ο: "O",
+        Π: "P",
+        Ρ: "R",
+        Σ: "S",
+        Τ: "T",
+        Υ: "Y",
+        Φ: "F",
+        Χ: "X",
+        Ψ: "PS",
+        Ω: "O",
+        Ά: "A",
+        Έ: "E",
+        Ί: "I",
+        Ό: "O",
+        Ύ: "Y",
+        Ή: "I",
+        Ώ: "O",
+        Ϊ: "I",
+        Ϋ: "Y",
         // Latvian
-        "ā": "a",
+        ā: "a",
         // 'č': 'c', // duplicate
-        "ē": "e",
-        "ģ": "g",
-        "ī": "i",
-        "ķ": "k",
-        "ļ": "l",
-        "ņ": "n",
+        ē: "e",
+        ģ: "g",
+        ī: "i",
+        ķ: "k",
+        ļ: "l",
+        ņ: "n",
         // 'š': 's', // duplicate
-        "ū": "u",
+        ū: "u",
         // 'ž': 'z', // duplicate
-        "Ā": "A",
+        Ā: "A",
         // 'Č': 'C', // duplicate
-        "Ē": "E",
-        "Ģ": "G",
-        "Ī": "I",
-        "Ķ": "k",
-        "Ļ": "L",
-        "Ņ": "N",
+        Ē: "E",
+        Ģ: "G",
+        Ī: "I",
+        Ķ: "k",
+        Ļ: "L",
+        Ņ: "N",
         // 'Š': 'S', // duplicate
-        "Ū": "U",
+        Ū: "U",
         // 'Ž': 'Z', // duplicate
         // Macedonian
-        "Ќ": "Kj",
-        "ќ": "kj",
-        "Љ": "Lj",
-        "љ": "lj",
-        "Њ": "Nj",
-        "њ": "nj",
-        "Тс": "Ts",
-        "тс": "ts",
+        Ќ: "Kj",
+        ќ: "kj",
+        Љ: "Lj",
+        љ: "lj",
+        Њ: "Nj",
+        њ: "nj",
+        Тс: "Ts",
+        тс: "ts",
         // Polish
-        "ą": "a",
-        "ć": "c",
-        "ę": "e",
-        "ł": "l",
-        "ń": "n",
+        ą: "a",
+        ć: "c",
+        ę: "e",
+        ł: "l",
+        ń: "n",
         // 'ó': 'o', // duplicate
-        "ś": "s",
-        "ź": "z",
-        "ż": "z",
-        "Ą": "A",
-        "Ć": "C",
-        "Ę": "E",
-        "Ł": "L",
-        "Ń": "N",
-        "Ś": "S",
-        "Ź": "Z",
-        "Ż": "Z",
+        ś: "s",
+        ź: "z",
+        ż: "z",
+        Ą: "A",
+        Ć: "C",
+        Ę: "E",
+        Ł: "L",
+        Ń: "N",
+        Ś: "S",
+        Ź: "Z",
+        Ż: "Z",
         // Ukranian
-        "Є": "Ye",
-        "І": "I",
-        "Ї": "Yi",
-        "Ґ": "G",
-        "є": "ye",
-        "і": "i",
-        "ї": "yi",
-        "ґ": "g",
+        Є: "Ye",
+        І: "I",
+        Ї: "Yi",
+        Ґ: "G",
+        є: "ye",
+        і: "i",
+        ї: "yi",
+        ґ: "g",
         // Romanian
-        "ă": "a",
-        "Ă": "A",
-        "ș": "s",
-        "Ș": "S",
+        ă: "a",
+        Ă: "A",
+        ș: "s",
+        Ș: "S",
         // 'ş': 's', // duplicate
         // 'Ş': 'S', // duplicate
-        "ț": "t",
-        "Ț": "T",
-        "ţ": "t",
-        "Ţ": "T",
+        ț: "t",
+        Ț: "T",
+        ţ: "t",
+        Ţ: "T",
         // Russian https://en.wikipedia.org/wiki/Romanization_of_Russian
         // ICAO
-        "а": "a",
-        "б": "b",
-        "в": "v",
-        "г": "g",
-        "д": "d",
-        "е": "e",
-        "ё": "yo",
-        "ж": "zh",
-        "з": "z",
-        "и": "i",
-        "й": "i",
-        "к": "k",
-        "л": "l",
-        "м": "m",
-        "н": "n",
-        "о": "o",
-        "п": "p",
-        "р": "r",
-        "с": "s",
-        "т": "t",
-        "у": "u",
-        "ф": "f",
-        "х": "kh",
-        "ц": "c",
-        "ч": "ch",
-        "ш": "sh",
-        "щ": "sh",
-        "ъ": "",
-        "ы": "y",
-        "ь": "",
-        "э": "e",
-        "ю": "yu",
-        "я": "ya",
-        "А": "A",
-        "Б": "B",
-        "В": "V",
-        "Г": "G",
-        "Д": "D",
-        "Е": "E",
-        "Ё": "Yo",
-        "Ж": "Zh",
-        "З": "Z",
-        "И": "I",
-        "Й": "I",
-        "К": "K",
-        "Л": "L",
-        "М": "M",
-        "Н": "N",
-        "О": "O",
-        "П": "P",
-        "Р": "R",
-        "С": "S",
-        "Т": "T",
-        "У": "U",
-        "Ф": "F",
-        "Х": "Kh",
-        "Ц": "C",
-        "Ч": "Ch",
-        "Ш": "Sh",
-        "Щ": "Sh",
-        "Ъ": "",
-        "Ы": "Y",
-        "Ь": "",
-        "Э": "E",
-        "Ю": "Yu",
-        "Я": "Ya",
+        а: "a",
+        б: "b",
+        в: "v",
+        г: "g",
+        д: "d",
+        е: "e",
+        ё: "yo",
+        ж: "zh",
+        з: "z",
+        и: "i",
+        й: "i",
+        к: "k",
+        л: "l",
+        м: "m",
+        н: "n",
+        о: "o",
+        п: "p",
+        р: "r",
+        с: "s",
+        т: "t",
+        у: "u",
+        ф: "f",
+        х: "kh",
+        ц: "c",
+        ч: "ch",
+        ш: "sh",
+        щ: "sh",
+        ъ: "",
+        ы: "y",
+        ь: "",
+        э: "e",
+        ю: "yu",
+        я: "ya",
+        А: "A",
+        Б: "B",
+        В: "V",
+        Г: "G",
+        Д: "D",
+        Е: "E",
+        Ё: "Yo",
+        Ж: "Zh",
+        З: "Z",
+        И: "I",
+        Й: "I",
+        К: "K",
+        Л: "L",
+        М: "M",
+        Н: "N",
+        О: "O",
+        П: "P",
+        Р: "R",
+        С: "S",
+        Т: "T",
+        У: "U",
+        Ф: "F",
+        Х: "Kh",
+        Ц: "C",
+        Ч: "Ch",
+        Ш: "Sh",
+        Щ: "Sh",
+        Ъ: "",
+        Ы: "Y",
+        Ь: "",
+        Э: "E",
+        Ю: "Yu",
+        Я: "Ya",
         // Serbian
-        "ђ": "dj",
-        "ј": "j",
+        ђ: "dj",
+        ј: "j",
         // 'љ': 'lj',  // duplicate
         // 'њ': 'nj', // duplicate
-        "ћ": "c",
-        "џ": "dz",
-        "Ђ": "Dj",
-        "Ј": "j",
+        ћ: "c",
+        џ: "dz",
+        Ђ: "Dj",
+        Ј: "j",
         // 'Љ': 'Lj', // duplicate
         // 'Њ': 'Nj', // duplicate
-        "Ћ": "C",
-        "Џ": "Dz",
+        Ћ: "C",
+        Џ: "Dz",
         // Slovak
-        "ľ": "l",
-        "ĺ": "l",
-        "ŕ": "r",
-        "Ľ": "L",
-        "Ĺ": "L",
-        "Ŕ": "R",
+        ľ: "l",
+        ĺ: "l",
+        ŕ: "r",
+        Ľ: "L",
+        Ĺ: "L",
+        Ŕ: "R",
         // Turkish
-        "ş": "s",
-        "Ş": "S",
-        "ı": "i",
-        "İ": "I",
+        ş: "s",
+        Ş: "S",
+        ı: "i",
+        İ: "I",
         // 'ç': 'c', // duplicate
         // 'Ç': 'C', // duplicate
         // 'ü': 'u', // duplicate, see langCharMap
         // 'Ü': 'U', // duplicate, see langCharMap
         // 'ö': 'o', // duplicate, see langCharMap
         // 'Ö': 'O', // duplicate, see langCharMap
-        "ğ": "g",
-        "Ğ": "G",
+        ğ: "g",
+        Ğ: "G",
         // Vietnamese
-        "ả": "a",
-        "Ả": "A",
-        "ẳ": "a",
-        "Ẳ": "A",
-        "ẩ": "a",
-        "Ẩ": "A",
-        "đ": "d",
-        "Đ": "D",
-        "ẹ": "e",
-        "Ẹ": "E",
-        "ẽ": "e",
-        "Ẽ": "E",
-        "ẻ": "e",
-        "Ẻ": "E",
-        "ế": "e",
-        "Ế": "E",
-        "ề": "e",
-        "Ề": "E",
-        "ệ": "e",
-        "Ệ": "E",
-        "ễ": "e",
-        "Ễ": "E",
-        "ể": "e",
-        "Ể": "E",
-        "ỏ": "o",
-        "ọ": "o",
-        "Ọ": "o",
-        "ố": "o",
-        "Ố": "O",
-        "ồ": "o",
-        "Ồ": "O",
-        "ổ": "o",
-        "Ổ": "O",
-        "ộ": "o",
-        "Ộ": "O",
-        "ỗ": "o",
-        "Ỗ": "O",
-        "ơ": "o",
-        "Ơ": "O",
-        "ớ": "o",
-        "Ớ": "O",
-        "ờ": "o",
-        "Ờ": "O",
-        "ợ": "o",
-        "Ợ": "O",
-        "ỡ": "o",
-        "Ỡ": "O",
-        "Ở": "o",
-        "ở": "o",
-        "ị": "i",
-        "Ị": "I",
-        "ĩ": "i",
-        "Ĩ": "I",
-        "ỉ": "i",
-        "Ỉ": "i",
-        "ủ": "u",
-        "Ủ": "U",
-        "ụ": "u",
-        "Ụ": "U",
-        "ũ": "u",
-        "Ũ": "U",
-        "ư": "u",
-        "Ư": "U",
-        "ứ": "u",
-        "Ứ": "U",
-        "ừ": "u",
-        "Ừ": "U",
-        "ự": "u",
-        "Ự": "U",
-        "ữ": "u",
-        "Ữ": "U",
-        "ử": "u",
-        "Ử": "ư",
-        "ỷ": "y",
-        "Ỷ": "y",
-        "ỳ": "y",
-        "Ỳ": "Y",
-        "ỵ": "y",
-        "Ỵ": "Y",
-        "ỹ": "y",
-        "Ỹ": "Y",
-        "ạ": "a",
-        "Ạ": "A",
-        "ấ": "a",
-        "Ấ": "A",
-        "ầ": "a",
-        "Ầ": "A",
-        "ậ": "a",
-        "Ậ": "A",
-        "ẫ": "a",
-        "Ẫ": "A",
+        ả: "a",
+        Ả: "A",
+        ẳ: "a",
+        Ẳ: "A",
+        ẩ: "a",
+        Ẩ: "A",
+        đ: "d",
+        Đ: "D",
+        ẹ: "e",
+        Ẹ: "E",
+        ẽ: "e",
+        Ẽ: "E",
+        ẻ: "e",
+        Ẻ: "E",
+        ế: "e",
+        Ế: "E",
+        ề: "e",
+        Ề: "E",
+        ệ: "e",
+        Ệ: "E",
+        ễ: "e",
+        Ễ: "E",
+        ể: "e",
+        Ể: "E",
+        ỏ: "o",
+        ọ: "o",
+        Ọ: "o",
+        ố: "o",
+        Ố: "O",
+        ồ: "o",
+        Ồ: "O",
+        ổ: "o",
+        Ổ: "O",
+        ộ: "o",
+        Ộ: "O",
+        ỗ: "o",
+        Ỗ: "O",
+        ơ: "o",
+        Ơ: "O",
+        ớ: "o",
+        Ớ: "O",
+        ờ: "o",
+        Ờ: "O",
+        ợ: "o",
+        Ợ: "O",
+        ỡ: "o",
+        Ỡ: "O",
+        Ở: "o",
+        ở: "o",
+        ị: "i",
+        Ị: "I",
+        ĩ: "i",
+        Ĩ: "I",
+        ỉ: "i",
+        Ỉ: "i",
+        ủ: "u",
+        Ủ: "U",
+        ụ: "u",
+        Ụ: "U",
+        ũ: "u",
+        Ũ: "U",
+        ư: "u",
+        Ư: "U",
+        ứ: "u",
+        Ứ: "U",
+        ừ: "u",
+        Ừ: "U",
+        ự: "u",
+        Ự: "U",
+        ữ: "u",
+        Ữ: "U",
+        ử: "u",
+        Ử: "ư",
+        ỷ: "y",
+        Ỷ: "y",
+        ỳ: "y",
+        Ỳ: "Y",
+        ỵ: "y",
+        Ỵ: "Y",
+        ỹ: "y",
+        Ỹ: "Y",
+        ạ: "a",
+        Ạ: "A",
+        ấ: "a",
+        Ấ: "A",
+        ầ: "a",
+        Ầ: "A",
+        ậ: "a",
+        Ậ: "A",
+        ẫ: "a",
+        Ẫ: "A",
         // 'ă': 'a', // duplicate
         // 'Ă': 'A', // duplicate
-        "ắ": "a",
-        "Ắ": "A",
-        "ằ": "a",
-        "Ằ": "A",
-        "ặ": "a",
-        "Ặ": "A",
-        "ẵ": "a",
-        "Ẵ": "A",
+        ắ: "a",
+        Ắ: "A",
+        ằ: "a",
+        Ằ: "A",
+        ặ: "a",
+        Ặ: "A",
+        ẵ: "a",
+        Ẵ: "A",
         "⓪": "0",
         "①": "1",
         "②": "2",
@@ -1321,23 +1355,23 @@ var require_speakingurl = __commonJS2({
         "‘": "'",
         "’": "'",
         "∂": "d",
-        "ƒ": "f",
+        ƒ: "f",
         "™": "(TM)",
         "©": "(C)",
-        "œ": "oe",
-        "Œ": "OE",
+        œ: "oe",
+        Œ: "OE",
         "®": "(R)",
         "†": "+",
         "℠": "(SM)",
         "…": "...",
         "˚": "o",
-        "º": "o",
-        "ª": "a",
+        º: "o",
+        ª: "a",
         "•": "*",
         "၊": ",",
         "။": ".",
         // currency
-        "$": "USD",
+        $: "USD",
         "€": "EUR",
         "₢": "BRN",
         "₣": "FRF",
@@ -1358,8 +1392,8 @@ var require_speakingurl = __commonJS2({
         "₵": "GHS",
         "¢": "cent",
         "¥": "CNY",
-        "元": "CNY",
-        "円": "YEN",
+        元: "CNY",
+        円: "YEN",
         "﷼": "IRR",
         "₠": "EWE",
         "฿": "THB",
@@ -1369,20 +1403,20 @@ var require_speakingurl = __commonJS2({
         "₺": "TRY",
         "؋": "AFN",
         "₼": "AZN",
-        "лв": "BGN",
+        лв: "BGN",
         "៛": "KHR",
         "₡": "CRC",
         "₸": "KZT",
-        "ден": "MKD",
-        "zł": "PLN",
+        ден: "MKD",
+        zł: "PLN",
         "₽": "RUB",
-        "₾": "GEL"
+        "₾": "GEL",
       };
       var lookAheadCharArray = [
         // burmese
         "်",
         // Dhivehi
-        "ް"
+        "ް",
       ];
       var diatricMap = {
         // Burmese
@@ -1403,222 +1437,222 @@ var require_speakingurl = __commonJS2({
         "ေါ်": "aw",
         "်": "်",
         // this is special case but the character will be converted to latin in the code
-        "က်": "et",
+        က်: "et",
         "ိုက်": "aik",
         "ောက်": "auk",
-        "င်": "in",
+        င်: "in",
         "ိုင်": "aing",
         "ောင်": "aung",
-        "စ်": "it",
-        "ည်": "i",
-        "တ်": "at",
+        စ်: "it",
+        ည်: "i",
+        တ်: "at",
         "ိတ်": "eik",
         "ုတ်": "ok",
         "ွတ်": "ut",
         "ေတ်": "it",
-        "ဒ်": "d",
+        ဒ်: "d",
         "ိုဒ်": "ok",
         "ုဒ်": "ait",
-        "န်": "an",
+        န်: "an",
         "ာန်": "an",
         "ိန်": "ein",
         "ုန်": "on",
         "ွန်": "un",
-        "ပ်": "at",
+        ပ်: "at",
         "ိပ်": "eik",
         "ုပ်": "ok",
         "ွပ်": "ut",
-        "န်ုပ်": "nub",
-        "မ်": "an",
+        န်ုပ်: "nub",
+        မ်: "an",
         "ိမ်": "ein",
         "ုမ်": "on",
         "ွမ်": "un",
-        "ယ်": "e",
+        ယ်: "e",
         "ိုလ်": "ol",
-        "ဉ်": "in",
+        ဉ်: "in",
         "ံ": "an",
         "ိံ": "ein",
         "ုံ": "on",
         // Dhivehi
         "ައް": "ah",
-        "ަށް": "ah"
+        "ަށް": "ah",
       };
       var langCharMap = {
-        "en": {},
+        en: {},
         // default language
-        "az": {
+        az: {
           // Azerbaijani
-          "ç": "c",
-          "ə": "e",
-          "ğ": "g",
-          "ı": "i",
-          "ö": "o",
-          "ş": "s",
-          "ü": "u",
-          "Ç": "C",
-          "Ə": "E",
-          "Ğ": "G",
-          "İ": "I",
-          "Ö": "O",
-          "Ş": "S",
-          "Ü": "U"
+          ç: "c",
+          ə: "e",
+          ğ: "g",
+          ı: "i",
+          ö: "o",
+          ş: "s",
+          ü: "u",
+          Ç: "C",
+          Ə: "E",
+          Ğ: "G",
+          İ: "I",
+          Ö: "O",
+          Ş: "S",
+          Ü: "U",
         },
-        "cs": {
+        cs: {
           // Czech
-          "č": "c",
-          "ď": "d",
-          "ě": "e",
-          "ň": "n",
-          "ř": "r",
-          "š": "s",
-          "ť": "t",
-          "ů": "u",
-          "ž": "z",
-          "Č": "C",
-          "Ď": "D",
-          "Ě": "E",
-          "Ň": "N",
-          "Ř": "R",
-          "Š": "S",
-          "Ť": "T",
-          "Ů": "U",
-          "Ž": "Z"
+          č: "c",
+          ď: "d",
+          ě: "e",
+          ň: "n",
+          ř: "r",
+          š: "s",
+          ť: "t",
+          ů: "u",
+          ž: "z",
+          Č: "C",
+          Ď: "D",
+          Ě: "E",
+          Ň: "N",
+          Ř: "R",
+          Š: "S",
+          Ť: "T",
+          Ů: "U",
+          Ž: "Z",
         },
-        "fi": {
+        fi: {
           // Finnish
           // 'å': 'a', duplicate see charMap/latin
           // 'Å': 'A', duplicate see charMap/latin
-          "ä": "a",
+          ä: "a",
           // ok
-          "Ä": "A",
+          Ä: "A",
           // ok
-          "ö": "o",
+          ö: "o",
           // ok
-          "Ö": "O"
+          Ö: "O",
           // ok
         },
-        "hu": {
+        hu: {
           // Hungarian
-          "ä": "a",
+          ä: "a",
           // ok
-          "Ä": "A",
+          Ä: "A",
           // ok
           // 'á': 'a', duplicate see charMap/latin
           // 'Á': 'A', duplicate see charMap/latin
-          "ö": "o",
+          ö: "o",
           // ok
-          "Ö": "O",
+          Ö: "O",
           // ok
           // 'ő': 'o', duplicate see charMap/latin
           // 'Ő': 'O', duplicate see charMap/latin
-          "ü": "u",
-          "Ü": "U",
-          "ű": "u",
-          "Ű": "U"
+          ü: "u",
+          Ü: "U",
+          ű: "u",
+          Ű: "U",
         },
-        "lt": {
+        lt: {
           // Lithuanian
-          "ą": "a",
-          "č": "c",
-          "ę": "e",
-          "ė": "e",
-          "į": "i",
-          "š": "s",
-          "ų": "u",
-          "ū": "u",
-          "ž": "z",
-          "Ą": "A",
-          "Č": "C",
-          "Ę": "E",
-          "Ė": "E",
-          "Į": "I",
-          "Š": "S",
-          "Ų": "U",
-          "Ū": "U"
+          ą: "a",
+          č: "c",
+          ę: "e",
+          ė: "e",
+          į: "i",
+          š: "s",
+          ų: "u",
+          ū: "u",
+          ž: "z",
+          Ą: "A",
+          Č: "C",
+          Ę: "E",
+          Ė: "E",
+          Į: "I",
+          Š: "S",
+          Ų: "U",
+          Ū: "U",
         },
-        "lv": {
+        lv: {
           // Latvian
-          "ā": "a",
-          "č": "c",
-          "ē": "e",
-          "ģ": "g",
-          "ī": "i",
-          "ķ": "k",
-          "ļ": "l",
-          "ņ": "n",
-          "š": "s",
-          "ū": "u",
-          "ž": "z",
-          "Ā": "A",
-          "Č": "C",
-          "Ē": "E",
-          "Ģ": "G",
-          "Ī": "i",
-          "Ķ": "k",
-          "Ļ": "L",
-          "Ņ": "N",
-          "Š": "S",
-          "Ū": "u",
-          "Ž": "Z"
+          ā: "a",
+          č: "c",
+          ē: "e",
+          ģ: "g",
+          ī: "i",
+          ķ: "k",
+          ļ: "l",
+          ņ: "n",
+          š: "s",
+          ū: "u",
+          ž: "z",
+          Ā: "A",
+          Č: "C",
+          Ē: "E",
+          Ģ: "G",
+          Ī: "i",
+          Ķ: "k",
+          Ļ: "L",
+          Ņ: "N",
+          Š: "S",
+          Ū: "u",
+          Ž: "Z",
         },
-        "pl": {
+        pl: {
           // Polish
-          "ą": "a",
-          "ć": "c",
-          "ę": "e",
-          "ł": "l",
-          "ń": "n",
-          "ó": "o",
-          "ś": "s",
-          "ź": "z",
-          "ż": "z",
-          "Ą": "A",
-          "Ć": "C",
-          "Ę": "e",
-          "Ł": "L",
-          "Ń": "N",
-          "Ó": "O",
-          "Ś": "S",
-          "Ź": "Z",
-          "Ż": "Z"
+          ą: "a",
+          ć: "c",
+          ę: "e",
+          ł: "l",
+          ń: "n",
+          ó: "o",
+          ś: "s",
+          ź: "z",
+          ż: "z",
+          Ą: "A",
+          Ć: "C",
+          Ę: "e",
+          Ł: "L",
+          Ń: "N",
+          Ó: "O",
+          Ś: "S",
+          Ź: "Z",
+          Ż: "Z",
         },
-        "sv": {
+        sv: {
           // Swedish
           // 'å': 'a', duplicate see charMap/latin
           // 'Å': 'A', duplicate see charMap/latin
-          "ä": "a",
+          ä: "a",
           // ok
-          "Ä": "A",
+          Ä: "A",
           // ok
-          "ö": "o",
+          ö: "o",
           // ok
-          "Ö": "O"
+          Ö: "O",
           // ok
         },
-        "sk": {
+        sk: {
           // Slovak
-          "ä": "a",
-          "Ä": "A"
+          ä: "a",
+          Ä: "A",
         },
-        "sr": {
+        sr: {
           // Serbian
-          "љ": "lj",
-          "њ": "nj",
-          "Љ": "Lj",
-          "Њ": "Nj",
-          "đ": "dj",
-          "Đ": "Dj"
+          љ: "lj",
+          њ: "nj",
+          Љ: "Lj",
+          Њ: "Nj",
+          đ: "dj",
+          Đ: "Dj",
         },
-        "tr": {
+        tr: {
           // Turkish
-          "Ü": "U",
-          "Ö": "O",
-          "ü": "u",
-          "ö": "o"
-        }
+          Ü: "U",
+          Ö: "O",
+          ü: "u",
+          ö: "o",
+        },
       };
       var symbolMap = {
-        "ar": {
+        ar: {
           "∆": "delta",
           "∞": "la-nihaya",
           "♥": "hob",
@@ -1627,10 +1661,10 @@ var require_speakingurl = __commonJS2({
           "<": "aqal-men",
           ">": "akbar-men",
           "∑": "majmou",
-          "¤": "omla"
+          "¤": "omla",
         },
-        "az": {},
-        "ca": {
+        az: {},
+        ca: {
           "∆": "delta",
           "∞": "infinit",
           "♥": "amor",
@@ -1639,9 +1673,9 @@ var require_speakingurl = __commonJS2({
           "<": "menys que",
           ">": "mes que",
           "∑": "suma dels",
-          "¤": "moneda"
+          "¤": "moneda",
         },
-        "cs": {
+        cs: {
           "∆": "delta",
           "∞": "nekonecno",
           "♥": "laska",
@@ -1650,9 +1684,9 @@ var require_speakingurl = __commonJS2({
           "<": "mensi nez",
           ">": "vetsi nez",
           "∑": "soucet",
-          "¤": "mena"
+          "¤": "mena",
         },
-        "de": {
+        de: {
           "∆": "delta",
           "∞": "unendlich",
           "♥": "Liebe",
@@ -1661,9 +1695,9 @@ var require_speakingurl = __commonJS2({
           "<": "kleiner als",
           ">": "groesser als",
           "∑": "Summe von",
-          "¤": "Waehrung"
+          "¤": "Waehrung",
         },
-        "dv": {
+        dv: {
           "∆": "delta",
           "∞": "kolunulaa",
           "♥": "loabi",
@@ -1672,9 +1706,9 @@ var require_speakingurl = __commonJS2({
           "<": "ah vure kuda",
           ">": "ah vure bodu",
           "∑": "jumula",
-          "¤": "faisaa"
+          "¤": "faisaa",
         },
-        "en": {
+        en: {
           "∆": "delta",
           "∞": "infinity",
           "♥": "love",
@@ -1683,9 +1717,9 @@ var require_speakingurl = __commonJS2({
           "<": "less than",
           ">": "greater than",
           "∑": "sum",
-          "¤": "currency"
+          "¤": "currency",
         },
-        "es": {
+        es: {
           "∆": "delta",
           "∞": "infinito",
           "♥": "amor",
@@ -1694,9 +1728,9 @@ var require_speakingurl = __commonJS2({
           "<": "menos que",
           ">": "mas que",
           "∑": "suma de los",
-          "¤": "moneda"
+          "¤": "moneda",
         },
-        "fa": {
+        fa: {
           "∆": "delta",
           "∞": "bi-nahayat",
           "♥": "eshgh",
@@ -1705,9 +1739,9 @@ var require_speakingurl = __commonJS2({
           "<": "kamtar-az",
           ">": "bishtar-az",
           "∑": "majmooe",
-          "¤": "vahed"
+          "¤": "vahed",
         },
-        "fi": {
+        fi: {
           "∆": "delta",
           "∞": "aarettomyys",
           "♥": "rakkaus",
@@ -1716,9 +1750,9 @@ var require_speakingurl = __commonJS2({
           "<": "pienempi kuin",
           ">": "suurempi kuin",
           "∑": "summa",
-          "¤": "valuutta"
+          "¤": "valuutta",
         },
-        "fr": {
+        fr: {
           "∆": "delta",
           "∞": "infiniment",
           "♥": "Amour",
@@ -1727,9 +1761,9 @@ var require_speakingurl = __commonJS2({
           "<": "moins que",
           ">": "superieure a",
           "∑": "somme des",
-          "¤": "monnaie"
+          "¤": "monnaie",
         },
-        "ge": {
+        ge: {
           "∆": "delta",
           "∞": "usasruloba",
           "♥": "siqvaruli",
@@ -1738,10 +1772,10 @@ var require_speakingurl = __commonJS2({
           "<": "naklebi",
           ">": "meti",
           "∑": "jami",
-          "¤": "valuta"
+          "¤": "valuta",
         },
-        "gr": {},
-        "hu": {
+        gr: {},
+        hu: {
           "∆": "delta",
           "∞": "vegtelen",
           "♥": "szerelem",
@@ -1750,9 +1784,9 @@ var require_speakingurl = __commonJS2({
           "<": "kisebb mint",
           ">": "nagyobb mint",
           "∑": "szumma",
-          "¤": "penznem"
+          "¤": "penznem",
         },
-        "it": {
+        it: {
           "∆": "delta",
           "∞": "infinito",
           "♥": "amore",
@@ -1761,9 +1795,9 @@ var require_speakingurl = __commonJS2({
           "<": "minore di",
           ">": "maggiore di",
           "∑": "somma",
-          "¤": "moneta"
+          "¤": "moneta",
         },
-        "lt": {
+        lt: {
           "∆": "delta",
           "∞": "begalybe",
           "♥": "meile",
@@ -1772,9 +1806,9 @@ var require_speakingurl = __commonJS2({
           "<": "maziau nei",
           ">": "daugiau nei",
           "∑": "suma",
-          "¤": "valiuta"
+          "¤": "valiuta",
         },
-        "lv": {
+        lv: {
           "∆": "delta",
           "∞": "bezgaliba",
           "♥": "milestiba",
@@ -1783,9 +1817,9 @@ var require_speakingurl = __commonJS2({
           "<": "mazak neka",
           ">": "lielaks neka",
           "∑": "summa",
-          "¤": "valuta"
+          "¤": "valuta",
         },
-        "my": {
+        my: {
           "∆": "kwahkhyaet",
           "∞": "asaonasme",
           "♥": "akhyait",
@@ -1794,10 +1828,10 @@ var require_speakingurl = __commonJS2({
           "<": "ngethaw",
           ">": "kyithaw",
           "∑": "paungld",
-          "¤": "ngwekye"
+          "¤": "ngwekye",
         },
-        "mk": {},
-        "nl": {
+        mk: {},
+        nl: {
           "∆": "delta",
           "∞": "oneindig",
           "♥": "liefde",
@@ -1806,9 +1840,9 @@ var require_speakingurl = __commonJS2({
           "<": "kleiner dan",
           ">": "groter dan",
           "∑": "som",
-          "¤": "valuta"
+          "¤": "valuta",
         },
-        "pl": {
+        pl: {
           "∆": "delta",
           "∞": "nieskonczonosc",
           "♥": "milosc",
@@ -1817,9 +1851,9 @@ var require_speakingurl = __commonJS2({
           "<": "mniejsze niz",
           ">": "wieksze niz",
           "∑": "suma",
-          "¤": "waluta"
+          "¤": "waluta",
         },
-        "pt": {
+        pt: {
           "∆": "delta",
           "∞": "infinito",
           "♥": "amor",
@@ -1828,9 +1862,9 @@ var require_speakingurl = __commonJS2({
           "<": "menor que",
           ">": "maior que",
           "∑": "soma",
-          "¤": "moeda"
+          "¤": "moeda",
         },
-        "ro": {
+        ro: {
           "∆": "delta",
           "∞": "infinit",
           "♥": "dragoste",
@@ -1839,9 +1873,9 @@ var require_speakingurl = __commonJS2({
           "<": "mai mic ca",
           ">": "mai mare ca",
           "∑": "suma",
-          "¤": "valuta"
+          "¤": "valuta",
         },
-        "ru": {
+        ru: {
           "∆": "delta",
           "∞": "beskonechno",
           "♥": "lubov",
@@ -1850,9 +1884,9 @@ var require_speakingurl = __commonJS2({
           "<": "menshe",
           ">": "bolshe",
           "∑": "summa",
-          "¤": "valjuta"
+          "¤": "valjuta",
         },
-        "sk": {
+        sk: {
           "∆": "delta",
           "∞": "nekonecno",
           "♥": "laska",
@@ -1861,10 +1895,10 @@ var require_speakingurl = __commonJS2({
           "<": "menej ako",
           ">": "viac ako",
           "∑": "sucet",
-          "¤": "mena"
+          "¤": "mena",
         },
-        "sr": {},
-        "tr": {
+        sr: {},
+        tr: {
           "∆": "delta",
           "∞": "sonsuzluk",
           "♥": "ask",
@@ -1873,9 +1907,9 @@ var require_speakingurl = __commonJS2({
           "<": "kucuktur",
           ">": "buyuktur",
           "∑": "toplam",
-          "¤": "para birimi"
+          "¤": "para birimi",
         },
-        "uk": {
+        uk: {
           "∆": "delta",
           "∞": "bezkinechnist",
           "♥": "lubov",
@@ -1884,9 +1918,9 @@ var require_speakingurl = __commonJS2({
           "<": "menshe",
           ">": "bilshe",
           "∑": "suma",
-          "¤": "valjuta"
+          "¤": "valjuta",
         },
-        "vn": {
+        vn: {
           "∆": "delta",
           "∞": "vo cuc",
           "♥": "yeu",
@@ -1895,11 +1929,15 @@ var require_speakingurl = __commonJS2({
           "<": "nho hon",
           ">": "lon hon",
           "∑": "tong",
-          "¤": "tien te"
-        }
+          "¤": "tien te",
+        },
       };
-      var uricChars = [";", "?", ":", "@", "&", "=", "+", "$", ",", "/"].join("");
-      var uricNoSlashChars = [";", "?", ":", "@", "&", "=", "+", "$", ","].join("");
+      var uricChars = [";", "?", ":", "@", "&", "=", "+", "$", ",", "/"].join(
+        "",
+      );
+      var uricNoSlashChars = [";", "?", ":", "@", "&", "=", "+", "$", ","].join(
+        "",
+      );
       var markChars = [".", "!", "~", "*", "'", "(", ")"].join("");
       var getSlug = function getSlug2(input, opts) {
         var separator = "-";
@@ -1932,12 +1970,16 @@ var require_speakingurl = __commonJS2({
         langChar = langCharMap.en;
         if (typeof opts === "object") {
           maintainCase = opts.maintainCase || false;
-          customReplacements = opts.custom && typeof opts.custom === "object" ? opts.custom : customReplacements;
-          truncate = +opts.truncate > 1 && opts.truncate || false;
+          customReplacements =
+            opts.custom && typeof opts.custom === "object"
+              ? opts.custom
+              : customReplacements;
+          truncate = (+opts.truncate > 1 && opts.truncate) || false;
           uricFlag = opts.uric || false;
           uricNoSlashFlag = opts.uricNoSlash || false;
           markFlag = opts.mark || false;
-          convertSymbols = opts.symbols === false || opts.lang === false ? false : true;
+          convertSymbols =
+            opts.symbols === false || opts.lang === false ? false : true;
           separator = opts.separator || separator;
           if (uricFlag) {
             allowedChars += uricChars;
@@ -1948,22 +1990,40 @@ var require_speakingurl = __commonJS2({
           if (markFlag) {
             allowedChars += markChars;
           }
-          symbol = opts.lang && symbolMap[opts.lang] && convertSymbols ? symbolMap[opts.lang] : convertSymbols ? symbolMap.en : {};
-          langChar = opts.lang && langCharMap[opts.lang] ? langCharMap[opts.lang] : opts.lang === false || opts.lang === true ? {} : langCharMap.en;
-          if (opts.titleCase && typeof opts.titleCase.length === "number" && Array.prototype.toString.call(opts.titleCase)) {
-            opts.titleCase.forEach(function(v) {
+          symbol =
+            opts.lang && symbolMap[opts.lang] && convertSymbols
+              ? symbolMap[opts.lang]
+              : convertSymbols
+                ? symbolMap.en
+                : {};
+          langChar =
+            opts.lang && langCharMap[opts.lang]
+              ? langCharMap[opts.lang]
+              : opts.lang === false || opts.lang === true
+                ? {}
+                : langCharMap.en;
+          if (
+            opts.titleCase &&
+            typeof opts.titleCase.length === "number" &&
+            Array.prototype.toString.call(opts.titleCase)
+          ) {
+            opts.titleCase.forEach(function (v) {
               customReplacements[v + ""] = v + "";
             });
             titleCase = true;
           } else {
             titleCase = !!opts.titleCase;
           }
-          if (opts.custom && typeof opts.custom.length === "number" && Array.prototype.toString.call(opts.custom)) {
-            opts.custom.forEach(function(v) {
+          if (
+            opts.custom &&
+            typeof opts.custom.length === "number" &&
+            Array.prototype.toString.call(opts.custom)
+          ) {
+            opts.custom.forEach(function (v) {
               customReplacements[v + ""] = v + "";
             });
           }
-          Object.keys(customReplacements).forEach(function(v) {
+          Object.keys(customReplacements).forEach(function (v) {
             var r;
             if (v.length > 1) {
               r = new RegExp("\\b" + escapeChars(v) + "\\b", "gi");
@@ -1986,7 +2046,10 @@ var require_speakingurl = __commonJS2({
           if (isReplacedCustomChar(ch, customReplacements)) {
             lastCharWasSymbol = false;
           } else if (langChar[ch]) {
-            ch = lastCharWasSymbol && langChar[ch].match(/[A-Za-z0-9]/) ? " " + langChar[ch] : langChar[ch];
+            ch =
+              lastCharWasSymbol && langChar[ch].match(/[A-Za-z0-9]/)
+                ? " " + langChar[ch]
+                : langChar[ch];
             lastCharWasSymbol = false;
           } else if (ch in charMap) {
             if (i + 1 < l && lookAheadCharArray.indexOf(input[i + 1]) >= 0) {
@@ -1996,7 +2059,10 @@ var require_speakingurl = __commonJS2({
               ch = diatricMap[diatricString] + charMap[ch];
               diatricString = "";
             } else {
-              ch = lastCharWasSymbol && charMap[ch].match(/[A-Za-z0-9]/) ? " " + charMap[ch] : charMap[ch];
+              ch =
+                lastCharWasSymbol && charMap[ch].match(/[A-Za-z0-9]/)
+                  ? " " + charMap[ch]
+                  : charMap[ch];
             }
             lastCharWasSymbol = false;
             lastCharWasDiatric = false;
@@ -2009,30 +2075,52 @@ var require_speakingurl = __commonJS2({
             lastCharWasDiatric = true;
           } else if (
             // process symbol chars
-            symbol[ch] && !(uricFlag && uricChars.indexOf(ch) !== -1) && !(uricNoSlashFlag && uricNoSlashChars.indexOf(ch) !== -1)
+            symbol[ch] &&
+            !(uricFlag && uricChars.indexOf(ch) !== -1) &&
+            !(uricNoSlashFlag && uricNoSlashChars.indexOf(ch) !== -1)
           ) {
-            ch = lastCharWasSymbol || result.substr(-1).match(/[A-Za-z0-9]/) ? separator + symbol[ch] : symbol[ch];
-            ch += input[i + 1] !== void 0 && input[i + 1].match(/[A-Za-z0-9]/) ? separator : "";
+            ch =
+              lastCharWasSymbol || result.substr(-1).match(/[A-Za-z0-9]/)
+                ? separator + symbol[ch]
+                : symbol[ch];
+            ch +=
+              input[i + 1] !== void 0 && input[i + 1].match(/[A-Za-z0-9]/)
+                ? separator
+                : "";
             lastCharWasSymbol = true;
           } else {
             if (lastCharWasDiatric === true) {
               ch = diatricMap[diatricString] + ch;
               diatricString = "";
               lastCharWasDiatric = false;
-            } else if (lastCharWasSymbol && (/[A-Za-z0-9]/.test(ch) || result.substr(-1).match(/A-Za-z0-9]/))) {
+            } else if (
+              lastCharWasSymbol &&
+              (/[A-Za-z0-9]/.test(ch) || result.substr(-1).match(/A-Za-z0-9]/))
+            ) {
               ch = " " + ch;
             }
             lastCharWasSymbol = false;
           }
-          result += ch.replace(new RegExp("[^\\w\\s" + allowedChars + "_-]", "g"), separator);
+          result += ch.replace(
+            new RegExp("[^\\w\\s" + allowedChars + "_-]", "g"),
+            separator,
+          );
         }
         if (titleCase) {
-          result = result.replace(/(\w)(\S*)/g, function(_, i2, r) {
+          result = result.replace(/(\w)(\S*)/g, function (_, i2, r) {
             var j = i2.toUpperCase() + (r !== null ? r : "");
-            return Object.keys(customReplacements).indexOf(j.toLowerCase()) < 0 ? j : j.toLowerCase();
+            return Object.keys(customReplacements).indexOf(j.toLowerCase()) < 0
+              ? j
+              : j.toLowerCase();
           });
         }
-        result = result.replace(/\s+/g, separator).replace(new RegExp("\\" + separator + "+", "g"), separator).replace(new RegExp("(^\\" + separator + "+|\\" + separator + "+$)", "g"), "");
+        result = result
+          .replace(/\s+/g, separator)
+          .replace(new RegExp("\\" + separator + "+", "g"), separator)
+          .replace(
+            new RegExp("(^\\" + separator + "+|\\" + separator + "+$)", "g"),
+            "",
+          );
         if (truncate && result.length > truncate) {
           lucky = result.charAt(truncate) === separator;
           result = result.slice(0, truncate);
@@ -2053,7 +2141,7 @@ var require_speakingurl = __commonJS2({
       var escapeChars = function escapeChars2(input) {
         return input.replace(/[-\\^$*+?.()|[\]{}\/]/g, "\\$&");
       };
-      var isReplacedCustomChar = function(ch, customReplacements) {
+      var isReplacedCustomChar = function (ch, customReplacements) {
         for (var c in customReplacements) {
           if (customReplacements[c] === ch) {
             return true;
@@ -2064,7 +2152,7 @@ var require_speakingurl = __commonJS2({
         module.exports = getSlug;
         module.exports.createSlug = createSlug;
       } else if (typeof define !== "undefined" && define.amd) {
-        define([], function() {
+        define([], function () {
           return getSlug;
         });
       } else {
@@ -2075,18 +2163,20 @@ var require_speakingurl = __commonJS2({
             root.getSlug = getSlug;
             root.createSlug = createSlug;
           }
-        } catch (e) {
-        }
+        } catch (e) {}
       }
     })(exports);
-  }
+  },
 });
 var require_speakingurl2 = __commonJS2({
-  "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/index.js"(exports, module) {
+  "../../node_modules/.pnpm/speakingurl@14.0.1/node_modules/speakingurl/index.js"(
+    exports,
+    module,
+  ) {
     "use strict";
     init_esm_shims2();
     module.exports = require_speakingurl();
-  }
+  },
 });
 init_esm_shims2();
 init_esm_shims2();
@@ -2100,7 +2190,10 @@ init_esm_shims2();
 init_esm_shims2();
 var _a;
 var _b;
-var devtoolsHooks = (_b = (_a = target).__VUE_DEVTOOLS_HOOK) != null ? _b : _a.__VUE_DEVTOOLS_HOOK = createHooks();
+var devtoolsHooks =
+  (_b = (_a = target).__VUE_DEVTOOLS_HOOK) != null
+    ? _b
+    : (_a.__VUE_DEVTOOLS_HOOK = createHooks());
 var on = {
   vueAppInit(fn) {
     devtoolsHooks.hook("app:init", fn);
@@ -2119,13 +2212,17 @@ var on = {
   },
   setupDevtoolsPlugin(fn) {
     devtoolsHooks.hook("devtools-plugin:setup", fn);
-  }
+  },
 };
 var hook = {
   on,
   setupDevToolsPlugin(pluginDescriptor, setupFn) {
-    return devtoolsHooks.callHook("devtools-plugin:setup", pluginDescriptor, setupFn);
-  }
+    return devtoolsHooks.callHook(
+      "devtools-plugin:setup",
+      pluginDescriptor,
+      setupFn,
+    );
+  },
 };
 init_esm_shims2();
 init_esm_shims2();
@@ -2140,10 +2237,15 @@ init_esm_shims2();
 init_esm_shims2();
 var _a2;
 var _b2;
-var apiHooks = (_b2 = (_a2 = target).__VUE_DEVTOOLS_API_HOOK) != null ? _b2 : _a2.__VUE_DEVTOOLS_API_HOOK = createHooks();
+var apiHooks =
+  (_b2 = (_a2 = target).__VUE_DEVTOOLS_API_HOOK) != null
+    ? _b2
+    : (_a2.__VUE_DEVTOOLS_API_HOOK = createHooks());
 function getRoutes(router) {
   const routesMap = /* @__PURE__ */ new Map();
-  return ((router == null ? void 0 : router.getRoutes()) || []).filter((i) => !routesMap.has(i.path) && routesMap.set(i.path, 1));
+  return ((router == null ? void 0 : router.getRoutes()) || []).filter(
+    (i) => !routesMap.has(i.path) && routesMap.set(i.path, 1),
+  );
 }
 function filterRoutes(routes) {
   return routes.map((item) => {
@@ -2153,7 +2255,7 @@ function filterRoutes(routes) {
     return {
       path,
       name,
-      children
+      children,
     };
   });
 }
@@ -2168,7 +2270,7 @@ function filterCurrentRoute(route) {
       name,
       params,
       query,
-      matched: filterRoutes(matched)
+      matched: filterRoutes(matched),
     };
   }
   return route;
@@ -2176,24 +2278,30 @@ function filterCurrentRoute(route) {
 function normalizeRouterInfo(appRecord) {
   function init() {
     var _a10;
-    const router = (_a10 = appRecord.app) == null ? void 0 : _a10.config.globalProperties.$router;
-    const currentRoute = filterCurrentRoute(router == null ? void 0 : router.currentRoute.value);
+    const router =
+      (_a10 = appRecord.app) == null
+        ? void 0
+        : _a10.config.globalProperties.$router;
+    const currentRoute = filterCurrentRoute(
+      router == null ? void 0 : router.currentRoute.value,
+    );
     const routes = filterRoutes(getRoutes(router));
     const c = console.warn;
-    console.warn = () => {
-    };
+    console.warn = () => {};
     target[ROUTER_INFO_KEY] = {
       currentRoute: currentRoute ? deepClone(currentRoute) : {},
-      routes: deepClone(routes)
+      routes: deepClone(routes),
     };
     target[ROUTER_KEY] = router;
     console.warn = c;
   }
   init();
-  hook.on.componentUpdated(debounce(() => {
-    init();
-    apiHooks.callHook("router-info:updated", target[ROUTER_INFO_KEY]);
-  }, 200));
+  hook.on.componentUpdated(
+    debounce(() => {
+      init();
+      apiHooks.callHook("router-info:updated", target[ROUTER_INFO_KEY]);
+    }, 200),
+  );
 }
 function setupDevToolsPlugin(pluginDescriptor, setupFn) {
   return hook.setupDevToolsPlugin(pluginDescriptor, setupFn);
@@ -2215,77 +2323,61 @@ var StateEditor = class {
     const markRef = false;
     while (sections.length > 1) {
       const section = sections.shift();
-      if (object instanceof Map)
-        object = object.get(section);
-      if (object instanceof Set)
-        object = Array.from(object.values())[section];
-      else
-        object = object[section];
-      if (this.refEditor.isRef(object))
-        object = this.refEditor.get(object);
+      if (object instanceof Map) object = object.get(section);
+      if (object instanceof Set) object = Array.from(object.values())[section];
+      else object = object[section];
+      if (this.refEditor.isRef(object)) object = this.refEditor.get(object);
     }
     const field = sections[0];
     const item = this.refEditor.get(object)[field];
     if (cb) {
       cb(object, field, value);
     } else {
-      if (this.refEditor.isRef(item))
-        this.refEditor.set(item, value);
-      else if (markRef)
-        object[field] = value;
-      else
-        object[field] = value;
+      if (this.refEditor.isRef(item)) this.refEditor.set(item, value);
+      else if (markRef) object[field] = value;
+      else object[field] = value;
     }
   }
   get(object, path) {
     const sections = Array.isArray(path) ? path : path.split(".");
     for (let i = 0; i < sections.length; i++) {
-      if (object instanceof Map)
-        object = object.get(sections[i]);
-      else
-        object = object[sections[i]];
-      if (this.refEditor.isRef(object))
-        object = this.refEditor.get(object);
-      if (!object)
-        return void 0;
+      if (object instanceof Map) object = object.get(sections[i]);
+      else object = object[sections[i]];
+      if (this.refEditor.isRef(object)) object = this.refEditor.get(object);
+      if (!object) return void 0;
     }
     return object;
   }
   has(object, path, parent = false) {
-    if (typeof object === "undefined")
-      return false;
+    if (typeof object === "undefined") return false;
     const sections = Array.isArray(path) ? path.slice() : path.split(".");
     const size = !parent ? 1 : 2;
     while (object && sections.length > size) {
       const section = sections.shift();
       object = object[section];
-      if (this.refEditor.isRef(object))
-        object = this.refEditor.get(object);
+      if (this.refEditor.isRef(object)) object = this.refEditor.get(object);
     }
-    return object != null && Object.prototype.hasOwnProperty.call(object, sections[0]);
+    return (
+      object != null &&
+      Object.prototype.hasOwnProperty.call(object, sections[0])
+    );
   }
   createDefaultSetCallback(state) {
     return (object, field, value) => {
       if (state.remove || state.newKey) {
-        if (Array.isArray(object))
-          object.splice(field, 1);
-        else if (toRaw(object) instanceof Map)
-          object.delete(field);
+        if (Array.isArray(object)) object.splice(field, 1);
+        else if (toRaw(object) instanceof Map) object.delete(field);
         else if (toRaw(object) instanceof Set)
           object.delete(Array.from(object.values())[field]);
-        else
-          Reflect.deleteProperty(object, field);
+        else Reflect.deleteProperty(object, field);
       }
       if (!state.remove) {
         const target9 = object[state.newKey || field];
-        if (this.refEditor.isRef(target9))
-          this.refEditor.set(target9, value);
+        if (this.refEditor.isRef(target9)) this.refEditor.set(target9, value);
         else if (toRaw(object) instanceof Map)
           object.set(state.newKey || field, value);
-        else if (toRaw(object) instanceof Set)
-          object.add(value);
-        else
-          object[state.newKey || field] = value;
+        else if (toRaw(object) instanceof Set) object.add(value);
+        else object[state.newKey || field] = value;
       }
     };
   }
@@ -2339,7 +2431,7 @@ var tokenMap = {
   [UNDEFINED]: "undefined",
   [NAN]: "NaN",
   [INFINITY]: "Infinity",
-  [NEGATIVE_INFINITY]: "-Infinity"
+  [NEGATIVE_INFINITY]: "-Infinity",
 };
 var reversedTokenMap = Object.entries(tokenMap).reduce((acc, [key, value]) => {
   acc[value] = key;
@@ -2358,26 +2450,25 @@ init_esm_shims2();
 init_esm_shims2();
 init_esm_shims2();
 function addCustomTab(tab) {
-  if (devtoolsState.tabs.some((t) => t.name === tab.name))
-    return;
+  if (devtoolsState.tabs.some((t) => t.name === tab.name)) return;
   devtoolsState.tabs.push(tab);
 }
 init_esm_shims2();
 function addCustomCommand(action) {
-  if (devtoolsState.commands.some((t) => t.id === action.id))
-    return;
+  if (devtoolsState.commands.some((t) => t.id === action.id)) return;
   devtoolsState.commands.push(action);
 }
 function removeCustomCommand(actionId) {
   const index = devtoolsState.commands.findIndex((t) => t.id === actionId);
-  if (index === -1)
-    return;
+  if (index === -1) return;
   devtoolsState.commands.splice(index, 1);
 }
 init_esm_shims2();
 var _a3;
 var _b3;
-(_b3 = (_a3 = target).__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__) != null ? _b3 : _a3.__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__ = true;
+(_b3 = (_a3 = target).__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__) != null
+  ? _b3
+  : (_a3.__VUE_DEVTOOLS_COMPONENT_INSPECTOR_ENABLED__ = true);
 init_esm_shims2();
 init_esm_shims2();
 init_esm_shims2();
@@ -2394,12 +2485,14 @@ function initStateFactory() {
     commands: [],
     vitePluginDetected: false,
     activeAppRecordId: null,
-    highPerfModeEnabled: false
+    highPerfModeEnabled: false,
   };
 }
 var _a4;
 var _b4;
-(_b4 = (_a4 = target)[STATE_KEY]) != null ? _b4 : _a4[STATE_KEY] = initStateFactory();
+(_b4 = (_a4 = target)[STATE_KEY]) != null
+  ? _b4
+  : (_a4[STATE_KEY] = initStateFactory());
 var callStateUpdatedHook = debounce((state, oldState) => {
   apiHooks.callHook("devtools:state-updated", state, oldState);
 }, 80);
@@ -2419,10 +2512,13 @@ var devtoolsState = new Proxy(target[STATE_KEY], {
     target9[property] = value;
     target[STATE_KEY][property] = value;
     callStateUpdatedHook(target[STATE_KEY], oldState);
-    if (["connected", "clientConnected"].includes(property.toString()) && oldState[property] !== value)
+    if (
+      ["connected", "clientConnected"].includes(property.toString()) &&
+      oldState[property] !== value
+    )
       callConnectedUpdatedHook(target[STATE_KEY], oldState);
     return true;
-  }
+  },
 });
 Object.defineProperty(devtoolsState.tabs, "push", {
   configurable: true,
@@ -2431,7 +2527,7 @@ Object.defineProperty(devtoolsState.tabs, "push", {
     devtoolsState.tabs = this;
     apiHooks.callHook("custom-tabs:updated", this);
     return result;
-  }
+  },
 });
 ["push", "splice"].forEach((method) => {
   Object.defineProperty(devtoolsState.commands, method, {
@@ -2441,7 +2537,7 @@ Object.defineProperty(devtoolsState.tabs, "push", {
       devtoolsState.commands = this;
       apiHooks.callHook("custom-commands:updated", this);
       return result;
-    }
+    },
   });
 });
 init_esm_shims2();
@@ -2450,17 +2546,19 @@ var ROUTER_KEY = "__VUE_DEVTOOLS_ROUTER__";
 var ROUTER_INFO_KEY = "__VUE_DEVTOOLS_ROUTER_INFO__";
 var _a5;
 var _b5;
-(_b5 = (_a5 = target)[ROUTER_INFO_KEY]) != null ? _b5 : _a5[ROUTER_INFO_KEY] = {
-  currentRoute: null,
-  routes: []
-};
+(_b5 = (_a5 = target)[ROUTER_INFO_KEY]) != null
+  ? _b5
+  : (_a5[ROUTER_INFO_KEY] = {
+      currentRoute: null,
+      routes: [],
+    });
 var _a6;
 var _b6;
-(_b6 = (_a6 = target)[ROUTER_KEY]) != null ? _b6 : _a6[ROUTER_KEY] = null;
+(_b6 = (_a6 = target)[ROUTER_KEY]) != null ? _b6 : (_a6[ROUTER_KEY] = null);
 var devtoolsRouterInfo = new Proxy(target[ROUTER_INFO_KEY], {
   get(target9, property) {
     return target[ROUTER_INFO_KEY][property];
-  }
+  },
 });
 init_esm_shims2();
 var CONTEXT_KEY = "__VUE_DEVTOOLS_CONTEXT__";
@@ -2473,36 +2571,33 @@ function initContextFactory() {
     routerInfo: {},
     router: null,
     activeInspectorTreeId: "",
-    componentPluginHookBuffer: []
+    componentPluginHookBuffer: [],
   };
 }
 var _a7;
 var _b7;
-(_b7 = (_a7 = target)[CONTEXT_KEY]) != null ? _b7 : _a7[CONTEXT_KEY] = initContextFactory();
+(_b7 = (_a7 = target)[CONTEXT_KEY]) != null
+  ? _b7
+  : (_a7[CONTEXT_KEY] = initContextFactory());
 function resetDevToolsContext() {
   target[CONTEXT_KEY] = initContextFactory();
 }
 var devtoolsContext = new Proxy(target[CONTEXT_KEY], {
   get(target9, property) {
-    if (property === "router")
-      return target[ROUTER_KEY];
-    else if (property === "clear")
-      return resetDevToolsContext;
+    if (property === "router") return target[ROUTER_KEY];
+    else if (property === "clear") return resetDevToolsContext;
     return target[CONTEXT_KEY][property];
   },
   set(target9, property, value) {
     target[CONTEXT_KEY][property] = value;
     return true;
-  }
+  },
 });
 var devtoolsAppRecords = new Proxy(devtoolsState.appRecords, {
   get(_, property) {
-    if (property === "value")
-      return devtoolsState.appRecords;
-    else if (property === "active")
-      return devtoolsState.activeAppRecord;
-    else if (property === "activeId")
-      return devtoolsState.activeAppRecordId;
+    if (property === "value") return devtoolsState.appRecords;
+    else if (property === "active") return devtoolsState.activeAppRecord;
+    else if (property === "activeId") return devtoolsState.activeAppRecordId;
   },
   set(target9, property, value) {
     var _a10;
@@ -2521,23 +2616,31 @@ var devtoolsAppRecords = new Proxy(devtoolsState.appRecords, {
       devtoolsState.activeAppRecordId = value;
     }
     callStateUpdatedHook(devtoolsState, oldState);
-    if (["connected", "clientConnected"].includes(property.toString()) && oldState[property] !== value)
+    if (
+      ["connected", "clientConnected"].includes(property.toString()) &&
+      oldState[property] !== value
+    )
       callConnectedUpdatedHook(devtoolsState, oldState);
     return true;
-  }
+  },
 });
 var _a8;
 var _b8;
-var appRecordInfo = (_b8 = (_a8 = target).__VUE_DEVTOOLS_APP_RECROD_INFO__) != null ? _b8 : _a8.__VUE_DEVTOOLS_APP_RECROD_INFO__ = {
-  id: 0,
-  appIds: /* @__PURE__ */ new Set()
-};
+var appRecordInfo =
+  (_b8 = (_a8 = target).__VUE_DEVTOOLS_APP_RECROD_INFO__) != null
+    ? _b8
+    : (_a8.__VUE_DEVTOOLS_APP_RECROD_INFO__ = {
+        id: 0,
+        appIds: /* @__PURE__ */ new Set(),
+      });
 init_esm_shims2();
 var _a9;
 var _b9;
-(_b9 = (_a9 = target).__VUE_DEVTOOLS_ENV__) != null ? _b9 : _a9.__VUE_DEVTOOLS_ENV__ = {
-  vitePluginDetected: false
-};
+(_b9 = (_a9 = target).__VUE_DEVTOOLS_ENV__) != null
+  ? _b9
+  : (_a9.__VUE_DEVTOOLS_ENV__ = {
+      vitePluginDetected: false,
+    });
 function onDevToolsConnected(fn) {
   return new Promise((resolve) => {
     if (devtoolsState.connected) {
@@ -2576,6 +2679,6 @@ export {
   onDevToolsConnected,
   removeCustomCommand,
   setupDevToolsPlugin,
-  setupDevToolsPlugin as setupDevtoolsPlugin
+  setupDevToolsPlugin as setupDevtoolsPlugin,
 };
 //# sourceMappingURL=vitepress___@vue_devtools-api.js.map

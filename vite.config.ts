@@ -4,9 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   optimizeDeps: {
-    include: [
-      'mermaid'
-    ]
+    include: ["mermaid"],
   },
   plugins: [remix({ ignoredRouteFiles: ["**/*.css"] }), tsconfigPaths()],
   server: {

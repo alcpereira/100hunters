@@ -272,7 +272,7 @@ import {
   watchThrottled,
   watchTriggerable,
   watchWithFilter,
-  whenever
+  whenever,
 } from "./chunk-GRAIWROI.js";
 import "./chunk-L7IPDLAJ.js";
 import "./chunk-Y2F7D3TJ.js";
@@ -563,6 +563,6 @@ export {
   watchThrottled,
   watchTriggerable,
   watchWithFilter,
-  whenever
+  whenever,
 };
 //# sourceMappingURL=vitepress___@vueuse_core.js.map

@@ -1,97 +1,122 @@
-import {
-  __commonJS
-} from "./chunk-Y2F7D3TJ.js";
+import { __commonJS } from "./chunk-Y2F7D3TJ.js";
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObject.js
 var require_isObject = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObject.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObject.js"(
+    exports,
+    module,
+  ) {
     function isObject(value) {
       var type = typeof value;
       return value != null && (type == "object" || type == "function");
     }
     module.exports = isObject;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_freeGlobal.js
 var require_freeGlobal = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_freeGlobal.js"(exports, module) {
-    var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_freeGlobal.js"(
+    exports,
+    module,
+  ) {
+    var freeGlobal =
+      typeof global == "object" && global && global.Object === Object && global;
     module.exports = freeGlobal;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_root.js
 var require_root = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_root.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_root.js"(
+    exports,
+    module,
+  ) {
     var freeGlobal = require_freeGlobal();
-    var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+    var freeSelf =
+      typeof self == "object" && self && self.Object === Object && self;
     var root = freeGlobal || freeSelf || Function("return this")();
     module.exports = root;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/now.js
 var require_now = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/now.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/now.js"(
+    exports,
+    module,
+  ) {
     var root = require_root();
-    var now = function() {
+    var now = function () {
       return root.Date.now();
     };
     module.exports = now;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_trimmedEndIndex.js
 var require_trimmedEndIndex = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_trimmedEndIndex.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_trimmedEndIndex.js"(
+    exports,
+    module,
+  ) {
     var reWhitespace = /\s/;
     function trimmedEndIndex(string) {
       var index = string.length;
-      while (index-- && reWhitespace.test(string.charAt(index))) {
-      }
+      while (index-- && reWhitespace.test(string.charAt(index))) {}
       return index;
     }
     module.exports = trimmedEndIndex;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseTrim.js
 var require_baseTrim = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseTrim.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseTrim.js"(
+    exports,
+    module,
+  ) {
     var trimmedEndIndex = require_trimmedEndIndex();
     var reTrimStart = /^\s+/;
     function baseTrim(string) {
-      return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, "") : string;
+      return string
+        ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, "")
+        : string;
     }
     module.exports = baseTrim;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Symbol.js
 var require_Symbol = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Symbol.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Symbol.js"(
+    exports,
+    module,
+  ) {
     var root = require_root();
     var Symbol2 = root.Symbol;
     module.exports = Symbol2;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getRawTag.js
 var require_getRawTag = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getRawTag.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getRawTag.js"(
+    exports,
+    module,
+  ) {
     var Symbol2 = require_Symbol();
     var objectProto = Object.prototype;
     var hasOwnProperty = objectProto.hasOwnProperty;
     var nativeObjectToString = objectProto.toString;
     var symToStringTag = Symbol2 ? Symbol2.toStringTag : void 0;
     function getRawTag(value) {
-      var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+      var isOwn = hasOwnProperty.call(value, symToStringTag),
+        tag = value[symToStringTag];
       try {
         value[symToStringTag] = void 0;
         var unmasked = true;
-      } catch (e) {
-      }
+      } catch (e) {}
       var result = nativeObjectToString.call(value);
       if (unmasked) {
         if (isOwn) {
@@ -103,24 +128,30 @@ var require_getRawTag = __commonJS({
       return result;
     }
     module.exports = getRawTag;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_objectToString.js
 var require_objectToString = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_objectToString.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_objectToString.js"(
+    exports,
+    module,
+  ) {
     var objectProto = Object.prototype;
     var nativeObjectToString = objectProto.toString;
     function objectToString(value) {
       return nativeObjectToString.call(value);
     }
     module.exports = objectToString;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGetTag.js
 var require_baseGetTag = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGetTag.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGetTag.js"(
+    exports,
+    module,
+  ) {
     var Symbol2 = require_Symbol();
     var getRawTag = require_getRawTag();
     var objectToString = require_objectToString();
@@ -131,38 +162,52 @@ var require_baseGetTag = __commonJS({
       if (value == null) {
         return value === void 0 ? undefinedTag : nullTag;
       }
-      return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+      return symToStringTag && symToStringTag in Object(value)
+        ? getRawTag(value)
+        : objectToString(value);
     }
     module.exports = baseGetTag;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObjectLike.js
 var require_isObjectLike = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObjectLike.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isObjectLike.js"(
+    exports,
+    module,
+  ) {
     function isObjectLike(value) {
       return value != null && typeof value == "object";
     }
     module.exports = isObjectLike;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isSymbol.js
 var require_isSymbol = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isSymbol.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isSymbol.js"(
+    exports,
+    module,
+  ) {
     var baseGetTag = require_baseGetTag();
     var isObjectLike = require_isObjectLike();
     var symbolTag = "[object Symbol]";
     function isSymbol(value) {
-      return typeof value == "symbol" || isObjectLike(value) && baseGetTag(value) == symbolTag;
+      return (
+        typeof value == "symbol" ||
+        (isObjectLike(value) && baseGetTag(value) == symbolTag)
+      );
     }
     module.exports = isSymbol;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toNumber.js
 var require_toNumber = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toNumber.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toNumber.js"(
+    exports,
+    module,
+  ) {
     var baseTrim = require_baseTrim();
     var isObject = require_isObject();
     var isSymbol = require_isSymbol();
@@ -179,7 +224,8 @@ var require_toNumber = __commonJS({
         return NAN;
       }
       if (isObject(value)) {
-        var other = typeof value.valueOf == "function" ? value.valueOf() : value;
+        var other =
+          typeof value.valueOf == "function" ? value.valueOf() : value;
         value = isObject(other) ? other + "" : other;
       }
       if (typeof value != "string") {
@@ -187,15 +233,22 @@ var require_toNumber = __commonJS({
       }
       value = baseTrim(value);
       var isBinary = reIsBinary.test(value);
-      return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+      return isBinary || reIsOctal.test(value)
+        ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+        : reIsBadHex.test(value)
+          ? NAN
+          : +value;
     }
     module.exports = toNumber;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/debounce.js
 var require_debounce = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/debounce.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/debounce.js"(
+    exports,
+    module,
+  ) {
     var isObject = require_isObject();
     var now = require_now();
     var toNumber = require_toNumber();
@@ -203,7 +256,16 @@ var require_debounce = __commonJS({
     var nativeMax = Math.max;
     var nativeMin = Math.min;
     function debounce(func, wait, options) {
-      var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
+      var lastArgs,
+        lastThis,
+        maxWait,
+        result,
+        timerId,
+        lastCallTime,
+        lastInvokeTime = 0,
+        leading = false,
+        maxing = false,
+        trailing = true;
       if (typeof func != "function") {
         throw new TypeError(FUNC_ERROR_TEXT);
       }
@@ -211,11 +273,14 @@ var require_debounce = __commonJS({
       if (isObject(options)) {
         leading = !!options.leading;
         maxing = "maxWait" in options;
-        maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+        maxWait = maxing
+          ? nativeMax(toNumber(options.maxWait) || 0, wait)
+          : maxWait;
         trailing = "trailing" in options ? !!options.trailing : trailing;
       }
       function invokeFunc(time) {
-        var args = lastArgs, thisArg = lastThis;
+        var args = lastArgs,
+          thisArg = lastThis;
         lastArgs = lastThis = void 0;
         lastInvokeTime = time;
         result = func.apply(thisArg, args);
@@ -227,12 +292,22 @@ var require_debounce = __commonJS({
         return leading ? invokeFunc(time) : result;
       }
       function remainingWait(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
-        return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+        var timeSinceLastCall = time - lastCallTime,
+          timeSinceLastInvoke = time - lastInvokeTime,
+          timeWaiting = wait - timeSinceLastCall;
+        return maxing
+          ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+          : timeWaiting;
       }
       function shouldInvoke(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
-        return lastCallTime === void 0 || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+        var timeSinceLastCall = time - lastCallTime,
+          timeSinceLastInvoke = time - lastInvokeTime;
+        return (
+          lastCallTime === void 0 ||
+          timeSinceLastCall >= wait ||
+          timeSinceLastCall < 0 ||
+          (maxing && timeSinceLastInvoke >= maxWait)
+        );
       }
       function timerExpired() {
         var time = now();
@@ -260,7 +335,8 @@ var require_debounce = __commonJS({
         return timerId === void 0 ? result : trailingEdge(now());
       }
       function debounced() {
-        var time = now(), isInvoking = shouldInvoke(time);
+        var time = now(),
+          isInvoking = shouldInvoke(time);
         lastArgs = arguments;
         lastThis = this;
         lastCallTime = time;
@@ -284,16 +360,33 @@ var require_debounce = __commonJS({
       return debounced;
     }
     module.exports = debounce;
-  }
+  },
 });
 
 // node_modules/.pnpm/heap@0.2.7/node_modules/heap/lib/heap.js
 var require_heap = __commonJS({
-  "node_modules/.pnpm/heap@0.2.7/node_modules/heap/lib/heap.js"(exports, module) {
-    (function() {
-      var Heap, defaultCmp, floor, heapify, heappop, heappush, heappushpop, heapreplace, insort, min, nlargest, nsmallest, updateItem, _siftdown, _siftup;
-      floor = Math.floor, min = Math.min;
-      defaultCmp = function(x, y) {
+  "node_modules/.pnpm/heap@0.2.7/node_modules/heap/lib/heap.js"(
+    exports,
+    module,
+  ) {
+    (function () {
+      var Heap,
+        defaultCmp,
+        floor,
+        heapify,
+        heappop,
+        heappush,
+        heappushpop,
+        heapreplace,
+        insort,
+        min,
+        nlargest,
+        nsmallest,
+        updateItem,
+        _siftdown,
+        _siftup;
+      (floor = Math.floor), (min = Math.min);
+      defaultCmp = function (x, y) {
         if (x < y) {
           return -1;
         }
@@ -302,7 +395,7 @@ var require_heap = __commonJS({
         }
         return 0;
       };
-      insort = function(a, x, lo, hi, cmp) {
+      insort = function (a, x, lo, hi, cmp) {
         var mid;
         if (lo == null) {
           lo = 0;
@@ -326,14 +419,14 @@ var require_heap = __commonJS({
         }
         return [].splice.apply(a, [lo, lo - lo].concat(x)), x;
       };
-      heappush = function(array, item, cmp) {
+      heappush = function (array, item, cmp) {
         if (cmp == null) {
           cmp = defaultCmp;
         }
         array.push(item);
         return _siftdown(array, 0, array.length - 1, cmp);
       };
-      heappop = function(array, cmp) {
+      heappop = function (array, cmp) {
         var lastelt, returnitem;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -348,7 +441,7 @@ var require_heap = __commonJS({
         }
         return returnitem;
       };
-      heapreplace = function(array, item, cmp) {
+      heapreplace = function (array, item, cmp) {
         var returnitem;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -358,29 +451,35 @@ var require_heap = __commonJS({
         _siftup(array, 0, cmp);
         return returnitem;
       };
-      heappushpop = function(array, item, cmp) {
+      heappushpop = function (array, item, cmp) {
         var _ref;
         if (cmp == null) {
           cmp = defaultCmp;
         }
         if (array.length && cmp(array[0], item) < 0) {
-          _ref = [array[0], item], item = _ref[0], array[0] = _ref[1];
+          (_ref = [array[0], item]), (item = _ref[0]), (array[0] = _ref[1]);
           _siftup(array, 0, cmp);
         }
         return item;
       };
-      heapify = function(array, cmp) {
+      heapify = function (array, cmp) {
         var i, _i, _j, _len, _ref, _ref1, _results, _results1;
         if (cmp == null) {
           cmp = defaultCmp;
         }
-        _ref1 = (function() {
+        _ref1 = function () {
           _results1 = [];
-          for (var _j2 = 0, _ref2 = floor(array.length / 2); 0 <= _ref2 ? _j2 < _ref2 : _j2 > _ref2; 0 <= _ref2 ? _j2++ : _j2--) {
+          for (
+            var _j2 = 0, _ref2 = floor(array.length / 2);
+            0 <= _ref2 ? _j2 < _ref2 : _j2 > _ref2;
+            0 <= _ref2 ? _j2++ : _j2--
+          ) {
             _results1.push(_j2);
           }
           return _results1;
-        }).apply(this).reverse();
+        }
+          .apply(this)
+          .reverse();
         _results = [];
         for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
           i = _ref1[_i];
@@ -388,7 +487,7 @@ var require_heap = __commonJS({
         }
         return _results;
       };
-      updateItem = function(array, item, cmp) {
+      updateItem = function (array, item, cmp) {
         var pos;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -400,7 +499,7 @@ var require_heap = __commonJS({
         _siftdown(array, 0, pos, cmp);
         return _siftup(array, pos, cmp);
       };
-      nlargest = function(array, n, cmp) {
+      nlargest = function (array, n, cmp) {
         var elem, result, _i, _len, _ref;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -417,7 +516,7 @@ var require_heap = __commonJS({
         }
         return result.sort(cmp).reverse();
       };
-      nsmallest = function(array, n, cmp) {
+      nsmallest = function (array, n, cmp) {
         var elem, i, los, result, _i, _j, _len, _ref, _ref1, _results;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -441,19 +540,23 @@ var require_heap = __commonJS({
         }
         heapify(array, cmp);
         _results = [];
-        for (i = _j = 0, _ref1 = min(n, array.length); 0 <= _ref1 ? _j < _ref1 : _j > _ref1; i = 0 <= _ref1 ? ++_j : --_j) {
+        for (
+          i = _j = 0, _ref1 = min(n, array.length);
+          0 <= _ref1 ? _j < _ref1 : _j > _ref1;
+          i = 0 <= _ref1 ? ++_j : --_j
+        ) {
           _results.push(heappop(array, cmp));
         }
         return _results;
       };
-      _siftdown = function(array, startpos, pos, cmp) {
+      _siftdown = function (array, startpos, pos, cmp) {
         var newitem, parent, parentpos;
         if (cmp == null) {
           cmp = defaultCmp;
         }
         newitem = array[pos];
         while (pos > startpos) {
-          parentpos = pos - 1 >> 1;
+          parentpos = (pos - 1) >> 1;
           parent = array[parentpos];
           if (cmp(newitem, parent) < 0) {
             array[pos] = parent;
@@ -462,9 +565,9 @@ var require_heap = __commonJS({
           }
           break;
         }
-        return array[pos] = newitem;
+        return (array[pos] = newitem);
       };
-      _siftup = function(array, pos, cmp) {
+      _siftup = function (array, pos, cmp) {
         var childpos, endpos, newitem, rightpos, startpos;
         if (cmp == null) {
           cmp = defaultCmp;
@@ -475,7 +578,10 @@ var require_heap = __commonJS({
         childpos = 2 * pos + 1;
         while (childpos < endpos) {
           rightpos = childpos + 1;
-          if (rightpos < endpos && !(cmp(array[childpos], array[rightpos]) < 0)) {
+          if (
+            rightpos < endpos &&
+            !(cmp(array[childpos], array[rightpos]) < 0)
+          ) {
             childpos = rightpos;
           }
           array[pos] = array[childpos];
@@ -485,7 +591,7 @@ var require_heap = __commonJS({
         array[pos] = newitem;
         return _siftdown(array, startpos, pos, cmp);
       };
-      Heap = function() {
+      Heap = (function () {
         Heap2.push = heappush;
         Heap2.pop = heappop;
         Heap2.replace = heapreplace;
@@ -498,46 +604,46 @@ var require_heap = __commonJS({
           this.cmp = cmp != null ? cmp : defaultCmp;
           this.nodes = [];
         }
-        Heap2.prototype.push = function(x) {
+        Heap2.prototype.push = function (x) {
           return heappush(this.nodes, x, this.cmp);
         };
-        Heap2.prototype.pop = function() {
+        Heap2.prototype.pop = function () {
           return heappop(this.nodes, this.cmp);
         };
-        Heap2.prototype.peek = function() {
+        Heap2.prototype.peek = function () {
           return this.nodes[0];
         };
-        Heap2.prototype.contains = function(x) {
+        Heap2.prototype.contains = function (x) {
           return this.nodes.indexOf(x) !== -1;
         };
-        Heap2.prototype.replace = function(x) {
+        Heap2.prototype.replace = function (x) {
           return heapreplace(this.nodes, x, this.cmp);
         };
-        Heap2.prototype.pushpop = function(x) {
+        Heap2.prototype.pushpop = function (x) {
           return heappushpop(this.nodes, x, this.cmp);
         };
-        Heap2.prototype.heapify = function() {
+        Heap2.prototype.heapify = function () {
           return heapify(this.nodes, this.cmp);
         };
-        Heap2.prototype.updateItem = function(x) {
+        Heap2.prototype.updateItem = function (x) {
           return updateItem(this.nodes, x, this.cmp);
         };
-        Heap2.prototype.clear = function() {
-          return this.nodes = [];
+        Heap2.prototype.clear = function () {
+          return (this.nodes = []);
         };
-        Heap2.prototype.empty = function() {
+        Heap2.prototype.empty = function () {
           return this.nodes.length === 0;
         };
-        Heap2.prototype.size = function() {
+        Heap2.prototype.size = function () {
           return this.nodes.length;
         };
-        Heap2.prototype.clone = function() {
+        Heap2.prototype.clone = function () {
           var heap;
           heap = new Heap2();
           heap.nodes = this.nodes.slice(0);
           return heap;
         };
-        Heap2.prototype.toArray = function() {
+        Heap2.prototype.toArray = function () {
           return this.nodes.slice(0);
         };
         Heap2.prototype.insert = Heap2.prototype.push;
@@ -546,40 +652,46 @@ var require_heap = __commonJS({
         Heap2.prototype.has = Heap2.prototype.contains;
         Heap2.prototype.copy = Heap2.prototype.clone;
         return Heap2;
-      }();
-      (function(root, factory) {
+      })();
+      (function (root, factory) {
         if (typeof define === "function" && define.amd) {
           return define([], factory);
         } else if (typeof exports === "object") {
-          return module.exports = factory();
+          return (module.exports = factory());
         } else {
-          return root.Heap = factory();
+          return (root.Heap = factory());
         }
-      })(this, function() {
+      })(this, function () {
         return Heap;
       });
     }).call(exports);
-  }
+  },
 });
 
 // node_modules/.pnpm/heap@0.2.7/node_modules/heap/index.js
 var require_heap2 = __commonJS({
   "node_modules/.pnpm/heap@0.2.7/node_modules/heap/index.js"(exports, module) {
     module.exports = require_heap();
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isArray.js
 var require_isArray = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isArray.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isArray.js"(
+    exports,
+    module,
+  ) {
     var isArray = Array.isArray;
     module.exports = isArray;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKey.js
 var require_isKey = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKey.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKey.js"(
+    exports,
+    module,
+  ) {
     var isArray = require_isArray();
     var isSymbol = require_isSymbol();
     var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
@@ -589,18 +701,31 @@ var require_isKey = __commonJS({
         return false;
       }
       var type = typeof value;
-      if (type == "number" || type == "symbol" || type == "boolean" || value == null || isSymbol(value)) {
+      if (
+        type == "number" ||
+        type == "symbol" ||
+        type == "boolean" ||
+        value == null ||
+        isSymbol(value)
+      ) {
         return true;
       }
-      return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+      return (
+        reIsPlainProp.test(value) ||
+        !reIsDeepProp.test(value) ||
+        (object != null && value in Object(object))
+      );
     }
     module.exports = isKey;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isFunction.js
 var require_isFunction = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isFunction.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/isFunction.js"(
+    exports,
+    module,
+  ) {
     var baseGetTag = require_baseGetTag();
     var isObject = require_isObject();
     var asyncTag = "[object AsyncFunction]";
@@ -612,61 +737,75 @@ var require_isFunction = __commonJS({
         return false;
       }
       var tag = baseGetTag(value);
-      return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+      return (
+        tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag
+      );
     }
     module.exports = isFunction;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_coreJsData.js
 var require_coreJsData = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_coreJsData.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_coreJsData.js"(
+    exports,
+    module,
+  ) {
     var root = require_root();
     var coreJsData = root["__core-js_shared__"];
     module.exports = coreJsData;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isMasked.js
 var require_isMasked = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isMasked.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isMasked.js"(
+    exports,
+    module,
+  ) {
     var coreJsData = require_coreJsData();
-    var maskSrcKey = function() {
-      var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
+    var maskSrcKey = (function () {
+      var uid = /[^.]+$/.exec(
+        (coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO) || "",
+      );
       return uid ? "Symbol(src)_1." + uid : "";
-    }();
+    })();
     function isMasked(func) {
       return !!maskSrcKey && maskSrcKey in func;
     }
     module.exports = isMasked;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toSource.js
 var require_toSource = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toSource.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toSource.js"(
+    exports,
+    module,
+  ) {
     var funcProto = Function.prototype;
     var funcToString = funcProto.toString;
     function toSource(func) {
       if (func != null) {
         try {
           return funcToString.call(func);
-        } catch (e) {
-        }
+        } catch (e) {}
         try {
           return func + "";
-        } catch (e) {
-        }
+        } catch (e) {}
       }
       return "";
     }
     module.exports = toSource;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseIsNative.js
 var require_baseIsNative = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseIsNative.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseIsNative.js"(
+    exports,
+    module,
+  ) {
     var isFunction = require_isFunction();
     var isMasked = require_isMasked();
     var isObject = require_isObject();
@@ -678,7 +817,15 @@ var require_baseIsNative = __commonJS({
     var funcToString = funcProto.toString;
     var hasOwnProperty = objectProto.hasOwnProperty;
     var reIsNative = RegExp(
-      "^" + funcToString.call(hasOwnProperty).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"
+      "^" +
+        funcToString
+          .call(hasOwnProperty)
+          .replace(reRegExpChar, "\\$&")
+          .replace(
+            /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
+            "$1.*?",
+          ) +
+        "$",
     );
     function baseIsNative(value) {
       if (!isObject(value) || isMasked(value)) {
@@ -688,22 +835,28 @@ var require_baseIsNative = __commonJS({
       return pattern.test(toSource(value));
     }
     module.exports = baseIsNative;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getValue.js
 var require_getValue = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getValue.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getValue.js"(
+    exports,
+    module,
+  ) {
     function getValue(object, key) {
       return object == null ? void 0 : object[key];
     }
     module.exports = getValue;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getNative.js
 var require_getNative = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getNative.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getNative.js"(
+    exports,
+    module,
+  ) {
     var baseIsNative = require_baseIsNative();
     var getValue = require_getValue();
     function getNative(object, key) {
@@ -711,45 +864,57 @@ var require_getNative = __commonJS({
       return baseIsNative(value) ? value : void 0;
     }
     module.exports = getNative;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_nativeCreate.js
 var require_nativeCreate = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_nativeCreate.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_nativeCreate.js"(
+    exports,
+    module,
+  ) {
     var getNative = require_getNative();
     var nativeCreate = getNative(Object, "create");
     module.exports = nativeCreate;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashClear.js
 var require_hashClear = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashClear.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashClear.js"(
+    exports,
+    module,
+  ) {
     var nativeCreate = require_nativeCreate();
     function hashClear() {
       this.__data__ = nativeCreate ? nativeCreate(null) : {};
       this.size = 0;
     }
     module.exports = hashClear;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashDelete.js
 var require_hashDelete = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashDelete.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashDelete.js"(
+    exports,
+    module,
+  ) {
     function hashDelete(key) {
       var result = this.has(key) && delete this.__data__[key];
       this.size -= result ? 1 : 0;
       return result;
     }
     module.exports = hashDelete;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashGet.js
 var require_hashGet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashGet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashGet.js"(
+    exports,
+    module,
+  ) {
     var nativeCreate = require_nativeCreate();
     var HASH_UNDEFINED = "__lodash_hash_undefined__";
     var objectProto = Object.prototype;
@@ -763,26 +928,34 @@ var require_hashGet = __commonJS({
       return hasOwnProperty.call(data, key) ? data[key] : void 0;
     }
     module.exports = hashGet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashHas.js
 var require_hashHas = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashHas.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashHas.js"(
+    exports,
+    module,
+  ) {
     var nativeCreate = require_nativeCreate();
     var objectProto = Object.prototype;
     var hasOwnProperty = objectProto.hasOwnProperty;
     function hashHas(key) {
       var data = this.__data__;
-      return nativeCreate ? data[key] !== void 0 : hasOwnProperty.call(data, key);
+      return nativeCreate
+        ? data[key] !== void 0
+        : hasOwnProperty.call(data, key);
     }
     module.exports = hashHas;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashSet.js
 var require_hashSet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashSet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_hashSet.js"(
+    exports,
+    module,
+  ) {
     var nativeCreate = require_nativeCreate();
     var HASH_UNDEFINED = "__lodash_hash_undefined__";
     function hashSet(key, value) {
@@ -792,19 +965,23 @@ var require_hashSet = __commonJS({
       return this;
     }
     module.exports = hashSet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Hash.js
 var require_Hash = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Hash.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Hash.js"(
+    exports,
+    module,
+  ) {
     var hashClear = require_hashClear();
     var hashDelete = require_hashDelete();
     var hashGet = require_hashGet();
     var hashHas = require_hashHas();
     var hashSet = require_hashSet();
     function Hash(entries) {
-      var index = -1, length = entries == null ? 0 : entries.length;
+      var index = -1,
+        length = entries == null ? 0 : entries.length;
       this.clear();
       while (++index < length) {
         var entry = entries[index];
@@ -817,33 +994,42 @@ var require_Hash = __commonJS({
     Hash.prototype.has = hashHas;
     Hash.prototype.set = hashSet;
     module.exports = Hash;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheClear.js
 var require_listCacheClear = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheClear.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheClear.js"(
+    exports,
+    module,
+  ) {
     function listCacheClear() {
       this.__data__ = [];
       this.size = 0;
     }
     module.exports = listCacheClear;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/eq.js
 var require_eq = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/eq.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/eq.js"(
+    exports,
+    module,
+  ) {
     function eq(value, other) {
-      return value === other || value !== value && other !== other;
+      return value === other || (value !== value && other !== other);
     }
     module.exports = eq;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assocIndexOf.js
 var require_assocIndexOf = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assocIndexOf.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assocIndexOf.js"(
+    exports,
+    module,
+  ) {
     var eq = require_eq();
     function assocIndexOf(array, key) {
       var length = array.length;
@@ -855,17 +1041,21 @@ var require_assocIndexOf = __commonJS({
       return -1;
     }
     module.exports = assocIndexOf;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheDelete.js
 var require_listCacheDelete = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheDelete.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheDelete.js"(
+    exports,
+    module,
+  ) {
     var assocIndexOf = require_assocIndexOf();
     var arrayProto = Array.prototype;
     var splice = arrayProto.splice;
     function listCacheDelete(key) {
-      var data = this.__data__, index = assocIndexOf(data, key);
+      var data = this.__data__,
+        index = assocIndexOf(data, key);
       if (index < 0) {
         return false;
       }
@@ -879,38 +1069,49 @@ var require_listCacheDelete = __commonJS({
       return true;
     }
     module.exports = listCacheDelete;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheGet.js
 var require_listCacheGet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheGet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheGet.js"(
+    exports,
+    module,
+  ) {
     var assocIndexOf = require_assocIndexOf();
     function listCacheGet(key) {
-      var data = this.__data__, index = assocIndexOf(data, key);
+      var data = this.__data__,
+        index = assocIndexOf(data, key);
       return index < 0 ? void 0 : data[index][1];
     }
     module.exports = listCacheGet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheHas.js
 var require_listCacheHas = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheHas.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheHas.js"(
+    exports,
+    module,
+  ) {
     var assocIndexOf = require_assocIndexOf();
     function listCacheHas(key) {
       return assocIndexOf(this.__data__, key) > -1;
     }
     module.exports = listCacheHas;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheSet.js
 var require_listCacheSet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheSet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_listCacheSet.js"(
+    exports,
+    module,
+  ) {
     var assocIndexOf = require_assocIndexOf();
     function listCacheSet(key, value) {
-      var data = this.__data__, index = assocIndexOf(data, key);
+      var data = this.__data__,
+        index = assocIndexOf(data, key);
       if (index < 0) {
         ++this.size;
         data.push([key, value]);
@@ -920,19 +1121,23 @@ var require_listCacheSet = __commonJS({
       return this;
     }
     module.exports = listCacheSet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_ListCache.js
 var require_ListCache = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_ListCache.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_ListCache.js"(
+    exports,
+    module,
+  ) {
     var listCacheClear = require_listCacheClear();
     var listCacheDelete = require_listCacheDelete();
     var listCacheGet = require_listCacheGet();
     var listCacheHas = require_listCacheHas();
     var listCacheSet = require_listCacheSet();
     function ListCache(entries) {
-      var index = -1, length = entries == null ? 0 : entries.length;
+      var index = -1,
+        length = entries == null ? 0 : entries.length;
       this.clear();
       while (++index < length) {
         var entry = entries[index];
@@ -945,63 +1150,85 @@ var require_ListCache = __commonJS({
     ListCache.prototype.has = listCacheHas;
     ListCache.prototype.set = listCacheSet;
     module.exports = ListCache;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Map.js
 var require_Map = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Map.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_Map.js"(
+    exports,
+    module,
+  ) {
     var getNative = require_getNative();
     var root = require_root();
     var Map2 = getNative(root, "Map");
     module.exports = Map2;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheClear.js
 var require_mapCacheClear = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheClear.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheClear.js"(
+    exports,
+    module,
+  ) {
     var Hash = require_Hash();
     var ListCache = require_ListCache();
     var Map2 = require_Map();
     function mapCacheClear() {
       this.size = 0;
       this.__data__ = {
-        "hash": new Hash(),
-        "map": new (Map2 || ListCache)(),
-        "string": new Hash()
+        hash: new Hash(),
+        map: new (Map2 || ListCache)(),
+        string: new Hash(),
       };
     }
     module.exports = mapCacheClear;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKeyable.js
 var require_isKeyable = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKeyable.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isKeyable.js"(
+    exports,
+    module,
+  ) {
     function isKeyable(value) {
       var type = typeof value;
-      return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+      return type == "string" ||
+        type == "number" ||
+        type == "symbol" ||
+        type == "boolean"
+        ? value !== "__proto__"
+        : value === null;
     }
     module.exports = isKeyable;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getMapData.js
 var require_getMapData = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getMapData.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_getMapData.js"(
+    exports,
+    module,
+  ) {
     var isKeyable = require_isKeyable();
     function getMapData(map, key) {
       var data = map.__data__;
-      return isKeyable(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+      return isKeyable(key)
+        ? data[typeof key == "string" ? "string" : "hash"]
+        : data.map;
     }
     module.exports = getMapData;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheDelete.js
 var require_mapCacheDelete = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheDelete.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheDelete.js"(
+    exports,
+    module,
+  ) {
     var getMapData = require_getMapData();
     function mapCacheDelete(key) {
       var result = getMapData(this, key)["delete"](key);
@@ -1009,55 +1236,69 @@ var require_mapCacheDelete = __commonJS({
       return result;
     }
     module.exports = mapCacheDelete;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheGet.js
 var require_mapCacheGet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheGet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheGet.js"(
+    exports,
+    module,
+  ) {
     var getMapData = require_getMapData();
     function mapCacheGet(key) {
       return getMapData(this, key).get(key);
     }
     module.exports = mapCacheGet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheHas.js
 var require_mapCacheHas = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheHas.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheHas.js"(
+    exports,
+    module,
+  ) {
     var getMapData = require_getMapData();
     function mapCacheHas(key) {
       return getMapData(this, key).has(key);
     }
     module.exports = mapCacheHas;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheSet.js
 var require_mapCacheSet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheSet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_mapCacheSet.js"(
+    exports,
+    module,
+  ) {
     var getMapData = require_getMapData();
     function mapCacheSet(key, value) {
-      var data = getMapData(this, key), size = data.size;
+      var data = getMapData(this, key),
+        size = data.size;
       data.set(key, value);
       this.size += data.size == size ? 0 : 1;
       return this;
     }
     module.exports = mapCacheSet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_MapCache.js
 var require_MapCache = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_MapCache.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_MapCache.js"(
+    exports,
+    module,
+  ) {
     var mapCacheClear = require_mapCacheClear();
     var mapCacheDelete = require_mapCacheDelete();
     var mapCacheGet = require_mapCacheGet();
     var mapCacheHas = require_mapCacheHas();
     var mapCacheSet = require_mapCacheSet();
     function MapCache(entries) {
-      var index = -1, length = entries == null ? 0 : entries.length;
+      var index = -1,
+        length = entries == null ? 0 : entries.length;
       this.clear();
       while (++index < length) {
         var entry = entries[index];
@@ -1070,20 +1311,28 @@ var require_MapCache = __commonJS({
     MapCache.prototype.has = mapCacheHas;
     MapCache.prototype.set = mapCacheSet;
     module.exports = MapCache;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/memoize.js
 var require_memoize = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/memoize.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/memoize.js"(
+    exports,
+    module,
+  ) {
     var MapCache = require_MapCache();
     var FUNC_ERROR_TEXT = "Expected a function";
     function memoize(func, resolver) {
-      if (typeof func != "function" || resolver != null && typeof resolver != "function") {
+      if (
+        typeof func != "function" ||
+        (resolver != null && typeof resolver != "function")
+      ) {
         throw new TypeError(FUNC_ERROR_TEXT);
       }
-      var memoized = function() {
-        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+      var memoized = function () {
+        var args = arguments,
+          key = resolver ? resolver.apply(this, args) : args[0],
+          cache = memoized.cache;
         if (cache.has(key)) {
           return cache.get(key);
         }
@@ -1096,16 +1345,19 @@ var require_memoize = __commonJS({
     }
     memoize.Cache = MapCache;
     module.exports = memoize;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_memoizeCapped.js
 var require_memoizeCapped = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_memoizeCapped.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_memoizeCapped.js"(
+    exports,
+    module,
+  ) {
     var memoize = require_memoize();
     var MAX_MEMOIZE_SIZE = 500;
     function memoizeCapped(func) {
-      var result = memoize(func, function(key) {
+      var result = memoize(func, function (key) {
         if (cache.size === MAX_MEMOIZE_SIZE) {
           cache.clear();
         }
@@ -1115,46 +1367,60 @@ var require_memoizeCapped = __commonJS({
       return result;
     }
     module.exports = memoizeCapped;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_stringToPath.js
 var require_stringToPath = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_stringToPath.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_stringToPath.js"(
+    exports,
+    module,
+  ) {
     var memoizeCapped = require_memoizeCapped();
-    var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+    var rePropName =
+      /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
     var reEscapeChar = /\\(\\)?/g;
-    var stringToPath = memoizeCapped(function(string) {
+    var stringToPath = memoizeCapped(function (string) {
       var result = [];
       if (string.charCodeAt(0) === 46) {
         result.push("");
       }
-      string.replace(rePropName, function(match, number, quote, subString) {
-        result.push(quote ? subString.replace(reEscapeChar, "$1") : number || match);
+      string.replace(rePropName, function (match, number, quote, subString) {
+        result.push(
+          quote ? subString.replace(reEscapeChar, "$1") : number || match,
+        );
       });
       return result;
     });
     module.exports = stringToPath;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_arrayMap.js
 var require_arrayMap = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_arrayMap.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_arrayMap.js"(
+    exports,
+    module,
+  ) {
     function arrayMap(array, iteratee) {
-      var index = -1, length = array == null ? 0 : array.length, result = Array(length);
+      var index = -1,
+        length = array == null ? 0 : array.length,
+        result = Array(length);
       while (++index < length) {
         result[index] = iteratee(array[index], index, array);
       }
       return result;
     }
     module.exports = arrayMap;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseToString.js
 var require_baseToString = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseToString.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseToString.js"(
+    exports,
+    module,
+  ) {
     var Symbol2 = require_Symbol();
     var arrayMap = require_arrayMap();
     var isArray = require_isArray();
@@ -1176,23 +1442,29 @@ var require_baseToString = __commonJS({
       return result == "0" && 1 / value == -INFINITY ? "-0" : result;
     }
     module.exports = baseToString;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toString.js
 var require_toString = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toString.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toString.js"(
+    exports,
+    module,
+  ) {
     var baseToString = require_baseToString();
     function toString(value) {
       return value == null ? "" : baseToString(value);
     }
     module.exports = toString;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_castPath.js
 var require_castPath = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_castPath.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_castPath.js"(
+    exports,
+    module,
+  ) {
     var isArray = require_isArray();
     var isKey = require_isKey();
     var stringToPath = require_stringToPath();
@@ -1204,12 +1476,15 @@ var require_castPath = __commonJS({
       return isKey(value, object) ? [value] : stringToPath(toString(value));
     }
     module.exports = castPath;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toKey.js
 var require_toKey = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toKey.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_toKey.js"(
+    exports,
+    module,
+  ) {
     var isSymbol = require_isSymbol();
     var INFINITY = 1 / 0;
     function toKey(value) {
@@ -1220,108 +1495,138 @@ var require_toKey = __commonJS({
       return result == "0" && 1 / value == -INFINITY ? "-0" : result;
     }
     module.exports = toKey;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGet.js
 var require_baseGet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseGet.js"(
+    exports,
+    module,
+  ) {
     var castPath = require_castPath();
     var toKey = require_toKey();
     function baseGet(object, path) {
       path = castPath(path, object);
-      var index = 0, length = path.length;
+      var index = 0,
+        length = path.length;
       while (object != null && index < length) {
         object = object[toKey(path[index++])];
       }
       return index && index == length ? object : void 0;
     }
     module.exports = baseGet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/get.js
 var require_get = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/get.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/get.js"(
+    exports,
+    module,
+  ) {
     var baseGet = require_baseGet();
     function get(object, path, defaultValue) {
       var result = object == null ? void 0 : baseGet(object, path);
       return result === void 0 ? defaultValue : result;
     }
     module.exports = get;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_defineProperty.js
 var require_defineProperty = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_defineProperty.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_defineProperty.js"(
+    exports,
+    module,
+  ) {
     var getNative = require_getNative();
-    var defineProperty = function() {
+    var defineProperty = (function () {
       try {
         var func = getNative(Object, "defineProperty");
         func({}, "", {});
         return func;
-      } catch (e) {
-      }
-    }();
+      } catch (e) {}
+    })();
     module.exports = defineProperty;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseAssignValue.js
 var require_baseAssignValue = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseAssignValue.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseAssignValue.js"(
+    exports,
+    module,
+  ) {
     var defineProperty = require_defineProperty();
     function baseAssignValue(object, key, value) {
       if (key == "__proto__" && defineProperty) {
         defineProperty(object, key, {
-          "configurable": true,
-          "enumerable": true,
-          "value": value,
-          "writable": true
+          configurable: true,
+          enumerable: true,
+          value: value,
+          writable: true,
         });
       } else {
         object[key] = value;
       }
     }
     module.exports = baseAssignValue;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assignValue.js
 var require_assignValue = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assignValue.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_assignValue.js"(
+    exports,
+    module,
+  ) {
     var baseAssignValue = require_baseAssignValue();
     var eq = require_eq();
     var objectProto = Object.prototype;
     var hasOwnProperty = objectProto.hasOwnProperty;
     function assignValue(object, key, value) {
       var objValue = object[key];
-      if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === void 0 && !(key in object)) {
+      if (
+        !(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
+        (value === void 0 && !(key in object))
+      ) {
         baseAssignValue(object, key, value);
       }
     }
     module.exports = assignValue;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isIndex.js
 var require_isIndex = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isIndex.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_isIndex.js"(
+    exports,
+    module,
+  ) {
     var MAX_SAFE_INTEGER = 9007199254740991;
     var reIsUint = /^(?:0|[1-9]\d*)$/;
     function isIndex(value, length) {
       var type = typeof value;
       length = length == null ? MAX_SAFE_INTEGER : length;
-      return !!length && (type == "number" || type != "symbol" && reIsUint.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+      return (
+        !!length &&
+        (type == "number" || (type != "symbol" && reIsUint.test(value))) &&
+        value > -1 &&
+        value % 1 == 0 &&
+        value < length
+      );
     }
     module.exports = isIndex;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseSet.js
 var require_baseSet = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseSet.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_baseSet.js"(
+    exports,
+    module,
+  ) {
     var assignValue = require_assignValue();
     var castPath = require_castPath();
     var isIndex = require_isIndex();
@@ -1332,17 +1637,29 @@ var require_baseSet = __commonJS({
         return object;
       }
       path = castPath(path, object);
-      var index = -1, length = path.length, lastIndex = length - 1, nested = object;
+      var index = -1,
+        length = path.length,
+        lastIndex = length - 1,
+        nested = object;
       while (nested != null && ++index < length) {
-        var key = toKey(path[index]), newValue = value;
-        if (key === "__proto__" || key === "constructor" || key === "prototype") {
+        var key = toKey(path[index]),
+          newValue = value;
+        if (
+          key === "__proto__" ||
+          key === "constructor" ||
+          key === "prototype"
+        ) {
           return object;
         }
         if (index != lastIndex) {
           var objValue = nested[key];
           newValue = customizer ? customizer(objValue, key, nested) : void 0;
           if (newValue === void 0) {
-            newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {};
+            newValue = isObject(objValue)
+              ? objValue
+              : isIndex(path[index + 1])
+                ? []
+                : {};
           }
         }
         assignValue(nested, key, newValue);
@@ -1351,25 +1668,32 @@ var require_baseSet = __commonJS({
       return object;
     }
     module.exports = baseSet;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/set.js
 var require_set = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/set.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/set.js"(
+    exports,
+    module,
+  ) {
     var baseSet = require_baseSet();
     function set(object, path, value) {
       return object == null ? object : baseSet(object, path, value);
     }
     module.exports = set;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_copyArray.js
 var require_copyArray = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_copyArray.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/_copyArray.js"(
+    exports,
+    module,
+  ) {
     function copyArray(source, array) {
-      var index = -1, length = source.length;
+      var index = -1,
+        length = source.length;
       array || (array = Array(length));
       while (++index < length) {
         array[index] = source[index];
@@ -1377,12 +1701,15 @@ var require_copyArray = __commonJS({
       return array;
     }
     module.exports = copyArray;
-  }
+  },
 });
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toPath.js
 var require_toPath = __commonJS({
-  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toPath.js"(exports, module) {
+  "node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/toPath.js"(
+    exports,
+    module,
+  ) {
     var arrayMap = require_arrayMap();
     var copyArray = require_copyArray();
     var isArray = require_isArray();
@@ -1394,22 +1721,27 @@ var require_toPath = __commonJS({
       if (isArray(value)) {
         return arrayMap(value, toKey);
       }
-      return isSymbol(value) ? [value] : copyArray(stringToPath(toString(value)));
+      return isSymbol(value)
+        ? [value]
+        : copyArray(stringToPath(toString(value)));
     }
     module.exports = toPath;
-  }
+  },
 });
 
 // node_modules/.pnpm/cytoscape@3.28.1/node_modules/cytoscape/dist/cytoscape.cjs.js
 var require_cytoscape_cjs = __commonJS({
-  "node_modules/.pnpm/cytoscape@3.28.1/node_modules/cytoscape/dist/cytoscape.cjs.js"(exports, module) {
+  "node_modules/.pnpm/cytoscape@3.28.1/node_modules/cytoscape/dist/cytoscape.cjs.js"(
+    exports,
+    module,
+  ) {
     var debounce = require_debounce();
     var Heap = require_heap2();
     var get = require_get();
     var set = require_set();
     var toPath = require_toPath();
     function _interopDefaultLegacy(e) {
-      return e && typeof e === "object" && "default" in e ? e : { "default": e };
+      return e && typeof e === "object" && "default" in e ? e : { default: e };
     }
     var debounce__default = _interopDefaultLegacy(debounce);
     var Heap__default = _interopDefaultLegacy(Heap);
@@ -1418,11 +1750,22 @@ var require_cytoscape_cjs = __commonJS({
     var toPath__default = _interopDefaultLegacy(toPath);
     function _typeof(obj) {
       "@babel/helpers - typeof";
-      return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj2) {
-        return typeof obj2;
-      } : function(obj2) {
-        return obj2 && "function" == typeof Symbol && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
-      }, _typeof(obj);
+      return (
+        (_typeof =
+          "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+            ? function (obj2) {
+                return typeof obj2;
+              }
+            : function (obj2) {
+                return obj2 &&
+                  "function" == typeof Symbol &&
+                  obj2.constructor === Symbol &&
+                  obj2 !== Symbol.prototype
+                  ? "symbol"
+                  : typeof obj2;
+              }),
+        _typeof(obj)
+      );
     }
     function _classCallCheck(instance, Constructor) {
       if (!(instance instanceof Constructor)) {
@@ -1434,18 +1777,15 @@ var require_cytoscape_cjs = __commonJS({
         var descriptor = props[i2];
         descriptor.enumerable = descriptor.enumerable || false;
         descriptor.configurable = true;
-        if ("value" in descriptor)
-          descriptor.writable = true;
+        if ("value" in descriptor) descriptor.writable = true;
         Object.defineProperty(target, descriptor.key, descriptor);
       }
     }
     function _createClass(Constructor, protoProps, staticProps) {
-      if (protoProps)
-        _defineProperties(Constructor.prototype, protoProps);
-      if (staticProps)
-        _defineProperties(Constructor, staticProps);
+      if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) _defineProperties(Constructor, staticProps);
       Object.defineProperty(Constructor, "prototype", {
-        writable: false
+        writable: false,
       });
       return Constructor;
     }
@@ -1455,7 +1795,7 @@ var require_cytoscape_cjs = __commonJS({
           value,
           enumerable: true,
           configurable: true,
-          writable: true
+          writable: true,
         });
       } else {
         obj[key] = value;
@@ -1463,16 +1803,23 @@ var require_cytoscape_cjs = __commonJS({
       return obj;
     }
     function _slicedToArray(arr, i2) {
-      return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i2) || _unsupportedIterableToArray(arr, i2) || _nonIterableRest();
+      return (
+        _arrayWithHoles(arr) ||
+        _iterableToArrayLimit(arr, i2) ||
+        _unsupportedIterableToArray(arr, i2) ||
+        _nonIterableRest()
+      );
     }
     function _arrayWithHoles(arr) {
-      if (Array.isArray(arr))
-        return arr;
+      if (Array.isArray(arr)) return arr;
     }
     function _iterableToArrayLimit(arr, i2) {
-      var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-      if (_i == null)
-        return;
+      var _i =
+        arr == null
+          ? null
+          : (typeof Symbol !== "undefined" && arr[Symbol.iterator]) ||
+            arr["@@iterator"];
+      if (_i == null) return;
       var _arr = [];
       var _n = true;
       var _d = false;
@@ -1480,56 +1827,55 @@ var require_cytoscape_cjs = __commonJS({
       try {
         for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
           _arr.push(_s.value);
-          if (i2 && _arr.length === i2)
-            break;
+          if (i2 && _arr.length === i2) break;
         }
       } catch (err) {
         _d = true;
         _e = err;
       } finally {
         try {
-          if (!_n && _i["return"] != null)
-            _i["return"]();
+          if (!_n && _i["return"] != null) _i["return"]();
         } finally {
-          if (_d)
-            throw _e;
+          if (_d) throw _e;
         }
       }
       return _arr;
     }
     function _unsupportedIterableToArray(o, minLen) {
-      if (!o)
-        return;
-      if (typeof o === "string")
-        return _arrayLikeToArray(o, minLen);
+      if (!o) return;
+      if (typeof o === "string") return _arrayLikeToArray(o, minLen);
       var n = Object.prototype.toString.call(o).slice(8, -1);
-      if (n === "Object" && o.constructor)
-        n = o.constructor.name;
-      if (n === "Map" || n === "Set")
-        return Array.from(o);
-      if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+      if (n === "Object" && o.constructor) n = o.constructor.name;
+      if (n === "Map" || n === "Set") return Array.from(o);
+      if (
+        n === "Arguments" ||
+        /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+      )
         return _arrayLikeToArray(o, minLen);
     }
     function _arrayLikeToArray(arr, len) {
-      if (len == null || len > arr.length)
-        len = arr.length;
+      if (len == null || len > arr.length) len = arr.length;
       for (var i2 = 0, arr2 = new Array(len); i2 < len; i2++)
         arr2[i2] = arr[i2];
       return arr2;
     }
     function _nonIterableRest() {
-      throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+      throw new TypeError(
+        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+      );
     }
     var _window = typeof window === "undefined" ? null : window;
     var navigator = _window ? _window.navigator : null;
     _window ? _window.document : null;
     var typeofstr = _typeof("");
     var typeofobj = _typeof({});
-    var typeoffn = _typeof(function() {
-    });
-    var typeofhtmlele = typeof HTMLElement === "undefined" ? "undefined" : _typeof(HTMLElement);
+    var typeoffn = _typeof(function () {});
+    var typeofhtmlele =
+      typeof HTMLElement === "undefined" ? "undefined" : _typeof(HTMLElement);
     var instanceStr = function instanceStr2(obj) {
-      return obj && obj.instanceString && fn$6(obj.instanceString) ? obj.instanceString() : null;
+      return obj && obj.instanceString && fn$6(obj.instanceString)
+        ? obj.instanceString()
+        : null;
     };
     var string = function string2(obj) {
       return obj != null && _typeof(obj) == typeofstr;
@@ -1538,10 +1884,20 @@ var require_cytoscape_cjs = __commonJS({
       return obj != null && _typeof(obj) === typeoffn;
     };
     var array = function array2(obj) {
-      return !elementOrCollection(obj) && (Array.isArray ? Array.isArray(obj) : obj != null && obj instanceof Array);
+      return (
+        !elementOrCollection(obj) &&
+        (Array.isArray
+          ? Array.isArray(obj)
+          : obj != null && obj instanceof Array)
+      );
     };
     var plainObject = function plainObject2(obj) {
-      return obj != null && _typeof(obj) === typeofobj && !array(obj) && obj.constructor === Object;
+      return (
+        obj != null &&
+        _typeof(obj) === typeofobj &&
+        !array(obj) &&
+        obj.constructor === Object
+      );
     };
     var object = function object2(obj) {
       return obj != null && _typeof(obj) === typeofobj;
@@ -1593,7 +1949,13 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var boundingBox = function boundingBox2(obj) {
-      return plainObject(obj) && number$1(obj.x1) && number$1(obj.x2) && number$1(obj.y1) && number$1(obj.y2);
+      return (
+        plainObject(obj) &&
+        number$1(obj.x1) &&
+        number$1(obj.x2) &&
+        number$1(obj.y1) &&
+        number$1(obj.y2)
+      );
     };
     var promise = function promise2(obj) {
       return object(obj) && fn$6(obj.then);
@@ -1630,21 +1992,24 @@ var require_cytoscape_cjs = __commonJS({
       memoizedFn.cache = {};
       return memoizedFn;
     };
-    var camel2dash = memoize(function(str) {
-      return str.replace(/([A-Z])/g, function(v) {
+    var camel2dash = memoize(function (str) {
+      return str.replace(/([A-Z])/g, function (v) {
         return "-" + v.toLowerCase();
       });
     });
-    var dash2camel = memoize(function(str) {
-      return str.replace(/(-\w)/g, function(v) {
+    var dash2camel = memoize(function (str) {
+      return str.replace(/(-\w)/g, function (v) {
         return v[1].toUpperCase();
       });
     });
-    var prependCamel = memoize(function(prefix, str) {
-      return prefix + str[0].toUpperCase() + str.substring(1);
-    }, function(prefix, str) {
-      return prefix + "$" + str;
-    });
+    var prependCamel = memoize(
+      function (prefix, str) {
+        return prefix + str[0].toUpperCase() + str.substring(1);
+      },
+      function (prefix, str) {
+        return prefix + "$" + str;
+      },
+    );
     var capitalize = function capitalize2(str) {
       if (emptyString(str)) {
         return str;
@@ -1652,10 +2017,46 @@ var require_cytoscape_cjs = __commonJS({
       return str.charAt(0).toUpperCase() + str.substring(1);
     };
     var number = "(?:[-+]?(?:(?:\\d+|\\d*\\.\\d+)(?:[Ee][+-]?\\d+)?))";
-    var rgba = "rgb[a]?\\((" + number + "[%]?)\\s*,\\s*(" + number + "[%]?)\\s*,\\s*(" + number + "[%]?)(?:\\s*,\\s*(" + number + "))?\\)";
-    var rgbaNoBackRefs = "rgb[a]?\\((?:" + number + "[%]?)\\s*,\\s*(?:" + number + "[%]?)\\s*,\\s*(?:" + number + "[%]?)(?:\\s*,\\s*(?:" + number + "))?\\)";
-    var hsla = "hsl[a]?\\((" + number + ")\\s*,\\s*(" + number + "[%])\\s*,\\s*(" + number + "[%])(?:\\s*,\\s*(" + number + "))?\\)";
-    var hslaNoBackRefs = "hsl[a]?\\((?:" + number + ")\\s*,\\s*(?:" + number + "[%])\\s*,\\s*(?:" + number + "[%])(?:\\s*,\\s*(?:" + number + "))?\\)";
+    var rgba =
+      "rgb[a]?\\((" +
+      number +
+      "[%]?)\\s*,\\s*(" +
+      number +
+      "[%]?)\\s*,\\s*(" +
+      number +
+      "[%]?)(?:\\s*,\\s*(" +
+      number +
+      "))?\\)";
+    var rgbaNoBackRefs =
+      "rgb[a]?\\((?:" +
+      number +
+      "[%]?)\\s*,\\s*(?:" +
+      number +
+      "[%]?)\\s*,\\s*(?:" +
+      number +
+      "[%]?)(?:\\s*,\\s*(?:" +
+      number +
+      "))?\\)";
+    var hsla =
+      "hsl[a]?\\((" +
+      number +
+      ")\\s*,\\s*(" +
+      number +
+      "[%])\\s*,\\s*(" +
+      number +
+      "[%])(?:\\s*,\\s*(" +
+      number +
+      "))?\\)";
+    var hslaNoBackRefs =
+      "hsl[a]?\\((?:" +
+      number +
+      ")\\s*,\\s*(?:" +
+      number +
+      "[%])\\s*,\\s*(?:" +
+      number +
+      "[%])(?:\\s*,\\s*(?:" +
+      number +
+      "))?\\)";
     var hex3 = "\\#[0-9a-fA-F]{3}";
     var hex6 = "\\#[0-9a-fA-F]{6}";
     var ascending = function ascending2(a, b) {
@@ -1670,21 +2071,24 @@ var require_cytoscape_cjs = __commonJS({
     var descending = function descending2(a, b) {
       return -1 * ascending(a, b);
     };
-    var extend = Object.assign != null ? Object.assign.bind(Object) : function(tgt) {
-      var args = arguments;
-      for (var i2 = 1; i2 < args.length; i2++) {
-        var obj = args[i2];
-        if (obj == null) {
-          continue;
-        }
-        var keys = Object.keys(obj);
-        for (var j = 0; j < keys.length; j++) {
-          var k = keys[j];
-          tgt[k] = obj[k];
-        }
-      }
-      return tgt;
-    };
+    var extend =
+      Object.assign != null
+        ? Object.assign.bind(Object)
+        : function (tgt) {
+            var args = arguments;
+            for (var i2 = 1; i2 < args.length; i2++) {
+              var obj = args[i2];
+              if (obj == null) {
+                continue;
+              }
+              var keys = Object.keys(obj);
+              for (var j = 0; j < keys.length; j++) {
+                var k = keys[j];
+                tgt[k] = obj[k];
+              }
+            }
+            return tgt;
+          };
     var hex2tuple = function hex2tuple2(hex) {
       if (!(hex.length === 4 || hex.length === 7) || hex[0] !== "#") {
         return;
@@ -1707,23 +2111,18 @@ var require_cytoscape_cjs = __commonJS({
       var ret;
       var h, s, l, a, r, g, b;
       function hue2rgb(p3, q2, t) {
-        if (t < 0)
-          t += 1;
-        if (t > 1)
-          t -= 1;
-        if (t < 1 / 6)
-          return p3 + (q2 - p3) * 6 * t;
-        if (t < 1 / 2)
-          return q2;
-        if (t < 2 / 3)
-          return p3 + (q2 - p3) * (2 / 3 - t) * 6;
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1 / 6) return p3 + (q2 - p3) * 6 * t;
+        if (t < 1 / 2) return q2;
+        if (t < 2 / 3) return p3 + (q2 - p3) * (2 / 3 - t) * 6;
         return p3;
       }
       var m = new RegExp("^" + hsla + "$").exec(hsl);
       if (m) {
         h = parseInt(m[1]);
         if (h < 0) {
-          h = (360 - -1 * h % 360) % 360;
+          h = (360 - ((-1 * h) % 360)) % 360;
         } else if (h > 360) {
           h = h % 360;
         }
@@ -1771,7 +2170,7 @@ var require_cytoscape_cjs = __commonJS({
           }
           channel = parseFloat(channel);
           if (isPct[i2]) {
-            channel = channel / 100 * 255;
+            channel = (channel / 100) * 255;
           }
           if (channel < 0 || channel > 255) {
             return;
@@ -1798,7 +2197,13 @@ var require_cytoscape_cjs = __commonJS({
       return colors[color.toLowerCase()];
     };
     var color2tuple = function color2tuple2(color) {
-      return (array(color) ? color : null) || colorname2tuple(color) || hex2tuple(color) || rgb2tuple(color) || hsl2tuple(color);
+      return (
+        (array(color) ? color : null) ||
+        colorname2tuple(color) ||
+        hex2tuple(color) ||
+        rgb2tuple(color) ||
+        hsl2tuple(color)
+      );
     };
     var colors = {
       // special colour names
@@ -1951,7 +2356,7 @@ var require_cytoscape_cjs = __commonJS({
       white: [255, 255, 255],
       whitesmoke: [245, 245, 245],
       yellow: [255, 255, 0],
-      yellowgreen: [154, 205, 50]
+      yellowgreen: [154, 205, 50],
     };
     var setMap = function setMap2(options) {
       var obj = options.map;
@@ -1989,39 +2394,42 @@ var require_cytoscape_cjs = __commonJS({
       return obj;
     };
     var performance = _window ? _window.performance : null;
-    var pnow = performance && performance.now ? function() {
-      return performance.now();
-    } : function() {
-      return Date.now();
-    };
-    var raf = function() {
+    var pnow =
+      performance && performance.now
+        ? function () {
+            return performance.now();
+          }
+        : function () {
+            return Date.now();
+          };
+    var raf = (function () {
       if (_window) {
         if (_window.requestAnimationFrame) {
-          return function(fn2) {
+          return function (fn2) {
             _window.requestAnimationFrame(fn2);
           };
         } else if (_window.mozRequestAnimationFrame) {
-          return function(fn2) {
+          return function (fn2) {
             _window.mozRequestAnimationFrame(fn2);
           };
         } else if (_window.webkitRequestAnimationFrame) {
-          return function(fn2) {
+          return function (fn2) {
             _window.webkitRequestAnimationFrame(fn2);
           };
         } else if (_window.msRequestAnimationFrame) {
-          return function(fn2) {
+          return function (fn2) {
             _window.msRequestAnimationFrame(fn2);
           };
         }
       }
-      return function(fn2) {
+      return function (fn2) {
         if (fn2) {
-          setTimeout(function() {
+          setTimeout(function () {
             fn2(pnow());
           }, 1e3 / 60);
         }
       };
-    }();
+    })();
     var requestAnimationFrame = function requestAnimationFrame2(fn2) {
       return raf(fn2);
     };
@@ -2030,25 +2438,34 @@ var require_cytoscape_cjs = __commonJS({
     var K = 65599;
     var DEFAULT_HASH_SEED_ALT = 5381;
     var hashIterableInts = function hashIterableInts2(iterator) {
-      var seed = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : DEFAULT_HASH_SEED;
+      var seed =
+        arguments.length > 1 && arguments[1] !== void 0
+          ? arguments[1]
+          : DEFAULT_HASH_SEED;
       var hash = seed;
       var entry;
-      for (; ; ) {
+      for (;;) {
         entry = iterator.next();
         if (entry.done) {
           break;
         }
-        hash = hash * K + entry.value | 0;
+        hash = (hash * K + entry.value) | 0;
       }
       return hash;
     };
     var hashInt = function hashInt2(num) {
-      var seed = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : DEFAULT_HASH_SEED;
-      return seed * K + num | 0;
+      var seed =
+        arguments.length > 1 && arguments[1] !== void 0
+          ? arguments[1]
+          : DEFAULT_HASH_SEED;
+      return (seed * K + num) | 0;
     };
     var hashIntAlt = function hashIntAlt2(num) {
-      var seed = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : DEFAULT_HASH_SEED_ALT;
-      return (seed << 5) + seed + num | 0;
+      var seed =
+        arguments.length > 1 && arguments[1] !== void 0
+          ? arguments[1]
+          : DEFAULT_HASH_SEED_ALT;
+      return ((seed << 5) + seed + num) | 0;
     };
     var combineHashes = function combineHashes2(hash1, hash2) {
       return hash1 * 2097152 + hash2;
@@ -2057,12 +2474,15 @@ var require_cytoscape_cjs = __commonJS({
       return hashes[0] * 2097152 + hashes[1];
     };
     var hashArrays = function hashArrays2(hashes1, hashes2) {
-      return [hashInt(hashes1[0], hashes2[0]), hashIntAlt(hashes1[1], hashes2[1])];
+      return [
+        hashInt(hashes1[0], hashes2[0]),
+        hashIntAlt(hashes1[1], hashes2[1]),
+      ];
     };
     var hashIntsArray = function hashIntsArray2(ints, seed) {
       var entry = {
         value: 0,
-        done: false
+        done: false,
       };
       var i2 = 0;
       var length = ints.length;
@@ -2074,14 +2494,14 @@ var require_cytoscape_cjs = __commonJS({
             entry.done = true;
           }
           return entry;
-        }
+        },
       };
       return hashIterableInts(iterator, seed);
     };
     var hashString = function hashString2(str, seed) {
       var entry = {
         value: 0,
-        done: false
+        done: false,
       };
       var i2 = 0;
       var length = str.length;
@@ -2093,7 +2513,7 @@ var require_cytoscape_cjs = __commonJS({
             entry.done = true;
           }
           return entry;
-        }
+        },
       };
       return hashIterableInts(iterator, seed);
     };
@@ -2125,8 +2545,7 @@ var require_cytoscape_cjs = __commonJS({
     var zeroify = function zeroify2() {
       return 0;
     };
-    var noop$1 = function noop2() {
-    };
+    var noop$1 = function noop2() {};
     var error = function error2(msg) {
       throw new Error(msg);
     };
@@ -2175,15 +2594,16 @@ var require_cytoscape_cjs = __commonJS({
         // b - result , a - numeric letiable
         a++ < 36;
         //
-        b += a * 51 & 52 ? (
-          //  return a random number or 4
-          (a ^ 15 ? (
-            // generate a random number from 0 to 15
-            8 ^ Math.random() * (a ^ 20 ? 16 : 4)
-          ) : 4).toString(16)
-        ) : "-"
-      ) {
-      }
+        b +=
+          (a * 51) & 52
+            ? //  return a random number or 4
+              (a ^ 15
+                ? // generate a random number from 0 to 15
+                  8 ^ (Math.random() * (a ^ 20 ? 16 : 4))
+                : 4
+              ).toString(16)
+            : "-"
+      ) {}
       return b;
     };
     var _staticEmptyObject = {};
@@ -2192,7 +2612,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var defaults$g = function defaults2(_defaults) {
       var keys = Object.keys(_defaults);
-      return function(opts) {
+      return function (opts) {
         var filledOpts = {};
         for (var i2 = 0; i2 < keys.length; i2++) {
           var key = keys[i2];
@@ -2221,63 +2641,81 @@ var require_cytoscape_cjs = __commonJS({
         arr.push(el);
       }
     };
-    var getPrefixedProperty = function getPrefixedProperty2(obj, propName, prefix) {
+    var getPrefixedProperty = function getPrefixedProperty2(
+      obj,
+      propName,
+      prefix,
+    ) {
       if (prefix) {
         propName = prependCamel(prefix, propName);
       }
       return obj[propName];
     };
-    var setPrefixedProperty = function setPrefixedProperty2(obj, propName, prefix, value) {
+    var setPrefixedProperty = function setPrefixedProperty2(
+      obj,
+      propName,
+      prefix,
+      value,
+    ) {
       if (prefix) {
         propName = prependCamel(prefix, propName);
       }
       obj[propName] = value;
     };
-    var ObjectMap = function() {
+    var ObjectMap = (function () {
       function ObjectMap2() {
         _classCallCheck(this, ObjectMap2);
         this._obj = {};
       }
-      _createClass(ObjectMap2, [{
-        key: "set",
-        value: function set2(key, val) {
-          this._obj[key] = val;
-          return this;
-        }
-      }, {
-        key: "delete",
-        value: function _delete(key) {
-          this._obj[key] = void 0;
-          return this;
-        }
-      }, {
-        key: "clear",
-        value: function clear() {
-          this._obj = {};
-        }
-      }, {
-        key: "has",
-        value: function has(key) {
-          return this._obj[key] !== void 0;
-        }
-      }, {
-        key: "get",
-        value: function get2(key) {
-          return this._obj[key];
-        }
-      }]);
+      _createClass(ObjectMap2, [
+        {
+          key: "set",
+          value: function set2(key, val) {
+            this._obj[key] = val;
+            return this;
+          },
+        },
+        {
+          key: "delete",
+          value: function _delete(key) {
+            this._obj[key] = void 0;
+            return this;
+          },
+        },
+        {
+          key: "clear",
+          value: function clear() {
+            this._obj = {};
+          },
+        },
+        {
+          key: "has",
+          value: function has(key) {
+            return this._obj[key] !== void 0;
+          },
+        },
+        {
+          key: "get",
+          value: function get2(key) {
+            return this._obj[key];
+          },
+        },
+      ]);
       return ObjectMap2;
-    }();
+    })();
     var Map$1 = typeof Map !== "undefined" ? Map : ObjectMap;
     var undef = "undefined";
-    var ObjectSet = function() {
+    var ObjectSet = (function () {
       function ObjectSet2(arrayOrObjectSet) {
         _classCallCheck(this, ObjectSet2);
         this._obj = /* @__PURE__ */ Object.create(null);
         this.size = 0;
         if (arrayOrObjectSet != null) {
           var arr;
-          if (arrayOrObjectSet.instanceString != null && arrayOrObjectSet.instanceString() === this.instanceString()) {
+          if (
+            arrayOrObjectSet.instanceString != null &&
+            arrayOrObjectSet.instanceString() === this.instanceString()
+          ) {
             arr = arrayOrObjectSet.toArray();
           } else {
             arr = arrayOrObjectSet;
@@ -2287,77 +2725,97 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
       }
-      _createClass(ObjectSet2, [{
-        key: "instanceString",
-        value: function instanceString() {
-          return "set";
-        }
-      }, {
-        key: "add",
-        value: function add(val) {
-          var o = this._obj;
-          if (o[val] !== 1) {
-            o[val] = 1;
-            this.size++;
-          }
-        }
-      }, {
-        key: "delete",
-        value: function _delete(val) {
-          var o = this._obj;
-          if (o[val] === 1) {
-            o[val] = 0;
-            this.size--;
-          }
-        }
-      }, {
-        key: "clear",
-        value: function clear() {
-          this._obj = /* @__PURE__ */ Object.create(null);
-        }
-      }, {
-        key: "has",
-        value: function has(val) {
-          return this._obj[val] === 1;
-        }
-      }, {
-        key: "toArray",
-        value: function toArray() {
-          var _this = this;
-          return Object.keys(this._obj).filter(function(key) {
-            return _this.has(key);
-          });
-        }
-      }, {
-        key: "forEach",
-        value: function forEach(callback, thisArg) {
-          return this.toArray().forEach(callback, thisArg);
-        }
-      }]);
+      _createClass(ObjectSet2, [
+        {
+          key: "instanceString",
+          value: function instanceString() {
+            return "set";
+          },
+        },
+        {
+          key: "add",
+          value: function add(val) {
+            var o = this._obj;
+            if (o[val] !== 1) {
+              o[val] = 1;
+              this.size++;
+            }
+          },
+        },
+        {
+          key: "delete",
+          value: function _delete(val) {
+            var o = this._obj;
+            if (o[val] === 1) {
+              o[val] = 0;
+              this.size--;
+            }
+          },
+        },
+        {
+          key: "clear",
+          value: function clear() {
+            this._obj = /* @__PURE__ */ Object.create(null);
+          },
+        },
+        {
+          key: "has",
+          value: function has(val) {
+            return this._obj[val] === 1;
+          },
+        },
+        {
+          key: "toArray",
+          value: function toArray() {
+            var _this = this;
+            return Object.keys(this._obj).filter(function (key) {
+              return _this.has(key);
+            });
+          },
+        },
+        {
+          key: "forEach",
+          value: function forEach(callback, thisArg) {
+            return this.toArray().forEach(callback, thisArg);
+          },
+        },
+      ]);
       return ObjectSet2;
-    }();
-    var Set$1 = (typeof Set === "undefined" ? "undefined" : _typeof(Set)) !== undef ? Set : ObjectSet;
+    })();
+    var Set$1 =
+      (typeof Set === "undefined" ? "undefined" : _typeof(Set)) !== undef
+        ? Set
+        : ObjectSet;
     var Element = function Element2(cy, params) {
-      var restore = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : true;
+      var restore =
+        arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : true;
       if (cy === void 0 || params === void 0 || !core(cy)) {
         error("An element must have a core reference and parameters set");
         return;
       }
       var group = params.group;
       if (group == null) {
-        if (params.data && params.data.source != null && params.data.target != null) {
+        if (
+          params.data &&
+          params.data.source != null &&
+          params.data.target != null
+        ) {
           group = "edges";
         } else {
           group = "nodes";
         }
       }
       if (group !== "nodes" && group !== "edges") {
-        error("An element must be of type `nodes` or `edges`; you specified `" + group + "`");
+        error(
+          "An element must be of type `nodes` or `edges`; you specified `" +
+            group +
+            "`",
+        );
         return;
       }
       this.length = 1;
       this[0] = this;
-      var _p = this._private = {
+      var _p = (this._private = {
         cy,
         single: true,
         // indicates this is an element
@@ -2365,7 +2823,7 @@ var require_cytoscape_cjs = __commonJS({
         // data object
         position: params.position || {
           x: 0,
-          y: 0
+          y: 0,
         },
         // (x, y) position pair
         autoWidth: void 0,
@@ -2390,15 +2848,28 @@ var require_cytoscape_cjs = __commonJS({
         // whether it's inside the vis; true if removed (set true here since we call restore)
         selected: params.selected ? true : false,
         // whether it's selected
-        selectable: params.selectable === void 0 ? true : params.selectable ? true : false,
+        selectable:
+          params.selectable === void 0
+            ? true
+            : params.selectable
+              ? true
+              : false,
         // whether it's selectable
         locked: params.locked ? true : false,
         // whether the element is locked (cannot be moved)
         grabbed: false,
         // whether the element is grabbed by the mouse; renderer sets this privately
-        grabbable: params.grabbable === void 0 ? true : params.grabbable ? true : false,
+        grabbable:
+          params.grabbable === void 0 ? true : params.grabbable ? true : false,
         // whether the element can be grabbed
-        pannable: params.pannable === void 0 ? group === "edges" ? true : false : params.pannable ? true : false,
+        pannable:
+          params.pannable === void 0
+            ? group === "edges"
+              ? true
+              : false
+            : params.pannable
+              ? true
+              : false,
         // whether the element has passthrough panning enabled
         active: false,
         // whether the element is active from user interaction
@@ -2407,7 +2878,7 @@ var require_cytoscape_cjs = __commonJS({
         animation: {
           // object for currently-running animations
           current: [],
-          queue: []
+          queue: [],
         },
         rscratch: {},
         // object in which the renderer can store information
@@ -2427,7 +2898,7 @@ var require_cytoscape_cjs = __commonJS({
         // cache of the current bounding box
         bbCacheShift: {
           x: 0,
-          y: 0
+          y: 0,
         },
         // shift applied to cached bb to be applied on next get
         bodyBounds: null,
@@ -2439,16 +2910,16 @@ var require_cytoscape_cjs = __commonJS({
           all: null,
           source: null,
           target: null,
-          main: null
+          main: null,
         },
         arrowBounds: {
           // bounds cache of edge arrows
           source: null,
           target: null,
           "mid-source": null,
-          "mid-target": null
-        }
-      };
+          "mid-target": null,
+        },
+      });
       if (_p.position.x == null) {
         _p.position.x = 0;
       }
@@ -2461,7 +2932,7 @@ var require_cytoscape_cjs = __commonJS({
         var zoom = cy.zoom();
         _p.position = {
           x: (rpos.x - pan.x) / zoom,
-          y: (rpos.y - pan.y) / zoom
+          y: (rpos.y - pan.y) / zoom,
         };
       }
       var classes = [];
@@ -2480,7 +2951,9 @@ var require_cytoscape_cjs = __commonJS({
       this.createEmitter();
       var bypass = params.style || params.css;
       if (bypass) {
-        warn("Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.");
+        warn(
+          "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+        );
         this.style(bypass);
       }
       if (restore === void 0 || restore) {
@@ -2490,7 +2963,7 @@ var require_cytoscape_cjs = __commonJS({
     var defineSearch = function defineSearch2(params) {
       params = {
         bfs: params.bfs || !params.dfs,
-        dfs: params.dfs || !params.bfs
+        dfs: params.dfs || !params.bfs,
       };
       return function searchFn(roots, fn2, directed) {
         var options;
@@ -2501,10 +2974,9 @@ var require_cytoscape_cjs = __commonJS({
           directed = options.directed;
         }
         directed = arguments.length === 2 && !fn$6(fn2) ? fn2 : directed;
-        fn2 = fn$6(fn2) ? fn2 : function() {
-        };
+        fn2 = fn$6(fn2) ? fn2 : function () {};
         var cy = this._private.cy;
-        var v = roots = string(roots) ? this.filter(roots) : roots;
+        var v = (roots = string(roots) ? this.filter(roots) : roots);
         var Q = [];
         var connectedNodes = [];
         var connectedBy = {};
@@ -2512,7 +2984,9 @@ var require_cytoscape_cjs = __commonJS({
         var V = {};
         var j = 0;
         var found;
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
         for (var i2 = 0; i2 < v.length; i2++) {
           var vi = v[i2];
           var viId = vi.id();
@@ -2539,7 +3013,8 @@ var require_cytoscape_cjs = __commonJS({
           var prevEdge = connectedBy[vId];
           var src = prevEdge != null ? prevEdge.source() : null;
           var tgt = prevEdge != null ? prevEdge.target() : null;
-          var prevNode = prevEdge == null ? void 0 : v2.same(src) ? tgt[0] : src[0];
+          var prevNode =
+            prevEdge == null ? void 0 : v2.same(src) ? tgt[0] : src[0];
           var ret = void 0;
           ret = fn2(v2, prevEdge, prevNode, j++, depth);
           if (ret === true) {
@@ -2549,12 +3024,12 @@ var require_cytoscape_cjs = __commonJS({
           if (ret === false) {
             return "break";
           }
-          var vwEdges = v2.connectedEdges().filter(function(e2) {
+          var vwEdges = v2.connectedEdges().filter(function (e2) {
             return (!directed || e2.source().same(v2)) && edges.has(e2);
           });
           for (var _i2 = 0; _i2 < vwEdges.length; _i2++) {
             var e = vwEdges[_i2];
-            var w = e.connectedNodes().filter(function(n) {
+            var w = e.connectedNodes().filter(function (n) {
               return !n.same(v2) && nodes.has(n);
             });
             var wId = w.id();
@@ -2572,10 +3047,8 @@ var require_cytoscape_cjs = __commonJS({
         };
         while (Q.length !== 0) {
           var _ret = _loop();
-          if (_ret === "continue")
-            continue;
-          if (_ret === "break")
-            break;
+          if (_ret === "continue") continue;
+          if (_ret === "break") break;
         }
         var connectedEles = cy.collection();
         for (var _i = 0; _i < connectedNodes.length; _i++) {
@@ -2588,17 +3061,17 @@ var require_cytoscape_cjs = __commonJS({
         }
         return {
           path: cy.collection(connectedEles),
-          found: cy.collection(found)
+          found: cy.collection(found),
         };
       };
     };
     var elesfn$v = {
       breadthFirstSearch: defineSearch({
-        bfs: true
+        bfs: true,
       }),
       depthFirstSearch: defineSearch({
-        dfs: true
-      })
+        dfs: true,
+      }),
     };
     elesfn$v.bfs = elesfn$v.breadthFirstSearch;
     elesfn$v.dfs = elesfn$v.depthFirstSearch;
@@ -2607,7 +3080,7 @@ var require_cytoscape_cjs = __commonJS({
       weight: function weight(edge) {
         return 1;
       },
-      directed: false
+      directed: false,
     });
     var elesfn$u = {
       dijkstra: function dijkstra(options) {
@@ -2616,18 +3089,23 @@ var require_cytoscape_cjs = __commonJS({
           options = {
             root: args[0],
             weight: args[1],
-            directed: args[2]
+            directed: args[2],
           };
         }
-        var _dijkstraDefaults = dijkstraDefaults(options), root = _dijkstraDefaults.root, weight = _dijkstraDefaults.weight, directed = _dijkstraDefaults.directed;
+        var _dijkstraDefaults = dijkstraDefaults(options),
+          root = _dijkstraDefaults.root,
+          weight = _dijkstraDefaults.weight,
+          directed = _dijkstraDefaults.directed;
         var eles = this;
         var weightFn = weight;
         var source = string(root) ? this.filter(root)[0] : root[0];
         var dist2 = {};
         var prev = {};
         var knownDist = {};
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
-        edges.unmergeBy(function(ele) {
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
+        edges.unmergeBy(function (ele) {
           return ele.isLoop();
         });
         var getDist2 = function getDist3(node2) {
@@ -2637,7 +3115,7 @@ var require_cytoscape_cjs = __commonJS({
           dist2[node2.id()] = d;
           Q.updateItem(node2);
         };
-        var Q = new Heap__default["default"](function(a, b) {
+        var Q = new Heap__default["default"](function (a, b) {
           return getDist2(a) - getDist2(b);
         });
         for (var i2 = 0; i2 < nodes.length; i2++) {
@@ -2646,7 +3124,9 @@ var require_cytoscape_cjs = __commonJS({
           Q.push(node);
         }
         var distBetween = function distBetween2(u2, v2) {
-          var uvs = (directed ? u2.edgesTo(v2) : u2.edgesWith(v2)).intersect(edges);
+          var uvs = (directed ? u2.edgesTo(v2) : u2.edgesWith(v2)).intersect(
+            edges,
+          );
           var smallestDistance = Infinity;
           var smallestEdge;
           for (var _i = 0; _i < uvs.length; _i++) {
@@ -2659,7 +3139,7 @@ var require_cytoscape_cjs = __commonJS({
           }
           return {
             edge: smallestEdge,
-            dist: smallestDistance
+            dist: smallestDistance,
           };
         };
         while (Q.size() > 0) {
@@ -2680,7 +3160,7 @@ var require_cytoscape_cjs = __commonJS({
               setDist(v, alt);
               prev[vid] = {
                 node: u,
-                edge: vDist.edge
+                edge: vDist.edge,
               };
             }
           }
@@ -2706,18 +3186,22 @@ var require_cytoscape_cjs = __commonJS({
               }
             }
             return eles.spawn(S);
-          }
+          },
         };
-      }
+      },
     };
     var elesfn$t = {
       // kruskal's algorithm (finds min spanning tree, assuming undirected graph)
       // implemented from pseudocode from wikipedia
       kruskal: function kruskal(weightFn) {
-        weightFn = weightFn || function(edge2) {
-          return 1;
-        };
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
+        weightFn =
+          weightFn ||
+          function (edge2) {
+            return 1;
+          };
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
         var numNodes = nodes.length;
         var forest = new Array(numNodes);
         var A = nodes;
@@ -2732,7 +3216,7 @@ var require_cytoscape_cjs = __commonJS({
         for (var i2 = 0; i2 < numNodes; i2++) {
           forest[i2] = this.spawn(nodes[i2]);
         }
-        var S = edges.sort(function(a, b) {
+        var S = edges.sort(function (a, b) {
           return weightFn(a) - weightFn(b);
         });
         for (var _i = 0; _i < S.length; _i++) {
@@ -2750,7 +3234,7 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
         return A;
-      }
+      },
     };
     var aStarDefaults = defaults$g({
       root: null,
@@ -2761,13 +3245,18 @@ var require_cytoscape_cjs = __commonJS({
       heuristic: function heuristic(edge) {
         return 0;
       },
-      directed: false
+      directed: false,
     });
     var elesfn$s = {
       // Implemented from pseudocode from wikipedia
       aStar: function aStar(options) {
         var cy = this.cy();
-        var _aStarDefaults = aStarDefaults(options), root = _aStarDefaults.root, goal = _aStarDefaults.goal, heuristic = _aStarDefaults.heuristic, directed = _aStarDefaults.directed, weight = _aStarDefaults.weight;
+        var _aStarDefaults = aStarDefaults(options),
+          root = _aStarDefaults.root,
+          goal = _aStarDefaults.goal,
+          heuristic = _aStarDefaults.heuristic,
+          directed = _aStarDefaults.directed,
+          weight = _aStarDefaults.weight;
         root = cy.collection(root)[0];
         goal = cy.collection(goal)[0];
         var sid = root.id();
@@ -2775,7 +3264,7 @@ var require_cytoscape_cjs = __commonJS({
         var gScore = {};
         var fScore = {};
         var closedSetIds = {};
-        var openSet = new Heap__default["default"](function(a, b) {
+        var openSet = new Heap__default["default"](function (a, b) {
           return fScore[a.id()] - fScore[b.id()];
         });
         var openSetIds = new Set$1();
@@ -2806,7 +3295,7 @@ var require_cytoscape_cjs = __commonJS({
             var pathNode = goal;
             var pathNodeId = tid;
             var pathEdge = cameFromEdge[pathNodeId];
-            for (; ; ) {
+            for (;;) {
               path.unshift(pathNode);
               if (pathEdge != null) {
                 path.unshift(pathEdge);
@@ -2822,7 +3311,7 @@ var require_cytoscape_cjs = __commonJS({
               found: true,
               distance: gScore[cMinId],
               path: this.spawn(path),
-              steps
+              steps,
             };
           }
           closedSetIds[cMinId] = true;
@@ -2866,23 +3355,27 @@ var require_cytoscape_cjs = __commonJS({
           found: false,
           distance: void 0,
           path: void 0,
-          steps
+          steps,
         };
-      }
+      },
     };
     var floydWarshallDefaults = defaults$g({
       weight: function weight(edge) {
         return 1;
       },
-      directed: false
+      directed: false,
     });
     var elesfn$r = {
       // Implemented from pseudocode from wikipedia
       floydWarshall: function floydWarshall(options) {
         var cy = this.cy();
-        var _floydWarshallDefault = floydWarshallDefaults(options), weight = _floydWarshallDefault.weight, directed = _floydWarshallDefault.directed;
+        var _floydWarshallDefault = floydWarshallDefaults(options),
+          weight = _floydWarshallDefault.weight,
+          directed = _floydWarshallDefault.directed;
         var weightFn = weight;
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
         var N = nodes.length;
         var Nsq = N * N;
         var indexOf = function indexOf2(node) {
@@ -2975,10 +3468,10 @@ var require_cytoscape_cjs = __commonJS({
               path2.merge(atIndex(i3));
             }
             return path2;
-          }
+          },
         };
         return res;
-      }
+      },
       // floydWarshall
     };
     var bellmanFordDefaults = defaults$g({
@@ -2986,23 +3479,28 @@ var require_cytoscape_cjs = __commonJS({
         return 1;
       },
       directed: false,
-      root: null
+      root: null,
     });
     var elesfn$q = {
       // Implemented from pseudocode from wikipedia
       bellmanFord: function bellmanFord(options) {
         var _this = this;
-        var _bellmanFordDefaults = bellmanFordDefaults(options), weight = _bellmanFordDefaults.weight, directed = _bellmanFordDefaults.directed, root = _bellmanFordDefaults.root;
+        var _bellmanFordDefaults = bellmanFordDefaults(options),
+          weight = _bellmanFordDefaults.weight,
+          directed = _bellmanFordDefaults.directed,
+          root = _bellmanFordDefaults.root;
         var weightFn = weight;
         var eles = this;
         var cy = this.cy();
-        var _this$byGroup = this.byGroup(), edges = _this$byGroup.edges, nodes = _this$byGroup.nodes;
+        var _this$byGroup = this.byGroup(),
+          edges = _this$byGroup.edges,
+          nodes = _this$byGroup.nodes;
         var numNodes = nodes.length;
         var infoMap = new Map$1();
         var hasNegativeWeightCycle = false;
         var negativeWeightCycles = [];
         root = cy.collection(root)[0];
-        edges.unmergeBy(function(edge2) {
+        edges.unmergeBy(function (edge2) {
           return edge2.isLoop();
         });
         var numEdges = edges.length;
@@ -3021,15 +3519,20 @@ var require_cytoscape_cjs = __commonJS({
           return getInfo2(getNodeFromTo(to)).dist;
         };
         var pathTo = function pathTo2(to) {
-          var thisStart = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : root;
+          var thisStart =
+            arguments.length > 1 && arguments[1] !== void 0
+              ? arguments[1]
+              : root;
           var end = getNodeFromTo(to);
           var path = [];
           var node2 = end;
-          for (; ; ) {
+          for (;;) {
             if (node2 == null) {
               return _this.spawn();
             }
-            var _getInfo = getInfo2(node2), edge2 = _getInfo.edge, pred = _getInfo.pred;
+            var _getInfo = getInfo2(node2),
+              edge2 = _getInfo.edge,
+              pred = _getInfo.pred;
             path.unshift(node2[0]);
             if (node2.same(thisStart) && path.length > 0) {
               break;
@@ -3053,7 +3556,14 @@ var require_cytoscape_cjs = __commonJS({
           info.edge = null;
         }
         var replacedEdge = false;
-        var checkForEdgeReplacement = function checkForEdgeReplacement2(node1, node2, edge2, info1, info2, weight2) {
+        var checkForEdgeReplacement = function checkForEdgeReplacement2(
+          node1,
+          node2,
+          edge2,
+          info1,
+          info2,
+          weight2,
+        ) {
           var dist2 = info1.dist + weight2;
           if (dist2 < info2.dist && !edge2.same(info1.edge)) {
             info2.dist = dist2;
@@ -3073,7 +3583,14 @@ var require_cytoscape_cjs = __commonJS({
             var tgtInfo = getInfo2(tgt);
             checkForEdgeReplacement(src, tgt, edge, srcInfo, tgtInfo, _weight);
             if (!directed) {
-              checkForEdgeReplacement(tgt, src, edge, tgtInfo, srcInfo, _weight);
+              checkForEdgeReplacement(
+                tgt,
+                src,
+                edge,
+                tgtInfo,
+                srcInfo,
+                _weight,
+              );
             }
           }
           if (!replacedEdge) {
@@ -3089,7 +3606,10 @@ var require_cytoscape_cjs = __commonJS({
             var _weight2 = weightFn(_edge);
             var srcDist = getInfo2(_src).dist;
             var tgtDist = getInfo2(_tgt).dist;
-            if (srcDist + _weight2 < tgtDist || !directed && tgtDist + _weight2 < srcDist) {
+            if (
+              srcDist + _weight2 < tgtDist ||
+              (!directed && tgtDist + _weight2 < srcDist)
+            ) {
               if (!hasNegativeWeightCycle) {
                 warn("Graph contains a negative weight cycle for Bellman-Ford");
                 hasNegativeWeightCycle = true;
@@ -3122,11 +3642,15 @@ var require_cytoscape_cjs = __commonJS({
                       smallestIndex = c;
                     }
                   }
-                  cycle = cycle.slice(smallestIndex).concat(cycle.slice(0, smallestIndex));
+                  cycle = cycle
+                    .slice(smallestIndex)
+                    .concat(cycle.slice(0, smallestIndex));
                   cycle.push(cycle[0]);
-                  var cycleId = cycle.map(function(el) {
-                    return el.id();
-                  }).join(",");
+                  var cycleId = cycle
+                    .map(function (el) {
+                      return el.id();
+                    })
+                    .join(",");
                   if (negativeWeightCycleIds.indexOf(cycleId) === -1) {
                     negativeWeightCycles.push(eles.spawn(cycle));
                     negativeWeightCycleIds.push(cycleId);
@@ -3142,9 +3666,9 @@ var require_cytoscape_cjs = __commonJS({
           distanceTo,
           pathTo,
           hasNegativeWeightCycle,
-          negativeWeightCycles
+          negativeWeightCycles,
         };
-      }
+      },
       // bellmanFord
     };
     var sqrt2 = Math.sqrt(2);
@@ -3162,7 +3686,10 @@ var require_cytoscape_cjs = __commonJS({
         var edge = newEdges[i2];
         var src = edge[1];
         var tgt = edge[2];
-        if (nodeMap[src] === partition1 && nodeMap[tgt] === partition2 || nodeMap[src] === partition2 && nodeMap[tgt] === partition1) {
+        if (
+          (nodeMap[src] === partition1 && nodeMap[tgt] === partition2) ||
+          (nodeMap[src] === partition2 && nodeMap[tgt] === partition1)
+        ) {
           newEdges.splice(i2, 1);
         }
       }
@@ -3183,7 +3710,12 @@ var require_cytoscape_cjs = __commonJS({
       }
       return newEdges;
     };
-    var contractUntil = function contractUntil2(metaNodeMap, remainingEdges, size, sizeLimit) {
+    var contractUntil = function contractUntil2(
+      metaNodeMap,
+      remainingEdges,
+      size,
+      sizeLimit,
+    ) {
       while (size > sizeLimit) {
         var edgeIndex = Math.floor(Math.random() * remainingEdges.length);
         remainingEdges = collapse(edgeIndex, metaNodeMap, remainingEdges);
@@ -3196,8 +3728,10 @@ var require_cytoscape_cjs = __commonJS({
       // Returns the correct answer with high probability
       kargerStein: function kargerStein() {
         var _this = this;
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
-        edges.unmergeBy(function(edge) {
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
+        edges.unmergeBy(function (edge) {
           return edge.isLoop();
         });
         var numNodes = nodes.length;
@@ -3211,7 +3745,11 @@ var require_cytoscape_cjs = __commonJS({
         var edgeIndexes = [];
         for (var i2 = 0; i2 < numEdges; i2++) {
           var e = edges[i2];
-          edgeIndexes.push([i2, nodes.indexOf(e.source()), nodes.indexOf(e.target())]);
+          edgeIndexes.push([
+            i2,
+            nodes.indexOf(e.source()),
+            nodes.indexOf(e.target()),
+          ]);
         }
         var minCutSize = Infinity;
         var minCutEdgeIndexes = [];
@@ -3227,7 +3765,12 @@ var require_cytoscape_cjs = __commonJS({
           for (var _i4 = 0; _i4 < numNodes; _i4++) {
             metaNodeMap[_i4] = _i4;
           }
-          var edgesState = contractUntil(metaNodeMap, edgeIndexes.slice(), numNodes, stopSize);
+          var edgesState = contractUntil(
+            metaNodeMap,
+            edgeIndexes.slice(),
+            numNodes,
+            stopSize,
+          );
           var edgesState2 = edgesState.slice();
           copyNodesMap(metaNodeMap, metaNodeMap2);
           var res1 = contractUntil(metaNodeMap, edgesState, stopSize, 2);
@@ -3242,9 +3785,11 @@ var require_cytoscape_cjs = __commonJS({
             copyNodesMap(metaNodeMap2, minCutNodeMap);
           }
         }
-        var cut = this.spawn(minCutEdgeIndexes.map(function(e2) {
-          return edges[e2[0]];
-        }));
+        var cut = this.spawn(
+          minCutEdgeIndexes.map(function (e2) {
+            return edges[e2[0]];
+          }),
+        );
         var partition1 = this.spawn();
         var partition2 = this.spawn();
         var witnessNodePartition = minCutNodeMap[0];
@@ -3259,9 +3804,9 @@ var require_cytoscape_cjs = __commonJS({
         }
         var constructComponent = function constructComponent2(subset) {
           var component = _this.spawn();
-          subset.forEach(function(node2) {
+          subset.forEach(function (node2) {
             component.merge(node2);
-            node2.connectedEdges().forEach(function(edge) {
+            node2.connectedEdges().forEach(function (edge) {
               if (_this.contains(edge) && !cut.contains(edge)) {
                 component.merge(edge);
               }
@@ -3269,45 +3814,60 @@ var require_cytoscape_cjs = __commonJS({
           });
           return component;
         };
-        var components = [constructComponent(partition1), constructComponent(partition2)];
+        var components = [
+          constructComponent(partition1),
+          constructComponent(partition2),
+        ];
         var ret = {
           cut,
           components,
           // n.b. partitions are included to be compatible with the old api spec
           // (could be removed in a future major version)
           partition1,
-          partition2
+          partition2,
         };
         return ret;
-      }
+      },
     };
     var copyPosition = function copyPosition2(p2) {
       return {
         x: p2.x,
-        y: p2.y
+        y: p2.y,
       };
     };
-    var modelToRenderedPosition = function modelToRenderedPosition2(p2, zoom, pan) {
+    var modelToRenderedPosition = function modelToRenderedPosition2(
+      p2,
+      zoom,
+      pan,
+    ) {
       return {
         x: p2.x * zoom + pan.x,
-        y: p2.y * zoom + pan.y
+        y: p2.y * zoom + pan.y,
       };
     };
-    var renderedToModelPosition = function renderedToModelPosition2(p2, zoom, pan) {
+    var renderedToModelPosition = function renderedToModelPosition2(
+      p2,
+      zoom,
+      pan,
+    ) {
       return {
         x: (p2.x - pan.x) / zoom,
-        y: (p2.y - pan.y) / zoom
+        y: (p2.y - pan.y) / zoom,
       };
     };
     var array2point = function array2point2(arr) {
       return {
         x: arr[0],
-        y: arr[1]
+        y: arr[1],
       };
     };
     var min = function min2(arr) {
-      var begin = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      var end = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : arr.length;
+      var begin =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      var end =
+        arguments.length > 2 && arguments[2] !== void 0
+          ? arguments[2]
+          : arr.length;
       var min3 = Infinity;
       for (var i2 = begin; i2 < end; i2++) {
         var val = arr[i2];
@@ -3318,8 +3878,12 @@ var require_cytoscape_cjs = __commonJS({
       return min3;
     };
     var max = function max2(arr) {
-      var begin = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      var end = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : arr.length;
+      var begin =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      var end =
+        arguments.length > 2 && arguments[2] !== void 0
+          ? arguments[2]
+          : arr.length;
       var max3 = -Infinity;
       for (var i2 = begin; i2 < end; i2++) {
         var val = arr[i2];
@@ -3330,8 +3894,12 @@ var require_cytoscape_cjs = __commonJS({
       return max3;
     };
     var mean = function mean2(arr) {
-      var begin = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      var end = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : arr.length;
+      var begin =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      var end =
+        arguments.length > 2 && arguments[2] !== void 0
+          ? arguments[2]
+          : arr.length;
       var total = 0;
       var n = 0;
       for (var i2 = begin; i2 < end; i2++) {
@@ -3344,11 +3912,18 @@ var require_cytoscape_cjs = __commonJS({
       return total / n;
     };
     var median = function median2(arr) {
-      var begin = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      var end = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : arr.length;
-      var copy2 = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
-      var sort = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
-      var includeHoles = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
+      var begin =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      var end =
+        arguments.length > 2 && arguments[2] !== void 0
+          ? arguments[2]
+          : arr.length;
+      var copy2 =
+        arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
+      var sort =
+        arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
+      var includeHoles =
+        arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
       if (copy2) {
         arr = arr.slice(begin, end);
       } else {
@@ -3372,7 +3947,7 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       if (sort) {
-        arr.sort(function(a, b) {
+        arr.sort(function (a, b) {
           return a - b;
         });
       }
@@ -3385,14 +3960,16 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var deg2rad = function deg2rad2(deg) {
-      return Math.PI * deg / 180;
+      return (Math.PI * deg) / 180;
     };
     var getAngleFromDisp = function getAngleFromDisp2(dispX, dispY) {
       return Math.atan2(dispY, dispX) - Math.PI / 2;
     };
-    var log2 = Math.log2 || function(n) {
-      return Math.log(n) / Math.log(2);
-    };
+    var log2 =
+      Math.log2 ||
+      function (n) {
+        return Math.log(n) / Math.log(2);
+      };
     var signum = function signum2(x) {
       if (x > 0) {
         return 1;
@@ -3427,24 +4004,24 @@ var require_cytoscape_cjs = __commonJS({
     var qbezierPtAt = function qbezierPtAt2(p0, p1, p2, t) {
       return {
         x: qbezierAt(p0.x, p1.x, p2.x, t),
-        y: qbezierAt(p0.y, p1.y, p2.y, t)
+        y: qbezierAt(p0.y, p1.y, p2.y, t),
       };
     };
     var lineAt = function lineAt2(p0, p1, t, d) {
       var vec = {
         x: p1.x - p0.x,
-        y: p1.y - p0.y
+        y: p1.y - p0.y,
       };
       var vecDist = dist(p0, p1);
       var normVec = {
         x: vec.x / vecDist,
-        y: vec.y / vecDist
+        y: vec.y / vecDist,
       };
       t = t == null ? 0 : t;
       d = d != null ? d : t * vecDist;
       return {
         x: p0.x + normVec.x * d,
-        y: p0.y + normVec.y * d
+        y: p0.y + normVec.y * d,
       };
     };
     var bound = function bound2(min2, val, max2) {
@@ -3458,17 +4035,22 @@ var require_cytoscape_cjs = __commonJS({
           x2: -Infinity,
           y2: -Infinity,
           w: 0,
-          h: 0
+          h: 0,
         };
       } else if (bb.x1 != null && bb.y1 != null) {
-        if (bb.x2 != null && bb.y2 != null && bb.x2 >= bb.x1 && bb.y2 >= bb.y1) {
+        if (
+          bb.x2 != null &&
+          bb.y2 != null &&
+          bb.x2 >= bb.x1 &&
+          bb.y2 >= bb.y1
+        ) {
           return {
             x1: bb.x1,
             y1: bb.y1,
             x2: bb.x2,
             y2: bb.y2,
             w: bb.x2 - bb.x1,
-            h: bb.y2 - bb.y1
+            h: bb.y2 - bb.y1,
           };
         } else if (bb.w != null && bb.h != null && bb.w >= 0 && bb.h >= 0) {
           return {
@@ -3477,7 +4059,7 @@ var require_cytoscape_cjs = __commonJS({
             x2: bb.x1 + bb.w,
             y2: bb.y1 + bb.h,
             w: bb.w,
-            h: bb.h
+            h: bb.h,
           };
         }
       }
@@ -3489,7 +4071,7 @@ var require_cytoscape_cjs = __commonJS({
         w: bb.w,
         y1: bb.y1,
         y2: bb.y2,
-        h: bb.h
+        h: bb.h,
       };
     };
     var clearBoundingBox = function clearBoundingBox2(bb) {
@@ -3507,7 +4089,7 @@ var require_cytoscape_cjs = __commonJS({
         y1: bb.y1 + dy,
         y2: bb.y2 + dy,
         w: bb.w,
-        h: bb.h
+        h: bb.h,
       };
     };
     var updateBoundingBox = function updateBoundingBox2(bb1, bb2) {
@@ -3518,7 +4100,11 @@ var require_cytoscape_cjs = __commonJS({
       bb1.y2 = Math.max(bb1.y2, bb2.y2);
       bb1.h = bb1.y2 - bb1.y1;
     };
-    var expandBoundingBoxByPoint = function expandBoundingBoxByPoint2(bb, x, y) {
+    var expandBoundingBoxByPoint = function expandBoundingBoxByPoint2(
+      bb,
+      x,
+      y,
+    ) {
       bb.x1 = Math.min(bb.x1, x);
       bb.x2 = Math.max(bb.x2, x);
       bb.w = bb.x2 - bb.x1;
@@ -3527,7 +4113,8 @@ var require_cytoscape_cjs = __commonJS({
       bb.h = bb.y2 - bb.y1;
     };
     var expandBoundingBox = function expandBoundingBox2(bb) {
-      var padding = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+      var padding =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
       bb.x1 -= padding;
       bb.x2 += padding;
       bb.y1 -= padding;
@@ -3537,7 +4124,8 @@ var require_cytoscape_cjs = __commonJS({
       return bb;
     };
     var expandBoundingBoxSides = function expandBoundingBoxSides2(bb) {
-      var padding = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : [0];
+      var padding =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : [0];
       var top, right, bottom, left;
       if (padding.length === 1) {
         top = right = bottom = left = padding[0];
@@ -3600,10 +4188,23 @@ var require_cytoscape_cjs = __commonJS({
     var pointInBoundingBox = function pointInBoundingBox2(bb, pt) {
       return inBoundingBox(bb, pt.x, pt.y);
     };
-    var boundingBoxInBoundingBox = function boundingBoxInBoundingBox2(bb1, bb2) {
-      return inBoundingBox(bb1, bb2.x1, bb2.y1) && inBoundingBox(bb1, bb2.x2, bb2.y2);
+    var boundingBoxInBoundingBox = function boundingBoxInBoundingBox2(
+      bb1,
+      bb2,
+    ) {
+      return (
+        inBoundingBox(bb1, bb2.x1, bb2.y1) && inBoundingBox(bb1, bb2.x2, bb2.y2)
+      );
     };
-    var roundRectangleIntersectLine = function roundRectangleIntersectLine2(x, y, nodeX, nodeY, width, height, padding) {
+    var roundRectangleIntersectLine = function roundRectangleIntersectLine2(
+      x,
+      y,
+      nodeX,
+      nodeY,
+      width,
+      height,
+      padding,
+    ) {
       var cornerRadius = getRoundRectangleRadius(width, height);
       var halfWidth = width / 2;
       var halfHeight = height / 2;
@@ -3613,7 +4214,17 @@ var require_cytoscape_cjs = __commonJS({
         var topStartY = nodeY - halfHeight - padding;
         var topEndX = nodeX + halfWidth - cornerRadius + padding;
         var topEndY = topStartY;
-        straightLineIntersections = finiteLinesIntersect(x, y, nodeX, nodeY, topStartX, topStartY, topEndX, topEndY, false);
+        straightLineIntersections = finiteLinesIntersect(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          topStartX,
+          topStartY,
+          topEndX,
+          topEndY,
+          false,
+        );
         if (straightLineIntersections.length > 0) {
           return straightLineIntersections;
         }
@@ -3623,7 +4234,17 @@ var require_cytoscape_cjs = __commonJS({
         var rightStartY = nodeY - halfHeight + cornerRadius - padding;
         var rightEndX = rightStartX;
         var rightEndY = nodeY + halfHeight - cornerRadius + padding;
-        straightLineIntersections = finiteLinesIntersect(x, y, nodeX, nodeY, rightStartX, rightStartY, rightEndX, rightEndY, false);
+        straightLineIntersections = finiteLinesIntersect(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          rightStartX,
+          rightStartY,
+          rightEndX,
+          rightEndY,
+          false,
+        );
         if (straightLineIntersections.length > 0) {
           return straightLineIntersections;
         }
@@ -3633,7 +4254,17 @@ var require_cytoscape_cjs = __commonJS({
         var bottomStartY = nodeY + halfHeight + padding;
         var bottomEndX = nodeX + halfWidth - cornerRadius + padding;
         var bottomEndY = bottomStartY;
-        straightLineIntersections = finiteLinesIntersect(x, y, nodeX, nodeY, bottomStartX, bottomStartY, bottomEndX, bottomEndY, false);
+        straightLineIntersections = finiteLinesIntersect(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          bottomStartX,
+          bottomStartY,
+          bottomEndX,
+          bottomEndY,
+          false,
+        );
         if (straightLineIntersections.length > 0) {
           return straightLineIntersections;
         }
@@ -3643,7 +4274,17 @@ var require_cytoscape_cjs = __commonJS({
         var leftStartY = nodeY - halfHeight + cornerRadius - padding;
         var leftEndX = leftStartX;
         var leftEndY = nodeY + halfHeight - cornerRadius + padding;
-        straightLineIntersections = finiteLinesIntersect(x, y, nodeX, nodeY, leftStartX, leftStartY, leftEndX, leftEndY, false);
+        straightLineIntersections = finiteLinesIntersect(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          leftStartX,
+          leftStartY,
+          leftEndX,
+          leftEndY,
+          false,
+        );
         if (straightLineIntersections.length > 0) {
           return straightLineIntersections;
         }
@@ -3652,38 +4293,94 @@ var require_cytoscape_cjs = __commonJS({
       {
         var topLeftCenterX = nodeX - halfWidth + cornerRadius;
         var topLeftCenterY = nodeY - halfHeight + cornerRadius;
-        arcIntersections = intersectLineCircle(x, y, nodeX, nodeY, topLeftCenterX, topLeftCenterY, cornerRadius + padding);
-        if (arcIntersections.length > 0 && arcIntersections[0] <= topLeftCenterX && arcIntersections[1] <= topLeftCenterY) {
+        arcIntersections = intersectLineCircle(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          topLeftCenterX,
+          topLeftCenterY,
+          cornerRadius + padding,
+        );
+        if (
+          arcIntersections.length > 0 &&
+          arcIntersections[0] <= topLeftCenterX &&
+          arcIntersections[1] <= topLeftCenterY
+        ) {
           return [arcIntersections[0], arcIntersections[1]];
         }
       }
       {
         var topRightCenterX = nodeX + halfWidth - cornerRadius;
         var topRightCenterY = nodeY - halfHeight + cornerRadius;
-        arcIntersections = intersectLineCircle(x, y, nodeX, nodeY, topRightCenterX, topRightCenterY, cornerRadius + padding);
-        if (arcIntersections.length > 0 && arcIntersections[0] >= topRightCenterX && arcIntersections[1] <= topRightCenterY) {
+        arcIntersections = intersectLineCircle(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          topRightCenterX,
+          topRightCenterY,
+          cornerRadius + padding,
+        );
+        if (
+          arcIntersections.length > 0 &&
+          arcIntersections[0] >= topRightCenterX &&
+          arcIntersections[1] <= topRightCenterY
+        ) {
           return [arcIntersections[0], arcIntersections[1]];
         }
       }
       {
         var bottomRightCenterX = nodeX + halfWidth - cornerRadius;
         var bottomRightCenterY = nodeY + halfHeight - cornerRadius;
-        arcIntersections = intersectLineCircle(x, y, nodeX, nodeY, bottomRightCenterX, bottomRightCenterY, cornerRadius + padding);
-        if (arcIntersections.length > 0 && arcIntersections[0] >= bottomRightCenterX && arcIntersections[1] >= bottomRightCenterY) {
+        arcIntersections = intersectLineCircle(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          bottomRightCenterX,
+          bottomRightCenterY,
+          cornerRadius + padding,
+        );
+        if (
+          arcIntersections.length > 0 &&
+          arcIntersections[0] >= bottomRightCenterX &&
+          arcIntersections[1] >= bottomRightCenterY
+        ) {
           return [arcIntersections[0], arcIntersections[1]];
         }
       }
       {
         var bottomLeftCenterX = nodeX - halfWidth + cornerRadius;
         var bottomLeftCenterY = nodeY + halfHeight - cornerRadius;
-        arcIntersections = intersectLineCircle(x, y, nodeX, nodeY, bottomLeftCenterX, bottomLeftCenterY, cornerRadius + padding);
-        if (arcIntersections.length > 0 && arcIntersections[0] <= bottomLeftCenterX && arcIntersections[1] >= bottomLeftCenterY) {
+        arcIntersections = intersectLineCircle(
+          x,
+          y,
+          nodeX,
+          nodeY,
+          bottomLeftCenterX,
+          bottomLeftCenterY,
+          cornerRadius + padding,
+        );
+        if (
+          arcIntersections.length > 0 &&
+          arcIntersections[0] <= bottomLeftCenterX &&
+          arcIntersections[1] >= bottomLeftCenterY
+        ) {
           return [arcIntersections[0], arcIntersections[1]];
         }
       }
       return [];
     };
-    var inLineVicinity = function inLineVicinity2(x, y, lx1, ly1, lx2, ly2, tolerance) {
+    var inLineVicinity = function inLineVicinity2(
+      x,
+      y,
+      lx1,
+      ly1,
+      lx2,
+      ly2,
+      tolerance,
+    ) {
       var t = tolerance;
       var x1 = Math.min(lx1, lx2);
       var x2 = Math.max(lx1, lx2);
@@ -3691,12 +4388,22 @@ var require_cytoscape_cjs = __commonJS({
       var y2 = Math.max(ly1, ly2);
       return x1 - t <= x && x <= x2 + t && y1 - t <= y && y <= y2 + t;
     };
-    var inBezierVicinity = function inBezierVicinity2(x, y, x1, y1, x2, y2, x3, y3, tolerance) {
+    var inBezierVicinity = function inBezierVicinity2(
+      x,
+      y,
+      x1,
+      y1,
+      x2,
+      y2,
+      x3,
+      y3,
+      tolerance,
+    ) {
       var bb = {
         x1: Math.min(x1, x3, x2) - tolerance,
         x2: Math.max(x1, x3, x2) + tolerance,
         y1: Math.min(y1, y3, y2) - tolerance,
-        y2: Math.max(y1, y3, y2) + tolerance
+        y2: Math.max(y1, y3, y2) + tolerance,
       };
       if (x < bb.x1 || x > bb.x2 || y < bb.y1 || y > bb.y2) {
         return false;
@@ -3739,7 +4446,7 @@ var require_cytoscape_cjs = __commonJS({
         result[0] = -term1 + s + t;
         term1 += (s + t) / 2;
         result[4] = result[2] = -term1;
-        term1 = Math.sqrt(3) * (-t + s) / 2;
+        term1 = (Math.sqrt(3) * (-t + s)) / 2;
         result[3] = term1;
         result[5] = -term1;
         return;
@@ -3760,17 +4467,74 @@ var require_cytoscape_cjs = __commonJS({
       result[4] = -term1 + r13 * Math.cos((dum1 + 4 * Math.PI) / 3);
       return;
     };
-    var sqdistToQuadraticBezier = function sqdistToQuadraticBezier2(x, y, x1, y1, x2, y2, x3, y3) {
-      var a = 1 * x1 * x1 - 4 * x1 * x2 + 2 * x1 * x3 + 4 * x2 * x2 - 4 * x2 * x3 + x3 * x3 + y1 * y1 - 4 * y1 * y2 + 2 * y1 * y3 + 4 * y2 * y2 - 4 * y2 * y3 + y3 * y3;
-      var b = 1 * 9 * x1 * x2 - 3 * x1 * x1 - 3 * x1 * x3 - 6 * x2 * x2 + 3 * x2 * x3 + 9 * y1 * y2 - 3 * y1 * y1 - 3 * y1 * y3 - 6 * y2 * y2 + 3 * y2 * y3;
-      var c = 1 * 3 * x1 * x1 - 6 * x1 * x2 + x1 * x3 - x1 * x + 2 * x2 * x2 + 2 * x2 * x - x3 * x + 3 * y1 * y1 - 6 * y1 * y2 + y1 * y3 - y1 * y + 2 * y2 * y2 + 2 * y2 * y - y3 * y;
-      var d = 1 * x1 * x2 - x1 * x1 + x1 * x - x2 * x + y1 * y2 - y1 * y1 + y1 * y - y2 * y;
+    var sqdistToQuadraticBezier = function sqdistToQuadraticBezier2(
+      x,
+      y,
+      x1,
+      y1,
+      x2,
+      y2,
+      x3,
+      y3,
+    ) {
+      var a =
+        1 * x1 * x1 -
+        4 * x1 * x2 +
+        2 * x1 * x3 +
+        4 * x2 * x2 -
+        4 * x2 * x3 +
+        x3 * x3 +
+        y1 * y1 -
+        4 * y1 * y2 +
+        2 * y1 * y3 +
+        4 * y2 * y2 -
+        4 * y2 * y3 +
+        y3 * y3;
+      var b =
+        1 * 9 * x1 * x2 -
+        3 * x1 * x1 -
+        3 * x1 * x3 -
+        6 * x2 * x2 +
+        3 * x2 * x3 +
+        9 * y1 * y2 -
+        3 * y1 * y1 -
+        3 * y1 * y3 -
+        6 * y2 * y2 +
+        3 * y2 * y3;
+      var c =
+        1 * 3 * x1 * x1 -
+        6 * x1 * x2 +
+        x1 * x3 -
+        x1 * x +
+        2 * x2 * x2 +
+        2 * x2 * x -
+        x3 * x +
+        3 * y1 * y1 -
+        6 * y1 * y2 +
+        y1 * y3 -
+        y1 * y +
+        2 * y2 * y2 +
+        2 * y2 * y -
+        y3 * y;
+      var d =
+        1 * x1 * x2 -
+        x1 * x1 +
+        x1 * x -
+        x2 * x +
+        y1 * y2 -
+        y1 * y1 +
+        y1 * y -
+        y2 * y;
       var roots = [];
       solveCubic(a, b, c, d, roots);
       var zeroThreshold = 1e-7;
       var params = [];
       for (var index = 0; index < 6; index += 2) {
-        if (Math.abs(roots[index + 1]) < zeroThreshold && roots[index] >= 0 && roots[index] <= 1) {
+        if (
+          Math.abs(roots[index + 1]) < zeroThreshold &&
+          roots[index] >= 0 &&
+          roots[index] <= 1
+        ) {
           params.push(roots[index]);
         }
       }
@@ -3779,8 +4543,14 @@ var require_cytoscape_cjs = __commonJS({
       var minDistanceSquared = -1;
       var curX, curY, distSquared;
       for (var i2 = 0; i2 < params.length; i2++) {
-        curX = Math.pow(1 - params[i2], 2) * x1 + 2 * (1 - params[i2]) * params[i2] * x2 + params[i2] * params[i2] * x3;
-        curY = Math.pow(1 - params[i2], 2) * y1 + 2 * (1 - params[i2]) * params[i2] * y2 + params[i2] * params[i2] * y3;
+        curX =
+          Math.pow(1 - params[i2], 2) * x1 +
+          2 * (1 - params[i2]) * params[i2] * x2 +
+          params[i2] * params[i2] * x3;
+        curY =
+          Math.pow(1 - params[i2], 2) * y1 +
+          2 * (1 - params[i2]) * params[i2] * y2 +
+          params[i2] * params[i2] * y3;
         distSquared = Math.pow(curX - x, 2) + Math.pow(curY - y, 2);
         if (minDistanceSquared >= 0) {
           if (distSquared < minDistanceSquared) {
@@ -3792,13 +4562,20 @@ var require_cytoscape_cjs = __commonJS({
       }
       return minDistanceSquared;
     };
-    var sqdistToFiniteLine = function sqdistToFiniteLine2(x, y, x1, y1, x2, y2) {
+    var sqdistToFiniteLine = function sqdistToFiniteLine2(
+      x,
+      y,
+      x1,
+      y1,
+      x2,
+      y2,
+    ) {
       var offset = [x - x1, y - y1];
       var line = [x2 - x1, y2 - y1];
       var lineSq = line[0] * line[0] + line[1] * line[1];
       var hypSq = offset[0] * offset[0] + offset[1] * offset[1];
       var dotProduct = offset[0] * line[0] + offset[1] * line[1];
-      var adjSq = dotProduct * dotProduct / lineSq;
+      var adjSq = (dotProduct * dotProduct) / lineSq;
       if (dotProduct < 0) {
         return hypSq;
       }
@@ -3807,7 +4584,11 @@ var require_cytoscape_cjs = __commonJS({
       }
       return hypSq - adjSq;
     };
-    var pointInsidePolygonPoints = function pointInsidePolygonPoints2(x, y, points) {
+    var pointInsidePolygonPoints = function pointInsidePolygonPoints2(
+      x,
+      y,
+      points,
+    ) {
       var x1, y1, x2, y2;
       var y3;
       var up = 0;
@@ -3821,10 +4602,9 @@ var require_cytoscape_cjs = __commonJS({
           x2 = points[(i2 + 1 - points.length / 2) * 2];
           y2 = points[(i2 + 1 - points.length / 2) * 2 + 1];
         }
-        if (x1 == x && x2 == x)
-          ;
-        else if (x1 >= x && x >= x2 || x1 <= x && x <= x2) {
-          y3 = (x - x1) / (x2 - x1) * (y2 - y1) + y1;
+        if (x1 == x && x2 == x);
+        else if ((x1 >= x && x >= x2) || (x1 <= x && x <= x2)) {
+          y3 = ((x - x1) / (x2 - x1)) * (y2 - y1) + y1;
           if (y3 > y) {
             up++;
           }
@@ -3838,7 +4618,17 @@ var require_cytoscape_cjs = __commonJS({
         return true;
       }
     };
-    var pointInsidePolygon = function pointInsidePolygon2(x, y, basePoints, centerX, centerY, width, height, direction, padding) {
+    var pointInsidePolygon = function pointInsidePolygon2(
+      x,
+      y,
+      basePoints,
+      centerX,
+      centerY,
+      width,
+      height,
+      direction,
+      padding,
+    ) {
       var transformedPoints = new Array(basePoints.length);
       var angle;
       if (direction[0] != null) {
@@ -3854,8 +4644,12 @@ var require_cytoscape_cjs = __commonJS({
       var cos2 = Math.cos(-angle);
       var sin2 = Math.sin(-angle);
       for (var i2 = 0; i2 < transformedPoints.length / 2; i2++) {
-        transformedPoints[i2 * 2] = width / 2 * (basePoints[i2 * 2] * cos2 - basePoints[i2 * 2 + 1] * sin2);
-        transformedPoints[i2 * 2 + 1] = height / 2 * (basePoints[i2 * 2 + 1] * cos2 + basePoints[i2 * 2] * sin2);
+        transformedPoints[i2 * 2] =
+          (width / 2) *
+          (basePoints[i2 * 2] * cos2 - basePoints[i2 * 2 + 1] * sin2);
+        transformedPoints[i2 * 2 + 1] =
+          (height / 2) *
+          (basePoints[i2 * 2 + 1] * cos2 + basePoints[i2 * 2] * sin2);
         transformedPoints[i2 * 2] += centerX;
         transformedPoints[i2 * 2 + 1] += centerY;
       }
@@ -3868,14 +4662,23 @@ var require_cytoscape_cjs = __commonJS({
       }
       return pointInsidePolygonPoints(x, y, points);
     };
-    var pointInsideRoundPolygon = function pointInsideRoundPolygon2(x, y, basePoints, centerX, centerY, width, height) {
+    var pointInsideRoundPolygon = function pointInsideRoundPolygon2(
+      x,
+      y,
+      basePoints,
+      centerX,
+      centerY,
+      width,
+      height,
+    ) {
       var cutPolygonPoints = new Array(basePoints.length);
       var halfW = width / 2;
       var halfH = height / 2;
       var cornerRadius = getRoundPolygonRadius(width, height);
       var squaredCornerRadius = cornerRadius * cornerRadius;
       for (var i2 = 0; i2 < basePoints.length / 4; i2++) {
-        var sourceUv = void 0, destUv = void 0;
+        var sourceUv = void 0,
+          destUv = void 0;
         if (i2 === 0) {
           sourceUv = basePoints.length - 2;
         } else {
@@ -3884,7 +4687,9 @@ var require_cytoscape_cjs = __commonJS({
         destUv = i2 * 4 + 2;
         var px = centerX + halfW * basePoints[i2 * 4];
         var py = centerY + halfH * basePoints[i2 * 4 + 1];
-        var cosTheta = -basePoints[sourceUv] * basePoints[destUv] - basePoints[sourceUv + 1] * basePoints[destUv + 1];
+        var cosTheta =
+          -basePoints[sourceUv] * basePoints[destUv] -
+          basePoints[sourceUv + 1] * basePoints[destUv + 1];
         var offset = cornerRadius / Math.tan(Math.acos(cosTheta) / 2);
         var cp0x = px - offset * basePoints[sourceUv];
         var cp0y = py - offset * basePoints[sourceUv + 1];
@@ -3896,7 +4701,8 @@ var require_cytoscape_cjs = __commonJS({
         cutPolygonPoints[i2 * 4 + 3] = cp1y;
         var orthx = basePoints[sourceUv + 1];
         var orthy = -basePoints[sourceUv];
-        var cosAlpha = orthx * basePoints[destUv] + orthy * basePoints[destUv + 1];
+        var cosAlpha =
+          orthx * basePoints[destUv] + orthy * basePoints[destUv + 1];
         if (cosAlpha < 0) {
           orthx *= -1;
           orthy *= -1;
@@ -3912,7 +4718,10 @@ var require_cytoscape_cjs = __commonJS({
     };
     var joinLines = function joinLines2(lineSet) {
       var vertices = new Array(lineSet.length / 2);
-      var currentLineStartX, currentLineStartY, currentLineEndX, currentLineEndY;
+      var currentLineStartX,
+        currentLineStartY,
+        currentLineEndX,
+        currentLineEndY;
       var nextLineStartX, nextLineStartY, nextLineEndX, nextLineEndY;
       for (var i2 = 0; i2 < lineSet.length / 4; i2++) {
         currentLineStartX = lineSet[i2 * 4];
@@ -3930,7 +4739,17 @@ var require_cytoscape_cjs = __commonJS({
           nextLineEndX = lineSet[2];
           nextLineEndY = lineSet[3];
         }
-        var intersection = finiteLinesIntersect(currentLineStartX, currentLineStartY, currentLineEndX, currentLineEndY, nextLineStartX, nextLineStartY, nextLineEndX, nextLineEndY, true);
+        var intersection = finiteLinesIntersect(
+          currentLineStartX,
+          currentLineStartY,
+          currentLineEndX,
+          currentLineEndY,
+          nextLineStartX,
+          nextLineStartY,
+          nextLineEndX,
+          nextLineEndY,
+          true,
+        );
         vertices[i2 * 2] = intersection[0];
         vertices[i2 * 2 + 1] = intersection[1];
       }
@@ -3961,7 +4780,14 @@ var require_cytoscape_cjs = __commonJS({
       }
       return expandedLineSet;
     };
-    var intersectLineEllipse = function intersectLineEllipse2(x, y, centerX, centerY, ellipseWradius, ellipseHradius) {
+    var intersectLineEllipse = function intersectLineEllipse2(
+      x,
+      y,
+      centerX,
+      centerY,
+      ellipseWradius,
+      ellipseHradius,
+    ) {
       var dispX = centerX - x;
       var dispY = centerY - y;
       dispX /= ellipseWradius;
@@ -3972,16 +4798,35 @@ var require_cytoscape_cjs = __commonJS({
         return [];
       }
       var lenProportion = newLength / len;
-      return [(centerX - x) * lenProportion + x, (centerY - y) * lenProportion + y];
+      return [
+        (centerX - x) * lenProportion + x,
+        (centerY - y) * lenProportion + y,
+      ];
     };
-    var checkInEllipse = function checkInEllipse2(x, y, width, height, centerX, centerY, padding) {
+    var checkInEllipse = function checkInEllipse2(
+      x,
+      y,
+      width,
+      height,
+      centerX,
+      centerY,
+      padding,
+    ) {
       x -= centerX;
       y -= centerY;
       x /= width / 2 + padding;
       y /= height / 2 + padding;
       return x * x + y * y <= 1;
     };
-    var intersectLineCircle = function intersectLineCircle2(x1, y1, x2, y2, centerX, centerY, radius) {
+    var intersectLineCircle = function intersectLineCircle2(
+      x1,
+      y1,
+      x2,
+      y2,
+      centerX,
+      centerY,
+      radius,
+    ) {
       var d = [x2 - x1, y2 - y1];
       var f = [x1 - centerX, y1 - centerY];
       var a = d[0] * d[0] + d[1] * d[1];
@@ -4013,22 +4858,37 @@ var require_cytoscape_cjs = __commonJS({
         } else {
           var farIntersectionX = inRangeParams[1] * d[0] + x1;
           var farIntersectionY = inRangeParams[1] * d[1] + y1;
-          return [nearIntersectionX, nearIntersectionY, farIntersectionX, farIntersectionY];
+          return [
+            nearIntersectionX,
+            nearIntersectionY,
+            farIntersectionX,
+            farIntersectionY,
+          ];
         }
       } else {
         return [nearIntersectionX, nearIntersectionY];
       }
     };
     var midOfThree = function midOfThree2(a, b, c) {
-      if (b <= a && a <= c || c <= a && a <= b) {
+      if ((b <= a && a <= c) || (c <= a && a <= b)) {
         return a;
-      } else if (a <= b && b <= c || c <= b && b <= a) {
+      } else if ((a <= b && b <= c) || (c <= b && b <= a)) {
         return b;
       } else {
         return c;
       }
     };
-    var finiteLinesIntersect = function finiteLinesIntersect2(x1, y1, x2, y2, x3, y3, x4, y4, infiniteLines) {
+    var finiteLinesIntersect = function finiteLinesIntersect2(
+      x1,
+      y1,
+      x2,
+      y2,
+      x3,
+      y3,
+      x4,
+      y4,
+      infiniteLines,
+    ) {
       var dx13 = x1 - x3;
       var dx21 = x2 - x1;
       var dx43 = x4 - x3;
@@ -4070,7 +4930,16 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    var polygonIntersectLine = function polygonIntersectLine2(x, y, basePoints, centerX, centerY, width, height, padding) {
+    var polygonIntersectLine = function polygonIntersectLine2(
+      x,
+      y,
+      basePoints,
+      centerX,
+      centerY,
+      width,
+      height,
+      padding,
+    ) {
       var intersections = [];
       var intersection;
       var transformedPoints = new Array(basePoints.length);
@@ -4082,7 +4951,8 @@ var require_cytoscape_cjs = __commonJS({
       if (doTransform) {
         for (var i2 = 0; i2 < transformedPoints.length / 2; i2++) {
           transformedPoints[i2 * 2] = basePoints[i2 * 2] * width + centerX;
-          transformedPoints[i2 * 2 + 1] = basePoints[i2 * 2 + 1] * height + centerY;
+          transformedPoints[i2 * 2 + 1] =
+            basePoints[i2 * 2 + 1] * height + centerY;
         }
         if (padding > 0) {
           var expandedLineSet = expandPolygon(transformedPoints, -padding);
@@ -4104,14 +4974,32 @@ var require_cytoscape_cjs = __commonJS({
           nextX = points[0];
           nextY = points[1];
         }
-        intersection = finiteLinesIntersect(x, y, centerX, centerY, currentX, currentY, nextX, nextY);
+        intersection = finiteLinesIntersect(
+          x,
+          y,
+          centerX,
+          centerY,
+          currentX,
+          currentY,
+          nextX,
+          nextY,
+        );
         if (intersection.length !== 0) {
           intersections.push(intersection[0], intersection[1]);
         }
       }
       return intersections;
     };
-    var roundPolygonIntersectLine = function roundPolygonIntersectLine2(x, y, basePoints, centerX, centerY, width, height, padding) {
+    var roundPolygonIntersectLine = function roundPolygonIntersectLine2(
+      x,
+      y,
+      basePoints,
+      centerX,
+      centerY,
+      width,
+      height,
+      padding,
+    ) {
       var intersections = [];
       var intersection;
       var lines = new Array(basePoints.length);
@@ -4119,7 +5007,8 @@ var require_cytoscape_cjs = __commonJS({
       var halfH = height / 2;
       var cornerRadius = getRoundPolygonRadius(width, height);
       for (var i2 = 0; i2 < basePoints.length / 4; i2++) {
-        var sourceUv = void 0, destUv = void 0;
+        var sourceUv = void 0,
+          destUv = void 0;
         if (i2 === 0) {
           sourceUv = basePoints.length - 2;
         } else {
@@ -4128,7 +5017,9 @@ var require_cytoscape_cjs = __commonJS({
         destUv = i2 * 4 + 2;
         var px = centerX + halfW * basePoints[i2 * 4];
         var py = centerY + halfH * basePoints[i2 * 4 + 1];
-        var cosTheta = -basePoints[sourceUv] * basePoints[destUv] - basePoints[sourceUv + 1] * basePoints[destUv + 1];
+        var cosTheta =
+          -basePoints[sourceUv] * basePoints[destUv] -
+          basePoints[sourceUv + 1] * basePoints[destUv + 1];
         var offset = cornerRadius / Math.tan(Math.acos(cosTheta) / 2);
         var cp0x = px - offset * basePoints[sourceUv];
         var cp0y = py - offset * basePoints[sourceUv + 1];
@@ -4145,29 +5036,52 @@ var require_cytoscape_cjs = __commonJS({
         lines[i2 * 4 + 1] = cp1y;
         var orthx = basePoints[sourceUv + 1];
         var orthy = -basePoints[sourceUv];
-        var cosAlpha = orthx * basePoints[destUv] + orthy * basePoints[destUv + 1];
+        var cosAlpha =
+          orthx * basePoints[destUv] + orthy * basePoints[destUv + 1];
         if (cosAlpha < 0) {
           orthx *= -1;
           orthy *= -1;
         }
         var cx = cp0x + orthx * cornerRadius;
         var cy = cp0y + orthy * cornerRadius;
-        intersection = intersectLineCircle(x, y, centerX, centerY, cx, cy, cornerRadius);
+        intersection = intersectLineCircle(
+          x,
+          y,
+          centerX,
+          centerY,
+          cx,
+          cy,
+          cornerRadius,
+        );
         if (intersection.length !== 0) {
           intersections.push(intersection[0], intersection[1]);
         }
       }
       for (var _i3 = 0; _i3 < lines.length / 4; _i3++) {
-        intersection = finiteLinesIntersect(x, y, centerX, centerY, lines[_i3 * 4], lines[_i3 * 4 + 1], lines[_i3 * 4 + 2], lines[_i3 * 4 + 3], false);
+        intersection = finiteLinesIntersect(
+          x,
+          y,
+          centerX,
+          centerY,
+          lines[_i3 * 4],
+          lines[_i3 * 4 + 1],
+          lines[_i3 * 4 + 2],
+          lines[_i3 * 4 + 3],
+          false,
+        );
         if (intersection.length !== 0) {
           intersections.push(intersection[0], intersection[1]);
         }
       }
       if (intersections.length > 2) {
         var lowestIntersection = [intersections[0], intersections[1]];
-        var lowestSquaredDistance = Math.pow(lowestIntersection[0] - x, 2) + Math.pow(lowestIntersection[1] - y, 2);
+        var lowestSquaredDistance =
+          Math.pow(lowestIntersection[0] - x, 2) +
+          Math.pow(lowestIntersection[1] - y, 2);
         for (var _i4 = 1; _i4 < intersections.length / 2; _i4++) {
-          var squaredDistance = Math.pow(intersections[_i4 * 2] - x, 2) + Math.pow(intersections[_i4 * 2 + 1] - y, 2);
+          var squaredDistance =
+            Math.pow(intersections[_i4 * 2] - x, 2) +
+            Math.pow(intersections[_i4 * 2 + 1] - y, 2);
           if (squaredDistance <= lowestSquaredDistance) {
             lowestIntersection[0] = intersections[_i4 * 2];
             lowestIntersection[1] = intersections[_i4 * 2 + 1];
@@ -4178,7 +5092,11 @@ var require_cytoscape_cjs = __commonJS({
       }
       return intersections;
     };
-    var shortenIntersection = function shortenIntersection2(intersection, offset, amount) {
+    var shortenIntersection = function shortenIntersection2(
+      intersection,
+      offset,
+      amount,
+    ) {
       var disp = [intersection[0] - offset[0], intersection[1] - offset[1]];
       var length = Math.sqrt(disp[0] * disp[0] + disp[1] * disp[1]);
       var lenRatio = (length - amount) / length;
@@ -4187,15 +5105,19 @@ var require_cytoscape_cjs = __commonJS({
       }
       return [offset[0] + lenRatio * disp[0], offset[1] + lenRatio * disp[1]];
     };
-    var generateUnitNgonPointsFitToSquare = function generateUnitNgonPointsFitToSquare2(sides, rotationRadians) {
-      var points = generateUnitNgonPoints(sides, rotationRadians);
-      points = fitPolygonToSquare(points);
-      return points;
-    };
+    var generateUnitNgonPointsFitToSquare =
+      function generateUnitNgonPointsFitToSquare2(sides, rotationRadians) {
+        var points = generateUnitNgonPoints(sides, rotationRadians);
+        points = fitPolygonToSquare(points);
+        return points;
+      };
     var fitPolygonToSquare = function fitPolygonToSquare2(points) {
       var x, y;
       var sides = points.length / 2;
-      var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      var minX = Infinity,
+        minY = Infinity,
+        maxX = -Infinity,
+        maxY = -Infinity;
       for (var i2 = 0; i2 < sides; i2++) {
         x = points[2 * i2];
         y = points[2 * i2 + 1];
@@ -4221,9 +5143,13 @@ var require_cytoscape_cjs = __commonJS({
       }
       return points;
     };
-    var generateUnitNgonPoints = function generateUnitNgonPoints2(sides, rotationRadians) {
-      var increment = 1 / sides * 2 * Math.PI;
-      var startAngle = sides % 2 === 0 ? Math.PI / 2 + increment / 2 : Math.PI / 2;
+    var generateUnitNgonPoints = function generateUnitNgonPoints2(
+      sides,
+      rotationRadians,
+    ) {
+      var increment = (1 / sides) * 2 * Math.PI;
+      var startAngle =
+        sides % 2 === 0 ? Math.PI / 2 + increment / 2 : Math.PI / 2;
       startAngle += rotationRadians;
       var points = new Array(sides * 2);
       var currentAngle;
@@ -4234,7 +5160,10 @@ var require_cytoscape_cjs = __commonJS({
       }
       return points;
     };
-    var getRoundRectangleRadius = function getRoundRectangleRadius2(width, height) {
+    var getRoundRectangleRadius = function getRoundRectangleRadius2(
+      width,
+      height,
+    ) {
       return Math.min(width / 4, height / 4, 8);
     };
     var getRoundPolygonRadius = function getRoundPolygonRadius2(width, height) {
@@ -4246,11 +5175,14 @@ var require_cytoscape_cjs = __commonJS({
     var bezierPtsToQuadCoeff = function bezierPtsToQuadCoeff2(p0, p1, p2) {
       return [p0 - 2 * p1 + p2, 2 * (p1 - p0), p0];
     };
-    var getBarrelCurveConstants = function getBarrelCurveConstants2(width, height) {
+    var getBarrelCurveConstants = function getBarrelCurveConstants2(
+      width,
+      height,
+    ) {
       return {
         heightOffset: Math.min(15, 0.05 * height),
         widthOffset: Math.min(100, 0.25 * width),
-        ctrlPtOffsetPct: 0.05
+        ctrlPtOffsetPct: 0.05,
       };
     };
     var pageRankDefaults = defaults$g({
@@ -4259,13 +5191,19 @@ var require_cytoscape_cjs = __commonJS({
       iterations: 200,
       weight: function weight(edge) {
         return 1;
-      }
+      },
     });
     var elesfn$o = {
       pageRank: function pageRank(options) {
-        var _pageRankDefaults = pageRankDefaults(options), dampingFactor = _pageRankDefaults.dampingFactor, precision = _pageRankDefaults.precision, iterations = _pageRankDefaults.iterations, weight = _pageRankDefaults.weight;
+        var _pageRankDefaults = pageRankDefaults(options),
+          dampingFactor = _pageRankDefaults.dampingFactor,
+          precision = _pageRankDefaults.precision,
+          iterations = _pageRankDefaults.iterations,
+          weight = _pageRankDefaults.weight;
         var cy = this._private.cy;
-        var _this$byGroup = this.byGroup(), nodes = _this$byGroup.nodes, edges = _this$byGroup.edges;
+        var _this$byGroup = this.byGroup(),
+          nodes = _this$byGroup.nodes,
+          edges = _this$byGroup.edges;
         var numNodes = nodes.length;
         var numNodesSqd = numNodes * numNodes;
         var numEdges = edges.length;
@@ -4340,10 +5278,10 @@ var require_cytoscape_cjs = __commonJS({
           rank: function rank(node) {
             node = cy.collection(node)[0];
             return eigenvector[nodes.indexOf(node)];
-          }
+          },
         };
         return res;
-      }
+      },
       // pageRank
     };
     var defaults$f = defaults$g({
@@ -4352,7 +5290,7 @@ var require_cytoscape_cjs = __commonJS({
         return 1;
       },
       directed: false,
-      alpha: 0
+      alpha: 0,
     });
     var elesfn$n = {
       degreeCentralityNormalized: function degreeCentralityNormalized(options) {
@@ -4381,7 +5319,7 @@ var require_cytoscape_cjs = __commonJS({
                 node2 = cy.filter(node2);
               }
               return degrees[node2.id()] / maxDegree;
-            }
+            },
           };
         } else {
           var indegrees = {};
@@ -4418,7 +5356,7 @@ var require_cytoscape_cjs = __commonJS({
                 node2 = cy.filter(node2);
               }
               return outdegrees[node2.id()] / maxOutdegree;
-            }
+            },
           };
         }
       },
@@ -4430,7 +5368,11 @@ var require_cytoscape_cjs = __commonJS({
         options = defaults$f(options);
         var cy = this.cy();
         var callingEles = this;
-        var _options = options, root = _options.root, weight = _options.weight, directed = _options.directed, alpha = _options.alpha;
+        var _options = options,
+          root = _options.root,
+          weight = _options.weight,
+          directed = _options.directed,
+          alpha = _options.alpha;
         root = cy.collection(root)[0];
         if (!directed) {
           var connEdges = root.connectedEdges().intersection(callingEles);
@@ -4440,14 +5382,14 @@ var require_cytoscape_cjs = __commonJS({
             s += weight(connEdges[i2]);
           }
           return {
-            degree: Math.pow(k, 1 - alpha) * Math.pow(s, alpha)
+            degree: Math.pow(k, 1 - alpha) * Math.pow(s, alpha),
           };
         } else {
           var edges = root.connectedEdges();
-          var incoming = edges.filter(function(edge) {
+          var incoming = edges.filter(function (edge) {
             return edge.target().same(root) && callingEles.has(edge);
           });
-          var outgoing = edges.filter(function(edge) {
+          var outgoing = edges.filter(function (edge) {
             return edge.source().same(root) && callingEles.has(edge);
           });
           var k_in = incoming.length;
@@ -4462,32 +5404,38 @@ var require_cytoscape_cjs = __commonJS({
           }
           return {
             indegree: Math.pow(k_in, 1 - alpha) * Math.pow(s_in, alpha),
-            outdegree: Math.pow(k_out, 1 - alpha) * Math.pow(s_out, alpha)
+            outdegree: Math.pow(k_out, 1 - alpha) * Math.pow(s_out, alpha),
           };
         }
-      }
+      },
       // degreeCentrality
     };
     elesfn$n.dc = elesfn$n.degreeCentrality;
-    elesfn$n.dcn = elesfn$n.degreeCentralityNormalised = elesfn$n.degreeCentralityNormalized;
+    elesfn$n.dcn = elesfn$n.degreeCentralityNormalised =
+      elesfn$n.degreeCentralityNormalized;
     var defaults$e = defaults$g({
       harmonic: true,
       weight: function weight() {
         return 1;
       },
       directed: false,
-      root: null
+      root: null,
     });
     var elesfn$m = {
-      closenessCentralityNormalized: function closenessCentralityNormalized(options) {
-        var _defaults = defaults$e(options), harmonic = _defaults.harmonic, weight = _defaults.weight, directed = _defaults.directed;
+      closenessCentralityNormalized: function closenessCentralityNormalized(
+        options,
+      ) {
+        var _defaults = defaults$e(options),
+          harmonic = _defaults.harmonic,
+          weight = _defaults.weight,
+          directed = _defaults.directed;
         var cy = this.cy();
         var closenesses = {};
         var maxCloseness = 0;
         var nodes = this.nodes();
         var fw = this.floydWarshall({
           weight,
-          directed
+          directed,
         });
         for (var i2 = 0; i2 < nodes.length; i2++) {
           var currCloseness = 0;
@@ -4521,17 +5469,21 @@ var require_cytoscape_cjs = __commonJS({
               node = node.id();
             }
             return closenesses[node] / maxCloseness;
-          }
+          },
         };
       },
       // Implemented from pseudocode from wikipedia
       closenessCentrality: function closenessCentrality(options) {
-        var _defaults2 = defaults$e(options), root = _defaults2.root, weight = _defaults2.weight, directed = _defaults2.directed, harmonic = _defaults2.harmonic;
+        var _defaults2 = defaults$e(options),
+          root = _defaults2.root,
+          weight = _defaults2.weight,
+          directed = _defaults2.directed,
+          harmonic = _defaults2.harmonic;
         root = this.filter(root)[0];
         var dijkstra = this.dijkstra({
           root,
           weight,
-          directed
+          directed,
         });
         var totalDistance = 0;
         var nodes = this.nodes();
@@ -4547,19 +5499,22 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
         return harmonic ? totalDistance : 1 / totalDistance;
-      }
+      },
       // closenessCentrality
     };
     elesfn$m.cc = elesfn$m.closenessCentrality;
-    elesfn$m.ccn = elesfn$m.closenessCentralityNormalised = elesfn$m.closenessCentralityNormalized;
+    elesfn$m.ccn = elesfn$m.closenessCentralityNormalised =
+      elesfn$m.closenessCentralityNormalized;
     var defaults$d = defaults$g({
       weight: null,
-      directed: false
+      directed: false,
     });
     var elesfn$l = {
       // Implemented from the algorithm in the paper "On Variants of Shortest-Path Betweenness Centrality and their Generic Computation" by Ulrik Brandes
       betweennessCentrality: function betweennessCentrality(options) {
-        var _defaults = defaults$d(options), directed = _defaults.directed, weight = _defaults.weight;
+        var _defaults = defaults$d(options),
+          directed = _defaults.directed,
+          weight = _defaults.weight;
         var weighted = weight != null;
         var cy = this.cy();
         var V = this.nodes();
@@ -4575,7 +5530,7 @@ var require_cytoscape_cjs = __commonJS({
           },
           get: function get2(key) {
             return _C[key];
-          }
+          },
         };
         for (var i2 = 0; i2 < V.length; i2++) {
           var v = V[i2];
@@ -4593,7 +5548,7 @@ var require_cytoscape_cjs = __commonJS({
           var P = {};
           var g = {};
           var d = {};
-          var Q = new Heap__default["default"](function(a, b) {
+          var Q = new Heap__default["default"](function (a, b) {
             return d[a] - d[b];
           });
           for (var _i = 0; _i < V.length; _i++) {
@@ -4657,7 +5612,7 @@ var require_cytoscape_cjs = __commonJS({
             var _w2 = S.pop();
             for (var _j2 = 0; _j2 < P[_w2].length; _j2++) {
               var _v2 = P[_w2][_j2];
-              e[_v2] = e[_v2] + g[_v2] / g[_w2] * (1 + e[_w2]);
+              e[_v2] = e[_v2] + (g[_v2] / g[_w2]) * (1 + e[_w2]);
             }
             if (_w2 != V[s2].id()) {
               C.set(_w2, C.get(_w2) + e[_w2]);
@@ -4678,11 +5633,11 @@ var require_cytoscape_cjs = __commonJS({
             }
             var id = cy.collection(node).id();
             return C.get(id) / max2;
-          }
+          },
         };
         ret.betweennessNormalised = ret.betweennessNormalized;
         return ret;
-      }
+      },
       // betweennessCentrality
     };
     elesfn$l.bc = elesfn$l.betweennessCentrality;
@@ -4697,10 +5652,10 @@ var require_cytoscape_cjs = __commonJS({
       // maximum number of iterations of the MCL algorithm in a single run
       attributes: [
         // attributes/features used to group nodes, ie. similarity values between nodes
-        function(edge) {
+        function (edge) {
           return 1;
-        }
-      ]
+        },
+      ],
     });
     var setOptions$3 = function setOptions2(options) {
       return defaults$c(options);
@@ -4760,8 +5715,12 @@ var require_cytoscape_cjs = __commonJS({
     };
     var hasConverged = function hasConverged2(M, _M, n2, roundFactor) {
       for (var i2 = 0; i2 < n2; i2++) {
-        var v1 = Math.round(M[i2] * Math.pow(10, roundFactor)) / Math.pow(10, roundFactor);
-        var v2 = Math.round(_M[i2] * Math.pow(10, roundFactor)) / Math.pow(10, roundFactor);
+        var v1 =
+          Math.round(M[i2] * Math.pow(10, roundFactor)) /
+          Math.pow(10, roundFactor);
+        var v2 =
+          Math.round(_M[i2] * Math.pow(10, roundFactor)) /
+          Math.pow(10, roundFactor);
         if (v1 !== v2) {
           return false;
         }
@@ -4810,8 +5769,10 @@ var require_cytoscape_cjs = __commonJS({
       for (var i2 = 0; i2 < nodes.length; i2++) {
         id2position[nodes[i2].id()] = i2;
       }
-      var n = nodes.length, n2 = n * n;
-      var M = new Array(n2), _M;
+      var n = nodes.length,
+        n2 = n * n;
+      var M = new Array(n2),
+        _M;
       for (var _i = 0; _i < n2; _i++) {
         M[_i] = 0;
       }
@@ -4842,7 +5803,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var markovClustering$1 = {
       markovClustering,
-      mcl: markovClustering
+      mcl: markovClustering,
     };
     var identity = function identity2(x) {
       return x;
@@ -4863,7 +5824,10 @@ var require_cytoscape_cjs = __commonJS({
       return Math.max(currentMax, absDiff(p2, q));
     };
     var getDistance = function getDistance2(length, getP, getQ, init, visit) {
-      var post = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : identity;
+      var post =
+        arguments.length > 5 && arguments[5] !== void 0
+          ? arguments[5]
+          : identity;
       var ret = init;
       var p2, q;
       for (var dim = 0; dim < length; dim++) {
@@ -4889,7 +5853,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       max: function max2(length, getP, getQ) {
         return getDistance(length, getP, getQ, -Infinity, maxAbsDiff);
-      }
+      },
     };
     distances["squared-euclidean"] = distances["squaredEuclidean"];
     distances["squaredeuclidean"] = distances["squaredEuclidean"];
@@ -4914,24 +5878,33 @@ var require_cytoscape_cjs = __commonJS({
       maxIterations: 10,
       attributes: [],
       testMode: false,
-      testCentroids: null
+      testCentroids: null,
     });
     var setOptions$2 = function setOptions2(options) {
       return defaults$b(options);
     };
     var getDist = function getDist2(type, node, centroid, attributes, mode) {
       var noNodeP = mode !== "kMedoids";
-      var getP = noNodeP ? function(i2) {
-        return centroid[i2];
-      } : function(i2) {
-        return attributes[i2](centroid);
-      };
+      var getP = noNodeP
+        ? function (i2) {
+            return centroid[i2];
+          }
+        : function (i2) {
+            return attributes[i2](centroid);
+          };
       var getQ = function getQ2(i2) {
         return attributes[i2](node);
       };
       var nodeP = centroid;
       var nodeQ = node;
-      return clusteringDistance(type, attributes.length, getP, getQ, nodeP, nodeQ);
+      return clusteringDistance(
+        type,
+        attributes.length,
+        getP,
+        getQ,
+        nodeP,
+        nodeQ,
+      );
     };
     var randomCentroids = function randomCentroids2(nodes, k, attributes) {
       var ndim = attributes.length;
@@ -4952,7 +5925,13 @@ var require_cytoscape_cjs = __commonJS({
       }
       return centroids;
     };
-    var classify = function classify2(node, centroids, distance, attributes, type) {
+    var classify = function classify2(
+      node,
+      centroids,
+      distance,
+      attributes,
+      type,
+    ) {
       var min2 = Infinity;
       var index = 0;
       for (var i2 = 0; i2 < centroids.length; i2++) {
@@ -4975,10 +5954,18 @@ var require_cytoscape_cjs = __commonJS({
       }
       return cluster;
     };
-    var haveValuesConverged = function haveValuesConverged2(v1, v2, sensitivityThreshold) {
+    var haveValuesConverged = function haveValuesConverged2(
+      v1,
+      v2,
+      sensitivityThreshold,
+    ) {
       return Math.abs(v2 - v1) <= sensitivityThreshold;
     };
-    var haveMatricesConverged = function haveMatricesConverged2(v1, v2, sensitivityThreshold) {
+    var haveMatricesConverged = function haveMatricesConverged2(
+      v1,
+      v2,
+      sensitivityThreshold,
+    ) {
       for (var i2 = 0; i2 < v1.length; i2++) {
         for (var j = 0; j < v1[i2].length; j++) {
           var diff = Math.abs(v1[i2][j] - v2[i2][j]);
@@ -4991,8 +5978,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var seenBefore = function seenBefore2(node, medoids, n) {
       for (var i2 = 0; i2 < n; i2++) {
-        if (node === medoids[i2])
-          return true;
+        if (node === medoids[i2]) return true;
       }
       return false;
     };
@@ -5016,7 +6002,13 @@ var require_cytoscape_cjs = __commonJS({
     var findCost = function findCost2(potentialNewMedoid, cluster, attributes) {
       var cost = 0;
       for (var n = 0; n < cluster.length; n++) {
-        cost += getDist("manhattan", cluster[n], potentialNewMedoid, attributes, "kMedoids");
+        cost += getDist(
+          "manhattan",
+          cluster[n],
+          potentialNewMedoid,
+          attributes,
+          "kMedoids",
+        );
       }
       return cost;
     };
@@ -5045,7 +6037,13 @@ var require_cytoscape_cjs = __commonJS({
       while (isStillMoving && iterations < opts.maxIterations) {
         for (var n = 0; n < nodes.length; n++) {
           node = nodes[n];
-          assignment[node.id()] = classify(node, centroids, opts.distance, opts.attributes, "kMeans");
+          assignment[node.id()] = classify(
+            node,
+            centroids,
+            opts.distance,
+            opts.attributes,
+            "kMeans",
+          );
         }
         isStillMoving = false;
         for (var c = 0; c < opts.k; c++) {
@@ -5064,7 +6062,13 @@ var require_cytoscape_cjs = __commonJS({
               sum[d] += opts.attributes[d](node);
             }
             newCentroid[d] = sum[d] / cluster.length;
-            if (!haveValuesConverged(newCentroid[d], centroid[d], opts.sensitivityThreshold)) {
+            if (
+              !haveValuesConverged(
+                newCentroid[d],
+                centroid[d],
+                opts.sensitivityThreshold,
+              )
+            ) {
               isStillMoving = true;
             }
           }
@@ -5086,8 +6090,7 @@ var require_cytoscape_cjs = __commonJS({
       var curCost;
       var minCosts = new Array(opts.k);
       if (opts.testMode) {
-        if (typeof opts.testCentroids === "number")
-          ;
+        if (typeof opts.testCentroids === "number");
         else if (_typeof(opts.testCentroids) === "object") {
           medoids = opts.testCentroids;
         } else {
@@ -5101,7 +6104,13 @@ var require_cytoscape_cjs = __commonJS({
       while (isStillMoving && iterations < opts.maxIterations) {
         for (var n = 0; n < nodes.length; n++) {
           node = nodes[n];
-          assignment[node.id()] = classify(node, medoids, opts.distance, opts.attributes, "kMedoids");
+          assignment[node.id()] = classify(
+            node,
+            medoids,
+            opts.distance,
+            opts.attributes,
+            "kMedoids",
+          );
         }
         isStillMoving = false;
         for (var m = 0; m < medoids.length; m++) {
@@ -5124,7 +6133,13 @@ var require_cytoscape_cjs = __commonJS({
       }
       return clusters;
     };
-    var updateCentroids = function updateCentroids2(centroids, nodes, U, weight, opts) {
+    var updateCentroids = function updateCentroids2(
+      centroids,
+      nodes,
+      U,
+      weight,
+      opts,
+    ) {
       var numerator, denominator;
       for (var n = 0; n < nodes.length; n++) {
         for (var c = 0; c < centroids.length; c++) {
@@ -5143,7 +6158,13 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    var updateMembership = function updateMembership2(U, _U, centroids, nodes, opts) {
+    var updateMembership = function updateMembership2(
+      U,
+      _U,
+      centroids,
+      nodes,
+      opts,
+    ) {
       for (var i2 = 0; i2 < U.length; i2++) {
         _U[i2] = U[i2].slice();
       }
@@ -5153,8 +6174,20 @@ var require_cytoscape_cjs = __commonJS({
         for (var n = 0; n < nodes.length; n++) {
           sum = 0;
           for (var k = 0; k < centroids.length; k++) {
-            numerator = getDist(opts.distance, nodes[n], centroids[c], opts.attributes, "cmeans");
-            denominator = getDist(opts.distance, nodes[n], centroids[k], opts.attributes, "cmeans");
+            numerator = getDist(
+              opts.distance,
+              nodes[n],
+              centroids[c],
+              opts.attributes,
+              "cmeans",
+            );
+            denominator = getDist(
+              opts.distance,
+              nodes[n],
+              centroids[k],
+              opts.attributes,
+              "cmeans",
+            );
             sum += Math.pow(numerator / denominator, pow);
           }
           U[n][c] = 1 / sum;
@@ -5233,14 +6266,14 @@ var require_cytoscape_cjs = __commonJS({
       clusters = assign$1(nodes, U, opts, cy);
       return {
         clusters,
-        degreeOfMembership: U
+        degreeOfMembership: U,
       };
     };
     var kClustering = {
       kMeans,
       kMedoids,
       fuzzyCMeans,
-      fcm: fuzzyCMeans
+      fcm: fuzzyCMeans,
     };
     var defaults$a = defaults$g({
       distance: "euclidean",
@@ -5256,12 +6289,12 @@ var require_cytoscape_cjs = __commonJS({
       // whether to add the dendrogram to the graph for viz
       dendrogramDepth: 0,
       // depth at which dendrogram branches are merged into the returned clusters
-      attributes: []
+      attributes: [],
       // array of attr functions
     });
     var linkageAliases = {
-      "single": "min",
-      "complete": "max"
+      single: "min",
+      complete: "max",
     };
     var setOptions$1 = function setOptions2(options) {
       var opts = defaults$a(options);
@@ -5271,17 +6304,30 @@ var require_cytoscape_cjs = __commonJS({
       }
       return opts;
     };
-    var mergeClosest = function mergeClosest2(clusters, index, dists, mins, opts) {
+    var mergeClosest = function mergeClosest2(
+      clusters,
+      index,
+      dists,
+      mins,
+      opts,
+    ) {
       var minKey = 0;
       var min2 = Infinity;
       var dist2;
       var attrs = opts.attributes;
       var getDist2 = function getDist3(n1, n2) {
-        return clusteringDistance(opts.distance, attrs.length, function(i3) {
-          return attrs[i3](n1);
-        }, function(i3) {
-          return attrs[i3](n2);
-        }, n1, n2);
+        return clusteringDistance(
+          opts.distance,
+          attrs.length,
+          function (i3) {
+            return attrs[i3](n1);
+          },
+          function (i3) {
+            return attrs[i3](n2);
+          },
+          n1,
+          n2,
+        );
       };
       for (var i2 = 0; i2 < clusters.length; i2++) {
         var key = clusters[i2].key;
@@ -5291,7 +6337,10 @@ var require_cytoscape_cjs = __commonJS({
           min2 = _dist;
         }
       }
-      if (opts.mode === "threshold" && min2 >= opts.threshold || opts.mode === "dendrogram" && clusters.length === 1) {
+      if (
+        (opts.mode === "threshold" && min2 >= opts.threshold) ||
+        (opts.mode === "dendrogram" && clusters.length === 1)
+      ) {
         return false;
       }
       var c1 = index[minKey];
@@ -5301,12 +6350,12 @@ var require_cytoscape_cjs = __commonJS({
         merged = {
           left: c1,
           right: c2,
-          key: c1.key
+          key: c1.key,
         };
       } else {
         merged = {
           value: c1.value.concat(c2.value),
-          key: c1.key
+          key: c1.key,
         };
       }
       clusters[c1.index] = merged;
@@ -5327,12 +6376,13 @@ var require_cytoscape_cjs = __commonJS({
             dist2 = dists[c2.key][cur.key];
           }
         } else if (opts.linkage === "mean") {
-          dist2 = (dists[c1.key][cur.key] * c1.size + dists[c2.key][cur.key] * c2.size) / (c1.size + c2.size);
+          dist2 =
+            (dists[c1.key][cur.key] * c1.size +
+              dists[c2.key][cur.key] * c2.size) /
+            (c1.size + c2.size);
         } else {
-          if (opts.mode === "dendrogram")
-            dist2 = getDist2(cur.value, c1.value);
-          else
-            dist2 = getDist2(cur.value[0], c1.value[0]);
+          if (opts.mode === "dendrogram") dist2 = getDist2(cur.value, c1.value);
+          else dist2 = getDist2(cur.value[0], c1.value[0]);
         }
         dists[c1.key][cur.key] = dists[cur.key][c1.key] = dist2;
       }
@@ -5354,42 +6404,38 @@ var require_cytoscape_cjs = __commonJS({
       return true;
     };
     var getAllChildren = function getAllChildren2(root, arr, cy) {
-      if (!root)
-        return;
+      if (!root) return;
       if (root.value) {
         arr.push(root.value);
       } else {
-        if (root.left)
-          getAllChildren2(root.left, arr);
-        if (root.right)
-          getAllChildren2(root.right, arr);
+        if (root.left) getAllChildren2(root.left, arr);
+        if (root.right) getAllChildren2(root.right, arr);
       }
     };
     var buildDendrogram = function buildDendrogram2(root, cy) {
-      if (!root)
-        return "";
+      if (!root) return "";
       if (root.left && root.right) {
         var leftStr = buildDendrogram2(root.left, cy);
         var rightStr = buildDendrogram2(root.right, cy);
         var node = cy.add({
           group: "nodes",
           data: {
-            id: leftStr + "," + rightStr
-          }
+            id: leftStr + "," + rightStr,
+          },
         });
         cy.add({
           group: "edges",
           data: {
             source: leftStr,
-            target: node.id()
-          }
+            target: node.id(),
+          },
         });
         cy.add({
           group: "edges",
           data: {
             source: rightStr,
-            target: node.id()
-          }
+            target: node.id(),
+          },
         });
         return node.id();
       } else if (root.value) {
@@ -5397,34 +6443,29 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var buildClustersFromTree = function buildClustersFromTree2(root, k, cy) {
-      if (!root)
-        return [];
-      var left = [], right = [], leaves = [];
+      if (!root) return [];
+      var left = [],
+        right = [],
+        leaves = [];
       if (k === 0) {
-        if (root.left)
-          getAllChildren(root.left, left);
-        if (root.right)
-          getAllChildren(root.right, right);
+        if (root.left) getAllChildren(root.left, left);
+        if (root.right) getAllChildren(root.right, right);
         leaves = left.concat(right);
         return [cy.collection(leaves)];
       } else if (k === 1) {
         if (root.value) {
           return [cy.collection(root.value)];
         } else {
-          if (root.left)
-            getAllChildren(root.left, left);
-          if (root.right)
-            getAllChildren(root.right, right);
+          if (root.left) getAllChildren(root.left, left);
+          if (root.right) getAllChildren(root.right, right);
           return [cy.collection(left), cy.collection(right)];
         }
       } else {
         if (root.value) {
           return [cy.collection(root.value)];
         } else {
-          if (root.left)
-            left = buildClustersFromTree2(root.left, k - 1, cy);
-          if (root.right)
-            right = buildClustersFromTree2(root.right, k - 1, cy);
+          if (root.left) left = buildClustersFromTree2(root.left, k - 1, cy);
+          if (root.right) right = buildClustersFromTree2(root.right, k - 1, cy);
           return left.concat(right);
         }
       }
@@ -5435,11 +6476,18 @@ var require_cytoscape_cjs = __commonJS({
       var opts = setOptions$1(options);
       var attrs = opts.attributes;
       var getDist2 = function getDist3(n1, n2) {
-        return clusteringDistance(opts.distance, attrs.length, function(i3) {
-          return attrs[i3](n1);
-        }, function(i3) {
-          return attrs[i3](n2);
-        }, n1, n2);
+        return clusteringDistance(
+          opts.distance,
+          attrs.length,
+          function (i3) {
+            return attrs[i3](n1);
+          },
+          function (i3) {
+            return attrs[i3](n2);
+          },
+          n1,
+          n2,
+        );
       };
       var clusters = [];
       var dists = [];
@@ -5449,7 +6497,7 @@ var require_cytoscape_cjs = __commonJS({
         var cluster = {
           value: opts.mode === "dendrogram" ? nodes[n] : [nodes[n]],
           key: n,
-          index: n
+          index: n,
         };
         clusters[n] = cluster;
         index[n] = cluster;
@@ -5460,9 +6508,15 @@ var require_cytoscape_cjs = __commonJS({
         for (var j = 0; j <= i2; j++) {
           var dist2 = void 0;
           if (opts.mode === "dendrogram") {
-            dist2 = i2 === j ? Infinity : getDist2(clusters[i2].value, clusters[j].value);
+            dist2 =
+              i2 === j
+                ? Infinity
+                : getDist2(clusters[i2].value, clusters[j].value);
           } else {
-            dist2 = i2 === j ? Infinity : getDist2(clusters[i2].value[0], clusters[j].value[0]);
+            dist2 =
+              i2 === j
+                ? Infinity
+                : getDist2(clusters[i2].value[0], clusters[j].value[0]);
           }
           dists[i2][j] = dist2;
           dists[j][i2] = dist2;
@@ -5477,12 +6531,15 @@ var require_cytoscape_cjs = __commonJS({
       }
       var retClusters;
       if (opts.mode === "dendrogram") {
-        retClusters = buildClustersFromTree(clusters[0], opts.dendrogramDepth, cy);
-        if (opts.addDendrogram)
-          buildDendrogram(clusters[0], cy);
+        retClusters = buildClustersFromTree(
+          clusters[0],
+          opts.dendrogramDepth,
+          cy,
+        );
+        if (opts.addDendrogram) buildDendrogram(clusters[0], cy);
       } else {
         retClusters = new Array(clusters.length);
-        clusters.forEach(function(cluster2, i3) {
+        clusters.forEach(function (cluster2, i3) {
           cluster2.key = cluster2.index = null;
           retClusters[i3] = cy.collection(cluster2.value);
         });
@@ -5491,7 +6548,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var hierarchicalClustering$1 = {
       hierarchicalClustering,
-      hca: hierarchicalClustering
+      hca: hierarchicalClustering,
     };
     var defaults$9 = defaults$g({
       distance: "euclidean",
@@ -5507,7 +6564,7 @@ var require_cytoscape_cjs = __commonJS({
       attributes: [
         // functions to quantify the similarity between any two points
         // e.g. node => node.data('weight')
-      ]
+      ],
     });
     var setOptions = function setOptions2(options) {
       var dmp = options.damping;
@@ -5516,12 +6573,25 @@ var require_cytoscape_cjs = __commonJS({
         error("Damping must range on [0.5, 1).  Got: ".concat(dmp));
       }
       var validPrefs = ["median", "mean", "min", "max"];
-      if (!(validPrefs.some(function(v) {
-        return v === pref;
-      }) || number$1(pref))) {
-        error("Preference must be one of [".concat(validPrefs.map(function(p2) {
-          return "'".concat(p2, "'");
-        }).join(", "), "] or a number.  Got: ").concat(pref));
+      if (
+        !(
+          validPrefs.some(function (v) {
+            return v === pref;
+          }) || number$1(pref)
+        )
+      ) {
+        error(
+          "Preference must be one of ["
+            .concat(
+              validPrefs
+                .map(function (p2) {
+                  return "'".concat(p2, "'");
+                })
+                .join(", "),
+              "] or a number.  Got: ",
+            )
+            .concat(pref),
+        );
       }
       return defaults$9(options);
     };
@@ -5529,11 +6599,18 @@ var require_cytoscape_cjs = __commonJS({
       var attr = function attr2(n, i2) {
         return attributes[i2](n);
       };
-      return -clusteringDistance(type, attributes.length, function(i2) {
-        return attr(n1, i2);
-      }, function(i2) {
-        return attr(n2, i2);
-      }, n1, n2);
+      return -clusteringDistance(
+        type,
+        attributes.length,
+        function (i2) {
+          return attr(n1, i2);
+        },
+        function (i2) {
+          return attr(n2, i2);
+        },
+        n1,
+        n2,
+      );
     };
     var getPreference = function getPreference2(S, preference) {
       var p2 = null;
@@ -5629,7 +6706,12 @@ var require_cytoscape_cjs = __commonJS({
       for (var _i2 = 0; _i2 < n; _i2++) {
         for (var j = 0; j < n; j++) {
           if (_i2 !== j) {
-            S[_i2 * n + j] = getSimilarity(opts.distance, nodes[_i2], nodes[j], opts.attributes);
+            S[_i2 * n + j] = getSimilarity(
+              opts.distance,
+              nodes[_i2],
+              nodes[j],
+              opts.attributes,
+            );
           }
         }
       }
@@ -5660,7 +6742,10 @@ var require_cytoscape_cjs = __commonJS({
       var iter;
       for (iter = 0; iter < opts.maxIterations; iter++) {
         for (var _i8 = 0; _i8 < n; _i8++) {
-          var max2 = -Infinity, max22 = -Infinity, maxI = -1, AS = 0;
+          var max2 = -Infinity,
+            max22 = -Infinity,
+            maxI = -1,
+            AS = 0;
           for (var _j = 0; _j < n; _j++) {
             old[_j] = R[_i8 * n + _j];
             AS = A[_i8 * n + _j] + S[_i8 * n + _j];
@@ -5673,9 +6758,13 @@ var require_cytoscape_cjs = __commonJS({
             }
           }
           for (var _j2 = 0; _j2 < n; _j2++) {
-            R[_i8 * n + _j2] = (1 - opts.damping) * (S[_i8 * n + _j2] - max2) + opts.damping * old[_j2];
+            R[_i8 * n + _j2] =
+              (1 - opts.damping) * (S[_i8 * n + _j2] - max2) +
+              opts.damping * old[_j2];
           }
-          R[_i8 * n + maxI] = (1 - opts.damping) * (S[_i8 * n + maxI] - max22) + opts.damping * old[maxI];
+          R[_i8 * n + maxI] =
+            (1 - opts.damping) * (S[_i8 * n + maxI] - max22) +
+            opts.damping * old[maxI];
         }
         for (var _i9 = 0; _i9 < n; _i9++) {
           var sum = 0;
@@ -5688,17 +6777,23 @@ var require_cytoscape_cjs = __commonJS({
           Rp[_i9] = R[_i9 * n + _i9];
           sum += Rp[_i9];
           for (var _j4 = 0; _j4 < n; _j4++) {
-            A[_j4 * n + _i9] = (1 - opts.damping) * Math.min(0, sum - Rp[_j4]) + opts.damping * old[_j4];
+            A[_j4 * n + _i9] =
+              (1 - opts.damping) * Math.min(0, sum - Rp[_j4]) +
+              opts.damping * old[_j4];
           }
-          A[_i9 * n + _i9] = (1 - opts.damping) * (sum - Rp[_i9]) + opts.damping * old[_i9];
+          A[_i9 * n + _i9] =
+            (1 - opts.damping) * (sum - Rp[_i9]) + opts.damping * old[_i9];
         }
         var K2 = 0;
         for (var _i10 = 0; _i10 < n; _i10++) {
           var E = A[_i10 * n + _i10] + R[_i10 * n + _i10] > 0 ? 1 : 0;
-          e[iter % opts.minIterations * n + _i10] = E;
+          e[(iter % opts.minIterations) * n + _i10] = E;
           K2 += E;
         }
-        if (K2 > 0 && (iter >= opts.minIterations - 1 || iter == opts.maxIterations - 1)) {
+        if (
+          K2 > 0 &&
+          (iter >= opts.minIterations - 1 || iter == opts.maxIterations - 1)
+        ) {
           var _sum = 0;
           for (var _i11 = 0; _i11 < n; _i11++) {
             se[_i11] = 0;
@@ -5735,11 +6830,11 @@ var require_cytoscape_cjs = __commonJS({
     };
     var affinityPropagation$1 = {
       affinityPropagation,
-      ap: affinityPropagation
+      ap: affinityPropagation,
     };
     var hierholzerDefaults = defaults$g({
       root: void 0,
-      directed: false
+      directed: false,
     });
     var elesfn$k = {
       hierholzer: function hierholzer(options) {
@@ -5747,10 +6842,12 @@ var require_cytoscape_cjs = __commonJS({
           var args = arguments;
           options = {
             root: args[0],
-            directed: args[1]
+            directed: args[1],
           };
         }
-        var _hierholzerDefaults = hierholzerDefaults(options), root = _hierholzerDefaults.root, directed = _hierholzerDefaults.directed;
+        var _hierholzerDefaults = hierholzerDefaults(options),
+          root = _hierholzerDefaults.root,
+          directed = _hierholzerDefaults.directed;
         var eles = this;
         var dflag = false;
         var oddIn;
@@ -5761,7 +6858,7 @@ var require_cytoscape_cjs = __commonJS({
         var nodes = {};
         var edges = {};
         if (directed) {
-          eles.forEach(function(ele) {
+          eles.forEach(function (ele) {
             var id = ele.id();
             if (ele.isNode()) {
               var ind = ele.indegree(true);
@@ -5769,42 +6866,34 @@ var require_cytoscape_cjs = __commonJS({
               var d1 = ind - outd;
               var d2 = outd - ind;
               if (d1 == 1) {
-                if (oddIn)
-                  dflag = true;
-                else
-                  oddIn = id;
+                if (oddIn) dflag = true;
+                else oddIn = id;
               } else if (d2 == 1) {
-                if (oddOut)
-                  dflag = true;
-                else
-                  oddOut = id;
+                if (oddOut) dflag = true;
+                else oddOut = id;
               } else if (d2 > 1 || d1 > 1) {
                 dflag = true;
               }
               nodes[id] = [];
-              ele.outgoers().forEach(function(e) {
-                if (e.isEdge())
-                  nodes[id].push(e.id());
+              ele.outgoers().forEach(function (e) {
+                if (e.isEdge()) nodes[id].push(e.id());
               });
             } else {
               edges[id] = [void 0, ele.target().id()];
             }
           });
         } else {
-          eles.forEach(function(ele) {
+          eles.forEach(function (ele) {
             var id = ele.id();
             if (ele.isNode()) {
               var d2 = ele.degree(true);
               if (d2 % 2) {
-                if (!oddIn)
-                  oddIn = id;
-                else if (!oddOut)
-                  oddOut = id;
-                else
-                  dflag = true;
+                if (!oddIn) oddIn = id;
+                else if (!oddOut) oddOut = id;
+                else dflag = true;
               }
               nodes[id] = [];
-              ele.connectedEdges().forEach(function(e) {
+              ele.connectedEdges().forEach(function (e) {
                 return nodes[id].push(e.id());
               });
             } else {
@@ -5814,10 +6903,9 @@ var require_cytoscape_cjs = __commonJS({
         }
         var result = {
           found: false,
-          trail: void 0
+          trail: void 0,
         };
-        if (dflag)
-          return result;
+        if (dflag) return result;
         else if (oddOut && oddIn) {
           if (directed) {
             if (startVertex && oddOut != startVertex) {
@@ -5832,8 +6920,7 @@ var require_cytoscape_cjs = __commonJS({
             }
           }
         } else {
-          if (!startVertex)
-            startVertex = eles[0].id();
+          if (!startVertex) startVertex = eles[0].id();
         }
         var walk = function walk2(v) {
           var currentNode = v;
@@ -5844,12 +6931,12 @@ var require_cytoscape_cjs = __commonJS({
             adjTail = edges[adj][0];
             adjHead = edges[adj][1];
             if (currentNode != adjHead) {
-              nodes[adjHead] = nodes[adjHead].filter(function(e) {
+              nodes[adjHead] = nodes[adjHead].filter(function (e) {
                 return e != adj;
               });
               currentNode = adjHead;
             } else if (!directed && currentNode != adjTail) {
-              nodes[adjTail] = nodes[adjTail].filter(function(e) {
+              nodes[adjTail] = nodes[adjTail].filter(function (e) {
                 return e != adj;
               });
               currentNode = adjTail;
@@ -5879,7 +6966,7 @@ var require_cytoscape_cjs = __commonJS({
         result.found = true;
         result.trail = this.spawn(trail, true);
         return result;
-      }
+      },
     };
     var hopcroftTarjanBiconnected = function hopcroftTarjanBiconnected2() {
       var eles = this;
@@ -5898,38 +6985,46 @@ var require_cytoscape_cjs = __commonJS({
           i2--;
         }
         cutset.push(stack.pop().edge);
-        cutset.forEach(function(edge) {
+        cutset.forEach(function (edge) {
           var connectedNodes = edge.connectedNodes().intersection(eles);
           component.merge(edge);
-          connectedNodes.forEach(function(node) {
+          connectedNodes.forEach(function (node) {
             var nodeId = node.id();
             var connectedEdges = node.connectedEdges().intersection(eles);
             component.merge(node);
             if (!nodes[nodeId].cutVertex) {
               component.merge(connectedEdges);
             } else {
-              component.merge(connectedEdges.filter(function(edge2) {
-                return edge2.isLoop();
-              }));
+              component.merge(
+                connectedEdges.filter(function (edge2) {
+                  return edge2.isLoop();
+                }),
+              );
             }
           });
         });
         components.push(component);
       };
-      var biconnectedSearch = function biconnectedSearch2(root, currentNode, parent) {
-        if (root === parent)
-          edgeCount += 1;
+      var biconnectedSearch = function biconnectedSearch2(
+        root,
+        currentNode,
+        parent,
+      ) {
+        if (root === parent) edgeCount += 1;
         nodes[currentNode] = {
           id,
           low: id++,
-          cutVertex: false
+          cutVertex: false,
         };
-        var edges = eles.getElementById(currentNode).connectedEdges().intersection(eles);
+        var edges = eles
+          .getElementById(currentNode)
+          .connectedEdges()
+          .intersection(eles);
         if (edges.size() === 0) {
           components.push(eles.spawn(eles.getElementById(currentNode)));
         } else {
           var sourceId, targetId, otherNodeId, edgeId;
-          edges.forEach(function(edge) {
+          edges.forEach(function (edge) {
             sourceId = edge.source().id();
             targetId = edge.target().id();
             otherNodeId = sourceId === currentNode ? targetId : sourceId;
@@ -5940,24 +7035,30 @@ var require_cytoscape_cjs = __commonJS({
                 stack.push({
                   x: currentNode,
                   y: otherNodeId,
-                  edge
+                  edge,
                 });
               }
               if (!(otherNodeId in nodes)) {
                 biconnectedSearch2(root, otherNodeId, currentNode);
-                nodes[currentNode].low = Math.min(nodes[currentNode].low, nodes[otherNodeId].low);
+                nodes[currentNode].low = Math.min(
+                  nodes[currentNode].low,
+                  nodes[otherNodeId].low,
+                );
                 if (nodes[currentNode].id <= nodes[otherNodeId].low) {
                   nodes[currentNode].cutVertex = true;
                   buildComponent(currentNode, otherNodeId);
                 }
               } else {
-                nodes[currentNode].low = Math.min(nodes[currentNode].low, nodes[otherNodeId].id);
+                nodes[currentNode].low = Math.min(
+                  nodes[currentNode].low,
+                  nodes[otherNodeId].id,
+                );
               }
             }
           });
         }
       };
-      eles.forEach(function(ele) {
+      eles.forEach(function (ele) {
         if (ele.isNode()) {
           var nodeId = ele.id();
           if (!(nodeId in nodes)) {
@@ -5967,21 +7068,23 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
       });
-      var cutVertices = Object.keys(nodes).filter(function(id2) {
-        return nodes[id2].cutVertex;
-      }).map(function(id2) {
-        return eles.getElementById(id2);
-      });
+      var cutVertices = Object.keys(nodes)
+        .filter(function (id2) {
+          return nodes[id2].cutVertex;
+        })
+        .map(function (id2) {
+          return eles.getElementById(id2);
+        });
       return {
         cut: eles.spawn(cutVertices),
-        components
+        components,
       };
     };
     var hopcroftTarjanBiconnected$1 = {
       hopcroftTarjanBiconnected,
       htbc: hopcroftTarjanBiconnected,
       htb: hopcroftTarjanBiconnected,
-      hopcroftTarjanBiconnectedComponents: hopcroftTarjanBiconnected
+      hopcroftTarjanBiconnectedComponents: hopcroftTarjanBiconnected,
     };
     var tarjanStronglyConnected = function tarjanStronglyConnected2() {
       var eles = this;
@@ -5990,28 +7093,36 @@ var require_cytoscape_cjs = __commonJS({
       var components = [];
       var stack = [];
       var cut = eles.spawn(eles);
-      var stronglyConnectedSearch = function stronglyConnectedSearch2(sourceNodeId) {
+      var stronglyConnectedSearch = function stronglyConnectedSearch2(
+        sourceNodeId,
+      ) {
         stack.push(sourceNodeId);
         nodes[sourceNodeId] = {
           index,
           low: index++,
-          explored: false
+          explored: false,
         };
-        var connectedEdges = eles.getElementById(sourceNodeId).connectedEdges().intersection(eles);
-        connectedEdges.forEach(function(edge) {
+        var connectedEdges = eles
+          .getElementById(sourceNodeId)
+          .connectedEdges()
+          .intersection(eles);
+        connectedEdges.forEach(function (edge) {
           var targetNodeId = edge.target().id();
           if (targetNodeId !== sourceNodeId) {
             if (!(targetNodeId in nodes)) {
               stronglyConnectedSearch2(targetNodeId);
             }
             if (!nodes[targetNodeId].explored) {
-              nodes[sourceNodeId].low = Math.min(nodes[sourceNodeId].low, nodes[targetNodeId].low);
+              nodes[sourceNodeId].low = Math.min(
+                nodes[sourceNodeId].low,
+                nodes[targetNodeId].low,
+              );
             }
           }
         });
         if (nodes[sourceNodeId].index === nodes[sourceNodeId].low) {
           var componentNodes = eles.spawn();
-          for (; ; ) {
+          for (;;) {
             var nodeId = stack.pop();
             componentNodes.merge(eles.getElementById(nodeId));
             nodes[nodeId].low = nodes[sourceNodeId].index;
@@ -6026,7 +7137,7 @@ var require_cytoscape_cjs = __commonJS({
           cut = cut.difference(component);
         }
       };
-      eles.forEach(function(ele) {
+      eles.forEach(function (ele) {
         if (ele.isNode()) {
           var nodeId = ele.id();
           if (!(nodeId in nodes)) {
@@ -6036,25 +7147,43 @@ var require_cytoscape_cjs = __commonJS({
       });
       return {
         cut,
-        components
+        components,
       };
     };
     var tarjanStronglyConnected$1 = {
       tarjanStronglyConnected,
       tsc: tarjanStronglyConnected,
       tscc: tarjanStronglyConnected,
-      tarjanStronglyConnectedComponents: tarjanStronglyConnected
+      tarjanStronglyConnectedComponents: tarjanStronglyConnected,
     };
     var elesfn$j = {};
-    [elesfn$v, elesfn$u, elesfn$t, elesfn$s, elesfn$r, elesfn$q, elesfn$p, elesfn$o, elesfn$n, elesfn$m, elesfn$l, markovClustering$1, kClustering, hierarchicalClustering$1, affinityPropagation$1, elesfn$k, hopcroftTarjanBiconnected$1, tarjanStronglyConnected$1].forEach(function(props) {
+    [
+      elesfn$v,
+      elesfn$u,
+      elesfn$t,
+      elesfn$s,
+      elesfn$r,
+      elesfn$q,
+      elesfn$p,
+      elesfn$o,
+      elesfn$n,
+      elesfn$m,
+      elesfn$l,
+      markovClustering$1,
+      kClustering,
+      hierarchicalClustering$1,
+      affinityPropagation$1,
+      elesfn$k,
+      hopcroftTarjanBiconnected$1,
+      tarjanStronglyConnected$1,
+    ].forEach(function (props) {
       extend(elesfn$j, props);
     });
     var STATE_PENDING = 0;
     var STATE_FULFILLED = 1;
     var STATE_REJECTED = 2;
     var api = function api2(executor) {
-      if (!(this instanceof api2))
-        return new api2(executor);
+      if (!(this instanceof api2)) return new api2(executor);
       this.id = "Thenable/1.0.7";
       this.state = STATE_PENDING;
       this.fulfillValue = void 0;
@@ -6062,7 +7191,7 @@ var require_cytoscape_cjs = __commonJS({
       this.onFulfilled = [];
       this.onRejected = [];
       this.proxy = {
-        then: this.then.bind(this)
+        then: this.then.bind(this),
       };
       if (typeof executor === "function")
         executor.call(this, this.fulfill.bind(this), this.reject.bind(this));
@@ -6083,7 +7212,7 @@ var require_cytoscape_cjs = __commonJS({
         curr.onRejected.push(resolver(onRejected, next, "reject"));
         execute(curr);
         return next.proxy;
-      }
+      },
     };
     var deliver = function deliver2(curr, state, name, value) {
       if (curr.state === STATE_PENDING) {
@@ -6100,8 +7229,7 @@ var require_cytoscape_cjs = __commonJS({
         execute_handlers(curr, "onRejected", curr.rejectReason);
     };
     var execute_handlers = function execute_handlers2(curr, name, value) {
-      if (curr[name].length === 0)
-        return;
+      if (curr[name].length === 0) return;
       var handlers = curr[name];
       curr[name] = [];
       var func = function func2() {
@@ -6109,15 +7237,12 @@ var require_cytoscape_cjs = __commonJS({
           handlers[i2](value);
         }
       };
-      if (typeof setImmediate === "function")
-        setImmediate(func);
-      else
-        setTimeout(func, 0);
+      if (typeof setImmediate === "function") setImmediate(func);
+      else setTimeout(func, 0);
     };
     var resolver = function resolver2(cb, next, method) {
-      return function(value) {
-        if (typeof cb !== "function")
-          next[method].call(next, value);
+      return function (value) {
+        if (typeof cb !== "function") next[method].call(next, value);
         else {
           var result;
           try {
@@ -6136,7 +7261,7 @@ var require_cytoscape_cjs = __commonJS({
         return;
       }
       var then;
-      if (_typeof(x) === "object" && x !== null || typeof x === "function") {
+      if ((_typeof(x) === "object" && x !== null) || typeof x === "function") {
         try {
           then = x.then;
         } catch (e) {
@@ -6151,34 +7276,30 @@ var require_cytoscape_cjs = __commonJS({
             x,
             /*  resolvePromise  */
             /*  [Promises/A+ 2.3.3.3.1]  */
-            function(y) {
-              if (resolved)
-                return;
+            function (y) {
+              if (resolved) return;
               resolved = true;
               if (y === x)
                 promise2.reject(new TypeError("circular thenable chain"));
-              else
-                resolve2(promise2, y);
+              else resolve2(promise2, y);
             },
             /*  rejectPromise  */
             /*  [Promises/A+ 2.3.3.3.2]  */
-            function(r) {
-              if (resolved)
-                return;
+            function (r) {
+              if (resolved) return;
               resolved = true;
               promise2.reject(r);
-            }
+            },
           );
         } catch (e) {
-          if (!resolved)
-            promise2.reject(e);
+          if (!resolved) promise2.reject(e);
         }
         return;
       }
       promise2.fulfill(x);
     };
-    api.all = function(ps) {
-      return new api(function(resolveAll, rejectAll) {
+    api.all = function (ps) {
+      return new api(function (resolveAll, rejectAll) {
         var vals = new Array(ps.length);
         var doneCount = 0;
         var fulfill = function fulfill2(i3, val) {
@@ -6189,15 +7310,18 @@ var require_cytoscape_cjs = __commonJS({
           }
         };
         for (var i2 = 0; i2 < ps.length; i2++) {
-          (function(i3) {
+          (function (i3) {
             var p2 = ps[i3];
             var isPromise = p2 != null && p2.then != null;
             if (isPromise) {
-              p2.then(function(val2) {
-                fulfill(i3, val2);
-              }, function(err) {
-                rejectAll(err);
-              });
+              p2.then(
+                function (val2) {
+                  fulfill(i3, val2);
+                },
+                function (err) {
+                  rejectAll(err);
+                },
+              );
             } else {
               var val = p2;
               fulfill(i3, val);
@@ -6206,13 +7330,13 @@ var require_cytoscape_cjs = __commonJS({
         }
       });
     };
-    api.resolve = function(val) {
-      return new api(function(resolve2, reject) {
+    api.resolve = function (val) {
+      return new api(function (resolve2, reject) {
         resolve2(val);
       });
     };
-    api.reject = function(val) {
-      return new api(function(resolve2, reject) {
+    api.reject = function (val) {
+      return new api(function (resolve2, reject) {
         reject(val);
       });
     };
@@ -6220,9 +7344,13 @@ var require_cytoscape_cjs = __commonJS({
     var Animation = function Animation2(target, opts, opts2) {
       var isCore = core(target);
       var isEle = !isCore;
-      var _p = this._private = extend({
-        duration: 1e3
-      }, opts, opts2);
+      var _p = (this._private = extend(
+        {
+          duration: 1e3,
+        },
+        opts,
+        opts2,
+      ));
       _p.target = target;
       _p.style = _p.style || _p.css;
       _p.started = false;
@@ -6239,15 +7367,17 @@ var require_cytoscape_cjs = __commonJS({
         var pos = target.position();
         _p.startPosition = _p.startPosition || {
           x: pos.x,
-          y: pos.y
+          y: pos.y,
         };
-        _p.startStyle = _p.startStyle || target.cy().style().getAnimationStartStyle(target, _p.style);
+        _p.startStyle =
+          _p.startStyle ||
+          target.cy().style().getAnimationStartStyle(target, _p.style);
       }
       if (isCore) {
         var pan = target.pan();
         _p.startPan = {
           x: pan.x,
-          y: pan.y
+          y: pan.y,
         };
         _p.startZoom = target.zoom();
       }
@@ -6394,12 +7524,12 @@ var require_cytoscape_cjs = __commonJS({
           case "completed":
             arr = _p.completes;
         }
-        return new Promise$1(function(resolve2, reject) {
-          arr.push(function() {
+        return new Promise$1(function (resolve2, reject) {
+          arr.push(function () {
             resolve2();
           });
         });
-      }
+      },
     });
     anifn.complete = anifn.completed;
     anifn.run = anifn.play;
@@ -6447,7 +7577,7 @@ var require_cytoscape_cjs = __commonJS({
           return this.animate({
             delay: time,
             duration: time,
-            complete
+            complete,
           });
         };
       },
@@ -6461,7 +7591,7 @@ var require_cytoscape_cjs = __commonJS({
           return this.animation({
             delay: time,
             duration: time,
-            complete
+            complete,
           });
         };
       },
@@ -6495,7 +7625,9 @@ var require_cytoscape_cjs = __commonJS({
               break;
           }
           if (isEles) {
-            properties.style = style.getPropsList(properties.style || properties.css);
+            properties.style = style.getPropsList(
+              properties.style || properties.css,
+            );
             properties.css = void 0;
           }
           if (isEles && properties.renderedPosition != null) {
@@ -6509,7 +7641,7 @@ var require_cytoscape_cjs = __commonJS({
             var cyPan = cy.pan();
             properties.pan = {
               x: cyPan.x + panBy.x,
-              y: cyPan.y + panBy.y
+              y: cyPan.y + panBy.y,
             };
           }
           var center = properties.center || properties.centre;
@@ -6521,7 +7653,10 @@ var require_cytoscape_cjs = __commonJS({
           }
           if (isCore && properties.fit != null) {
             var fit = properties.fit;
-            var fitVp = cy.getFitViewport(fit.eles || fit.boundingBox, fit.padding);
+            var fitVp = cy.getFitViewport(
+              fit.eles || fit.boundingBox,
+              fit.padding,
+            );
             if (fitVp != null) {
               properties.pan = fitVp.pan;
               properties.zoom = fitVp.zoom;
@@ -6558,10 +7693,17 @@ var require_cytoscape_cjs = __commonJS({
           }
           for (var i2 = 0; i2 < all.length; i2++) {
             var ele = all[i2];
-            var queue = ele.animated() && (properties.queue === void 0 || properties.queue);
-            var ani = ele.animation(properties, queue ? {
-              queue: true
-            } : void 0);
+            var queue =
+              ele.animated() &&
+              (properties.queue === void 0 || properties.queue);
+            var ani = ele.animation(
+              properties,
+              queue
+                ? {
+                    queue: true,
+                  }
+                : void 0,
+            );
             ani.play();
           }
           return this;
@@ -6598,7 +7740,7 @@ var require_cytoscape_cjs = __commonJS({
           cy.notify("draw");
           return this;
         };
-      }
+      },
       // stop
     };
     var define$2 = {
@@ -6616,15 +7758,12 @@ var require_cytoscape_cjs = __commonJS({
           immutableKeys: {},
           // key => true if immutable
           updateStyle: false,
-          beforeGet: function beforeGet(self2) {
-          },
-          beforeSet: function beforeSet(self2, obj) {
-          },
-          onSet: function onSet(self2) {
-          },
+          beforeGet: function beforeGet(self2) {},
+          beforeSet: function beforeSet(self2, obj) {},
+          onSet: function onSet(self2) {},
           canSet: function canSet(self2) {
             return true;
-          }
+          },
         };
         params = extend({}, defaults2, params);
         return function dataImpl(name, value) {
@@ -6641,7 +7780,10 @@ var require_cytoscape_cjs = __commonJS({
               if (single) {
                 p2.beforeGet(single);
                 if (path && single._private[p2.field][name] === void 0) {
-                  ret = get__default["default"](single._private[p2.field], path);
+                  ret = get__default["default"](
+                    single._private[p2.field],
+                    path,
+                  );
                 } else {
                   ret = single._private[p2.field][name];
                 }
@@ -6656,7 +7798,11 @@ var require_cytoscape_cjs = __commonJS({
                   var ele = all[i2];
                   if (p2.canSet(ele)) {
                     if (path && single._private[p2.field][name] === void 0) {
-                      set__default["default"](ele._private[p2.field], path, value);
+                      set__default["default"](
+                        ele._private[p2.field],
+                        path,
+                        value,
+                      );
                     } else {
                       ele._private[p2.field][name] = value;
                     }
@@ -6718,7 +7864,7 @@ var require_cytoscape_cjs = __commonJS({
           event: "data",
           triggerFnName: "trigger",
           triggerEvent: false,
-          immutableKeys: {}
+          immutableKeys: {},
           // key => true if immutable
         };
         params = extend({}, defaults2, params);
@@ -6763,7 +7909,7 @@ var require_cytoscape_cjs = __commonJS({
           }
           return self2;
         };
-      }
+      },
       // removeData
     };
     var define$1 = {
@@ -6772,10 +7918,10 @@ var require_cytoscape_cjs = __commonJS({
         p2.addListener = p2.listen = p2.bind = p2.on;
         p2.unlisten = p2.unbind = p2.off = p2.removeListener;
         p2.trigger = p2.emit;
-        p2.pon = p2.promiseOn = function(events, selector) {
+        p2.pon = p2.promiseOn = function (events, selector) {
           var self2 = this;
           var args = Array.prototype.slice.call(arguments, 0);
-          return new Promise$1(function(resolve2, reject) {
+          return new Promise$1(function (resolve2, reject) {
             var callback = function callback2(e) {
               self2.off.apply(self2, offArgs);
               resolve2(e);
@@ -6785,10 +7931,10 @@ var require_cytoscape_cjs = __commonJS({
             self2.on.apply(self2, onArgs);
           });
         };
-      }
+      },
     };
     var define2 = {};
-    [define$3, define$2, define$1].forEach(function(m) {
+    [define$3, define$2, define$1].forEach(function (m) {
       extend(define2, m);
     });
     var elesfn$i = {
@@ -6798,14 +7944,14 @@ var require_cytoscape_cjs = __commonJS({
       clearQueue: define2.clearQueue(),
       delay: define2.delay(),
       delayAnimation: define2.delayAnimation(),
-      stop: define2.stop()
+      stop: define2.stop(),
     };
     var elesfn$h = {
       classes: function classes(_classes) {
         var self2 = this;
         if (_classes === void 0) {
           var ret = [];
-          self2[0]._private.classes.forEach(function(cls2) {
+          self2[0]._private.classes.forEach(function (cls2) {
             return ret.push(cls2);
           });
           return ret;
@@ -6862,10 +8008,10 @@ var require_cytoscape_cjs = __commonJS({
             var cls = classes[j];
             var hasClass = eleClasses.has(cls);
             var changedNow = false;
-            if (toggle || toggleUndefd && !hasClass) {
+            if (toggle || (toggleUndefd && !hasClass)) {
               eleClasses.add(cls);
               changedNow = true;
-            } else if (!toggle || toggleUndefd && hasClass) {
+            } else if (!toggle || (toggleUndefd && hasClass)) {
               eleClasses["delete"](cls);
               changedNow = true;
             }
@@ -6891,15 +8037,16 @@ var require_cytoscape_cjs = __commonJS({
           return self2;
         }
         self2.addClass(classes);
-        setTimeout(function() {
+        setTimeout(function () {
           self2.removeClass(classes);
         }, duration);
         return self2;
-      }
+      },
     };
     elesfn$h.className = elesfn$h.classNames = elesfn$h.classes;
     var tokens = {
-      metaChar: "[\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\]\\^\\`\\{\\|\\}\\~]",
+      metaChar:
+        "[\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\]\\^\\`\\{\\|\\}\\~]",
       // chars we need to escape in let names, etc
       comparatorOp: "=|\\!=|>|>=|<|<=|\\$=|\\^=|\\*=",
       // binary comparison op (used in data selectors)
@@ -6918,13 +8065,13 @@ var require_cytoscape_cjs = __commonJS({
       subject: "\\$",
       group: "node|edge|\\*",
       directedEdge: "\\s+->\\s+",
-      undirectedEdge: "\\s+<->\\s+"
+      undirectedEdge: "\\s+<->\\s+",
     };
     tokens.variable = "(?:[\\w-.]|(?:\\\\" + tokens.metaChar + "))+";
     tokens.className = "(?:[\\w-]|(?:\\\\" + tokens.metaChar + "))+";
     tokens.value = tokens.string + "|" + tokens.number;
     tokens.id = tokens.variable;
-    (function() {
+    (function () {
       var ops, op, i2;
       ops = tokens.comparatorOp.split("|");
       for (i2 = 0; i2 < ops.length; i2++) {
@@ -6945,7 +8092,7 @@ var require_cytoscape_cjs = __commonJS({
     })();
     var newQuery = function newQuery2() {
       return {
-        checks: []
+        checks: [],
       };
     };
     var Type = {
@@ -6990,161 +8137,191 @@ var require_cytoscape_cjs = __commonJS({
       /** E.g. #foo > $bar > #baz */
       COMPOUND_SPLIT: 19,
       /** Always matches, useful placeholder for subject in `COMPOUND_SPLIT` */
-      TRUE: 20
+      TRUE: 20,
     };
-    var stateSelectors = [{
-      selector: ":selected",
-      matches: function matches2(ele) {
-        return ele.selected();
-      }
-    }, {
-      selector: ":unselected",
-      matches: function matches2(ele) {
-        return !ele.selected();
-      }
-    }, {
-      selector: ":selectable",
-      matches: function matches2(ele) {
-        return ele.selectable();
-      }
-    }, {
-      selector: ":unselectable",
-      matches: function matches2(ele) {
-        return !ele.selectable();
-      }
-    }, {
-      selector: ":locked",
-      matches: function matches2(ele) {
-        return ele.locked();
-      }
-    }, {
-      selector: ":unlocked",
-      matches: function matches2(ele) {
-        return !ele.locked();
-      }
-    }, {
-      selector: ":visible",
-      matches: function matches2(ele) {
-        return ele.visible();
-      }
-    }, {
-      selector: ":hidden",
-      matches: function matches2(ele) {
-        return !ele.visible();
-      }
-    }, {
-      selector: ":transparent",
-      matches: function matches2(ele) {
-        return ele.transparent();
-      }
-    }, {
-      selector: ":grabbed",
-      matches: function matches2(ele) {
-        return ele.grabbed();
-      }
-    }, {
-      selector: ":free",
-      matches: function matches2(ele) {
-        return !ele.grabbed();
-      }
-    }, {
-      selector: ":removed",
-      matches: function matches2(ele) {
-        return ele.removed();
-      }
-    }, {
-      selector: ":inside",
-      matches: function matches2(ele) {
-        return !ele.removed();
-      }
-    }, {
-      selector: ":grabbable",
-      matches: function matches2(ele) {
-        return ele.grabbable();
-      }
-    }, {
-      selector: ":ungrabbable",
-      matches: function matches2(ele) {
-        return !ele.grabbable();
-      }
-    }, {
-      selector: ":animated",
-      matches: function matches2(ele) {
-        return ele.animated();
-      }
-    }, {
-      selector: ":unanimated",
-      matches: function matches2(ele) {
-        return !ele.animated();
-      }
-    }, {
-      selector: ":parent",
-      matches: function matches2(ele) {
-        return ele.isParent();
-      }
-    }, {
-      selector: ":childless",
-      matches: function matches2(ele) {
-        return ele.isChildless();
-      }
-    }, {
-      selector: ":child",
-      matches: function matches2(ele) {
-        return ele.isChild();
-      }
-    }, {
-      selector: ":orphan",
-      matches: function matches2(ele) {
-        return ele.isOrphan();
-      }
-    }, {
-      selector: ":nonorphan",
-      matches: function matches2(ele) {
-        return ele.isChild();
-      }
-    }, {
-      selector: ":compound",
-      matches: function matches2(ele) {
-        if (ele.isNode()) {
+    var stateSelectors = [
+      {
+        selector: ":selected",
+        matches: function matches2(ele) {
+          return ele.selected();
+        },
+      },
+      {
+        selector: ":unselected",
+        matches: function matches2(ele) {
+          return !ele.selected();
+        },
+      },
+      {
+        selector: ":selectable",
+        matches: function matches2(ele) {
+          return ele.selectable();
+        },
+      },
+      {
+        selector: ":unselectable",
+        matches: function matches2(ele) {
+          return !ele.selectable();
+        },
+      },
+      {
+        selector: ":locked",
+        matches: function matches2(ele) {
+          return ele.locked();
+        },
+      },
+      {
+        selector: ":unlocked",
+        matches: function matches2(ele) {
+          return !ele.locked();
+        },
+      },
+      {
+        selector: ":visible",
+        matches: function matches2(ele) {
+          return ele.visible();
+        },
+      },
+      {
+        selector: ":hidden",
+        matches: function matches2(ele) {
+          return !ele.visible();
+        },
+      },
+      {
+        selector: ":transparent",
+        matches: function matches2(ele) {
+          return ele.transparent();
+        },
+      },
+      {
+        selector: ":grabbed",
+        matches: function matches2(ele) {
+          return ele.grabbed();
+        },
+      },
+      {
+        selector: ":free",
+        matches: function matches2(ele) {
+          return !ele.grabbed();
+        },
+      },
+      {
+        selector: ":removed",
+        matches: function matches2(ele) {
+          return ele.removed();
+        },
+      },
+      {
+        selector: ":inside",
+        matches: function matches2(ele) {
+          return !ele.removed();
+        },
+      },
+      {
+        selector: ":grabbable",
+        matches: function matches2(ele) {
+          return ele.grabbable();
+        },
+      },
+      {
+        selector: ":ungrabbable",
+        matches: function matches2(ele) {
+          return !ele.grabbable();
+        },
+      },
+      {
+        selector: ":animated",
+        matches: function matches2(ele) {
+          return ele.animated();
+        },
+      },
+      {
+        selector: ":unanimated",
+        matches: function matches2(ele) {
+          return !ele.animated();
+        },
+      },
+      {
+        selector: ":parent",
+        matches: function matches2(ele) {
           return ele.isParent();
-        } else {
-          return ele.source().isParent() || ele.target().isParent();
-        }
-      }
-    }, {
-      selector: ":loop",
-      matches: function matches2(ele) {
-        return ele.isLoop();
-      }
-    }, {
-      selector: ":simple",
-      matches: function matches2(ele) {
-        return ele.isSimple();
-      }
-    }, {
-      selector: ":active",
-      matches: function matches2(ele) {
-        return ele.active();
-      }
-    }, {
-      selector: ":inactive",
-      matches: function matches2(ele) {
-        return !ele.active();
-      }
-    }, {
-      selector: ":backgrounding",
-      matches: function matches2(ele) {
-        return ele.backgrounding();
-      }
-    }, {
-      selector: ":nonbackgrounding",
-      matches: function matches2(ele) {
-        return !ele.backgrounding();
-      }
-    }].sort(function(a, b) {
+        },
+      },
+      {
+        selector: ":childless",
+        matches: function matches2(ele) {
+          return ele.isChildless();
+        },
+      },
+      {
+        selector: ":child",
+        matches: function matches2(ele) {
+          return ele.isChild();
+        },
+      },
+      {
+        selector: ":orphan",
+        matches: function matches2(ele) {
+          return ele.isOrphan();
+        },
+      },
+      {
+        selector: ":nonorphan",
+        matches: function matches2(ele) {
+          return ele.isChild();
+        },
+      },
+      {
+        selector: ":compound",
+        matches: function matches2(ele) {
+          if (ele.isNode()) {
+            return ele.isParent();
+          } else {
+            return ele.source().isParent() || ele.target().isParent();
+          }
+        },
+      },
+      {
+        selector: ":loop",
+        matches: function matches2(ele) {
+          return ele.isLoop();
+        },
+      },
+      {
+        selector: ":simple",
+        matches: function matches2(ele) {
+          return ele.isSimple();
+        },
+      },
+      {
+        selector: ":active",
+        matches: function matches2(ele) {
+          return ele.active();
+        },
+      },
+      {
+        selector: ":inactive",
+        matches: function matches2(ele) {
+          return !ele.active();
+        },
+      },
+      {
+        selector: ":backgrounding",
+        matches: function matches2(ele) {
+          return ele.backgrounding();
+        },
+      },
+      {
+        selector: ":nonbackgrounding",
+        matches: function matches2(ele) {
+          return !ele.backgrounding();
+        },
+      },
+    ].sort(function (a, b) {
       return descending(a.selector, b.selector);
     });
-    var lookup = function() {
+    var lookup = (function () {
       var selToFn = {};
       var s;
       for (var i2 = 0; i2 < stateSelectors.length; i2++) {
@@ -7152,350 +8329,421 @@ var require_cytoscape_cjs = __commonJS({
         selToFn[s.selector] = s.matches;
       }
       return selToFn;
-    }();
+    })();
     var stateSelectorMatches = function stateSelectorMatches2(sel, ele) {
       return lookup[sel](ele);
     };
-    var stateSelectorRegex = "(" + stateSelectors.map(function(s) {
-      return s.selector;
-    }).join("|") + ")";
+    var stateSelectorRegex =
+      "(" +
+      stateSelectors
+        .map(function (s) {
+          return s.selector;
+        })
+        .join("|") +
+      ")";
     var cleanMetaChars = function cleanMetaChars2(str) {
-      return str.replace(new RegExp("\\\\(" + tokens.metaChar + ")", "g"), function(match2, $1) {
-        return $1;
-      });
+      return str.replace(
+        new RegExp("\\\\(" + tokens.metaChar + ")", "g"),
+        function (match2, $1) {
+          return $1;
+        },
+      );
     };
-    var replaceLastQuery = function replaceLastQuery2(selector, examiningQuery, replacementQuery) {
+    var replaceLastQuery = function replaceLastQuery2(
+      selector,
+      examiningQuery,
+      replacementQuery,
+    ) {
       selector[selector.length - 1] = replacementQuery;
     };
-    var exprs = [{
-      name: "group",
-      // just used for identifying when debugging
-      query: true,
-      regex: "(" + tokens.group + ")",
-      populate: function populate(selector, query, _ref) {
-        var _ref2 = _slicedToArray(_ref, 1), group = _ref2[0];
-        query.checks.push({
-          type: Type.GROUP,
-          value: group === "*" ? group : group + "s"
-        });
-      }
-    }, {
-      name: "state",
-      query: true,
-      regex: stateSelectorRegex,
-      populate: function populate(selector, query, _ref3) {
-        var _ref4 = _slicedToArray(_ref3, 1), state = _ref4[0];
-        query.checks.push({
-          type: Type.STATE,
-          value: state
-        });
-      }
-    }, {
-      name: "id",
-      query: true,
-      regex: "\\#(" + tokens.id + ")",
-      populate: function populate(selector, query, _ref5) {
-        var _ref6 = _slicedToArray(_ref5, 1), id = _ref6[0];
-        query.checks.push({
-          type: Type.ID,
-          value: cleanMetaChars(id)
-        });
-      }
-    }, {
-      name: "className",
-      query: true,
-      regex: "\\.(" + tokens.className + ")",
-      populate: function populate(selector, query, _ref7) {
-        var _ref8 = _slicedToArray(_ref7, 1), className = _ref8[0];
-        query.checks.push({
-          type: Type.CLASS,
-          value: cleanMetaChars(className)
-        });
-      }
-    }, {
-      name: "dataExists",
-      query: true,
-      regex: "\\[\\s*(" + tokens.variable + ")\\s*\\]",
-      populate: function populate(selector, query, _ref9) {
-        var _ref10 = _slicedToArray(_ref9, 1), variable = _ref10[0];
-        query.checks.push({
-          type: Type.DATA_EXIST,
-          field: cleanMetaChars(variable)
-        });
-      }
-    }, {
-      name: "dataCompare",
-      query: true,
-      regex: "\\[\\s*(" + tokens.variable + ")\\s*(" + tokens.comparatorOp + ")\\s*(" + tokens.value + ")\\s*\\]",
-      populate: function populate(selector, query, _ref11) {
-        var _ref12 = _slicedToArray(_ref11, 3), variable = _ref12[0], comparatorOp = _ref12[1], value = _ref12[2];
-        var valueIsString = new RegExp("^" + tokens.string + "$").exec(value) != null;
-        if (valueIsString) {
-          value = value.substring(1, value.length - 1);
-        } else {
-          value = parseFloat(value);
-        }
-        query.checks.push({
-          type: Type.DATA_COMPARE,
-          field: cleanMetaChars(variable),
-          operator: comparatorOp,
-          value
-        });
-      }
-    }, {
-      name: "dataBool",
-      query: true,
-      regex: "\\[\\s*(" + tokens.boolOp + ")\\s*(" + tokens.variable + ")\\s*\\]",
-      populate: function populate(selector, query, _ref13) {
-        var _ref14 = _slicedToArray(_ref13, 2), boolOp = _ref14[0], variable = _ref14[1];
-        query.checks.push({
-          type: Type.DATA_BOOL,
-          field: cleanMetaChars(variable),
-          operator: boolOp
-        });
-      }
-    }, {
-      name: "metaCompare",
-      query: true,
-      regex: "\\[\\[\\s*(" + tokens.meta + ")\\s*(" + tokens.comparatorOp + ")\\s*(" + tokens.number + ")\\s*\\]\\]",
-      populate: function populate(selector, query, _ref15) {
-        var _ref16 = _slicedToArray(_ref15, 3), meta2 = _ref16[0], comparatorOp = _ref16[1], number2 = _ref16[2];
-        query.checks.push({
-          type: Type.META_COMPARE,
-          field: cleanMetaChars(meta2),
-          operator: comparatorOp,
-          value: parseFloat(number2)
-        });
-      }
-    }, {
-      name: "nextQuery",
-      separator: true,
-      regex: tokens.separator,
-      populate: function populate(selector, query) {
-        var currentSubject = selector.currentSubject;
-        var edgeCount = selector.edgeCount;
-        var compoundCount = selector.compoundCount;
-        var lastQ = selector[selector.length - 1];
-        if (currentSubject != null) {
-          lastQ.subject = currentSubject;
-          selector.currentSubject = null;
-        }
-        lastQ.edgeCount = edgeCount;
-        lastQ.compoundCount = compoundCount;
-        selector.edgeCount = 0;
-        selector.compoundCount = 0;
-        var nextQuery = selector[selector.length++] = newQuery();
-        return nextQuery;
-      }
-    }, {
-      name: "directedEdge",
-      separator: true,
-      regex: tokens.directedEdge,
-      populate: function populate(selector, query) {
-        if (selector.currentSubject == null) {
-          var edgeQuery = newQuery();
-          var source = query;
-          var target = newQuery();
-          edgeQuery.checks.push({
-            type: Type.DIRECTED_EDGE,
-            source,
-            target
+    var exprs = [
+      {
+        name: "group",
+        // just used for identifying when debugging
+        query: true,
+        regex: "(" + tokens.group + ")",
+        populate: function populate(selector, query, _ref) {
+          var _ref2 = _slicedToArray(_ref, 1),
+            group = _ref2[0];
+          query.checks.push({
+            type: Type.GROUP,
+            value: group === "*" ? group : group + "s",
           });
-          replaceLastQuery(selector, query, edgeQuery);
-          selector.edgeCount++;
-          return target;
-        } else {
-          var srcTgtQ = newQuery();
-          var _source = query;
-          var _target = newQuery();
-          srcTgtQ.checks.push({
-            type: Type.NODE_SOURCE,
-            source: _source,
-            target: _target
+        },
+      },
+      {
+        name: "state",
+        query: true,
+        regex: stateSelectorRegex,
+        populate: function populate(selector, query, _ref3) {
+          var _ref4 = _slicedToArray(_ref3, 1),
+            state = _ref4[0];
+          query.checks.push({
+            type: Type.STATE,
+            value: state,
           });
-          replaceLastQuery(selector, query, srcTgtQ);
-          selector.edgeCount++;
-          return _target;
-        }
-      }
-    }, {
-      name: "undirectedEdge",
-      separator: true,
-      regex: tokens.undirectedEdge,
-      populate: function populate(selector, query) {
-        if (selector.currentSubject == null) {
-          var edgeQuery = newQuery();
-          var source = query;
-          var target = newQuery();
-          edgeQuery.checks.push({
-            type: Type.UNDIRECTED_EDGE,
-            nodes: [source, target]
+        },
+      },
+      {
+        name: "id",
+        query: true,
+        regex: "\\#(" + tokens.id + ")",
+        populate: function populate(selector, query, _ref5) {
+          var _ref6 = _slicedToArray(_ref5, 1),
+            id = _ref6[0];
+          query.checks.push({
+            type: Type.ID,
+            value: cleanMetaChars(id),
           });
-          replaceLastQuery(selector, query, edgeQuery);
-          selector.edgeCount++;
-          return target;
-        } else {
-          var nhoodQ = newQuery();
-          var node = query;
-          var neighbor = newQuery();
-          nhoodQ.checks.push({
-            type: Type.NODE_NEIGHBOR,
-            node,
-            neighbor
+        },
+      },
+      {
+        name: "className",
+        query: true,
+        regex: "\\.(" + tokens.className + ")",
+        populate: function populate(selector, query, _ref7) {
+          var _ref8 = _slicedToArray(_ref7, 1),
+            className = _ref8[0];
+          query.checks.push({
+            type: Type.CLASS,
+            value: cleanMetaChars(className),
           });
-          replaceLastQuery(selector, query, nhoodQ);
-          return neighbor;
-        }
-      }
-    }, {
-      name: "child",
-      separator: true,
-      regex: tokens.child,
-      populate: function populate(selector, query) {
-        if (selector.currentSubject == null) {
-          var parentChildQuery = newQuery();
-          var child = newQuery();
-          var parent = selector[selector.length - 1];
-          parentChildQuery.checks.push({
-            type: Type.CHILD,
-            parent,
-            child
+        },
+      },
+      {
+        name: "dataExists",
+        query: true,
+        regex: "\\[\\s*(" + tokens.variable + ")\\s*\\]",
+        populate: function populate(selector, query, _ref9) {
+          var _ref10 = _slicedToArray(_ref9, 1),
+            variable = _ref10[0];
+          query.checks.push({
+            type: Type.DATA_EXIST,
+            field: cleanMetaChars(variable),
           });
-          replaceLastQuery(selector, query, parentChildQuery);
-          selector.compoundCount++;
-          return child;
-        } else if (selector.currentSubject === query) {
-          var compound = newQuery();
-          var left = selector[selector.length - 1];
-          var right = newQuery();
-          var subject = newQuery();
-          var _child = newQuery();
-          var _parent = newQuery();
-          compound.checks.push({
-            type: Type.COMPOUND_SPLIT,
-            left,
-            right,
-            subject
+        },
+      },
+      {
+        name: "dataCompare",
+        query: true,
+        regex:
+          "\\[\\s*(" +
+          tokens.variable +
+          ")\\s*(" +
+          tokens.comparatorOp +
+          ")\\s*(" +
+          tokens.value +
+          ")\\s*\\]",
+        populate: function populate(selector, query, _ref11) {
+          var _ref12 = _slicedToArray(_ref11, 3),
+            variable = _ref12[0],
+            comparatorOp = _ref12[1],
+            value = _ref12[2];
+          var valueIsString =
+            new RegExp("^" + tokens.string + "$").exec(value) != null;
+          if (valueIsString) {
+            value = value.substring(1, value.length - 1);
+          } else {
+            value = parseFloat(value);
+          }
+          query.checks.push({
+            type: Type.DATA_COMPARE,
+            field: cleanMetaChars(variable),
+            operator: comparatorOp,
+            value,
           });
-          subject.checks = query.checks;
-          query.checks = [{
-            type: Type.TRUE
-          }];
-          _parent.checks.push({
-            type: Type.TRUE
+        },
+      },
+      {
+        name: "dataBool",
+        query: true,
+        regex:
+          "\\[\\s*(" + tokens.boolOp + ")\\s*(" + tokens.variable + ")\\s*\\]",
+        populate: function populate(selector, query, _ref13) {
+          var _ref14 = _slicedToArray(_ref13, 2),
+            boolOp = _ref14[0],
+            variable = _ref14[1];
+          query.checks.push({
+            type: Type.DATA_BOOL,
+            field: cleanMetaChars(variable),
+            operator: boolOp,
           });
-          right.checks.push({
-            type: Type.PARENT,
-            // type is swapped on right side queries
-            parent: _parent,
-            child: _child
-            // empty for now
+        },
+      },
+      {
+        name: "metaCompare",
+        query: true,
+        regex:
+          "\\[\\[\\s*(" +
+          tokens.meta +
+          ")\\s*(" +
+          tokens.comparatorOp +
+          ")\\s*(" +
+          tokens.number +
+          ")\\s*\\]\\]",
+        populate: function populate(selector, query, _ref15) {
+          var _ref16 = _slicedToArray(_ref15, 3),
+            meta2 = _ref16[0],
+            comparatorOp = _ref16[1],
+            number2 = _ref16[2];
+          query.checks.push({
+            type: Type.META_COMPARE,
+            field: cleanMetaChars(meta2),
+            operator: comparatorOp,
+            value: parseFloat(number2),
           });
-          replaceLastQuery(selector, left, compound);
-          selector.currentSubject = subject;
-          selector.compoundCount++;
-          return _child;
-        } else {
-          var _parent2 = newQuery();
-          var _child2 = newQuery();
-          var pcQChecks = [{
-            type: Type.PARENT,
-            parent: _parent2,
-            child: _child2
-          }];
-          _parent2.checks = query.checks;
-          query.checks = pcQChecks;
-          selector.compoundCount++;
-          return _child2;
-        }
-      }
-    }, {
-      name: "descendant",
-      separator: true,
-      regex: tokens.descendant,
-      populate: function populate(selector, query) {
-        if (selector.currentSubject == null) {
-          var ancChQuery = newQuery();
-          var descendant = newQuery();
-          var ancestor = selector[selector.length - 1];
-          ancChQuery.checks.push({
-            type: Type.DESCENDANT,
-            ancestor,
-            descendant
-          });
-          replaceLastQuery(selector, query, ancChQuery);
-          selector.compoundCount++;
-          return descendant;
-        } else if (selector.currentSubject === query) {
-          var compound = newQuery();
-          var left = selector[selector.length - 1];
-          var right = newQuery();
-          var subject = newQuery();
-          var _descendant = newQuery();
-          var _ancestor = newQuery();
-          compound.checks.push({
-            type: Type.COMPOUND_SPLIT,
-            left,
-            right,
-            subject
-          });
-          subject.checks = query.checks;
-          query.checks = [{
-            type: Type.TRUE
-          }];
-          _ancestor.checks.push({
-            type: Type.TRUE
-          });
-          right.checks.push({
-            type: Type.ANCESTOR,
-            // type is swapped on right side queries
-            ancestor: _ancestor,
-            descendant: _descendant
-            // empty for now
-          });
-          replaceLastQuery(selector, left, compound);
-          selector.currentSubject = subject;
-          selector.compoundCount++;
-          return _descendant;
-        } else {
-          var _ancestor2 = newQuery();
-          var _descendant2 = newQuery();
-          var adQChecks = [{
-            type: Type.ANCESTOR,
-            ancestor: _ancestor2,
-            descendant: _descendant2
-          }];
-          _ancestor2.checks = query.checks;
-          query.checks = adQChecks;
-          selector.compoundCount++;
-          return _descendant2;
-        }
-      }
-    }, {
-      name: "subject",
-      modifier: true,
-      regex: tokens.subject,
-      populate: function populate(selector, query) {
-        if (selector.currentSubject != null && selector.currentSubject !== query) {
-          warn("Redefinition of subject in selector `" + selector.toString() + "`");
-          return false;
-        }
-        selector.currentSubject = query;
-        var topQ = selector[selector.length - 1];
-        var topChk = topQ.checks[0];
-        var topType = topChk == null ? null : topChk.type;
-        if (topType === Type.DIRECTED_EDGE) {
-          topChk.type = Type.NODE_TARGET;
-        } else if (topType === Type.UNDIRECTED_EDGE) {
-          topChk.type = Type.NODE_NEIGHBOR;
-          topChk.node = topChk.nodes[1];
-          topChk.neighbor = topChk.nodes[0];
-          topChk.nodes = null;
-        }
-      }
-    }];
-    exprs.forEach(function(e) {
-      return e.regexObj = new RegExp("^" + e.regex);
+        },
+      },
+      {
+        name: "nextQuery",
+        separator: true,
+        regex: tokens.separator,
+        populate: function populate(selector, query) {
+          var currentSubject = selector.currentSubject;
+          var edgeCount = selector.edgeCount;
+          var compoundCount = selector.compoundCount;
+          var lastQ = selector[selector.length - 1];
+          if (currentSubject != null) {
+            lastQ.subject = currentSubject;
+            selector.currentSubject = null;
+          }
+          lastQ.edgeCount = edgeCount;
+          lastQ.compoundCount = compoundCount;
+          selector.edgeCount = 0;
+          selector.compoundCount = 0;
+          var nextQuery = (selector[selector.length++] = newQuery());
+          return nextQuery;
+        },
+      },
+      {
+        name: "directedEdge",
+        separator: true,
+        regex: tokens.directedEdge,
+        populate: function populate(selector, query) {
+          if (selector.currentSubject == null) {
+            var edgeQuery = newQuery();
+            var source = query;
+            var target = newQuery();
+            edgeQuery.checks.push({
+              type: Type.DIRECTED_EDGE,
+              source,
+              target,
+            });
+            replaceLastQuery(selector, query, edgeQuery);
+            selector.edgeCount++;
+            return target;
+          } else {
+            var srcTgtQ = newQuery();
+            var _source = query;
+            var _target = newQuery();
+            srcTgtQ.checks.push({
+              type: Type.NODE_SOURCE,
+              source: _source,
+              target: _target,
+            });
+            replaceLastQuery(selector, query, srcTgtQ);
+            selector.edgeCount++;
+            return _target;
+          }
+        },
+      },
+      {
+        name: "undirectedEdge",
+        separator: true,
+        regex: tokens.undirectedEdge,
+        populate: function populate(selector, query) {
+          if (selector.currentSubject == null) {
+            var edgeQuery = newQuery();
+            var source = query;
+            var target = newQuery();
+            edgeQuery.checks.push({
+              type: Type.UNDIRECTED_EDGE,
+              nodes: [source, target],
+            });
+            replaceLastQuery(selector, query, edgeQuery);
+            selector.edgeCount++;
+            return target;
+          } else {
+            var nhoodQ = newQuery();
+            var node = query;
+            var neighbor = newQuery();
+            nhoodQ.checks.push({
+              type: Type.NODE_NEIGHBOR,
+              node,
+              neighbor,
+            });
+            replaceLastQuery(selector, query, nhoodQ);
+            return neighbor;
+          }
+        },
+      },
+      {
+        name: "child",
+        separator: true,
+        regex: tokens.child,
+        populate: function populate(selector, query) {
+          if (selector.currentSubject == null) {
+            var parentChildQuery = newQuery();
+            var child = newQuery();
+            var parent = selector[selector.length - 1];
+            parentChildQuery.checks.push({
+              type: Type.CHILD,
+              parent,
+              child,
+            });
+            replaceLastQuery(selector, query, parentChildQuery);
+            selector.compoundCount++;
+            return child;
+          } else if (selector.currentSubject === query) {
+            var compound = newQuery();
+            var left = selector[selector.length - 1];
+            var right = newQuery();
+            var subject = newQuery();
+            var _child = newQuery();
+            var _parent = newQuery();
+            compound.checks.push({
+              type: Type.COMPOUND_SPLIT,
+              left,
+              right,
+              subject,
+            });
+            subject.checks = query.checks;
+            query.checks = [
+              {
+                type: Type.TRUE,
+              },
+            ];
+            _parent.checks.push({
+              type: Type.TRUE,
+            });
+            right.checks.push({
+              type: Type.PARENT,
+              // type is swapped on right side queries
+              parent: _parent,
+              child: _child,
+              // empty for now
+            });
+            replaceLastQuery(selector, left, compound);
+            selector.currentSubject = subject;
+            selector.compoundCount++;
+            return _child;
+          } else {
+            var _parent2 = newQuery();
+            var _child2 = newQuery();
+            var pcQChecks = [
+              {
+                type: Type.PARENT,
+                parent: _parent2,
+                child: _child2,
+              },
+            ];
+            _parent2.checks = query.checks;
+            query.checks = pcQChecks;
+            selector.compoundCount++;
+            return _child2;
+          }
+        },
+      },
+      {
+        name: "descendant",
+        separator: true,
+        regex: tokens.descendant,
+        populate: function populate(selector, query) {
+          if (selector.currentSubject == null) {
+            var ancChQuery = newQuery();
+            var descendant = newQuery();
+            var ancestor = selector[selector.length - 1];
+            ancChQuery.checks.push({
+              type: Type.DESCENDANT,
+              ancestor,
+              descendant,
+            });
+            replaceLastQuery(selector, query, ancChQuery);
+            selector.compoundCount++;
+            return descendant;
+          } else if (selector.currentSubject === query) {
+            var compound = newQuery();
+            var left = selector[selector.length - 1];
+            var right = newQuery();
+            var subject = newQuery();
+            var _descendant = newQuery();
+            var _ancestor = newQuery();
+            compound.checks.push({
+              type: Type.COMPOUND_SPLIT,
+              left,
+              right,
+              subject,
+            });
+            subject.checks = query.checks;
+            query.checks = [
+              {
+                type: Type.TRUE,
+              },
+            ];
+            _ancestor.checks.push({
+              type: Type.TRUE,
+            });
+            right.checks.push({
+              type: Type.ANCESTOR,
+              // type is swapped on right side queries
+              ancestor: _ancestor,
+              descendant: _descendant,
+              // empty for now
+            });
+            replaceLastQuery(selector, left, compound);
+            selector.currentSubject = subject;
+            selector.compoundCount++;
+            return _descendant;
+          } else {
+            var _ancestor2 = newQuery();
+            var _descendant2 = newQuery();
+            var adQChecks = [
+              {
+                type: Type.ANCESTOR,
+                ancestor: _ancestor2,
+                descendant: _descendant2,
+              },
+            ];
+            _ancestor2.checks = query.checks;
+            query.checks = adQChecks;
+            selector.compoundCount++;
+            return _descendant2;
+          }
+        },
+      },
+      {
+        name: "subject",
+        modifier: true,
+        regex: tokens.subject,
+        populate: function populate(selector, query) {
+          if (
+            selector.currentSubject != null &&
+            selector.currentSubject !== query
+          ) {
+            warn(
+              "Redefinition of subject in selector `" +
+                selector.toString() +
+                "`",
+            );
+            return false;
+          }
+          selector.currentSubject = query;
+          var topQ = selector[selector.length - 1];
+          var topChk = topQ.checks[0];
+          var topType = topChk == null ? null : topChk.type;
+          if (topType === Type.DIRECTED_EDGE) {
+            topChk.type = Type.NODE_TARGET;
+          } else if (topType === Type.UNDIRECTED_EDGE) {
+            topChk.type = Type.NODE_NEIGHBOR;
+            topChk.node = topChk.nodes[1];
+            topChk.neighbor = topChk.nodes[0];
+            topChk.nodes = null;
+          }
+        },
+      },
+    ];
+    exprs.forEach(function (e) {
+      return (e.regexObj = new RegExp("^" + e.regex));
     });
     var consumeExpr = function consumeExpr2(remaining) {
       var expr;
@@ -7518,7 +8766,7 @@ var require_cytoscape_cjs = __commonJS({
         expr,
         match: match2,
         name,
-        remaining
+        remaining,
       };
     };
     var consumeWhitespace = function consumeWhitespace2(remaining) {
@@ -7531,11 +8779,11 @@ var require_cytoscape_cjs = __commonJS({
     };
     var parse = function parse2(selector) {
       var self2 = this;
-      var remaining = self2.inputText = selector;
-      var currentQuery = self2[0] = newQuery();
+      var remaining = (self2.inputText = selector);
+      var currentQuery = (self2[0] = newQuery());
       self2.length = 1;
       remaining = consumeWhitespace(remaining);
-      for (; ; ) {
+      for (;;) {
         var exprInfo = consumeExpr(remaining);
         if (exprInfo.expr == null) {
           warn("The selector `" + selector + "`is invalid");
@@ -7563,14 +8811,26 @@ var require_cytoscape_cjs = __commonJS({
       for (var i2 = 0; i2 < self2.length; i2++) {
         var q = self2[i2];
         if (q.compoundCount > 0 && q.edgeCount > 0) {
-          warn("The selector `" + selector + "` is invalid because it uses both a compound selector and an edge selector");
+          warn(
+            "The selector `" +
+              selector +
+              "` is invalid because it uses both a compound selector and an edge selector",
+          );
           return false;
         }
         if (q.edgeCount > 1) {
-          warn("The selector `" + selector + "` is invalid because it uses multiple edge selectors");
+          warn(
+            "The selector `" +
+              selector +
+              "` is invalid because it uses multiple edge selectors",
+          );
           return false;
         } else if (q.edgeCount === 1) {
-          warn("The selector `" + selector + "` is deprecated.  Edge selectors do not take effect on changes to source and target nodes after an edge is added, for performance reasons.  Use a class or data selector on edges instead, updating the class or data of an edge when your app detects a change in source or target nodes.");
+          warn(
+            "The selector `" +
+              selector +
+              "` is deprecated.  Edge selectors do not take effect on changes to source and target nodes after an edge is added, for performance reasons.  Use a class or data selector on edges instead, updating the class or data of an edge when your app detects a change in source or target nodes.",
+          );
         }
       }
       return true;
@@ -7597,18 +8857,21 @@ var require_cytoscape_cjs = __commonJS({
         return " " + val + " ";
       };
       var checkToString = function checkToString2(check, subject) {
-        var type = check.type, value = check.value;
+        var type = check.type,
+          value = check.value;
         switch (type) {
           case Type.GROUP: {
             var group = clean(value);
             return group.substring(0, group.length - 1);
           }
           case Type.DATA_COMPARE: {
-            var field = check.field, operator = check.operator;
+            var field = check.field,
+              operator = check.operator;
             return "[" + field + space(clean(operator)) + cleanVal(value) + "]";
           }
           case Type.DATA_BOOL: {
-            var _operator = check.operator, _field = check.field;
+            var _operator = check.operator,
+              _field = check.field;
             return "[" + clean(_operator) + _field + "]";
           }
           case Type.DATA_EXIST: {
@@ -7616,8 +8879,11 @@ var require_cytoscape_cjs = __commonJS({
             return "[" + _field2 + "]";
           }
           case Type.META_COMPARE: {
-            var _operator2 = check.operator, _field3 = check.field;
-            return "[[" + _field3 + space(clean(_operator2)) + cleanVal(value) + "]]";
+            var _operator2 = check.operator,
+              _field3 = check.field;
+            return (
+              "[[" + _field3 + space(clean(_operator2)) + cleanVal(value) + "]]"
+            );
           }
           case Type.STATE: {
             return value;
@@ -7630,11 +8896,19 @@ var require_cytoscape_cjs = __commonJS({
           }
           case Type.PARENT:
           case Type.CHILD: {
-            return queryToString(check.parent, subject) + space(">") + queryToString(check.child, subject);
+            return (
+              queryToString(check.parent, subject) +
+              space(">") +
+              queryToString(check.child, subject)
+            );
           }
           case Type.ANCESTOR:
           case Type.DESCENDANT: {
-            return queryToString(check.ancestor, subject) + " " + queryToString(check.descendant, subject);
+            return (
+              queryToString(check.ancestor, subject) +
+              " " +
+              queryToString(check.descendant, subject)
+            );
           }
           case Type.COMPOUND_SPLIT: {
             var lhs = queryToString(check.left, subject);
@@ -7648,8 +8922,12 @@ var require_cytoscape_cjs = __commonJS({
         }
       };
       var queryToString = function queryToString2(query2, subject) {
-        return query2.checks.reduce(function(str2, chk, i3) {
-          return str2 + (subject === query2 && i3 === 0 ? "$" : "") + checkToString(chk, subject);
+        return query2.checks.reduce(function (str2, chk, i3) {
+          return (
+            str2 +
+            (subject === query2 && i3 === 0 ? "$" : "") +
+            checkToString(chk, subject)
+          );
         }, "");
       };
       var str = "";
@@ -7665,7 +8943,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var parse$1 = {
       parse,
-      toString
+      toString,
     };
     var valCmp = function valCmp2(fieldVal, operator, value) {
       var matches2;
@@ -7697,7 +8975,8 @@ var require_cytoscape_cjs = __commonJS({
           matches2 = fieldStr.indexOf(valStr) >= 0;
           break;
         case "$=":
-          matches2 = fieldStr.indexOf(valStr, fieldStr.length - valStr.length) >= 0;
+          matches2 =
+            fieldStr.indexOf(valStr, fieldStr.length - valStr.length) >= 0;
           break;
         case "^=":
           matches2 = fieldStr.indexOf(valStr) === 0;
@@ -7751,104 +9030,145 @@ var require_cytoscape_cjs = __commonJS({
     };
     var match = [];
     var matches$1 = function matches2(query, ele) {
-      return query.checks.every(function(chk) {
+      return query.checks.every(function (chk) {
         return match[chk.type](chk, ele);
       });
     };
-    match[Type.GROUP] = function(check, ele) {
+    match[Type.GROUP] = function (check, ele) {
       var group = check.value;
       return group === "*" || group === ele.group();
     };
-    match[Type.STATE] = function(check, ele) {
+    match[Type.STATE] = function (check, ele) {
       var stateSelector = check.value;
       return stateSelectorMatches(stateSelector, ele);
     };
-    match[Type.ID] = function(check, ele) {
+    match[Type.ID] = function (check, ele) {
       var id = check.value;
       return ele.id() === id;
     };
-    match[Type.CLASS] = function(check, ele) {
+    match[Type.CLASS] = function (check, ele) {
       var cls = check.value;
       return ele.hasClass(cls);
     };
-    match[Type.META_COMPARE] = function(check, ele) {
-      var field = check.field, operator = check.operator, value = check.value;
+    match[Type.META_COMPARE] = function (check, ele) {
+      var field = check.field,
+        operator = check.operator,
+        value = check.value;
       return valCmp(meta(ele, field), operator, value);
     };
-    match[Type.DATA_COMPARE] = function(check, ele) {
-      var field = check.field, operator = check.operator, value = check.value;
+    match[Type.DATA_COMPARE] = function (check, ele) {
+      var field = check.field,
+        operator = check.operator,
+        value = check.value;
       return valCmp(data$1(ele, field), operator, value);
     };
-    match[Type.DATA_BOOL] = function(check, ele) {
-      var field = check.field, operator = check.operator;
+    match[Type.DATA_BOOL] = function (check, ele) {
+      var field = check.field,
+        operator = check.operator;
       return boolCmp(data$1(ele, field), operator);
     };
-    match[Type.DATA_EXIST] = function(check, ele) {
+    match[Type.DATA_EXIST] = function (check, ele) {
       var field = check.field;
       check.operator;
       return existCmp(data$1(ele, field));
     };
-    match[Type.UNDIRECTED_EDGE] = function(check, ele) {
+    match[Type.UNDIRECTED_EDGE] = function (check, ele) {
       var qA = check.nodes[0];
       var qB = check.nodes[1];
       var src = ele.source();
       var tgt = ele.target();
-      return matches$1(qA, src) && matches$1(qB, tgt) || matches$1(qB, src) && matches$1(qA, tgt);
+      return (
+        (matches$1(qA, src) && matches$1(qB, tgt)) ||
+        (matches$1(qB, src) && matches$1(qA, tgt))
+      );
     };
-    match[Type.NODE_NEIGHBOR] = function(check, ele) {
-      return matches$1(check.node, ele) && ele.neighborhood().some(function(n) {
-        return n.isNode() && matches$1(check.neighbor, n);
-      });
+    match[Type.NODE_NEIGHBOR] = function (check, ele) {
+      return (
+        matches$1(check.node, ele) &&
+        ele.neighborhood().some(function (n) {
+          return n.isNode() && matches$1(check.neighbor, n);
+        })
+      );
     };
-    match[Type.DIRECTED_EDGE] = function(check, ele) {
-      return matches$1(check.source, ele.source()) && matches$1(check.target, ele.target());
+    match[Type.DIRECTED_EDGE] = function (check, ele) {
+      return (
+        matches$1(check.source, ele.source()) &&
+        matches$1(check.target, ele.target())
+      );
     };
-    match[Type.NODE_SOURCE] = function(check, ele) {
-      return matches$1(check.source, ele) && ele.outgoers().some(function(n) {
-        return n.isNode() && matches$1(check.target, n);
-      });
+    match[Type.NODE_SOURCE] = function (check, ele) {
+      return (
+        matches$1(check.source, ele) &&
+        ele.outgoers().some(function (n) {
+          return n.isNode() && matches$1(check.target, n);
+        })
+      );
     };
-    match[Type.NODE_TARGET] = function(check, ele) {
-      return matches$1(check.target, ele) && ele.incomers().some(function(n) {
-        return n.isNode() && matches$1(check.source, n);
-      });
+    match[Type.NODE_TARGET] = function (check, ele) {
+      return (
+        matches$1(check.target, ele) &&
+        ele.incomers().some(function (n) {
+          return n.isNode() && matches$1(check.source, n);
+        })
+      );
     };
-    match[Type.CHILD] = function(check, ele) {
-      return matches$1(check.child, ele) && matches$1(check.parent, ele.parent());
+    match[Type.CHILD] = function (check, ele) {
+      return (
+        matches$1(check.child, ele) && matches$1(check.parent, ele.parent())
+      );
     };
-    match[Type.PARENT] = function(check, ele) {
-      return matches$1(check.parent, ele) && ele.children().some(function(c) {
-        return matches$1(check.child, c);
-      });
+    match[Type.PARENT] = function (check, ele) {
+      return (
+        matches$1(check.parent, ele) &&
+        ele.children().some(function (c) {
+          return matches$1(check.child, c);
+        })
+      );
     };
-    match[Type.DESCENDANT] = function(check, ele) {
-      return matches$1(check.descendant, ele) && ele.ancestors().some(function(a) {
-        return matches$1(check.ancestor, a);
-      });
+    match[Type.DESCENDANT] = function (check, ele) {
+      return (
+        matches$1(check.descendant, ele) &&
+        ele.ancestors().some(function (a) {
+          return matches$1(check.ancestor, a);
+        })
+      );
     };
-    match[Type.ANCESTOR] = function(check, ele) {
-      return matches$1(check.ancestor, ele) && ele.descendants().some(function(d) {
-        return matches$1(check.descendant, d);
-      });
+    match[Type.ANCESTOR] = function (check, ele) {
+      return (
+        matches$1(check.ancestor, ele) &&
+        ele.descendants().some(function (d) {
+          return matches$1(check.descendant, d);
+        })
+      );
     };
-    match[Type.COMPOUND_SPLIT] = function(check, ele) {
-      return matches$1(check.subject, ele) && matches$1(check.left, ele) && matches$1(check.right, ele);
+    match[Type.COMPOUND_SPLIT] = function (check, ele) {
+      return (
+        matches$1(check.subject, ele) &&
+        matches$1(check.left, ele) &&
+        matches$1(check.right, ele)
+      );
     };
-    match[Type.TRUE] = function() {
+    match[Type.TRUE] = function () {
       return true;
     };
-    match[Type.COLLECTION] = function(check, ele) {
+    match[Type.COLLECTION] = function (check, ele) {
       var collection2 = check.value;
       return collection2.has(ele);
     };
-    match[Type.FILTER] = function(check, ele) {
+    match[Type.FILTER] = function (check, ele) {
       var filter2 = check.value;
       return filter2(ele);
     };
     var filter = function filter2(collection2) {
       var self2 = this;
-      if (self2.length === 1 && self2[0].checks.length === 1 && self2[0].checks[0].type === Type.ID) {
-        return collection2.getElementById(self2[0].checks[0].value).collection();
+      if (
+        self2.length === 1 &&
+        self2[0].checks.length === 1 &&
+        self2[0].checks[0].type === Type.ID
+      ) {
+        return collection2
+          .getElementById(self2[0].checks[0].value)
+          .collection();
       }
       var selectorFunction = function selectorFunction2(element2) {
         for (var j = 0; j < self2.length; j++) {
@@ -7878,7 +9198,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     var matching = {
       matches,
-      filter
+      filter,
     };
     var Selector = function Selector2(selector) {
       this.inputText = selector;
@@ -7886,21 +9206,24 @@ var require_cytoscape_cjs = __commonJS({
       this.compoundCount = 0;
       this.edgeCount = 0;
       this.length = 0;
-      if (selector == null || string(selector) && selector.match(/^\s*$/))
-        ;
+      if (selector == null || (string(selector) && selector.match(/^\s*$/)));
       else if (elementOrCollection(selector)) {
         this.addQuery({
-          checks: [{
-            type: Type.COLLECTION,
-            value: selector.collection()
-          }]
+          checks: [
+            {
+              type: Type.COLLECTION,
+              value: selector.collection(),
+            },
+          ],
         });
       } else if (fn$6(selector)) {
         this.addQuery({
-          checks: [{
-            type: Type.FILTER,
-            value: selector
-          }]
+          checks: [
+            {
+              type: Type.FILTER,
+              value: selector,
+            },
+          ],
         });
       } else if (string(selector)) {
         if (!this.parse(selector)) {
@@ -7911,41 +9234,45 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var selfn = Selector.prototype;
-    [parse$1, matching].forEach(function(p2) {
+    [parse$1, matching].forEach(function (p2) {
       return extend(selfn, p2);
     });
-    selfn.text = function() {
+    selfn.text = function () {
       return this.inputText;
     };
-    selfn.size = function() {
+    selfn.size = function () {
       return this.length;
     };
-    selfn.eq = function(i2) {
+    selfn.eq = function (i2) {
       return this[i2];
     };
-    selfn.sameText = function(otherSel) {
-      return !this.invalid && !otherSel.invalid && this.text() === otherSel.text();
+    selfn.sameText = function (otherSel) {
+      return (
+        !this.invalid && !otherSel.invalid && this.text() === otherSel.text()
+      );
     };
-    selfn.addQuery = function(q) {
+    selfn.addQuery = function (q) {
       this[this.length++] = q;
     };
     selfn.selector = selfn.toString;
     var elesfn$g = {
       allAre: function allAre(selector) {
         var selObj = new Selector(selector);
-        return this.every(function(ele) {
+        return this.every(function (ele) {
           return selObj.matches(ele);
         });
       },
       is: function is(selector) {
         var selObj = new Selector(selector);
-        return this.some(function(ele) {
+        return this.some(function (ele) {
           return selObj.matches(ele);
         });
       },
       some: function some(fn2, thisArg) {
         for (var i2 = 0; i2 < this.length; i2++) {
-          var ret = !thisArg ? fn2(this[i2], i2, this) : fn2.apply(thisArg, [this[i2], i2, this]);
+          var ret = !thisArg
+            ? fn2(this[i2], i2, this)
+            : fn2.apply(thisArg, [this[i2], i2, this]);
           if (ret) {
             return true;
           }
@@ -7954,7 +9281,9 @@ var require_cytoscape_cjs = __commonJS({
       },
       every: function every(fn2, thisArg) {
         for (var i2 = 0; i2 < this.length; i2++) {
-          var ret = !thisArg ? fn2(this[i2], i2, this) : fn2.apply(thisArg, [this[i2], i2, this]);
+          var ret = !thisArg
+            ? fn2(this[i2], i2, this)
+            : fn2.apply(thisArg, [this[i2], i2, this]);
           if (!ret) {
             return false;
           }
@@ -7974,30 +9303,30 @@ var require_cytoscape_cjs = __commonJS({
         if (thisLength === 1) {
           return this[0] === collection2[0];
         }
-        return this.every(function(ele) {
+        return this.every(function (ele) {
           return collection2.hasElementWithId(ele.id());
         });
       },
       anySame: function anySame(collection2) {
         collection2 = this.cy().collection(collection2);
-        return this.some(function(ele) {
+        return this.some(function (ele) {
           return collection2.hasElementWithId(ele.id());
         });
       },
       allAreNeighbors: function allAreNeighbors(collection2) {
         collection2 = this.cy().collection(collection2);
         var nhood = this.neighborhood();
-        return collection2.every(function(ele) {
+        return collection2.every(function (ele) {
           return nhood.hasElementWithId(ele.id());
         });
       },
       contains: function contains(collection2) {
         collection2 = this.cy().collection(collection2);
         var self2 = this;
-        return collection2.every(function(ele) {
+        return collection2.every(function (ele) {
           return self2.hasElementWithId(ele.id());
         });
-      }
+      },
     };
     elesfn$g.allAreNeighbours = elesfn$g.allAreNeighbors;
     elesfn$g.has = elesfn$g.contains;
@@ -8009,19 +9338,22 @@ var require_cytoscape_cjs = __commonJS({
         var key;
         if (selectorOrEles == null) {
           key = "";
-        } else if (elementOrCollection(selectorOrEles) && selectorOrEles.length === 1) {
+        } else if (
+          elementOrCollection(selectorOrEles) &&
+          selectorOrEles.length === 1
+        ) {
           key = selectorOrEles.id();
         }
         if (eles.length === 1 && key) {
           var _p = eles[0]._private;
-          var tch = _p.traversalCache = _p.traversalCache || {};
-          var ch = tch[name] = tch[name] || [];
+          var tch = (_p.traversalCache = _p.traversalCache || {});
+          var ch = (tch[name] = tch[name] || []);
           var hash = hashString(key);
           var cacheHit = ch[hash];
           if (cacheHit) {
             return cacheHit;
           } else {
-            return ch[hash] = fn2.call(eles, arg1, arg2, arg3, arg4);
+            return (ch[hash] = fn2.call(eles, arg1, arg2, arg3, arg4));
           }
         } else {
           return fn2.call(eles, arg1, arg2, arg3, arg4);
@@ -8069,16 +9401,16 @@ var require_cytoscape_cjs = __commonJS({
         return ancestors.filter(selector);
       },
       orphans: function orphans(selector) {
-        return this.stdFilter(function(ele) {
+        return this.stdFilter(function (ele) {
           return ele.isOrphan();
         }).filter(selector);
       },
       nonorphans: function nonorphans(selector) {
-        return this.stdFilter(function(ele) {
+        return this.stdFilter(function (ele) {
           return ele.isChild();
         }).filter(selector);
       },
-      children: cache(function(selector) {
+      children: cache(function (selector) {
         var children = [];
         for (var i2 = 0; i2 < this.length; i2++) {
           var ele = this[i2];
@@ -8129,7 +9461,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         add(this.children());
         return this.spawn(elements, true).filter(selector);
-      }
+      },
     };
     function forEachCompound(eles, fn2, includeSelf, recursiveStep) {
       var q = [];
@@ -8165,8 +9497,9 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     }
-    elesfn$f.forEachDown = function(fn2) {
-      var includeSelf = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+    elesfn$f.forEachDown = function (fn2) {
+      var includeSelf =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
       return forEachCompound(this, fn2, includeSelf, addChildren);
     };
     function addParent(q, did, ele) {
@@ -8177,16 +9510,18 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     }
-    elesfn$f.forEachUp = function(fn2) {
-      var includeSelf = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+    elesfn$f.forEachUp = function (fn2) {
+      var includeSelf =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
       return forEachCompound(this, fn2, includeSelf, addParent);
     };
     function addParentAndChildren(q, did, ele) {
       addParent(q, did, ele);
       addChildren(q, did, ele);
     }
-    elesfn$f.forEachUpAndDown = function(fn2) {
-      var includeSelf = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+    elesfn$f.forEachUpAndDown = function (fn2) {
+      var includeSelf =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
       return forEachCompound(this, fn2, includeSelf, addParentAndChildren);
     };
     elesfn$f.ancestors = elesfn$f.parents;
@@ -8203,12 +9538,12 @@ var require_cytoscape_cjs = __commonJS({
         triggerFnName: "trigger",
         allowGetting: true,
         immutableKeys: {
-          "id": true,
-          "source": true,
-          "target": true,
-          "parent": true
+          id: true,
+          source: true,
+          target: true,
+          parent: true,
         },
-        updateStyle: true
+        updateStyle: true,
       }),
       removeData: define2.removeData({
         field: "data",
@@ -8216,12 +9551,12 @@ var require_cytoscape_cjs = __commonJS({
         triggerFnName: "trigger",
         triggerEvent: true,
         immutableKeys: {
-          "id": true,
-          "source": true,
-          "target": true,
-          "parent": true
+          id: true,
+          source: true,
+          target: true,
+          parent: true,
         },
-        updateStyle: true
+        updateStyle: true,
       }),
       scratch: define2.data({
         field: "scratch",
@@ -8232,39 +9567,39 @@ var require_cytoscape_cjs = __commonJS({
         settingTriggersEvent: true,
         triggerFnName: "trigger",
         allowGetting: true,
-        updateStyle: true
+        updateStyle: true,
       }),
       removeScratch: define2.removeData({
         field: "scratch",
         event: "scratch",
         triggerFnName: "trigger",
         triggerEvent: true,
-        updateStyle: true
+        updateStyle: true,
       }),
       rscratch: define2.data({
         field: "rscratch",
         allowBinding: false,
         allowSetting: true,
         settingTriggersEvent: false,
-        allowGetting: true
+        allowGetting: true,
       }),
       removeRscratch: define2.removeData({
         field: "rscratch",
-        triggerEvent: false
+        triggerEvent: false,
       }),
       id: function id() {
         var ele = this[0];
         if (ele) {
           return ele._private.data.id;
         }
-      }
+      },
     };
     fn$5.attr = fn$5.data;
     fn$5.removeAttr = fn$5.removeData;
     var data = elesfn$e;
     var elesfn$d = {};
     function defineDegreeFunction(callback) {
-      return function(includeLoops) {
+      return function (includeLoops) {
         var self2 = this;
         if (includeLoops === void 0) {
           includeLoops = true;
@@ -8290,30 +9625,30 @@ var require_cytoscape_cjs = __commonJS({
       };
     }
     extend(elesfn$d, {
-      degree: defineDegreeFunction(function(node, edge) {
+      degree: defineDegreeFunction(function (node, edge) {
         if (edge.source().same(edge.target())) {
           return 2;
         } else {
           return 1;
         }
       }),
-      indegree: defineDegreeFunction(function(node, edge) {
+      indegree: defineDegreeFunction(function (node, edge) {
         if (edge.target().same(node)) {
           return 1;
         } else {
           return 0;
         }
       }),
-      outdegree: defineDegreeFunction(function(node, edge) {
+      outdegree: defineDegreeFunction(function (node, edge) {
         if (edge.source().same(node)) {
           return 1;
         } else {
           return 0;
         }
-      })
+      }),
     });
     function defineDegreeBoundsFunction(degreeFn, callback) {
-      return function(includeLoops) {
+      return function (includeLoops) {
         var ret;
         var nodes = this.nodes();
         for (var i2 = 0; i2 < nodes.length; i2++) {
@@ -8327,24 +9662,36 @@ var require_cytoscape_cjs = __commonJS({
       };
     }
     extend(elesfn$d, {
-      minDegree: defineDegreeBoundsFunction("degree", function(degree, min2) {
+      minDegree: defineDegreeBoundsFunction("degree", function (degree, min2) {
         return degree < min2;
       }),
-      maxDegree: defineDegreeBoundsFunction("degree", function(degree, max2) {
+      maxDegree: defineDegreeBoundsFunction("degree", function (degree, max2) {
         return degree > max2;
       }),
-      minIndegree: defineDegreeBoundsFunction("indegree", function(degree, min2) {
-        return degree < min2;
-      }),
-      maxIndegree: defineDegreeBoundsFunction("indegree", function(degree, max2) {
-        return degree > max2;
-      }),
-      minOutdegree: defineDegreeBoundsFunction("outdegree", function(degree, min2) {
-        return degree < min2;
-      }),
-      maxOutdegree: defineDegreeBoundsFunction("outdegree", function(degree, max2) {
-        return degree > max2;
-      })
+      minIndegree: defineDegreeBoundsFunction(
+        "indegree",
+        function (degree, min2) {
+          return degree < min2;
+        },
+      ),
+      maxIndegree: defineDegreeBoundsFunction(
+        "indegree",
+        function (degree, max2) {
+          return degree > max2;
+        },
+      ),
+      minOutdegree: defineDegreeBoundsFunction(
+        "outdegree",
+        function (degree, min2) {
+          return degree < min2;
+        },
+      ),
+      maxOutdegree: defineDegreeBoundsFunction(
+        "outdegree",
+        function (degree, max2) {
+          return degree > max2;
+        },
+      ),
     });
     extend(elesfn$d, {
       totalDegree: function totalDegree(includeLoops) {
@@ -8354,7 +9701,7 @@ var require_cytoscape_cjs = __commonJS({
           total += nodes[i2].degree(includeLoops);
         }
         return total;
-      }
+      },
     });
     var fn$4;
     var elesfn$c;
@@ -8365,7 +9712,7 @@ var require_cytoscape_cjs = __commonJS({
           var oldPos = ele._private.position;
           var delta = {
             x: newPos.x != null ? newPos.x - oldPos.x : 0,
-            y: newPos.y != null ? newPos.y - oldPos.y : 0
+            y: newPos.y != null ? newPos.y - oldPos.y : 0,
           };
           if (ele.isParent() && !(delta.x === 0 && delta.y === 0)) {
             ele.children().shift(delta, silent);
@@ -8395,23 +9742,25 @@ var require_cytoscape_cjs = __commonJS({
       },
       canSet: function canSet(ele) {
         return !ele.locked();
-      }
+      },
     };
     fn$4 = elesfn$c = {
       position: define2.data(positionDef),
       // position but no notification to renderer
-      silentPosition: define2.data(extend({}, positionDef, {
-        allowBinding: false,
-        allowSetting: true,
-        settingTriggersEvent: false,
-        allowGetting: false,
-        beforeSet: function beforeSet(eles, newPos) {
-          beforePositionSet(eles, newPos, true);
-        },
-        onSet: function onSet(eles) {
-          eles.dirtyCompoundBoundsCache();
-        }
-      })),
+      silentPosition: define2.data(
+        extend({}, positionDef, {
+          allowBinding: false,
+          allowSetting: true,
+          settingTriggersEvent: false,
+          allowGetting: false,
+          beforeSet: function beforeSet(eles, newPos) {
+            beforePositionSet(eles, newPos, true);
+          },
+          onSet: function onSet(eles) {
+            eles.dirtyCompoundBoundsCache();
+          },
+        }),
+      ),
       positions: function positions(pos, silent) {
         if (plainObject(pos)) {
           if (silent) {
@@ -8426,7 +9775,7 @@ var require_cytoscape_cjs = __commonJS({
           for (var i2 = 0; i2 < this.length; i2++) {
             var ele = this[i2];
             var _pos = void 0;
-            if (_pos = _fn(ele, i2)) {
+            if ((_pos = _fn(ele, i2))) {
               if (silent) {
                 ele.silentPosition(_pos);
               } else {
@@ -8446,13 +9795,13 @@ var require_cytoscape_cjs = __commonJS({
         if (plainObject(dim)) {
           delta = {
             x: number$1(dim.x) ? dim.x : 0,
-            y: number$1(dim.y) ? dim.y : 0
+            y: number$1(dim.y) ? dim.y : 0,
           };
           silent = val;
         } else if (string(dim) && number$1(val)) {
           delta = {
             x: 0,
-            y: 0
+            y: 0,
           };
           delta[dim] = val;
         }
@@ -8461,13 +9810,17 @@ var require_cytoscape_cjs = __commonJS({
           cy.startBatch();
           for (var i2 = 0; i2 < this.length; i2++) {
             var ele = this[i2];
-            if (cy.hasCompoundNodes() && ele.isChild() && ele.ancestors().anySame(this)) {
+            if (
+              cy.hasCompoundNodes() &&
+              ele.isChild() &&
+              ele.ancestors().anySame(this)
+            ) {
               continue;
             }
             var pos = ele.position();
             var newPos = {
               x: pos.x + delta.x,
-              y: pos.y + delta.y
+              y: pos.y + delta.y,
             };
             if (silent) {
               ele.silentPosition(newPos);
@@ -8494,7 +9847,7 @@ var require_cytoscape_cjs = __commonJS({
         var zoom = cy.zoom();
         var pan = cy.pan();
         var rpos = plainObject(dim) ? dim : void 0;
-        var setting = rpos !== void 0 || val !== void 0 && string(dim);
+        var setting = rpos !== void 0 || (val !== void 0 && string(dim));
         if (ele && ele.isNode()) {
           if (setting) {
             for (var i2 = 0; i2 < this.length; i2++) {
@@ -8524,7 +9877,7 @@ var require_cytoscape_cjs = __commonJS({
         var ele = this[0];
         var cy = this.cy();
         var ppos = plainObject(dim) ? dim : void 0;
-        var setting = ppos !== void 0 || val !== void 0 && string(dim);
+        var setting = ppos !== void 0 || (val !== void 0 && string(dim));
         var hasCompoundNodes = cy.hasCompoundNodes();
         if (ele && ele.isNode()) {
           if (setting) {
@@ -8536,16 +9889,18 @@ var require_cytoscape_cjs = __commonJS({
               if (hasParent) {
                 parent = parent[0];
               }
-              var origin = relativeToParent ? parent.position() : {
-                x: 0,
-                y: 0
-              };
+              var origin = relativeToParent
+                ? parent.position()
+                : {
+                    x: 0,
+                    y: 0,
+                  };
               if (val !== void 0) {
                 _ele2.position(dim, val + origin[dim]);
               } else if (ppos !== void 0) {
                 _ele2.position({
                   x: ppos.x + origin.x,
-                  y: ppos.y + origin.y
+                  y: ppos.y + origin.y,
                 });
               }
             }
@@ -8557,13 +9912,15 @@ var require_cytoscape_cjs = __commonJS({
             if (_hasParent) {
               _parent = _parent[0];
             }
-            var _origin = _relativeToParent ? _parent.position() : {
-              x: 0,
-              y: 0
-            };
+            var _origin = _relativeToParent
+              ? _parent.position()
+              : {
+                  x: 0,
+                  y: 0,
+                };
             ppos = {
               x: pos.x - _origin.x,
-              y: pos.y - _origin.y
+              y: pos.y - _origin.y,
             };
             if (dim === void 0) {
               return ppos;
@@ -8575,7 +9932,7 @@ var require_cytoscape_cjs = __commonJS({
           return void 0;
         }
         return this;
-      }
+      },
     };
     fn$4.modelPosition = fn$4.point = fn$4.position;
     fn$4.modelPositions = fn$4.points = fn$4.positions;
@@ -8585,7 +9942,7 @@ var require_cytoscape_cjs = __commonJS({
     var fn$3;
     var elesfn$b;
     fn$3 = elesfn$b = {};
-    elesfn$b.renderedBoundingBox = function(options) {
+    elesfn$b.renderedBoundingBox = function (options) {
       var bb = this.boundingBox(options);
       var cy = this.cy();
       var zoom = cy.zoom();
@@ -8600,16 +9957,17 @@ var require_cytoscape_cjs = __commonJS({
         y1,
         y2,
         w: x2 - x1,
-        h: y2 - y1
+        h: y2 - y1,
       };
     };
-    elesfn$b.dirtyCompoundBoundsCache = function() {
-      var silent = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
+    elesfn$b.dirtyCompoundBoundsCache = function () {
+      var silent =
+        arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
       var cy = this.cy();
       if (!cy.styleEnabled() || !cy.hasCompoundNodes()) {
         return this;
       }
-      this.forEachUp(function(ele) {
+      this.forEachUp(function (ele) {
         if (ele.isParent()) {
           var _p = ele._private;
           _p.compoundBoundsClean = false;
@@ -8621,8 +9979,9 @@ var require_cytoscape_cjs = __commonJS({
       });
       return this;
     };
-    elesfn$b.updateCompoundBounds = function() {
-      var force = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
+    elesfn$b.updateCompoundBounds = function () {
+      var force =
+        arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
       var cy = this.cy();
       if (!cy.styleEnabled() || !cy.hasCompoundNodes()) {
         return this;
@@ -8636,31 +9995,32 @@ var require_cytoscape_cjs = __commonJS({
         }
         var _p2 = parent._private;
         var children = parent.children();
-        var includeLabels = parent.pstyle("compound-sizing-wrt-labels").value === "include";
+        var includeLabels =
+          parent.pstyle("compound-sizing-wrt-labels").value === "include";
         var min2 = {
           width: {
             val: parent.pstyle("min-width").pfValue,
             left: parent.pstyle("min-width-bias-left"),
-            right: parent.pstyle("min-width-bias-right")
+            right: parent.pstyle("min-width-bias-right"),
           },
           height: {
             val: parent.pstyle("min-height").pfValue,
             top: parent.pstyle("min-height-bias-top"),
-            bottom: parent.pstyle("min-height-bias-bottom")
-          }
+            bottom: parent.pstyle("min-height-bias-bottom"),
+          },
         };
         var bb = children.boundingBox({
           includeLabels,
           includeOverlays: false,
           // updating the compound bounds happens outside of the regular
           // cache cycle (i.e. before fired events)
-          useCache: false
+          useCache: false,
         });
         var pos = _p2.position;
         if (bb.w === 0 || bb.h === 0) {
           bb = {
             w: parent.pstyle("width").pfValue,
-            h: parent.pstyle("height").pfValue
+            h: parent.pstyle("height").pfValue,
           };
           bb.x1 = pos.x - bb.w / 2;
           bb.x2 = pos.x + bb.w / 2;
@@ -8672,15 +10032,20 @@ var require_cytoscape_cjs = __commonJS({
           var biasComplementDiff = 0;
           var biasTotal = propBias + propBiasComplement;
           if (propDiff > 0 && biasTotal > 0) {
-            biasDiff = propBias / biasTotal * propDiff;
-            biasComplementDiff = propBiasComplement / biasTotal * propDiff;
+            biasDiff = (propBias / biasTotal) * propDiff;
+            biasComplementDiff = (propBiasComplement / biasTotal) * propDiff;
           }
           return {
             biasDiff,
-            biasComplementDiff
+            biasComplementDiff,
           };
         }
-        function computePaddingValues(width, height, paddingObject, relativeTo) {
+        function computePaddingValues(
+          width,
+          height,
+          paddingObject,
+          relativeTo,
+        ) {
           if (paddingObject.units === "%") {
             switch (relativeTo) {
               case "width":
@@ -8688,11 +10053,21 @@ var require_cytoscape_cjs = __commonJS({
               case "height":
                 return height > 0 ? paddingObject.pfValue * height : 0;
               case "average":
-                return width > 0 && height > 0 ? paddingObject.pfValue * (width + height) / 2 : 0;
+                return width > 0 && height > 0
+                  ? (paddingObject.pfValue * (width + height)) / 2
+                  : 0;
               case "min":
-                return width > 0 && height > 0 ? width > height ? paddingObject.pfValue * height : paddingObject.pfValue * width : 0;
+                return width > 0 && height > 0
+                  ? width > height
+                    ? paddingObject.pfValue * height
+                    : paddingObject.pfValue * width
+                  : 0;
               case "max":
-                return width > 0 && height > 0 ? width > height ? paddingObject.pfValue * width : paddingObject.pfValue * height : 0;
+                return width > 0 && height > 0
+                  ? width > height
+                    ? paddingObject.pfValue * width
+                    : paddingObject.pfValue * height
+                  : 0;
               default:
                 return 0;
             }
@@ -8704,27 +10079,40 @@ var require_cytoscape_cjs = __commonJS({
         }
         var leftVal = min2.width.left.value;
         if (min2.width.left.units === "px" && min2.width.val > 0) {
-          leftVal = leftVal * 100 / min2.width.val;
+          leftVal = (leftVal * 100) / min2.width.val;
         }
         var rightVal = min2.width.right.value;
         if (min2.width.right.units === "px" && min2.width.val > 0) {
-          rightVal = rightVal * 100 / min2.width.val;
+          rightVal = (rightVal * 100) / min2.width.val;
         }
         var topVal = min2.height.top.value;
         if (min2.height.top.units === "px" && min2.height.val > 0) {
-          topVal = topVal * 100 / min2.height.val;
+          topVal = (topVal * 100) / min2.height.val;
         }
         var bottomVal = min2.height.bottom.value;
         if (min2.height.bottom.units === "px" && min2.height.val > 0) {
-          bottomVal = bottomVal * 100 / min2.height.val;
+          bottomVal = (bottomVal * 100) / min2.height.val;
         }
-        var widthBiasDiffs = computeBiasValues(min2.width.val - bb.w, leftVal, rightVal);
+        var widthBiasDiffs = computeBiasValues(
+          min2.width.val - bb.w,
+          leftVal,
+          rightVal,
+        );
         var diffLeft = widthBiasDiffs.biasDiff;
         var diffRight = widthBiasDiffs.biasComplementDiff;
-        var heightBiasDiffs = computeBiasValues(min2.height.val - bb.h, topVal, bottomVal);
+        var heightBiasDiffs = computeBiasValues(
+          min2.height.val - bb.h,
+          topVal,
+          bottomVal,
+        );
         var diffTop = heightBiasDiffs.biasDiff;
         var diffBottom = heightBiasDiffs.biasComplementDiff;
-        _p2.autoPadding = computePaddingValues(bb.w, bb.h, parent.pstyle("padding"), parent.pstyle("padding-relative-to").value);
+        _p2.autoPadding = computePaddingValues(
+          bb.w,
+          bb.h,
+          parent.pstyle("padding"),
+          parent.pstyle("padding-relative-to").value,
+        );
         _p2.autoWidth = Math.max(bb.w, min2.width.val);
         pos.x = (-diffLeft + bb.x1 + bb.x2 + diffRight) / 2;
         _p2.autoHeight = Math.max(bb.h, min2.height.val);
@@ -8771,7 +10159,11 @@ var require_cytoscape_cjs = __commonJS({
     var prefixedProperty = function prefixedProperty2(obj, field, prefix) {
       return getPrefixedProperty(obj, field, prefix);
     };
-    var updateBoundsFromArrow = function updateBoundsFromArrow2(bounds2, ele, prefix) {
+    var updateBoundsFromArrow = function updateBoundsFromArrow2(
+      bounds2,
+      ele,
+      prefix,
+    ) {
       if (ele.cy().headless()) {
         return;
       }
@@ -8792,8 +10184,8 @@ var require_cytoscape_cjs = __commonJS({
           x = rstyle.midX;
           y = rstyle.midY;
         }
-        var bbs = _p.arrowBounds = _p.arrowBounds || {};
-        var bb = bbs[prefix] = bbs[prefix] || {};
+        var bbs = (_p.arrowBounds = _p.arrowBounds || {});
+        var bb = (bbs[prefix] = bbs[prefix] || {});
         bb.x1 = x - halfArW;
         bb.y1 = y - halfArW;
         bb.x2 = x + halfArW;
@@ -8804,7 +10196,11 @@ var require_cytoscape_cjs = __commonJS({
         updateBounds(bounds2, bb.x1, bb.y1, bb.x2, bb.y2);
       }
     };
-    var updateBoundsFromLabel = function updateBoundsFromLabel2(bounds2, ele, prefix) {
+    var updateBoundsFromLabel = function updateBoundsFromLabel2(
+      bounds2,
+      ele,
+      prefix,
+    ) {
       if (ele.cy().headless()) {
         return;
       }
@@ -8873,13 +10269,29 @@ var require_cytoscape_cjs = __commonJS({
               break;
           }
         }
-        lx1 += marginX - Math.max(outlineWidth, halfBorderWidth) - padding - marginOfError;
-        lx2 += marginX + Math.max(outlineWidth, halfBorderWidth) + padding + marginOfError;
-        ly1 += marginY - Math.max(outlineWidth, halfBorderWidth) - padding - marginOfError;
-        ly2 += marginY + Math.max(outlineWidth, halfBorderWidth) + padding + marginOfError;
+        lx1 +=
+          marginX -
+          Math.max(outlineWidth, halfBorderWidth) -
+          padding -
+          marginOfError;
+        lx2 +=
+          marginX +
+          Math.max(outlineWidth, halfBorderWidth) +
+          padding +
+          marginOfError;
+        ly1 +=
+          marginY -
+          Math.max(outlineWidth, halfBorderWidth) -
+          padding -
+          marginOfError;
+        ly2 +=
+          marginY +
+          Math.max(outlineWidth, halfBorderWidth) +
+          padding +
+          marginOfError;
         var bbPrefix = prefix || "main";
         var bbs = _p.labelBounds;
-        var bb = bbs[bbPrefix] = bbs[bbPrefix] || {};
+        var bb = (bbs[bbPrefix] = bbs[bbPrefix] || {});
         bb.x1 = lx1;
         bb.y1 = ly1;
         bb.x2 = lx2;
@@ -8889,7 +10301,9 @@ var require_cytoscape_cjs = __commonJS({
         var isAutorotate = isEdge && rotation.strValue === "autorotate";
         var isPfValue = rotation.pfValue != null && rotation.pfValue !== 0;
         if (isAutorotate || isPfValue) {
-          var theta = isAutorotate ? prefixedProperty(_p.rstyle, "labelAngle", prefix) : rotation.pfValue;
+          var theta = isAutorotate
+            ? prefixedProperty(_p.rstyle, "labelAngle", prefix)
+            : rotation.pfValue;
           var cos2 = Math.cos(theta);
           var sin2 = Math.sin(theta);
           var xo = (lx1 + lx2) / 2;
@@ -8917,7 +10331,7 @@ var require_cytoscape_cjs = __commonJS({
             y = y - yo;
             return {
               x: x * cos2 - y * sin2 + xo,
-              y: x * sin2 + y * cos2 + yo
+              y: x * sin2 + y * cos2 + yo,
             };
           };
           var px1y1 = rotate(lx1, ly1);
@@ -8930,7 +10344,7 @@ var require_cytoscape_cjs = __commonJS({
           ly2 = Math.max(px1y1.y, px1y2.y, px2y1.y, px2y2.y);
         }
         var bbPrefixRot = bbPrefix + "Rot";
-        var bbRot = bbs[bbPrefixRot] = bbs[bbPrefixRot] || {};
+        var bbRot = (bbs[bbPrefixRot] = bbs[bbPrefixRot] || {});
         bbRot.x1 = lx1;
         bbRot.y1 = ly1;
         bbRot.x2 = lx2;
@@ -8942,7 +10356,10 @@ var require_cytoscape_cjs = __commonJS({
       }
       return bounds2;
     };
-    var updateBoundsFromOutline = function updateBoundsFromOutline2(bounds2, ele) {
+    var updateBoundsFromOutline = function updateBoundsFromOutline2(
+      bounds2,
+      ele,
+    ) {
       if (ele.cy().headless()) {
         return;
       }
@@ -8959,7 +10376,9 @@ var require_cytoscape_cjs = __commonJS({
         if (["diamond", "pentagon", "round-triangle"].includes(nodeShape)) {
           scaleX = (bounds2.w + outlineSize * 2.4) / bounds2.w;
           yOffset = -outlineSize / 3.6;
-        } else if (["concave-hexagon", "rhomboid", "right-rhomboid"].includes(nodeShape)) {
+        } else if (
+          ["concave-hexagon", "rhomboid", "right-rhomboid"].includes(nodeShape)
+        ) {
           scaleX = (bounds2.w + outlineSize * 2.4) / bounds2.w;
         } else if (nodeShape === "star") {
           scaleX = (bounds2.w + outlineSize * 2.8) / bounds2.w;
@@ -8976,7 +10395,10 @@ var require_cytoscape_cjs = __commonJS({
         }
         var hDelta = bounds2.h * scaleY - bounds2.h;
         var wDelta = bounds2.w * scaleX - bounds2.w;
-        expandBoundingBoxSides(bounds2, [Math.ceil(hDelta / 2), Math.ceil(wDelta / 2)]);
+        expandBoundingBoxSides(bounds2, [
+          Math.ceil(hDelta / 2),
+          Math.ceil(wDelta / 2),
+        ]);
         if (xOffset != 0 || yOffset !== 0) {
           var oBounds = shiftBoundingBox(bounds2, xOffset, yOffset);
           updateBoundingBox(bounds2, oBounds);
@@ -8994,11 +10416,16 @@ var require_cytoscape_cjs = __commonJS({
       var ex1, ex2, ey1, ey2;
       var x, y;
       var rstyle = _p.rstyle;
-      var manualExpansion = isNode && styleEnabled ? ele.pstyle("bounds-expansion").pfValue : [0];
+      var manualExpansion =
+        isNode && styleEnabled ? ele.pstyle("bounds-expansion").pfValue : [0];
       var isDisplayed = function isDisplayed2(ele2) {
         return ele2.pstyle("display").value !== "none";
       };
-      var displayed = !styleEnabled || isDisplayed(ele) && (!isEdge || isDisplayed(ele.source()) && isDisplayed(ele.target()));
+      var displayed =
+        !styleEnabled ||
+        (isDisplayed(ele) &&
+          (!isEdge ||
+            (isDisplayed(ele.source()) && isDisplayed(ele.target()))));
       if (displayed) {
         var overlayOpacity = 0;
         var overlayPadding = 0;
@@ -9068,9 +10495,20 @@ var require_cytoscape_cjs = __commonJS({
                   ey1 = ey2;
                   ey2 = _temp;
                 }
-                updateBounds(bounds2, ex1 - wHalf, ey1 - wHalf, ex2 + wHalf, ey2 + wHalf);
+                updateBounds(
+                  bounds2,
+                  ex1 - wHalf,
+                  ey1 - wHalf,
+                  ex2 + wHalf,
+                  ey2 + wHalf,
+                );
               }
-            } else if (curveStyle === "bezier" || curveStyle === "unbundled-bezier" || curveStyle === "segments" || curveStyle === "taxi") {
+            } else if (
+              curveStyle === "bezier" ||
+              curveStyle === "unbundled-bezier" ||
+              curveStyle === "segments" ||
+              curveStyle === "taxi"
+            ) {
               var pts2;
               switch (curveStyle) {
                 case "bezier":
@@ -9130,10 +10568,16 @@ var require_cytoscape_cjs = __commonJS({
           if (ghost) {
             var gx = ele.pstyle("ghost-offset-x").pfValue;
             var gy = ele.pstyle("ghost-offset-y").pfValue;
-            updateBounds(bounds2, bounds2.x1 + gx, bounds2.y1 + gy, bounds2.x2 + gx, bounds2.y2 + gy);
+            updateBounds(
+              bounds2,
+              bounds2.x1 + gx,
+              bounds2.y1 + gy,
+              bounds2.x2 + gx,
+              bounds2.y2 + gy,
+            );
           }
         }
-        var bbBody = _p.bodyBounds = _p.bodyBounds || {};
+        var bbBody = (_p.bodyBounds = _p.bodyBounds || {});
         assignBoundingBox(bbBody, bounds2);
         expandBoundingBoxSides(bbBody, manualExpansion);
         expandBoundingBox(bbBody, 1);
@@ -9142,13 +10586,19 @@ var require_cytoscape_cjs = __commonJS({
           ex2 = bounds2.x2;
           ey1 = bounds2.y1;
           ey2 = bounds2.y2;
-          updateBounds(bounds2, ex1 - padding, ey1 - padding, ex2 + padding, ey2 + padding);
+          updateBounds(
+            bounds2,
+            ex1 - padding,
+            ey1 - padding,
+            ex2 + padding,
+            ey2 + padding,
+          );
         }
-        var bbOverlay = _p.overlayBounds = _p.overlayBounds || {};
+        var bbOverlay = (_p.overlayBounds = _p.overlayBounds || {});
         assignBoundingBox(bbOverlay, bounds2);
         expandBoundingBoxSides(bbOverlay, manualExpansion);
         expandBoundingBox(bbOverlay, 1);
-        var bbLabels = _p.labelBounds = _p.labelBounds || {};
+        var bbLabels = (_p.labelBounds = _p.labelBounds || {});
         if (bbLabels.all != null) {
           clearBoundingBox(bbLabels.all);
         } else {
@@ -9220,7 +10670,11 @@ var require_cytoscape_cjs = __commonJS({
       var isDirty = function isDirty2(ele2) {
         return ele2._private.bbCache == null || ele2._private.styleDirty;
       };
-      var needRecalc = !useCache || isDirty(ele) || isEdge && isDirty(ele.source()) || isDirty(ele.target());
+      var needRecalc =
+        !useCache ||
+        isDirty(ele) ||
+        (isEdge && isDirty(ele.source())) ||
+        isDirty(ele.target());
       if (needRecalc) {
         if (!isPosKeySame) {
           ele.recalculateRenderedStyle(useCache);
@@ -9234,7 +10688,7 @@ var require_cytoscape_cjs = __commonJS({
       if (!usingDefOpts) {
         var isNode = ele.isNode();
         bb = makeBoundingBox();
-        if (opts.includeNodes && isNode || opts.includeEdges && !isNode) {
+        if ((opts.includeNodes && isNode) || (opts.includeEdges && !isNode)) {
           if (opts.includeOverlays) {
             updateBoundsFromBox(bb, _p.overlayBounds);
           } else {
@@ -9242,7 +10696,10 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
         if (opts.includeLabels) {
-          if (opts.includeMainLabels && (!isEdge || opts.includeSourceLabels && opts.includeTargetLabels)) {
+          if (
+            opts.includeMainLabels &&
+            (!isEdge || (opts.includeSourceLabels && opts.includeTargetLabels))
+          ) {
             updateBoundsFromBox(bb, _p.labelBounds.all);
           } else {
             if (opts.includeMainLabels) {
@@ -9271,13 +10728,20 @@ var require_cytoscape_cjs = __commonJS({
       includeOverlays: true,
       includeUnderlays: true,
       includeOutlines: true,
-      useCache: true
+      useCache: true,
     };
     var defBbOptsKey = getKey(defBbOpts);
     var filledBbOpts = defaults$g(defBbOpts);
-    elesfn$b.boundingBox = function(options) {
+    elesfn$b.boundingBox = function (options) {
       var bounds2;
-      if (this.length === 1 && this[0]._private.bbCache != null && !this[0]._private.styleDirty && (options === void 0 || options.useCache === void 0 || options.useCache === true)) {
+      if (
+        this.length === 1 &&
+        this[0]._private.bbCache != null &&
+        !this[0]._private.styleDirty &&
+        (options === void 0 ||
+          options.useCache === void 0 ||
+          options.useCache === true)
+      ) {
         if (options === void 0) {
           options = defBbOpts;
         } else {
@@ -9315,7 +10779,7 @@ var require_cytoscape_cjs = __commonJS({
       bounds2.h = noninf(bounds2.y2 - bounds2.y1);
       return bounds2;
     };
-    elesfn$b.dirtyBoundingBoxCache = function() {
+    elesfn$b.dirtyBoundingBoxCache = function () {
       for (var i2 = 0; i2 < this.length; i2++) {
         var _p = this[i2]._private;
         _p.bbCache = null;
@@ -9337,13 +10801,13 @@ var require_cytoscape_cjs = __commonJS({
       this.emitAndNotify("bounds");
       return this;
     };
-    elesfn$b.boundingBoxAt = function(fn2) {
+    elesfn$b.boundingBoxAt = function (fn2) {
       var nodes = this.nodes();
       var cy = this.cy();
       var hasCompoundNodes = cy.hasCompoundNodes();
       var parents = cy.collection();
       if (hasCompoundNodes) {
-        parents = nodes.filter(function(node) {
+        parents = nodes.filter(function (node) {
           return node.isParent();
         });
         nodes = nodes.not(parents);
@@ -9355,7 +10819,7 @@ var require_cytoscape_cjs = __commonJS({
         };
       }
       var storeOldPos = function storeOldPos2(node, i2) {
-        return node._private.bbAtOldPos = fn2(node, i2);
+        return (node._private.bbAtOldPos = fn2(node, i2));
       };
       var getOldPos = function getOldPos2(node) {
         return node._private.bbAtOldPos;
@@ -9367,9 +10831,11 @@ var require_cytoscape_cjs = __commonJS({
         parents.dirtyBoundingBoxCache();
         parents.updateCompoundBounds(true);
       }
-      var bb = copyBoundingBox(this.boundingBox({
-        useCache: false
-      }));
+      var bb = copyBoundingBox(
+        this.boundingBox({
+          useCache: false,
+        }),
+      );
       nodes.silentPositions(getOldPos);
       if (hasCompoundNodes) {
         parents.dirtyCompoundBoundsCache();
@@ -9438,21 +10904,22 @@ var require_cytoscape_cjs = __commonJS({
           return d * this.cy().zoom();
         }
       };
-      fn$2["rendered" + opts.uppercaseOuterName] = function renderedOuterDimImpl() {
-        var ele = this[0];
-        if (ele) {
-          var od = ele[opts.outerName]();
-          return od * this.cy().zoom();
-        }
-      };
+      fn$2["rendered" + opts.uppercaseOuterName] =
+        function renderedOuterDimImpl() {
+          var ele = this[0];
+          if (ele) {
+            var od = ele[opts.outerName]();
+            return od * this.cy().zoom();
+          }
+        };
     };
     defineDimFns({
-      name: "width"
+      name: "width",
     });
     defineDimFns({
-      name: "height"
+      name: "height",
     });
-    elesfn$a.padding = function() {
+    elesfn$a.padding = function () {
       var ele = this[0];
       var _p = ele._private;
       if (ele.isParent()) {
@@ -9466,11 +10933,11 @@ var require_cytoscape_cjs = __commonJS({
         return ele.pstyle("padding").pfValue;
       }
     };
-    elesfn$a.paddedHeight = function() {
+    elesfn$a.paddedHeight = function () {
       var ele = this[0];
       return ele.height() + 2 * ele.padding();
     };
-    elesfn$a.paddedWidth = function() {
+    elesfn$a.paddedWidth = function () {
       var ele = this[0];
       return ele.width() + 2 * ele.padding();
     };
@@ -9480,18 +10947,24 @@ var require_cytoscape_cjs = __commonJS({
         return getValue2(ele);
       }
     };
-    var ifEdgeRenderedPosition = function ifEdgeRenderedPosition2(ele, getPoint) {
+    var ifEdgeRenderedPosition = function ifEdgeRenderedPosition2(
+      ele,
+      getPoint,
+    ) {
       if (ele.isEdge()) {
         var cy = ele.cy();
         return modelToRenderedPosition(getPoint(ele), cy.zoom(), cy.pan());
       }
     };
-    var ifEdgeRenderedPositions = function ifEdgeRenderedPositions2(ele, getPoints) {
+    var ifEdgeRenderedPositions = function ifEdgeRenderedPositions2(
+      ele,
+      getPoints,
+    ) {
       if (ele.isEdge()) {
         var cy = ele.cy();
         var pan = cy.pan();
         var zoom = cy.zoom();
-        return getPoints(ele).map(function(p2) {
+        return getPoints(ele).map(function (p2) {
           return modelToRenderedPosition(p2, zoom, pan);
         });
       }
@@ -9514,37 +10987,37 @@ var require_cytoscape_cjs = __commonJS({
     var pts = {
       controlPoints: {
         get: controlPoints,
-        mult: true
+        mult: true,
       },
       segmentPoints: {
         get: segmentPoints,
-        mult: true
+        mult: true,
       },
       sourceEndpoint: {
-        get: sourceEndpoint
+        get: sourceEndpoint,
       },
       targetEndpoint: {
-        get: targetEndpoint
+        get: targetEndpoint,
       },
       midpoint: {
-        get: midpoint
-      }
+        get: midpoint,
+      },
     };
     var renderedName = function renderedName2(name) {
       return "rendered" + name[0].toUpperCase() + name.substr(1);
     };
-    var edgePoints = Object.keys(pts).reduce(function(obj, name) {
+    var edgePoints = Object.keys(pts).reduce(function (obj, name) {
       var spec = pts[name];
       var rName = renderedName(name);
-      obj[name] = function() {
+      obj[name] = function () {
         return ifEdge(this, spec.get);
       };
       if (spec.mult) {
-        obj[rName] = function() {
+        obj[rName] = function () {
           return ifEdgeRenderedPositions(this, spec.get);
         };
       } else {
-        obj[rName] = function() {
+        obj[rName] = function () {
           return ifEdgeRenderedPosition(this, spec.get);
         };
       }
@@ -9565,10 +11038,15 @@ var require_cytoscape_cjs = __commonJS({
         return "event";
       },
       recycle: function recycle(src, props) {
-        this.isImmediatePropagationStopped = this.isPropagationStopped = this.isDefaultPrevented = returnFalse;
+        this.isImmediatePropagationStopped =
+          this.isPropagationStopped =
+          this.isDefaultPrevented =
+            returnFalse;
         if (src != null && src.preventDefault) {
           this.type = src.type;
-          this.isDefaultPrevented = src.defaultPrevented ? returnTrue : returnFalse;
+          this.isDefaultPrevented = src.defaultPrevented
+            ? returnTrue
+            : returnFalse;
         } else if (src != null && src.type) {
           props = src;
         } else {
@@ -9584,16 +11062,20 @@ var require_cytoscape_cjs = __commonJS({
           this.namespace = props.namespace;
           this.layout = props.layout;
         }
-        if (this.cy != null && this.position != null && this.renderedPosition == null) {
+        if (
+          this.cy != null &&
+          this.position != null &&
+          this.renderedPosition == null
+        ) {
           var pos = this.position;
           var zoom = this.cy.zoom();
           var pan = this.cy.pan();
           this.renderedPosition = {
             x: pos.x * zoom + pan.x,
-            y: pos.y * zoom + pan.y
+            y: pos.y * zoom + pan.y,
           };
         }
-        this.timeStamp = src && src.timeStamp || Date.now();
+        this.timeStamp = (src && src.timeStamp) || Date.now();
       },
       preventDefault: function preventDefault() {
         this.isDefaultPrevented = returnTrue;
@@ -9621,7 +11103,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       isDefaultPrevented: returnFalse,
       isPropagationStopped: returnFalse,
-      isImmediatePropagationStopped: returnFalse
+      isImmediatePropagationStopped: returnFalse,
     };
     var eventRegex = /^([^.]+)(\.(?:[^.]+))?$/;
     var universalNamespace = ".*";
@@ -9632,27 +11114,27 @@ var require_cytoscape_cjs = __commonJS({
       eventMatches: function eventMatches() {
         return true;
       },
-      addEventFields: function addEventFields() {
-      },
+      addEventFields: function addEventFields() {},
       callbackContext: function callbackContext(context) {
         return context;
       },
-      beforeEmit: function beforeEmit() {
-      },
-      afterEmit: function afterEmit() {
-      },
+      beforeEmit: function beforeEmit() {},
+      afterEmit: function afterEmit() {},
       bubble: function bubble() {
         return false;
       },
       parent: function parent() {
         return null;
       },
-      context: null
+      context: null,
     };
     var defaultsKeys = Object.keys(defaults$8);
     var emptyOpts = {};
     function Emitter() {
-      var opts = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : emptyOpts;
+      var opts =
+        arguments.length > 0 && arguments[0] !== void 0
+          ? arguments[0]
+          : emptyOpts;
       var context = arguments.length > 1 ? arguments[1] : void 0;
       for (var i2 = 0; i2 < defaultsKeys.length; i2++) {
         var key = defaultsKeys[i2];
@@ -9663,7 +11145,15 @@ var require_cytoscape_cjs = __commonJS({
       this.emitting = 0;
     }
     var p = Emitter.prototype;
-    var forEachEvent = function forEachEvent2(self2, handler, events, qualifier, callback, conf, confOverrides) {
+    var forEachEvent = function forEachEvent2(
+      self2,
+      handler,
+      events,
+      qualifier,
+      callback,
+      conf,
+      confOverrides,
+    ) {
       if (fn$6(qualifier)) {
         callback = qualifier;
         qualifier = null;
@@ -9685,7 +11175,15 @@ var require_cytoscape_cjs = __commonJS({
         if (match2) {
           var type = match2[1];
           var namespace = match2[2] ? match2[2] : null;
-          var ret = handler(self2, evt, type, namespace, qualifier, callback, conf);
+          var ret = handler(
+            self2,
+            evt,
+            type,
+            namespace,
+            qualifier,
+            callback,
+            conf,
+          );
           if (ret === false) {
             break;
           }
@@ -9717,39 +11215,61 @@ var require_cytoscape_cjs = __commonJS({
           var eventObj = makeEventObj(self2, {
             type,
             namespace,
-            target: self2.context
+            target: self2.context,
           });
           handler(self2, eventObj);
         }
       }
     };
-    p.on = p.addListener = function(events, qualifier, callback, conf, confOverrides) {
-      forEachEvent(this, function(self2, event2, type, namespace, qualifier2, callback2, conf2) {
-        if (fn$6(callback2)) {
-          self2.listeners.push({
-            event: event2,
-            // full event string
-            callback: callback2,
-            // callback to run
-            type,
-            // the event type (e.g. 'click')
-            namespace,
-            // the event namespace (e.g. ".foo")
-            qualifier: qualifier2,
-            // a restriction on whether to match this emitter
-            conf: conf2
-            // additional configuration
-          });
-        }
-      }, events, qualifier, callback, conf, confOverrides);
+    p.on = p.addListener = function (
+      events,
+      qualifier,
+      callback,
+      conf,
+      confOverrides,
+    ) {
+      forEachEvent(
+        this,
+        function (
+          self2,
+          event2,
+          type,
+          namespace,
+          qualifier2,
+          callback2,
+          conf2,
+        ) {
+          if (fn$6(callback2)) {
+            self2.listeners.push({
+              event: event2,
+              // full event string
+              callback: callback2,
+              // callback to run
+              type,
+              // the event type (e.g. 'click')
+              namespace,
+              // the event namespace (e.g. ".foo")
+              qualifier: qualifier2,
+              // a restriction on whether to match this emitter
+              conf: conf2,
+              // additional configuration
+            });
+          }
+        },
+        events,
+        qualifier,
+        callback,
+        conf,
+        confOverrides,
+      );
       return this;
     };
-    p.one = function(events, qualifier, callback, conf) {
+    p.one = function (events, qualifier, callback, conf) {
       return this.on(events, qualifier, callback, conf, {
-        one: true
+        one: true,
       });
     };
-    p.removeListener = p.off = function(events, qualifier, callback, conf) {
+    p.removeListener = p.off = function (events, qualifier, callback, conf) {
       var _this = this;
       if (this.emitting !== 0) {
         this.listeners = copyArray(this.listeners);
@@ -9757,67 +11277,97 @@ var require_cytoscape_cjs = __commonJS({
       var listeners = this.listeners;
       var _loop = function _loop2(i3) {
         var listener = listeners[i3];
-        forEachEvent(_this, function(self2, event2, type, namespace, qualifier2, callback2) {
-          if ((listener.type === type || events === "*") && (!namespace && listener.namespace !== ".*" || listener.namespace === namespace) && (!qualifier2 || self2.qualifierCompare(listener.qualifier, qualifier2)) && (!callback2 || listener.callback === callback2)) {
-            listeners.splice(i3, 1);
-            return false;
-          }
-        }, events, qualifier, callback, conf);
+        forEachEvent(
+          _this,
+          function (self2, event2, type, namespace, qualifier2, callback2) {
+            if (
+              (listener.type === type || events === "*") &&
+              ((!namespace && listener.namespace !== ".*") ||
+                listener.namespace === namespace) &&
+              (!qualifier2 ||
+                self2.qualifierCompare(listener.qualifier, qualifier2)) &&
+              (!callback2 || listener.callback === callback2)
+            ) {
+              listeners.splice(i3, 1);
+              return false;
+            }
+          },
+          events,
+          qualifier,
+          callback,
+          conf,
+        );
       };
       for (var i2 = listeners.length - 1; i2 >= 0; i2--) {
         _loop(i2);
       }
       return this;
     };
-    p.removeAllListeners = function() {
+    p.removeAllListeners = function () {
       return this.removeListener("*");
     };
-    p.emit = p.trigger = function(events, extraParams, manualCallback) {
+    p.emit = p.trigger = function (events, extraParams, manualCallback) {
       var listeners = this.listeners;
       var numListenersBeforeEmit = listeners.length;
       this.emitting++;
       if (!array(extraParams)) {
         extraParams = [extraParams];
       }
-      forEachEventObj(this, function(self2, eventObj) {
-        if (manualCallback != null) {
-          listeners = [{
-            event: eventObj.event,
-            type: eventObj.type,
-            namespace: eventObj.namespace,
-            callback: manualCallback
-          }];
-          numListenersBeforeEmit = listeners.length;
-        }
-        var _loop2 = function _loop22(i3) {
-          var listener = listeners[i3];
-          if (listener.type === eventObj.type && (!listener.namespace || listener.namespace === eventObj.namespace || listener.namespace === universalNamespace) && self2.eventMatches(self2.context, listener, eventObj)) {
-            var args = [eventObj];
-            if (extraParams != null) {
-              push(args, extraParams);
-            }
-            self2.beforeEmit(self2.context, listener, eventObj);
-            if (listener.conf && listener.conf.one) {
-              self2.listeners = self2.listeners.filter(function(l) {
-                return l !== listener;
-              });
-            }
-            var context = self2.callbackContext(self2.context, listener, eventObj);
-            var ret = listener.callback.apply(context, args);
-            self2.afterEmit(self2.context, listener, eventObj);
-            if (ret === false) {
-              eventObj.stopPropagation();
-              eventObj.preventDefault();
-            }
+      forEachEventObj(
+        this,
+        function (self2, eventObj) {
+          if (manualCallback != null) {
+            listeners = [
+              {
+                event: eventObj.event,
+                type: eventObj.type,
+                namespace: eventObj.namespace,
+                callback: manualCallback,
+              },
+            ];
+            numListenersBeforeEmit = listeners.length;
           }
-        };
-        for (var i2 = 0; i2 < numListenersBeforeEmit; i2++) {
-          _loop2(i2);
-        }
-        if (self2.bubble(self2.context) && !eventObj.isPropagationStopped()) {
-          self2.parent(self2.context).emit(eventObj, extraParams);
-        }
-      }, events);
+          var _loop2 = function _loop22(i3) {
+            var listener = listeners[i3];
+            if (
+              listener.type === eventObj.type &&
+              (!listener.namespace ||
+                listener.namespace === eventObj.namespace ||
+                listener.namespace === universalNamespace) &&
+              self2.eventMatches(self2.context, listener, eventObj)
+            ) {
+              var args = [eventObj];
+              if (extraParams != null) {
+                push(args, extraParams);
+              }
+              self2.beforeEmit(self2.context, listener, eventObj);
+              if (listener.conf && listener.conf.one) {
+                self2.listeners = self2.listeners.filter(function (l) {
+                  return l !== listener;
+                });
+              }
+              var context = self2.callbackContext(
+                self2.context,
+                listener,
+                eventObj,
+              );
+              var ret = listener.callback.apply(context, args);
+              self2.afterEmit(self2.context, listener, eventObj);
+              if (ret === false) {
+                eventObj.stopPropagation();
+                eventObj.preventDefault();
+              }
+            }
+          };
+          for (var i2 = 0; i2 < numListenersBeforeEmit; i2++) {
+            _loop2(i2);
+          }
+          if (self2.bubble(self2.context) && !eventObj.isPropagationStopped()) {
+            self2.parent(self2.context).emit(eventObj, extraParams);
+          }
+        },
+        events,
+      );
       this.emitting--;
       return this;
     };
@@ -9832,7 +11382,11 @@ var require_cytoscape_cjs = __commonJS({
       eventMatches: function eventMatches(ele, listener, eventObj) {
         var selector = listener.qualifier;
         if (selector != null) {
-          return ele !== eventObj.target && element(eventObj.target) && selector.matches(eventObj.target);
+          return (
+            ele !== eventObj.target &&
+            element(eventObj.target) &&
+            selector.matches(eventObj.target)
+          );
         }
         return true;
       },
@@ -9845,7 +11399,11 @@ var require_cytoscape_cjs = __commonJS({
       },
       beforeEmit: function beforeEmit(context, listener) {
         if (listener.conf && listener.conf.once) {
-          listener.conf.onceCollection.removeListener(listener.event, listener.qualifier, listener.callback);
+          listener.conf.onceCollection.removeListener(
+            listener.event,
+            listener.qualifier,
+            listener.callback,
+          );
         }
       },
       bubble: function bubble() {
@@ -9853,7 +11411,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       parent: function parent(ele) {
         return ele.isChild() ? ele.parent() : ele.cy();
-      }
+      },
     };
     var argSelector$1 = function argSelector2(arg) {
       if (string(arg)) {
@@ -9913,7 +11471,7 @@ var require_cytoscape_cjs = __commonJS({
           var ele = this[i2];
           ele.emitter().on(events, argSel, callback, {
             once: true,
-            onceCollection: this
+            onceCollection: this,
           });
         }
       },
@@ -9931,17 +11489,17 @@ var require_cytoscape_cjs = __commonJS({
         this.cy().notify(event2, this);
         this.emit(event2, extraParams);
         return this;
-      }
+      },
     };
     define2.eventAliasesOn(elesfn$9);
     var elesfn$8 = {
       nodes: function nodes(selector) {
-        return this.filter(function(ele) {
+        return this.filter(function (ele) {
           return ele.isNode();
         }).filter(selector);
       },
       edges: function edges(selector) {
-        return this.filter(function(ele) {
+        return this.filter(function (ele) {
           return ele.isEdge();
         }).filter(selector);
       },
@@ -9959,7 +11517,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return {
           nodes,
-          edges
+          edges,
         };
       },
       filter: function filter2(_filter, thisArg) {
@@ -9972,7 +11530,9 @@ var require_cytoscape_cjs = __commonJS({
           var eles = this;
           for (var i2 = 0; i2 < eles.length; i2++) {
             var ele = eles[i2];
-            var include = thisArg ? _filter.apply(thisArg, [ele, i2, eles]) : _filter(ele, i2, eles);
+            var include = thisArg
+              ? _filter.apply(thisArg, [ele, i2, eles])
+              : _filter(ele, i2, eles);
             if (include) {
               filterEles.push(ele);
             }
@@ -10071,7 +11631,7 @@ var require_cytoscape_cjs = __commonJS({
         return {
           left,
           right,
-          both
+          both,
         };
       },
       add: function add(toAdd) {
@@ -10114,7 +11674,7 @@ var require_cytoscape_cjs = __commonJS({
             this[index] = toAddEle;
             map.set(id, {
               ele: toAddEle,
-              index
+              index,
             });
           }
         }
@@ -10136,7 +11696,7 @@ var require_cytoscape_cjs = __commonJS({
           this[i2] = lastEle;
           map.set(lastEleId, {
             ele: lastEle,
-            index: i2
+            index: i2,
           });
         }
         this.length--;
@@ -10185,7 +11745,9 @@ var require_cytoscape_cjs = __commonJS({
         var eles = this;
         for (var i2 = 0; i2 < eles.length; i2++) {
           var ele = eles[i2];
-          var ret = thisArg ? mapFn.apply(thisArg, [ele, i2, eles]) : mapFn(ele, i2, eles);
+          var ret = thisArg
+            ? mapFn.apply(thisArg, [ele, i2, eles])
+            : mapFn(ele, i2, eles);
           arr.push(ret);
         }
         return arr;
@@ -10204,7 +11766,9 @@ var require_cytoscape_cjs = __commonJS({
         var eles = this;
         for (var i2 = 0; i2 < eles.length; i2++) {
           var ele = eles[i2];
-          var val = thisArg ? valFn.apply(thisArg, [ele, i2, eles]) : valFn(ele, i2, eles);
+          var val = thisArg
+            ? valFn.apply(thisArg, [ele, i2, eles])
+            : valFn(ele, i2, eles);
           if (val > max3) {
             max3 = val;
             maxEle = ele;
@@ -10212,7 +11776,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return {
           value: max3,
-          ele: maxEle
+          ele: maxEle,
         };
       },
       min: function min2(valFn, thisArg) {
@@ -10221,7 +11785,9 @@ var require_cytoscape_cjs = __commonJS({
         var eles = this;
         for (var i2 = 0; i2 < eles.length; i2++) {
           var ele = eles[i2];
-          var val = thisArg ? valFn.apply(thisArg, [ele, i2, eles]) : valFn(ele, i2, eles);
+          var val = thisArg
+            ? valFn.apply(thisArg, [ele, i2, eles])
+            : valFn(ele, i2, eles);
           if (val < min3) {
             min3 = val;
             minEle = ele;
@@ -10229,15 +11795,31 @@ var require_cytoscape_cjs = __commonJS({
         }
         return {
           value: min3,
-          ele: minEle
+          ele: minEle,
         };
-      }
+      },
     };
     var fn$1 = elesfn$8;
     fn$1["u"] = fn$1["|"] = fn$1["+"] = fn$1.union = fn$1.or = fn$1.add;
-    fn$1["\\"] = fn$1["!"] = fn$1["-"] = fn$1.difference = fn$1.relativeComplement = fn$1.subtract = fn$1.not;
-    fn$1["n"] = fn$1["&"] = fn$1["."] = fn$1.and = fn$1.intersection = fn$1.intersect;
-    fn$1["^"] = fn$1["(+)"] = fn$1["(-)"] = fn$1.symmetricDifference = fn$1.symdiff = fn$1.xor;
+    fn$1["\\"] =
+      fn$1["!"] =
+      fn$1["-"] =
+      fn$1.difference =
+      fn$1.relativeComplement =
+      fn$1.subtract =
+        fn$1.not;
+    fn$1["n"] =
+      fn$1["&"] =
+      fn$1["."] =
+      fn$1.and =
+      fn$1.intersection =
+        fn$1.intersect;
+    fn$1["^"] =
+      fn$1["(+)"] =
+      fn$1["(-)"] =
+      fn$1.symmetricDifference =
+      fn$1.symdiff =
+        fn$1.xor;
     fn$1.fnFilter = fn$1.filterFn = fn$1.stdFilter = fn$1.filter;
     fn$1.complement = fn$1.abscomp = fn$1.absoluteComplement;
     var elesfn$7 = {
@@ -10258,7 +11840,7 @@ var require_cytoscape_cjs = __commonJS({
         if (ele) {
           return ele._private.group;
         }
-      }
+      },
     };
     var zIndexSort = function zIndexSort2(a, b) {
       var cy = a.cy();
@@ -10301,7 +11883,9 @@ var require_cytoscape_cjs = __commonJS({
           var N = this.length;
           for (var i2 = 0; i2 < N; i2++) {
             var ele = this[i2];
-            var ret = thisArg ? fn2.apply(thisArg, [ele, i2, this]) : fn2(ele, i2, this);
+            var ret = thisArg
+              ? fn2.apply(thisArg, [ele, i2, this])
+              : fn2(ele, i2, this);
             if (ret === false) {
               break;
             }
@@ -10384,40 +11968,46 @@ var require_cytoscape_cjs = __commonJS({
           var tgtDepth = tgt.zDepth();
           return Math.max(srcDepth, tgtDepth, 0);
         }
-      }
+      },
     };
     elesfn$6.each = elesfn$6.forEach;
     var defineSymbolIterator = function defineSymbolIterator2() {
       var typeofUndef = "undefined";
-      var isIteratorSupported = (typeof Symbol === "undefined" ? "undefined" : _typeof(Symbol)) != typeofUndef && _typeof(Symbol.iterator) != typeofUndef;
+      var isIteratorSupported =
+        (typeof Symbol === "undefined" ? "undefined" : _typeof(Symbol)) !=
+          typeofUndef && _typeof(Symbol.iterator) != typeofUndef;
       if (isIteratorSupported) {
-        elesfn$6[Symbol.iterator] = function() {
+        elesfn$6[Symbol.iterator] = function () {
           var _this = this;
           var entry = {
             value: void 0,
-            done: false
+            done: false,
           };
           var i2 = 0;
           var length = this.length;
-          return _defineProperty({
-            next: function next() {
-              if (i2 < length) {
-                entry.value = _this[i2++];
-              } else {
-                entry.value = void 0;
-                entry.done = true;
-              }
-              return entry;
-            }
-          }, Symbol.iterator, function() {
-            return this;
-          });
+          return _defineProperty(
+            {
+              next: function next() {
+                if (i2 < length) {
+                  entry.value = _this[i2++];
+                } else {
+                  entry.value = void 0;
+                  entry.done = true;
+                }
+                return entry;
+              },
+            },
+            Symbol.iterator,
+            function () {
+              return this;
+            },
+          );
         };
       }
     };
     defineSymbolIterator();
     var getLayoutDimensionOptions = defaults$g({
-      nodeDimensionsIncludeLabels: false
+      nodeDimensionsIncludeLabels: false,
     });
     var elesfn$5 = {
       // Calculates and returns node dimensions { x, y } based on options given
@@ -10427,18 +12017,18 @@ var require_cytoscape_cjs = __commonJS({
         if (!this.takesUpSpace()) {
           dims = {
             w: 0,
-            h: 0
+            h: 0,
           };
         } else if (options.nodeDimensionsIncludeLabels) {
           var bbDim = this.boundingBox();
           dims = {
             w: bbDim.w,
-            h: bbDim.h
+            h: bbDim.h,
           };
         } else {
           dims = {
             w: this.outerWidth(),
-            h: this.outerHeight()
+            h: this.outerHeight(),
           };
         }
         if (dims.w === 0 || dims.h === 0) {
@@ -10448,7 +12038,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       // using standard layout options, apply position function (w/ or w/o animation)
       layoutPositions: function layoutPositions(layout2, options, fn2) {
-        var nodes = this.nodes().filter(function(n) {
+        var nodes = this.nodes().filter(function (n) {
           return !n.isParent();
         });
         var cy = this.cy();
@@ -10459,25 +12049,30 @@ var require_cytoscape_cjs = __commonJS({
         var fnMem = memoize(fn2, getMemoizeKey);
         layout2.emit({
           type: "layoutstart",
-          layout: layout2
+          layout: layout2,
         });
         layout2.animations = [];
-        var calculateSpacing = function calculateSpacing2(spacing, nodesBb, pos) {
+        var calculateSpacing = function calculateSpacing2(
+          spacing,
+          nodesBb,
+          pos,
+        ) {
           var center = {
             x: nodesBb.x1 + nodesBb.w / 2,
-            y: nodesBb.y1 + nodesBb.h / 2
+            y: nodesBb.y1 + nodesBb.h / 2,
           };
           var spacingVector = {
             // scale from center of bounding box (not necessarily 0,0)
             x: (pos.x - center.x) * spacing,
-            y: (pos.y - center.y) * spacing
+            y: (pos.y - center.y) * spacing,
           };
           return {
             x: center.x + spacingVector.x,
-            y: center.y + spacingVector.y
+            y: center.y + spacingVector.y,
           };
         };
-        var useSpacingFactor = options.spacingFactor && options.spacingFactor !== 1;
+        var useSpacingFactor =
+          options.spacingFactor && options.spacingFactor !== 1;
         var spacingBb = function spacingBb2() {
           if (!useSpacingFactor) {
             return null;
@@ -10491,7 +12086,7 @@ var require_cytoscape_cjs = __commonJS({
           return bb2;
         };
         var bb = spacingBb();
-        var getFinalPos = memoize(function(node2, i3) {
+        var getFinalPos = memoize(function (node2, i3) {
           var newPos2 = fnMem(node2, i3);
           if (useSpacingFactor) {
             var spacing = Math.abs(options.spacingFactor);
@@ -10506,12 +12101,13 @@ var require_cytoscape_cjs = __commonJS({
           for (var i2 = 0; i2 < nodes.length; i2++) {
             var node = nodes[i2];
             var newPos = getFinalPos(node, i2);
-            var animateNode = options.animateFilter == null || options.animateFilter(node, i2);
+            var animateNode =
+              options.animateFilter == null || options.animateFilter(node, i2);
             if (animateNode) {
               var ani = node.animation({
                 position: newPos,
                 duration: options.animationDuration,
-                easing: options.animationEasing
+                easing: options.animationEasing,
               });
               layout2.animations.push(ani);
             } else {
@@ -10522,10 +12118,10 @@ var require_cytoscape_cjs = __commonJS({
             var fitAni = cy.animation({
               fit: {
                 boundingBox: layoutEles.boundingBoxAt(getFinalPos),
-                padding: options.padding
+                padding: options.padding,
               },
               duration: options.animationDuration,
-              easing: options.animationEasing
+              easing: options.animationEasing,
             });
             layout2.animations.push(fitAni);
           } else if (options.zoom !== void 0 && options.pan !== void 0) {
@@ -10533,25 +12129,27 @@ var require_cytoscape_cjs = __commonJS({
               zoom: options.zoom,
               pan: options.pan,
               duration: options.animationDuration,
-              easing: options.animationEasing
+              easing: options.animationEasing,
             });
             layout2.animations.push(zoomPanAni);
           }
-          layout2.animations.forEach(function(ani2) {
+          layout2.animations.forEach(function (ani2) {
             return ani2.play();
           });
           layout2.one("layoutready", options.ready);
           layout2.emit({
             type: "layoutready",
-            layout: layout2
+            layout: layout2,
           });
-          Promise$1.all(layout2.animations.map(function(ani2) {
-            return ani2.promise();
-          })).then(function() {
+          Promise$1.all(
+            layout2.animations.map(function (ani2) {
+              return ani2.promise();
+            }),
+          ).then(function () {
             layout2.one("layoutstop", options.stop);
             layout2.emit({
               type: "layoutstop",
-              layout: layout2
+              layout: layout2,
             });
           });
         } else {
@@ -10568,27 +12166,29 @@ var require_cytoscape_cjs = __commonJS({
           layout2.one("layoutready", options.ready);
           layout2.emit({
             type: "layoutready",
-            layout: layout2
+            layout: layout2,
           });
           layout2.one("layoutstop", options.stop);
           layout2.emit({
             type: "layoutstop",
-            layout: layout2
+            layout: layout2,
           });
         }
         return this;
       },
       layout: function layout2(options) {
         var cy = this.cy();
-        return cy.makeLayout(extend({}, options, {
-          eles: this
-        }));
-      }
+        return cy.makeLayout(
+          extend({}, options, {
+            eles: this,
+          }),
+        );
+      },
     };
     elesfn$5.createLayout = elesfn$5.makeLayout = elesfn$5.layout;
     function styleCache(key, fn2, ele) {
       var _p = ele._private;
-      var cache2 = _p.styleCache = _p.styleCache || [];
+      var cache2 = (_p.styleCache = _p.styleCache || []);
       var val;
       if ((val = cache2[key]) != null) {
         return val;
@@ -10628,15 +12228,17 @@ var require_cytoscape_cjs = __commonJS({
       dirtyStyleCache: function dirtyStyleCache() {
         var cy = this.cy();
         var dirty = function dirty2(ele) {
-          return ele._private.styleCache = null;
+          return (ele._private.styleCache = null);
         };
         if (cy.hasCompoundNodes()) {
           var eles;
-          eles = this.spawnSelf().merge(this.descendants()).merge(this.parents());
+          eles = this.spawnSelf()
+            .merge(this.descendants())
+            .merge(this.parents());
           eles.merge(eles.connectedEdges());
           eles.forEach(dirty);
         } else {
-          this.forEach(function(ele) {
+          this.forEach(function (ele) {
             dirty(ele);
             ele.connectedEdges().forEach(dirty);
           });
@@ -10656,9 +12258,12 @@ var require_cytoscape_cjs = __commonJS({
         }
         var hasCompounds = cy.hasCompoundNodes();
         var updatedEles = this;
-        notifyRenderer = notifyRenderer || notifyRenderer === void 0 ? true : false;
+        notifyRenderer =
+          notifyRenderer || notifyRenderer === void 0 ? true : false;
         if (hasCompounds) {
-          updatedEles = this.spawnSelf().merge(this.descendants()).merge(this.parents());
+          updatedEles = this.spawnSelf()
+            .merge(this.descendants())
+            .merge(this.parents());
         }
         var changedEles = updatedEles;
         if (notifyRenderer) {
@@ -10666,8 +12271,8 @@ var require_cytoscape_cjs = __commonJS({
         } else {
           changedEles.emit("style");
         }
-        updatedEles.forEach(function(ele) {
-          return ele._private.styleDirty = true;
+        updatedEles.forEach(function (ele) {
+          return (ele._private.styleDirty = true);
         });
         return this;
       },
@@ -10687,7 +12292,8 @@ var require_cytoscape_cjs = __commonJS({
       },
       // get the internal parsed style object for the specified property
       parsedStyle: function parsedStyle(property) {
-        var includeNonDefault = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+        var includeNonDefault =
+          arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
         var ele = this[0];
         var cy = ele.cy();
         if (!cy.styleEnabled()) {
@@ -10847,7 +12453,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         var ele = this[0];
         return ele._private.backgrounding ? true : false;
-      }
+      },
     };
     function checkCompound(ele, parentOk) {
       var _p = ele._private;
@@ -10866,7 +12472,7 @@ var require_cytoscape_cjs = __commonJS({
       var ok = specs.ok;
       var edgeOkViaNode = specs.edgeOkViaNode || specs.ok;
       var parentOk = specs.parentOk || specs.ok;
-      return function() {
+      return function () {
         var cy = this.cy();
         if (!cy.styleEnabled()) {
           return true;
@@ -10883,61 +12489,101 @@ var require_cytoscape_cjs = __commonJS({
           } else {
             var src = _p.source;
             var tgt = _p.target;
-            return edgeOkViaNode(src) && (!hasCompoundNodes || checkCompound(src, edgeOkViaNode)) && (src === tgt || edgeOkViaNode(tgt) && (!hasCompoundNodes || checkCompound(tgt, edgeOkViaNode)));
+            return (
+              edgeOkViaNode(src) &&
+              (!hasCompoundNodes || checkCompound(src, edgeOkViaNode)) &&
+              (src === tgt ||
+                (edgeOkViaNode(tgt) &&
+                  (!hasCompoundNodes || checkCompound(tgt, edgeOkViaNode))))
+            );
           }
         }
       };
     }
-    var eleTakesUpSpace = cacheStyleFunction("eleTakesUpSpace", function(ele) {
-      return ele.pstyle("display").value === "element" && ele.width() !== 0 && (ele.isNode() ? ele.height() !== 0 : true);
+    var eleTakesUpSpace = cacheStyleFunction("eleTakesUpSpace", function (ele) {
+      return (
+        ele.pstyle("display").value === "element" &&
+        ele.width() !== 0 &&
+        (ele.isNode() ? ele.height() !== 0 : true)
+      );
     });
-    elesfn$4.takesUpSpace = cachePrototypeStyleFunction("takesUpSpace", defineDerivedStateFunction({
-      ok: eleTakesUpSpace
-    }));
-    var eleInteractive = cacheStyleFunction("eleInteractive", function(ele) {
-      return ele.pstyle("events").value === "yes" && ele.pstyle("visibility").value === "visible" && eleTakesUpSpace(ele);
+    elesfn$4.takesUpSpace = cachePrototypeStyleFunction(
+      "takesUpSpace",
+      defineDerivedStateFunction({
+        ok: eleTakesUpSpace,
+      }),
+    );
+    var eleInteractive = cacheStyleFunction("eleInteractive", function (ele) {
+      return (
+        ele.pstyle("events").value === "yes" &&
+        ele.pstyle("visibility").value === "visible" &&
+        eleTakesUpSpace(ele)
+      );
     });
-    var parentInteractive = cacheStyleFunction("parentInteractive", function(parent) {
-      return parent.pstyle("visibility").value === "visible" && eleTakesUpSpace(parent);
-    });
-    elesfn$4.interactive = cachePrototypeStyleFunction("interactive", defineDerivedStateFunction({
-      ok: eleInteractive,
-      parentOk: parentInteractive,
-      edgeOkViaNode: eleTakesUpSpace
-    }));
-    elesfn$4.noninteractive = function() {
+    var parentInteractive = cacheStyleFunction(
+      "parentInteractive",
+      function (parent) {
+        return (
+          parent.pstyle("visibility").value === "visible" &&
+          eleTakesUpSpace(parent)
+        );
+      },
+    );
+    elesfn$4.interactive = cachePrototypeStyleFunction(
+      "interactive",
+      defineDerivedStateFunction({
+        ok: eleInteractive,
+        parentOk: parentInteractive,
+        edgeOkViaNode: eleTakesUpSpace,
+      }),
+    );
+    elesfn$4.noninteractive = function () {
       var ele = this[0];
       if (ele) {
         return !ele.interactive();
       }
     };
-    var eleVisible = cacheStyleFunction("eleVisible", function(ele) {
-      return ele.pstyle("visibility").value === "visible" && ele.pstyle("opacity").pfValue !== 0 && eleTakesUpSpace(ele);
+    var eleVisible = cacheStyleFunction("eleVisible", function (ele) {
+      return (
+        ele.pstyle("visibility").value === "visible" &&
+        ele.pstyle("opacity").pfValue !== 0 &&
+        eleTakesUpSpace(ele)
+      );
     });
     var edgeVisibleViaNode = eleTakesUpSpace;
-    elesfn$4.visible = cachePrototypeStyleFunction("visible", defineDerivedStateFunction({
-      ok: eleVisible,
-      edgeOkViaNode: edgeVisibleViaNode
-    }));
-    elesfn$4.hidden = function() {
+    elesfn$4.visible = cachePrototypeStyleFunction(
+      "visible",
+      defineDerivedStateFunction({
+        ok: eleVisible,
+        edgeOkViaNode: edgeVisibleViaNode,
+      }),
+    );
+    elesfn$4.hidden = function () {
       var ele = this[0];
       if (ele) {
         return !ele.visible();
       }
     };
-    elesfn$4.isBundledBezier = cachePrototypeStyleFunction("isBundledBezier", function() {
-      if (!this.cy().styleEnabled()) {
-        return false;
-      }
-      return !this.removed() && this.pstyle("curve-style").value === "bezier" && this.takesUpSpace();
-    });
+    elesfn$4.isBundledBezier = cachePrototypeStyleFunction(
+      "isBundledBezier",
+      function () {
+        if (!this.cy().styleEnabled()) {
+          return false;
+        }
+        return (
+          !this.removed() &&
+          this.pstyle("curve-style").value === "bezier" &&
+          this.takesUpSpace()
+        );
+      },
+    );
     elesfn$4.bypass = elesfn$4.css = elesfn$4.style;
     elesfn$4.renderedCss = elesfn$4.renderedStyle;
     elesfn$4.removeBypass = elesfn$4.removeCss = elesfn$4.removeStyle;
     elesfn$4.pstyle = elesfn$4.parsedStyle;
     var elesfn$3 = {};
     function defineSwitchFunction(params) {
-      return function() {
+      return function () {
         var args = arguments;
         var changedEles = [];
         if (args.length === 2) {
@@ -10947,7 +12593,7 @@ var require_cytoscape_cjs = __commonJS({
         } else if (args.length === 1 && fn$6(args[0])) {
           var _handler = args[0];
           this.on(params.event, _handler);
-        } else if (args.length === 0 || args.length === 1 && array(args[0])) {
+        } else if (args.length === 0 || (args.length === 1 && array(args[0]))) {
           var addlEvents = args.length === 1 ? args[0] : null;
           for (var i2 = 0; i2 < this.length; i2++) {
             var ele = this[i2];
@@ -10980,7 +12626,7 @@ var require_cytoscape_cjs = __commonJS({
       };
     }
     function defineSwitchSet(params) {
-      elesfn$3[params.field] = function() {
+      elesfn$3[params.field] = function () {
         var ele = this[0];
         if (ele) {
           if (params.overrideField) {
@@ -10997,14 +12643,14 @@ var require_cytoscape_cjs = __commonJS({
         field: params.field,
         ableField: params.ableField,
         overrideAble: params.overrideAble,
-        value: true
+        value: true,
       });
       elesfn$3[params.off] = defineSwitchFunction({
         event: params.off,
         field: params.field,
         ableField: params.ableField,
         overrideAble: params.overrideAble,
-        value: false
+        value: false,
       });
     }
     defineSwitchSet({
@@ -11013,7 +12659,7 @@ var require_cytoscape_cjs = __commonJS({
         return ele.cy().autolock() ? true : void 0;
       },
       on: "lock",
-      off: "unlock"
+      off: "unlock",
     });
     defineSwitchSet({
       field: "grabbable",
@@ -11021,7 +12667,7 @@ var require_cytoscape_cjs = __commonJS({
         return ele.cy().autoungrabify() || ele.pannable() ? false : void 0;
       },
       on: "grabify",
-      off: "ungrabify"
+      off: "ungrabify",
     });
     defineSwitchSet({
       field: "selected",
@@ -11030,7 +12676,7 @@ var require_cytoscape_cjs = __commonJS({
         return ele.cy().autounselectify() ? false : void 0;
       },
       on: "select",
-      off: "unselect"
+      off: "unselect",
     });
     defineSwitchSet({
       field: "selectable",
@@ -11038,10 +12684,10 @@ var require_cytoscape_cjs = __commonJS({
         return ele.cy().autounselectify() ? false : void 0;
       },
       on: "selectify",
-      off: "unselectify"
+      off: "unselectify",
     });
     elesfn$3.deselect = elesfn$3.unselect;
-    elesfn$3.grabbed = function() {
+    elesfn$3.grabbed = function () {
       var ele = this[0];
       if (ele) {
         return ele._private.grabbed;
@@ -11050,14 +12696,14 @@ var require_cytoscape_cjs = __commonJS({
     defineSwitchSet({
       field: "active",
       on: "activate",
-      off: "unactivate"
+      off: "unactivate",
     });
     defineSwitchSet({
       field: "pannable",
       on: "panify",
-      off: "unpanify"
+      off: "unpanify",
     });
-    elesfn$3.inactive = function() {
+    elesfn$3.inactive = function () {
       var ele = this[0];
       if (ele) {
         return !ele._private.active;
@@ -11079,7 +12725,10 @@ var require_cytoscape_cjs = __commonJS({
             var edge = edges[j];
             var src = edge.source();
             var tgt = edge.target();
-            if (params.noIncomingEdges && tgt === ele && src !== ele || params.noOutgoingEdges && src === ele && tgt !== ele) {
+            if (
+              (params.noIncomingEdges && tgt === ele && src !== ele) ||
+              (params.noOutgoingEdges && src === ele && tgt !== ele)
+            ) {
               disqualified = true;
               break;
             }
@@ -11092,7 +12741,7 @@ var require_cytoscape_cjs = __commonJS({
       };
     };
     var defineDagOneHop = function defineDagOneHop2(params) {
-      return function(selector) {
+      return function (selector) {
         var eles = this;
         var oEles = [];
         for (var i2 = 0; i2 < eles.length; i2++) {
@@ -11118,11 +12767,11 @@ var require_cytoscape_cjs = __commonJS({
       };
     };
     var defineDagAllHops = function defineDagAllHops2(params) {
-      return function(selector) {
+      return function (selector) {
         var eles = this;
         var sEles = [];
         var sElesIds = {};
-        for (; ; ) {
+        for (;;) {
           var next = params.outgoing ? eles.outgoers() : eles.incomers();
           if (next.length === 0) {
             break;
@@ -11145,7 +12794,7 @@ var require_cytoscape_cjs = __commonJS({
         return this.spawn(sEles, true).filter(selector);
       };
     };
-    elesfn$2.clearTraversalCache = function() {
+    elesfn$2.clearTraversalCache = function () {
       for (var i2 = 0; i2 < this.length; i2++) {
         this[i2]._private.traversalCache = null;
       }
@@ -11153,33 +12802,39 @@ var require_cytoscape_cjs = __commonJS({
     extend(elesfn$2, {
       // get the root nodes in the DAG
       roots: defineDagExtremity({
-        noIncomingEdges: true
+        noIncomingEdges: true,
       }),
       // get the leaf nodes in the DAG
       leaves: defineDagExtremity({
-        noOutgoingEdges: true
+        noOutgoingEdges: true,
       }),
       // normally called children in graph theory
       // these nodes =edges=> outgoing nodes
-      outgoers: cache(defineDagOneHop({
-        outgoing: true
-      }), "outgoers"),
+      outgoers: cache(
+        defineDagOneHop({
+          outgoing: true,
+        }),
+        "outgoers",
+      ),
       // aka DAG descendants
       successors: defineDagAllHops({
-        outgoing: true
+        outgoing: true,
       }),
       // normally called parents in graph theory
       // these nodes <=edges= incoming nodes
-      incomers: cache(defineDagOneHop({
-        incoming: true
-      }), "incomers"),
+      incomers: cache(
+        defineDagOneHop({
+          incoming: true,
+        }),
+        "incomers",
+      ),
       // aka DAG ancestors
       predecessors: defineDagAllHops({
-        incoming: true
-      })
+        incoming: true,
+      }),
     });
     extend(elesfn$2, {
-      neighborhood: cache(function(selector) {
+      neighborhood: cache(function (selector) {
         var elements = [];
         var nodes = this.nodes();
         for (var i2 = 0; i2 < nodes.length; i2++) {
@@ -11203,7 +12858,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       openNeighborhood: function openNeighborhood(selector) {
         return this.neighborhood(selector);
-      }
+      },
     });
     elesfn$2.neighbourhood = elesfn$2.neighborhood;
     elesfn$2.closedNeighbourhood = elesfn$2.closedNeighborhood;
@@ -11226,11 +12881,11 @@ var require_cytoscape_cjs = __commonJS({
         return tgt && selector ? tgt.filter(selector) : tgt;
       }, "target"),
       sources: defineSourceFunction({
-        attr: "source"
+        attr: "source",
       }),
       targets: defineSourceFunction({
-        attr: "target"
-      })
+        attr: "target",
+      }),
     });
     function defineSourceFunction(params) {
       return function sourceImpl(selector) {
@@ -11247,9 +12902,12 @@ var require_cytoscape_cjs = __commonJS({
     }
     extend(elesfn$2, {
       edgesWith: cache(defineEdgesWithFunction(), "edgesWith"),
-      edgesTo: cache(defineEdgesWithFunction({
-        thisIsSrc: true
-      }), "edgesTo")
+      edgesTo: cache(
+        defineEdgesWithFunction({
+          thisIsSrc: true,
+        }),
+        "edgesTo",
+      ),
     });
     function defineEdgesWithFunction(params) {
       return function edgesWithImpl(otherNodes) {
@@ -11264,8 +12922,12 @@ var require_cytoscape_cjs = __commonJS({
           for (var i2 = 0; i2 < edges.length; i2++) {
             var edge = edges[i2];
             var edgeData = edge._private.data;
-            var thisToOther = this.hasElementWithId(edgeData.source) && otherNodes.hasElementWithId(edgeData.target);
-            var otherToThis = otherNodes.hasElementWithId(edgeData.source) && this.hasElementWithId(edgeData.target);
+            var thisToOther =
+              this.hasElementWithId(edgeData.source) &&
+              otherNodes.hasElementWithId(edgeData.target);
+            var otherToThis =
+              otherNodes.hasElementWithId(edgeData.source) &&
+              this.hasElementWithId(edgeData.target);
             var edgeConnectsThisAndOther = thisToOther || otherToThis;
             if (!edgeConnectsThisAndOther) {
               continue;
@@ -11285,7 +12947,7 @@ var require_cytoscape_cjs = __commonJS({
       };
     }
     extend(elesfn$2, {
-      connectedEdges: cache(function(selector) {
+      connectedEdges: cache(function (selector) {
         var retEles = [];
         var eles = this;
         for (var i2 = 0; i2 < eles.length; i2++) {
@@ -11301,7 +12963,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return this.spawn(retEles, true).filter(selector);
       }, "connectedEdges"),
-      connectedNodes: cache(function(selector) {
+      connectedNodes: cache(function (selector) {
         var retEles = [];
         var eles = this;
         for (var i2 = 0; i2 < eles.length; i2++) {
@@ -11315,13 +12977,16 @@ var require_cytoscape_cjs = __commonJS({
         return this.spawn(retEles, true).filter(selector);
       }, "connectedNodes"),
       parallelEdges: cache(defineParallelEdgesFunction(), "parallelEdges"),
-      codirectedEdges: cache(defineParallelEdgesFunction({
-        codirected: true
-      }), "codirectedEdges")
+      codirectedEdges: cache(
+        defineParallelEdgesFunction({
+          codirected: true,
+        }),
+        "codirectedEdges",
+      ),
     });
     function defineParallelEdgesFunction(params) {
       var defaults2 = {
-        codirected: false
+        codirected: false,
       };
       params = extend({}, defaults2, params);
       return function parallelEdgesImpl(selector) {
@@ -11342,7 +13007,10 @@ var require_cytoscape_cjs = __commonJS({
             var srcid2 = edge2data.source;
             var codirected = tgtid2 === tgtid1 && srcid2 === srcid1;
             var oppdirected = srcid1 === tgtid2 && tgtid1 === srcid2;
-            if (p2.codirected && codirected || !p2.codirected && (codirected || oppdirected)) {
+            if (
+              (p2.codirected && codirected) ||
+              (!p2.codirected && (codirected || oppdirected))
+            ) {
               elements.push(edge2);
             }
           }
@@ -11378,11 +13046,15 @@ var require_cytoscape_cjs = __commonJS({
             roots: root2,
             visit: function visit(v) {
               return visitInComponent(v, cmpt);
-            }
+            },
           });
-          cmpt.forEach(function(node) {
-            node.connectedEdges().forEach(function(e) {
-              if (self2.has(e) && cmpt.has(e.source()) && cmpt.has(e.target())) {
+          cmpt.forEach(function (node) {
+            node.connectedEdges().forEach(function (e) {
+              if (
+                self2.has(e) &&
+                cmpt.has(e.source()) &&
+                cmpt.has(e.target())
+              ) {
                 cmpt.merge(e);
               }
             });
@@ -11396,12 +13068,14 @@ var require_cytoscape_cjs = __commonJS({
       component: function component() {
         var ele = this[0];
         return ele.cy().mutableElements().components(ele)[0];
-      }
+      },
     });
     elesfn$2.componentsOf = elesfn$2.components;
     var Collection = function Collection2(cy, elements) {
-      var unique = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : false;
-      var removed = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : false;
+      var unique =
+        arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : false;
+      var removed =
+        arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : false;
       if (cy === void 0) {
         error("A collection must have a reference to the core");
         return;
@@ -11410,7 +13084,11 @@ var require_cytoscape_cjs = __commonJS({
       var createdElements = false;
       if (!elements) {
         elements = [];
-      } else if (elements.length > 0 && plainObject(elements[0]) && !element(elements[0])) {
+      } else if (
+        elements.length > 0 &&
+        plainObject(elements[0]) &&
+        !element(elements[0])
+      ) {
         createdElements = true;
         var eles = [];
         var elesIds = new Set$1();
@@ -11442,7 +13120,7 @@ var require_cytoscape_cjs = __commonJS({
           if (unique) {
             map.set(id, {
               index: this.length,
-              ele: element$1
+              ele: element$1,
             });
           }
           this[this.length] = element$1;
@@ -11462,16 +13140,16 @@ var require_cytoscape_cjs = __commonJS({
           this.lazyMap = m;
         },
         rebuildMap: function rebuildMap() {
-          var m = this.lazyMap = new Map$1();
+          var m = (this.lazyMap = new Map$1());
           var eles2 = this.eles;
           for (var _i2 = 0; _i2 < eles2.length; _i2++) {
             var _ele = eles2[_i2];
             m.set(_ele.id(), {
               index: _i2,
-              ele: _ele
+              ele: _ele,
             });
           }
-        }
+        },
       };
       if (unique) {
         this._private.map = map;
@@ -11480,61 +13158,64 @@ var require_cytoscape_cjs = __commonJS({
         this.restore();
       }
     };
-    var elesfn$1 = Element.prototype = Collection.prototype = Object.create(Array.prototype);
-    elesfn$1.instanceString = function() {
+    var elesfn$1 =
+      (Element.prototype =
+      Collection.prototype =
+        Object.create(Array.prototype));
+    elesfn$1.instanceString = function () {
       return "collection";
     };
-    elesfn$1.spawn = function(eles, unique) {
+    elesfn$1.spawn = function (eles, unique) {
       return new Collection(this.cy(), eles, unique);
     };
-    elesfn$1.spawnSelf = function() {
+    elesfn$1.spawnSelf = function () {
       return this.spawn(this);
     };
-    elesfn$1.cy = function() {
+    elesfn$1.cy = function () {
       return this._private.cy;
     };
-    elesfn$1.renderer = function() {
+    elesfn$1.renderer = function () {
       return this._private.cy.renderer();
     };
-    elesfn$1.element = function() {
+    elesfn$1.element = function () {
       return this[0];
     };
-    elesfn$1.collection = function() {
+    elesfn$1.collection = function () {
       if (collection(this)) {
         return this;
       } else {
         return new Collection(this._private.cy, [this]);
       }
     };
-    elesfn$1.unique = function() {
+    elesfn$1.unique = function () {
       return new Collection(this._private.cy, this, true);
     };
-    elesfn$1.hasElementWithId = function(id) {
+    elesfn$1.hasElementWithId = function (id) {
       id = "" + id;
       return this._private.map.has(id);
     };
-    elesfn$1.getElementById = function(id) {
+    elesfn$1.getElementById = function (id) {
       id = "" + id;
       var cy = this._private.cy;
       var entry = this._private.map.get(id);
       return entry ? entry.ele : new Collection(cy);
     };
     elesfn$1.$id = elesfn$1.getElementById;
-    elesfn$1.poolIndex = function() {
+    elesfn$1.poolIndex = function () {
       var cy = this._private.cy;
       var eles = cy._private.elements;
       var id = this[0]._private.data.id;
       return eles._private.map.get(id).index;
     };
-    elesfn$1.indexOf = function(ele) {
+    elesfn$1.indexOf = function (ele) {
       var id = ele[0]._private.data.id;
       return this._private.map.get(id).index;
     };
-    elesfn$1.indexOfId = function(id) {
+    elesfn$1.indexOfId = function (id) {
       id = "" + id;
       return this._private.map.get(id).index;
     };
-    elesfn$1.json = function(obj) {
+    elesfn$1.json = function (obj) {
       var ele = this.element();
       var cy = this.cy();
       if (ele == null && obj) {
@@ -11568,7 +13249,11 @@ var require_cytoscape_cjs = __commonJS({
           } else {
             var newParentValSpecd = "parent" in obj.data;
             var parent = obj.data.parent;
-            if (newParentValSpecd && (parent != null || _data2.parent != null) && parent != _data2.parent) {
+            if (
+              newParentValSpecd &&
+              (parent != null || _data2.parent != null) &&
+              parent != _data2.parent
+            ) {
               if (parent === void 0) {
                 parent = null;
               }
@@ -11576,7 +13261,7 @@ var require_cytoscape_cjs = __commonJS({
                 parent = "" + parent;
               }
               ele = ele.move({
-                parent
+                parent,
               });
             }
           }
@@ -11616,17 +13301,17 @@ var require_cytoscape_cjs = __commonJS({
           locked: p2.locked,
           grabbable: p2.grabbable,
           pannable: p2.pannable,
-          classes: null
+          classes: null,
         };
         json.classes = "";
         var i2 = 0;
-        p2.classes.forEach(function(cls) {
-          return json.classes += i2++ === 0 ? cls : " " + cls;
+        p2.classes.forEach(function (cls) {
+          return (json.classes += i2++ === 0 ? cls : " " + cls);
         });
         return json;
       }
     };
-    elesfn$1.jsons = function() {
+    elesfn$1.jsons = function () {
       var jsons = [];
       for (var i2 = 0; i2 < this.length; i2++) {
         var ele = this[i2];
@@ -11635,7 +13320,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return jsons;
     };
-    elesfn$1.clone = function() {
+    elesfn$1.clone = function () {
       var cy = this.cy();
       var elesArr = [];
       for (var i2 = 0; i2 < this.length; i2++) {
@@ -11647,9 +13332,11 @@ var require_cytoscape_cjs = __commonJS({
       return new Collection(cy, elesArr);
     };
     elesfn$1.copy = elesfn$1.clone;
-    elesfn$1.restore = function() {
-      var notifyRenderer = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : true;
-      var addToPool = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+    elesfn$1.restore = function () {
+      var notifyRenderer =
+        arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : true;
+      var addToPool =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
       var self2 = this;
       var cy = self2.cy();
       var cy_p = cy._private;
@@ -11678,14 +13365,15 @@ var require_cytoscape_cjs = __commonJS({
         var _private = _ele2._private;
         var _data3 = _private.data;
         _ele2.clearTraversalCache();
-        if (!addToPool && !_private.removed)
-          ;
+        if (!addToPool && !_private.removed);
         else if (_data3.id === void 0) {
           _data3.id = uuid();
         } else if (number$1(_data3.id)) {
           _data3.id = "" + _data3.id;
         } else if (emptyString(_data3.id) || !string(_data3.id)) {
-          error("Can not create element with invalid string ID `" + _data3.id + "`");
+          error(
+            "Can not create element with invalid string ID `" + _data3.id + "`",
+          );
           removeFromElements();
           continue;
         } else if (cy.hasElementWithId(_data3.id)) {
@@ -11715,10 +13403,20 @@ var require_cytoscape_cjs = __commonJS({
               val = _data3[field] = "" + _data3[field];
             }
             if (val == null || val === "") {
-              error("Can not create edge `" + id + "` with unspecified " + field);
+              error(
+                "Can not create edge `" + id + "` with unspecified " + field,
+              );
               badSourceOrTarget = true;
             } else if (!cy.hasElementWithId(val)) {
-              error("Can not create edge `" + id + "` with nonexistant " + field + " `" + val + "`");
+              error(
+                "Can not create edge `" +
+                  id +
+                  "` with nonexistant " +
+                  field +
+                  " `" +
+                  val +
+                  "`",
+              );
               badSourceOrTarget = true;
             }
           }
@@ -11740,7 +13438,7 @@ var require_cytoscape_cjs = __commonJS({
         _private.map = new Map$1();
         _private.map.set(id, {
           ele: _ele2,
-          index: 0
+          index: 0,
         });
         _private.removed = false;
         if (addToPool) {
@@ -11756,7 +13454,9 @@ var require_cytoscape_cjs = __commonJS({
         var parentId = _data4.parent;
         var specifiedParent = parentId != null;
         if (specifiedParent || node._private.parent) {
-          var parent = node._private.parent ? cy.collection().merge(node._private.parent) : cy.getElementById(parentId);
+          var parent = node._private.parent
+            ? cy.collection().merge(node._private.parent)
+            : cy.getElementById(parentId);
           if (parent.empty()) {
             _data4.parent = void 0;
           } else if (parent[0].removed()) {
@@ -11783,7 +13483,10 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       if (elements.length > 0) {
-        var restored = elements.length === self2.length ? self2 : new Collection(cy, elements);
+        var restored =
+          elements.length === self2.length
+            ? self2
+            : new Collection(cy, elements);
         for (var _i5 = 0; _i5 < restored.length; _i5++) {
           var _ele3 = restored[_i5];
           if (_ele3.isNode()) {
@@ -11795,11 +13498,18 @@ var require_cytoscape_cjs = __commonJS({
         }
         var toUpdateStyle;
         if (cy_p.hasCompoundNodes) {
-          toUpdateStyle = cy.collection().merge(restored).merge(restored.connectedNodes()).merge(restored.parent());
+          toUpdateStyle = cy
+            .collection()
+            .merge(restored)
+            .merge(restored.connectedNodes())
+            .merge(restored.parent());
         } else {
           toUpdateStyle = restored;
         }
-        toUpdateStyle.dirtyCompoundBoundsCache().dirtyBoundingBoxCache().updateStyle(notifyRenderer);
+        toUpdateStyle
+          .dirtyCompoundBoundsCache()
+          .dirtyBoundingBoxCache()
+          .updateStyle(notifyRenderer);
         if (notifyRenderer) {
           restored.emitAndNotify("add");
         } else if (addToPool) {
@@ -11808,17 +13518,19 @@ var require_cytoscape_cjs = __commonJS({
       }
       return self2;
     };
-    elesfn$1.removed = function() {
+    elesfn$1.removed = function () {
       var ele = this[0];
       return ele && ele._private.removed;
     };
-    elesfn$1.inside = function() {
+    elesfn$1.inside = function () {
       var ele = this[0];
       return ele && !ele._private.removed;
     };
-    elesfn$1.remove = function() {
-      var notifyRenderer = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : true;
-      var removeFromPool = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+    elesfn$1.remove = function () {
+      var notifyRenderer =
+        arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : true;
+      var removeFromPool =
+        arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
       var self2 = this;
       var elesToRemove = [];
       var elesToRemoveIds = {};
@@ -11837,7 +13549,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       function add(ele2) {
         var alreadyAdded = elesToRemoveIds[ele2.id()];
-        if (removeFromPool && ele2.removed() || alreadyAdded) {
+        if ((removeFromPool && ele2.removed()) || alreadyAdded) {
           return;
         } else {
           elesToRemoveIds[ele2.id()] = true;
@@ -11930,7 +13642,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return removedElements;
     };
-    elesfn$1.move = function(struct) {
+    elesfn$1.move = function (struct) {
       var cy = this._private.cy;
       var eles = this;
       var notifyRenderer = false;
@@ -11944,7 +13656,7 @@ var require_cytoscape_cjs = __commonJS({
         var srcExists = srcId != null && cy.hasElementWithId(srcId);
         var tgtExists = tgtId != null && cy.hasElementWithId(tgtId);
         if (srcExists || tgtExists) {
-          cy.batch(function() {
+          cy.batch(function () {
             eles.remove(notifyRenderer, modifyPool);
             eles.emitAndNotify("moveout");
             for (var i2 = 0; i2 < eles.length; i2++) {
@@ -11968,7 +13680,7 @@ var require_cytoscape_cjs = __commonJS({
         var parentExists = parentId === null || cy.hasElementWithId(parentId);
         if (parentExists) {
           var pidToAssign = parentId === null ? void 0 : parentId;
-          cy.batch(function() {
+          cy.batch(function () {
             var updated = eles.remove(notifyRenderer, modifyPool);
             updated.emitAndNotify("moveout");
             for (var i2 = 0; i2 < eles.length; i2++) {
@@ -11985,7 +13697,24 @@ var require_cytoscape_cjs = __commonJS({
       }
       return this;
     };
-    [elesfn$j, elesfn$i, elesfn$h, elesfn$g, elesfn$f, data, elesfn$d, dimensions, elesfn$9, elesfn$8, elesfn$7, elesfn$6, elesfn$5, elesfn$4, elesfn$3, elesfn$2].forEach(function(props) {
+    [
+      elesfn$j,
+      elesfn$i,
+      elesfn$h,
+      elesfn$g,
+      elesfn$f,
+      data,
+      elesfn$d,
+      dimensions,
+      elesfn$9,
+      elesfn$8,
+      elesfn$7,
+      elesfn$6,
+      elesfn$5,
+      elesfn$4,
+      elesfn$3,
+      elesfn$2,
+    ].forEach(function (props) {
       extend(elesfn$1, props);
     });
     var corefn$9 = {
@@ -12007,7 +13736,10 @@ var require_cytoscape_cjs = __commonJS({
         } else if (array(opts)) {
           var _jsons = opts;
           elements = new Collection(cy, _jsons);
-        } else if (plainObject(opts) && (array(opts.nodes) || array(opts.edges))) {
+        } else if (
+          plainObject(opts) &&
+          (array(opts.nodes) || array(opts.edges))
+        ) {
           var elesByGroup = opts;
           var _jsons2 = [];
           var grs = ["nodes", "edges"];
@@ -12016,9 +13748,12 @@ var require_cytoscape_cjs = __commonJS({
             var elesArray = elesByGroup[group];
             if (array(elesArray)) {
               for (var j = 0, jl = elesArray.length; j < jl; j++) {
-                var json = extend({
-                  group
-                }, elesArray[j]);
+                var json = extend(
+                  {
+                    group,
+                  },
+                  elesArray[j],
+                );
                 _jsons2.push(json);
               }
             }
@@ -12031,22 +13766,31 @@ var require_cytoscape_cjs = __commonJS({
         return elements;
       },
       remove: function remove(collection2) {
-        if (elementOrCollection(collection2))
-          ;
+        if (elementOrCollection(collection2));
         else if (string(collection2)) {
           var selector = collection2;
           collection2 = this.$(selector);
         }
         return collection2.remove();
-      }
+      },
     };
     function generateCubicBezier(mX1, mY1, mX2, mY2) {
-      var NEWTON_ITERATIONS = 4, NEWTON_MIN_SLOPE = 1e-3, SUBDIVISION_PRECISION = 1e-7, SUBDIVISION_MAX_ITERATIONS = 10, kSplineTableSize = 11, kSampleStepSize = 1 / (kSplineTableSize - 1), float32ArraySupported = typeof Float32Array !== "undefined";
+      var NEWTON_ITERATIONS = 4,
+        NEWTON_MIN_SLOPE = 1e-3,
+        SUBDIVISION_PRECISION = 1e-7,
+        SUBDIVISION_MAX_ITERATIONS = 10,
+        kSplineTableSize = 11,
+        kSampleStepSize = 1 / (kSplineTableSize - 1),
+        float32ArraySupported = typeof Float32Array !== "undefined";
       if (arguments.length !== 4) {
         return false;
       }
       for (var i2 = 0; i2 < 4; ++i2) {
-        if (typeof arguments[i2] !== "number" || isNaN(arguments[i2]) || !isFinite(arguments[i2])) {
+        if (
+          typeof arguments[i2] !== "number" ||
+          isNaN(arguments[i2]) ||
+          !isFinite(arguments[i2])
+        ) {
           return false;
         }
       }
@@ -12054,7 +13798,9 @@ var require_cytoscape_cjs = __commonJS({
       mX2 = Math.min(mX2, 1);
       mX1 = Math.max(mX1, 0);
       mX2 = Math.max(mX2, 0);
-      var mSampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+      var mSampleValues = float32ArraySupported
+        ? new Float32Array(kSplineTableSize)
+        : new Array(kSplineTableSize);
       function A(aA1, aA2) {
         return 1 - 3 * aA2 + 3 * aA1;
       }
@@ -12087,7 +13833,9 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       function binarySubdivide(aX, aA, aB) {
-        var currentX, currentT, i3 = 0;
+        var currentX,
+          currentT,
+          i3 = 0;
         do {
           currentT = aA + (aB - aA) / 2;
           currentX = calcBezier(currentT, mX1, mX2) - aX;
@@ -12096,22 +13844,39 @@ var require_cytoscape_cjs = __commonJS({
           } else {
             aA = currentT;
           }
-        } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i3 < SUBDIVISION_MAX_ITERATIONS);
+        } while (
+          Math.abs(currentX) > SUBDIVISION_PRECISION &&
+          ++i3 < SUBDIVISION_MAX_ITERATIONS
+        );
         return currentT;
       }
       function getTForX(aX) {
-        var intervalStart = 0, currentSample = 1, lastSample = kSplineTableSize - 1;
-        for (; currentSample !== lastSample && mSampleValues[currentSample] <= aX; ++currentSample) {
+        var intervalStart = 0,
+          currentSample = 1,
+          lastSample = kSplineTableSize - 1;
+        for (
+          ;
+          currentSample !== lastSample && mSampleValues[currentSample] <= aX;
+          ++currentSample
+        ) {
           intervalStart += kSampleStepSize;
         }
         --currentSample;
-        var dist2 = (aX - mSampleValues[currentSample]) / (mSampleValues[currentSample + 1] - mSampleValues[currentSample]), guessForT = intervalStart + dist2 * kSampleStepSize, initialSlope = getSlope(guessForT, mX1, mX2);
+        var dist2 =
+            (aX - mSampleValues[currentSample]) /
+            (mSampleValues[currentSample + 1] - mSampleValues[currentSample]),
+          guessForT = intervalStart + dist2 * kSampleStepSize,
+          initialSlope = getSlope(guessForT, mX1, mX2);
         if (initialSlope >= NEWTON_MIN_SLOPE) {
           return newtonRaphsonIterate(aX, guessForT);
         } else if (initialSlope === 0) {
           return guessForT;
         } else {
-          return binarySubdivide(aX, intervalStart, intervalStart + kSampleStepSize);
+          return binarySubdivide(
+            aX,
+            intervalStart,
+            intervalStart + kSampleStepSize,
+          );
         }
       }
       var _precomputed = false;
@@ -12136,22 +13901,25 @@ var require_cytoscape_cjs = __commonJS({
         }
         return calcBezier(getTForX(aX), mY1, mY2);
       };
-      f.getControlPoints = function() {
-        return [{
-          x: mX1,
-          y: mY1
-        }, {
-          x: mX2,
-          y: mY2
-        }];
+      f.getControlPoints = function () {
+        return [
+          {
+            x: mX1,
+            y: mY1,
+          },
+          {
+            x: mX2,
+            y: mY2,
+          },
+        ];
       };
       var str = "generateBezier(" + [mX1, mY1, mX2, mY2] + ")";
-      f.toString = function() {
+      f.toString = function () {
         return str;
       };
       return f;
     }
-    var generateSpringRK4 = /* @__PURE__ */ function() {
+    var generateSpringRK4 = /* @__PURE__ */ (function () {
       function springAccelerationForState(state) {
         return -state.tension * state.x - state.friction * state.v;
       }
@@ -12160,29 +13928,41 @@ var require_cytoscape_cjs = __commonJS({
           x: initialState.x + derivative.dx * dt,
           v: initialState.v + derivative.dv * dt,
           tension: initialState.tension,
-          friction: initialState.friction
+          friction: initialState.friction,
         };
         return {
           dx: state.v,
-          dv: springAccelerationForState(state)
+          dv: springAccelerationForState(state),
         };
       }
       function springIntegrateState(state, dt) {
         var a = {
-          dx: state.v,
-          dv: springAccelerationForState(state)
-        }, b = springEvaluateStateWithDerivative(state, dt * 0.5, a), c = springEvaluateStateWithDerivative(state, dt * 0.5, b), d = springEvaluateStateWithDerivative(state, dt, c), dxdt = 1 / 6 * (a.dx + 2 * (b.dx + c.dx) + d.dx), dvdt = 1 / 6 * (a.dv + 2 * (b.dv + c.dv) + d.dv);
+            dx: state.v,
+            dv: springAccelerationForState(state),
+          },
+          b = springEvaluateStateWithDerivative(state, dt * 0.5, a),
+          c = springEvaluateStateWithDerivative(state, dt * 0.5, b),
+          d = springEvaluateStateWithDerivative(state, dt, c),
+          dxdt = (1 / 6) * (a.dx + 2 * (b.dx + c.dx) + d.dx),
+          dvdt = (1 / 6) * (a.dv + 2 * (b.dv + c.dv) + d.dv);
         state.x = state.x + dxdt * dt;
         state.v = state.v + dvdt * dt;
         return state;
       }
       return function springRK4Factory(tension, friction, duration) {
         var initState = {
-          x: -1,
-          v: 0,
-          tension: null,
-          friction: null
-        }, path = [0], time_lapsed = 0, tolerance = 1 / 1e4, DT = 16 / 1e3, have_duration, dt, last_state;
+            x: -1,
+            v: 0,
+            tension: null,
+            friction: null,
+          },
+          path = [0],
+          time_lapsed = 0,
+          tolerance = 1 / 1e4,
+          DT = 16 / 1e3,
+          have_duration,
+          dt,
+          last_state;
         tension = parseFloat(tension) || 500;
         friction = parseFloat(friction) || 20;
         duration = duration || null;
@@ -12191,35 +13971,42 @@ var require_cytoscape_cjs = __commonJS({
         have_duration = duration !== null;
         if (have_duration) {
           time_lapsed = springRK4Factory(tension, friction);
-          dt = time_lapsed / duration * DT;
+          dt = (time_lapsed / duration) * DT;
         } else {
           dt = DT;
         }
-        for (; ; ) {
+        for (;;) {
           last_state = springIntegrateState(last_state || initState, dt);
           path.push(1 + last_state.x);
           time_lapsed += 16;
-          if (!(Math.abs(last_state.x) > tolerance && Math.abs(last_state.v) > tolerance)) {
+          if (
+            !(
+              Math.abs(last_state.x) > tolerance &&
+              Math.abs(last_state.v) > tolerance
+            )
+          ) {
             break;
           }
         }
-        return !have_duration ? time_lapsed : function(percentComplete) {
-          return path[percentComplete * (path.length - 1) | 0];
-        };
+        return !have_duration
+          ? time_lapsed
+          : function (percentComplete) {
+              return path[(percentComplete * (path.length - 1)) | 0];
+            };
       };
-    }();
+    })();
     var cubicBezier = function cubicBezier2(t1, p1, t2, p2) {
       var bezier = generateCubicBezier(t1, p1, t2, p2);
-      return function(start, end, percent) {
+      return function (start, end, percent) {
         return start + (end - start) * bezier(percent);
       };
     };
     var easings = {
-      "linear": function linear(start, end, percent) {
+      linear: function linear(start, end, percent) {
         return start + (end - start) * percent;
       },
       // default easings
-      "ease": cubicBezier(0.25, 0.1, 0.25, 1),
+      ease: cubicBezier(0.25, 0.1, 0.25, 1),
       "ease-in": cubicBezier(0.42, 0, 1, 1),
       "ease-out": cubicBezier(0, 0, 0.58, 1),
       "ease-in-out": cubicBezier(0.42, 0, 0.58, 1),
@@ -12252,16 +14039,16 @@ var require_cytoscape_cjs = __commonJS({
       "ease-out-circ": cubicBezier(0.075, 0.82, 0.165, 1),
       "ease-in-out-circ": cubicBezier(0.785, 0.135, 0.15, 0.86),
       // user param easings...
-      "spring": function spring(tension, friction, duration) {
+      spring: function spring(tension, friction, duration) {
         if (duration === 0) {
           return easings.linear;
         }
         var spring2 = generateSpringRK4(tension, friction, duration);
-        return function(start, end, percent) {
+        return function (start, end, percent) {
           return start + (end - start) * spring2(percent);
         };
       },
-      "cubic-bezier": cubicBezier
+      "cubic-bezier": cubicBezier,
     };
     function getEasedValue(type, start, end, percent, easingFn) {
       if (percent === 1) {
@@ -12348,7 +14135,7 @@ var require_cytoscape_cjs = __commonJS({
             args = [];
           } else {
             name = easingVals[1];
-            args = easingVals.slice(2).map(function(n) {
+            args = easingVals.slice(2).map(function (n) {
               return +n;
             });
           }
@@ -12408,7 +14195,11 @@ var require_cytoscape_cjs = __commonJS({
         var animatingZoom = endZoom != null && isCore;
         if (animatingZoom) {
           if (valid(startZoom, endZoom)) {
-            _p.zoom = bound(_p.minZoom, ease(startZoom, endZoom, percent, easing), _p.maxZoom);
+            _p.zoom = bound(
+              _p.minZoom,
+              ease(startZoom, endZoom, percent, easing),
+              _p.maxZoom,
+            );
           }
           self2.emit("zoom");
         }
@@ -12570,7 +14361,7 @@ var require_cytoscape_cjs = __commonJS({
         } else {
           headlessStep();
         }
-      }
+      },
     };
     var emitterOptions = {
       qualifierCompare: function qualifierCompare(selector1, selector2) {
@@ -12583,7 +14374,11 @@ var require_cytoscape_cjs = __commonJS({
       eventMatches: function eventMatches(cy, listener, eventObj) {
         var selector = listener.qualifier;
         if (selector != null) {
-          return cy !== eventObj.target && element(eventObj.target) && selector.matches(eventObj.target);
+          return (
+            cy !== eventObj.target &&
+            element(eventObj.target) &&
+            selector.matches(eventObj.target)
+          );
         }
         return true;
       },
@@ -12593,7 +14388,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       callbackContext: function callbackContext(cy, listener, eventObj) {
         return listener.qualifier != null ? eventObj.target : cy;
-      }
+      },
     };
     var argSelector = function argSelector2(arg) {
       if (string(arg)) {
@@ -12641,7 +14436,7 @@ var require_cytoscape_cjs = __commonJS({
         this.emit(event2);
         this.notify(event2, eles);
         return this;
-      }
+      },
     };
     define2.eventAliasesOn(elesfn);
     var corefn$7 = {
@@ -12655,7 +14450,7 @@ var require_cytoscape_cjs = __commonJS({
         options = options || {};
         options.bg = options.bg || "#fff";
         return renderer2.jpg(options);
-      }
+      },
     };
     corefn$7.jpeg = corefn$7.jpg;
     var corefn$6 = {
@@ -12672,7 +14467,11 @@ var require_cytoscape_cjs = __commonJS({
         var name = options.name;
         var Layout = cy.extension("layout", name);
         if (Layout == null) {
-          error("No such layout `" + name + "` found.  Did you forget to import it and `cytoscape.use()` it?");
+          error(
+            "No such layout `" +
+              name +
+              "` found.  Did you forget to import it and `cytoscape.use()` it?",
+          );
           return;
         }
         var eles;
@@ -12681,12 +14480,14 @@ var require_cytoscape_cjs = __commonJS({
         } else {
           eles = options.eles != null ? options.eles : cy.$();
         }
-        var layout3 = new Layout(extend({}, options, {
-          cy,
-          eles
-        }));
+        var layout3 = new Layout(
+          extend({}, options, {
+            cy,
+            eles,
+          }),
+        );
         return layout3;
-      }
+      },
     };
     corefn$6.createLayout = corefn$6.makeLayout = corefn$6.layout;
     var corefn$5 = {
@@ -12694,7 +14495,8 @@ var require_cytoscape_cjs = __commonJS({
         var _p = this._private;
         if (this.batching()) {
           _p.batchNotifications = _p.batchNotifications || {};
-          var eles = _p.batchNotifications[eventName] = _p.batchNotifications[eventName] || this.collection();
+          var eles = (_p.batchNotifications[eventName] =
+            _p.batchNotifications[eventName] || this.collection());
           if (eventEles != null) {
             eles.merge(eventEles);
           }
@@ -12747,7 +14549,7 @@ var require_cytoscape_cjs = __commonJS({
         if (_p.batchCount === 0) {
           _p.batchStyleEles.updateStyle();
           var renderer2 = this.renderer();
-          Object.keys(_p.batchNotifications).forEach(function(eventName) {
+          Object.keys(_p.batchNotifications).forEach(function (eventName) {
             var eles = _p.batchNotifications[eventName];
             if (eles.empty()) {
               renderer2.notify(eventName);
@@ -12767,7 +14569,7 @@ var require_cytoscape_cjs = __commonJS({
       // for backwards compatibility
       batchData: function batchData(map) {
         var cy = this;
-        return this.batch(function() {
+        return this.batch(function () {
           var ids = Object.keys(map);
           for (var i2 = 0; i2 < ids.length; i2++) {
             var id = ids[i2];
@@ -12776,7 +14578,7 @@ var require_cytoscape_cjs = __commonJS({
             ele.data(data2);
           }
         });
-      }
+      },
     };
     var rendererDefaults = defaults$g({
       hideEdgesOnViewport: false,
@@ -12788,7 +14590,7 @@ var require_cytoscape_cjs = __commonJS({
       touchTapThreshold: 8,
       wheelSensitivity: 1,
       debug: false,
-      showFps: false
+      showFps: false,
     });
     var corefn$4 = {
       renderTo: function renderTo(context, zoom, pan, pxRatio) {
@@ -12812,11 +14614,18 @@ var require_cytoscape_cjs = __commonJS({
         var cy = this;
         var RendererProto = cy.extension("renderer", options.name);
         if (RendererProto == null) {
-          error("Can not initialise: No such renderer `".concat(options.name, "` found. Did you forget to import it and `cytoscape.use()` it?"));
+          error(
+            "Can not initialise: No such renderer `".concat(
+              options.name,
+              "` found. Did you forget to import it and `cytoscape.use()` it?",
+            ),
+          );
           return;
         }
         if (options.wheelSensitivity !== void 0) {
-          warn("You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.");
+          warn(
+            "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+          );
         }
         var rOpts = rendererDefaults(options);
         rOpts.cy = cy;
@@ -12834,7 +14643,7 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
         cy._private.renderer = null;
-        cy.mutableElements().forEach(function(ele) {
+        cy.mutableElements().forEach(function (ele) {
           var _p = ele._private;
           _p.rscratch = {};
           _p.rstyle = {};
@@ -12847,7 +14656,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       offRender: function offRender(fn2) {
         return this.off("render", fn2);
-      }
+      },
     };
     corefn$4.invalidateDimensions = corefn$4.resize;
     var corefn$3 = {
@@ -12869,7 +14678,7 @@ var require_cytoscape_cjs = __commonJS({
         return new Collection(this);
       },
       nodes: function nodes(selector) {
-        var nodes2 = this.$(function(ele) {
+        var nodes2 = this.$(function (ele) {
           return ele.isNode();
         });
         if (selector) {
@@ -12878,7 +14687,7 @@ var require_cytoscape_cjs = __commonJS({
         return nodes2;
       },
       edges: function edges(selector) {
-        var edges2 = this.$(function(ele) {
+        var edges2 = this.$(function (ele) {
           return ele.isEdge();
         });
         if (selector) {
@@ -12897,13 +14706,13 @@ var require_cytoscape_cjs = __commonJS({
       },
       mutableElements: function mutableElements() {
         return this._private.elements;
-      }
+      },
     };
     corefn$3.elements = corefn$3.filter = corefn$3.$;
     var styfn$8 = {};
     var TRUE = "t";
     var FALSE = "f";
-    styfn$8.apply = function(eles) {
+    styfn$8.apply = function (eles) {
       var self2 = this;
       var _p = self2._private;
       var cy = _p.cy;
@@ -12928,9 +14737,9 @@ var require_cytoscape_cjs = __commonJS({
       }
       return updatedEles;
     };
-    styfn$8.getPropertiesDiff = function(oldCxtKey, newCxtKey) {
+    styfn$8.getPropertiesDiff = function (oldCxtKey, newCxtKey) {
       var self2 = this;
-      var cache2 = self2._private.propDiffs = self2._private.propDiffs || {};
+      var cache2 = (self2._private.propDiffs = self2._private.propDiffs || {});
       var dualCxtKey = oldCxtKey + "-" + newCxtKey;
       var cachedVal = cache2[dualCxtKey];
       if (cachedVal) {
@@ -12944,7 +14753,7 @@ var require_cytoscape_cjs = __commonJS({
         var newHasCxt = newCxtKey[i2] === TRUE;
         var cxtHasDiffed = oldHasCxt !== newHasCxt;
         var cxtHasMappedProps = cxt.mappedProperties.length > 0;
-        if (cxtHasDiffed || newHasCxt && cxtHasMappedProps) {
+        if (cxtHasDiffed || (newHasCxt && cxtHasMappedProps)) {
           var props = void 0;
           if (cxtHasDiffed && cxtHasMappedProps) {
             props = cxt.properties;
@@ -12978,14 +14787,15 @@ var require_cytoscape_cjs = __commonJS({
       cache2[dualCxtKey] = diffProps;
       return diffProps;
     };
-    styfn$8.getContextMeta = function(ele) {
+    styfn$8.getContextMeta = function (ele) {
       var self2 = this;
       var cxtKey = "";
       var diffProps;
       var prevKey = ele._private.styleCxtKey || "";
       for (var i2 = 0; i2 < self2.length; i2++) {
         var context = self2[i2];
-        var contextSelectorMatches = context.selector && context.selector.matches(ele);
+        var contextSelectorMatches =
+          context.selector && context.selector.matches(ele);
         if (contextSelectorMatches) {
           cxtKey += TRUE;
         } else {
@@ -12997,20 +14807,21 @@ var require_cytoscape_cjs = __commonJS({
       return {
         key: cxtKey,
         diffPropNames: diffProps,
-        empty: diffProps.length === 0
+        empty: diffProps.length === 0,
       };
     };
-    styfn$8.getContextStyle = function(cxtMeta) {
+    styfn$8.getContextStyle = function (cxtMeta) {
       var cxtKey = cxtMeta.key;
       var self2 = this;
-      var cxtStyles = this._private.contextStyles = this._private.contextStyles || {};
+      var cxtStyles = (this._private.contextStyles =
+        this._private.contextStyles || {});
       if (cxtStyles[cxtKey]) {
         return cxtStyles[cxtKey];
       }
       var style = {
         _private: {
-          key: cxtKey
-        }
+          key: cxtKey,
+        },
       };
       for (var i2 = 0; i2 < self2.length; i2++) {
         var cxt = self2[i2];
@@ -13026,7 +14837,7 @@ var require_cytoscape_cjs = __commonJS({
       cxtStyles[cxtKey] = style;
       return style;
     };
-    styfn$8.applyContextStyle = function(cxtMeta, cxtStyle, ele) {
+    styfn$8.applyContextStyle = function (cxtMeta, cxtStyle, ele) {
       var self2 = this;
       var diffProps = cxtMeta.diffPropNames;
       var retDiffProps = {};
@@ -13041,28 +14852,33 @@ var require_cytoscape_cjs = __commonJS({
           } else if (eleProp.bypass) {
             cxtProp = {
               name: diffPropName,
-              deleteBypassed: true
+              deleteBypassed: true,
             };
           } else {
             cxtProp = {
               name: diffPropName,
-              "delete": true
+              delete: true,
             };
           }
         }
         if (eleProp === cxtProp) {
           continue;
         }
-        if (cxtProp.mapped === types.fn && eleProp != null && eleProp.mapping != null && eleProp.mapping.value === cxtProp.value) {
+        if (
+          cxtProp.mapped === types.fn &&
+          eleProp != null &&
+          eleProp.mapping != null &&
+          eleProp.mapping.value === cxtProp.value
+        ) {
           var mapping = eleProp.mapping;
-          var fnValue = mapping.fnValue = cxtProp.value(ele);
+          var fnValue = (mapping.fnValue = cxtProp.value(ele));
           if (fnValue === mapping.prevFnValue) {
             continue;
           }
         }
-        var retDiffProp = retDiffProps[diffPropName] = {
-          prev: eleProp
-        };
+        var retDiffProp = (retDiffProps[diffPropName] = {
+          prev: eleProp,
+        });
         self2.applyParsedProperty(ele, cxtProp);
         retDiffProp.next = ele.pstyle(diffPropName);
         if (retDiffProp.next && retDiffProp.next.bypass) {
@@ -13070,10 +14886,10 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       return {
-        diffProps: retDiffProps
+        diffProps: retDiffProps,
       };
     };
-    styfn$8.updateStyleHints = function(ele) {
+    styfn$8.updateStyleHints = function (ele) {
       var _p = ele._private;
       var self2 = this;
       var propNames = self2.propertyGroupNames;
@@ -13093,10 +14909,16 @@ var require_cytoscape_cjs = __commonJS({
         _p.styleKeys[grKey] = [DEFAULT_HASH_SEED, DEFAULT_HASH_SEED_ALT];
       }
       var updateGrKey1 = function updateGrKey12(val, grKey2) {
-        return _p.styleKeys[grKey2][0] = hashInt(val, _p.styleKeys[grKey2][0]);
+        return (_p.styleKeys[grKey2][0] = hashInt(
+          val,
+          _p.styleKeys[grKey2][0],
+        ));
       };
       var updateGrKey2 = function updateGrKey22(val, grKey2) {
-        return _p.styleKeys[grKey2][1] = hashIntAlt(val, _p.styleKeys[grKey2][1]);
+        return (_p.styleKeys[grKey2][1] = hashIntAlt(
+          val,
+          _p.styleKeys[grKey2][1],
+        ));
       };
       var updateGrKey = function updateGrKey3(val, grKey2) {
         updateGrKey1(val, grKey2);
@@ -13111,7 +14933,9 @@ var require_cytoscape_cjs = __commonJS({
       };
       var N = 2e9;
       var cleanNum = function cleanNum2(val) {
-        return -128 < val && val < 128 && Math.floor(val) !== val ? N - (val * 1024 | 0) : val;
+        return -128 < val && val < 128 && Math.floor(val) !== val
+          ? N - ((val * 1024) | 0)
+          : val;
       };
       for (var _i = 0; _i < propNames.length; _i++) {
         var name = propNames[_i];
@@ -13155,26 +14979,58 @@ var require_cytoscape_cjs = __commonJS({
       _p.labelDimsKey = combineHashesArray(sk.labelDimensions);
       var labelKeys = propHash(ele, ["label"], sk.labelDimensions);
       _p.labelKey = combineHashesArray(labelKeys);
-      _p.labelStyleKey = combineHashesArray(hashArrays(sk.commonLabel, labelKeys));
+      _p.labelStyleKey = combineHashesArray(
+        hashArrays(sk.commonLabel, labelKeys),
+      );
       if (!isNode) {
-        var sourceLabelKeys = propHash(ele, ["source-label"], sk.labelDimensions);
+        var sourceLabelKeys = propHash(
+          ele,
+          ["source-label"],
+          sk.labelDimensions,
+        );
         _p.sourceLabelKey = combineHashesArray(sourceLabelKeys);
-        _p.sourceLabelStyleKey = combineHashesArray(hashArrays(sk.commonLabel, sourceLabelKeys));
-        var targetLabelKeys = propHash(ele, ["target-label"], sk.labelDimensions);
+        _p.sourceLabelStyleKey = combineHashesArray(
+          hashArrays(sk.commonLabel, sourceLabelKeys),
+        );
+        var targetLabelKeys = propHash(
+          ele,
+          ["target-label"],
+          sk.labelDimensions,
+        );
         _p.targetLabelKey = combineHashesArray(targetLabelKeys);
-        _p.targetLabelStyleKey = combineHashesArray(hashArrays(sk.commonLabel, targetLabelKeys));
+        _p.targetLabelStyleKey = combineHashesArray(
+          hashArrays(sk.commonLabel, targetLabelKeys),
+        );
       }
       if (isNode) {
-        var _p$styleKeys = _p.styleKeys, nodeBody = _p$styleKeys.nodeBody, nodeBorder = _p$styleKeys.nodeBorder, nodeOutline = _p$styleKeys.nodeOutline, backgroundImage = _p$styleKeys.backgroundImage, compound = _p$styleKeys.compound, pie = _p$styleKeys.pie;
-        var nodeKeys = [nodeBody, nodeBorder, nodeOutline, backgroundImage, compound, pie].filter(function(k) {
-          return k != null;
-        }).reduce(hashArrays, [DEFAULT_HASH_SEED, DEFAULT_HASH_SEED_ALT]);
+        var _p$styleKeys = _p.styleKeys,
+          nodeBody = _p$styleKeys.nodeBody,
+          nodeBorder = _p$styleKeys.nodeBorder,
+          nodeOutline = _p$styleKeys.nodeOutline,
+          backgroundImage = _p$styleKeys.backgroundImage,
+          compound = _p$styleKeys.compound,
+          pie = _p$styleKeys.pie;
+        var nodeKeys = [
+          nodeBody,
+          nodeBorder,
+          nodeOutline,
+          backgroundImage,
+          compound,
+          pie,
+        ]
+          .filter(function (k) {
+            return k != null;
+          })
+          .reduce(hashArrays, [DEFAULT_HASH_SEED, DEFAULT_HASH_SEED_ALT]);
         _p.nodeKey = combineHashesArray(nodeKeys);
-        _p.hasPie = pie != null && pie[0] !== DEFAULT_HASH_SEED && pie[1] !== DEFAULT_HASH_SEED_ALT;
+        _p.hasPie =
+          pie != null &&
+          pie[0] !== DEFAULT_HASH_SEED &&
+          pie[1] !== DEFAULT_HASH_SEED_ALT;
       }
       return oldStyleKey !== _p.styleKey;
     };
-    styfn$8.clearStyleHints = function(ele) {
+    styfn$8.clearStyleHints = function (ele) {
       var _p = ele._private;
       _p.styleCxtKey = "";
       _p.styleKeys = {};
@@ -13188,7 +15044,7 @@ var require_cytoscape_cjs = __commonJS({
       _p.nodeKey = null;
       _p.hasPie = null;
     };
-    styfn$8.applyParsedProperty = function(ele, parsedProp) {
+    styfn$8.applyParsedProperty = function (ele, parsedProp) {
       var self2 = this;
       var prop = parsedProp;
       var style = ele._private.style;
@@ -13214,9 +15070,13 @@ var require_cytoscape_cjs = __commonJS({
         var toVal = getVal(prop);
         self2.checkTriggers(ele, prop.name, fromVal, toVal);
       };
-      if (parsedProp.name === "curve-style" && ele.isEdge() && // loops must be bundled beziers
-      (parsedProp.value !== "bezier" && ele.isLoop() || // edges connected to compound nodes can not be haystacks
-      parsedProp.value === "haystack" && (ele.source().isParent() || ele.target().isParent()))) {
+      if (
+        parsedProp.name === "curve-style" &&
+        ele.isEdge() && // loops must be bundled beziers
+        ((parsedProp.value !== "bezier" && ele.isLoop()) || // edges connected to compound nodes can not be haystacks
+          (parsedProp.value === "haystack" &&
+            (ele.source().isParent() || ele.target().isParent())))
+      ) {
         prop = parsedProp = this.parse(parsedProp.name, "bezier", propIsBypass);
       }
       if (prop["delete"]) {
@@ -13249,7 +15109,19 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       var printMappingErr = function printMappingErr2() {
-        warn("Do not assign mappings to elements without corresponding data (i.e. ele `" + ele.id() + "` has no mapping for property `" + prop.name + "` with data field `" + prop.field + "`); try a `[" + prop.field + "]` selector to limit scope to elements with `" + prop.field + "` defined");
+        warn(
+          "Do not assign mappings to elements without corresponding data (i.e. ele `" +
+            ele.id() +
+            "` has no mapping for property `" +
+            prop.name +
+            "` with data field `" +
+            prop.field +
+            "`); try a `[" +
+            prop.field +
+            "]` selector to limit scope to elements with `" +
+            prop.field +
+            "` defined",
+        );
       };
       switch (prop.mapped) {
         case types.mapData: {
@@ -13265,7 +15137,15 @@ var require_cytoscape_cjs = __commonJS({
           }
           var percent;
           if (!number$1(fieldVal)) {
-            warn("Do not use continuous mappers without specifying numeric data (i.e. `" + prop.field + ": " + fieldVal + "` for `" + ele.id() + "` is non-numeric)");
+            warn(
+              "Do not use continuous mappers without specifying numeric data (i.e. `" +
+                prop.field +
+                ": " +
+                fieldVal +
+                "` for `" +
+                ele.id() +
+                "` is non-numeric)",
+            );
             return false;
           } else {
             var fieldWidth = prop.fieldMax - prop.fieldMin;
@@ -13289,18 +15169,29 @@ var require_cytoscape_cjs = __commonJS({
             var b2 = prop.valueMax[2];
             var a1 = prop.valueMin[3] == null ? 1 : prop.valueMin[3];
             var a2 = prop.valueMax[3] == null ? 1 : prop.valueMax[3];
-            var clr = [Math.round(r1 + (r2 - r1) * percent), Math.round(g1 + (g2 - g1) * percent), Math.round(b1 + (b2 - b1) * percent), Math.round(a1 + (a2 - a1) * percent)];
+            var clr = [
+              Math.round(r1 + (r2 - r1) * percent),
+              Math.round(g1 + (g2 - g1) * percent),
+              Math.round(b1 + (b2 - b1) * percent),
+              Math.round(a1 + (a2 - a1) * percent),
+            ];
             flatProp = {
               // colours are simple, so just create the flat property instead of expensive string parsing
               bypass: prop.bypass,
               // we're a bypass if the mapping property is a bypass
               name: prop.name,
               value: clr,
-              strValue: "rgb(" + clr[0] + ", " + clr[1] + ", " + clr[2] + ")"
+              strValue: "rgb(" + clr[0] + ", " + clr[1] + ", " + clr[2] + ")",
             };
           } else if (type.number) {
-            var calcValue = prop.valueMin + (prop.valueMax - prop.valueMin) * percent;
-            flatProp = this.parse(prop.name, calcValue, prop.bypass, flatPropMapping);
+            var calcValue =
+              prop.valueMin + (prop.valueMax - prop.valueMin) * percent;
+            flatProp = this.parse(
+              prop.name,
+              calcValue,
+              prop.bypass,
+              flatPropMapping,
+            );
           } else {
             return false;
           }
@@ -13320,7 +15211,12 @@ var require_cytoscape_cjs = __commonJS({
             _fieldVal = _fieldVal[_field];
           }
           if (_fieldVal != null) {
-            flatProp = this.parse(prop.name, _fieldVal, prop.bypass, flatPropMapping);
+            flatProp = this.parse(
+              prop.name,
+              _fieldVal,
+              prop.bypass,
+              flatPropMapping,
+            );
           }
           if (!flatProp) {
             printMappingErr();
@@ -13335,12 +15231,29 @@ var require_cytoscape_cjs = __commonJS({
           var fnRetVal = prop.fnValue != null ? prop.fnValue : fn2(ele);
           prop.prevFnValue = fnRetVal;
           if (fnRetVal == null) {
-            warn("Custom function mappers may not return null (i.e. `" + prop.name + "` for ele `" + ele.id() + "` is null)");
+            warn(
+              "Custom function mappers may not return null (i.e. `" +
+                prop.name +
+                "` for ele `" +
+                ele.id() +
+                "` is null)",
+            );
             return false;
           }
-          flatProp = this.parse(prop.name, fnRetVal, prop.bypass, flatPropMapping);
+          flatProp = this.parse(
+            prop.name,
+            fnRetVal,
+            prop.bypass,
+            flatPropMapping,
+          );
           if (!flatProp) {
-            warn("Custom function mappers may not return invalid values for the property type (i.e. `" + prop.name + "` for ele `" + ele.id() + "` is invalid)");
+            warn(
+              "Custom function mappers may not return invalid values for the property type (i.e. `" +
+                prop.name +
+                "` for ele `" +
+                ele.id() +
+                "` is invalid)",
+            );
             return false;
           }
           flatProp.mapping = copy(prop);
@@ -13369,7 +15282,7 @@ var require_cytoscape_cjs = __commonJS({
       checkTriggers();
       return true;
     };
-    styfn$8.cleanElements = function(eles, keepBypasses) {
+    styfn$8.cleanElements = function (eles, keepBypasses) {
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
         this.clearStyleHints(ele);
@@ -13394,12 +15307,12 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    styfn$8.update = function() {
+    styfn$8.update = function () {
       var cy = this._private.cy;
       var eles = cy.mutableElements();
       eles.updateStyle();
     };
-    styfn$8.updateTransitions = function(ele, diffProps) {
+    styfn$8.updateTransitions = function (ele, diffProps) {
       var self2 = this;
       var _p = ele._private;
       var props = ele.pstyle("transition-property").value;
@@ -13431,7 +15344,10 @@ var require_cytoscape_cjs = __commonJS({
             diff = toProp.value - fromProp.value;
             initVal = fromProp.value + initDt * diff;
           } else if (array(fromProp.value) && array(toProp.value)) {
-            diff = fromProp.value[0] !== toProp.value[0] || fromProp.value[1] !== toProp.value[1] || fromProp.value[2] !== toProp.value[2];
+            diff =
+              fromProp.value[0] !== toProp.value[0] ||
+              fromProp.value[1] !== toProp.value[1] ||
+              fromProp.value[2] !== toProp.value[2];
             initVal = fromProp.strValue;
           }
           if (diff) {
@@ -13444,75 +15360,107 @@ var require_cytoscape_cjs = __commonJS({
           return;
         }
         _p.transitioning = true;
-        new Promise$1(function(resolve2) {
+        new Promise$1(function (resolve2) {
           if (delay > 0) {
             ele.delayAnimation(delay).play().promise().then(resolve2);
           } else {
             resolve2();
           }
-        }).then(function() {
-          return ele.animation({
-            style,
-            duration,
-            easing: ele.pstyle("transition-timing-function").value,
-            queue: false
-          }).play().promise();
-        }).then(function() {
-          self2.removeBypasses(ele, props);
-          ele.emitAndNotify("style");
-          _p.transitioning = false;
-        });
+        })
+          .then(function () {
+            return ele
+              .animation({
+                style,
+                duration,
+                easing: ele.pstyle("transition-timing-function").value,
+                queue: false,
+              })
+              .play()
+              .promise();
+          })
+          .then(function () {
+            self2.removeBypasses(ele, props);
+            ele.emitAndNotify("style");
+            _p.transitioning = false;
+          });
       } else if (_p.transitioning) {
         this.removeBypasses(ele, props);
         ele.emitAndNotify("style");
         _p.transitioning = false;
       }
     };
-    styfn$8.checkTrigger = function(ele, name, fromValue, toValue, getTrigger, onTrigger) {
+    styfn$8.checkTrigger = function (
+      ele,
+      name,
+      fromValue,
+      toValue,
+      getTrigger,
+      onTrigger,
+    ) {
       var prop = this.properties[name];
       var triggerCheck = getTrigger(prop);
       if (triggerCheck != null && triggerCheck(fromValue, toValue)) {
         onTrigger(prop);
       }
     };
-    styfn$8.checkZOrderTrigger = function(ele, name, fromValue, toValue) {
+    styfn$8.checkZOrderTrigger = function (ele, name, fromValue, toValue) {
       var _this = this;
-      this.checkTrigger(ele, name, fromValue, toValue, function(prop) {
-        return prop.triggersZOrder;
-      }, function() {
-        _this._private.cy.notify("zorder", ele);
-      });
+      this.checkTrigger(
+        ele,
+        name,
+        fromValue,
+        toValue,
+        function (prop) {
+          return prop.triggersZOrder;
+        },
+        function () {
+          _this._private.cy.notify("zorder", ele);
+        },
+      );
     };
-    styfn$8.checkBoundsTrigger = function(ele, name, fromValue, toValue) {
-      this.checkTrigger(ele, name, fromValue, toValue, function(prop) {
-        return prop.triggersBounds;
-      }, function(prop) {
-        ele.dirtyCompoundBoundsCache();
-        ele.dirtyBoundingBoxCache();
-        if (
-          // only for beziers -- so performance of other edges isn't affected
-          prop.triggersBoundsOfParallelBeziers && name === "curve-style" && (fromValue === "bezier" || toValue === "bezier")
-        ) {
-          ele.parallelEdges().forEach(function(pllEdge) {
-            if (pllEdge.isBundledBezier()) {
-              pllEdge.dirtyBoundingBoxCache();
-            }
-          });
-        }
-        if (prop.triggersBoundsOfConnectedEdges && name === "display" && (fromValue === "none" || toValue === "none")) {
-          ele.connectedEdges().forEach(function(edge) {
-            edge.dirtyBoundingBoxCache();
-          });
-        }
-      });
+    styfn$8.checkBoundsTrigger = function (ele, name, fromValue, toValue) {
+      this.checkTrigger(
+        ele,
+        name,
+        fromValue,
+        toValue,
+        function (prop) {
+          return prop.triggersBounds;
+        },
+        function (prop) {
+          ele.dirtyCompoundBoundsCache();
+          ele.dirtyBoundingBoxCache();
+          if (
+            // only for beziers -- so performance of other edges isn't affected
+            prop.triggersBoundsOfParallelBeziers &&
+            name === "curve-style" &&
+            (fromValue === "bezier" || toValue === "bezier")
+          ) {
+            ele.parallelEdges().forEach(function (pllEdge) {
+              if (pllEdge.isBundledBezier()) {
+                pllEdge.dirtyBoundingBoxCache();
+              }
+            });
+          }
+          if (
+            prop.triggersBoundsOfConnectedEdges &&
+            name === "display" &&
+            (fromValue === "none" || toValue === "none")
+          ) {
+            ele.connectedEdges().forEach(function (edge) {
+              edge.dirtyBoundingBoxCache();
+            });
+          }
+        },
+      );
     };
-    styfn$8.checkTriggers = function(ele, name, fromValue, toValue) {
+    styfn$8.checkTriggers = function (ele, name, fromValue, toValue) {
       ele.dirtyStyleCache();
       this.checkZOrderTrigger(ele, name, fromValue, toValue);
       this.checkBoundsTrigger(ele, name, fromValue, toValue);
     };
     var styfn$7 = {};
-    styfn$7.applyBypass = function(eles, name, value, updateTransitions) {
+    styfn$7.applyBypass = function (eles, name, value, updateTransitions) {
       var self2 = this;
       var props = [];
       var isBypass = true;
@@ -13565,7 +15513,7 @@ var require_cytoscape_cjs = __commonJS({
           if (updateTransitions) {
             var prevProp = ele.pstyle(_prop.name);
             diffProp = diffProps[_prop.name] = {
-              prev: prevProp
+              prev: prevProp,
             };
           }
           ret = this.applyParsedProperty(ele, copy(_prop)) || ret;
@@ -13582,7 +15530,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return ret;
     };
-    styfn$7.overrideBypass = function(eles, name, value) {
+    styfn$7.overrideBypass = function (eles, name, value) {
       name = camel2dash(name);
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
@@ -13590,7 +15538,11 @@ var require_cytoscape_cjs = __commonJS({
         var type = this.properties[name].type;
         var isColor = type.color;
         var isMulti = type.mutiple;
-        var oldValue = !prop ? null : prop.pfValue != null ? prop.pfValue : prop.value;
+        var oldValue = !prop
+          ? null
+          : prop.pfValue != null
+            ? prop.pfValue
+            : prop.value;
         if (!prop || !prop.bypass) {
           this.applyBypass(ele, name, value);
         } else {
@@ -13610,10 +15562,10 @@ var require_cytoscape_cjs = __commonJS({
         this.checkTriggers(ele, name, oldValue, value);
       }
     };
-    styfn$7.removeAllBypasses = function(eles, updateTransitions) {
+    styfn$7.removeAllBypasses = function (eles, updateTransitions) {
       return this.removeBypasses(eles, this.propertyNames, updateTransitions);
     };
-    styfn$7.removeBypasses = function(eles, props, updateTransitions) {
+    styfn$7.removeBypasses = function (eles, props, updateTransitions) {
       var isBypass = true;
       for (var j = 0; j < eles.length; j++) {
         var ele = eles[j];
@@ -13627,9 +15579,9 @@ var require_cytoscape_cjs = __commonJS({
           }
           var value = "";
           var parsedProp = this.parse(name, value, true);
-          var diffProp = diffProps[prop.name] = {
-            prev: prevProp
-          };
+          var diffProp = (diffProps[prop.name] = {
+            prev: prevProp,
+          });
           this.applyParsedProperty(ele, parsedProp);
           diffProp.next = ele.pstyle(prop.name);
         }
@@ -13640,7 +15592,7 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var styfn$6 = {};
-    styfn$6.getEmSizeInPixels = function() {
+    styfn$6.getEmSizeInPixels = function () {
       var px = this.containerCss("font-size");
       if (px != null) {
         return parseFloat(px);
@@ -13648,23 +15600,25 @@ var require_cytoscape_cjs = __commonJS({
         return 1;
       }
     };
-    styfn$6.containerCss = function(propName) {
+    styfn$6.containerCss = function (propName) {
       var cy = this._private.cy;
       var domElement2 = cy.container();
       var containerWindow = cy.window();
       if (containerWindow && domElement2 && containerWindow.getComputedStyle) {
-        return containerWindow.getComputedStyle(domElement2).getPropertyValue(propName);
+        return containerWindow
+          .getComputedStyle(domElement2)
+          .getPropertyValue(propName);
       }
     };
     var styfn$5 = {};
-    styfn$5.getRenderedStyle = function(ele, prop) {
+    styfn$5.getRenderedStyle = function (ele, prop) {
       if (prop) {
         return this.getStylePropertyValue(ele, prop, true);
       } else {
         return this.getRawStyle(ele, true);
       }
     };
-    styfn$5.getRawStyle = function(ele, isRenderedVal) {
+    styfn$5.getRawStyle = function (ele, isRenderedVal) {
       var self2 = this;
       ele = ele[0];
       if (ele) {
@@ -13680,11 +15634,13 @@ var require_cytoscape_cjs = __commonJS({
         return rstyle;
       }
     };
-    styfn$5.getIndexedStyle = function(ele, property, subproperty, index) {
+    styfn$5.getIndexedStyle = function (ele, property, subproperty, index) {
       var pstyle = ele.pstyle(property)[subproperty][index];
-      return pstyle != null ? pstyle : ele.cy().style().getDefaultProperty(property)[subproperty][0];
+      return pstyle != null
+        ? pstyle
+        : ele.cy().style().getDefaultProperty(property)[subproperty][0];
     };
-    styfn$5.getStylePropertyValue = function(ele, propName, isRenderedVal) {
+    styfn$5.getStylePropertyValue = function (ele, propName, isRenderedVal) {
       var self2 = this;
       ele = ele[0];
       if (ele) {
@@ -13695,32 +15651,48 @@ var require_cytoscape_cjs = __commonJS({
         var type = prop.type;
         var styleProp = ele.pstyle(prop.name);
         if (styleProp) {
-          var value = styleProp.value, units = styleProp.units, strValue = styleProp.strValue;
-          if (isRenderedVal && type.number && value != null && number$1(value)) {
+          var value = styleProp.value,
+            units = styleProp.units,
+            strValue = styleProp.strValue;
+          if (
+            isRenderedVal &&
+            type.number &&
+            value != null &&
+            number$1(value)
+          ) {
             var zoom = ele.cy().zoom();
             var getRenderedValue = function getRenderedValue2(val) {
               return val * zoom;
             };
-            var getValueStringWithUnits = function getValueStringWithUnits2(val, units2) {
+            var getValueStringWithUnits = function getValueStringWithUnits2(
+              val,
+              units2,
+            ) {
               return getRenderedValue(val) + units2;
             };
             var isArrayValue = array(value);
-            var haveUnits = isArrayValue ? units.every(function(u) {
-              return u != null;
-            }) : units != null;
+            var haveUnits = isArrayValue
+              ? units.every(function (u) {
+                  return u != null;
+                })
+              : units != null;
             if (haveUnits) {
               if (isArrayValue) {
-                return value.map(function(v, i2) {
-                  return getValueStringWithUnits(v, units[i2]);
-                }).join(" ");
+                return value
+                  .map(function (v, i2) {
+                    return getValueStringWithUnits(v, units[i2]);
+                  })
+                  .join(" ");
               } else {
                 return getValueStringWithUnits(value, units);
               }
             } else {
               if (isArrayValue) {
-                return value.map(function(v) {
-                  return string(v) ? v : "" + getRenderedValue(v);
-                }).join(" ");
+                return value
+                  .map(function (v) {
+                    return string(v) ? v : "" + getRenderedValue(v);
+                  })
+                  .join(" ");
               } else {
                 return "" + getRenderedValue(value);
               }
@@ -13732,7 +15704,7 @@ var require_cytoscape_cjs = __commonJS({
         return null;
       }
     };
-    styfn$5.getAnimationStartStyle = function(ele, aniProps) {
+    styfn$5.getAnimationStartStyle = function (ele, aniProps) {
       var rstyle = {};
       for (var i2 = 0; i2 < aniProps.length; i2++) {
         var aniProp = aniProps[i2];
@@ -13751,7 +15723,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return rstyle;
     };
-    styfn$5.getPropsList = function(propsObj) {
+    styfn$5.getPropsList = function (propsObj) {
       var self2 = this;
       var rstyle = [];
       var style = propsObj;
@@ -13770,7 +15742,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return rstyle;
     };
-    styfn$5.getNonDefaultPropertiesHash = function(ele, propNames, seed) {
+    styfn$5.getNonDefaultPropertiesHash = function (ele, propNames, seed) {
       var hash = seed.slice();
       var name, val, strVal, chVal;
       var i2, j;
@@ -13795,7 +15767,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     styfn$5.getPropertiesHash = styfn$5.getNonDefaultPropertiesHash;
     var styfn$4 = {};
-    styfn$4.appendFromJson = function(json) {
+    styfn$4.appendFromJson = function (json) {
       var style = this;
       for (var i2 = 0; i2 < json.length; i2++) {
         var context = json[i2];
@@ -13811,13 +15783,13 @@ var require_cytoscape_cjs = __commonJS({
       }
       return style;
     };
-    styfn$4.fromJson = function(json) {
+    styfn$4.fromJson = function (json) {
       var style = this;
       style.resetToDefault();
       style.appendFromJson(json);
       return style;
     };
-    styfn$4.json = function() {
+    styfn$4.json = function () {
       var json = [];
       for (var i2 = this.defaultLength; i2 < this.length; i2++) {
         var cxt = this[i2];
@@ -13830,13 +15802,13 @@ var require_cytoscape_cjs = __commonJS({
         }
         json.push({
           selector: !selector ? "core" : selector.toString(),
-          style: css
+          style: css,
         });
       }
       return json;
     };
     var styfn$3 = {};
-    styfn$3.appendFromString = function(string2) {
+    styfn$3.appendFromString = function (string2) {
       var self2 = this;
       var style = this;
       var remaining = "" + string2;
@@ -13858,14 +15830,19 @@ var require_cytoscape_cjs = __commonJS({
           blockRem = "";
         }
       }
-      for (; ; ) {
+      for (;;) {
         var nothingLeftToParse = remaining.match(/^\s*$/);
         if (nothingLeftToParse) {
           break;
         }
-        var selAndBlock = remaining.match(/^\s*((?:.|\s)+?)\s*\{((?:.|\s)+?)\}/);
+        var selAndBlock = remaining.match(
+          /^\s*((?:.|\s)+?)\s*\{((?:.|\s)+?)\}/,
+        );
         if (!selAndBlock) {
-          warn("Halting stylesheet parsing: String stylesheet contains more to parse but no selector and block found in: " + remaining);
+          warn(
+            "Halting stylesheet parsing: String stylesheet contains more to parse but no selector and block found in: " +
+              remaining,
+          );
           break;
         }
         selAndBlockStr = selAndBlock[0];
@@ -13873,7 +15850,10 @@ var require_cytoscape_cjs = __commonJS({
         if (selectorStr !== "core") {
           var selector = new Selector(selectorStr);
           if (selector.invalid) {
-            warn("Skipping parsing of block: Invalid selector found in string stylesheet: " + selectorStr);
+            warn(
+              "Skipping parsing of block: Invalid selector found in string stylesheet: " +
+                selectorStr,
+            );
             removeSelAndBlockFromRemaining();
             continue;
           }
@@ -13882,14 +15862,17 @@ var require_cytoscape_cjs = __commonJS({
         var invalidBlock = false;
         blockRem = blockStr;
         var props = [];
-        for (; ; ) {
+        for (;;) {
           var _nothingLeftToParse = blockRem.match(/^\s*$/);
           if (_nothingLeftToParse) {
             break;
           }
           var propAndVal = blockRem.match(/^\s*(.+?)\s*:\s*(.+?)(?:\s*;|\s*$)/);
           if (!propAndVal) {
-            warn("Skipping parsing of block: Invalid formatting of style property and value definitions found in:" + blockStr);
+            warn(
+              "Skipping parsing of block: Invalid formatting of style property and value definitions found in:" +
+                blockStr,
+            );
             invalidBlock = true;
             break;
           }
@@ -13898,19 +15881,24 @@ var require_cytoscape_cjs = __commonJS({
           var valStr = propAndVal[2];
           var prop = self2.properties[propStr];
           if (!prop) {
-            warn("Skipping property: Invalid property name in: " + propAndValStr);
+            warn(
+              "Skipping property: Invalid property name in: " + propAndValStr,
+            );
             removePropAndValFromRem();
             continue;
           }
           var parsedProp = style.parse(propStr, valStr);
           if (!parsedProp) {
-            warn("Skipping property: Invalid property definition in: " + propAndValStr);
+            warn(
+              "Skipping property: Invalid property definition in: " +
+                propAndValStr,
+            );
             removePropAndValFromRem();
             continue;
           }
           props.push({
             name: propStr,
-            val: valStr
+            val: valStr,
           });
           removePropAndValFromRem();
         }
@@ -13927,14 +15915,14 @@ var require_cytoscape_cjs = __commonJS({
       }
       return style;
     };
-    styfn$3.fromString = function(string2) {
+    styfn$3.fromString = function (string2) {
       var style = this;
       style.resetToDefault();
       style.appendFromString(string2);
       return style;
     };
     var styfn$2 = {};
-    (function() {
+    (function () {
       var number$12 = number;
       var rgba2 = rgbaNoBackRefs;
       var hsla2 = hslaNoBackRefs;
@@ -13944,23 +15932,48 @@ var require_cytoscape_cjs = __commonJS({
         return "^" + prefix + "\\s*\\(\\s*([\\w\\.]+)\\s*\\)$";
       };
       var mapData = function mapData2(prefix) {
-        var mapArg = number$12 + "|\\w+|" + rgba2 + "|" + hsla2 + "|" + hex3$1 + "|" + hex6$1;
-        return "^" + prefix + "\\s*\\(([\\w\\.]+)\\s*\\,\\s*(" + number$12 + ")\\s*\\,\\s*(" + number$12 + ")\\s*,\\s*(" + mapArg + ")\\s*\\,\\s*(" + mapArg + ")\\)$";
+        var mapArg =
+          number$12 +
+          "|\\w+|" +
+          rgba2 +
+          "|" +
+          hsla2 +
+          "|" +
+          hex3$1 +
+          "|" +
+          hex6$1;
+        return (
+          "^" +
+          prefix +
+          "\\s*\\(([\\w\\.]+)\\s*\\,\\s*(" +
+          number$12 +
+          ")\\s*\\,\\s*(" +
+          number$12 +
+          ")\\s*,\\s*(" +
+          mapArg +
+          ")\\s*\\,\\s*(" +
+          mapArg +
+          ")\\)$"
+        );
       };
-      var urlRegexes = [`^url\\s*\\(\\s*['"]?(.+?)['"]?\\s*\\)$`, "^(none)$", "^(.+)$"];
+      var urlRegexes = [
+        `^url\\s*\\(\\s*['"]?(.+?)['"]?\\s*\\)$`,
+        "^(none)$",
+        "^(.+)$",
+      ];
       styfn$2.types = {
         time: {
           number: true,
           min: 0,
           units: "s|ms",
-          implicitUnits: "ms"
+          implicitUnits: "ms",
         },
         percent: {
           number: true,
           min: 0,
           max: 100,
           units: "%",
-          implicitUnits: "%"
+          implicitUnits: "%",
         },
         percentages: {
           number: true,
@@ -13968,274 +15981,357 @@ var require_cytoscape_cjs = __commonJS({
           max: 100,
           units: "%",
           implicitUnits: "%",
-          multiple: true
+          multiple: true,
         },
         zeroOneNumber: {
           number: true,
           min: 0,
           max: 1,
-          unitless: true
+          unitless: true,
         },
         zeroOneNumbers: {
           number: true,
           min: 0,
           max: 1,
           unitless: true,
-          multiple: true
+          multiple: true,
         },
         nOneOneNumber: {
           number: true,
           min: -1,
           max: 1,
-          unitless: true
+          unitless: true,
         },
         nonNegativeInt: {
           number: true,
           min: 0,
           integer: true,
-          unitless: true
+          unitless: true,
         },
         nonNegativeNumber: {
           number: true,
           min: 0,
-          unitless: true
+          unitless: true,
         },
         position: {
-          enums: ["parent", "origin"]
+          enums: ["parent", "origin"],
         },
         nodeSize: {
           number: true,
           min: 0,
-          enums: ["label"]
+          enums: ["label"],
         },
         number: {
           number: true,
-          unitless: true
+          unitless: true,
         },
         numbers: {
           number: true,
           unitless: true,
-          multiple: true
+          multiple: true,
         },
         positiveNumber: {
           number: true,
           unitless: true,
           min: 0,
-          strictMin: true
+          strictMin: true,
         },
         size: {
           number: true,
-          min: 0
+          min: 0,
         },
         bidirectionalSize: {
-          number: true
+          number: true,
         },
         // allows negative
         bidirectionalSizeMaybePercent: {
           number: true,
-          allowPercent: true
+          allowPercent: true,
         },
         // allows negative
         bidirectionalSizes: {
           number: true,
-          multiple: true
+          multiple: true,
         },
         // allows negative
         sizeMaybePercent: {
           number: true,
           min: 0,
-          allowPercent: true
+          allowPercent: true,
         },
         axisDirection: {
-          enums: ["horizontal", "leftward", "rightward", "vertical", "upward", "downward", "auto"]
+          enums: [
+            "horizontal",
+            "leftward",
+            "rightward",
+            "vertical",
+            "upward",
+            "downward",
+            "auto",
+          ],
         },
         paddingRelativeTo: {
-          enums: ["width", "height", "average", "min", "max"]
+          enums: ["width", "height", "average", "min", "max"],
         },
         bgWH: {
           number: true,
           min: 0,
           allowPercent: true,
           enums: ["auto"],
-          multiple: true
+          multiple: true,
         },
         bgPos: {
           number: true,
           allowPercent: true,
-          multiple: true
+          multiple: true,
         },
         bgRelativeTo: {
           enums: ["inner", "include-padding"],
-          multiple: true
+          multiple: true,
         },
         bgRepeat: {
           enums: ["repeat", "repeat-x", "repeat-y", "no-repeat"],
-          multiple: true
+          multiple: true,
         },
         bgFit: {
           enums: ["none", "contain", "cover"],
-          multiple: true
+          multiple: true,
         },
         bgCrossOrigin: {
           enums: ["anonymous", "use-credentials", "null"],
-          multiple: true
+          multiple: true,
         },
         bgClip: {
           enums: ["none", "node"],
-          multiple: true
+          multiple: true,
         },
         bgContainment: {
           enums: ["inside", "over"],
-          multiple: true
+          multiple: true,
         },
         color: {
-          color: true
+          color: true,
         },
         colors: {
           color: true,
-          multiple: true
+          multiple: true,
         },
         fill: {
-          enums: ["solid", "linear-gradient", "radial-gradient"]
+          enums: ["solid", "linear-gradient", "radial-gradient"],
         },
         bool: {
-          enums: ["yes", "no"]
+          enums: ["yes", "no"],
         },
         bools: {
           enums: ["yes", "no"],
-          multiple: true
+          multiple: true,
         },
         lineStyle: {
-          enums: ["solid", "dotted", "dashed"]
+          enums: ["solid", "dotted", "dashed"],
         },
         lineCap: {
-          enums: ["butt", "round", "square"]
+          enums: ["butt", "round", "square"],
         },
         borderStyle: {
-          enums: ["solid", "dotted", "dashed", "double"]
+          enums: ["solid", "dotted", "dashed", "double"],
         },
         curveStyle: {
-          enums: ["bezier", "unbundled-bezier", "haystack", "segments", "straight", "straight-triangle", "taxi"]
+          enums: [
+            "bezier",
+            "unbundled-bezier",
+            "haystack",
+            "segments",
+            "straight",
+            "straight-triangle",
+            "taxi",
+          ],
         },
         fontFamily: {
-          regex: '^([\\w- \\"]+(?:\\s*,\\s*[\\w- \\"]+)*)$'
+          regex: '^([\\w- \\"]+(?:\\s*,\\s*[\\w- \\"]+)*)$',
         },
         fontStyle: {
-          enums: ["italic", "normal", "oblique"]
+          enums: ["italic", "normal", "oblique"],
         },
         fontWeight: {
-          enums: ["normal", "bold", "bolder", "lighter", "100", "200", "300", "400", "500", "600", "800", "900", 100, 200, 300, 400, 500, 600, 700, 800, 900]
+          enums: [
+            "normal",
+            "bold",
+            "bolder",
+            "lighter",
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "800",
+            "900",
+            100,
+            200,
+            300,
+            400,
+            500,
+            600,
+            700,
+            800,
+            900,
+          ],
         },
         textDecoration: {
-          enums: ["none", "underline", "overline", "line-through"]
+          enums: ["none", "underline", "overline", "line-through"],
         },
         textTransform: {
-          enums: ["none", "uppercase", "lowercase"]
+          enums: ["none", "uppercase", "lowercase"],
         },
         textWrap: {
-          enums: ["none", "wrap", "ellipsis"]
+          enums: ["none", "wrap", "ellipsis"],
         },
         textOverflowWrap: {
-          enums: ["whitespace", "anywhere"]
+          enums: ["whitespace", "anywhere"],
         },
         textBackgroundShape: {
-          enums: ["rectangle", "roundrectangle", "round-rectangle"]
+          enums: ["rectangle", "roundrectangle", "round-rectangle"],
         },
         nodeShape: {
-          enums: ["rectangle", "roundrectangle", "round-rectangle", "cutrectangle", "cut-rectangle", "bottomroundrectangle", "bottom-round-rectangle", "barrel", "ellipse", "triangle", "round-triangle", "square", "pentagon", "round-pentagon", "hexagon", "round-hexagon", "concavehexagon", "concave-hexagon", "heptagon", "round-heptagon", "octagon", "round-octagon", "tag", "round-tag", "star", "diamond", "round-diamond", "vee", "rhomboid", "right-rhomboid", "polygon"]
+          enums: [
+            "rectangle",
+            "roundrectangle",
+            "round-rectangle",
+            "cutrectangle",
+            "cut-rectangle",
+            "bottomroundrectangle",
+            "bottom-round-rectangle",
+            "barrel",
+            "ellipse",
+            "triangle",
+            "round-triangle",
+            "square",
+            "pentagon",
+            "round-pentagon",
+            "hexagon",
+            "round-hexagon",
+            "concavehexagon",
+            "concave-hexagon",
+            "heptagon",
+            "round-heptagon",
+            "octagon",
+            "round-octagon",
+            "tag",
+            "round-tag",
+            "star",
+            "diamond",
+            "round-diamond",
+            "vee",
+            "rhomboid",
+            "right-rhomboid",
+            "polygon",
+          ],
         },
         overlayShape: {
-          enums: ["roundrectangle", "round-rectangle", "ellipse"]
+          enums: ["roundrectangle", "round-rectangle", "ellipse"],
         },
         compoundIncludeLabels: {
-          enums: ["include", "exclude"]
+          enums: ["include", "exclude"],
         },
         arrowShape: {
-          enums: ["tee", "triangle", "triangle-tee", "circle-triangle", "triangle-cross", "triangle-backcurve", "vee", "square", "circle", "diamond", "chevron", "none"]
+          enums: [
+            "tee",
+            "triangle",
+            "triangle-tee",
+            "circle-triangle",
+            "triangle-cross",
+            "triangle-backcurve",
+            "vee",
+            "square",
+            "circle",
+            "diamond",
+            "chevron",
+            "none",
+          ],
         },
         arrowFill: {
-          enums: ["filled", "hollow"]
+          enums: ["filled", "hollow"],
         },
         arrowWidth: {
           number: true,
           units: "%|px|em",
           implicitUnits: "px",
-          enums: ["match-line"]
+          enums: ["match-line"],
         },
         display: {
-          enums: ["element", "none"]
+          enums: ["element", "none"],
         },
         visibility: {
-          enums: ["hidden", "visible"]
+          enums: ["hidden", "visible"],
         },
         zCompoundDepth: {
-          enums: ["bottom", "orphan", "auto", "top"]
+          enums: ["bottom", "orphan", "auto", "top"],
         },
         zIndexCompare: {
-          enums: ["auto", "manual"]
+          enums: ["auto", "manual"],
         },
         valign: {
-          enums: ["top", "center", "bottom"]
+          enums: ["top", "center", "bottom"],
         },
         halign: {
-          enums: ["left", "center", "right"]
+          enums: ["left", "center", "right"],
         },
         justification: {
-          enums: ["left", "center", "right", "auto"]
+          enums: ["left", "center", "right", "auto"],
         },
         text: {
-          string: true
+          string: true,
         },
         data: {
           mapping: true,
-          regex: data2("data")
+          regex: data2("data"),
         },
         layoutData: {
           mapping: true,
-          regex: data2("layoutData")
+          regex: data2("layoutData"),
         },
         scratch: {
           mapping: true,
-          regex: data2("scratch")
+          regex: data2("scratch"),
         },
         mapData: {
           mapping: true,
-          regex: mapData("mapData")
+          regex: mapData("mapData"),
         },
         mapLayoutData: {
           mapping: true,
-          regex: mapData("mapLayoutData")
+          regex: mapData("mapLayoutData"),
         },
         mapScratch: {
           mapping: true,
-          regex: mapData("mapScratch")
+          regex: mapData("mapScratch"),
         },
         fn: {
           mapping: true,
-          fn: true
+          fn: true,
         },
         url: {
           regexes: urlRegexes,
-          singleRegexMatchValue: true
+          singleRegexMatchValue: true,
         },
         urls: {
           regexes: urlRegexes,
           singleRegexMatchValue: true,
-          multiple: true
+          multiple: true,
         },
         propList: {
-          propList: true
+          propList: true,
         },
         angle: {
           number: true,
           units: "deg|rad",
-          implicitUnits: "rad"
+          implicitUnits: "rad",
         },
         textRotation: {
           number: true,
           units: "deg|rad",
           implicitUnits: "rad",
-          enums: ["none", "autorotate"]
+          enums: ["none", "autorotate"],
         },
         polygonPointList: {
           number: true,
@@ -14243,32 +16339,89 @@ var require_cytoscape_cjs = __commonJS({
           evenMultiple: true,
           min: -1,
           max: 1,
-          unitless: true
+          unitless: true,
         },
         edgeDistances: {
-          enums: ["intersection", "node-position", "endpoints"]
+          enums: ["intersection", "node-position", "endpoints"],
         },
         edgeEndpoint: {
           number: true,
           multiple: true,
           units: "%|px|em|deg|rad",
           implicitUnits: "px",
-          enums: ["inside-to-node", "outside-to-node", "outside-to-node-or-label", "outside-to-line", "outside-to-line-or-label"],
+          enums: [
+            "inside-to-node",
+            "outside-to-node",
+            "outside-to-node-or-label",
+            "outside-to-line",
+            "outside-to-line-or-label",
+          ],
           singleEnum: true,
           validate: function validate(valArr, unitsArr) {
             switch (valArr.length) {
               case 2:
-                return unitsArr[0] !== "deg" && unitsArr[0] !== "rad" && unitsArr[1] !== "deg" && unitsArr[1] !== "rad";
+                return (
+                  unitsArr[0] !== "deg" &&
+                  unitsArr[0] !== "rad" &&
+                  unitsArr[1] !== "deg" &&
+                  unitsArr[1] !== "rad"
+                );
               case 1:
-                return string(valArr[0]) || unitsArr[0] === "deg" || unitsArr[0] === "rad";
+                return (
+                  string(valArr[0]) ||
+                  unitsArr[0] === "deg" ||
+                  unitsArr[0] === "rad"
+                );
               default:
                 return false;
             }
-          }
+          },
         },
         easing: {
-          regexes: ["^(spring)\\s*\\(\\s*(" + number$12 + ")\\s*,\\s*(" + number$12 + ")\\s*\\)$", "^(cubic-bezier)\\s*\\(\\s*(" + number$12 + ")\\s*,\\s*(" + number$12 + ")\\s*,\\s*(" + number$12 + ")\\s*,\\s*(" + number$12 + ")\\s*\\)$"],
-          enums: ["linear", "ease", "ease-in", "ease-out", "ease-in-out", "ease-in-sine", "ease-out-sine", "ease-in-out-sine", "ease-in-quad", "ease-out-quad", "ease-in-out-quad", "ease-in-cubic", "ease-out-cubic", "ease-in-out-cubic", "ease-in-quart", "ease-out-quart", "ease-in-out-quart", "ease-in-quint", "ease-out-quint", "ease-in-out-quint", "ease-in-expo", "ease-out-expo", "ease-in-out-expo", "ease-in-circ", "ease-out-circ", "ease-in-out-circ"]
+          regexes: [
+            "^(spring)\\s*\\(\\s*(" +
+              number$12 +
+              ")\\s*,\\s*(" +
+              number$12 +
+              ")\\s*\\)$",
+            "^(cubic-bezier)\\s*\\(\\s*(" +
+              number$12 +
+              ")\\s*,\\s*(" +
+              number$12 +
+              ")\\s*,\\s*(" +
+              number$12 +
+              ")\\s*,\\s*(" +
+              number$12 +
+              ")\\s*\\)$",
+          ],
+          enums: [
+            "linear",
+            "ease",
+            "ease-in",
+            "ease-out",
+            "ease-in-out",
+            "ease-in-sine",
+            "ease-out-sine",
+            "ease-in-out-sine",
+            "ease-in-quad",
+            "ease-out-quad",
+            "ease-in-out-quad",
+            "ease-in-cubic",
+            "ease-out-cubic",
+            "ease-in-out-cubic",
+            "ease-in-quart",
+            "ease-out-quart",
+            "ease-in-out-quart",
+            "ease-in-quint",
+            "ease-out-quint",
+            "ease-in-out-quint",
+            "ease-in-expo",
+            "ease-out-expo",
+            "ease-in-out-expo",
+            "ease-in-circ",
+            "ease-out-circ",
+            "ease-in-out-circ",
+          ],
         },
         gradientDirection: {
           enums: [
@@ -14283,9 +16436,9 @@ var require_cytoscape_cjs = __commonJS({
             "to-right-bottom",
             "to-left-bottom",
             "to-right-top",
-            "to-left-top"
+            "to-left-top",
             // different order
-          ]
+          ],
         },
         boundsExpansion: {
           number: true,
@@ -14294,8 +16447,8 @@ var require_cytoscape_cjs = __commonJS({
           validate: function validate(valArr) {
             var length = valArr.length;
             return length === 1 || length === 2 || length === 4;
-          }
-        }
+          },
+        },
       };
       var diff = {
         zeroNonZero: function zeroNonZero(val1, val2) {
@@ -14316,613 +16469,813 @@ var require_cytoscape_cjs = __commonJS({
         emptyNonEmpty: function emptyNonEmpty(str1, str2) {
           var empty1 = emptyString(str1);
           var empty2 = emptyString(str2);
-          return empty1 && !empty2 || !empty1 && empty2;
-        }
+          return (empty1 && !empty2) || (!empty1 && empty2);
+        },
       };
       var t = styfn$2.types;
-      var mainLabel = [{
-        name: "label",
-        type: t.text,
-        triggersBounds: diff.any,
-        triggersZOrder: diff.emptyNonEmpty
-      }, {
-        name: "text-rotation",
-        type: t.textRotation,
-        triggersBounds: diff.any
-      }, {
-        name: "text-margin-x",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "text-margin-y",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }];
-      var sourceLabel = [{
-        name: "source-label",
-        type: t.text,
-        triggersBounds: diff.any
-      }, {
-        name: "source-text-rotation",
-        type: t.textRotation,
-        triggersBounds: diff.any
-      }, {
-        name: "source-text-margin-x",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "source-text-margin-y",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "source-text-offset",
-        type: t.size,
-        triggersBounds: diff.any
-      }];
-      var targetLabel = [{
-        name: "target-label",
-        type: t.text,
-        triggersBounds: diff.any
-      }, {
-        name: "target-text-rotation",
-        type: t.textRotation,
-        triggersBounds: diff.any
-      }, {
-        name: "target-text-margin-x",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "target-text-margin-y",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "target-text-offset",
-        type: t.size,
-        triggersBounds: diff.any
-      }];
-      var labelDimensions = [{
-        name: "font-family",
-        type: t.fontFamily,
-        triggersBounds: diff.any
-      }, {
-        name: "font-style",
-        type: t.fontStyle,
-        triggersBounds: diff.any
-      }, {
-        name: "font-weight",
-        type: t.fontWeight,
-        triggersBounds: diff.any
-      }, {
-        name: "font-size",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "text-transform",
-        type: t.textTransform,
-        triggersBounds: diff.any
-      }, {
-        name: "text-wrap",
-        type: t.textWrap,
-        triggersBounds: diff.any
-      }, {
-        name: "text-overflow-wrap",
-        type: t.textOverflowWrap,
-        triggersBounds: diff.any
-      }, {
-        name: "text-max-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "text-outline-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "line-height",
-        type: t.positiveNumber,
-        triggersBounds: diff.any
-      }];
-      var commonLabel = [{
-        name: "text-valign",
-        type: t.valign,
-        triggersBounds: diff.any
-      }, {
-        name: "text-halign",
-        type: t.halign,
-        triggersBounds: diff.any
-      }, {
-        name: "color",
-        type: t.color
-      }, {
-        name: "text-outline-color",
-        type: t.color
-      }, {
-        name: "text-outline-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "text-background-color",
-        type: t.color
-      }, {
-        name: "text-background-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "text-background-padding",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "text-border-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "text-border-color",
-        type: t.color
-      }, {
-        name: "text-border-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "text-border-style",
-        type: t.borderStyle,
-        triggersBounds: diff.any
-      }, {
-        name: "text-background-shape",
-        type: t.textBackgroundShape,
-        triggersBounds: diff.any
-      }, {
-        name: "text-justification",
-        type: t.justification
-      }];
-      var behavior = [{
-        name: "events",
-        type: t.bool,
-        triggersZOrder: diff.any
-      }, {
-        name: "text-events",
-        type: t.bool,
-        triggersZOrder: diff.any
-      }];
-      var visibility = [{
-        name: "display",
-        type: t.display,
-        triggersZOrder: diff.any,
-        triggersBounds: diff.any,
-        triggersBoundsOfConnectedEdges: true
-      }, {
-        name: "visibility",
-        type: t.visibility,
-        triggersZOrder: diff.any
-      }, {
-        name: "opacity",
-        type: t.zeroOneNumber,
-        triggersZOrder: diff.zeroNonZero
-      }, {
-        name: "text-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "min-zoomed-font-size",
-        type: t.size
-      }, {
-        name: "z-compound-depth",
-        type: t.zCompoundDepth,
-        triggersZOrder: diff.any
-      }, {
-        name: "z-index-compare",
-        type: t.zIndexCompare,
-        triggersZOrder: diff.any
-      }, {
-        name: "z-index",
-        type: t.number,
-        triggersZOrder: diff.any
-      }];
-      var overlay = [{
-        name: "overlay-padding",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "overlay-color",
-        type: t.color
-      }, {
-        name: "overlay-opacity",
-        type: t.zeroOneNumber,
-        triggersBounds: diff.zeroNonZero
-      }, {
-        name: "overlay-shape",
-        type: t.overlayShape,
-        triggersBounds: diff.any
-      }];
-      var underlay = [{
-        name: "underlay-padding",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "underlay-color",
-        type: t.color
-      }, {
-        name: "underlay-opacity",
-        type: t.zeroOneNumber,
-        triggersBounds: diff.zeroNonZero
-      }, {
-        name: "underlay-shape",
-        type: t.overlayShape,
-        triggersBounds: diff.any
-      }];
-      var transition = [{
-        name: "transition-property",
-        type: t.propList
-      }, {
-        name: "transition-duration",
-        type: t.time
-      }, {
-        name: "transition-delay",
-        type: t.time
-      }, {
-        name: "transition-timing-function",
-        type: t.easing
-      }];
-      var nodeSizeHashOverride = function nodeSizeHashOverride2(ele, parsedProp) {
+      var mainLabel = [
+        {
+          name: "label",
+          type: t.text,
+          triggersBounds: diff.any,
+          triggersZOrder: diff.emptyNonEmpty,
+        },
+        {
+          name: "text-rotation",
+          type: t.textRotation,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-margin-x",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-margin-y",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+      ];
+      var sourceLabel = [
+        {
+          name: "source-label",
+          type: t.text,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-text-rotation",
+          type: t.textRotation,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-text-margin-x",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-text-margin-y",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-text-offset",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+      ];
+      var targetLabel = [
+        {
+          name: "target-label",
+          type: t.text,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-text-rotation",
+          type: t.textRotation,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-text-margin-x",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-text-margin-y",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-text-offset",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+      ];
+      var labelDimensions = [
+        {
+          name: "font-family",
+          type: t.fontFamily,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "font-style",
+          type: t.fontStyle,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "font-weight",
+          type: t.fontWeight,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "font-size",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-transform",
+          type: t.textTransform,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-wrap",
+          type: t.textWrap,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-overflow-wrap",
+          type: t.textOverflowWrap,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-max-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-outline-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "line-height",
+          type: t.positiveNumber,
+          triggersBounds: diff.any,
+        },
+      ];
+      var commonLabel = [
+        {
+          name: "text-valign",
+          type: t.valign,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-halign",
+          type: t.halign,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "color",
+          type: t.color,
+        },
+        {
+          name: "text-outline-color",
+          type: t.color,
+        },
+        {
+          name: "text-outline-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "text-background-color",
+          type: t.color,
+        },
+        {
+          name: "text-background-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "text-background-padding",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-border-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "text-border-color",
+          type: t.color,
+        },
+        {
+          name: "text-border-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-border-style",
+          type: t.borderStyle,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-background-shape",
+          type: t.textBackgroundShape,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "text-justification",
+          type: t.justification,
+        },
+      ];
+      var behavior = [
+        {
+          name: "events",
+          type: t.bool,
+          triggersZOrder: diff.any,
+        },
+        {
+          name: "text-events",
+          type: t.bool,
+          triggersZOrder: diff.any,
+        },
+      ];
+      var visibility = [
+        {
+          name: "display",
+          type: t.display,
+          triggersZOrder: diff.any,
+          triggersBounds: diff.any,
+          triggersBoundsOfConnectedEdges: true,
+        },
+        {
+          name: "visibility",
+          type: t.visibility,
+          triggersZOrder: diff.any,
+        },
+        {
+          name: "opacity",
+          type: t.zeroOneNumber,
+          triggersZOrder: diff.zeroNonZero,
+        },
+        {
+          name: "text-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "min-zoomed-font-size",
+          type: t.size,
+        },
+        {
+          name: "z-compound-depth",
+          type: t.zCompoundDepth,
+          triggersZOrder: diff.any,
+        },
+        {
+          name: "z-index-compare",
+          type: t.zIndexCompare,
+          triggersZOrder: diff.any,
+        },
+        {
+          name: "z-index",
+          type: t.number,
+          triggersZOrder: diff.any,
+        },
+      ];
+      var overlay = [
+        {
+          name: "overlay-padding",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "overlay-color",
+          type: t.color,
+        },
+        {
+          name: "overlay-opacity",
+          type: t.zeroOneNumber,
+          triggersBounds: diff.zeroNonZero,
+        },
+        {
+          name: "overlay-shape",
+          type: t.overlayShape,
+          triggersBounds: diff.any,
+        },
+      ];
+      var underlay = [
+        {
+          name: "underlay-padding",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "underlay-color",
+          type: t.color,
+        },
+        {
+          name: "underlay-opacity",
+          type: t.zeroOneNumber,
+          triggersBounds: diff.zeroNonZero,
+        },
+        {
+          name: "underlay-shape",
+          type: t.overlayShape,
+          triggersBounds: diff.any,
+        },
+      ];
+      var transition = [
+        {
+          name: "transition-property",
+          type: t.propList,
+        },
+        {
+          name: "transition-duration",
+          type: t.time,
+        },
+        {
+          name: "transition-delay",
+          type: t.time,
+        },
+        {
+          name: "transition-timing-function",
+          type: t.easing,
+        },
+      ];
+      var nodeSizeHashOverride = function nodeSizeHashOverride2(
+        ele,
+        parsedProp,
+      ) {
         if (parsedProp.value === "label") {
           return -ele.poolIndex();
         } else {
           return parsedProp.pfValue;
         }
       };
-      var nodeBody = [{
-        name: "height",
-        type: t.nodeSize,
-        triggersBounds: diff.any,
-        hashOverride: nodeSizeHashOverride
-      }, {
-        name: "width",
-        type: t.nodeSize,
-        triggersBounds: diff.any,
-        hashOverride: nodeSizeHashOverride
-      }, {
-        name: "shape",
-        type: t.nodeShape,
-        triggersBounds: diff.any
-      }, {
-        name: "shape-polygon-points",
-        type: t.polygonPointList,
-        triggersBounds: diff.any
-      }, {
-        name: "background-color",
-        type: t.color
-      }, {
-        name: "background-fill",
-        type: t.fill
-      }, {
-        name: "background-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "background-blacken",
-        type: t.nOneOneNumber
-      }, {
-        name: "background-gradient-stop-colors",
-        type: t.colors
-      }, {
-        name: "background-gradient-stop-positions",
-        type: t.percentages
-      }, {
-        name: "background-gradient-direction",
-        type: t.gradientDirection
-      }, {
-        name: "padding",
-        type: t.sizeMaybePercent,
-        triggersBounds: diff.any
-      }, {
-        name: "padding-relative-to",
-        type: t.paddingRelativeTo,
-        triggersBounds: diff.any
-      }, {
-        name: "bounds-expansion",
-        type: t.boundsExpansion,
-        triggersBounds: diff.any
-      }];
-      var nodeBorder = [{
-        name: "border-color",
-        type: t.color
-      }, {
-        name: "border-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "border-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "border-style",
-        type: t.borderStyle
-      }];
-      var nodeOutline = [{
-        name: "outline-color",
-        type: t.color
-      }, {
-        name: "outline-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "outline-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "outline-style",
-        type: t.borderStyle
-      }, {
-        name: "outline-offset",
-        type: t.size,
-        triggersBounds: diff.any
-      }];
-      var backgroundImage = [{
-        name: "background-image",
-        type: t.urls
-      }, {
-        name: "background-image-crossorigin",
-        type: t.bgCrossOrigin
-      }, {
-        name: "background-image-opacity",
-        type: t.zeroOneNumbers
-      }, {
-        name: "background-image-containment",
-        type: t.bgContainment
-      }, {
-        name: "background-image-smoothing",
-        type: t.bools
-      }, {
-        name: "background-position-x",
-        type: t.bgPos
-      }, {
-        name: "background-position-y",
-        type: t.bgPos
-      }, {
-        name: "background-width-relative-to",
-        type: t.bgRelativeTo
-      }, {
-        name: "background-height-relative-to",
-        type: t.bgRelativeTo
-      }, {
-        name: "background-repeat",
-        type: t.bgRepeat
-      }, {
-        name: "background-fit",
-        type: t.bgFit
-      }, {
-        name: "background-clip",
-        type: t.bgClip
-      }, {
-        name: "background-width",
-        type: t.bgWH
-      }, {
-        name: "background-height",
-        type: t.bgWH
-      }, {
-        name: "background-offset-x",
-        type: t.bgPos
-      }, {
-        name: "background-offset-y",
-        type: t.bgPos
-      }];
-      var compound = [{
-        name: "position",
-        type: t.position,
-        triggersBounds: diff.any
-      }, {
-        name: "compound-sizing-wrt-labels",
-        type: t.compoundIncludeLabels,
-        triggersBounds: diff.any
-      }, {
-        name: "min-width",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "min-width-bias-left",
-        type: t.sizeMaybePercent,
-        triggersBounds: diff.any
-      }, {
-        name: "min-width-bias-right",
-        type: t.sizeMaybePercent,
-        triggersBounds: diff.any
-      }, {
-        name: "min-height",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "min-height-bias-top",
-        type: t.sizeMaybePercent,
-        triggersBounds: diff.any
-      }, {
-        name: "min-height-bias-bottom",
-        type: t.sizeMaybePercent,
-        triggersBounds: diff.any
-      }];
-      var edgeLine = [{
-        name: "line-style",
-        type: t.lineStyle
-      }, {
-        name: "line-color",
-        type: t.color
-      }, {
-        name: "line-fill",
-        type: t.fill
-      }, {
-        name: "line-cap",
-        type: t.lineCap
-      }, {
-        name: "line-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "line-dash-pattern",
-        type: t.numbers
-      }, {
-        name: "line-dash-offset",
-        type: t.number
-      }, {
-        name: "line-gradient-stop-colors",
-        type: t.colors
-      }, {
-        name: "line-gradient-stop-positions",
-        type: t.percentages
-      }, {
-        name: "curve-style",
-        type: t.curveStyle,
-        triggersBounds: diff.any,
-        triggersBoundsOfParallelBeziers: true
-      }, {
-        name: "haystack-radius",
-        type: t.zeroOneNumber,
-        triggersBounds: diff.any
-      }, {
-        name: "source-endpoint",
-        type: t.edgeEndpoint,
-        triggersBounds: diff.any
-      }, {
-        name: "target-endpoint",
-        type: t.edgeEndpoint,
-        triggersBounds: diff.any
-      }, {
-        name: "control-point-step-size",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "control-point-distances",
-        type: t.bidirectionalSizes,
-        triggersBounds: diff.any
-      }, {
-        name: "control-point-weights",
-        type: t.numbers,
-        triggersBounds: diff.any
-      }, {
-        name: "segment-distances",
-        type: t.bidirectionalSizes,
-        triggersBounds: diff.any
-      }, {
-        name: "segment-weights",
-        type: t.numbers,
-        triggersBounds: diff.any
-      }, {
-        name: "taxi-turn",
-        type: t.bidirectionalSizeMaybePercent,
-        triggersBounds: diff.any
-      }, {
-        name: "taxi-turn-min-distance",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "taxi-direction",
-        type: t.axisDirection,
-        triggersBounds: diff.any
-      }, {
-        name: "edge-distances",
-        type: t.edgeDistances,
-        triggersBounds: diff.any
-      }, {
-        name: "arrow-scale",
-        type: t.positiveNumber,
-        triggersBounds: diff.any
-      }, {
-        name: "loop-direction",
-        type: t.angle,
-        triggersBounds: diff.any
-      }, {
-        name: "loop-sweep",
-        type: t.angle,
-        triggersBounds: diff.any
-      }, {
-        name: "source-distance-from-node",
-        type: t.size,
-        triggersBounds: diff.any
-      }, {
-        name: "target-distance-from-node",
-        type: t.size,
-        triggersBounds: diff.any
-      }];
-      var ghost = [{
-        name: "ghost",
-        type: t.bool,
-        triggersBounds: diff.any
-      }, {
-        name: "ghost-offset-x",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "ghost-offset-y",
-        type: t.bidirectionalSize,
-        triggersBounds: diff.any
-      }, {
-        name: "ghost-opacity",
-        type: t.zeroOneNumber
-      }];
-      var core2 = [{
-        name: "selection-box-color",
-        type: t.color
-      }, {
-        name: "selection-box-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "selection-box-border-color",
-        type: t.color
-      }, {
-        name: "selection-box-border-width",
-        type: t.size
-      }, {
-        name: "active-bg-color",
-        type: t.color
-      }, {
-        name: "active-bg-opacity",
-        type: t.zeroOneNumber
-      }, {
-        name: "active-bg-size",
-        type: t.size
-      }, {
-        name: "outside-texture-bg-color",
-        type: t.color
-      }, {
-        name: "outside-texture-bg-opacity",
-        type: t.zeroOneNumber
-      }];
+      var nodeBody = [
+        {
+          name: "height",
+          type: t.nodeSize,
+          triggersBounds: diff.any,
+          hashOverride: nodeSizeHashOverride,
+        },
+        {
+          name: "width",
+          type: t.nodeSize,
+          triggersBounds: diff.any,
+          hashOverride: nodeSizeHashOverride,
+        },
+        {
+          name: "shape",
+          type: t.nodeShape,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "shape-polygon-points",
+          type: t.polygonPointList,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "background-color",
+          type: t.color,
+        },
+        {
+          name: "background-fill",
+          type: t.fill,
+        },
+        {
+          name: "background-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "background-blacken",
+          type: t.nOneOneNumber,
+        },
+        {
+          name: "background-gradient-stop-colors",
+          type: t.colors,
+        },
+        {
+          name: "background-gradient-stop-positions",
+          type: t.percentages,
+        },
+        {
+          name: "background-gradient-direction",
+          type: t.gradientDirection,
+        },
+        {
+          name: "padding",
+          type: t.sizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "padding-relative-to",
+          type: t.paddingRelativeTo,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "bounds-expansion",
+          type: t.boundsExpansion,
+          triggersBounds: diff.any,
+        },
+      ];
+      var nodeBorder = [
+        {
+          name: "border-color",
+          type: t.color,
+        },
+        {
+          name: "border-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "border-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "border-style",
+          type: t.borderStyle,
+        },
+      ];
+      var nodeOutline = [
+        {
+          name: "outline-color",
+          type: t.color,
+        },
+        {
+          name: "outline-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "outline-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "outline-style",
+          type: t.borderStyle,
+        },
+        {
+          name: "outline-offset",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+      ];
+      var backgroundImage = [
+        {
+          name: "background-image",
+          type: t.urls,
+        },
+        {
+          name: "background-image-crossorigin",
+          type: t.bgCrossOrigin,
+        },
+        {
+          name: "background-image-opacity",
+          type: t.zeroOneNumbers,
+        },
+        {
+          name: "background-image-containment",
+          type: t.bgContainment,
+        },
+        {
+          name: "background-image-smoothing",
+          type: t.bools,
+        },
+        {
+          name: "background-position-x",
+          type: t.bgPos,
+        },
+        {
+          name: "background-position-y",
+          type: t.bgPos,
+        },
+        {
+          name: "background-width-relative-to",
+          type: t.bgRelativeTo,
+        },
+        {
+          name: "background-height-relative-to",
+          type: t.bgRelativeTo,
+        },
+        {
+          name: "background-repeat",
+          type: t.bgRepeat,
+        },
+        {
+          name: "background-fit",
+          type: t.bgFit,
+        },
+        {
+          name: "background-clip",
+          type: t.bgClip,
+        },
+        {
+          name: "background-width",
+          type: t.bgWH,
+        },
+        {
+          name: "background-height",
+          type: t.bgWH,
+        },
+        {
+          name: "background-offset-x",
+          type: t.bgPos,
+        },
+        {
+          name: "background-offset-y",
+          type: t.bgPos,
+        },
+      ];
+      var compound = [
+        {
+          name: "position",
+          type: t.position,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "compound-sizing-wrt-labels",
+          type: t.compoundIncludeLabels,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-width",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-width-bias-left",
+          type: t.sizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-width-bias-right",
+          type: t.sizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-height",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-height-bias-top",
+          type: t.sizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "min-height-bias-bottom",
+          type: t.sizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+      ];
+      var edgeLine = [
+        {
+          name: "line-style",
+          type: t.lineStyle,
+        },
+        {
+          name: "line-color",
+          type: t.color,
+        },
+        {
+          name: "line-fill",
+          type: t.fill,
+        },
+        {
+          name: "line-cap",
+          type: t.lineCap,
+        },
+        {
+          name: "line-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "line-dash-pattern",
+          type: t.numbers,
+        },
+        {
+          name: "line-dash-offset",
+          type: t.number,
+        },
+        {
+          name: "line-gradient-stop-colors",
+          type: t.colors,
+        },
+        {
+          name: "line-gradient-stop-positions",
+          type: t.percentages,
+        },
+        {
+          name: "curve-style",
+          type: t.curveStyle,
+          triggersBounds: diff.any,
+          triggersBoundsOfParallelBeziers: true,
+        },
+        {
+          name: "haystack-radius",
+          type: t.zeroOneNumber,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-endpoint",
+          type: t.edgeEndpoint,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-endpoint",
+          type: t.edgeEndpoint,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "control-point-step-size",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "control-point-distances",
+          type: t.bidirectionalSizes,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "control-point-weights",
+          type: t.numbers,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "segment-distances",
+          type: t.bidirectionalSizes,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "segment-weights",
+          type: t.numbers,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "taxi-turn",
+          type: t.bidirectionalSizeMaybePercent,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "taxi-turn-min-distance",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "taxi-direction",
+          type: t.axisDirection,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "edge-distances",
+          type: t.edgeDistances,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "arrow-scale",
+          type: t.positiveNumber,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "loop-direction",
+          type: t.angle,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "loop-sweep",
+          type: t.angle,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "source-distance-from-node",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "target-distance-from-node",
+          type: t.size,
+          triggersBounds: diff.any,
+        },
+      ];
+      var ghost = [
+        {
+          name: "ghost",
+          type: t.bool,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "ghost-offset-x",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "ghost-offset-y",
+          type: t.bidirectionalSize,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "ghost-opacity",
+          type: t.zeroOneNumber,
+        },
+      ];
+      var core2 = [
+        {
+          name: "selection-box-color",
+          type: t.color,
+        },
+        {
+          name: "selection-box-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "selection-box-border-color",
+          type: t.color,
+        },
+        {
+          name: "selection-box-border-width",
+          type: t.size,
+        },
+        {
+          name: "active-bg-color",
+          type: t.color,
+        },
+        {
+          name: "active-bg-opacity",
+          type: t.zeroOneNumber,
+        },
+        {
+          name: "active-bg-size",
+          type: t.size,
+        },
+        {
+          name: "outside-texture-bg-color",
+          type: t.color,
+        },
+        {
+          name: "outside-texture-bg-opacity",
+          type: t.zeroOneNumber,
+        },
+      ];
       var pie = [];
       styfn$2.pieBackgroundN = 16;
       pie.push({
         name: "pie-size",
-        type: t.sizeMaybePercent
+        type: t.sizeMaybePercent,
       });
       for (var i2 = 1; i2 <= styfn$2.pieBackgroundN; i2++) {
         pie.push({
           name: "pie-" + i2 + "-background-color",
-          type: t.color
+          type: t.color,
         });
         pie.push({
           name: "pie-" + i2 + "-background-size",
-          type: t.percent
+          type: t.percent,
         });
         pie.push({
           name: "pie-" + i2 + "-background-opacity",
-          type: t.zeroOneNumber
+          type: t.zeroOneNumber,
         });
       }
       var edgeArrow = [];
-      var arrowPrefixes = styfn$2.arrowPrefixes = ["source", "mid-source", "target", "mid-target"];
-      [{
-        name: "arrow-shape",
-        type: t.arrowShape,
-        triggersBounds: diff.any
-      }, {
-        name: "arrow-color",
-        type: t.color
-      }, {
-        name: "arrow-fill",
-        type: t.arrowFill
-      }, {
-        name: "arrow-width",
-        type: t.arrowWidth
-      }].forEach(function(prop2) {
-        arrowPrefixes.forEach(function(prefix) {
+      var arrowPrefixes = (styfn$2.arrowPrefixes = [
+        "source",
+        "mid-source",
+        "target",
+        "mid-target",
+      ]);
+      [
+        {
+          name: "arrow-shape",
+          type: t.arrowShape,
+          triggersBounds: diff.any,
+        },
+        {
+          name: "arrow-color",
+          type: t.color,
+        },
+        {
+          name: "arrow-fill",
+          type: t.arrowFill,
+        },
+        {
+          name: "arrow-width",
+          type: t.arrowWidth,
+        },
+      ].forEach(function (prop2) {
+        arrowPrefixes.forEach(function (prefix) {
           var name = prefix + "-" + prop2.name;
-          var type = prop2.type, triggersBounds = prop2.triggersBounds;
+          var type = prop2.type,
+            triggersBounds = prop2.triggersBounds;
           edgeArrow.push({
             name,
             type,
-            triggersBounds
+            triggersBounds,
           });
         });
       }, {});
-      var props = styfn$2.properties = [].concat(behavior, transition, visibility, overlay, underlay, ghost, commonLabel, labelDimensions, mainLabel, sourceLabel, targetLabel, nodeBody, nodeBorder, nodeOutline, backgroundImage, pie, compound, edgeLine, edgeArrow, core2);
-      var propGroups = styfn$2.propertyGroups = {
+      var props = (styfn$2.properties = [].concat(
+        behavior,
+        transition,
+        visibility,
+        overlay,
+        underlay,
+        ghost,
+        commonLabel,
+        labelDimensions,
+        mainLabel,
+        sourceLabel,
+        targetLabel,
+        nodeBody,
+        nodeBorder,
+        nodeOutline,
+        backgroundImage,
+        pie,
+        compound,
+        edgeLine,
+        edgeArrow,
+        core2,
+      ));
+      var propGroups = (styfn$2.propertyGroups = {
         // common to all eles
         behavior,
         transition,
@@ -14946,44 +17299,53 @@ var require_cytoscape_cjs = __commonJS({
         // edge props
         edgeLine,
         edgeArrow,
-        core: core2
-      };
-      var propGroupNames = styfn$2.propertyGroupNames = {};
-      var propGroupKeys = styfn$2.propertyGroupKeys = Object.keys(propGroups);
-      propGroupKeys.forEach(function(key) {
-        propGroupNames[key] = propGroups[key].map(function(prop2) {
+        core: core2,
+      });
+      var propGroupNames = (styfn$2.propertyGroupNames = {});
+      var propGroupKeys = (styfn$2.propertyGroupKeys = Object.keys(propGroups));
+      propGroupKeys.forEach(function (key) {
+        propGroupNames[key] = propGroups[key].map(function (prop2) {
           return prop2.name;
         });
-        propGroups[key].forEach(function(prop2) {
-          return prop2.groupKey = key;
+        propGroups[key].forEach(function (prop2) {
+          return (prop2.groupKey = key);
         });
       });
-      var aliases = styfn$2.aliases = [{
-        name: "content",
-        pointsTo: "label"
-      }, {
-        name: "control-point-distance",
-        pointsTo: "control-point-distances"
-      }, {
-        name: "control-point-weight",
-        pointsTo: "control-point-weights"
-      }, {
-        name: "edge-text-rotation",
-        pointsTo: "text-rotation"
-      }, {
-        name: "padding-left",
-        pointsTo: "padding"
-      }, {
-        name: "padding-right",
-        pointsTo: "padding"
-      }, {
-        name: "padding-top",
-        pointsTo: "padding"
-      }, {
-        name: "padding-bottom",
-        pointsTo: "padding"
-      }];
-      styfn$2.propertyNames = props.map(function(p2) {
+      var aliases = (styfn$2.aliases = [
+        {
+          name: "content",
+          pointsTo: "label",
+        },
+        {
+          name: "control-point-distance",
+          pointsTo: "control-point-distances",
+        },
+        {
+          name: "control-point-weight",
+          pointsTo: "control-point-weights",
+        },
+        {
+          name: "edge-text-rotation",
+          pointsTo: "text-rotation",
+        },
+        {
+          name: "padding-left",
+          pointsTo: "padding",
+        },
+        {
+          name: "padding-right",
+          pointsTo: "padding",
+        },
+        {
+          name: "padding-top",
+          pointsTo: "padding",
+        },
+        {
+          name: "padding-bottom",
+          pointsTo: "padding",
+        },
+      ]);
+      styfn$2.propertyNames = props.map(function (p2) {
         return p2.name;
       });
       for (var _i = 0; _i < props.length; _i++) {
@@ -14996,215 +17358,230 @@ var require_cytoscape_cjs = __commonJS({
         var aliasProp = {
           name: alias.name,
           alias: true,
-          pointsTo: pointsToProp
+          pointsTo: pointsToProp,
         };
         props.push(aliasProp);
         props[alias.name] = aliasProp;
       }
     })();
-    styfn$2.getDefaultProperty = function(name) {
+    styfn$2.getDefaultProperty = function (name) {
       return this.getDefaultProperties()[name];
     };
-    styfn$2.getDefaultProperties = function() {
+    styfn$2.getDefaultProperties = function () {
       var _p = this._private;
       if (_p.defaultProperties != null) {
         return _p.defaultProperties;
       }
-      var rawProps = extend({
-        // core props
-        "selection-box-color": "#ddd",
-        "selection-box-opacity": 0.65,
-        "selection-box-border-color": "#aaa",
-        "selection-box-border-width": 1,
-        "active-bg-color": "black",
-        "active-bg-opacity": 0.15,
-        "active-bg-size": 30,
-        "outside-texture-bg-color": "#000",
-        "outside-texture-bg-opacity": 0.125,
-        // common node/edge props
-        "events": "yes",
-        "text-events": "no",
-        "text-valign": "top",
-        "text-halign": "center",
-        "text-justification": "auto",
-        "line-height": 1,
-        "color": "#000",
-        "text-outline-color": "#000",
-        "text-outline-width": 0,
-        "text-outline-opacity": 1,
-        "text-opacity": 1,
-        "text-decoration": "none",
-        "text-transform": "none",
-        "text-wrap": "none",
-        "text-overflow-wrap": "whitespace",
-        "text-max-width": 9999,
-        "text-background-color": "#000",
-        "text-background-opacity": 0,
-        "text-background-shape": "rectangle",
-        "text-background-padding": 0,
-        "text-border-opacity": 0,
-        "text-border-width": 0,
-        "text-border-style": "solid",
-        "text-border-color": "#000",
-        "font-family": "Helvetica Neue, Helvetica, sans-serif",
-        "font-style": "normal",
-        "font-weight": "normal",
-        "font-size": 16,
-        "min-zoomed-font-size": 0,
-        "text-rotation": "none",
-        "source-text-rotation": "none",
-        "target-text-rotation": "none",
-        "visibility": "visible",
-        "display": "element",
-        "opacity": 1,
-        "z-compound-depth": "auto",
-        "z-index-compare": "auto",
-        "z-index": 0,
-        "label": "",
-        "text-margin-x": 0,
-        "text-margin-y": 0,
-        "source-label": "",
-        "source-text-offset": 0,
-        "source-text-margin-x": 0,
-        "source-text-margin-y": 0,
-        "target-label": "",
-        "target-text-offset": 0,
-        "target-text-margin-x": 0,
-        "target-text-margin-y": 0,
-        "overlay-opacity": 0,
-        "overlay-color": "#000",
-        "overlay-padding": 10,
-        "overlay-shape": "round-rectangle",
-        "underlay-opacity": 0,
-        "underlay-color": "#000",
-        "underlay-padding": 10,
-        "underlay-shape": "round-rectangle",
-        "transition-property": "none",
-        "transition-duration": 0,
-        "transition-delay": 0,
-        "transition-timing-function": "linear",
-        // node props
-        "background-blacken": 0,
-        "background-color": "#999",
-        "background-fill": "solid",
-        "background-opacity": 1,
-        "background-image": "none",
-        "background-image-crossorigin": "anonymous",
-        "background-image-opacity": 1,
-        "background-image-containment": "inside",
-        "background-image-smoothing": "yes",
-        "background-position-x": "50%",
-        "background-position-y": "50%",
-        "background-offset-x": 0,
-        "background-offset-y": 0,
-        "background-width-relative-to": "include-padding",
-        "background-height-relative-to": "include-padding",
-        "background-repeat": "no-repeat",
-        "background-fit": "none",
-        "background-clip": "node",
-        "background-width": "auto",
-        "background-height": "auto",
-        "border-color": "#000",
-        "border-opacity": 1,
-        "border-width": 0,
-        "border-style": "solid",
-        "outline-color": "#999",
-        "outline-opacity": 1,
-        "outline-width": 0,
-        "outline-offset": 0,
-        "outline-style": "solid",
-        "height": 30,
-        "width": 30,
-        "shape": "ellipse",
-        "shape-polygon-points": "-1, -1,   1, -1,   1, 1,   -1, 1",
-        "bounds-expansion": 0,
-        // node gradient
-        "background-gradient-direction": "to-bottom",
-        "background-gradient-stop-colors": "#999",
-        "background-gradient-stop-positions": "0%",
-        // ghost props
-        "ghost": "no",
-        "ghost-offset-y": 0,
-        "ghost-offset-x": 0,
-        "ghost-opacity": 0,
-        // compound props
-        "padding": 0,
-        "padding-relative-to": "width",
-        "position": "origin",
-        "compound-sizing-wrt-labels": "include",
-        "min-width": 0,
-        "min-width-bias-left": 0,
-        "min-width-bias-right": 0,
-        "min-height": 0,
-        "min-height-bias-top": 0,
-        "min-height-bias-bottom": 0
-      }, {
-        // node pie bg
-        "pie-size": "100%"
-      }, [{
-        name: "pie-{{i}}-background-color",
-        value: "black"
-      }, {
-        name: "pie-{{i}}-background-size",
-        value: "0%"
-      }, {
-        name: "pie-{{i}}-background-opacity",
-        value: 1
-      }].reduce(function(css, prop2) {
-        for (var i3 = 1; i3 <= styfn$2.pieBackgroundN; i3++) {
-          var name2 = prop2.name.replace("{{i}}", i3);
-          var val2 = prop2.value;
-          css[name2] = val2;
-        }
-        return css;
-      }, {}), {
-        // edge props
-        "line-style": "solid",
-        "line-color": "#999",
-        "line-fill": "solid",
-        "line-cap": "butt",
-        "line-opacity": 1,
-        "line-gradient-stop-colors": "#999",
-        "line-gradient-stop-positions": "0%",
-        "control-point-step-size": 40,
-        "control-point-weights": 0.5,
-        "segment-weights": 0.5,
-        "segment-distances": 20,
-        "taxi-turn": "50%",
-        "taxi-turn-min-distance": 10,
-        "taxi-direction": "auto",
-        "edge-distances": "intersection",
-        "curve-style": "haystack",
-        "haystack-radius": 0,
-        "arrow-scale": 1,
-        "loop-direction": "-45deg",
-        "loop-sweep": "-90deg",
-        "source-distance-from-node": 0,
-        "target-distance-from-node": 0,
-        "source-endpoint": "outside-to-node",
-        "target-endpoint": "outside-to-node",
-        "line-dash-pattern": [6, 3],
-        "line-dash-offset": 0
-      }, [{
-        name: "arrow-shape",
-        value: "none"
-      }, {
-        name: "arrow-color",
-        value: "#999"
-      }, {
-        name: "arrow-fill",
-        value: "filled"
-      }, {
-        name: "arrow-width",
-        value: 1
-      }].reduce(function(css, prop2) {
-        styfn$2.arrowPrefixes.forEach(function(prefix) {
-          var name2 = prefix + "-" + prop2.name;
-          var val2 = prop2.value;
-          css[name2] = val2;
-        });
-        return css;
-      }, {}));
+      var rawProps = extend(
+        {
+          // core props
+          "selection-box-color": "#ddd",
+          "selection-box-opacity": 0.65,
+          "selection-box-border-color": "#aaa",
+          "selection-box-border-width": 1,
+          "active-bg-color": "black",
+          "active-bg-opacity": 0.15,
+          "active-bg-size": 30,
+          "outside-texture-bg-color": "#000",
+          "outside-texture-bg-opacity": 0.125,
+          // common node/edge props
+          events: "yes",
+          "text-events": "no",
+          "text-valign": "top",
+          "text-halign": "center",
+          "text-justification": "auto",
+          "line-height": 1,
+          color: "#000",
+          "text-outline-color": "#000",
+          "text-outline-width": 0,
+          "text-outline-opacity": 1,
+          "text-opacity": 1,
+          "text-decoration": "none",
+          "text-transform": "none",
+          "text-wrap": "none",
+          "text-overflow-wrap": "whitespace",
+          "text-max-width": 9999,
+          "text-background-color": "#000",
+          "text-background-opacity": 0,
+          "text-background-shape": "rectangle",
+          "text-background-padding": 0,
+          "text-border-opacity": 0,
+          "text-border-width": 0,
+          "text-border-style": "solid",
+          "text-border-color": "#000",
+          "font-family": "Helvetica Neue, Helvetica, sans-serif",
+          "font-style": "normal",
+          "font-weight": "normal",
+          "font-size": 16,
+          "min-zoomed-font-size": 0,
+          "text-rotation": "none",
+          "source-text-rotation": "none",
+          "target-text-rotation": "none",
+          visibility: "visible",
+          display: "element",
+          opacity: 1,
+          "z-compound-depth": "auto",
+          "z-index-compare": "auto",
+          "z-index": 0,
+          label: "",
+          "text-margin-x": 0,
+          "text-margin-y": 0,
+          "source-label": "",
+          "source-text-offset": 0,
+          "source-text-margin-x": 0,
+          "source-text-margin-y": 0,
+          "target-label": "",
+          "target-text-offset": 0,
+          "target-text-margin-x": 0,
+          "target-text-margin-y": 0,
+          "overlay-opacity": 0,
+          "overlay-color": "#000",
+          "overlay-padding": 10,
+          "overlay-shape": "round-rectangle",
+          "underlay-opacity": 0,
+          "underlay-color": "#000",
+          "underlay-padding": 10,
+          "underlay-shape": "round-rectangle",
+          "transition-property": "none",
+          "transition-duration": 0,
+          "transition-delay": 0,
+          "transition-timing-function": "linear",
+          // node props
+          "background-blacken": 0,
+          "background-color": "#999",
+          "background-fill": "solid",
+          "background-opacity": 1,
+          "background-image": "none",
+          "background-image-crossorigin": "anonymous",
+          "background-image-opacity": 1,
+          "background-image-containment": "inside",
+          "background-image-smoothing": "yes",
+          "background-position-x": "50%",
+          "background-position-y": "50%",
+          "background-offset-x": 0,
+          "background-offset-y": 0,
+          "background-width-relative-to": "include-padding",
+          "background-height-relative-to": "include-padding",
+          "background-repeat": "no-repeat",
+          "background-fit": "none",
+          "background-clip": "node",
+          "background-width": "auto",
+          "background-height": "auto",
+          "border-color": "#000",
+          "border-opacity": 1,
+          "border-width": 0,
+          "border-style": "solid",
+          "outline-color": "#999",
+          "outline-opacity": 1,
+          "outline-width": 0,
+          "outline-offset": 0,
+          "outline-style": "solid",
+          height: 30,
+          width: 30,
+          shape: "ellipse",
+          "shape-polygon-points": "-1, -1,   1, -1,   1, 1,   -1, 1",
+          "bounds-expansion": 0,
+          // node gradient
+          "background-gradient-direction": "to-bottom",
+          "background-gradient-stop-colors": "#999",
+          "background-gradient-stop-positions": "0%",
+          // ghost props
+          ghost: "no",
+          "ghost-offset-y": 0,
+          "ghost-offset-x": 0,
+          "ghost-opacity": 0,
+          // compound props
+          padding: 0,
+          "padding-relative-to": "width",
+          position: "origin",
+          "compound-sizing-wrt-labels": "include",
+          "min-width": 0,
+          "min-width-bias-left": 0,
+          "min-width-bias-right": 0,
+          "min-height": 0,
+          "min-height-bias-top": 0,
+          "min-height-bias-bottom": 0,
+        },
+        {
+          // node pie bg
+          "pie-size": "100%",
+        },
+        [
+          {
+            name: "pie-{{i}}-background-color",
+            value: "black",
+          },
+          {
+            name: "pie-{{i}}-background-size",
+            value: "0%",
+          },
+          {
+            name: "pie-{{i}}-background-opacity",
+            value: 1,
+          },
+        ].reduce(function (css, prop2) {
+          for (var i3 = 1; i3 <= styfn$2.pieBackgroundN; i3++) {
+            var name2 = prop2.name.replace("{{i}}", i3);
+            var val2 = prop2.value;
+            css[name2] = val2;
+          }
+          return css;
+        }, {}),
+        {
+          // edge props
+          "line-style": "solid",
+          "line-color": "#999",
+          "line-fill": "solid",
+          "line-cap": "butt",
+          "line-opacity": 1,
+          "line-gradient-stop-colors": "#999",
+          "line-gradient-stop-positions": "0%",
+          "control-point-step-size": 40,
+          "control-point-weights": 0.5,
+          "segment-weights": 0.5,
+          "segment-distances": 20,
+          "taxi-turn": "50%",
+          "taxi-turn-min-distance": 10,
+          "taxi-direction": "auto",
+          "edge-distances": "intersection",
+          "curve-style": "haystack",
+          "haystack-radius": 0,
+          "arrow-scale": 1,
+          "loop-direction": "-45deg",
+          "loop-sweep": "-90deg",
+          "source-distance-from-node": 0,
+          "target-distance-from-node": 0,
+          "source-endpoint": "outside-to-node",
+          "target-endpoint": "outside-to-node",
+          "line-dash-pattern": [6, 3],
+          "line-dash-offset": 0,
+        },
+        [
+          {
+            name: "arrow-shape",
+            value: "none",
+          },
+          {
+            name: "arrow-color",
+            value: "#999",
+          },
+          {
+            name: "arrow-fill",
+            value: "filled",
+          },
+          {
+            name: "arrow-width",
+            value: 1,
+          },
+        ].reduce(function (css, prop2) {
+          styfn$2.arrowPrefixes.forEach(function (prefix) {
+            var name2 = prefix + "-" + prop2.name;
+            var val2 = prop2.value;
+            css[name2] = val2;
+          });
+          return css;
+        }, {}),
+      );
       var parsedProps = {};
       for (var i2 = 0; i2 < this.properties.length; i2++) {
         var prop = this.properties[i2];
@@ -15219,52 +17596,76 @@ var require_cytoscape_cjs = __commonJS({
       _p.defaultProperties = parsedProps;
       return _p.defaultProperties;
     };
-    styfn$2.addDefaultStylesheet = function() {
-      this.selector(":parent").css({
-        "shape": "rectangle",
-        "padding": 10,
-        "background-color": "#eee",
-        "border-color": "#ccc",
-        "border-width": 1
-      }).selector("edge").css({
-        "width": 3
-      }).selector(":loop").css({
-        "curve-style": "bezier"
-      }).selector("edge:compound").css({
-        "curve-style": "bezier",
-        "source-endpoint": "outside-to-line",
-        "target-endpoint": "outside-to-line"
-      }).selector(":selected").css({
-        "background-color": "#0169D9",
-        "line-color": "#0169D9",
-        "source-arrow-color": "#0169D9",
-        "target-arrow-color": "#0169D9",
-        "mid-source-arrow-color": "#0169D9",
-        "mid-target-arrow-color": "#0169D9"
-      }).selector(":parent:selected").css({
-        "background-color": "#CCE1F9",
-        "border-color": "#aec8e5"
-      }).selector(":active").css({
-        "overlay-color": "black",
-        "overlay-padding": 10,
-        "overlay-opacity": 0.25
-      });
+    styfn$2.addDefaultStylesheet = function () {
+      this.selector(":parent")
+        .css({
+          shape: "rectangle",
+          padding: 10,
+          "background-color": "#eee",
+          "border-color": "#ccc",
+          "border-width": 1,
+        })
+        .selector("edge")
+        .css({
+          width: 3,
+        })
+        .selector(":loop")
+        .css({
+          "curve-style": "bezier",
+        })
+        .selector("edge:compound")
+        .css({
+          "curve-style": "bezier",
+          "source-endpoint": "outside-to-line",
+          "target-endpoint": "outside-to-line",
+        })
+        .selector(":selected")
+        .css({
+          "background-color": "#0169D9",
+          "line-color": "#0169D9",
+          "source-arrow-color": "#0169D9",
+          "target-arrow-color": "#0169D9",
+          "mid-source-arrow-color": "#0169D9",
+          "mid-target-arrow-color": "#0169D9",
+        })
+        .selector(":parent:selected")
+        .css({
+          "background-color": "#CCE1F9",
+          "border-color": "#aec8e5",
+        })
+        .selector(":active")
+        .css({
+          "overlay-color": "black",
+          "overlay-padding": 10,
+          "overlay-opacity": 0.25,
+        });
       this.defaultLength = this.length;
     };
     var styfn$1 = {};
-    styfn$1.parse = function(name, value, propIsBypass, propIsFlat) {
+    styfn$1.parse = function (name, value, propIsBypass, propIsFlat) {
       var self2 = this;
       if (fn$6(value)) {
         return self2.parseImplWarn(name, value, propIsBypass, propIsFlat);
       }
-      var flatKey = propIsFlat === "mapping" || propIsFlat === true || propIsFlat === false || propIsFlat == null ? "dontcare" : propIsFlat;
+      var flatKey =
+        propIsFlat === "mapping" ||
+        propIsFlat === true ||
+        propIsFlat === false ||
+        propIsFlat == null
+          ? "dontcare"
+          : propIsFlat;
       var bypassKey = propIsBypass ? "t" : "f";
       var valueKey = "" + value;
       var argHash = hashStrings(name, valueKey, bypassKey, flatKey);
-      var propCache = self2.propCache = self2.propCache || [];
+      var propCache = (self2.propCache = self2.propCache || []);
       var ret;
       if (!(ret = propCache[argHash])) {
-        ret = propCache[argHash] = self2.parseImplWarn(name, value, propIsBypass, propIsFlat);
+        ret = propCache[argHash] = self2.parseImplWarn(
+          name,
+          value,
+          propIsBypass,
+          propIsFlat,
+        );
       }
       if (propIsBypass || propIsFlat === "mapping") {
         ret = copy(ret);
@@ -15274,17 +17675,27 @@ var require_cytoscape_cjs = __commonJS({
       }
       return ret;
     };
-    styfn$1.parseImplWarn = function(name, value, propIsBypass, propIsFlat) {
+    styfn$1.parseImplWarn = function (name, value, propIsBypass, propIsFlat) {
       var prop = this.parseImpl(name, value, propIsBypass, propIsFlat);
       if (!prop && value != null) {
-        warn("The style property `".concat(name, ": ").concat(value, "` is invalid"));
+        warn(
+          "The style property `"
+            .concat(name, ": ")
+            .concat(value, "` is invalid"),
+        );
       }
-      if (prop && (prop.name === "width" || prop.name === "height") && value === "label") {
-        warn("The style value of `label` is deprecated for `" + prop.name + "`");
+      if (
+        prop &&
+        (prop.name === "width" || prop.name === "height") &&
+        value === "label"
+      ) {
+        warn(
+          "The style value of `label` is deprecated for `" + prop.name + "`",
+        );
       }
       return prop;
     };
-    styfn$1.parseImpl = function(name, value, propIsBypass, propIsFlat) {
+    styfn$1.parseImpl = function (name, value, propIsBypass, propIsFlat) {
       var self2 = this;
       name = camel2dash(name);
       var property = self2.properties[name];
@@ -15313,7 +17724,7 @@ var require_cytoscape_cjs = __commonJS({
           name,
           value,
           bypass: true,
-          deleteBypass: true
+          deleteBypass: true,
         };
       }
       if (fn$6(value)) {
@@ -15322,13 +17733,16 @@ var require_cytoscape_cjs = __commonJS({
           value,
           strValue: "fn",
           mapped: types.fn,
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
       }
       var data2, mapData;
-      if (!valueIsString || propIsFlat || value.length < 7 || value[1] !== "a")
-        ;
-      else if (value.length >= 7 && value[0] === "d" && (data2 = new RegExp(types.data.regex).exec(value))) {
+      if (!valueIsString || propIsFlat || value.length < 7 || value[1] !== "a");
+      else if (
+        value.length >= 7 &&
+        value[0] === "d" &&
+        (data2 = new RegExp(types.data.regex).exec(value))
+      ) {
         if (propIsBypass) {
           return false;
         }
@@ -15339,9 +17753,13 @@ var require_cytoscape_cjs = __commonJS({
           strValue: "" + value,
           mapped,
           field: data2[1],
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
-      } else if (value.length >= 10 && value[0] === "m" && (mapData = new RegExp(types.mapData.regex).exec(value))) {
+      } else if (
+        value.length >= 10 &&
+        value[0] === "m" &&
+        (mapData = new RegExp(types.mapData.regex).exec(value))
+      ) {
         if (propIsBypass) {
           return false;
         }
@@ -15360,14 +17778,32 @@ var require_cytoscape_cjs = __commonJS({
         if (!valueMax || valueMax.mapped) {
           return false;
         }
-        if (valueMin.pfValue === valueMax.pfValue || valueMin.strValue === valueMax.strValue) {
-          warn("`" + name + ": " + value + "` is not a valid mapper because the output range is zero; converting to `" + name + ": " + valueMin.strValue + "`");
+        if (
+          valueMin.pfValue === valueMax.pfValue ||
+          valueMin.strValue === valueMax.strValue
+        ) {
+          warn(
+            "`" +
+              name +
+              ": " +
+              value +
+              "` is not a valid mapper because the output range is zero; converting to `" +
+              name +
+              ": " +
+              valueMin.strValue +
+              "`",
+          );
           return this.parse(name, valueMin.strValue);
         } else if (type.color) {
           var c1 = valueMin.value;
           var c2 = valueMax.value;
-          var same = c1[0] === c2[0] && c1[1] === c2[1] && c1[2] === c2[2] && // optional alpha
-          (c1[3] === c2[3] || (c1[3] == null || c1[3] === 1) && (c2[3] == null || c2[3] === 1));
+          var same =
+            c1[0] === c2[0] &&
+            c1[1] === c2[1] &&
+            c1[2] === c2[2] && // optional alpha
+            (c1[3] === c2[3] ||
+              ((c1[3] == null || c1[3] === 1) &&
+                (c2[3] == null || c2[3] === 1)));
           if (same) {
             return false;
           }
@@ -15383,7 +17819,7 @@ var require_cytoscape_cjs = __commonJS({
           fieldMax: parseFloat(mapData[3]),
           valueMin: valueMin.value,
           valueMax: valueMax.value,
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
       }
       if (type.multiple && propIsFlat !== "multiple") {
@@ -15420,7 +17856,7 @@ var require_cytoscape_cjs = __commonJS({
               name,
               value: valArr[0],
               strValue: valArr[0],
-              bypass: propIsBypass
+              bypass: propIsBypass,
             };
           } else {
             return null;
@@ -15432,7 +17868,7 @@ var require_cytoscape_cjs = __commonJS({
           pfValue: pfValArr,
           strValue: strVal,
           bypass: propIsBypass,
-          units: unitsArr
+          units: unitsArr,
         };
       }
       var checkEnums = function checkEnums2() {
@@ -15443,7 +17879,7 @@ var require_cytoscape_cjs = __commonJS({
               name,
               value,
               strValue: "" + value,
-              bypass: propIsBypass
+              bypass: propIsBypass,
             };
           }
         }
@@ -15484,7 +17920,12 @@ var require_cytoscape_cjs = __commonJS({
         if (type.integer && !integer(value)) {
           return null;
         }
-        if (type.min !== void 0 && (value < type.min || type.strictMin && value === type.min) || type.max !== void 0 && (value > type.max || type.strictMax && value === type.max)) {
+        if (
+          (type.min !== void 0 &&
+            (value < type.min || (type.strictMin && value === type.min))) ||
+          (type.max !== void 0 &&
+            (value > type.max || (type.strictMax && value === type.max)))
+        ) {
           return null;
         }
         var ret = {
@@ -15492,12 +17933,13 @@ var require_cytoscape_cjs = __commonJS({
           value,
           strValue: "" + value + (units ? units : ""),
           units,
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
-        if (type.unitless || units !== "px" && units !== "em") {
+        if (type.unitless || (units !== "px" && units !== "em")) {
           ret.pfValue = value;
         } else {
-          ret.pfValue = units === "px" || !units ? value : this.getEmSizeInPixels() * value;
+          ret.pfValue =
+            units === "px" || !units ? value : this.getEmSizeInPixels() * value;
         }
         if (units === "ms" || units === "s") {
           ret.pfValue = units === "ms" ? value : 1e3 * value;
@@ -15512,8 +17954,7 @@ var require_cytoscape_cjs = __commonJS({
       } else if (type.propList) {
         var props = [];
         var propsStr = "" + value;
-        if (propsStr === "none")
-          ;
+        if (propsStr === "none");
         else {
           var propsSplit = propsStr.split(/\s*,\s*|\s+/);
           for (var _i2 = 0; _i2 < propsSplit.length; _i2++) {
@@ -15532,7 +17973,7 @@ var require_cytoscape_cjs = __commonJS({
           name,
           value: props,
           strValue: props.length === 0 ? "none" : props.join(" "),
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
       } else if (type.color) {
         var tuple = color2tuple(value);
@@ -15545,7 +17986,7 @@ var require_cytoscape_cjs = __commonJS({
           pfValue: tuple,
           strValue: "rgb(" + tuple[0] + "," + tuple[1] + "," + tuple[2] + ")",
           // n.b. no spaces b/c of multiple support
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
       } else if (type.regex || type.regexes) {
         if (type.enums) {
@@ -15563,7 +18004,7 @@ var require_cytoscape_cjs = __commonJS({
               name,
               value: type.singleRegexMatchValue ? m[1] : m,
               strValue: "" + value,
-              bypass: propIsBypass
+              bypass: propIsBypass,
             };
           }
         }
@@ -15573,7 +18014,7 @@ var require_cytoscape_cjs = __commonJS({
           name,
           value: "" + value,
           strValue: "" + value,
-          bypass: propIsBypass
+          bypass: propIsBypass,
         };
       } else if (type.enums) {
         return checkEnums();
@@ -15591,16 +18032,16 @@ var require_cytoscape_cjs = __commonJS({
       }
       this._private = {
         cy,
-        coreStyle: {}
+        coreStyle: {},
       };
       this.length = 0;
       this.resetToDefault();
     };
     var styfn = Style.prototype;
-    styfn.instanceString = function() {
+    styfn.instanceString = function () {
       return "style";
     };
-    styfn.clear = function() {
+    styfn.clear = function () {
       var _p = this._private;
       var cy = _p.cy;
       var eles = cy.elements();
@@ -15611,33 +18052,35 @@ var require_cytoscape_cjs = __commonJS({
       _p.contextStyles = {};
       _p.propDiffs = {};
       this.cleanElements(eles, true);
-      eles.forEach(function(ele) {
+      eles.forEach(function (ele) {
         var ele_p = ele[0]._private;
         ele_p.styleDirty = true;
         ele_p.appliedInitStyle = false;
       });
       return this;
     };
-    styfn.resetToDefault = function() {
+    styfn.resetToDefault = function () {
       this.clear();
       this.addDefaultStylesheet();
       return this;
     };
-    styfn.core = function(propName) {
-      return this._private.coreStyle[propName] || this.getDefaultProperty(propName);
+    styfn.core = function (propName) {
+      return (
+        this._private.coreStyle[propName] || this.getDefaultProperty(propName)
+      );
     };
-    styfn.selector = function(selectorStr) {
+    styfn.selector = function (selectorStr) {
       var selector = selectorStr === "core" ? null : new Selector(selectorStr);
       var i2 = this.length++;
       this[i2] = {
         selector,
         properties: [],
         mappedProperties: [],
-        index: i2
+        index: i2,
       };
       return this;
     };
-    styfn.css = function() {
+    styfn.css = function () {
       var self2 = this;
       var args = arguments;
       if (args.length === 1) {
@@ -15658,13 +18101,16 @@ var require_cytoscape_cjs = __commonJS({
       return this;
     };
     styfn.style = styfn.css;
-    styfn.cssRule = function(name, value) {
+    styfn.cssRule = function (name, value) {
       var property = this.parse(name, value);
       if (property) {
         var i2 = this.length - 1;
         this[i2].properties.push(property);
         this[i2].properties[property.name] = property;
-        if (property.name.match(/pie-(\d+)-background-size/) && property.value) {
+        if (
+          property.name.match(/pie-(\d+)-background-size/) &&
+          property.value
+        ) {
           this._private.hasPie = true;
         }
         if (property.mapped) {
@@ -15677,7 +18123,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return this;
     };
-    styfn.append = function(style) {
+    styfn.append = function (style) {
       if (stylesheet(style)) {
         style.appendToStyle(this);
       } else if (array(style)) {
@@ -15687,15 +18133,24 @@ var require_cytoscape_cjs = __commonJS({
       }
       return this;
     };
-    Style.fromJson = function(cy, json) {
+    Style.fromJson = function (cy, json) {
       var style = new Style(cy);
       style.fromJson(json);
       return style;
     };
-    Style.fromString = function(cy, string2) {
+    Style.fromString = function (cy, string2) {
       return new Style(cy).fromString(string2);
     };
-    [styfn$8, styfn$7, styfn$6, styfn$5, styfn$4, styfn$3, styfn$2, styfn$1].forEach(function(props) {
+    [
+      styfn$8,
+      styfn$7,
+      styfn$6,
+      styfn$5,
+      styfn$4,
+      styfn$3,
+      styfn$2,
+      styfn$1,
+    ].forEach(function (props) {
       extend(styfn, props);
     });
     Style.types = styfn.types;
@@ -15727,7 +18182,7 @@ var require_cytoscape_cjs = __commonJS({
       // e.g. cy.data() changed => recalc ele mappers
       updateStyle: function updateStyle() {
         this.mutableElements().updateStyle();
-      }
+      },
     };
     var defaultSelectionType = "single";
     var corefn$1 = {
@@ -15914,7 +18369,7 @@ var require_cytoscape_cjs = __commonJS({
             x1: bbe.x1,
             y1: bbe.y1,
             x2: bbe.x2,
-            y2: bbe.y2
+            y2: bbe.y2,
           };
           bb.w = bb.x2 - bb.x1;
           bb.h = bb.y2 - bb.y1;
@@ -15929,18 +18384,27 @@ var require_cytoscape_cjs = __commonJS({
         var h = this.height();
         var zoom;
         padding = number$1(padding) ? padding : 0;
-        if (!isNaN(w) && !isNaN(h) && w > 0 && h > 0 && !isNaN(bb.w) && !isNaN(bb.h) && bb.w > 0 && bb.h > 0) {
+        if (
+          !isNaN(w) &&
+          !isNaN(h) &&
+          w > 0 &&
+          h > 0 &&
+          !isNaN(bb.w) &&
+          !isNaN(bb.h) &&
+          bb.w > 0 &&
+          bb.h > 0
+        ) {
           zoom = Math.min((w - 2 * padding) / bb.w, (h - 2 * padding) / bb.h);
           zoom = zoom > this._private.maxZoom ? this._private.maxZoom : zoom;
           zoom = zoom < this._private.minZoom ? this._private.minZoom : zoom;
           var pan = {
             // now pan to middle
             x: (w - zoom * (bb.x1 + bb.x2)) / 2,
-            y: (h - zoom * (bb.y1 + bb.y2)) / 2
+            y: (h - zoom * (bb.y1 + bb.y2)) / 2,
           };
           return {
             zoom,
-            pan
+            pan,
           };
         }
         return;
@@ -15967,7 +18431,7 @@ var require_cytoscape_cjs = __commonJS({
           return this._private.minZoom;
         } else {
           return this.zoomRange({
-            min: zoom
+            min: zoom,
           });
         }
       },
@@ -15976,7 +18440,7 @@ var require_cytoscape_cjs = __commonJS({
           return this._private.maxZoom;
         } else {
           return this.zoomRange({
-            max: zoom
+            max: zoom,
           });
         }
       },
@@ -15995,7 +18459,11 @@ var require_cytoscape_cjs = __commonJS({
         } else if (plainObject(params)) {
           zoom = params.level;
           if (params.position != null) {
-            pos = modelToRenderedPosition(params.position, currentZoom, currentPan);
+            pos = modelToRenderedPosition(
+              params.position,
+              currentZoom,
+              currentPan,
+            );
           } else if (params.renderedPosition != null) {
             pos = params.renderedPosition;
           }
@@ -16005,7 +18473,12 @@ var require_cytoscape_cjs = __commonJS({
         }
         zoom = zoom > _p.maxZoom ? _p.maxZoom : zoom;
         zoom = zoom < _p.minZoom ? _p.minZoom : zoom;
-        if (bail || !number$1(zoom) || zoom === currentZoom || pos != null && (!number$1(pos.x) || !number$1(pos.y))) {
+        if (
+          bail ||
+          !number$1(zoom) ||
+          zoom === currentZoom ||
+          (pos != null && (!number$1(pos.x) || !number$1(pos.y)))
+        ) {
           return null;
         }
         if (pos != null) {
@@ -16013,21 +18486,21 @@ var require_cytoscape_cjs = __commonJS({
           var zoom1 = currentZoom;
           var zoom2 = zoom;
           var pan2 = {
-            x: -zoom2 / zoom1 * (pos.x - pan1.x) + pos.x,
-            y: -zoom2 / zoom1 * (pos.y - pan1.y) + pos.y
+            x: (-zoom2 / zoom1) * (pos.x - pan1.x) + pos.x,
+            y: (-zoom2 / zoom1) * (pos.y - pan1.y) + pos.y,
           };
           return {
             zoomed: true,
             panned: true,
             zoom: zoom2,
-            pan: pan2
+            pan: pan2,
           };
         } else {
           return {
             zoomed: true,
             panned: false,
             zoom,
-            pan: currentPan
+            pan: currentPan,
           };
         }
       },
@@ -16078,7 +18551,11 @@ var require_cytoscape_cjs = __commonJS({
             events.push("zoom");
           }
         }
-        if (panDefd && (!zoomFailed || !opts.cancelOnFailedZoom) && _p.panningEnabled) {
+        if (
+          panDefd &&
+          (!zoomFailed || !opts.cancelOnFailedZoom) &&
+          _p.panningEnabled
+        ) {
           var p2 = opts.pan;
           if (number$1(p2.x)) {
             _p.pan.x = p2.x;
@@ -16128,7 +18605,7 @@ var require_cytoscape_cjs = __commonJS({
         var pan = {
           // middle
           x: (w - zoom * (bb.x1 + bb.x2)) / 2,
-          y: (h - zoom * (bb.y1 + bb.y2)) / 2
+          y: (h - zoom * (bb.y1 + bb.y2)) / 2,
         };
         return pan;
       },
@@ -16139,9 +18616,9 @@ var require_cytoscape_cjs = __commonJS({
         this.viewport({
           pan: {
             x: 0,
-            y: 0
+            y: 0,
           },
-          zoom: 1
+          zoom: 1,
         });
         return this;
       },
@@ -16152,20 +18629,30 @@ var require_cytoscape_cjs = __commonJS({
         var _p = this._private;
         var container = _p.container;
         var cy = this;
-        return _p.sizeCache = _p.sizeCache || (container ? function() {
-          var style = cy.window().getComputedStyle(container);
-          var val = function val2(name) {
-            return parseFloat(style.getPropertyValue(name));
-          };
-          return {
-            width: container.clientWidth - val("padding-left") - val("padding-right"),
-            height: container.clientHeight - val("padding-top") - val("padding-bottom")
-          };
-        }() : {
-          // fallback if no container (not 0 b/c can be used for dividing etc)
-          width: 1,
-          height: 1
-        });
+        return (_p.sizeCache =
+          _p.sizeCache ||
+          (container
+            ? (function () {
+                var style = cy.window().getComputedStyle(container);
+                var val = function val2(name) {
+                  return parseFloat(style.getPropertyValue(name));
+                };
+                return {
+                  width:
+                    container.clientWidth -
+                    val("padding-left") -
+                    val("padding-right"),
+                  height:
+                    container.clientHeight -
+                    val("padding-top") -
+                    val("padding-bottom"),
+                };
+              })()
+            : {
+                // fallback if no container (not 0 b/c can be used for dividing etc)
+                width: 1,
+                height: 1,
+              }));
       },
       width: function width() {
         return this.size().width;
@@ -16181,7 +18668,7 @@ var require_cytoscape_cjs = __commonJS({
           x1: (rb.x1 - pan.x) / zoom,
           x2: (rb.x2 - pan.x) / zoom,
           y1: (rb.y1 - pan.y) / zoom,
-          y2: (rb.y2 - pan.y) / zoom
+          y2: (rb.y2 - pan.y) / zoom,
         };
         b.w = b.x2 - b.x1;
         b.h = b.y2 - b.y1;
@@ -16196,16 +18683,14 @@ var require_cytoscape_cjs = __commonJS({
           x2: width,
           y2: height,
           w: width,
-          h: height
+          h: height,
         };
       },
       multiClickDebounceTime: function multiClickDebounceTime(_int) {
-        if (_int)
-          this._private.multiClickDebounceTime = _int;
-        else
-          return this._private.multiClickDebounceTime;
+        if (_int) this._private.multiClickDebounceTime = _int;
+        else return this._private.multiClickDebounceTime;
         return this;
-      }
+      },
     };
     corefn$1.centre = corefn$1.center;
     corefn$1.autolockNodes = corefn$1.autolock;
@@ -16220,14 +18705,14 @@ var require_cytoscape_cjs = __commonJS({
         settingTriggersEvent: true,
         triggerFnName: "trigger",
         allowGetting: true,
-        updateStyle: true
+        updateStyle: true,
       }),
       removeData: define2.removeData({
         field: "data",
         event: "data",
         triggerFnName: "trigger",
         triggerEvent: true,
-        updateStyle: true
+        updateStyle: true,
       }),
       scratch: define2.data({
         field: "scratch",
@@ -16238,15 +18723,15 @@ var require_cytoscape_cjs = __commonJS({
         settingTriggersEvent: true,
         triggerFnName: "trigger",
         allowGetting: true,
-        updateStyle: true
+        updateStyle: true,
       }),
       removeScratch: define2.removeData({
         field: "scratch",
         event: "scratch",
         triggerFnName: "trigger",
         triggerEvent: true,
-        updateStyle: true
-      })
+        updateStyle: true,
+      }),
     };
     fn.attr = fn.data;
     fn.removeAttr = fn.removeData;
@@ -16263,19 +18748,25 @@ var require_cytoscape_cjs = __commonJS({
         reg.cy.destroy();
         reg = {};
       }
-      var readies = reg.readies = reg.readies || [];
+      var readies = (reg.readies = reg.readies || []);
       if (container) {
         container._cyreg = reg;
       }
       reg.cy = cy;
       var head = _window !== void 0 && container !== void 0 && !opts.headless;
       var options = opts;
-      options.layout = extend({
-        name: head ? "grid" : "null"
-      }, options.layout);
-      options.renderer = extend({
-        name: head ? "canvas" : "null"
-      }, options.renderer);
+      options.layout = extend(
+        {
+          name: head ? "grid" : "null",
+        },
+        options.layout,
+      );
+      options.renderer = extend(
+        {
+          name: head ? "canvas" : "null",
+        },
+        options.renderer,
+      );
       var defVal = function defVal2(def, val, altVal) {
         if (val !== void 0) {
           return val;
@@ -16285,7 +18776,7 @@ var require_cytoscape_cjs = __commonJS({
           return def;
         }
       };
-      var _p = this._private = {
+      var _p = (this._private = {
         container,
         // html dom ele container
         ready: false,
@@ -16316,27 +18807,38 @@ var require_cytoscape_cjs = __commonJS({
         userPanningEnabled: defVal(true, options.userPanningEnabled),
         boxSelectionEnabled: defVal(true, options.boxSelectionEnabled),
         autolock: defVal(false, options.autolock, options.autolockNodes),
-        autoungrabify: defVal(false, options.autoungrabify, options.autoungrabifyNodes),
+        autoungrabify: defVal(
+          false,
+          options.autoungrabify,
+          options.autoungrabifyNodes,
+        ),
         autounselectify: defVal(false, options.autounselectify),
-        styleEnabled: options.styleEnabled === void 0 ? head : options.styleEnabled,
+        styleEnabled:
+          options.styleEnabled === void 0 ? head : options.styleEnabled,
         zoom: number$1(options.zoom) ? options.zoom : 1,
         pan: {
-          x: plainObject(options.pan) && number$1(options.pan.x) ? options.pan.x : 0,
-          y: plainObject(options.pan) && number$1(options.pan.y) ? options.pan.y : 0
+          x:
+            plainObject(options.pan) && number$1(options.pan.x)
+              ? options.pan.x
+              : 0,
+          y:
+            plainObject(options.pan) && number$1(options.pan.y)
+              ? options.pan.y
+              : 0,
         },
         animation: {
           // object for currently-running animations
           current: [],
-          queue: []
+          queue: [],
         },
         hasCompoundNodes: false,
-        multiClickDebounceTime: defVal(250, options.multiClickDebounceTime)
-      };
+        multiClickDebounceTime: defVal(250, options.multiClickDebounceTime),
+      });
       this.createEmitter();
       this.selectionType(options.selectionType);
       this.zoomRange({
         min: options.minZoom,
-        max: options.maxZoom
+        max: options.maxZoom,
       });
       var loadExtData = function loadExtData2(extData, next) {
         var anyIsPromise = extData.some(promise);
@@ -16351,7 +18853,11 @@ var require_cytoscape_cjs = __commonJS({
       }
       var rendererOptions = extend({}, options, options.renderer);
       cy.initRenderer(rendererOptions);
-      var setElesAndLayout = function setElesAndLayout2(elements, onload, ondone) {
+      var setElesAndLayout = function setElesAndLayout2(
+        elements,
+        onload,
+        ondone,
+      ) {
         cy.notifications(false);
         var oldEles = cy.mutableElements();
         if (oldEles.length > 0) {
@@ -16362,12 +18868,12 @@ var require_cytoscape_cjs = __commonJS({
             cy.add(elements);
           }
         }
-        cy.one("layoutready", function(e) {
+        cy.one("layoutready", function (e) {
           cy.notifications(true);
           cy.emit(e);
           cy.one("load", onload);
           cy.emitAndNotify("load");
-        }).one("layoutstop", function() {
+        }).one("layoutstop", function () {
           cy.one("done", ondone);
           cy.emit("done");
         });
@@ -16375,27 +18881,31 @@ var require_cytoscape_cjs = __commonJS({
         layoutOpts.eles = cy.elements();
         cy.layout(layoutOpts).run();
       };
-      loadExtData([options.style, options.elements], function(thens) {
+      loadExtData([options.style, options.elements], function (thens) {
         var initStyle = thens[0];
         var initEles = thens[1];
         if (_p.styleEnabled) {
           cy.style().append(initStyle);
         }
-        setElesAndLayout(initEles, function() {
-          cy.startAnimationLoop();
-          _p.ready = true;
-          if (fn$6(options.ready)) {
-            cy.on("ready", options.ready);
-          }
-          for (var i2 = 0; i2 < readies.length; i2++) {
-            var fn2 = readies[i2];
-            cy.on("ready", fn2);
-          }
-          if (reg) {
-            reg.readies = [];
-          }
-          cy.emit("ready");
-        }, options.done);
+        setElesAndLayout(
+          initEles,
+          function () {
+            cy.startAnimationLoop();
+            _p.ready = true;
+            if (fn$6(options.ready)) {
+              cy.on("ready", options.ready);
+            }
+            for (var i2 = 0; i2 < readies.length; i2++) {
+              var fn2 = readies[i2];
+              cy.on("ready", fn2);
+            }
+            if (reg) {
+              reg.readies = [];
+            }
+            cy.emit("ready");
+          },
+          options.done,
+        );
       });
     };
     var corefn = Core.prototype;
@@ -16419,8 +18929,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       destroy: function destroy() {
         var cy = this;
-        if (cy.destroyed())
-          return;
+        if (cy.destroyed()) return;
         cy.stopAnimationLoop();
         cy.destroyRenderer();
         this.emit("destroy");
@@ -16455,8 +18964,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       window: function window2() {
         var container = this._private.container;
-        if (container == null)
-          return _window;
+        if (container == null) return _window;
         var ownerDocument = this._private.container.ownerDocument;
         if (ownerDocument === void 0 || ownerDocument == null) {
           return _window;
@@ -16478,10 +18986,15 @@ var require_cytoscape_cjs = __commonJS({
         _p.container = container;
         _p.styleEnabled = true;
         cy.invalidateSize();
-        cy.initRenderer(extend({}, options, options.renderer, {
-          // allow custom renderer name to be re-used, otherwise use canvas
-          name: options.renderer.name === "null" ? "canvas" : options.renderer.name
-        }));
+        cy.initRenderer(
+          extend({}, options, options.renderer, {
+            // allow custom renderer name to be re-used, otherwise use canvas
+            name:
+              options.renderer.name === "null"
+                ? "canvas"
+                : options.renderer.name,
+          }),
+        );
         cy.startAnimationLoop();
         cy.style(options.style);
         cy.emit("mount");
@@ -16492,7 +19005,7 @@ var require_cytoscape_cjs = __commonJS({
         cy.stopAnimationLoop();
         cy.destroyRenderer();
         cy.initRenderer({
-          name: "null"
+          name: "null",
         });
         cy.emit("unmount");
         return cy;
@@ -16517,7 +19030,9 @@ var require_cytoscape_cjs = __commonJS({
               for (var i3 = 0; i3 < jsons.length; i3++) {
                 var json3 = jsons[i3];
                 if (!json3.data.id) {
-                  warn("cy.json() cannot handle elements without an ID attribute");
+                  warn(
+                    "cy.json() cannot handle elements without an ID attribute",
+                  );
                   continue;
                 }
                 var id = "" + json3.data.id;
@@ -16526,7 +19041,7 @@ var require_cytoscape_cjs = __commonJS({
                 if (ele.length !== 0) {
                   toMod.push({
                     ele,
-                    json: json3
+                    json: json3,
                   });
                 } else {
                   if (gr2) {
@@ -16539,7 +19054,9 @@ var require_cytoscape_cjs = __commonJS({
               }
               cy.add(toAdd);
               for (var _i = 0; _i < toMod.length; _i++) {
-                var _toMod$_i = toMod[_i], _ele = _toMod$_i.ele, _json = _toMod$_i.json;
+                var _toMod$_i = toMod[_i],
+                  _ele = _toMod$_i.ele,
+                  _json = _toMod$_i.json;
                 _ele.json(_json);
               }
             };
@@ -16556,21 +19073,23 @@ var require_cytoscape_cjs = __commonJS({
               }
             }
             var parentsToRemove = cy.collection();
-            eles.filter(function(ele) {
-              return !idInJson[ele.id()];
-            }).forEach(function(ele) {
-              if (ele.isParent()) {
-                parentsToRemove.merge(ele);
-              } else {
-                ele.remove();
-              }
-            });
-            parentsToRemove.forEach(function(ele) {
+            eles
+              .filter(function (ele) {
+                return !idInJson[ele.id()];
+              })
+              .forEach(function (ele) {
+                if (ele.isParent()) {
+                  parentsToRemove.merge(ele);
+                } else {
+                  ele.remove();
+                }
+              });
+            parentsToRemove.forEach(function (ele) {
               return ele.children().move({
-                parent: null
+                parent: null,
               });
             });
-            parentsToRemove.forEach(function(ele) {
+            parentsToRemove.forEach(function (ele) {
               return getFreshRef(ele).remove();
             });
           }
@@ -16588,7 +19107,19 @@ var require_cytoscape_cjs = __commonJS({
           if (obj.data) {
             cy.data(obj.data);
           }
-          var fields = ["minZoom", "maxZoom", "zoomingEnabled", "userZoomingEnabled", "panningEnabled", "userPanningEnabled", "boxSelectionEnabled", "autolock", "autoungrabify", "autounselectify", "multiClickDebounceTime"];
+          var fields = [
+            "minZoom",
+            "maxZoom",
+            "zoomingEnabled",
+            "userZoomingEnabled",
+            "panningEnabled",
+            "userPanningEnabled",
+            "boxSelectionEnabled",
+            "autolock",
+            "autoungrabify",
+            "autounselectify",
+            "multiClickDebounceTime",
+          ];
           for (var _i2 = 0; _i2 < fields.length; _i2++) {
             var f = fields[_i2];
             if (obj[f] != null) {
@@ -16601,12 +19132,12 @@ var require_cytoscape_cjs = __commonJS({
           var flat = !!obj;
           var json2 = {};
           if (flat) {
-            json2.elements = this.elements().map(function(ele) {
+            json2.elements = this.elements().map(function (ele) {
               return ele.json();
             });
           } else {
             json2.elements = {};
-            eles.forEach(function(ele) {
+            eles.forEach(function (ele) {
               var group = ele.group();
               if (!json2.elements[group]) {
                 json2.elements[group] = [];
@@ -16636,10 +19167,22 @@ var require_cytoscape_cjs = __commonJS({
           json2.multiClickDebounceTime = options.multiClickDebounceTime;
           return json2;
         }
-      }
+      },
     });
     corefn.$id = corefn.getElementById;
-    [corefn$9, corefn$8, elesfn, corefn$7, corefn$6, corefn$5, corefn$4, corefn$3, corefn$2, corefn$1, fn].forEach(function(props) {
+    [
+      corefn$9,
+      corefn$8,
+      elesfn,
+      corefn$7,
+      corefn$6,
+      corefn$5,
+      corefn$4,
+      corefn$3,
+      corefn$2,
+      corefn$1,
+      fn,
+    ].forEach(function (props) {
       extend(corefn, props);
     });
     var defaults$7 = {
@@ -16681,13 +19224,13 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
+      },
       // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     var deprecatedOptionDefaults = {
       maximal: false,
       // whether to shift nodes down their natural BFS depths in order to avoid upwards edges (DAGS only); setting acyclic to true sets maximal to true also
-      acyclic: false
+      acyclic: false,
       // whether the tree is acyclic and thus a node could be shifted (due to the maximal option) multiple times without causing an infinite loop; setting to true sets maximal to true also; if you are uncertain whether a tree is acyclic, set to false to avoid potential infinite loops
     };
     var getInfo = function getInfo2(ele) {
@@ -16699,23 +19242,28 @@ var require_cytoscape_cjs = __commonJS({
     function BreadthFirstLayout(options) {
       this.options = extend({}, defaults$7, deprecatedOptionDefaults, options);
     }
-    BreadthFirstLayout.prototype.run = function() {
+    BreadthFirstLayout.prototype.run = function () {
       var params = this.options;
       var options = params;
       var cy = params.cy;
       var eles = options.eles;
-      var nodes = eles.nodes().filter(function(n2) {
+      var nodes = eles.nodes().filter(function (n2) {
         return !n2.isParent();
       });
       var graph = eles;
       var directed = options.directed;
-      var maximal = options.acyclic || options.maximal || options.maximalAdjustments > 0;
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var maximal =
+        options.acyclic || options.maximal || options.maximalAdjustments > 0;
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       var roots;
       if (elementOrCollection(options.roots)) {
         roots = options.roots;
@@ -16738,7 +19286,7 @@ var require_cytoscape_cjs = __commonJS({
           var _loop = function _loop2(_i3) {
             var comp = components[_i3];
             var maxDegree = comp.maxDegree(false);
-            var compRoots = comp.filter(function(ele2) {
+            var compRoots = comp.filter(function (ele2) {
               return ele2.degree(false) === maxDegree;
             });
             roots = roots.add(compRoots);
@@ -16758,11 +19306,13 @@ var require_cytoscape_cjs = __commonJS({
         depths[d].push(ele2);
         setInfo(ele2, {
           index: i3,
-          depth: d
+          depth: d,
         });
       };
       var changeDepth = function changeDepth2(ele2, newDepth) {
-        var _getInfo = getInfo(ele2), depth = _getInfo.depth, index = _getInfo.index;
+        var _getInfo = getInfo(ele2),
+          depth = _getInfo.depth,
+          index = _getInfo.index;
         depths[depth][index] = null;
         addToDepth(ele2, newDepth);
       };
@@ -16774,7 +19324,7 @@ var require_cytoscape_cjs = __commonJS({
           var id2 = ele2.id();
           addToDepth(ele2, depth);
           foundByBfs[id2] = true;
-        }
+        },
       });
       var orphanNodes = [];
       for (var _i2 = 0; _i2 < nodes.length; _i2++) {
@@ -16796,7 +19346,7 @@ var require_cytoscape_cjs = __commonJS({
           }
           setInfo(_ele2, {
             depth: i3,
-            index: j
+            index: j,
           });
         }
       };
@@ -16807,7 +19357,7 @@ var require_cytoscape_cjs = __commonJS({
       };
       var adjustMaximally = function adjustMaximally2(ele2, shifted2) {
         var eInfo = getInfo(ele2);
-        var incomers = ele2.incomers().filter(function(el) {
+        var incomers = ele2.incomers().filter(function (el) {
           return el.isNode() && eles.has(el);
         });
         var maxDepth = -1;
@@ -16837,18 +19387,25 @@ var require_cytoscape_cjs = __commonJS({
         var dequeue = function dequeue2() {
           return Q.shift();
         };
-        nodes.forEach(function(n2) {
+        nodes.forEach(function (n2) {
           return Q.push(n2);
         });
         while (Q.length > 0) {
           var _ele3 = dequeue();
           var didShift = adjustMaximally(_ele3, shifted);
           if (didShift) {
-            _ele3.outgoers().filter(function(el) {
-              return el.isNode() && eles.has(el);
-            }).forEach(enqueue);
+            _ele3
+              .outgoers()
+              .filter(function (el) {
+                return el.isNode() && eles.has(el);
+              })
+              .forEach(enqueue);
           } else if (didShift === null) {
-            warn("Detected double maximal shift for node `" + _ele3.id() + "`.  Bailing maximal adjustment due to cycle.  Use `options.maximal: true` only on DAGs.");
+            warn(
+              "Detected double maximal shift for node `" +
+                _ele3.id() +
+                "`.  Bailing maximal adjustment due to cycle.  Use `options.maximal: true` only on DAGs.",
+            );
             break;
           }
         }
@@ -16875,7 +19432,11 @@ var require_cytoscape_cjs = __commonJS({
         var samples = 0;
         for (var _i5 = 0; _i5 < neighbors.length; _i5++) {
           var neighbor = neighbors[_i5];
-          if (neighbor.isEdge() || neighbor.isParent() || !nodes.has(neighbor)) {
+          if (
+            neighbor.isEdge() ||
+            neighbor.isParent() ||
+            !nodes.has(neighbor)
+          ) {
             continue;
           }
           var bf = getInfo(neighbor);
@@ -16930,33 +19491,46 @@ var require_cytoscape_cjs = __commonJS({
       }
       var center = {
         x: bb.x1 + bb.w / 2,
-        y: bb.x1 + bb.h / 2
+        y: bb.x1 + bb.h / 2,
       };
-      var maxDepthSize = depths.reduce(function(max2, eles2) {
+      var maxDepthSize = depths.reduce(function (max2, eles2) {
         return Math.max(max2, eles2.length);
       }, 0);
       var getPosition = function getPosition2(ele2) {
-        var _getInfo2 = getInfo(ele2), depth = _getInfo2.depth, index = _getInfo2.index;
+        var _getInfo2 = getInfo(ele2),
+          depth = _getInfo2.depth,
+          index = _getInfo2.index;
         var depthSize = depths[depth].length;
-        var distanceX = Math.max(bb.w / ((options.grid ? maxDepthSize : depthSize) + 1), minDistance);
+        var distanceX = Math.max(
+          bb.w / ((options.grid ? maxDepthSize : depthSize) + 1),
+          minDistance,
+        );
         var distanceY = Math.max(bb.h / (depths.length + 1), minDistance);
-        var radiusStepSize = Math.min(bb.w / 2 / depths.length, bb.h / 2 / depths.length);
+        var radiusStepSize = Math.min(
+          bb.w / 2 / depths.length,
+          bb.h / 2 / depths.length,
+        );
         radiusStepSize = Math.max(radiusStepSize, minDistance);
         if (!options.circle) {
           var epos = {
             x: center.x + (index + 1 - (depthSize + 1) / 2) * distanceX,
-            y: (depth + 1) * distanceY
+            y: (depth + 1) * distanceY,
           };
           return epos;
         } else {
-          var radius = radiusStepSize * depth + radiusStepSize - (depths.length > 0 && depths[0].length <= 3 ? radiusStepSize / 2 : 0);
-          var theta = 2 * Math.PI / depths[depth].length * index;
+          var radius =
+            radiusStepSize * depth +
+            radiusStepSize -
+            (depths.length > 0 && depths[0].length <= 3
+              ? radiusStepSize / 2
+              : 0);
+          var theta = ((2 * Math.PI) / depths[depth].length) * index;
           if (depth === 0 && depths[0].length === 1) {
             radius = 1;
           }
           return {
             x: center.x + radius * Math.cos(theta),
-            y: center.y + radius * Math.sin(theta)
+            y: center.y + radius * Math.sin(theta),
           };
         }
       };
@@ -16978,7 +19552,7 @@ var require_cytoscape_cjs = __commonJS({
       // Applies a multiplicative factor (>0) to expand or compress the overall area that the nodes take up
       radius: void 0,
       // the radius of the circle
-      startAngle: 3 / 2 * Math.PI,
+      startAngle: (3 / 2) * Math.PI,
       // where nodes start in radians
       sweep: void 0,
       // how many radians should be between the first and last node (defaults to full circle)
@@ -17002,33 +19576,43 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
-      // transform a given node position. Useful for changing flow direction in discrete layouts 
+      },
+      // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     function CircleLayout(options) {
       this.options = extend({}, defaults$6, options);
     }
-    CircleLayout.prototype.run = function() {
+    CircleLayout.prototype.run = function () {
       var params = this.options;
       var options = params;
       var cy = params.cy;
       var eles = options.eles;
-      var clockwise = options.counterclockwise !== void 0 ? !options.counterclockwise : options.clockwise;
+      var clockwise =
+        options.counterclockwise !== void 0
+          ? !options.counterclockwise
+          : options.clockwise;
       var nodes = eles.nodes().not(":parent");
       if (options.sort) {
         nodes = nodes.sort(options.sort);
       }
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       var center = {
         x: bb.x1 + bb.w / 2,
-        y: bb.y1 + bb.h / 2
+        y: bb.y1 + bb.h / 2,
       };
-      var sweep = options.sweep === void 0 ? 2 * Math.PI - 2 * Math.PI / nodes.length : options.sweep;
+      var sweep =
+        options.sweep === void 0
+          ? 2 * Math.PI - (2 * Math.PI) / nodes.length
+          : options.sweep;
       var dTheta = sweep / Math.max(1, nodes.length - 1);
       var r;
       var minDistance = 0;
@@ -17050,7 +19634,9 @@ var require_cytoscape_cjs = __commonJS({
         minDistance *= 1.75;
         var dcos = Math.cos(dTheta) - Math.cos(0);
         var dsin = Math.sin(dTheta) - Math.sin(0);
-        var rMin = Math.sqrt(minDistance * minDistance / (dcos * dcos + dsin * dsin));
+        var rMin = Math.sqrt(
+          (minDistance * minDistance) / (dcos * dcos + dsin * dsin),
+        );
         r = Math.max(rMin, r);
       }
       var getPos = function getPos2(ele, i3) {
@@ -17059,7 +19645,7 @@ var require_cytoscape_cjs = __commonJS({
         var ry = r * Math.sin(theta);
         var pos = {
           x: center.x + rx,
-          y: center.y + ry
+          y: center.y + ry,
         };
         return pos;
       };
@@ -17071,7 +19657,7 @@ var require_cytoscape_cjs = __commonJS({
       // whether to fit the viewport to the graph
       padding: 30,
       // the padding on fit
-      startAngle: 3 / 2 * Math.PI,
+      startAngle: (3 / 2) * Math.PI,
       // where nodes start in radians
       sweep: void 0,
       // how many radians should be between the first and last node (defaults to full circle)
@@ -17115,28 +19701,35 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
+      },
       // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     function ConcentricLayout(options) {
       this.options = extend({}, defaults$5, options);
     }
-    ConcentricLayout.prototype.run = function() {
+    ConcentricLayout.prototype.run = function () {
       var params = this.options;
       var options = params;
-      var clockwise = options.counterclockwise !== void 0 ? !options.counterclockwise : options.clockwise;
+      var clockwise =
+        options.counterclockwise !== void 0
+          ? !options.counterclockwise
+          : options.clockwise;
       var cy = params.cy;
       var eles = options.eles;
       var nodes = eles.nodes().not(":parent");
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       var center = {
         x: bb.x1 + bb.w / 2,
-        y: bb.y1 + bb.h / 2
+        y: bb.y1 + bb.h / 2,
       };
       var nodeValues = [];
       var maxNodeSize = 0;
@@ -17146,7 +19739,7 @@ var require_cytoscape_cjs = __commonJS({
         value = options.concentric(node);
         nodeValues.push({
           value,
-          node
+          node,
         });
         node._private.scratch.concentric = value;
       }
@@ -17156,7 +19749,7 @@ var require_cytoscape_cjs = __commonJS({
         var nbb = _node.layoutDimensions(options);
         maxNodeSize = Math.max(maxNodeSize, nbb.w, nbb.h);
       }
-      nodeValues.sort(function(a, b) {
+      nodeValues.sort(function (a, b) {
         return b.value - a.value;
       });
       var levelWidth = options.levelWidth(nodes);
@@ -17183,12 +19776,17 @@ var require_cytoscape_cjs = __commonJS({
       var r = 0;
       for (var _i3 = 0; _i3 < levels.length; _i3++) {
         var level = levels[_i3];
-        var sweep = options.sweep === void 0 ? 2 * Math.PI - 2 * Math.PI / level.length : options.sweep;
-        var dTheta = level.dTheta = sweep / Math.max(1, level.length - 1);
+        var sweep =
+          options.sweep === void 0
+            ? 2 * Math.PI - (2 * Math.PI) / level.length
+            : options.sweep;
+        var dTheta = (level.dTheta = sweep / Math.max(1, level.length - 1));
         if (level.length > 1 && options.avoidOverlap) {
           var dcos = Math.cos(dTheta) - Math.cos(0);
           var dsin = Math.sin(dTheta) - Math.sin(0);
-          var rMin = Math.sqrt(minDist * minDist / (dcos * dcos + dsin * dsin));
+          var rMin = Math.sqrt(
+            (minDist * minDist) / (dcos * dcos + dsin * dsin),
+          );
           r = Math.max(rMin, r);
         }
         level.r = r;
@@ -17222,12 +19820,12 @@ var require_cytoscape_cjs = __commonJS({
           var theta = options.startAngle + (clockwise ? 1 : -1) * _dTheta * j;
           var p2 = {
             x: center.x + _r2 * Math.cos(theta),
-            y: center.y + _r2 * Math.sin(theta)
+            y: center.y + _r2 * Math.sin(theta),
           };
           pos[_val.node.id()] = p2;
         }
       }
-      eles.nodes().layoutPositions(this, options, function(ele) {
+      eles.nodes().layoutPositions(this, options, function (ele) {
         var id = ele.id();
         return pos[id];
       });
@@ -17236,11 +19834,9 @@ var require_cytoscape_cjs = __commonJS({
     var DEBUG;
     var defaults$4 = {
       // Called on `layoutready`
-      ready: function ready() {
-      },
+      ready: function ready() {},
       // Called on `layoutstop`
-      stop: function stop() {
-      },
+      stop: function stop() {},
       // Whether to animate while running the layout
       // true : Animate continuously as the layout is running
       // false : Just show the end result
@@ -17298,27 +19894,27 @@ var require_cytoscape_cjs = __commonJS({
       // Cooling factor (how the temperature is reduced between consecutive iterations
       coolingFactor: 0.99,
       // Lower temperature threshold (below this point the layout will end)
-      minTemp: 1
+      minTemp: 1,
     };
     function CoseLayout(options) {
       this.options = extend({}, defaults$4, options);
       this.options.layout = this;
       var nodes = this.options.eles.nodes();
       var edges = this.options.eles.edges();
-      var notEdges = edges.filter(function(e) {
+      var notEdges = edges.filter(function (e) {
         var sourceId = e.source().data("id");
         var targetId = e.target().data("id");
-        var hasSource = nodes.some(function(n) {
+        var hasSource = nodes.some(function (n) {
           return n.data("id") === sourceId;
         });
-        var hasTarget = nodes.some(function(n) {
+        var hasTarget = nodes.some(function (n) {
           return n.data("id") === targetId;
         });
         return !hasSource || !hasTarget;
       });
       this.options.eles = this.options.eles.not(notEdges);
     }
-    CoseLayout.prototype.run = function() {
+    CoseLayout.prototype.run = function () {
       var options = this.options;
       var cy = options.cy;
       var layout2 = this;
@@ -17326,7 +19922,7 @@ var require_cytoscape_cjs = __commonJS({
       if (options.animate === true || options.animate === false) {
         layout2.emit({
           type: "layoutstart",
-          layout: layout2
+          layout: layout2,
         });
       }
       if (true === options.debug) {
@@ -17365,7 +19961,7 @@ var require_cytoscape_cjs = __commonJS({
           layout2.one("layoutstop", options.stop);
           layout2.emit({
             type: "layoutstop",
-            layout: layout2
+            layout: layout2,
           });
         } else {
           var nodes = options.eles.nodes();
@@ -17405,7 +20001,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return this;
     };
-    CoseLayout.prototype.stop = function() {
+    CoseLayout.prototype.stop = function () {
       this.stopped = true;
       if (this.thread) {
         this.thread.stop();
@@ -17413,7 +20009,7 @@ var require_cytoscape_cjs = __commonJS({
       this.emit("layoutstop");
       return this;
     };
-    CoseLayout.prototype.destroy = function() {
+    CoseLayout.prototype.destroy = function () {
       if (this.thread) {
         this.thread.stop();
       }
@@ -17422,12 +20018,16 @@ var require_cytoscape_cjs = __commonJS({
     var createLayoutInfo = function createLayoutInfo2(cy, layout2, options) {
       var edges = options.eles.edges();
       var nodes = options.eles.nodes();
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       var layoutInfo = {
         isCompound: cy.hasCompoundNodes(),
         layoutNodes: [],
@@ -17440,7 +20040,7 @@ var require_cytoscape_cjs = __commonJS({
         temperature: options.initialTemp,
         clientWidth: bb.w,
         clientHeight: bb.h,
-        boundingBox: bb
+        boundingBox: bb,
       };
       var components = options.eles.components();
       var id2cmptId = {};
@@ -17474,7 +20074,9 @@ var require_cytoscape_cjs = __commonJS({
         tempNode.padRight = parseFloat(n.style("padding"));
         tempNode.padTop = parseFloat(n.style("padding"));
         tempNode.padBottom = parseFloat(n.style("padding"));
-        tempNode.nodeRepulsion = fn$6(options.nodeRepulsion) ? options.nodeRepulsion(n) : options.nodeRepulsion;
+        tempNode.nodeRepulsion = fn$6(options.nodeRepulsion)
+          ? options.nodeRepulsion(n)
+          : options.nodeRepulsion;
         layoutInfo.layoutNodes.push(tempNode);
         layoutInfo.idToIndex[tempNode.id] = i2;
       }
@@ -17486,7 +20088,9 @@ var require_cytoscape_cjs = __commonJS({
         var n = layoutInfo.layoutNodes[i2];
         var p_id = n.parentId;
         if (null != p_id) {
-          layoutInfo.layoutNodes[layoutInfo.idToIndex[p_id]].children.push(n.id);
+          layoutInfo.layoutNodes[layoutInfo.idToIndex[p_id]].children.push(
+            n.id,
+          );
         } else {
           queue[++end] = n.id;
           tempGraph.push(n.id);
@@ -17518,8 +20122,12 @@ var require_cytoscape_cjs = __commonJS({
         tempEdge.id = e.data("id");
         tempEdge.sourceId = e.data("source");
         tempEdge.targetId = e.data("target");
-        var idealLength = fn$6(options.idealEdgeLength) ? options.idealEdgeLength(e) : options.idealEdgeLength;
-        var elasticity = fn$6(options.edgeElasticity) ? options.edgeElasticity(e) : options.edgeElasticity;
+        var idealLength = fn$6(options.idealEdgeLength)
+          ? options.idealEdgeLength(e)
+          : options.idealEdgeLength;
+        var elasticity = fn$6(options.edgeElasticity)
+          ? options.edgeElasticity(e)
+          : options.edgeElasticity;
         var sourceIx = layoutInfo.idToIndex[tempEdge.sourceId];
         var targetIx = layoutInfo.idToIndex[tempEdge.targetId];
         var sourceGraph = layoutInfo.indexToGraph[sourceIx];
@@ -17530,12 +20138,14 @@ var require_cytoscape_cjs = __commonJS({
           var depth = 0;
           var tempNode = layoutInfo.layoutNodes[sourceIx];
           while (-1 === lcaGraph.indexOf(tempNode.id)) {
-            tempNode = layoutInfo.layoutNodes[layoutInfo.idToIndex[tempNode.parentId]];
+            tempNode =
+              layoutInfo.layoutNodes[layoutInfo.idToIndex[tempNode.parentId]];
             depth++;
           }
           tempNode = layoutInfo.layoutNodes[targetIx];
           while (-1 === lcaGraph.indexOf(tempNode.id)) {
-            tempNode = layoutInfo.layoutNodes[layoutInfo.idToIndex[tempNode.parentId]];
+            tempNode =
+              layoutInfo.layoutNodes[layoutInfo.idToIndex[tempNode.parentId]];
             depth++;
           }
           idealLength *= depth * options.nestingFactor;
@@ -17559,7 +20169,7 @@ var require_cytoscape_cjs = __commonJS({
       if (-1 < graph.indexOf(node1) && -1 < graph.indexOf(node2)) {
         return {
           count: 2,
-          graph: graphIx
+          graph: graphIx,
         };
       }
       var c = 0;
@@ -17570,7 +20180,8 @@ var require_cytoscape_cjs = __commonJS({
         if (0 === children.length) {
           continue;
         }
-        var childGraphIx = layoutInfo.indexToGraph[layoutInfo.idToIndex[children[0]]];
+        var childGraphIx =
+          layoutInfo.indexToGraph[layoutInfo.idToIndex[children[0]]];
         var result = findLCA_aux2(node1, node2, childGraphIx, layoutInfo);
         if (0 === result.count) {
           continue;
@@ -17585,7 +20196,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return {
         count: c,
-        graph: graphIx
+        graph: graphIx,
       };
     };
     var printLayoutInfo;
@@ -17600,17 +20211,22 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    var getScaleInBoundsFn = function getScaleInBoundsFn2(layoutInfo, options, nodes) {
+    var getScaleInBoundsFn = function getScaleInBoundsFn2(
+      layoutInfo,
+      options,
+      nodes,
+    ) {
       var bb = layoutInfo.boundingBox;
       var coseBB = {
         x1: Infinity,
         x2: -Infinity,
         y1: Infinity,
-        y2: -Infinity
+        y2: -Infinity,
       };
       if (options.boundingBox) {
-        nodes.forEach(function(node) {
-          var lnode = layoutInfo.layoutNodes[layoutInfo.idToIndex[node.data("id")]];
+        nodes.forEach(function (node) {
+          var lnode =
+            layoutInfo.layoutNodes[layoutInfo.idToIndex[node.data("id")]];
           coseBB.x1 = Math.min(coseBB.x1, lnode.positionX);
           coseBB.x2 = Math.max(coseBB.x2, lnode.positionX);
           coseBB.y1 = Math.min(coseBB.y1, lnode.positionY);
@@ -17619,19 +20235,20 @@ var require_cytoscape_cjs = __commonJS({
         coseBB.w = coseBB.x2 - coseBB.x1;
         coseBB.h = coseBB.y2 - coseBB.y1;
       }
-      return function(ele, i2) {
-        var lnode = layoutInfo.layoutNodes[layoutInfo.idToIndex[ele.data("id")]];
+      return function (ele, i2) {
+        var lnode =
+          layoutInfo.layoutNodes[layoutInfo.idToIndex[ele.data("id")]];
         if (options.boundingBox) {
           var pctX = (lnode.positionX - coseBB.x1) / coseBB.w;
           var pctY = (lnode.positionY - coseBB.y1) / coseBB.h;
           return {
             x: bb.x1 + pctX * bb.w,
-            y: bb.y1 + pctY * bb.h
+            y: bb.y1 + pctY * bb.h,
           };
         } else {
           return {
             x: lnode.positionX,
-            y: lnode.positionY
+            y: lnode.positionY,
           };
         }
       };
@@ -17646,7 +20263,7 @@ var require_cytoscape_cjs = __commonJS({
         layout2.one("layoutready", options.ready);
         layout2.emit({
           type: "layoutready",
-          layout: this
+          layout: this,
         });
       }
     };
@@ -17657,7 +20274,10 @@ var require_cytoscape_cjs = __commonJS({
       propagateForces(layoutInfo);
       updatePositions(layoutInfo);
     };
-    var calculateNodeForces = function calculateNodeForces2(layoutInfo, options) {
+    var calculateNodeForces = function calculateNodeForces2(
+      layoutInfo,
+      options,
+    ) {
       for (var i2 = 0; i2 < layoutInfo.graphSet.length; i2++) {
         var graph = layoutInfo.graphSet[i2];
         var numNodes = graph.length;
@@ -17673,7 +20293,12 @@ var require_cytoscape_cjs = __commonJS({
     var randomDistance = function randomDistance2(max2) {
       return -max2 + 2 * max2 * Math.random();
     };
-    var nodeRepulsion = function nodeRepulsion2(node1, node2, layoutInfo, options) {
+    var nodeRepulsion = function nodeRepulsion2(
+      node1,
+      node2,
+      layoutInfo,
+      options,
+    ) {
       var cmptId1 = node1.cmptId;
       var cmptId2 = node2.cmptId;
       if (cmptId1 !== cmptId2 && !layoutInfo.isCompound) {
@@ -17689,9 +20314,11 @@ var require_cytoscape_cjs = __commonJS({
       var overlap = nodesOverlap(node1, node2, directionX, directionY);
       if (overlap > 0) {
         var force = options.nodeOverlap * overlap;
-        var distance = Math.sqrt(directionX * directionX + directionY * directionY);
-        var forceX = force * directionX / distance;
-        var forceY = force * directionY / distance;
+        var distance = Math.sqrt(
+          directionX * directionX + directionY * directionY,
+        );
+        var forceX = (force * directionX) / distance;
+        var forceY = (force * directionY) / distance;
       } else {
         var point1 = findClippingPoint(node1, directionX, directionY);
         var point2 = findClippingPoint(node2, -1 * directionX, -1 * directionY);
@@ -17700,8 +20327,8 @@ var require_cytoscape_cjs = __commonJS({
         var distanceSqr = distanceX * distanceX + distanceY * distanceY;
         var distance = Math.sqrt(distanceSqr);
         var force = (node1.nodeRepulsion + node2.nodeRepulsion) / distanceSqr;
-        var forceX = force * distanceX / distance;
-        var forceY = force * distanceY / distance;
+        var forceX = (force * distanceX) / distance;
+        var forceY = (force * distanceY) / distance;
       }
       if (!node1.isLocked) {
         node1.offsetX -= forceX;
@@ -17750,27 +20377,30 @@ var require_cytoscape_cjs = __commonJS({
       }
       if (0 < dX && -1 * nodeSlope <= dirSlope && dirSlope <= nodeSlope) {
         res.x = X + W / 2;
-        res.y = Y + W * dY / 2 / dX;
+        res.y = Y + (W * dY) / 2 / dX;
         return res;
       }
       if (0 > dX && -1 * nodeSlope <= dirSlope && dirSlope <= nodeSlope) {
         res.x = X - W / 2;
-        res.y = Y - W * dY / 2 / dX;
+        res.y = Y - (W * dY) / 2 / dX;
         return res;
       }
       if (0 < dY && (dirSlope <= -1 * nodeSlope || dirSlope >= nodeSlope)) {
-        res.x = X + H * dX / 2 / dY;
+        res.x = X + (H * dX) / 2 / dY;
         res.y = Y + H / 2;
         return res;
       }
       if (0 > dY && (dirSlope <= -1 * nodeSlope || dirSlope >= nodeSlope)) {
-        res.x = X - H * dX / 2 / dY;
+        res.x = X - (H * dX) / 2 / dY;
         res.y = Y - H / 2;
         return res;
       }
       return res;
     };
-    var calculateEdgeForces = function calculateEdgeForces2(layoutInfo, options) {
+    var calculateEdgeForces = function calculateEdgeForces2(
+      layoutInfo,
+      options,
+    ) {
       for (var i2 = 0; i2 < layoutInfo.edgeSize; i2++) {
         var edge = layoutInfo.layoutEdges[i2];
         var sourceIx = layoutInfo.idToIndex[edge.sourceId];
@@ -17783,14 +20413,18 @@ var require_cytoscape_cjs = __commonJS({
           continue;
         }
         var point1 = findClippingPoint(source, directionX, directionY);
-        var point2 = findClippingPoint(target, -1 * directionX, -1 * directionY);
+        var point2 = findClippingPoint(
+          target,
+          -1 * directionX,
+          -1 * directionY,
+        );
         var lx = point2.x - point1.x;
         var ly = point2.y - point1.y;
         var l = Math.sqrt(lx * lx + ly * ly);
         var force = Math.pow(edge.idealLength - l, 2) / edge.elasticity;
         if (0 !== l) {
-          var forceX = force * lx / l;
-          var forceY = force * ly / l;
+          var forceX = (force * lx) / l;
+          var forceY = (force * ly) / l;
         } else {
           var forceX = 0;
           var forceY = 0;
@@ -17805,7 +20439,10 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    var calculateGravityForces = function calculateGravityForces2(layoutInfo, options) {
+    var calculateGravityForces = function calculateGravityForces2(
+      layoutInfo,
+      options,
+    ) {
       if (options.gravity === 0) {
         return;
       }
@@ -17818,7 +20455,8 @@ var require_cytoscape_cjs = __commonJS({
           var centerY = layoutInfo.clientWidth / 2;
         } else {
           var temp = layoutInfo.layoutNodes[layoutInfo.idToIndex[graph[0]]];
-          var parent = layoutInfo.layoutNodes[layoutInfo.idToIndex[temp.parentId]];
+          var parent =
+            layoutInfo.layoutNodes[layoutInfo.idToIndex[temp.parentId]];
           var centerX = parent.positionX;
           var centerY = parent.positionY;
         }
@@ -17831,8 +20469,8 @@ var require_cytoscape_cjs = __commonJS({
           var dy = centerY - node.positionY;
           var d = Math.sqrt(dx * dx + dy * dy);
           if (d > distThreshold) {
-            var fx = options.gravity * dx / d;
-            var fy = options.gravity * dy / d;
+            var fx = (options.gravity * dx) / d;
+            var fy = (options.gravity * dy) / d;
             node.offsetX += fx;
             node.offsetY += fy;
           }
@@ -17854,7 +20492,8 @@ var require_cytoscape_cjs = __commonJS({
           var offX = node.offsetX;
           var offY = node.offsetY;
           for (var i2 = 0; i2 < children.length; i2++) {
-            var childNode = layoutInfo.layoutNodes[layoutInfo.idToIndex[children[i2]]];
+            var childNode =
+              layoutInfo.layoutNodes[layoutInfo.idToIndex[children[i2]]];
             childNode.offsetX += offX;
             childNode.offsetY += offY;
             queue[++end] = children[i2];
@@ -17879,7 +20518,11 @@ var require_cytoscape_cjs = __commonJS({
         if (0 < n.children.length || n.isLocked) {
           continue;
         }
-        var tempForce = limitForce(n.offsetX, n.offsetY, layoutInfo.temperature);
+        var tempForce = limitForce(
+          n.offsetX,
+          n.offsetY,
+          layoutInfo.temperature,
+        );
         n.positionX += tempForce.x;
         n.positionY += tempForce.y;
         n.offsetX = 0;
@@ -17904,18 +20547,21 @@ var require_cytoscape_cjs = __commonJS({
       var force = Math.sqrt(forceX * forceX + forceY * forceY);
       if (force > max2) {
         var res = {
-          x: max2 * forceX / force,
-          y: max2 * forceY / force
+          x: (max2 * forceX) / force,
+          y: (max2 * forceY) / force,
         };
       } else {
         var res = {
           x: forceX,
-          y: forceY
+          y: forceY,
         };
       }
       return res;
     };
-    var updateAncestryBoundaries = function updateAncestryBoundaries2(node, layoutInfo) {
+    var updateAncestryBoundaries = function updateAncestryBoundaries2(
+      node,
+      layoutInfo,
+    ) {
       var parentId = node.parentId;
       if (null == parentId) {
         return;
@@ -17949,7 +20595,7 @@ var require_cytoscape_cjs = __commonJS({
       for (var i2 = 0; i2 < nodes.length; i2++) {
         var node = nodes[i2];
         var cid = node.cmptId;
-        var component = components[cid] = components[cid] || [];
+        var component = (components[cid] = components[cid] || []);
         component.push(node);
       }
       var totalA = 0;
@@ -17973,14 +20619,15 @@ var require_cytoscape_cjs = __commonJS({
         c.h = c.y2 - c.y1;
         totalA += c.w * c.h;
       }
-      components.sort(function(c1, c2) {
+      components.sort(function (c1, c2) {
         return c2.w * c2.h - c1.w * c1.h;
       });
       var x = 0;
       var y = 0;
       var usedW = 0;
       var rowH = 0;
-      var maxRowW = Math.sqrt(totalA) * layoutInfo.clientWidth / layoutInfo.clientHeight;
+      var maxRowW =
+        (Math.sqrt(totalA) * layoutInfo.clientWidth) / layoutInfo.clientHeight;
       for (var i2 = 0; i2 < components.length; i2++) {
         var c = components[i2];
         if (!c) {
@@ -18025,8 +20672,7 @@ var require_cytoscape_cjs = __commonJS({
       // force num of rows in the grid
       cols: void 0,
       // force num of columns in the grid
-      position: function position2(node) {
-      },
+      position: function position2(node) {},
       // returns { row, col } for element
       sort: void 0,
       // a sorting function to order the nodes; e.g. function(a, b){ return a.data('weight') - b.data('weight') }
@@ -18046,13 +20692,13 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
-      // transform a given node position. Useful for changing flow direction in discrete layouts 
+      },
+      // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     function GridLayout(options) {
       this.options = extend({}, defaults$3, options);
     }
-    GridLayout.prototype.run = function() {
+    GridLayout.prototype.run = function () {
       var params = this.options;
       var options = params;
       var cy = params.cy;
@@ -18061,24 +20707,28 @@ var require_cytoscape_cjs = __commonJS({
       if (options.sort) {
         nodes = nodes.sort(options.sort);
       }
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       if (bb.h === 0 || bb.w === 0) {
-        eles.nodes().layoutPositions(this, options, function(ele) {
+        eles.nodes().layoutPositions(this, options, function (ele) {
           return {
             x: bb.x1,
-            y: bb.y1
+            y: bb.y1,
           };
         });
       } else {
         var cells = nodes.size();
-        var splits = Math.sqrt(cells * bb.h / bb.w);
+        var splits = Math.sqrt((cells * bb.h) / bb.w);
         var rows = Math.round(splits);
-        var cols = Math.round(bb.w / bb.h * splits);
+        var cols = Math.round((bb.w / bb.h) * splits);
         var small = function small2(val) {
           if (val == null) {
             return Math.min(rows, cols);
@@ -18178,7 +20828,7 @@ var require_cytoscape_cjs = __commonJS({
           if (rcPos && (rcPos.row !== void 0 || rcPos.col !== void 0)) {
             var _pos = {
               row: rcPos.row,
-              col: rcPos.col
+              col: rcPos.col,
             };
             if (_pos.col === void 0) {
               _pos.col = 0;
@@ -18215,7 +20865,7 @@ var require_cytoscape_cjs = __commonJS({
           }
           return {
             x,
-            y
+            y,
           };
         };
         nodes.layoutPositions(this, options, getPos);
@@ -18223,26 +20873,24 @@ var require_cytoscape_cjs = __commonJS({
       return this;
     };
     var defaults$2 = {
-      ready: function ready() {
-      },
+      ready: function ready() {},
       // on layoutready
-      stop: function stop() {
-      }
+      stop: function stop() {},
       // on layoutstop
     };
     function NullLayout(options) {
       this.options = extend({}, defaults$2, options);
     }
-    NullLayout.prototype.run = function() {
+    NullLayout.prototype.run = function () {
       var options = this.options;
       var eles = options.eles;
       var layout2 = this;
       options.cy;
       layout2.emit("layoutstart");
-      eles.nodes().positions(function() {
+      eles.nodes().positions(function () {
         return {
           x: 0,
-          y: 0
+          y: 0,
         };
       });
       layout2.one("layoutready", options.ready);
@@ -18251,7 +20899,7 @@ var require_cytoscape_cjs = __commonJS({
       layout2.emit("layoutstop");
       return this;
     };
-    NullLayout.prototype.stop = function() {
+    NullLayout.prototype.stop = function () {
       return this;
     };
     var defaults$1 = {
@@ -18283,13 +20931,13 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
+      },
       // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     function PresetLayout(options) {
       this.options = extend({}, defaults$1, options);
     }
-    PresetLayout.prototype.run = function() {
+    PresetLayout.prototype.run = function () {
       var options = this.options;
       var eles = options.eles;
       var nodes = eles.nodes();
@@ -18307,7 +20955,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return pos;
       }
-      nodes.layoutPositions(this, options, function(node, i2) {
+      nodes.layoutPositions(this, options, function (node, i2) {
         var position2 = getPosition(node);
         if (node.locked() || position2 == null) {
           return false;
@@ -18339,62 +20987,74 @@ var require_cytoscape_cjs = __commonJS({
       // callback on layoutstop
       transform: function transform(node, position2) {
         return position2;
-      }
-      // transform a given node position. Useful for changing flow direction in discrete layouts 
+      },
+      // transform a given node position. Useful for changing flow direction in discrete layouts
     };
     function RandomLayout(options) {
       this.options = extend({}, defaults, options);
     }
-    RandomLayout.prototype.run = function() {
+    RandomLayout.prototype.run = function () {
       var options = this.options;
       var cy = options.cy;
       var eles = options.eles;
-      var bb = makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
+      var bb = makeBoundingBox(
+        options.boundingBox
+          ? options.boundingBox
+          : {
+              x1: 0,
+              y1: 0,
+              w: cy.width(),
+              h: cy.height(),
+            },
+      );
       var getPos = function getPos2(node, i2) {
         return {
           x: bb.x1 + Math.round(Math.random() * bb.w),
-          y: bb.y1 + Math.round(Math.random() * bb.h)
+          y: bb.y1 + Math.round(Math.random() * bb.h),
         };
       };
       eles.nodes().layoutPositions(this, options, getPos);
       return this;
     };
-    var layout = [{
-      name: "breadthfirst",
-      impl: BreadthFirstLayout
-    }, {
-      name: "circle",
-      impl: CircleLayout
-    }, {
-      name: "concentric",
-      impl: ConcentricLayout
-    }, {
-      name: "cose",
-      impl: CoseLayout
-    }, {
-      name: "grid",
-      impl: GridLayout
-    }, {
-      name: "null",
-      impl: NullLayout
-    }, {
-      name: "preset",
-      impl: PresetLayout
-    }, {
-      name: "random",
-      impl: RandomLayout
-    }];
+    var layout = [
+      {
+        name: "breadthfirst",
+        impl: BreadthFirstLayout,
+      },
+      {
+        name: "circle",
+        impl: CircleLayout,
+      },
+      {
+        name: "concentric",
+        impl: ConcentricLayout,
+      },
+      {
+        name: "cose",
+        impl: CoseLayout,
+      },
+      {
+        name: "grid",
+        impl: GridLayout,
+      },
+      {
+        name: "null",
+        impl: NullLayout,
+      },
+      {
+        name: "preset",
+        impl: PresetLayout,
+      },
+      {
+        name: "random",
+        impl: RandomLayout,
+      },
+    ];
     function NullRenderer(options) {
       this.options = options;
       this.notifications = 0;
     }
-    var noop = function noop2() {
-    };
+    var noop = function noop2() {};
     var throwImgErr = function throwImgErr2() {
       throw new Error("A headless instance can not render images");
     };
@@ -18408,14 +21068,22 @@ var require_cytoscape_cjs = __commonJS({
         return true;
       },
       png: throwImgErr,
-      jpg: throwImgErr
+      jpg: throwImgErr,
     };
     var BRp$f = {};
     BRp$f.arrowShapeWidth = 0.3;
-    BRp$f.registerArrowShapes = function() {
-      var arrowShapes = this.arrowShapes = {};
+    BRp$f.registerArrowShapes = function () {
+      var arrowShapes = (this.arrowShapes = {});
       var renderer2 = this;
-      var bbCollide = function bbCollide2(x, y, size, angle, translation, edgeWidth, padding) {
+      var bbCollide = function bbCollide2(
+        x,
+        y,
+        size,
+        angle,
+        translation,
+        edgeWidth,
+        padding,
+      ) {
         var x1 = translation.x - size / 2 - padding;
         var x2 = translation.x + size / 2 + padding;
         var y1 = translation.y - size / 2 - padding;
@@ -18432,10 +21100,15 @@ var require_cytoscape_cjs = __commonJS({
         var yTranslated = yScaled + translation.y;
         return {
           x: xTranslated,
-          y: yTranslated
+          y: yTranslated,
         };
       };
-      var transformPoints = function transformPoints2(pts2, size, angle, translation) {
+      var transformPoints = function transformPoints2(
+        pts2,
+        size,
+        angle,
+        translation,
+      ) {
         var retPts = [];
         for (var i2 = 0; i2 < pts2.length; i2 += 2) {
           var x = pts2[i2];
@@ -18453,40 +21126,57 @@ var require_cytoscape_cjs = __commonJS({
         return ret;
       };
       var standardGap = function standardGap2(edge) {
-        return edge.pstyle("width").pfValue * edge.pstyle("arrow-scale").pfValue * 2;
+        return (
+          edge.pstyle("width").pfValue * edge.pstyle("arrow-scale").pfValue * 2
+        );
       };
       var defineArrowShape = function defineArrowShape2(name, defn) {
         if (string(defn)) {
           defn = arrowShapes[defn];
         }
-        arrowShapes[name] = extend({
-          name,
-          points: [-0.15, -0.3, 0.15, -0.3, 0.15, 0.3, -0.15, 0.3],
-          collide: function collide(x, y, size, angle, translation, padding) {
-            var points = pointsToArr(transformPoints(this.points, size + 2 * padding, angle, translation));
-            var inside = pointInsidePolygonPoints(x, y, points);
-            return inside;
+        arrowShapes[name] = extend(
+          {
+            name,
+            points: [-0.15, -0.3, 0.15, -0.3, 0.15, 0.3, -0.15, 0.3],
+            collide: function collide(x, y, size, angle, translation, padding) {
+              var points = pointsToArr(
+                transformPoints(
+                  this.points,
+                  size + 2 * padding,
+                  angle,
+                  translation,
+                ),
+              );
+              var inside = pointInsidePolygonPoints(x, y, points);
+              return inside;
+            },
+            roughCollide: bbCollide,
+            draw: function draw(context, size, angle, translation) {
+              var points = transformPoints(
+                this.points,
+                size,
+                angle,
+                translation,
+              );
+              renderer2.arrowShapeImpl("polygon")(context, points);
+            },
+            spacing: function spacing(edge) {
+              return 0;
+            },
+            gap: standardGap,
           },
-          roughCollide: bbCollide,
-          draw: function draw(context, size, angle, translation) {
-            var points = transformPoints(this.points, size, angle, translation);
-            renderer2.arrowShapeImpl("polygon")(context, points);
-          },
-          spacing: function spacing(edge) {
-            return 0;
-          },
-          gap: standardGap
-        }, defn);
+          defn,
+        );
       };
       defineArrowShape("none", {
         collide: falsify,
         roughCollide: falsify,
         draw: noop$1,
         spacing: zeroify,
-        gap: zeroify
+        gap: zeroify,
       });
       defineArrowShape("triangle", {
-        points: [-0.15, -0.3, 0, 0, 0.15, -0.3]
+        points: [-0.15, -0.3, 0, 0, 0.15, -0.3],
       });
       defineArrowShape("arrow", "triangle");
       defineArrowShape("triangle-backcurve", {
@@ -18496,58 +21186,116 @@ var require_cytoscape_cjs = __commonJS({
         draw: function draw(context, size, angle, translation, edgeWidth) {
           var ptsTrans = transformPoints(this.points, size, angle, translation);
           var ctrlPt = this.controlPoint;
-          var ctrlPtTrans = transform(ctrlPt[0], ctrlPt[1], size, angle, translation);
+          var ctrlPtTrans = transform(
+            ctrlPt[0],
+            ctrlPt[1],
+            size,
+            angle,
+            translation,
+          );
           renderer2.arrowShapeImpl(this.name)(context, ptsTrans, ctrlPtTrans);
         },
         gap: function gap(edge) {
           return standardGap(edge) * 0.8;
-        }
+        },
       });
       defineArrowShape("triangle-tee", {
         points: [0, 0, 0.15, -0.3, -0.15, -0.3, 0, 0],
         pointsTee: [-0.15, -0.4, -0.15, -0.5, 0.15, -0.5, 0.15, -0.4],
-        collide: function collide(x, y, size, angle, translation, edgeWidth, padding) {
-          var triPts = pointsToArr(transformPoints(this.points, size + 2 * padding, angle, translation));
-          var teePts = pointsToArr(transformPoints(this.pointsTee, size + 2 * padding, angle, translation));
-          var inside = pointInsidePolygonPoints(x, y, triPts) || pointInsidePolygonPoints(x, y, teePts);
+        collide: function collide(
+          x,
+          y,
+          size,
+          angle,
+          translation,
+          edgeWidth,
+          padding,
+        ) {
+          var triPts = pointsToArr(
+            transformPoints(
+              this.points,
+              size + 2 * padding,
+              angle,
+              translation,
+            ),
+          );
+          var teePts = pointsToArr(
+            transformPoints(
+              this.pointsTee,
+              size + 2 * padding,
+              angle,
+              translation,
+            ),
+          );
+          var inside =
+            pointInsidePolygonPoints(x, y, triPts) ||
+            pointInsidePolygonPoints(x, y, teePts);
           return inside;
         },
         draw: function draw(context, size, angle, translation, edgeWidth) {
           var triPts = transformPoints(this.points, size, angle, translation);
-          var teePts = transformPoints(this.pointsTee, size, angle, translation);
+          var teePts = transformPoints(
+            this.pointsTee,
+            size,
+            angle,
+            translation,
+          );
           renderer2.arrowShapeImpl(this.name)(context, triPts, teePts);
-        }
+        },
       });
       defineArrowShape("circle-triangle", {
         radius: 0.15,
         pointsTr: [0, -0.15, 0.15, -0.45, -0.15, -0.45, 0, -0.15],
-        collide: function collide(x, y, size, angle, translation, edgeWidth, padding) {
+        collide: function collide(
+          x,
+          y,
+          size,
+          angle,
+          translation,
+          edgeWidth,
+          padding,
+        ) {
           var t = translation;
-          var circleInside = Math.pow(t.x - x, 2) + Math.pow(t.y - y, 2) <= Math.pow((size + 2 * padding) * this.radius, 2);
-          var triPts = pointsToArr(transformPoints(this.points, size + 2 * padding, angle, translation));
+          var circleInside =
+            Math.pow(t.x - x, 2) + Math.pow(t.y - y, 2) <=
+            Math.pow((size + 2 * padding) * this.radius, 2);
+          var triPts = pointsToArr(
+            transformPoints(
+              this.points,
+              size + 2 * padding,
+              angle,
+              translation,
+            ),
+          );
           return pointInsidePolygonPoints(x, y, triPts) || circleInside;
         },
         draw: function draw(context, size, angle, translation, edgeWidth) {
           var triPts = transformPoints(this.pointsTr, size, angle, translation);
-          renderer2.arrowShapeImpl(this.name)(context, triPts, translation.x, translation.y, this.radius * size);
+          renderer2.arrowShapeImpl(this.name)(
+            context,
+            triPts,
+            translation.x,
+            translation.y,
+            this.radius * size,
+          );
         },
         spacing: function spacing(edge) {
-          return renderer2.getArrowWidth(edge.pstyle("width").pfValue, edge.pstyle("arrow-scale").value) * this.radius;
-        }
+          return (
+            renderer2.getArrowWidth(
+              edge.pstyle("width").pfValue,
+              edge.pstyle("arrow-scale").value,
+            ) * this.radius
+          );
+        },
       });
       defineArrowShape("triangle-cross", {
         points: [0, 0, 0.15, -0.3, -0.15, -0.3, 0, 0],
         baseCrossLinePts: [
-          -0.15,
-          -0.4,
+          -0.15, -0.4,
           // first half of the rectangle
-          -0.15,
-          -0.4,
-          0.15,
-          -0.4,
+          -0.15, -0.4, 0.15, -0.4,
           // second half of the rectangle
-          0.15,
-          -0.4
+          0.15, -0.4,
         ],
         crossLinePts: function crossLinePts(size, edgeWidth) {
           var p2 = this.baseCrossLinePts.slice();
@@ -18558,37 +21306,86 @@ var require_cytoscape_cjs = __commonJS({
           p2[y1] = p2[y1] - shiftFactor;
           return p2;
         },
-        collide: function collide(x, y, size, angle, translation, edgeWidth, padding) {
-          var triPts = pointsToArr(transformPoints(this.points, size + 2 * padding, angle, translation));
-          var teePts = pointsToArr(transformPoints(this.crossLinePts(size, edgeWidth), size + 2 * padding, angle, translation));
-          var inside = pointInsidePolygonPoints(x, y, triPts) || pointInsidePolygonPoints(x, y, teePts);
+        collide: function collide(
+          x,
+          y,
+          size,
+          angle,
+          translation,
+          edgeWidth,
+          padding,
+        ) {
+          var triPts = pointsToArr(
+            transformPoints(
+              this.points,
+              size + 2 * padding,
+              angle,
+              translation,
+            ),
+          );
+          var teePts = pointsToArr(
+            transformPoints(
+              this.crossLinePts(size, edgeWidth),
+              size + 2 * padding,
+              angle,
+              translation,
+            ),
+          );
+          var inside =
+            pointInsidePolygonPoints(x, y, triPts) ||
+            pointInsidePolygonPoints(x, y, teePts);
           return inside;
         },
         draw: function draw(context, size, angle, translation, edgeWidth) {
           var triPts = transformPoints(this.points, size, angle, translation);
-          var crossLinePts = transformPoints(this.crossLinePts(size, edgeWidth), size, angle, translation);
+          var crossLinePts = transformPoints(
+            this.crossLinePts(size, edgeWidth),
+            size,
+            angle,
+            translation,
+          );
           renderer2.arrowShapeImpl(this.name)(context, triPts, crossLinePts);
-        }
+        },
       });
       defineArrowShape("vee", {
         points: [-0.15, -0.3, 0, 0, 0.15, -0.3, 0, -0.15],
         gap: function gap(edge) {
           return standardGap(edge) * 0.525;
-        }
+        },
       });
       defineArrowShape("circle", {
         radius: 0.15,
-        collide: function collide(x, y, size, angle, translation, edgeWidth, padding) {
+        collide: function collide(
+          x,
+          y,
+          size,
+          angle,
+          translation,
+          edgeWidth,
+          padding,
+        ) {
           var t = translation;
-          var inside = Math.pow(t.x - x, 2) + Math.pow(t.y - y, 2) <= Math.pow((size + 2 * padding) * this.radius, 2);
+          var inside =
+            Math.pow(t.x - x, 2) + Math.pow(t.y - y, 2) <=
+            Math.pow((size + 2 * padding) * this.radius, 2);
           return inside;
         },
         draw: function draw(context, size, angle, translation, edgeWidth) {
-          renderer2.arrowShapeImpl(this.name)(context, translation.x, translation.y, this.radius * size);
+          renderer2.arrowShapeImpl(this.name)(
+            context,
+            translation.x,
+            translation.y,
+            this.radius * size,
+          );
         },
         spacing: function spacing(edge) {
-          return renderer2.getArrowWidth(edge.pstyle("width").pfValue, edge.pstyle("arrow-scale").value) * this.radius;
-        }
+          return (
+            renderer2.getArrowWidth(
+              edge.pstyle("width").pfValue,
+              edge.pstyle("arrow-scale").value,
+            ) * this.radius
+          );
+        },
       });
       defineArrowShape("tee", {
         points: [-0.15, 0, -0.15, -0.1, 0.15, -0.1, 0.15, 0],
@@ -18597,26 +21394,34 @@ var require_cytoscape_cjs = __commonJS({
         },
         gap: function gap(edge) {
           return 1;
-        }
+        },
       });
       defineArrowShape("square", {
-        points: [-0.15, 0, 0.15, 0, 0.15, -0.3, -0.15, -0.3]
+        points: [-0.15, 0, 0.15, 0, 0.15, -0.3, -0.15, -0.3],
       });
       defineArrowShape("diamond", {
         points: [-0.15, -0.15, 0, -0.3, 0.15, -0.15, 0, 0],
         gap: function gap(edge) {
-          return edge.pstyle("width").pfValue * edge.pstyle("arrow-scale").value;
-        }
+          return (
+            edge.pstyle("width").pfValue * edge.pstyle("arrow-scale").value
+          );
+        },
       });
       defineArrowShape("chevron", {
-        points: [0, 0, -0.15, -0.15, -0.1, -0.2, 0, -0.1, 0.1, -0.2, 0.15, -0.15],
+        points: [
+          0, 0, -0.15, -0.15, -0.1, -0.2, 0, -0.1, 0.1, -0.2, 0.15, -0.15,
+        ],
         gap: function gap(edge) {
-          return 0.95 * edge.pstyle("width").pfValue * edge.pstyle("arrow-scale").value;
-        }
+          return (
+            0.95 *
+            edge.pstyle("width").pfValue *
+            edge.pstyle("arrow-scale").value
+          );
+        },
       });
     };
     var BRp$e = {};
-    BRp$e.projectIntoViewport = function(clientX, clientY) {
+    BRp$e.projectIntoViewport = function (clientX, clientY) {
       var cy = this.cy;
       var offsets = this.findContainerClientCoords();
       var offsetLeft = offsets[0];
@@ -18628,7 +21433,7 @@ var require_cytoscape_cjs = __commonJS({
       var y = ((clientY - offsetTop) / scale - pan.y) / zoom;
       return [x, y];
     };
-    BRp$e.findContainerClientCoords = function() {
+    BRp$e.findContainerClientCoords = function () {
       if (this.containerBB) {
         return this.containerBB;
       }
@@ -18642,13 +21447,13 @@ var require_cytoscape_cjs = __commonJS({
         left: styleValue("padding-left"),
         right: styleValue("padding-right"),
         top: styleValue("padding-top"),
-        bottom: styleValue("padding-bottom")
+        bottom: styleValue("padding-bottom"),
       };
       var border = {
         left: styleValue("border-left-width"),
         right: styleValue("border-right-width"),
         top: styleValue("border-top-width"),
-        bottom: styleValue("border-bottom-width")
+        bottom: styleValue("border-bottom-width"),
       };
       var clientWidth = container.clientWidth;
       var clientHeight = container.clientHeight;
@@ -18660,15 +21465,30 @@ var require_cytoscape_cjs = __commonJS({
       var unscaledH = clientHeight - paddingVer;
       var left = rect.left + padding.left + border.left;
       var top = rect.top + padding.top + border.top;
-      return this.containerBB = [left, top, unscaledW, unscaledH, scale];
+      return (this.containerBB = [left, top, unscaledW, unscaledH, scale]);
     };
-    BRp$e.invalidateContainerClientCoordsCache = function() {
+    BRp$e.invalidateContainerClientCoordsCache = function () {
       this.containerBB = null;
     };
-    BRp$e.findNearestElement = function(x, y, interactiveElementsOnly, isTouch) {
-      return this.findNearestElements(x, y, interactiveElementsOnly, isTouch)[0];
+    BRp$e.findNearestElement = function (
+      x,
+      y,
+      interactiveElementsOnly,
+      isTouch,
+    ) {
+      return this.findNearestElements(
+        x,
+        y,
+        interactiveElementsOnly,
+        isTouch,
+      )[0];
     };
-    BRp$e.findNearestElements = function(x, y, interactiveElementsOnly, isTouch) {
+    BRp$e.findNearestElements = function (
+      x,
+      y,
+      interactiveElementsOnly,
+      isTouch,
+    ) {
       var self2 = this;
       var r = this;
       var eles = r.getCachedZSortedEles();
@@ -18695,7 +21515,12 @@ var require_cytoscape_cjs = __commonJS({
         }
         if (ele2.isEdge() && (sqDist == null || sqDist < minSqDist)) {
           if (nearEdge) {
-            if (nearEdge.pstyle("z-compound-depth").value === ele2.pstyle("z-compound-depth").value && nearEdge.pstyle("z-compound-depth").value === ele2.pstyle("z-compound-depth").value) {
+            if (
+              nearEdge.pstyle("z-compound-depth").value ===
+                ele2.pstyle("z-compound-depth").value &&
+              nearEdge.pstyle("z-compound-depth").value ===
+                ele2.pstyle("z-compound-depth").value
+            ) {
               for (var i3 = 0; i3 < near.length; i3++) {
                 if (near[i3].isEdge()) {
                   near[i3] = ele2;
@@ -18718,7 +21543,12 @@ var require_cytoscape_cjs = __commonJS({
         var hw = width / 2;
         var hh = height / 2;
         var pos = node.position();
-        if (pos.x - hw <= x && x <= pos.x + hw && pos.y - hh <= y && y <= pos.y + hh) {
+        if (
+          pos.x - hw <= x &&
+          x <= pos.x + hw &&
+          pos.y - hh <= y &&
+          y <= pos.y + hh
+        ) {
           var shape = r.nodeShapes[self2.getNodeShape(node)];
           if (shape.checkPoint(x, y, 0, width, height, pos.x, pos.y)) {
             addEle(node, 0);
@@ -18737,18 +21567,69 @@ var require_cytoscape_cjs = __commonJS({
         var src = _p.source;
         var tgt = _p.target;
         var sqDist;
-        if (rs.edgeType === "segments" || rs.edgeType === "straight" || rs.edgeType === "haystack") {
+        if (
+          rs.edgeType === "segments" ||
+          rs.edgeType === "straight" ||
+          rs.edgeType === "haystack"
+        ) {
           var pts2 = rs.allpts;
           for (var i3 = 0; i3 + 3 < pts2.length; i3 += 2) {
-            if (inLineVicinity(x, y, pts2[i3], pts2[i3 + 1], pts2[i3 + 2], pts2[i3 + 3], width2) && widthSq > (sqDist = sqdistToFiniteLine(x, y, pts2[i3], pts2[i3 + 1], pts2[i3 + 2], pts2[i3 + 3]))) {
+            if (
+              inLineVicinity(
+                x,
+                y,
+                pts2[i3],
+                pts2[i3 + 1],
+                pts2[i3 + 2],
+                pts2[i3 + 3],
+                width2,
+              ) &&
+              widthSq >
+                (sqDist = sqdistToFiniteLine(
+                  x,
+                  y,
+                  pts2[i3],
+                  pts2[i3 + 1],
+                  pts2[i3 + 2],
+                  pts2[i3 + 3],
+                ))
+            ) {
               addEle(edge, sqDist);
               return true;
             }
           }
-        } else if (rs.edgeType === "bezier" || rs.edgeType === "multibezier" || rs.edgeType === "self" || rs.edgeType === "compound") {
+        } else if (
+          rs.edgeType === "bezier" ||
+          rs.edgeType === "multibezier" ||
+          rs.edgeType === "self" ||
+          rs.edgeType === "compound"
+        ) {
           var pts2 = rs.allpts;
           for (var i3 = 0; i3 + 5 < rs.allpts.length; i3 += 4) {
-            if (inBezierVicinity(x, y, pts2[i3], pts2[i3 + 1], pts2[i3 + 2], pts2[i3 + 3], pts2[i3 + 4], pts2[i3 + 5], width2) && widthSq > (sqDist = sqdistToQuadraticBezier(x, y, pts2[i3], pts2[i3 + 1], pts2[i3 + 2], pts2[i3 + 3], pts2[i3 + 4], pts2[i3 + 5]))) {
+            if (
+              inBezierVicinity(
+                x,
+                y,
+                pts2[i3],
+                pts2[i3 + 1],
+                pts2[i3 + 2],
+                pts2[i3 + 3],
+                pts2[i3 + 4],
+                pts2[i3 + 5],
+                width2,
+              ) &&
+              widthSq >
+                (sqDist = sqdistToQuadraticBezier(
+                  x,
+                  y,
+                  pts2[i3],
+                  pts2[i3 + 1],
+                  pts2[i3 + 2],
+                  pts2[i3 + 3],
+                  pts2[i3 + 4],
+                  pts2[i3 + 5],
+                ))
+            ) {
               addEle(edge, sqDist);
               return true;
             }
@@ -18757,38 +21638,63 @@ var require_cytoscape_cjs = __commonJS({
         var src = src || _p.source;
         var tgt = tgt || _p.target;
         var arSize = self2.getArrowWidth(styleWidth, scale);
-        var arrows = [{
-          name: "source",
-          x: rs.arrowStartX,
-          y: rs.arrowStartY,
-          angle: rs.srcArrowAngle
-        }, {
-          name: "target",
-          x: rs.arrowEndX,
-          y: rs.arrowEndY,
-          angle: rs.tgtArrowAngle
-        }, {
-          name: "mid-source",
-          x: rs.midX,
-          y: rs.midY,
-          angle: rs.midsrcArrowAngle
-        }, {
-          name: "mid-target",
-          x: rs.midX,
-          y: rs.midY,
-          angle: rs.midtgtArrowAngle
-        }];
+        var arrows = [
+          {
+            name: "source",
+            x: rs.arrowStartX,
+            y: rs.arrowStartY,
+            angle: rs.srcArrowAngle,
+          },
+          {
+            name: "target",
+            x: rs.arrowEndX,
+            y: rs.arrowEndY,
+            angle: rs.tgtArrowAngle,
+          },
+          {
+            name: "mid-source",
+            x: rs.midX,
+            y: rs.midY,
+            angle: rs.midsrcArrowAngle,
+          },
+          {
+            name: "mid-target",
+            x: rs.midX,
+            y: rs.midY,
+            angle: rs.midtgtArrowAngle,
+          },
+        ];
         for (var i3 = 0; i3 < arrows.length; i3++) {
           var ar = arrows[i3];
-          var shape = r.arrowShapes[edge.pstyle(ar.name + "-arrow-shape").value];
+          var shape =
+            r.arrowShapes[edge.pstyle(ar.name + "-arrow-shape").value];
           var edgeWidth = edge.pstyle("width").pfValue;
-          if (shape.roughCollide(x, y, arSize, ar.angle, {
-            x: ar.x,
-            y: ar.y
-          }, edgeWidth, edgeThreshold) && shape.collide(x, y, arSize, ar.angle, {
-            x: ar.x,
-            y: ar.y
-          }, edgeWidth, edgeThreshold)) {
+          if (
+            shape.roughCollide(
+              x,
+              y,
+              arSize,
+              ar.angle,
+              {
+                x: ar.x,
+                y: ar.y,
+              },
+              edgeWidth,
+              edgeThreshold,
+            ) &&
+            shape.collide(
+              x,
+              y,
+              arSize,
+              ar.angle,
+              {
+                x: ar.x,
+                y: ar.y,
+              },
+              edgeWidth,
+              edgeThreshold,
+            )
+          ) {
             addEle(edge);
             return true;
           }
@@ -18834,7 +21740,7 @@ var require_cytoscape_cjs = __commonJS({
             y2 = y2 - ly;
             return {
               x: x2 * cos2 - y2 * sin2 + lx,
-              y: x2 * sin2 + y2 * cos2 + ly
+              y: x2 * sin2 + y2 * cos2 + ly,
             };
           };
           var px1y1 = rotate(lx1, ly1);
@@ -18850,7 +21756,7 @@ var require_cytoscape_cjs = __commonJS({
             px2y2.x + ox,
             px2y2.y + oy,
             px1y2.x + ox,
-            px1y2.y + oy
+            px1y2.y + oy,
           ];
           if (pointInsidePolygonPoints(x, y, points)) {
             addEle(ele2);
@@ -18868,12 +21774,15 @@ var require_cytoscape_cjs = __commonJS({
         if (ele.isNode()) {
           checkNode(ele) || checkLabel(ele);
         } else {
-          checkEdge(ele) || checkLabel(ele) || checkLabel(ele, "source") || checkLabel(ele, "target");
+          checkEdge(ele) ||
+            checkLabel(ele) ||
+            checkLabel(ele, "source") ||
+            checkLabel(ele, "target");
         }
       }
       return near;
     };
-    BRp$e.getAllInBox = function(x1, y1, x2, y2) {
+    BRp$e.getAllInBox = function (x1, y1, x2, y2) {
       var eles = this.getCachedZSortedEles().interactive;
       var box = [];
       var x1c = Math.min(x1, x2);
@@ -18888,7 +21797,7 @@ var require_cytoscape_cjs = __commonJS({
         x1,
         y1,
         x2,
-        y2
+        y2,
       });
       for (var e = 0; e < eles.length; e++) {
         var ele = eles[e];
@@ -18897,23 +21806,42 @@ var require_cytoscape_cjs = __commonJS({
           var nodeBb = node.boundingBox({
             includeNodes: true,
             includeEdges: false,
-            includeLabels: false
+            includeLabels: false,
           });
-          if (boundingBoxesIntersect(boxBb, nodeBb) && !boundingBoxInBoundingBox(nodeBb, boxBb)) {
+          if (
+            boundingBoxesIntersect(boxBb, nodeBb) &&
+            !boundingBoxInBoundingBox(nodeBb, boxBb)
+          ) {
             box.push(node);
           }
         } else {
           var edge = ele;
           var _p = edge._private;
           var rs = _p.rscratch;
-          if (rs.startX != null && rs.startY != null && !inBoundingBox(boxBb, rs.startX, rs.startY)) {
+          if (
+            rs.startX != null &&
+            rs.startY != null &&
+            !inBoundingBox(boxBb, rs.startX, rs.startY)
+          ) {
             continue;
           }
-          if (rs.endX != null && rs.endY != null && !inBoundingBox(boxBb, rs.endX, rs.endY)) {
+          if (
+            rs.endX != null &&
+            rs.endY != null &&
+            !inBoundingBox(boxBb, rs.endX, rs.endY)
+          ) {
             continue;
           }
-          if (rs.edgeType === "bezier" || rs.edgeType === "multibezier" || rs.edgeType === "self" || rs.edgeType === "compound" || rs.edgeType === "segments" || rs.edgeType === "haystack") {
-            var pts2 = _p.rstyle.bezierPts || _p.rstyle.linePts || _p.rstyle.haystackPts;
+          if (
+            rs.edgeType === "bezier" ||
+            rs.edgeType === "multibezier" ||
+            rs.edgeType === "self" ||
+            rs.edgeType === "compound" ||
+            rs.edgeType === "segments" ||
+            rs.edgeType === "haystack"
+          ) {
+            var pts2 =
+              _p.rstyle.bezierPts || _p.rstyle.linePts || _p.rstyle.haystackPts;
             var allInside = true;
             for (var i2 = 0; i2 < pts2.length; i2++) {
               if (!pointInBoundingBox(boxBb, pts2[i2])) {
@@ -18932,7 +21860,7 @@ var require_cytoscape_cjs = __commonJS({
       return box;
     };
     var BRp$d = {};
-    BRp$d.calculateArrowAngles = function(edge) {
+    BRp$d.calculateArrowAngles = function (edge) {
       var rs = edge._private.rscratch;
       var isHaystack = rs.edgeType === "haystack";
       var isBezier = rs.edgeType === "bezier";
@@ -18979,7 +21907,7 @@ var require_cytoscape_cjs = __commonJS({
       dispY = endY - startY;
       if (isSegments) {
         var pts2 = rs.allpts;
-        if (pts2.length / 2 % 2 === 0) {
+        if ((pts2.length / 2) % 2 === 0) {
           var i2 = pts2.length / 2;
           var i1 = i2 - 2;
           dispX = pts2[i2] - pts2[i1];
@@ -18996,7 +21924,7 @@ var require_cytoscape_cjs = __commonJS({
         var cpts = rs.ctrlpts;
         var bp0x, bp0y;
         var bp1x, bp1y;
-        if (cpts.length / 2 % 2 === 0) {
+        if ((cpts.length / 2) % 2 === 0) {
           var p0 = pts2.length / 2 - 1;
           var ic = p0 + 2;
           var p1 = ic + 2;
@@ -19023,8 +21951,7 @@ var require_cytoscape_cjs = __commonJS({
       dispY *= -1;
       if (isSegments) {
         var pts2 = rs.allpts;
-        if (pts2.length / 2 % 2 === 0)
-          ;
+        if ((pts2.length / 2) % 2 === 0);
         else {
           var i2 = pts2.length / 2 - 1;
           var i3 = i2 + 2;
@@ -19049,8 +21976,8 @@ var require_cytoscape_cjs = __commonJS({
       }
       rs.tgtArrowAngle = getAngleFromDisp(dispX, dispY);
     };
-    BRp$d.getArrowWidth = BRp$d.getArrowHeight = function(edgeWidth, scale) {
-      var cache2 = this.arrowWidthCache = this.arrowWidthCache || {};
+    BRp$d.getArrowWidth = BRp$d.getArrowHeight = function (edgeWidth, scale) {
+      var cache2 = (this.arrowWidthCache = this.arrowWidthCache || {});
       var cachedVal = cache2[edgeWidth + ", " + scale];
       if (cachedVal) {
         return cachedVal;
@@ -19060,19 +21987,27 @@ var require_cytoscape_cjs = __commonJS({
       return cachedVal;
     };
     var BRp$c = {};
-    BRp$c.findMidptPtsEtc = function(edge, pairInfo) {
-      var posPts = pairInfo.posPts, intersectionPts = pairInfo.intersectionPts, vectorNormInverse = pairInfo.vectorNormInverse;
+    BRp$c.findMidptPtsEtc = function (edge, pairInfo) {
+      var posPts = pairInfo.posPts,
+        intersectionPts = pairInfo.intersectionPts,
+        vectorNormInverse = pairInfo.vectorNormInverse;
       var midptPts;
       var srcManEndpt = edge.pstyle("source-endpoint");
       var tgtManEndpt = edge.pstyle("target-endpoint");
-      var haveManualEndPts = srcManEndpt.units != null && tgtManEndpt.units != null;
-      var recalcVectorNormInverse = function recalcVectorNormInverse2(x12, y12, x22, y22) {
+      var haveManualEndPts =
+        srcManEndpt.units != null && tgtManEndpt.units != null;
+      var recalcVectorNormInverse = function recalcVectorNormInverse2(
+        x12,
+        y12,
+        x22,
+        y22,
+      ) {
         var dy = y22 - y12;
         var dx = x22 - x12;
         var l = Math.sqrt(dx * dx + dy * dy);
         return {
           x: -dy / l,
-          y: dx / l
+          y: dx / l,
         };
       };
       var edgeDistances = edge.pstyle("edge-distances").value;
@@ -19085,18 +22020,38 @@ var require_cytoscape_cjs = __commonJS({
           break;
         case "endpoints": {
           if (haveManualEndPts) {
-            var _this$manualEndptToPx = this.manualEndptToPx(edge.source()[0], srcManEndpt), _this$manualEndptToPx2 = _slicedToArray(_this$manualEndptToPx, 2), x1 = _this$manualEndptToPx2[0], y1 = _this$manualEndptToPx2[1];
-            var _this$manualEndptToPx3 = this.manualEndptToPx(edge.target()[0], tgtManEndpt), _this$manualEndptToPx4 = _slicedToArray(_this$manualEndptToPx3, 2), x2 = _this$manualEndptToPx4[0], y2 = _this$manualEndptToPx4[1];
+            var _this$manualEndptToPx = this.manualEndptToPx(
+                edge.source()[0],
+                srcManEndpt,
+              ),
+              _this$manualEndptToPx2 = _slicedToArray(_this$manualEndptToPx, 2),
+              x1 = _this$manualEndptToPx2[0],
+              y1 = _this$manualEndptToPx2[1];
+            var _this$manualEndptToPx3 = this.manualEndptToPx(
+                edge.target()[0],
+                tgtManEndpt,
+              ),
+              _this$manualEndptToPx4 = _slicedToArray(
+                _this$manualEndptToPx3,
+                2,
+              ),
+              x2 = _this$manualEndptToPx4[0],
+              y2 = _this$manualEndptToPx4[1];
             var endPts = {
               x1,
               y1,
               x2,
-              y2
+              y2,
             };
             vectorNormInverse = recalcVectorNormInverse(x1, y1, x2, y2);
             midptPts = endPts;
           } else {
-            warn("Edge ".concat(edge.id(), " has edge-distances:endpoints specified without manual endpoints specified via source-endpoint and target-endpoint.  Falling back on edge-distances:intersection (default)."));
+            warn(
+              "Edge ".concat(
+                edge.id(),
+                " has edge-distances:endpoints specified without manual endpoints specified via source-endpoint and target-endpoint.  Falling back on edge-distances:intersection (default).",
+              ),
+            );
             midptPts = intersectionPts;
           }
           break;
@@ -19104,10 +22059,10 @@ var require_cytoscape_cjs = __commonJS({
       }
       return {
         midptPts,
-        vectorNormInverse
+        vectorNormInverse,
       };
     };
-    BRp$c.findHaystackPoints = function(edges) {
+    BRp$c.findHaystackPoints = function (edges) {
       for (var i2 = 0; i2 < edges.length; i2++) {
         var edge = edges[i2];
         var _p = edge._private;
@@ -19116,12 +22071,12 @@ var require_cytoscape_cjs = __commonJS({
           var angle = Math.random() * 2 * Math.PI;
           rs.source = {
             x: Math.cos(angle),
-            y: Math.sin(angle)
+            y: Math.sin(angle),
           };
           angle = Math.random() * 2 * Math.PI;
           rs.target = {
             x: Math.cos(angle),
-            y: Math.sin(angle)
+            y: Math.sin(angle),
           };
         }
         var src = _p.source;
@@ -19134,7 +22089,12 @@ var require_cytoscape_cjs = __commonJS({
         var tgtH = tgt.height();
         var radius = edge.pstyle("haystack-radius").value;
         var halfRadius = radius / 2;
-        rs.haystackPts = rs.allpts = [rs.source.x * srcW * halfRadius + srcPos.x, rs.source.y * srcH * halfRadius + srcPos.y, rs.target.x * tgtW * halfRadius + tgtPos.x, rs.target.y * tgtH * halfRadius + tgtPos.y];
+        rs.haystackPts = rs.allpts = [
+          rs.source.x * srcW * halfRadius + srcPos.x,
+          rs.source.y * srcH * halfRadius + srcPos.y,
+          rs.target.x * tgtW * halfRadius + tgtPos.x,
+          rs.target.y * tgtH * halfRadius + tgtPos.y,
+        ];
         rs.midX = (rs.allpts[0] + rs.allpts[2]) / 2;
         rs.midY = (rs.allpts[1] + rs.allpts[3]) / 2;
         rs.edgeType = "haystack";
@@ -19145,11 +22105,14 @@ var require_cytoscape_cjs = __commonJS({
         this.calculateLabelAngles(edge);
       }
     };
-    BRp$c.findSegmentsPoints = function(edge, pairInfo) {
+    BRp$c.findSegmentsPoints = function (edge, pairInfo) {
       var rs = edge._private.rscratch;
       var segmentWs = edge.pstyle("segment-weights");
       var segmentDs = edge.pstyle("segment-distances");
-      var segmentsN = Math.min(segmentWs.pfValue.length, segmentDs.pfValue.length);
+      var segmentsN = Math.min(
+        segmentWs.pfValue.length,
+        segmentDs.pfValue.length,
+      );
       rs.edgeType = "segments";
       rs.segpts = [];
       for (var s = 0; s < segmentsN; s++) {
@@ -19157,17 +22120,23 @@ var require_cytoscape_cjs = __commonJS({
         var d = segmentDs.pfValue[s];
         var w1 = 1 - w;
         var w2 = w;
-        var _this$findMidptPtsEtc = this.findMidptPtsEtc(edge, pairInfo), midptPts = _this$findMidptPtsEtc.midptPts, vectorNormInverse = _this$findMidptPtsEtc.vectorNormInverse;
+        var _this$findMidptPtsEtc = this.findMidptPtsEtc(edge, pairInfo),
+          midptPts = _this$findMidptPtsEtc.midptPts,
+          vectorNormInverse = _this$findMidptPtsEtc.vectorNormInverse;
         var adjustedMidpt = {
           x: midptPts.x1 * w1 + midptPts.x2 * w2,
-          y: midptPts.y1 * w1 + midptPts.y2 * w2
+          y: midptPts.y1 * w1 + midptPts.y2 * w2,
         };
-        rs.segpts.push(adjustedMidpt.x + vectorNormInverse.x * d, adjustedMidpt.y + vectorNormInverse.y * d);
+        rs.segpts.push(
+          adjustedMidpt.x + vectorNormInverse.x * d,
+          adjustedMidpt.y + vectorNormInverse.y * d,
+        );
       }
     };
-    BRp$c.findLoopPoints = function(edge, pairInfo, i2, edgeIsUnbundled) {
+    BRp$c.findLoopPoints = function (edge, pairInfo, i2, edgeIsUnbundled) {
       var rs = edge._private.rscratch;
-      var dirCounts = pairInfo.dirCounts, srcPos = pairInfo.srcPos;
+      var dirCounts = pairInfo.dirCounts,
+        srcPos = pairInfo.srcPos;
       var ctrlptDists = edge.pstyle("control-point-distances");
       var ctrlptDist = ctrlptDists ? ctrlptDists.pfValue[0] : void 0;
       var loopDir = edge.pstyle("loop-direction").pfValue;
@@ -19184,13 +22153,28 @@ var require_cytoscape_cjs = __commonJS({
       var outAngle = loopAngle - loopSwp / 2;
       var inAngle = loopAngle + loopSwp / 2;
       var dc = String(loopDir + "_" + loopSwp);
-      j = dirCounts[dc] === void 0 ? dirCounts[dc] = 0 : ++dirCounts[dc];
-      rs.ctrlpts = [srcPos.x + Math.cos(outAngle) * 1.4 * loopDist * (j / 3 + 1), srcPos.y + Math.sin(outAngle) * 1.4 * loopDist * (j / 3 + 1), srcPos.x + Math.cos(inAngle) * 1.4 * loopDist * (j / 3 + 1), srcPos.y + Math.sin(inAngle) * 1.4 * loopDist * (j / 3 + 1)];
+      j = dirCounts[dc] === void 0 ? (dirCounts[dc] = 0) : ++dirCounts[dc];
+      rs.ctrlpts = [
+        srcPos.x + Math.cos(outAngle) * 1.4 * loopDist * (j / 3 + 1),
+        srcPos.y + Math.sin(outAngle) * 1.4 * loopDist * (j / 3 + 1),
+        srcPos.x + Math.cos(inAngle) * 1.4 * loopDist * (j / 3 + 1),
+        srcPos.y + Math.sin(inAngle) * 1.4 * loopDist * (j / 3 + 1),
+      ];
     };
-    BRp$c.findCompoundLoopPoints = function(edge, pairInfo, i2, edgeIsUnbundled) {
+    BRp$c.findCompoundLoopPoints = function (
+      edge,
+      pairInfo,
+      i2,
+      edgeIsUnbundled,
+    ) {
       var rs = edge._private.rscratch;
       rs.edgeType = "compound";
-      var srcPos = pairInfo.srcPos, tgtPos = pairInfo.tgtPos, srcW = pairInfo.srcW, srcH = pairInfo.srcH, tgtW = pairInfo.tgtW, tgtH = pairInfo.tgtH;
+      var srcPos = pairInfo.srcPos,
+        tgtPos = pairInfo.tgtPos,
+        srcW = pairInfo.srcW,
+        srcH = pairInfo.srcH,
+        tgtW = pairInfo.tgtW,
+        tgtH = pairInfo.tgtH;
       var stepSize = edge.pstyle("control-point-step-size").pfValue;
       var ctrlptDists = edge.pstyle("control-point-distances");
       var ctrlptDist = ctrlptDists ? ctrlptDists.pfValue[0] : void 0;
@@ -19203,37 +22187,68 @@ var require_cytoscape_cjs = __commonJS({
       var loopW = 50;
       var loopaPos = {
         x: srcPos.x - srcW / 2,
-        y: srcPos.y - srcH / 2
+        y: srcPos.y - srcH / 2,
       };
       var loopbPos = {
         x: tgtPos.x - tgtW / 2,
-        y: tgtPos.y - tgtH / 2
+        y: tgtPos.y - tgtH / 2,
       };
       var loopPos = {
         x: Math.min(loopaPos.x, loopbPos.x),
-        y: Math.min(loopaPos.y, loopbPos.y)
+        y: Math.min(loopaPos.y, loopbPos.y),
       };
       var minCompoundStretch = 0.5;
-      var compoundStretchA = Math.max(minCompoundStretch, Math.log(srcW * 0.01));
-      var compoundStretchB = Math.max(minCompoundStretch, Math.log(tgtW * 0.01));
-      rs.ctrlpts = [loopPos.x, loopPos.y - (1 + Math.pow(loopW, 1.12) / 100) * loopDist * (j / 3 + 1) * compoundStretchA, loopPos.x - (1 + Math.pow(loopW, 1.12) / 100) * loopDist * (j / 3 + 1) * compoundStretchB, loopPos.y];
+      var compoundStretchA = Math.max(
+        minCompoundStretch,
+        Math.log(srcW * 0.01),
+      );
+      var compoundStretchB = Math.max(
+        minCompoundStretch,
+        Math.log(tgtW * 0.01),
+      );
+      rs.ctrlpts = [
+        loopPos.x,
+        loopPos.y -
+          (1 + Math.pow(loopW, 1.12) / 100) *
+            loopDist *
+            (j / 3 + 1) *
+            compoundStretchA,
+        loopPos.x -
+          (1 + Math.pow(loopW, 1.12) / 100) *
+            loopDist *
+            (j / 3 + 1) *
+            compoundStretchB,
+        loopPos.y,
+      ];
     };
-    BRp$c.findStraightEdgePoints = function(edge) {
+    BRp$c.findStraightEdgePoints = function (edge) {
       edge._private.rscratch.edgeType = "straight";
     };
-    BRp$c.findBezierPoints = function(edge, pairInfo, i2, edgeIsUnbundled, edgeIsSwapped) {
+    BRp$c.findBezierPoints = function (
+      edge,
+      pairInfo,
+      i2,
+      edgeIsUnbundled,
+      edgeIsSwapped,
+    ) {
       var rs = edge._private.rscratch;
       var stepSize = edge.pstyle("control-point-step-size").pfValue;
       var ctrlptDists = edge.pstyle("control-point-distances");
       var ctrlptWs = edge.pstyle("control-point-weights");
-      var bezierN = ctrlptDists && ctrlptWs ? Math.min(ctrlptDists.value.length, ctrlptWs.value.length) : 1;
+      var bezierN =
+        ctrlptDists && ctrlptWs
+          ? Math.min(ctrlptDists.value.length, ctrlptWs.value.length)
+          : 1;
       var ctrlptDist = ctrlptDists ? ctrlptDists.pfValue[0] : void 0;
       var ctrlptWeight = ctrlptWs.value[0];
       var multi = edgeIsUnbundled;
       rs.edgeType = multi ? "multibezier" : "bezier";
       rs.ctrlpts = [];
       for (var b = 0; b < bezierN; b++) {
-        var normctrlptDist = (0.5 - pairInfo.eles.length / 2 + i2) * stepSize * (edgeIsSwapped ? -1 : 1);
+        var normctrlptDist =
+          (0.5 - pairInfo.eles.length / 2 + i2) *
+          stepSize *
+          (edgeIsSwapped ? -1 : 1);
         var manctrlptDist = void 0;
         var sign = signum(normctrlptDist);
         if (multi) {
@@ -19245,18 +22260,24 @@ var require_cytoscape_cjs = __commonJS({
         } else {
           manctrlptDist = ctrlptDist !== void 0 ? sign * ctrlptDist : void 0;
         }
-        var distanceFromMidpoint = manctrlptDist !== void 0 ? manctrlptDist : normctrlptDist;
+        var distanceFromMidpoint =
+          manctrlptDist !== void 0 ? manctrlptDist : normctrlptDist;
         var w1 = 1 - ctrlptWeight;
         var w2 = ctrlptWeight;
-        var _this$findMidptPtsEtc2 = this.findMidptPtsEtc(edge, pairInfo), midptPts = _this$findMidptPtsEtc2.midptPts, vectorNormInverse = _this$findMidptPtsEtc2.vectorNormInverse;
+        var _this$findMidptPtsEtc2 = this.findMidptPtsEtc(edge, pairInfo),
+          midptPts = _this$findMidptPtsEtc2.midptPts,
+          vectorNormInverse = _this$findMidptPtsEtc2.vectorNormInverse;
         var adjustedMidpt = {
           x: midptPts.x1 * w1 + midptPts.x2 * w2,
-          y: midptPts.y1 * w1 + midptPts.y2 * w2
+          y: midptPts.y1 * w1 + midptPts.y2 * w2,
         };
-        rs.ctrlpts.push(adjustedMidpt.x + vectorNormInverse.x * distanceFromMidpoint, adjustedMidpt.y + vectorNormInverse.y * distanceFromMidpoint);
+        rs.ctrlpts.push(
+          adjustedMidpt.x + vectorNormInverse.x * distanceFromMidpoint,
+          adjustedMidpt.y + vectorNormInverse.y * distanceFromMidpoint,
+        );
       }
     };
-    BRp$c.findTaxiPoints = function(edge, pairInfo) {
+    BRp$c.findTaxiPoints = function (edge, pairInfo) {
       var rs = edge._private.rscratch;
       rs.edgeType = "segments";
       var VERTICAL = "vertical";
@@ -19266,7 +22287,11 @@ var require_cytoscape_cjs = __commonJS({
       var DOWNWARD = "downward";
       var UPWARD = "upward";
       var AUTO = "auto";
-      var posPts = pairInfo.posPts, srcW = pairInfo.srcW, srcH = pairInfo.srcH, tgtW = pairInfo.tgtW, tgtH = pairInfo.tgtH;
+      var posPts = pairInfo.posPts,
+        srcW = pairInfo.srcW,
+        srcH = pairInfo.srcH,
+        tgtW = pairInfo.tgtW,
+        tgtH = pairInfo.tgtH;
       var edgeDistances = edge.pstyle("edge-distances").value;
       var dIncludesNodeBody = edgeDistances !== "node-position";
       var taxiDir = edge.pstyle("taxi-direction").value;
@@ -19304,7 +22329,13 @@ var require_cytoscape_cjs = __commonJS({
       var pl = isVert ? pdy : pdx;
       var sgnL = signum(pl);
       var forcedDir = false;
-      if (!(isExplicitDir && (turnIsPercent || turnIsNegative)) && (rawTaxiDir === DOWNWARD && pl < 0 || rawTaxiDir === UPWARD && pl > 0 || rawTaxiDir === LEFTWARD && pl > 0 || rawTaxiDir === RIGHTWARD && pl < 0)) {
+      if (
+        !(isExplicitDir && (turnIsPercent || turnIsNegative)) &&
+        ((rawTaxiDir === DOWNWARD && pl < 0) ||
+          (rawTaxiDir === UPWARD && pl > 0) ||
+          (rawTaxiDir === LEFTWARD && pl > 0) ||
+          (rawTaxiDir === RIGHTWARD && pl < 0))
+      ) {
         sgnL *= -1;
         l = sgnL * Math.abs(l);
         forcedDir = true;
@@ -19329,11 +22360,13 @@ var require_cytoscape_cjs = __commonJS({
           var lShapeInsideTgt = Math.abs(pdx) <= tgtW / 2;
           if (lShapeInsideSrc) {
             var x = (posPts.x1 + posPts.x2) / 2;
-            var y1 = posPts.y1, y2 = posPts.y2;
+            var y1 = posPts.y1,
+              y2 = posPts.y2;
             rs.segpts = [x, y1, x, y2];
           } else if (lShapeInsideTgt) {
             var y = (posPts.y1 + posPts.y2) / 2;
-            var x1 = posPts.x1, x2 = posPts.x2;
+            var x1 = posPts.x1,
+              x2 = posPts.x2;
             rs.segpts = [x1, y, x2, y];
           } else {
             rs.segpts = [posPts.x1, posPts.y2];
@@ -19343,11 +22376,13 @@ var require_cytoscape_cjs = __commonJS({
           var _lShapeInsideTgt = Math.abs(pdy) <= tgtH / 2;
           if (_lShapeInsideSrc) {
             var _y = (posPts.y1 + posPts.y2) / 2;
-            var _x = posPts.x1, _x2 = posPts.x2;
+            var _x = posPts.x1,
+              _x2 = posPts.x2;
             rs.segpts = [_x, _y, _x2, _y];
           } else if (_lShapeInsideTgt) {
             var _x3 = (posPts.x1 + posPts.x2) / 2;
-            var _y2 = posPts.y1, _y3 = posPts.y2;
+            var _y2 = posPts.y1,
+              _y3 = posPts.y2;
             rs.segpts = [_x3, _y2, _x3, _y3];
           } else {
             rs.segpts = [posPts.x2, posPts.y1];
@@ -19355,42 +22390,61 @@ var require_cytoscape_cjs = __commonJS({
         }
       } else {
         if (isVert) {
-          var _y4 = posPts.y1 + d + (dIncludesNodeBody ? srcH / 2 * sgnL : 0);
-          var _x4 = posPts.x1, _x5 = posPts.x2;
+          var _y4 = posPts.y1 + d + (dIncludesNodeBody ? (srcH / 2) * sgnL : 0);
+          var _x4 = posPts.x1,
+            _x5 = posPts.x2;
           rs.segpts = [_x4, _y4, _x5, _y4];
         } else {
-          var _x6 = posPts.x1 + d + (dIncludesNodeBody ? srcW / 2 * sgnL : 0);
-          var _y5 = posPts.y1, _y6 = posPts.y2;
+          var _x6 = posPts.x1 + d + (dIncludesNodeBody ? (srcW / 2) * sgnL : 0);
+          var _y5 = posPts.y1,
+            _y6 = posPts.y2;
           rs.segpts = [_x6, _y5, _x6, _y6];
         }
       }
     };
-    BRp$c.tryToCorrectInvalidPoints = function(edge, pairInfo) {
+    BRp$c.tryToCorrectInvalidPoints = function (edge, pairInfo) {
       var rs = edge._private.rscratch;
       if (rs.edgeType === "bezier") {
-        var srcPos = pairInfo.srcPos, tgtPos = pairInfo.tgtPos, srcW = pairInfo.srcW, srcH = pairInfo.srcH, tgtW = pairInfo.tgtW, tgtH = pairInfo.tgtH, srcShape = pairInfo.srcShape, tgtShape = pairInfo.tgtShape;
+        var srcPos = pairInfo.srcPos,
+          tgtPos = pairInfo.tgtPos,
+          srcW = pairInfo.srcW,
+          srcH = pairInfo.srcH,
+          tgtW = pairInfo.tgtW,
+          tgtH = pairInfo.tgtH,
+          srcShape = pairInfo.srcShape,
+          tgtShape = pairInfo.tgtShape;
         var badStart = !number$1(rs.startX) || !number$1(rs.startY);
         var badAStart = !number$1(rs.arrowStartX) || !number$1(rs.arrowStartY);
         var badEnd = !number$1(rs.endX) || !number$1(rs.endY);
         var badAEnd = !number$1(rs.arrowEndX) || !number$1(rs.arrowEndY);
         var minCpADistFactor = 3;
-        var arrowW = this.getArrowWidth(edge.pstyle("width").pfValue, edge.pstyle("arrow-scale").value) * this.arrowShapeWidth;
+        var arrowW =
+          this.getArrowWidth(
+            edge.pstyle("width").pfValue,
+            edge.pstyle("arrow-scale").value,
+          ) * this.arrowShapeWidth;
         var minCpADist = minCpADistFactor * arrowW;
-        var startACpDist = dist({
-          x: rs.ctrlpts[0],
-          y: rs.ctrlpts[1]
-        }, {
-          x: rs.startX,
-          y: rs.startY
-        });
+        var startACpDist = dist(
+          {
+            x: rs.ctrlpts[0],
+            y: rs.ctrlpts[1],
+          },
+          {
+            x: rs.startX,
+            y: rs.startY,
+          },
+        );
         var closeStartACp = startACpDist < minCpADist;
-        var endACpDist = dist({
-          x: rs.ctrlpts[0],
-          y: rs.ctrlpts[1]
-        }, {
-          x: rs.endX,
-          y: rs.endY
-        });
+        var endACpDist = dist(
+          {
+            x: rs.ctrlpts[0],
+            y: rs.ctrlpts[1],
+          },
+          {
+            x: rs.endX,
+            y: rs.endY,
+          },
+        );
         var closeEndACp = endACpDist < minCpADist;
         var overlapping = false;
         if (badStart || badAStart || closeStartACp) {
@@ -19398,21 +22452,29 @@ var require_cytoscape_cjs = __commonJS({
           var cpD = {
             // delta
             x: rs.ctrlpts[0] - srcPos.x,
-            y: rs.ctrlpts[1] - srcPos.y
+            y: rs.ctrlpts[1] - srcPos.y,
           };
           var cpL = Math.sqrt(cpD.x * cpD.x + cpD.y * cpD.y);
           var cpM = {
             // normalised delta
             x: cpD.x / cpL,
-            y: cpD.y / cpL
+            y: cpD.y / cpL,
           };
           var radius = Math.max(srcW, srcH);
           var cpProj = {
             // *2 radius guarantees outside shape
             x: rs.ctrlpts[0] + cpM.x * 2 * radius,
-            y: rs.ctrlpts[1] + cpM.y * 2 * radius
+            y: rs.ctrlpts[1] + cpM.y * 2 * radius,
           };
-          var srcCtrlPtIntn = srcShape.intersectLine(srcPos.x, srcPos.y, srcW, srcH, cpProj.x, cpProj.y, 0);
+          var srcCtrlPtIntn = srcShape.intersectLine(
+            srcPos.x,
+            srcPos.y,
+            srcW,
+            srcH,
+            cpProj.x,
+            cpProj.y,
+            0,
+          );
           if (closeStartACp) {
             rs.ctrlpts[0] = rs.ctrlpts[0] + cpM.x * (minCpADist - startACpDist);
             rs.ctrlpts[1] = rs.ctrlpts[1] + cpM.y * (minCpADist - startACpDist);
@@ -19426,21 +22488,29 @@ var require_cytoscape_cjs = __commonJS({
           var _cpD = {
             // delta
             x: rs.ctrlpts[0] - tgtPos.x,
-            y: rs.ctrlpts[1] - tgtPos.y
+            y: rs.ctrlpts[1] - tgtPos.y,
           };
           var _cpL = Math.sqrt(_cpD.x * _cpD.x + _cpD.y * _cpD.y);
           var _cpM = {
             // normalised delta
             x: _cpD.x / _cpL,
-            y: _cpD.y / _cpL
+            y: _cpD.y / _cpL,
           };
           var _radius = Math.max(srcW, srcH);
           var _cpProj = {
             // *2 radius guarantees outside shape
             x: rs.ctrlpts[0] + _cpM.x * 2 * _radius,
-            y: rs.ctrlpts[1] + _cpM.y * 2 * _radius
+            y: rs.ctrlpts[1] + _cpM.y * 2 * _radius,
           };
-          var tgtCtrlPtIntn = tgtShape.intersectLine(tgtPos.x, tgtPos.y, tgtW, tgtH, _cpProj.x, _cpProj.y, 0);
+          var tgtCtrlPtIntn = tgtShape.intersectLine(
+            tgtPos.x,
+            tgtPos.y,
+            tgtW,
+            tgtH,
+            _cpProj.x,
+            _cpProj.y,
+            0,
+          );
           if (closeEndACp) {
             rs.ctrlpts[0] = rs.ctrlpts[0] + _cpM.x * (minCpADist - endACpDist);
             rs.ctrlpts[1] = rs.ctrlpts[1] + _cpM.y * (minCpADist - endACpDist);
@@ -19454,28 +22524,46 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    BRp$c.storeAllpts = function(edge) {
+    BRp$c.storeAllpts = function (edge) {
       var rs = edge._private.rscratch;
-      if (rs.edgeType === "multibezier" || rs.edgeType === "bezier" || rs.edgeType === "self" || rs.edgeType === "compound") {
+      if (
+        rs.edgeType === "multibezier" ||
+        rs.edgeType === "bezier" ||
+        rs.edgeType === "self" ||
+        rs.edgeType === "compound"
+      ) {
         rs.allpts = [];
         rs.allpts.push(rs.startX, rs.startY);
         for (var b = 0; b + 1 < rs.ctrlpts.length; b += 2) {
           rs.allpts.push(rs.ctrlpts[b], rs.ctrlpts[b + 1]);
           if (b + 3 < rs.ctrlpts.length) {
-            rs.allpts.push((rs.ctrlpts[b] + rs.ctrlpts[b + 2]) / 2, (rs.ctrlpts[b + 1] + rs.ctrlpts[b + 3]) / 2);
+            rs.allpts.push(
+              (rs.ctrlpts[b] + rs.ctrlpts[b + 2]) / 2,
+              (rs.ctrlpts[b + 1] + rs.ctrlpts[b + 3]) / 2,
+            );
           }
         }
         rs.allpts.push(rs.endX, rs.endY);
         var m, mt;
-        if (rs.ctrlpts.length / 2 % 2 === 0) {
+        if ((rs.ctrlpts.length / 2) % 2 === 0) {
           m = rs.allpts.length / 2 - 1;
           rs.midX = rs.allpts[m];
           rs.midY = rs.allpts[m + 1];
         } else {
           m = rs.allpts.length / 2 - 3;
           mt = 0.5;
-          rs.midX = qbezierAt(rs.allpts[m], rs.allpts[m + 2], rs.allpts[m + 4], mt);
-          rs.midY = qbezierAt(rs.allpts[m + 1], rs.allpts[m + 3], rs.allpts[m + 5], mt);
+          rs.midX = qbezierAt(
+            rs.allpts[m],
+            rs.allpts[m + 2],
+            rs.allpts[m + 4],
+            mt,
+          );
+          rs.midY = qbezierAt(
+            rs.allpts[m + 1],
+            rs.allpts[m + 3],
+            rs.allpts[m + 5],
+            mt,
+          );
         }
       } else if (rs.edgeType === "straight") {
         rs.allpts = [rs.startX, rs.startY, rs.endX, rs.endY];
@@ -19498,18 +22586,28 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    BRp$c.checkForInvalidEdgeWarning = function(edge) {
+    BRp$c.checkForInvalidEdgeWarning = function (edge) {
       var rs = edge[0]._private.rscratch;
-      if (rs.nodesOverlap || number$1(rs.startX) && number$1(rs.startY) && number$1(rs.endX) && number$1(rs.endY)) {
+      if (
+        rs.nodesOverlap ||
+        (number$1(rs.startX) &&
+          number$1(rs.startY) &&
+          number$1(rs.endX) &&
+          number$1(rs.endY))
+      ) {
         rs.loggedErr = false;
       } else {
         if (!rs.loggedErr) {
           rs.loggedErr = true;
-          warn("Edge `" + edge.id() + "` has invalid endpoints and so it is impossible to draw.  Adjust your edge style (e.g. control points) accordingly or use an alternative edge type.  This is expected behaviour when the source node and the target node overlap.");
+          warn(
+            "Edge `" +
+              edge.id() +
+              "` has invalid endpoints and so it is impossible to draw.  Adjust your edge style (e.g. control points) accordingly or use an alternative edge type.  This is expected behaviour when the source node and the target node overlap.",
+          );
         }
       }
     };
-    BRp$c.findEdgeControlPoints = function(edges) {
+    BRp$c.findEdgeControlPoints = function (edges) {
       var _this = this;
       if (!edges || edges.length === 0) {
         return;
@@ -19534,7 +22632,7 @@ var require_cytoscape_cjs = __commonJS({
             this.map.set(pairId2[0], map2);
           }
           map2.set(pairId2[1], val);
-        }
+        },
       };
       var pairIds = [];
       var haystackEdges = [];
@@ -19549,8 +22647,14 @@ var require_cytoscape_cjs = __commonJS({
           haystackEdges.push(edge);
           continue;
         }
-        var edgeIsUnbundled = curveStyle === "unbundled-bezier" || curveStyle === "segments" || curveStyle === "straight" || curveStyle === "straight-triangle" || curveStyle === "taxi";
-        var edgeIsBezier = curveStyle === "unbundled-bezier" || curveStyle === "bezier";
+        var edgeIsUnbundled =
+          curveStyle === "unbundled-bezier" ||
+          curveStyle === "segments" ||
+          curveStyle === "straight" ||
+          curveStyle === "straight-triangle" ||
+          curveStyle === "taxi";
+        var edgeIsBezier =
+          curveStyle === "unbundled-bezier" || curveStyle === "bezier";
         var src = _p.source;
         var tgt = _p.target;
         var srcIndex = src.poolIndex();
@@ -19559,7 +22663,7 @@ var require_cytoscape_cjs = __commonJS({
         var tableEntry = hashTable.get(pairId);
         if (tableEntry == null) {
           tableEntry = {
-            eles: []
+            eles: [],
           };
           hashTable.set(pairId, tableEntry);
           pairIds.push(pairId);
@@ -19577,14 +22681,14 @@ var require_cytoscape_cjs = __commonJS({
         var pairInfo = hashTable.get(pairId2);
         var swappedpairInfo = void 0;
         if (!pairInfo.hasUnbundled) {
-          var pllEdges = pairInfo.eles[0].parallelEdges().filter(function(e) {
+          var pllEdges = pairInfo.eles[0].parallelEdges().filter(function (e) {
             return e.isBundledBezier();
           });
           clearArray(pairInfo.eles);
-          pllEdges.forEach(function(edge2) {
+          pllEdges.forEach(function (edge2) {
             return pairInfo.eles.push(edge2);
           });
-          pairInfo.eles.sort(function(edge1, edge2) {
+          pairInfo.eles.sort(function (edge1, edge2) {
             return edge1.poolIndex() - edge2.poolIndex();
           });
         }
@@ -19596,64 +22700,108 @@ var require_cytoscape_cjs = __commonJS({
           src2 = tgt2;
           tgt2 = temp;
         }
-        var srcPos = pairInfo.srcPos = src2.position();
-        var tgtPos = pairInfo.tgtPos = tgt2.position();
-        var srcW = pairInfo.srcW = src2.outerWidth();
-        var srcH = pairInfo.srcH = src2.outerHeight();
-        var tgtW = pairInfo.tgtW = tgt2.outerWidth();
-        var tgtH = pairInfo.tgtH = tgt2.outerHeight();
-        var srcShape = pairInfo.srcShape = r.nodeShapes[_this.getNodeShape(src2)];
-        var tgtShape = pairInfo.tgtShape = r.nodeShapes[_this.getNodeShape(tgt2)];
+        var srcPos = (pairInfo.srcPos = src2.position());
+        var tgtPos = (pairInfo.tgtPos = tgt2.position());
+        var srcW = (pairInfo.srcW = src2.outerWidth());
+        var srcH = (pairInfo.srcH = src2.outerHeight());
+        var tgtW = (pairInfo.tgtW = tgt2.outerWidth());
+        var tgtH = (pairInfo.tgtH = tgt2.outerHeight());
+        var srcShape = (pairInfo.srcShape =
+          r.nodeShapes[_this.getNodeShape(src2)]);
+        var tgtShape = (pairInfo.tgtShape =
+          r.nodeShapes[_this.getNodeShape(tgt2)]);
         pairInfo.dirCounts = {
-          "north": 0,
-          "west": 0,
-          "south": 0,
-          "east": 0,
-          "northwest": 0,
-          "southwest": 0,
-          "northeast": 0,
-          "southeast": 0
+          north: 0,
+          west: 0,
+          south: 0,
+          east: 0,
+          northwest: 0,
+          southwest: 0,
+          northeast: 0,
+          southeast: 0,
         };
         for (var _i2 = 0; _i2 < pairInfo.eles.length; _i2++) {
           var _edge = pairInfo.eles[_i2];
           var rs = _edge[0]._private.rscratch;
           var _curveStyle = _edge.pstyle("curve-style").value;
-          var _edgeIsUnbundled = _curveStyle === "unbundled-bezier" || _curveStyle === "segments" || _curveStyle === "taxi";
+          var _edgeIsUnbundled =
+            _curveStyle === "unbundled-bezier" ||
+            _curveStyle === "segments" ||
+            _curveStyle === "taxi";
           var edgeIsSwapped = !src2.same(_edge.source());
-          if (!pairInfo.calculatedIntersection && src2 !== tgt2 && (pairInfo.hasBezier || pairInfo.hasUnbundled)) {
+          if (
+            !pairInfo.calculatedIntersection &&
+            src2 !== tgt2 &&
+            (pairInfo.hasBezier || pairInfo.hasUnbundled)
+          ) {
             pairInfo.calculatedIntersection = true;
-            var srcOutside = srcShape.intersectLine(srcPos.x, srcPos.y, srcW, srcH, tgtPos.x, tgtPos.y, 0);
-            var srcIntn = pairInfo.srcIntn = srcOutside;
-            var tgtOutside = tgtShape.intersectLine(tgtPos.x, tgtPos.y, tgtW, tgtH, srcPos.x, srcPos.y, 0);
-            var tgtIntn = pairInfo.tgtIntn = tgtOutside;
-            var intersectionPts = pairInfo.intersectionPts = {
+            var srcOutside = srcShape.intersectLine(
+              srcPos.x,
+              srcPos.y,
+              srcW,
+              srcH,
+              tgtPos.x,
+              tgtPos.y,
+              0,
+            );
+            var srcIntn = (pairInfo.srcIntn = srcOutside);
+            var tgtOutside = tgtShape.intersectLine(
+              tgtPos.x,
+              tgtPos.y,
+              tgtW,
+              tgtH,
+              srcPos.x,
+              srcPos.y,
+              0,
+            );
+            var tgtIntn = (pairInfo.tgtIntn = tgtOutside);
+            var intersectionPts = (pairInfo.intersectionPts = {
               x1: srcOutside[0],
               x2: tgtOutside[0],
               y1: srcOutside[1],
-              y2: tgtOutside[1]
-            };
-            var posPts = pairInfo.posPts = {
+              y2: tgtOutside[1],
+            });
+            var posPts = (pairInfo.posPts = {
               x1: srcPos.x,
               x2: tgtPos.x,
               y1: srcPos.y,
-              y2: tgtPos.y
-            };
+              y2: tgtPos.y,
+            });
             var dy = tgtOutside[1] - srcOutside[1];
             var dx = tgtOutside[0] - srcOutside[0];
             var l = Math.sqrt(dx * dx + dy * dy);
-            var vector = pairInfo.vector = {
+            var vector = (pairInfo.vector = {
               x: dx,
-              y: dy
-            };
-            var vectorNorm = pairInfo.vectorNorm = {
+              y: dy,
+            });
+            var vectorNorm = (pairInfo.vectorNorm = {
               x: vector.x / l,
-              y: vector.y / l
-            };
+              y: vector.y / l,
+            });
             var vectorNormInverse = {
               x: -vectorNorm.y,
-              y: vectorNorm.x
+              y: vectorNorm.x,
             };
-            pairInfo.nodesOverlap = !number$1(l) || tgtShape.checkPoint(srcOutside[0], srcOutside[1], 0, tgtW, tgtH, tgtPos.x, tgtPos.y) || srcShape.checkPoint(tgtOutside[0], tgtOutside[1], 0, srcW, srcH, srcPos.x, srcPos.y);
+            pairInfo.nodesOverlap =
+              !number$1(l) ||
+              tgtShape.checkPoint(
+                srcOutside[0],
+                srcOutside[1],
+                0,
+                tgtW,
+                tgtH,
+                tgtPos.x,
+                tgtPos.y,
+              ) ||
+              srcShape.checkPoint(
+                tgtOutside[0],
+                tgtOutside[1],
+                0,
+                srcW,
+                srcH,
+                srcPos.x,
+                srcPos.y,
+              );
             pairInfo.vectorNormInverse = vectorNormInverse;
             swappedpairInfo = {
               nodesOverlap: pairInfo.nodesOverlap,
@@ -19676,44 +22824,69 @@ var require_cytoscape_cjs = __commonJS({
                 x1: posPts.x2,
                 y1: posPts.y2,
                 x2: posPts.x1,
-                y2: posPts.y1
+                y2: posPts.y1,
               },
               intersectionPts: {
                 x1: intersectionPts.x2,
                 y1: intersectionPts.y2,
                 x2: intersectionPts.x1,
-                y2: intersectionPts.y1
+                y2: intersectionPts.y1,
               },
               vector: {
                 x: -vector.x,
-                y: -vector.y
+                y: -vector.y,
               },
               vectorNorm: {
                 x: -vectorNorm.x,
-                y: -vectorNorm.y
+                y: -vectorNorm.y,
               },
               vectorNormInverse: {
                 x: -vectorNormInverse.x,
-                y: -vectorNormInverse.y
-              }
+                y: -vectorNormInverse.y,
+              },
             };
           }
           var passedPairInfo = edgeIsSwapped ? swappedpairInfo : pairInfo;
           rs.nodesOverlap = passedPairInfo.nodesOverlap;
           rs.srcIntn = passedPairInfo.srcIntn;
           rs.tgtIntn = passedPairInfo.tgtIntn;
-          if (hasCompounds && (src2.isParent() || src2.isChild() || tgt2.isParent() || tgt2.isChild()) && (src2.parents().anySame(tgt2) || tgt2.parents().anySame(src2) || src2.same(tgt2) && src2.isParent())) {
-            _this.findCompoundLoopPoints(_edge, passedPairInfo, _i2, _edgeIsUnbundled);
+          if (
+            hasCompounds &&
+            (src2.isParent() ||
+              src2.isChild() ||
+              tgt2.isParent() ||
+              tgt2.isChild()) &&
+            (src2.parents().anySame(tgt2) ||
+              tgt2.parents().anySame(src2) ||
+              (src2.same(tgt2) && src2.isParent()))
+          ) {
+            _this.findCompoundLoopPoints(
+              _edge,
+              passedPairInfo,
+              _i2,
+              _edgeIsUnbundled,
+            );
           } else if (src2 === tgt2) {
             _this.findLoopPoints(_edge, passedPairInfo, _i2, _edgeIsUnbundled);
           } else if (_curveStyle === "segments") {
             _this.findSegmentsPoints(_edge, passedPairInfo);
           } else if (_curveStyle === "taxi") {
             _this.findTaxiPoints(_edge, passedPairInfo);
-          } else if (_curveStyle === "straight" || !_edgeIsUnbundled && pairInfo.eles.length % 2 === 1 && _i2 === Math.floor(pairInfo.eles.length / 2)) {
+          } else if (
+            _curveStyle === "straight" ||
+            (!_edgeIsUnbundled &&
+              pairInfo.eles.length % 2 === 1 &&
+              _i2 === Math.floor(pairInfo.eles.length / 2))
+          ) {
             _this.findStraightEdgePoints(_edge);
           } else {
-            _this.findBezierPoints(_edge, passedPairInfo, _i2, _edgeIsUnbundled, edgeIsSwapped);
+            _this.findBezierPoints(
+              _edge,
+              passedPairInfo,
+              _i2,
+              _edgeIsUnbundled,
+              edgeIsSwapped,
+            );
           }
           _this.findEndpoints(_edge);
           _this.tryToCorrectInvalidPoints(_edge, passedPairInfo);
@@ -19740,12 +22913,12 @@ var require_cytoscape_cjs = __commonJS({
         var y = pts2[i2 + 1];
         retPts.push({
           x,
-          y
+          y,
         });
       }
       return retPts;
     }
-    BRp$c.getSegmentPoints = function(edge) {
+    BRp$c.getSegmentPoints = function (edge) {
       var rs = edge[0]._private.rscratch;
       var type = rs.edgeType;
       if (type === "segments") {
@@ -19753,24 +22926,29 @@ var require_cytoscape_cjs = __commonJS({
         return getPts(rs.segpts);
       }
     };
-    BRp$c.getControlPoints = function(edge) {
+    BRp$c.getControlPoints = function (edge) {
       var rs = edge[0]._private.rscratch;
       var type = rs.edgeType;
-      if (type === "bezier" || type === "multibezier" || type === "self" || type === "compound") {
+      if (
+        type === "bezier" ||
+        type === "multibezier" ||
+        type === "self" ||
+        type === "compound"
+      ) {
         this.recalculateRenderedStyle(edge);
         return getPts(rs.ctrlpts);
       }
     };
-    BRp$c.getEdgeMidpoint = function(edge) {
+    BRp$c.getEdgeMidpoint = function (edge) {
       var rs = edge[0]._private.rscratch;
       this.recalculateRenderedStyle(edge);
       return {
         x: rs.midX,
-        y: rs.midY
+        y: rs.midY,
       };
     };
     var BRp$b = {};
-    BRp$b.manualEndptToPx = function(node, prop) {
+    BRp$b.manualEndptToPx = function (node, prop) {
       var r = this;
       var npos = node.position();
       var w = node.outerWidth();
@@ -19791,10 +22969,18 @@ var require_cytoscape_cjs = __commonJS({
         angle = -Math.PI / 2 + angle;
         var l = 2 * Math.max(w, h);
         var _p = [npos.x + Math.cos(angle) * l, npos.y + Math.sin(angle) * l];
-        return r.nodeShapes[this.getNodeShape(node)].intersectLine(npos.x, npos.y, w, h, _p[0], _p[1], 0);
+        return r.nodeShapes[this.getNodeShape(node)].intersectLine(
+          npos.x,
+          npos.y,
+          w,
+          h,
+          _p[0],
+          _p[1],
+          0,
+        );
       }
     };
-    BRp$b.findEndpoints = function(edge) {
+    BRp$b.findEndpoints = function (edge) {
       var r = this;
       var intersect;
       var source = edge.source()[0];
@@ -19817,9 +23003,13 @@ var require_cytoscape_cjs = __commonJS({
       var hasEndpts = bezier || multi || lines;
       var overrideEndpts = self2 || taxi;
       var srcManEndpt = edge.pstyle("source-endpoint");
-      var srcManEndptVal = overrideEndpts ? "outside-to-node" : srcManEndpt.value;
+      var srcManEndptVal = overrideEndpts
+        ? "outside-to-node"
+        : srcManEndpt.value;
       var tgtManEndpt = edge.pstyle("target-endpoint");
-      var tgtManEndptVal = overrideEndpts ? "outside-to-node" : tgtManEndpt.value;
+      var tgtManEndptVal = overrideEndpts
+        ? "outside-to-node"
+        : tgtManEndpt.value;
       rs.srcManEndpt = srcManEndpt;
       rs.tgtManEndpt = tgtManEndpt;
       var p1;
@@ -19828,12 +23018,21 @@ var require_cytoscape_cjs = __commonJS({
       var p2_i;
       if (bezier) {
         var cpStart = [rs.ctrlpts[0], rs.ctrlpts[1]];
-        var cpEnd = multi ? [rs.ctrlpts[rs.ctrlpts.length - 2], rs.ctrlpts[rs.ctrlpts.length - 1]] : cpStart;
+        var cpEnd = multi
+          ? [
+              rs.ctrlpts[rs.ctrlpts.length - 2],
+              rs.ctrlpts[rs.ctrlpts.length - 1],
+            ]
+          : cpStart;
         p1 = cpEnd;
         p2 = cpStart;
       } else if (lines) {
-        var srcArrowFromPt = !segments ? [tgtPos.x, tgtPos.y] : rs.segpts.slice(0, 2);
-        var tgtArrowFromPt = !segments ? [srcPos.x, srcPos.y] : rs.segpts.slice(rs.segpts.length - 2);
+        var srcArrowFromPt = !segments
+          ? [tgtPos.x, tgtPos.y]
+          : rs.segpts.slice(0, 2);
+        var tgtArrowFromPt = !segments
+          ? [srcPos.x, srcPos.y]
+          : rs.segpts.slice(rs.segpts.length - 2);
         p1 = tgtArrowFromPt;
         p2 = srcArrowFromPt;
       }
@@ -19844,13 +23043,30 @@ var require_cytoscape_cjs = __commonJS({
       } else if (tgtManEndptVal === "outside-to-line") {
         intersect = rs.tgtIntn;
       } else {
-        if (tgtManEndptVal === "outside-to-node" || tgtManEndptVal === "outside-to-node-or-label") {
+        if (
+          tgtManEndptVal === "outside-to-node" ||
+          tgtManEndptVal === "outside-to-node-or-label"
+        ) {
           p1_i = p1;
-        } else if (tgtManEndptVal === "outside-to-line" || tgtManEndptVal === "outside-to-line-or-label") {
+        } else if (
+          tgtManEndptVal === "outside-to-line" ||
+          tgtManEndptVal === "outside-to-line-or-label"
+        ) {
           p1_i = [srcPos.x, srcPos.y];
         }
-        intersect = r.nodeShapes[this.getNodeShape(target)].intersectLine(tgtPos.x, tgtPos.y, target.outerWidth(), target.outerHeight(), p1_i[0], p1_i[1], 0);
-        if (tgtManEndptVal === "outside-to-node-or-label" || tgtManEndptVal === "outside-to-line-or-label") {
+        intersect = r.nodeShapes[this.getNodeShape(target)].intersectLine(
+          tgtPos.x,
+          tgtPos.y,
+          target.outerWidth(),
+          target.outerHeight(),
+          p1_i[0],
+          p1_i[1],
+          0,
+        );
+        if (
+          tgtManEndptVal === "outside-to-node-or-label" ||
+          tgtManEndptVal === "outside-to-line-or-label"
+        ) {
           var trs = target._private.rscratch;
           var lw = trs.labelWidth;
           var lh = trs.labelHeight;
@@ -19870,7 +23086,22 @@ var require_cytoscape_cjs = __commonJS({
           } else if (ha === "right") {
             lx += lw2;
           }
-          var labelIntersect = polygonIntersectLine(p1_i[0], p1_i[1], [lx - lw2, ly - lh2, lx + lw2, ly - lh2, lx + lw2, ly + lh2, lx - lw2, ly + lh2], tgtPos.x, tgtPos.y);
+          var labelIntersect = polygonIntersectLine(
+            p1_i[0],
+            p1_i[1],
+            [
+              lx - lw2,
+              ly - lh2,
+              lx + lw2,
+              ly - lh2,
+              lx + lw2,
+              ly + lh2,
+              lx - lw2,
+              ly + lh2,
+            ],
+            tgtPos.x,
+            tgtPos.y,
+          );
           if (labelIntersect.length > 0) {
             var refPt = srcPos;
             var intSqdist = sqdist(refPt, array2point(intersect));
@@ -19883,7 +23114,7 @@ var require_cytoscape_cjs = __commonJS({
             if (labelIntersect.length > 2) {
               var labInt2SqDist = sqdist(refPt, {
                 x: labelIntersect[2],
-                y: labelIntersect[3]
+                y: labelIntersect[3],
               });
               if (labInt2SqDist < minSqDist) {
                 intersect = [labelIntersect[2], labelIntersect[3]];
@@ -19892,8 +23123,16 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
       }
-      var arrowEnd = shortenIntersection(intersect, p1, r.arrowShapes[tgtArShape].spacing(edge) + tgtDist);
-      var edgeEnd = shortenIntersection(intersect, p1, r.arrowShapes[tgtArShape].gap(edge) + tgtDist);
+      var arrowEnd = shortenIntersection(
+        intersect,
+        p1,
+        r.arrowShapes[tgtArShape].spacing(edge) + tgtDist,
+      );
+      var edgeEnd = shortenIntersection(
+        intersect,
+        p1,
+        r.arrowShapes[tgtArShape].gap(edge) + tgtDist,
+      );
       rs.endX = edgeEnd[0];
       rs.endY = edgeEnd[1];
       rs.arrowEndX = arrowEnd[0];
@@ -19905,13 +23144,30 @@ var require_cytoscape_cjs = __commonJS({
       } else if (srcManEndptVal === "outside-to-line") {
         intersect = rs.srcIntn;
       } else {
-        if (srcManEndptVal === "outside-to-node" || srcManEndptVal === "outside-to-node-or-label") {
+        if (
+          srcManEndptVal === "outside-to-node" ||
+          srcManEndptVal === "outside-to-node-or-label"
+        ) {
           p2_i = p2;
-        } else if (srcManEndptVal === "outside-to-line" || srcManEndptVal === "outside-to-line-or-label") {
+        } else if (
+          srcManEndptVal === "outside-to-line" ||
+          srcManEndptVal === "outside-to-line-or-label"
+        ) {
           p2_i = [tgtPos.x, tgtPos.y];
         }
-        intersect = r.nodeShapes[this.getNodeShape(source)].intersectLine(srcPos.x, srcPos.y, source.outerWidth(), source.outerHeight(), p2_i[0], p2_i[1], 0);
-        if (srcManEndptVal === "outside-to-node-or-label" || srcManEndptVal === "outside-to-line-or-label") {
+        intersect = r.nodeShapes[this.getNodeShape(source)].intersectLine(
+          srcPos.x,
+          srcPos.y,
+          source.outerWidth(),
+          source.outerHeight(),
+          p2_i[0],
+          p2_i[1],
+          0,
+        );
+        if (
+          srcManEndptVal === "outside-to-node-or-label" ||
+          srcManEndptVal === "outside-to-line-or-label"
+        ) {
           var srs = source._private.rscratch;
           var _lw = srs.labelWidth;
           var _lh = srs.labelHeight;
@@ -19931,7 +23187,22 @@ var require_cytoscape_cjs = __commonJS({
           } else if (_ha === "right") {
             _lx += _lw2;
           }
-          var _labelIntersect = polygonIntersectLine(p2_i[0], p2_i[1], [_lx - _lw2, _ly - _lh2, _lx + _lw2, _ly - _lh2, _lx + _lw2, _ly + _lh2, _lx - _lw2, _ly + _lh2], srcPos.x, srcPos.y);
+          var _labelIntersect = polygonIntersectLine(
+            p2_i[0],
+            p2_i[1],
+            [
+              _lx - _lw2,
+              _ly - _lh2,
+              _lx + _lw2,
+              _ly - _lh2,
+              _lx + _lw2,
+              _ly + _lh2,
+              _lx - _lw2,
+              _ly + _lh2,
+            ],
+            srcPos.x,
+            srcPos.y,
+          );
           if (_labelIntersect.length > 0) {
             var _refPt = tgtPos;
             var _intSqdist = sqdist(_refPt, array2point(intersect));
@@ -19944,7 +23215,7 @@ var require_cytoscape_cjs = __commonJS({
             if (_labelIntersect.length > 2) {
               var _labInt2SqDist = sqdist(_refPt, {
                 x: _labelIntersect[2],
-                y: _labelIntersect[3]
+                y: _labelIntersect[3],
               });
               if (_labInt2SqDist < _minSqDist) {
                 intersect = [_labelIntersect[2], _labelIntersect[3]];
@@ -19953,49 +23224,62 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
       }
-      var arrowStart = shortenIntersection(intersect, p2, r.arrowShapes[srcArShape].spacing(edge) + srcDist);
-      var edgeStart = shortenIntersection(intersect, p2, r.arrowShapes[srcArShape].gap(edge) + srcDist);
+      var arrowStart = shortenIntersection(
+        intersect,
+        p2,
+        r.arrowShapes[srcArShape].spacing(edge) + srcDist,
+      );
+      var edgeStart = shortenIntersection(
+        intersect,
+        p2,
+        r.arrowShapes[srcArShape].gap(edge) + srcDist,
+      );
       rs.startX = edgeStart[0];
       rs.startY = edgeStart[1];
       rs.arrowStartX = arrowStart[0];
       rs.arrowStartY = arrowStart[1];
       if (hasEndpts) {
-        if (!number$1(rs.startX) || !number$1(rs.startY) || !number$1(rs.endX) || !number$1(rs.endY)) {
+        if (
+          !number$1(rs.startX) ||
+          !number$1(rs.startY) ||
+          !number$1(rs.endX) ||
+          !number$1(rs.endY)
+        ) {
           rs.badLine = true;
         } else {
           rs.badLine = false;
         }
       }
     };
-    BRp$b.getSourceEndpoint = function(edge) {
+    BRp$b.getSourceEndpoint = function (edge) {
       var rs = edge[0]._private.rscratch;
       this.recalculateRenderedStyle(edge);
       switch (rs.edgeType) {
         case "haystack":
           return {
             x: rs.haystackPts[0],
-            y: rs.haystackPts[1]
+            y: rs.haystackPts[1],
           };
         default:
           return {
             x: rs.arrowStartX,
-            y: rs.arrowStartY
+            y: rs.arrowStartY,
           };
       }
     };
-    BRp$b.getTargetEndpoint = function(edge) {
+    BRp$b.getTargetEndpoint = function (edge) {
       var rs = edge[0]._private.rscratch;
       this.recalculateRenderedStyle(edge);
       switch (rs.edgeType) {
         case "haystack":
           return {
             x: rs.haystackPts[2],
-            y: rs.haystackPts[3]
+            y: rs.haystackPts[3],
           };
         default:
           return {
             x: rs.arrowEndX,
-            y: rs.arrowEndY
+            y: rs.arrowEndY,
           };
       }
     };
@@ -20010,47 +23294,59 @@ var require_cytoscape_cjs = __commonJS({
         var p2 = r.bezierProjPcts[i2];
         bpts.push({
           x: qbezierAt$1(pts2[0], pts2[2], pts2[4], p2),
-          y: qbezierAt$1(pts2[1], pts2[3], pts2[5], p2)
+          y: qbezierAt$1(pts2[1], pts2[3], pts2[5], p2),
         });
       }
     }
-    BRp$a.storeEdgeProjections = function(edge) {
+    BRp$a.storeEdgeProjections = function (edge) {
       var _p = edge._private;
       var rs = _p.rscratch;
       var et = rs.edgeType;
       _p.rstyle.bezierPts = null;
       _p.rstyle.linePts = null;
       _p.rstyle.haystackPts = null;
-      if (et === "multibezier" || et === "bezier" || et === "self" || et === "compound") {
+      if (
+        et === "multibezier" ||
+        et === "bezier" ||
+        et === "self" ||
+        et === "compound"
+      ) {
         _p.rstyle.bezierPts = [];
         for (var i2 = 0; i2 + 5 < rs.allpts.length; i2 += 4) {
           pushBezierPts(this, edge, rs.allpts.slice(i2, i2 + 6));
         }
       } else if (et === "segments") {
-        var lpts = _p.rstyle.linePts = [];
+        var lpts = (_p.rstyle.linePts = []);
         for (var i2 = 0; i2 + 1 < rs.allpts.length; i2 += 2) {
           lpts.push({
             x: rs.allpts[i2],
-            y: rs.allpts[i2 + 1]
+            y: rs.allpts[i2 + 1],
           });
         }
       } else if (et === "haystack") {
         var hpts = rs.haystackPts;
-        _p.rstyle.haystackPts = [{
-          x: hpts[0],
-          y: hpts[1]
-        }, {
-          x: hpts[2],
-          y: hpts[3]
-        }];
+        _p.rstyle.haystackPts = [
+          {
+            x: hpts[0],
+            y: hpts[1],
+          },
+          {
+            x: hpts[2],
+            y: hpts[3],
+          },
+        ];
       }
-      _p.rstyle.arrowWidth = this.getArrowWidth(edge.pstyle("width").pfValue, edge.pstyle("arrow-scale").value) * this.arrowShapeWidth;
+      _p.rstyle.arrowWidth =
+        this.getArrowWidth(
+          edge.pstyle("width").pfValue,
+          edge.pstyle("arrow-scale").value,
+        ) * this.arrowShapeWidth;
     };
-    BRp$a.recalculateEdgeProjections = function(edges) {
+    BRp$a.recalculateEdgeProjections = function (edges) {
       this.findEdgeControlPoints(edges);
     };
     var BRp$9 = {};
-    BRp$9.recalculateNodeLabelProjection = function(node) {
+    BRp$9.recalculateNodeLabelProjection = function (node) {
       var content = node.pstyle("label").strValue;
       if (emptyString(content)) {
         return;
@@ -20111,7 +23407,7 @@ var require_cytoscape_cjs = __commonJS({
       var lp1 = qbezierPtAt(p0, p1, p2, t1);
       return lineAngle(lp0, lp1);
     };
-    BRp$9.recalculateEdgeLabelProjections = function(edge) {
+    BRp$9.recalculateEdgeLabelProjections = function (edge) {
       var p2;
       var _p = edge._private;
       var rs = _p.rscratch;
@@ -20119,16 +23415,15 @@ var require_cytoscape_cjs = __commonJS({
       var content = {
         mid: edge.pstyle("label").strValue,
         source: edge.pstyle("source-label").strValue,
-        target: edge.pstyle("target-label").strValue
+        target: edge.pstyle("target-label").strValue,
       };
-      if (content.mid || content.source || content.target)
-        ;
+      if (content.mid || content.source || content.target);
       else {
         return;
       }
       p2 = {
         x: rs.midX,
-        y: rs.midY
+        y: rs.midY,
       };
       var setRs = function setRs2(propName, prefix, value) {
         setPrefixedProperty(_p.rscratch, propName, prefix, value);
@@ -20146,15 +23441,15 @@ var require_cytoscape_cjs = __commonJS({
         for (var i2 = 0; i2 + 5 < rs.allpts.length; i2 += 4) {
           var p0 = {
             x: rs.allpts[i2],
-            y: rs.allpts[i2 + 1]
+            y: rs.allpts[i2 + 1],
           };
           var p1 = {
             x: rs.allpts[i2 + 2],
-            y: rs.allpts[i2 + 3]
+            y: rs.allpts[i2 + 3],
           };
           var p22 = {
             x: rs.allpts[i2 + 4],
-            y: rs.allpts[i2 + 5]
+            y: rs.allpts[i2 + 5],
           };
           ctrlpts.push({
             p0,
@@ -20162,7 +23457,7 @@ var require_cytoscape_cjs = __commonJS({
             p2: p22,
             startDist: 0,
             length: 0,
-            segments: []
+            segments: [],
           });
         }
         var bpts = _p.rstyle.bezierPts;
@@ -20175,8 +23470,10 @@ var require_cytoscape_cjs = __commonJS({
             p1: p12,
             t0,
             t1,
-            startDist: prevSegment ? prevSegment.startDist + prevSegment.length : 0,
-            length
+            startDist: prevSegment
+              ? prevSegment.startDist + prevSegment.length
+              : 0,
+            length,
           };
           cp2.segments.push(segment);
           cp2.length += length;
@@ -20189,11 +23486,23 @@ var require_cytoscape_cjs = __commonJS({
           }
           addSegment(cp, cp.p0, bpts[_i * nProjs], 0, r.bezierProjPcts[0]);
           for (var j = 0; j < nProjs - 1; j++) {
-            addSegment(cp, bpts[_i * nProjs + j], bpts[_i * nProjs + j + 1], r.bezierProjPcts[j], r.bezierProjPcts[j + 1]);
+            addSegment(
+              cp,
+              bpts[_i * nProjs + j],
+              bpts[_i * nProjs + j + 1],
+              r.bezierProjPcts[j],
+              r.bezierProjPcts[j + 1],
+            );
           }
-          addSegment(cp, bpts[_i * nProjs + nProjs - 1], cp.p2, r.bezierProjPcts[nProjs - 1], 1);
+          addSegment(
+            cp,
+            bpts[_i * nProjs + nProjs - 1],
+            cp.p2,
+            r.bezierProjPcts[nProjs - 1],
+            1,
+          );
         }
-        return createControlPointInfo2.cache = ctrlpts;
+        return (createControlPointInfo2.cache = ctrlpts);
       };
       var calculateEndProjection = function calculateEndProjection2(prefix) {
         var angle;
@@ -20214,14 +23523,16 @@ var require_cytoscape_cjs = __commonJS({
             for (var i2 = 0; i2 < cps.length; i2++) {
               var _cp = cps[isSrc ? i2 : cps.length - 1 - i2];
               for (var j = 0; j < _cp.segments.length; j++) {
-                var _seg = _cp.segments[isSrc ? j : _cp.segments.length - 1 - j];
-                var lastSeg = i2 === cps.length - 1 && j === _cp.segments.length - 1;
+                var _seg =
+                  _cp.segments[isSrc ? j : _cp.segments.length - 1 - j];
+                var lastSeg =
+                  i2 === cps.length - 1 && j === _cp.segments.length - 1;
                 startDist = totalDist;
                 totalDist += _seg.length;
                 if (totalDist >= offset || lastSeg) {
                   selected = {
                     cp: _cp,
-                    segment: _seg
+                    segment: _seg,
                   };
                   break;
                 }
@@ -20234,7 +23545,9 @@ var require_cytoscape_cjs = __commonJS({
             var seg = selected.segment;
             var tSegment = (offset - startDist) / seg.length;
             var segDt = seg.t1 - seg.t0;
-            var t = isSrc ? seg.t0 + segDt * tSegment : seg.t1 - segDt * tSegment;
+            var t = isSrc
+              ? seg.t0 + segDt * tSegment
+              : seg.t1 - segDt * tSegment;
             t = bound(0, t, 1);
             p2 = qbezierPtAt(cp.p0, cp.p1, cp.p2, t);
             angle = bezierAngle(cp.p0, cp.p1, cp.p2, t);
@@ -20243,27 +23556,29 @@ var require_cytoscape_cjs = __commonJS({
           case "straight":
           case "segments":
           case "haystack": {
-            var d = 0, di, d0;
+            var d = 0,
+              di,
+              d0;
             var p0, p1;
             var l = rs.allpts.length;
             for (var _i2 = 0; _i2 + 3 < l; _i2 += 2) {
               if (isSrc) {
                 p0 = {
                   x: rs.allpts[_i2],
-                  y: rs.allpts[_i2 + 1]
+                  y: rs.allpts[_i2 + 1],
                 };
                 p1 = {
                   x: rs.allpts[_i2 + 2],
-                  y: rs.allpts[_i2 + 3]
+                  y: rs.allpts[_i2 + 3],
                 };
               } else {
                 p0 = {
                   x: rs.allpts[l - 2 - _i2],
-                  y: rs.allpts[l - 1 - _i2]
+                  y: rs.allpts[l - 1 - _i2],
                 };
                 p1 = {
                   x: rs.allpts[l - 4 - _i2],
-                  y: rs.allpts[l - 3 - _i2]
+                  y: rs.allpts[l - 3 - _i2],
                 };
               }
               di = dist(p0, p1);
@@ -20289,32 +23604,40 @@ var require_cytoscape_cjs = __commonJS({
       calculateEndProjection("target");
       this.applyLabelDimensions(edge);
     };
-    BRp$9.applyLabelDimensions = function(ele) {
+    BRp$9.applyLabelDimensions = function (ele) {
       this.applyPrefixedLabelDimensions(ele);
       if (ele.isEdge()) {
         this.applyPrefixedLabelDimensions(ele, "source");
         this.applyPrefixedLabelDimensions(ele, "target");
       }
     };
-    BRp$9.applyPrefixedLabelDimensions = function(ele, prefix) {
+    BRp$9.applyPrefixedLabelDimensions = function (ele, prefix) {
       var _p = ele._private;
       var text = this.getLabelText(ele, prefix);
       var labelDims = this.calculateLabelDimensions(ele, text);
       var lineHeight = ele.pstyle("line-height").pfValue;
       var textWrap = ele.pstyle("text-wrap").strValue;
-      var lines = getPrefixedProperty(_p.rscratch, "labelWrapCachedLines", prefix) || [];
+      var lines =
+        getPrefixedProperty(_p.rscratch, "labelWrapCachedLines", prefix) || [];
       var numLines = textWrap !== "wrap" ? 1 : Math.max(lines.length, 1);
       var normPerLineHeight = labelDims.height / numLines;
       var labelLineHeight = normPerLineHeight * lineHeight;
       var width = labelDims.width;
-      var height = labelDims.height + (numLines - 1) * (lineHeight - 1) * normPerLineHeight;
+      var height =
+        labelDims.height +
+        (numLines - 1) * (lineHeight - 1) * normPerLineHeight;
       setPrefixedProperty(_p.rstyle, "labelWidth", prefix, width);
       setPrefixedProperty(_p.rscratch, "labelWidth", prefix, width);
       setPrefixedProperty(_p.rstyle, "labelHeight", prefix, height);
       setPrefixedProperty(_p.rscratch, "labelHeight", prefix, height);
-      setPrefixedProperty(_p.rscratch, "labelLineHeight", prefix, labelLineHeight);
+      setPrefixedProperty(
+        _p.rscratch,
+        "labelLineHeight",
+        prefix,
+        labelLineHeight,
+      );
     };
-    BRp$9.getLabelText = function(ele, prefix) {
+    BRp$9.getLabelText = function (ele, prefix) {
       var _p = ele._private;
       var pfd = prefix ? prefix + "-" : "";
       var text = ele.pstyle(pfd + "label").strValue;
@@ -20330,8 +23653,7 @@ var require_cytoscape_cjs = __commonJS({
       if (!text) {
         return "";
       }
-      if (textTransform == "none")
-        ;
+      if (textTransform == "none");
       else if (textTransform == "uppercase") {
         text = text.toUpperCase();
       } else if (textTransform == "lowercase") {
@@ -20364,7 +23686,8 @@ var require_cytoscape_cjs = __commonJS({
             var subline = "";
             for (var w = 0; w < words.length; w++) {
               var word = words[w];
-              var testLine = subline.length === 0 ? word : subline + wordSeparator + word;
+              var testLine =
+                subline.length === 0 ? word : subline + wordSeparator + word;
               var testDims = this.calculateLabelDimensions(ele, testLine);
               var testW = testDims.width;
               if (testW <= maxW) {
@@ -20395,7 +23718,10 @@ var require_cytoscape_cjs = __commonJS({
           return text;
         }
         for (var i2 = 0; i2 < text.length; i2++) {
-          var widthWithNextCh = this.calculateLabelDimensions(ele, ellipsized + text[i2] + ellipsis).width;
+          var widthWithNextCh = this.calculateLabelDimensions(
+            ele,
+            ellipsized + text[i2] + ellipsis,
+          ).width;
           if (widthWithNextCh > _maxW) {
             break;
           }
@@ -20411,7 +23737,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return text;
     };
-    BRp$9.getLabelJustification = function(ele) {
+    BRp$9.getLabelJustification = function (ele) {
       var justification = ele.pstyle("text-justification").strValue;
       var textHalign = ele.pstyle("text-halign").strValue;
       if (justification === "auto") {
@@ -20431,7 +23757,7 @@ var require_cytoscape_cjs = __commonJS({
         return justification;
       }
     };
-    BRp$9.calculateLabelDimensions = function(ele, text) {
+    BRp$9.calculateLabelDimensions = function (ele, text) {
       var r = this;
       var cacheKey = hashString(text, ele._private.labelDimsKey);
       var cache2 = r.labelDimCache || (r.labelDimCache = []);
@@ -20457,7 +23783,11 @@ var require_cytoscape_cjs = __commonJS({
         ds.visibility = "hidden";
         ds.pointerEvents = "none";
       }
-      c2d.font = "".concat(fStyle, " ").concat(weight, " ").concat(size, "px ").concat(family);
+      c2d.font = ""
+        .concat(fStyle, " ")
+        .concat(weight, " ")
+        .concat(size, "px ")
+        .concat(family);
       var width = 0;
       var height = 0;
       var lines = text.split("\n");
@@ -20471,12 +23801,12 @@ var require_cytoscape_cjs = __commonJS({
       }
       width += padding;
       height += padding;
-      return cache2[cacheKey] = {
+      return (cache2[cacheKey] = {
         width,
-        height
-      };
+        height,
+      });
     };
-    BRp$9.calculateLabelAngle = function(ele, prefix) {
+    BRp$9.calculateLabelAngle = function (ele, prefix) {
       var _p = ele._private;
       var rs = _p.rscratch;
       var isEdge = ele.isEdge();
@@ -20493,7 +23823,7 @@ var require_cytoscape_cjs = __commonJS({
         return rot.pfValue;
       }
     };
-    BRp$9.calculateLabelAngles = function(ele) {
+    BRp$9.calculateLabelAngles = function (ele) {
       var r = this;
       var isEdge = ele.isEdge();
       var _p = ele._private;
@@ -20507,18 +23837,31 @@ var require_cytoscape_cjs = __commonJS({
     var BRp$8 = {};
     var TOO_SMALL_CUT_RECT = 28;
     var warnedCutRect = false;
-    BRp$8.getNodeShape = function(node) {
+    BRp$8.getNodeShape = function (node) {
       var r = this;
       var shape = node.pstyle("shape").value;
-      if (shape === "cutrectangle" && (node.width() < TOO_SMALL_CUT_RECT || node.height() < TOO_SMALL_CUT_RECT)) {
+      if (
+        shape === "cutrectangle" &&
+        (node.width() < TOO_SMALL_CUT_RECT ||
+          node.height() < TOO_SMALL_CUT_RECT)
+      ) {
         if (!warnedCutRect) {
-          warn("The `cutrectangle` node shape can not be used at small sizes so `rectangle` is used instead");
+          warn(
+            "The `cutrectangle` node shape can not be used at small sizes so `rectangle` is used instead",
+          );
           warnedCutRect = true;
         }
         return "rectangle";
       }
       if (node.isParent()) {
-        if (shape === "rectangle" || shape === "roundrectangle" || shape === "round-rectangle" || shape === "cutrectangle" || shape === "cut-rectangle" || shape === "barrel") {
+        if (
+          shape === "rectangle" ||
+          shape === "roundrectangle" ||
+          shape === "round-rectangle" ||
+          shape === "cutrectangle" ||
+          shape === "cut-rectangle" ||
+          shape === "barrel"
+        ) {
           return shape;
         } else {
           return "rectangle";
@@ -20531,12 +23874,13 @@ var require_cytoscape_cjs = __commonJS({
       return shape;
     };
     var BRp$7 = {};
-    BRp$7.registerCalculationListeners = function() {
+    BRp$7.registerCalculationListeners = function () {
       var cy = this.cy;
       var elesToUpdate = cy.collection();
       var r = this;
       var enqueue = function enqueue2(eles) {
-        var dirtyStyleCaches = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+        var dirtyStyleCaches =
+          arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
         elesToUpdate.merge(eles);
         if (dirtyStyleCaches) {
           for (var i2 = 0; i2 < eles.length; i2++) {
@@ -20548,13 +23892,15 @@ var require_cytoscape_cjs = __commonJS({
           }
         }
       };
-      r.binder(cy).on("bounds.* dirty.*", function onDirtyBounds(e) {
-        var ele = e.target;
-        enqueue(ele);
-      }).on("style.* background.*", function onDirtyStyle(e) {
-        var ele = e.target;
-        enqueue(ele, false);
-      });
+      r.binder(cy)
+        .on("bounds.* dirty.*", function onDirtyBounds(e) {
+          var ele = e.target;
+          enqueue(ele);
+        })
+        .on("style.* background.*", function onDirtyStyle(e) {
+          var ele = e.target;
+          enqueue(ele, false);
+        });
       var updateEleCalcs = function updateEleCalcs2(willDraw) {
         if (willDraw) {
           var fns = r.onUpdateEleCalcsFns;
@@ -20577,16 +23923,16 @@ var require_cytoscape_cjs = __commonJS({
           elesToUpdate = cy.collection();
         }
       };
-      r.flushRenderedStyleQueue = function() {
+      r.flushRenderedStyleQueue = function () {
         updateEleCalcs(true);
       };
       r.beforeRender(updateEleCalcs, r.beforeRenderPriorities.eleCalcs);
     };
-    BRp$7.onUpdateEleCalcs = function(fn2) {
-      var fns = this.onUpdateEleCalcsFns = this.onUpdateEleCalcsFns || [];
+    BRp$7.onUpdateEleCalcs = function (fn2) {
+      var fns = (this.onUpdateEleCalcsFns = this.onUpdateEleCalcsFns || []);
       fns.push(fn2);
     };
-    BRp$7.recalculateRenderedStyle = function(eles, useCache) {
+    BRp$7.recalculateRenderedStyle = function (eles, useCache) {
       var isCleanConnected = function isCleanConnected2(ele2) {
         return ele2._private.rstyle.cleanConnected;
       };
@@ -20602,10 +23948,13 @@ var require_cytoscape_cjs = __commonJS({
         var ele = eles[i2];
         var _p = ele._private;
         var rstyle = _p.rstyle;
-        if (ele.isEdge() && (!isCleanConnected(ele.source()) || !isCleanConnected(ele.target()))) {
+        if (
+          ele.isEdge() &&
+          (!isCleanConnected(ele.source()) || !isCleanConnected(ele.target()))
+        ) {
           rstyle.clean = false;
         }
-        if (useCache && rstyle.clean || ele.removed()) {
+        if ((useCache && rstyle.clean) || ele.removed()) {
           continue;
         }
         if (ele.pstyle("display").value === "none") {
@@ -20647,7 +23996,7 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var BRp$6 = {};
-    BRp$6.updateCachedGrabbedEles = function() {
+    BRp$6.updateCachedGrabbedEles = function () {
       var eles = this.cachedZSortedEles;
       if (!eles) {
         return;
@@ -20671,14 +24020,14 @@ var require_cytoscape_cjs = __commonJS({
         eles.drag.push(ele);
       }
     };
-    BRp$6.invalidateCachedZSortedEles = function() {
+    BRp$6.invalidateCachedZSortedEles = function () {
       this.cachedZSortedEles = null;
     };
-    BRp$6.getCachedZSortedEles = function(forceRecalc) {
+    BRp$6.getCachedZSortedEles = function (forceRecalc) {
       if (forceRecalc || !this.cachedZSortedEles) {
         var eles = this.cy.mutableElements().toArray();
         eles.sort(zIndexSort);
-        eles.interactive = eles.filter(function(ele) {
+        eles.interactive = eles.filter(function (ele) {
           return ele.interactive();
         });
         this.cachedZSortedEles = eles;
@@ -20689,13 +24038,15 @@ var require_cytoscape_cjs = __commonJS({
       return eles;
     };
     var BRp$5 = {};
-    [BRp$e, BRp$d, BRp$c, BRp$b, BRp$a, BRp$9, BRp$8, BRp$7, BRp$6].forEach(function(props) {
-      extend(BRp$5, props);
-    });
+    [BRp$e, BRp$d, BRp$c, BRp$b, BRp$a, BRp$9, BRp$8, BRp$7, BRp$6].forEach(
+      function (props) {
+        extend(BRp$5, props);
+      },
+    );
     var BRp$4 = {};
-    BRp$4.getCachedImage = function(url, crossOrigin, onLoad) {
+    BRp$4.getCachedImage = function (url, crossOrigin, onLoad) {
       var r = this;
-      var imageCache = r.imageCache = r.imageCache || {};
+      var imageCache = (r.imageCache = r.imageCache || {});
       var cache2 = imageCache[url];
       if (cache2) {
         if (!cache2.image.complete) {
@@ -20704,13 +24055,15 @@ var require_cytoscape_cjs = __commonJS({
         return cache2.image;
       } else {
         cache2 = imageCache[url] = imageCache[url] || {};
-        var image = cache2.image = new Image();
+        var image = (cache2.image = new Image());
         image.addEventListener("load", onLoad);
-        image.addEventListener("error", function() {
+        image.addEventListener("error", function () {
           image.error = true;
         });
         var dataUriPrefix = "data:";
-        var isDataUri = url.substring(0, dataUriPrefix.length).toLowerCase() === dataUriPrefix;
+        var isDataUri =
+          url.substring(0, dataUriPrefix.length).toLowerCase() ===
+          dataUriPrefix;
         if (!isDataUri) {
           crossOrigin = crossOrigin === "null" ? null : crossOrigin;
           image.crossOrigin = crossOrigin;
@@ -20720,15 +24073,19 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var BRp$3 = {};
-    BRp$3.registerBinding = function(target, event2, handler, useCapture) {
+    BRp$3.registerBinding = function (target, event2, handler, useCapture) {
       var args = Array.prototype.slice.apply(arguments, [1]);
       var b = this.binder(target);
       return b.on.apply(b, args);
     };
-    BRp$3.binder = function(tgt) {
+    BRp$3.binder = function (tgt) {
       var r = this;
       var containerWindow = r.cy.window();
-      var tgtIsDom = tgt === containerWindow || tgt === containerWindow.document || tgt === containerWindow.document.body || domElement(tgt);
+      var tgtIsDom =
+        tgt === containerWindow ||
+        tgt === containerWindow.document ||
+        tgt === containerWindow.document.body ||
+        domElement(tgt);
       if (r.supportsPassiveEvents == null) {
         var supportsPassive = false;
         try {
@@ -20736,11 +24093,10 @@ var require_cytoscape_cjs = __commonJS({
             get: function get2() {
               supportsPassive = true;
               return true;
-            }
+            },
           });
           containerWindow.addEventListener("test", null, opts);
-        } catch (err) {
-        }
+        } catch (err) {}
         r.supportsPassiveEvents = supportsPassive;
       }
       var on = function on2(event2, handler, useCapture) {
@@ -20749,12 +24105,12 @@ var require_cytoscape_cjs = __commonJS({
           args[2] = {
             capture: useCapture != null ? useCapture : false,
             passive: false,
-            once: false
+            once: false,
           };
         }
         r.bindings.push({
           target: tgt,
-          args
+          args,
         });
         (tgt.addEventListener || tgt.on).apply(tgt, args);
         return this;
@@ -20763,16 +24119,16 @@ var require_cytoscape_cjs = __commonJS({
         on,
         addEventListener: on,
         addListener: on,
-        bind: on
+        bind: on,
       };
     };
-    BRp$3.nodeIsDraggable = function(node) {
+    BRp$3.nodeIsDraggable = function (node) {
       return node && node.isNode() && !node.locked() && node.grabbable();
     };
-    BRp$3.nodeIsGrabbable = function(node) {
+    BRp$3.nodeIsGrabbable = function (node) {
       return this.nodeIsDraggable(node) && node.interactive();
     };
-    BRp$3.load = function() {
+    BRp$3.load = function () {
       var r = this;
       var containerWindow = r.cy.window();
       var isSelected = function isSelected2(ele) {
@@ -20787,14 +24143,17 @@ var require_cytoscape_cjs = __commonJS({
           target.emit({
             originalEvent: e,
             type: name,
-            position: position2
+            position: position2,
           });
         }
       };
       var isMultSelKeyDown = function isMultSelKeyDown2(e) {
         return e.shiftKey || e.metaKey || e.ctrlKey;
       };
-      var allowPanningPassthrough = function allowPanningPassthrough2(down, downs) {
+      var allowPanningPassthrough = function allowPanningPassthrough2(
+        down,
+        downs,
+      ) {
         var allowPassthrough = true;
         if (r.cy.hasCompoundNodes() && down && down.pannable()) {
           for (var i2 = 0; downs && i2 < downs.length; i2++) {
@@ -20856,18 +24215,21 @@ var require_cytoscape_cjs = __commonJS({
         var hasCompoundNodes = nodes.cy().hasCompoundNodes();
         if (opts.inDragLayer) {
           nodes.forEach(setInDragLayer);
-          nodes.neighborhood().stdFilter(function(ele) {
-            return !hasCompoundNodes || ele.isEdge();
-          }).forEach(setInDragLayer);
+          nodes
+            .neighborhood()
+            .stdFilter(function (ele) {
+              return !hasCompoundNodes || ele.isEdge();
+            })
+            .forEach(setInDragLayer);
         }
         if (opts.addToList) {
-          nodes.forEach(function(ele) {
+          nodes.forEach(function (ele) {
             addToDragList(ele, opts);
           });
         }
         addDescendantsToDrag(nodes, opts);
         updateAncestorsInDragLayer(nodes, {
-          inDragLayer: opts.inDragLayer
+          inDragLayer: opts.inDragLayer,
         });
         r.updateCachedGrabbedEles();
       };
@@ -20876,14 +24238,17 @@ var require_cytoscape_cjs = __commonJS({
         if (!grabbedEles) {
           return;
         }
-        r.getCachedZSortedEles().forEach(function(ele) {
+        r.getCachedZSortedEles().forEach(function (ele) {
           setFreed(ele);
           setOutDragLayer(ele);
           removeGrabTarget(ele);
         });
         r.updateCachedGrabbedEles();
       };
-      var updateAncestorsInDragLayer = function updateAncestorsInDragLayer2(node, opts) {
+      var updateAncestorsInDragLayer = function updateAncestorsInDragLayer2(
+        node,
+        opts,
+      ) {
         if (opts.inDragLayer == null && opts.addToList == null) {
           return;
         }
@@ -20894,27 +24259,35 @@ var require_cytoscape_cjs = __commonJS({
         if (parent.same(node)) {
           return;
         }
-        var nodes = parent.descendants().spawnSelf().merge(parent).unmerge(node).unmerge(node.descendants());
+        var nodes = parent
+          .descendants()
+          .spawnSelf()
+          .merge(parent)
+          .unmerge(node)
+          .unmerge(node.descendants());
         var edges = nodes.connectedEdges();
         if (opts.inDragLayer) {
           edges.forEach(setInDragLayer);
           nodes.forEach(setInDragLayer);
         }
         if (opts.addToList) {
-          nodes.forEach(function(ele) {
+          nodes.forEach(function (ele) {
             addToDragList(ele, opts);
           });
         }
       };
       var blurActiveDomElement = function blurActiveDomElement2() {
-        if (document.activeElement != null && document.activeElement.blur != null) {
+        if (
+          document.activeElement != null &&
+          document.activeElement.blur != null
+        ) {
           document.activeElement.blur();
         }
       };
       var haveMutationsApi = typeof MutationObserver !== "undefined";
       var haveResizeObserverApi = typeof ResizeObserver !== "undefined";
       if (haveMutationsApi) {
-        r.removeObserver = new MutationObserver(function(mutns) {
+        r.removeObserver = new MutationObserver(function (mutns) {
           for (var i2 = 0; i2 < mutns.length; i2++) {
             var mutn = mutns[i2];
             var rNodes = mutn.removedNodes;
@@ -20931,21 +24304,21 @@ var require_cytoscape_cjs = __commonJS({
         });
         if (r.container.parentNode) {
           r.removeObserver.observe(r.container.parentNode, {
-            childList: true
+            childList: true,
           });
         }
       } else {
-        r.registerBinding(r.container, "DOMNodeRemoved", function(e) {
+        r.registerBinding(r.container, "DOMNodeRemoved", function (e) {
           r.destroy();
         });
       }
-      var onResize = debounce__default["default"](function() {
+      var onResize = debounce__default["default"](function () {
         r.cy.resize();
       }, 100);
       if (haveMutationsApi) {
         r.styleObserver = new MutationObserver(onResize);
         r.styleObserver.observe(r.container, {
-          attributes: true
+          attributes: true,
         });
       }
       r.registerBinding(containerWindow, "resize", onResize);
@@ -20962,12 +24335,12 @@ var require_cytoscape_cjs = __commonJS({
       var invalidateCoords = function invalidateCoords2() {
         r.invalidateContainerClientCoordsCache();
       };
-      forEachUp(r.container, function(domEle) {
+      forEachUp(r.container, function (domEle) {
         r.registerBinding(domEle, "transitionend", invalidateCoords);
         r.registerBinding(domEle, "animationend", invalidateCoords);
         r.registerBinding(domEle, "scroll", invalidateCoords);
       });
-      r.registerBinding(r.container, "contextmenu", function(e) {
+      r.registerBinding(r.container, "contextmenu", function (e) {
         e.preventDefault();
       });
       var inBoxSelection = function inBoxSelection2() {
@@ -20983,7 +24356,12 @@ var require_cytoscape_cjs = __commonJS({
         var atLeastOnePosInside = false;
         for (var i2 = 0; i2 < positions.length; i2++) {
           var p2 = positions[i2];
-          if (x <= p2.clientX && p2.clientX <= x + width && y <= p2.clientY && p2.clientY <= y + height) {
+          if (
+            x <= p2.clientX &&
+            p2.clientX <= x + width &&
+            y <= p2.clientY &&
+            p2.clientY <= y + height
+          ) {
             atLeastOnePosInside = true;
             break;
           }
@@ -21007,538 +24385,598 @@ var require_cytoscape_cjs = __commonJS({
         }
         return true;
       };
-      r.registerBinding(r.container, "mousedown", function mousedownHandler(e) {
-        if (!eventInContainer(e)) {
-          return;
-        }
-        e.preventDefault();
-        blurActiveDomElement();
-        r.hoverData.capture = true;
-        r.hoverData.which = e.which;
-        var cy = r.cy;
-        var gpos = [e.clientX, e.clientY];
-        var pos = r.projectIntoViewport(gpos[0], gpos[1]);
-        var select = r.selection;
-        var nears = r.findNearestElements(pos[0], pos[1], true, false);
-        var near = nears[0];
-        var draggedElements = r.dragData.possibleDragElements;
-        r.hoverData.mdownPos = pos;
-        r.hoverData.mdownGPos = gpos;
-        var checkForTaphold = function checkForTaphold2() {
-          r.hoverData.tapholdCancelled = false;
-          clearTimeout(r.hoverData.tapholdTimeout);
-          r.hoverData.tapholdTimeout = setTimeout(function() {
-            if (r.hoverData.tapholdCancelled) {
-              return;
-            } else {
-              var ele = r.hoverData.down;
-              if (ele) {
-                ele.emit({
-                  originalEvent: e,
-                  type: "taphold",
-                  position: {
-                    x: pos[0],
-                    y: pos[1]
-                  }
-                });
+      r.registerBinding(
+        r.container,
+        "mousedown",
+        function mousedownHandler(e) {
+          if (!eventInContainer(e)) {
+            return;
+          }
+          e.preventDefault();
+          blurActiveDomElement();
+          r.hoverData.capture = true;
+          r.hoverData.which = e.which;
+          var cy = r.cy;
+          var gpos = [e.clientX, e.clientY];
+          var pos = r.projectIntoViewport(gpos[0], gpos[1]);
+          var select = r.selection;
+          var nears = r.findNearestElements(pos[0], pos[1], true, false);
+          var near = nears[0];
+          var draggedElements = r.dragData.possibleDragElements;
+          r.hoverData.mdownPos = pos;
+          r.hoverData.mdownGPos = gpos;
+          var checkForTaphold = function checkForTaphold2() {
+            r.hoverData.tapholdCancelled = false;
+            clearTimeout(r.hoverData.tapholdTimeout);
+            r.hoverData.tapholdTimeout = setTimeout(function () {
+              if (r.hoverData.tapholdCancelled) {
+                return;
               } else {
-                cy.emit({
-                  originalEvent: e,
-                  type: "taphold",
-                  position: {
-                    x: pos[0],
-                    y: pos[1]
-                  }
-                });
-              }
-            }
-          }, r.tapholdDuration);
-        };
-        if (e.which == 3) {
-          r.hoverData.cxtStarted = true;
-          var cxtEvt = {
-            originalEvent: e,
-            type: "cxttapstart",
-            position: {
-              x: pos[0],
-              y: pos[1]
-            }
-          };
-          if (near) {
-            near.activate();
-            near.emit(cxtEvt);
-            r.hoverData.down = near;
-          } else {
-            cy.emit(cxtEvt);
-          }
-          r.hoverData.downTime = (/* @__PURE__ */ new Date()).getTime();
-          r.hoverData.cxtDragged = false;
-        } else if (e.which == 1) {
-          if (near) {
-            near.activate();
-          }
-          {
-            if (near != null) {
-              if (r.nodeIsGrabbable(near)) {
-                var makeEvent = function makeEvent2(type) {
-                  return {
+                var ele = r.hoverData.down;
+                if (ele) {
+                  ele.emit({
                     originalEvent: e,
-                    type,
+                    type: "taphold",
                     position: {
                       x: pos[0],
-                      y: pos[1]
-                    }
-                  };
-                };
-                var triggerGrab = function triggerGrab2(ele) {
-                  ele.emit(makeEvent("grab"));
-                };
-                setGrabTarget(near);
-                if (!near.selected()) {
-                  draggedElements = r.dragData.possibleDragElements = cy.collection();
-                  addNodeToDrag(near, {
-                    addToList: draggedElements
+                      y: pos[1],
+                    },
                   });
-                  near.emit(makeEvent("grabon")).emit(makeEvent("grab"));
                 } else {
-                  draggedElements = r.dragData.possibleDragElements = cy.collection();
-                  var selectedNodes = cy.$(function(ele) {
-                    return ele.isNode() && ele.selected() && r.nodeIsGrabbable(ele);
+                  cy.emit({
+                    originalEvent: e,
+                    type: "taphold",
+                    position: {
+                      x: pos[0],
+                      y: pos[1],
+                    },
                   });
-                  addNodesToDrag(selectedNodes, {
-                    addToList: draggedElements
-                  });
-                  near.emit(makeEvent("grabon"));
-                  selectedNodes.forEach(triggerGrab);
                 }
-                r.redrawHint("eles", true);
-                r.redrawHint("drag", true);
               }
-            }
-            r.hoverData.down = near;
-            r.hoverData.downs = nears;
-            r.hoverData.downTime = (/* @__PURE__ */ new Date()).getTime();
-          }
-          triggerEvents(near, ["mousedown", "tapstart", "vmousedown"], e, {
-            x: pos[0],
-            y: pos[1]
-          });
-          if (near == null) {
-            select[4] = 1;
-            r.data.bgActivePosistion = {
-              x: pos[0],
-              y: pos[1]
-            };
-            r.redrawHint("select", true);
-            r.redraw();
-          } else if (near.pannable()) {
-            select[4] = 1;
-          }
-          checkForTaphold();
-        }
-        select[0] = select[2] = pos[0];
-        select[1] = select[3] = pos[1];
-      }, false);
-      r.registerBinding(containerWindow, "mousemove", function mousemoveHandler(e) {
-        var capture = r.hoverData.capture;
-        if (!capture && !eventInContainer(e)) {
-          return;
-        }
-        var preventDefault = false;
-        var cy = r.cy;
-        var zoom = cy.zoom();
-        var gpos = [e.clientX, e.clientY];
-        var pos = r.projectIntoViewport(gpos[0], gpos[1]);
-        var mdownPos = r.hoverData.mdownPos;
-        var mdownGPos = r.hoverData.mdownGPos;
-        var select = r.selection;
-        var near = null;
-        if (!r.hoverData.draggingEles && !r.hoverData.dragging && !r.hoverData.selecting) {
-          near = r.findNearestElement(pos[0], pos[1], true, false);
-        }
-        var last = r.hoverData.last;
-        var down = r.hoverData.down;
-        var disp = [pos[0] - select[2], pos[1] - select[3]];
-        var draggedElements = r.dragData.possibleDragElements;
-        var isOverThresholdDrag;
-        if (mdownGPos) {
-          var dx = gpos[0] - mdownGPos[0];
-          var dx2 = dx * dx;
-          var dy = gpos[1] - mdownGPos[1];
-          var dy2 = dy * dy;
-          var dist2 = dx2 + dy2;
-          r.hoverData.isOverThresholdDrag = isOverThresholdDrag = dist2 >= r.desktopTapThreshold2;
-        }
-        var multSelKeyDown = isMultSelKeyDown(e);
-        if (isOverThresholdDrag) {
-          r.hoverData.tapholdCancelled = true;
-        }
-        var updateDragDelta = function updateDragDelta2() {
-          var dragDelta2 = r.hoverData.dragDelta = r.hoverData.dragDelta || [];
-          if (dragDelta2.length === 0) {
-            dragDelta2.push(disp[0]);
-            dragDelta2.push(disp[1]);
-          } else {
-            dragDelta2[0] += disp[0];
-            dragDelta2[1] += disp[1];
-          }
-        };
-        preventDefault = true;
-        triggerEvents(near, ["mousemove", "vmousemove", "tapdrag"], e, {
-          x: pos[0],
-          y: pos[1]
-        });
-        var goIntoBoxMode = function goIntoBoxMode2() {
-          r.data.bgActivePosistion = void 0;
-          if (!r.hoverData.selecting) {
-            cy.emit({
-              originalEvent: e,
-              type: "boxstart",
-              position: {
-                x: pos[0],
-                y: pos[1]
-              }
-            });
-          }
-          select[4] = 1;
-          r.hoverData.selecting = true;
-          r.redrawHint("select", true);
-          r.redraw();
-        };
-        if (r.hoverData.which === 3) {
-          if (isOverThresholdDrag) {
+            }, r.tapholdDuration);
+          };
+          if (e.which == 3) {
+            r.hoverData.cxtStarted = true;
             var cxtEvt = {
               originalEvent: e,
-              type: "cxtdrag",
+              type: "cxttapstart",
               position: {
                 x: pos[0],
-                y: pos[1]
+                y: pos[1],
+              },
+            };
+            if (near) {
+              near.activate();
+              near.emit(cxtEvt);
+              r.hoverData.down = near;
+            } else {
+              cy.emit(cxtEvt);
+            }
+            r.hoverData.downTime = /* @__PURE__ */ new Date().getTime();
+            r.hoverData.cxtDragged = false;
+          } else if (e.which == 1) {
+            if (near) {
+              near.activate();
+            }
+            {
+              if (near != null) {
+                if (r.nodeIsGrabbable(near)) {
+                  var makeEvent = function makeEvent2(type) {
+                    return {
+                      originalEvent: e,
+                      type,
+                      position: {
+                        x: pos[0],
+                        y: pos[1],
+                      },
+                    };
+                  };
+                  var triggerGrab = function triggerGrab2(ele) {
+                    ele.emit(makeEvent("grab"));
+                  };
+                  setGrabTarget(near);
+                  if (!near.selected()) {
+                    draggedElements = r.dragData.possibleDragElements =
+                      cy.collection();
+                    addNodeToDrag(near, {
+                      addToList: draggedElements,
+                    });
+                    near.emit(makeEvent("grabon")).emit(makeEvent("grab"));
+                  } else {
+                    draggedElements = r.dragData.possibleDragElements =
+                      cy.collection();
+                    var selectedNodes = cy.$(function (ele) {
+                      return (
+                        ele.isNode() && ele.selected() && r.nodeIsGrabbable(ele)
+                      );
+                    });
+                    addNodesToDrag(selectedNodes, {
+                      addToList: draggedElements,
+                    });
+                    near.emit(makeEvent("grabon"));
+                    selectedNodes.forEach(triggerGrab);
+                  }
+                  r.redrawHint("eles", true);
+                  r.redrawHint("drag", true);
+                }
               }
+              r.hoverData.down = near;
+              r.hoverData.downs = nears;
+              r.hoverData.downTime = /* @__PURE__ */ new Date().getTime();
+            }
+            triggerEvents(near, ["mousedown", "tapstart", "vmousedown"], e, {
+              x: pos[0],
+              y: pos[1],
+            });
+            if (near == null) {
+              select[4] = 1;
+              r.data.bgActivePosistion = {
+                x: pos[0],
+                y: pos[1],
+              };
+              r.redrawHint("select", true);
+              r.redraw();
+            } else if (near.pannable()) {
+              select[4] = 1;
+            }
+            checkForTaphold();
+          }
+          select[0] = select[2] = pos[0];
+          select[1] = select[3] = pos[1];
+        },
+        false,
+      );
+      r.registerBinding(
+        containerWindow,
+        "mousemove",
+        function mousemoveHandler(e) {
+          var capture = r.hoverData.capture;
+          if (!capture && !eventInContainer(e)) {
+            return;
+          }
+          var preventDefault = false;
+          var cy = r.cy;
+          var zoom = cy.zoom();
+          var gpos = [e.clientX, e.clientY];
+          var pos = r.projectIntoViewport(gpos[0], gpos[1]);
+          var mdownPos = r.hoverData.mdownPos;
+          var mdownGPos = r.hoverData.mdownGPos;
+          var select = r.selection;
+          var near = null;
+          if (
+            !r.hoverData.draggingEles &&
+            !r.hoverData.dragging &&
+            !r.hoverData.selecting
+          ) {
+            near = r.findNearestElement(pos[0], pos[1], true, false);
+          }
+          var last = r.hoverData.last;
+          var down = r.hoverData.down;
+          var disp = [pos[0] - select[2], pos[1] - select[3]];
+          var draggedElements = r.dragData.possibleDragElements;
+          var isOverThresholdDrag;
+          if (mdownGPos) {
+            var dx = gpos[0] - mdownGPos[0];
+            var dx2 = dx * dx;
+            var dy = gpos[1] - mdownGPos[1];
+            var dy2 = dy * dy;
+            var dist2 = dx2 + dy2;
+            r.hoverData.isOverThresholdDrag = isOverThresholdDrag =
+              dist2 >= r.desktopTapThreshold2;
+          }
+          var multSelKeyDown = isMultSelKeyDown(e);
+          if (isOverThresholdDrag) {
+            r.hoverData.tapholdCancelled = true;
+          }
+          var updateDragDelta = function updateDragDelta2() {
+            var dragDelta2 = (r.hoverData.dragDelta =
+              r.hoverData.dragDelta || []);
+            if (dragDelta2.length === 0) {
+              dragDelta2.push(disp[0]);
+              dragDelta2.push(disp[1]);
+            } else {
+              dragDelta2[0] += disp[0];
+              dragDelta2[1] += disp[1];
+            }
+          };
+          preventDefault = true;
+          triggerEvents(near, ["mousemove", "vmousemove", "tapdrag"], e, {
+            x: pos[0],
+            y: pos[1],
+          });
+          var goIntoBoxMode = function goIntoBoxMode2() {
+            r.data.bgActivePosistion = void 0;
+            if (!r.hoverData.selecting) {
+              cy.emit({
+                originalEvent: e,
+                type: "boxstart",
+                position: {
+                  x: pos[0],
+                  y: pos[1],
+                },
+              });
+            }
+            select[4] = 1;
+            r.hoverData.selecting = true;
+            r.redrawHint("select", true);
+            r.redraw();
+          };
+          if (r.hoverData.which === 3) {
+            if (isOverThresholdDrag) {
+              var cxtEvt = {
+                originalEvent: e,
+                type: "cxtdrag",
+                position: {
+                  x: pos[0],
+                  y: pos[1],
+                },
+              };
+              if (down) {
+                down.emit(cxtEvt);
+              } else {
+                cy.emit(cxtEvt);
+              }
+              r.hoverData.cxtDragged = true;
+              if (!r.hoverData.cxtOver || near !== r.hoverData.cxtOver) {
+                if (r.hoverData.cxtOver) {
+                  r.hoverData.cxtOver.emit({
+                    originalEvent: e,
+                    type: "cxtdragout",
+                    position: {
+                      x: pos[0],
+                      y: pos[1],
+                    },
+                  });
+                }
+                r.hoverData.cxtOver = near;
+                if (near) {
+                  near.emit({
+                    originalEvent: e,
+                    type: "cxtdragover",
+                    position: {
+                      x: pos[0],
+                      y: pos[1],
+                    },
+                  });
+                }
+              }
+            }
+          } else if (r.hoverData.dragging) {
+            preventDefault = true;
+            if (cy.panningEnabled() && cy.userPanningEnabled()) {
+              var deltaP;
+              if (r.hoverData.justStartedPan) {
+                var mdPos = r.hoverData.mdownPos;
+                deltaP = {
+                  x: (pos[0] - mdPos[0]) * zoom,
+                  y: (pos[1] - mdPos[1]) * zoom,
+                };
+                r.hoverData.justStartedPan = false;
+              } else {
+                deltaP = {
+                  x: disp[0] * zoom,
+                  y: disp[1] * zoom,
+                };
+              }
+              cy.panBy(deltaP);
+              cy.emit("dragpan");
+              r.hoverData.dragged = true;
+            }
+            pos = r.projectIntoViewport(e.clientX, e.clientY);
+          } else if (select[4] == 1 && (down == null || down.pannable())) {
+            if (isOverThresholdDrag) {
+              if (
+                !r.hoverData.dragging &&
+                cy.boxSelectionEnabled() &&
+                (multSelKeyDown ||
+                  !cy.panningEnabled() ||
+                  !cy.userPanningEnabled())
+              ) {
+                goIntoBoxMode();
+              } else if (
+                !r.hoverData.selecting &&
+                cy.panningEnabled() &&
+                cy.userPanningEnabled()
+              ) {
+                var allowPassthrough = allowPanningPassthrough(
+                  down,
+                  r.hoverData.downs,
+                );
+                if (allowPassthrough) {
+                  r.hoverData.dragging = true;
+                  r.hoverData.justStartedPan = true;
+                  select[4] = 0;
+                  r.data.bgActivePosistion = array2point(mdownPos);
+                  r.redrawHint("select", true);
+                  r.redraw();
+                }
+              }
+              if (down && down.pannable() && down.active()) {
+                down.unactivate();
+              }
+            }
+          } else {
+            if (down && down.pannable() && down.active()) {
+              down.unactivate();
+            }
+            if ((!down || !down.grabbed()) && near != last) {
+              if (last) {
+                triggerEvents(last, ["mouseout", "tapdragout"], e, {
+                  x: pos[0],
+                  y: pos[1],
+                });
+              }
+              if (near) {
+                triggerEvents(near, ["mouseover", "tapdragover"], e, {
+                  x: pos[0],
+                  y: pos[1],
+                });
+              }
+              r.hoverData.last = near;
+            }
+            if (down) {
+              if (isOverThresholdDrag) {
+                if (cy.boxSelectionEnabled() && multSelKeyDown) {
+                  if (down && down.grabbed()) {
+                    freeDraggedElements(draggedElements);
+                    down.emit("freeon");
+                    draggedElements.emit("free");
+                    if (r.dragData.didDrag) {
+                      down.emit("dragfreeon");
+                      draggedElements.emit("dragfree");
+                    }
+                  }
+                  goIntoBoxMode();
+                } else if (down && down.grabbed() && r.nodeIsDraggable(down)) {
+                  var justStartedDrag = !r.dragData.didDrag;
+                  if (justStartedDrag) {
+                    r.redrawHint("eles", true);
+                  }
+                  r.dragData.didDrag = true;
+                  if (!r.hoverData.draggingEles) {
+                    addNodesToDrag(draggedElements, {
+                      inDragLayer: true,
+                    });
+                  }
+                  var totalShift = {
+                    x: 0,
+                    y: 0,
+                  };
+                  if (number$1(disp[0]) && number$1(disp[1])) {
+                    totalShift.x += disp[0];
+                    totalShift.y += disp[1];
+                    if (justStartedDrag) {
+                      var dragDelta = r.hoverData.dragDelta;
+                      if (
+                        dragDelta &&
+                        number$1(dragDelta[0]) &&
+                        number$1(dragDelta[1])
+                      ) {
+                        totalShift.x += dragDelta[0];
+                        totalShift.y += dragDelta[1];
+                      }
+                    }
+                  }
+                  r.hoverData.draggingEles = true;
+                  draggedElements.silentShift(totalShift).emit("position drag");
+                  r.redrawHint("drag", true);
+                  r.redraw();
+                }
+              } else {
+                updateDragDelta();
+              }
+            }
+            preventDefault = true;
+          }
+          select[2] = pos[0];
+          select[3] = pos[1];
+          if (preventDefault) {
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.preventDefault) e.preventDefault();
+            return false;
+          }
+        },
+        false,
+      );
+      var clickTimeout, didDoubleClick, prevClickTimeStamp;
+      r.registerBinding(
+        containerWindow,
+        "mouseup",
+        function mouseupHandler(e) {
+          var capture = r.hoverData.capture;
+          if (!capture) {
+            return;
+          }
+          r.hoverData.capture = false;
+          var cy = r.cy;
+          var pos = r.projectIntoViewport(e.clientX, e.clientY);
+          var select = r.selection;
+          var near = r.findNearestElement(pos[0], pos[1], true, false);
+          var draggedElements = r.dragData.possibleDragElements;
+          var down = r.hoverData.down;
+          var multSelKeyDown = isMultSelKeyDown(e);
+          if (r.data.bgActivePosistion) {
+            r.redrawHint("select", true);
+            r.redraw();
+          }
+          r.hoverData.tapholdCancelled = true;
+          r.data.bgActivePosistion = void 0;
+          if (down) {
+            down.unactivate();
+          }
+          if (r.hoverData.which === 3) {
+            var cxtEvt = {
+              originalEvent: e,
+              type: "cxttapend",
+              position: {
+                x: pos[0],
+                y: pos[1],
+              },
             };
             if (down) {
               down.emit(cxtEvt);
             } else {
               cy.emit(cxtEvt);
             }
-            r.hoverData.cxtDragged = true;
-            if (!r.hoverData.cxtOver || near !== r.hoverData.cxtOver) {
-              if (r.hoverData.cxtOver) {
-                r.hoverData.cxtOver.emit({
-                  originalEvent: e,
-                  type: "cxtdragout",
-                  position: {
-                    x: pos[0],
-                    y: pos[1]
-                  }
-                });
-              }
-              r.hoverData.cxtOver = near;
-              if (near) {
-                near.emit({
-                  originalEvent: e,
-                  type: "cxtdragover",
-                  position: {
-                    x: pos[0],
-                    y: pos[1]
-                  }
-                });
-              }
-            }
-          }
-        } else if (r.hoverData.dragging) {
-          preventDefault = true;
-          if (cy.panningEnabled() && cy.userPanningEnabled()) {
-            var deltaP;
-            if (r.hoverData.justStartedPan) {
-              var mdPos = r.hoverData.mdownPos;
-              deltaP = {
-                x: (pos[0] - mdPos[0]) * zoom,
-                y: (pos[1] - mdPos[1]) * zoom
-              };
-              r.hoverData.justStartedPan = false;
-            } else {
-              deltaP = {
-                x: disp[0] * zoom,
-                y: disp[1] * zoom
-              };
-            }
-            cy.panBy(deltaP);
-            cy.emit("dragpan");
-            r.hoverData.dragged = true;
-          }
-          pos = r.projectIntoViewport(e.clientX, e.clientY);
-        } else if (select[4] == 1 && (down == null || down.pannable())) {
-          if (isOverThresholdDrag) {
-            if (!r.hoverData.dragging && cy.boxSelectionEnabled() && (multSelKeyDown || !cy.panningEnabled() || !cy.userPanningEnabled())) {
-              goIntoBoxMode();
-            } else if (!r.hoverData.selecting && cy.panningEnabled() && cy.userPanningEnabled()) {
-              var allowPassthrough = allowPanningPassthrough(down, r.hoverData.downs);
-              if (allowPassthrough) {
-                r.hoverData.dragging = true;
-                r.hoverData.justStartedPan = true;
-                select[4] = 0;
-                r.data.bgActivePosistion = array2point(mdownPos);
-                r.redrawHint("select", true);
-                r.redraw();
-              }
-            }
-            if (down && down.pannable() && down.active()) {
-              down.unactivate();
-            }
-          }
-        } else {
-          if (down && down.pannable() && down.active()) {
-            down.unactivate();
-          }
-          if ((!down || !down.grabbed()) && near != last) {
-            if (last) {
-              triggerEvents(last, ["mouseout", "tapdragout"], e, {
-                x: pos[0],
-                y: pos[1]
-              });
-            }
-            if (near) {
-              triggerEvents(near, ["mouseover", "tapdragover"], e, {
-                x: pos[0],
-                y: pos[1]
-              });
-            }
-            r.hoverData.last = near;
-          }
-          if (down) {
-            if (isOverThresholdDrag) {
-              if (cy.boxSelectionEnabled() && multSelKeyDown) {
-                if (down && down.grabbed()) {
-                  freeDraggedElements(draggedElements);
-                  down.emit("freeon");
-                  draggedElements.emit("free");
-                  if (r.dragData.didDrag) {
-                    down.emit("dragfreeon");
-                    draggedElements.emit("dragfree");
-                  }
-                }
-                goIntoBoxMode();
-              } else if (down && down.grabbed() && r.nodeIsDraggable(down)) {
-                var justStartedDrag = !r.dragData.didDrag;
-                if (justStartedDrag) {
-                  r.redrawHint("eles", true);
-                }
-                r.dragData.didDrag = true;
-                if (!r.hoverData.draggingEles) {
-                  addNodesToDrag(draggedElements, {
-                    inDragLayer: true
-                  });
-                }
-                var totalShift = {
-                  x: 0,
-                  y: 0
-                };
-                if (number$1(disp[0]) && number$1(disp[1])) {
-                  totalShift.x += disp[0];
-                  totalShift.y += disp[1];
-                  if (justStartedDrag) {
-                    var dragDelta = r.hoverData.dragDelta;
-                    if (dragDelta && number$1(dragDelta[0]) && number$1(dragDelta[1])) {
-                      totalShift.x += dragDelta[0];
-                      totalShift.y += dragDelta[1];
-                    }
-                  }
-                }
-                r.hoverData.draggingEles = true;
-                draggedElements.silentShift(totalShift).emit("position drag");
-                r.redrawHint("drag", true);
-                r.redraw();
-              }
-            } else {
-              updateDragDelta();
-            }
-          }
-          preventDefault = true;
-        }
-        select[2] = pos[0];
-        select[3] = pos[1];
-        if (preventDefault) {
-          if (e.stopPropagation)
-            e.stopPropagation();
-          if (e.preventDefault)
-            e.preventDefault();
-          return false;
-        }
-      }, false);
-      var clickTimeout, didDoubleClick, prevClickTimeStamp;
-      r.registerBinding(containerWindow, "mouseup", function mouseupHandler(e) {
-        var capture = r.hoverData.capture;
-        if (!capture) {
-          return;
-        }
-        r.hoverData.capture = false;
-        var cy = r.cy;
-        var pos = r.projectIntoViewport(e.clientX, e.clientY);
-        var select = r.selection;
-        var near = r.findNearestElement(pos[0], pos[1], true, false);
-        var draggedElements = r.dragData.possibleDragElements;
-        var down = r.hoverData.down;
-        var multSelKeyDown = isMultSelKeyDown(e);
-        if (r.data.bgActivePosistion) {
-          r.redrawHint("select", true);
-          r.redraw();
-        }
-        r.hoverData.tapholdCancelled = true;
-        r.data.bgActivePosistion = void 0;
-        if (down) {
-          down.unactivate();
-        }
-        if (r.hoverData.which === 3) {
-          var cxtEvt = {
-            originalEvent: e,
-            type: "cxttapend",
-            position: {
-              x: pos[0],
-              y: pos[1]
-            }
-          };
-          if (down) {
-            down.emit(cxtEvt);
-          } else {
-            cy.emit(cxtEvt);
-          }
-          if (!r.hoverData.cxtDragged) {
-            var cxtTap = {
-              originalEvent: e,
-              type: "cxttap",
-              position: {
-                x: pos[0],
-                y: pos[1]
-              }
-            };
-            if (down) {
-              down.emit(cxtTap);
-            } else {
-              cy.emit(cxtTap);
-            }
-          }
-          r.hoverData.cxtDragged = false;
-          r.hoverData.which = null;
-        } else if (r.hoverData.which === 1) {
-          triggerEvents(near, ["mouseup", "tapend", "vmouseup"], e, {
-            x: pos[0],
-            y: pos[1]
-          });
-          if (!r.dragData.didDrag && // didn't move a node around
-          !r.hoverData.dragged && // didn't pan
-          !r.hoverData.selecting && // not box selection
-          !r.hoverData.isOverThresholdDrag) {
-            triggerEvents(down, ["click", "tap", "vclick"], e, {
-              x: pos[0],
-              y: pos[1]
-            });
-            didDoubleClick = false;
-            if (e.timeStamp - prevClickTimeStamp <= cy.multiClickDebounceTime()) {
-              clickTimeout && clearTimeout(clickTimeout);
-              didDoubleClick = true;
-              prevClickTimeStamp = null;
-              triggerEvents(down, ["dblclick", "dbltap", "vdblclick"], e, {
-                x: pos[0],
-                y: pos[1]
-              });
-            } else {
-              clickTimeout = setTimeout(function() {
-                if (didDoubleClick)
-                  return;
-                triggerEvents(down, ["oneclick", "onetap", "voneclick"], e, {
+            if (!r.hoverData.cxtDragged) {
+              var cxtTap = {
+                originalEvent: e,
+                type: "cxttap",
+                position: {
                   x: pos[0],
-                  y: pos[1]
+                  y: pos[1],
+                },
+              };
+              if (down) {
+                down.emit(cxtTap);
+              } else {
+                cy.emit(cxtTap);
+              }
+            }
+            r.hoverData.cxtDragged = false;
+            r.hoverData.which = null;
+          } else if (r.hoverData.which === 1) {
+            triggerEvents(near, ["mouseup", "tapend", "vmouseup"], e, {
+              x: pos[0],
+              y: pos[1],
+            });
+            if (
+              !r.dragData.didDrag && // didn't move a node around
+              !r.hoverData.dragged && // didn't pan
+              !r.hoverData.selecting && // not box selection
+              !r.hoverData.isOverThresholdDrag
+            ) {
+              triggerEvents(down, ["click", "tap", "vclick"], e, {
+                x: pos[0],
+                y: pos[1],
+              });
+              didDoubleClick = false;
+              if (
+                e.timeStamp - prevClickTimeStamp <=
+                cy.multiClickDebounceTime()
+              ) {
+                clickTimeout && clearTimeout(clickTimeout);
+                didDoubleClick = true;
+                prevClickTimeStamp = null;
+                triggerEvents(down, ["dblclick", "dbltap", "vdblclick"], e, {
+                  x: pos[0],
+                  y: pos[1],
                 });
-              }, cy.multiClickDebounceTime());
-              prevClickTimeStamp = e.timeStamp;
+              } else {
+                clickTimeout = setTimeout(function () {
+                  if (didDoubleClick) return;
+                  triggerEvents(down, ["oneclick", "onetap", "voneclick"], e, {
+                    x: pos[0],
+                    y: pos[1],
+                  });
+                }, cy.multiClickDebounceTime());
+                prevClickTimeStamp = e.timeStamp;
+              }
             }
-          }
-          if (down == null && !r.dragData.didDrag && !r.hoverData.selecting && !r.hoverData.dragged && !isMultSelKeyDown(e)) {
-            cy.$(isSelected).unselect(["tapunselect"]);
-            if (draggedElements.length > 0) {
-              r.redrawHint("eles", true);
+            if (
+              down == null &&
+              !r.dragData.didDrag &&
+              !r.hoverData.selecting &&
+              !r.hoverData.dragged &&
+              !isMultSelKeyDown(e)
+            ) {
+              cy.$(isSelected).unselect(["tapunselect"]);
+              if (draggedElements.length > 0) {
+                r.redrawHint("eles", true);
+              }
+              r.dragData.possibleDragElements = draggedElements =
+                cy.collection();
             }
-            r.dragData.possibleDragElements = draggedElements = cy.collection();
-          }
-          if (near == down && !r.dragData.didDrag && !r.hoverData.selecting) {
-            if (near != null && near._private.selectable) {
-              if (r.hoverData.dragging)
-                ;
-              else if (cy.selectionType() === "additive" || multSelKeyDown) {
-                if (near.selected()) {
-                  near.unselect(["tapunselect"]);
+            if (near == down && !r.dragData.didDrag && !r.hoverData.selecting) {
+              if (near != null && near._private.selectable) {
+                if (r.hoverData.dragging);
+                else if (cy.selectionType() === "additive" || multSelKeyDown) {
+                  if (near.selected()) {
+                    near.unselect(["tapunselect"]);
+                  } else {
+                    near.select(["tapselect"]);
+                  }
                 } else {
-                  near.select(["tapselect"]);
+                  if (!multSelKeyDown) {
+                    cy.$(isSelected).unmerge(near).unselect(["tapunselect"]);
+                    near.select(["tapselect"]);
+                  }
                 }
+                r.redrawHint("eles", true);
+              }
+            }
+            if (r.hoverData.selecting) {
+              var box = cy.collection(
+                r.getAllInBox(select[0], select[1], select[2], select[3]),
+              );
+              r.redrawHint("select", true);
+              if (box.length > 0) {
+                r.redrawHint("eles", true);
+              }
+              cy.emit({
+                type: "boxend",
+                originalEvent: e,
+                position: {
+                  x: pos[0],
+                  y: pos[1],
+                },
+              });
+              var eleWouldBeSelected = function eleWouldBeSelected2(ele) {
+                return ele.selectable() && !ele.selected();
+              };
+              if (cy.selectionType() === "additive") {
+                box
+                  .emit("box")
+                  .stdFilter(eleWouldBeSelected)
+                  .select()
+                  .emit("boxselect");
               } else {
                 if (!multSelKeyDown) {
-                  cy.$(isSelected).unmerge(near).unselect(["tapunselect"]);
-                  near.select(["tapselect"]);
+                  cy.$(isSelected).unmerge(box).unselect();
+                }
+                box
+                  .emit("box")
+                  .stdFilter(eleWouldBeSelected)
+                  .select()
+                  .emit("boxselect");
+              }
+              r.redraw();
+            }
+            if (r.hoverData.dragging) {
+              r.hoverData.dragging = false;
+              r.redrawHint("select", true);
+              r.redrawHint("eles", true);
+              r.redraw();
+            }
+            if (!select[4]) {
+              r.redrawHint("drag", true);
+              r.redrawHint("eles", true);
+              var downWasGrabbed = down && down.grabbed();
+              freeDraggedElements(draggedElements);
+              if (downWasGrabbed) {
+                down.emit("freeon");
+                draggedElements.emit("free");
+                if (r.dragData.didDrag) {
+                  down.emit("dragfreeon");
+                  draggedElements.emit("dragfree");
                 }
               }
-              r.redrawHint("eles", true);
             }
           }
-          if (r.hoverData.selecting) {
-            var box = cy.collection(r.getAllInBox(select[0], select[1], select[2], select[3]));
-            r.redrawHint("select", true);
-            if (box.length > 0) {
-              r.redrawHint("eles", true);
-            }
-            cy.emit({
-              type: "boxend",
-              originalEvent: e,
-              position: {
-                x: pos[0],
-                y: pos[1]
-              }
-            });
-            var eleWouldBeSelected = function eleWouldBeSelected2(ele) {
-              return ele.selectable() && !ele.selected();
-            };
-            if (cy.selectionType() === "additive") {
-              box.emit("box").stdFilter(eleWouldBeSelected).select().emit("boxselect");
-            } else {
-              if (!multSelKeyDown) {
-                cy.$(isSelected).unmerge(box).unselect();
-              }
-              box.emit("box").stdFilter(eleWouldBeSelected).select().emit("boxselect");
-            }
-            r.redraw();
-          }
-          if (r.hoverData.dragging) {
-            r.hoverData.dragging = false;
-            r.redrawHint("select", true);
-            r.redrawHint("eles", true);
-            r.redraw();
-          }
-          if (!select[4]) {
-            r.redrawHint("drag", true);
-            r.redrawHint("eles", true);
-            var downWasGrabbed = down && down.grabbed();
-            freeDraggedElements(draggedElements);
-            if (downWasGrabbed) {
-              down.emit("freeon");
-              draggedElements.emit("free");
-              if (r.dragData.didDrag) {
-                down.emit("dragfreeon");
-                draggedElements.emit("dragfree");
-              }
-            }
-          }
-        }
-        select[4] = 0;
-        r.hoverData.down = null;
-        r.hoverData.cxtStarted = false;
-        r.hoverData.draggingEles = false;
-        r.hoverData.selecting = false;
-        r.hoverData.isOverThresholdDrag = false;
-        r.dragData.didDrag = false;
-        r.hoverData.dragged = false;
-        r.hoverData.dragDelta = [];
-        r.hoverData.mdownPos = null;
-        r.hoverData.mdownGPos = null;
-      }, false);
+          select[4] = 0;
+          r.hoverData.down = null;
+          r.hoverData.cxtStarted = false;
+          r.hoverData.draggingEles = false;
+          r.hoverData.selecting = false;
+          r.hoverData.isOverThresholdDrag = false;
+          r.dragData.didDrag = false;
+          r.hoverData.dragged = false;
+          r.hoverData.dragDelta = [];
+          r.hoverData.mdownPos = null;
+          r.hoverData.mdownGPos = null;
+        },
+        false,
+      );
       var wheelHandler = function wheelHandler2(e) {
         if (r.scrollingPage) {
           return;
@@ -21548,15 +24986,25 @@ var require_cytoscape_cjs = __commonJS({
         var pan = cy.pan();
         var pos = r.projectIntoViewport(e.clientX, e.clientY);
         var rpos = [pos[0] * zoom + pan.x, pos[1] * zoom + pan.y];
-        if (r.hoverData.draggingEles || r.hoverData.dragging || r.hoverData.cxtStarted || inBoxSelection()) {
+        if (
+          r.hoverData.draggingEles ||
+          r.hoverData.dragging ||
+          r.hoverData.cxtStarted ||
+          inBoxSelection()
+        ) {
           e.preventDefault();
           return;
         }
-        if (cy.panningEnabled() && cy.userPanningEnabled() && cy.zoomingEnabled() && cy.userZoomingEnabled()) {
+        if (
+          cy.panningEnabled() &&
+          cy.userPanningEnabled() &&
+          cy.zoomingEnabled() &&
+          cy.userZoomingEnabled()
+        ) {
           e.preventDefault();
           r.data.wheelZooming = true;
           clearTimeout(r.data.wheelTimeout);
-          r.data.wheelTimeout = setTimeout(function() {
+          r.data.wheelTimeout = setTimeout(function () {
             r.data.wheelZooming = false;
             r.redrawHint("eles", true);
             r.redraw();
@@ -21582,53 +25030,78 @@ var require_cytoscape_cjs = __commonJS({
             level: newZoom,
             renderedPosition: {
               x: rpos[0],
-              y: rpos[1]
-            }
+              y: rpos[1],
+            },
           });
           cy.emit(e.type === "gesturechange" ? "pinchzoom" : "scrollzoom");
         }
       };
       r.registerBinding(r.container, "wheel", wheelHandler, true);
-      r.registerBinding(containerWindow, "scroll", function scrollHandler(e) {
-        r.scrollingPage = true;
-        clearTimeout(r.scrollingPageTimeout);
-        r.scrollingPageTimeout = setTimeout(function() {
-          r.scrollingPage = false;
-        }, 250);
-      }, true);
-      r.registerBinding(r.container, "gesturestart", function gestureStartHandler(e) {
-        r.gestureStartZoom = r.cy.zoom();
-        if (!r.hasTouchStarted) {
-          e.preventDefault();
-        }
-      }, true);
-      r.registerBinding(r.container, "gesturechange", function(e) {
-        if (!r.hasTouchStarted) {
-          wheelHandler(e);
-        }
-      }, true);
-      r.registerBinding(r.container, "mouseout", function mouseOutHandler(e) {
-        var pos = r.projectIntoViewport(e.clientX, e.clientY);
-        r.cy.emit({
-          originalEvent: e,
-          type: "mouseout",
-          position: {
-            x: pos[0],
-            y: pos[1]
+      r.registerBinding(
+        containerWindow,
+        "scroll",
+        function scrollHandler(e) {
+          r.scrollingPage = true;
+          clearTimeout(r.scrollingPageTimeout);
+          r.scrollingPageTimeout = setTimeout(function () {
+            r.scrollingPage = false;
+          }, 250);
+        },
+        true,
+      );
+      r.registerBinding(
+        r.container,
+        "gesturestart",
+        function gestureStartHandler(e) {
+          r.gestureStartZoom = r.cy.zoom();
+          if (!r.hasTouchStarted) {
+            e.preventDefault();
           }
-        });
-      }, false);
-      r.registerBinding(r.container, "mouseover", function mouseOverHandler(e) {
-        var pos = r.projectIntoViewport(e.clientX, e.clientY);
-        r.cy.emit({
-          originalEvent: e,
-          type: "mouseover",
-          position: {
-            x: pos[0],
-            y: pos[1]
+        },
+        true,
+      );
+      r.registerBinding(
+        r.container,
+        "gesturechange",
+        function (e) {
+          if (!r.hasTouchStarted) {
+            wheelHandler(e);
           }
-        });
-      }, false);
+        },
+        true,
+      );
+      r.registerBinding(
+        r.container,
+        "mouseout",
+        function mouseOutHandler(e) {
+          var pos = r.projectIntoViewport(e.clientX, e.clientY);
+          r.cy.emit({
+            originalEvent: e,
+            type: "mouseout",
+            position: {
+              x: pos[0],
+              y: pos[1],
+            },
+          });
+        },
+        false,
+      );
+      r.registerBinding(
+        r.container,
+        "mouseover",
+        function mouseOverHandler(e) {
+          var pos = r.projectIntoViewport(e.clientX, e.clientY);
+          r.cy.emit({
+            originalEvent: e,
+            type: "mouseover",
+            position: {
+              x: pos[0],
+              y: pos[1],
+            },
+          });
+        },
+        false,
+      );
       var f1x1, f1y1, f2x1, f2y1;
       var distance1, distance1Sq;
       var center1, modelCenter1;
@@ -21642,745 +25115,901 @@ var require_cytoscape_cjs = __commonJS({
         return (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
       };
       var touchstartHandler;
-      r.registerBinding(r.container, "touchstart", touchstartHandler = function touchstartHandler2(e) {
-        r.hasTouchStarted = true;
-        if (!eventInContainer(e)) {
-          return;
-        }
-        blurActiveDomElement();
-        r.touchData.capture = true;
-        r.data.bgActivePosistion = void 0;
-        var cy = r.cy;
-        var now = r.touchData.now;
-        var earlier = r.touchData.earlier;
-        if (e.touches[0]) {
-          var pos = r.projectIntoViewport(e.touches[0].clientX, e.touches[0].clientY);
-          now[0] = pos[0];
-          now[1] = pos[1];
-        }
-        if (e.touches[1]) {
-          var pos = r.projectIntoViewport(e.touches[1].clientX, e.touches[1].clientY);
-          now[2] = pos[0];
-          now[3] = pos[1];
-        }
-        if (e.touches[2]) {
-          var pos = r.projectIntoViewport(e.touches[2].clientX, e.touches[2].clientY);
-          now[4] = pos[0];
-          now[5] = pos[1];
-        }
-        if (e.touches[1]) {
-          r.touchData.singleTouchMoved = true;
-          freeDraggedElements(r.dragData.touchDragEles);
-          var offsets = r.findContainerClientCoords();
-          offsetLeft = offsets[0];
-          offsetTop = offsets[1];
-          containerWidth = offsets[2];
-          containerHeight = offsets[3];
-          f1x1 = e.touches[0].clientX - offsetLeft;
-          f1y1 = e.touches[0].clientY - offsetTop;
-          f2x1 = e.touches[1].clientX - offsetLeft;
-          f2y1 = e.touches[1].clientY - offsetTop;
-          twoFingersStartInside = 0 <= f1x1 && f1x1 <= containerWidth && 0 <= f2x1 && f2x1 <= containerWidth && 0 <= f1y1 && f1y1 <= containerHeight && 0 <= f2y1 && f2y1 <= containerHeight;
-          var pan = cy.pan();
-          var zoom = cy.zoom();
-          distance1 = distance(f1x1, f1y1, f2x1, f2y1);
-          distance1Sq = distanceSq(f1x1, f1y1, f2x1, f2y1);
-          center1 = [(f1x1 + f2x1) / 2, (f1y1 + f2y1) / 2];
-          modelCenter1 = [(center1[0] - pan.x) / zoom, (center1[1] - pan.y) / zoom];
-          var cxtDistThreshold = 200;
-          var cxtDistThresholdSq = cxtDistThreshold * cxtDistThreshold;
-          if (distance1Sq < cxtDistThresholdSq && !e.touches[2]) {
-            var near1 = r.findNearestElement(now[0], now[1], true, true);
-            var near2 = r.findNearestElement(now[2], now[3], true, true);
-            if (near1 && near1.isNode()) {
-              near1.activate().emit({
-                originalEvent: e,
-                type: "cxttapstart",
-                position: {
-                  x: now[0],
-                  y: now[1]
-                }
-              });
-              r.touchData.start = near1;
-            } else if (near2 && near2.isNode()) {
-              near2.activate().emit({
-                originalEvent: e,
-                type: "cxttapstart",
-                position: {
-                  x: now[0],
-                  y: now[1]
-                }
-              });
-              r.touchData.start = near2;
-            } else {
-              cy.emit({
-                originalEvent: e,
-                type: "cxttapstart",
-                position: {
-                  x: now[0],
-                  y: now[1]
-                }
-              });
-            }
-            if (r.touchData.start) {
-              r.touchData.start._private.grabbed = false;
-            }
-            r.touchData.cxt = true;
-            r.touchData.cxtDragged = false;
-            r.data.bgActivePosistion = void 0;
-            r.redraw();
+      r.registerBinding(
+        r.container,
+        "touchstart",
+        (touchstartHandler = function touchstartHandler2(e) {
+          r.hasTouchStarted = true;
+          if (!eventInContainer(e)) {
             return;
           }
-        }
-        if (e.touches[2]) {
-          if (cy.boxSelectionEnabled()) {
-            e.preventDefault();
-          }
-        } else if (e.touches[1])
-          ;
-        else if (e.touches[0]) {
-          var nears = r.findNearestElements(now[0], now[1], true, true);
-          var near = nears[0];
-          if (near != null) {
-            near.activate();
-            r.touchData.start = near;
-            r.touchData.starts = nears;
-            if (r.nodeIsGrabbable(near)) {
-              var draggedEles = r.dragData.touchDragEles = cy.collection();
-              var selectedNodes = null;
-              r.redrawHint("eles", true);
-              r.redrawHint("drag", true);
-              if (near.selected()) {
-                selectedNodes = cy.$(function(ele) {
-                  return ele.selected() && r.nodeIsGrabbable(ele);
-                });
-                addNodesToDrag(selectedNodes, {
-                  addToList: draggedEles
-                });
-              } else {
-                addNodeToDrag(near, {
-                  addToList: draggedEles
-                });
-              }
-              setGrabTarget(near);
-              var makeEvent = function makeEvent2(type) {
-                return {
-                  originalEvent: e,
-                  type,
-                  position: {
-                    x: now[0],
-                    y: now[1]
-                  }
-                };
-              };
-              near.emit(makeEvent("grabon"));
-              if (selectedNodes) {
-                selectedNodes.forEach(function(n) {
-                  n.emit(makeEvent("grab"));
-                });
-              } else {
-                near.emit(makeEvent("grab"));
-              }
-            }
-          }
-          triggerEvents(near, ["touchstart", "tapstart", "vmousedown"], e, {
-            x: now[0],
-            y: now[1]
-          });
-          if (near == null) {
-            r.data.bgActivePosistion = {
-              x: pos[0],
-              y: pos[1]
-            };
-            r.redrawHint("select", true);
-            r.redraw();
-          }
-          r.touchData.singleTouchMoved = false;
-          r.touchData.singleTouchStartTime = +/* @__PURE__ */ new Date();
-          clearTimeout(r.touchData.tapholdTimeout);
-          r.touchData.tapholdTimeout = setTimeout(function() {
-            if (r.touchData.singleTouchMoved === false && !r.pinching && !r.touchData.selecting) {
-              triggerEvents(r.touchData.start, ["taphold"], e, {
-                x: now[0],
-                y: now[1]
-              });
-            }
-          }, r.tapholdDuration);
-        }
-        if (e.touches.length >= 1) {
-          var sPos = r.touchData.startPosition = [null, null, null, null, null, null];
-          for (var i2 = 0; i2 < now.length; i2++) {
-            sPos[i2] = earlier[i2] = now[i2];
-          }
-          var touch0 = e.touches[0];
-          r.touchData.startGPosition = [touch0.clientX, touch0.clientY];
-        }
-      }, false);
-      var touchmoveHandler;
-      r.registerBinding(window, "touchmove", touchmoveHandler = function touchmoveHandler2(e) {
-        var capture = r.touchData.capture;
-        if (!capture && !eventInContainer(e)) {
-          return;
-        }
-        var select = r.selection;
-        var cy = r.cy;
-        var now = r.touchData.now;
-        var earlier = r.touchData.earlier;
-        var zoom = cy.zoom();
-        if (e.touches[0]) {
-          var pos = r.projectIntoViewport(e.touches[0].clientX, e.touches[0].clientY);
-          now[0] = pos[0];
-          now[1] = pos[1];
-        }
-        if (e.touches[1]) {
-          var pos = r.projectIntoViewport(e.touches[1].clientX, e.touches[1].clientY);
-          now[2] = pos[0];
-          now[3] = pos[1];
-        }
-        if (e.touches[2]) {
-          var pos = r.projectIntoViewport(e.touches[2].clientX, e.touches[2].clientY);
-          now[4] = pos[0];
-          now[5] = pos[1];
-        }
-        var startGPos = r.touchData.startGPosition;
-        var isOverThresholdDrag;
-        if (capture && e.touches[0] && startGPos) {
-          var disp = [];
-          for (var j = 0; j < now.length; j++) {
-            disp[j] = now[j] - earlier[j];
-          }
-          var dx = e.touches[0].clientX - startGPos[0];
-          var dx2 = dx * dx;
-          var dy = e.touches[0].clientY - startGPos[1];
-          var dy2 = dy * dy;
-          var dist2 = dx2 + dy2;
-          isOverThresholdDrag = dist2 >= r.touchTapThreshold2;
-        }
-        if (capture && r.touchData.cxt) {
-          e.preventDefault();
-          var f1x2 = e.touches[0].clientX - offsetLeft, f1y2 = e.touches[0].clientY - offsetTop;
-          var f2x2 = e.touches[1].clientX - offsetLeft, f2y2 = e.touches[1].clientY - offsetTop;
-          var distance2Sq = distanceSq(f1x2, f1y2, f2x2, f2y2);
-          var factorSq = distance2Sq / distance1Sq;
-          var distThreshold = 150;
-          var distThresholdSq = distThreshold * distThreshold;
-          var factorThreshold = 1.5;
-          var factorThresholdSq = factorThreshold * factorThreshold;
-          if (factorSq >= factorThresholdSq || distance2Sq >= distThresholdSq) {
-            r.touchData.cxt = false;
-            r.data.bgActivePosistion = void 0;
-            r.redrawHint("select", true);
-            var cxtEvt = {
-              originalEvent: e,
-              type: "cxttapend",
-              position: {
-                x: now[0],
-                y: now[1]
-              }
-            };
-            if (r.touchData.start) {
-              r.touchData.start.unactivate().emit(cxtEvt);
-              r.touchData.start = null;
-            } else {
-              cy.emit(cxtEvt);
-            }
-          }
-        }
-        if (capture && r.touchData.cxt) {
-          var cxtEvt = {
-            originalEvent: e,
-            type: "cxtdrag",
-            position: {
-              x: now[0],
-              y: now[1]
-            }
-          };
+          blurActiveDomElement();
+          r.touchData.capture = true;
           r.data.bgActivePosistion = void 0;
-          r.redrawHint("select", true);
-          if (r.touchData.start) {
-            r.touchData.start.emit(cxtEvt);
-          } else {
-            cy.emit(cxtEvt);
-          }
-          if (r.touchData.start) {
-            r.touchData.start._private.grabbed = false;
-          }
-          r.touchData.cxtDragged = true;
-          var near = r.findNearestElement(now[0], now[1], true, true);
-          if (!r.touchData.cxtOver || near !== r.touchData.cxtOver) {
-            if (r.touchData.cxtOver) {
-              r.touchData.cxtOver.emit({
-                originalEvent: e,
-                type: "cxtdragout",
-                position: {
-                  x: now[0],
-                  y: now[1]
-                }
-              });
-            }
-            r.touchData.cxtOver = near;
-            if (near) {
-              near.emit({
-                originalEvent: e,
-                type: "cxtdragover",
-                position: {
-                  x: now[0],
-                  y: now[1]
-                }
-              });
-            }
-          }
-        } else if (capture && e.touches[2] && cy.boxSelectionEnabled()) {
-          e.preventDefault();
-          r.data.bgActivePosistion = void 0;
-          this.lastThreeTouch = +/* @__PURE__ */ new Date();
-          if (!r.touchData.selecting) {
-            cy.emit({
-              originalEvent: e,
-              type: "boxstart",
-              position: {
-                x: now[0],
-                y: now[1]
-              }
-            });
-          }
-          r.touchData.selecting = true;
-          r.touchData.didSelect = true;
-          select[4] = 1;
-          if (!select || select.length === 0 || select[0] === void 0) {
-            select[0] = (now[0] + now[2] + now[4]) / 3;
-            select[1] = (now[1] + now[3] + now[5]) / 3;
-            select[2] = (now[0] + now[2] + now[4]) / 3 + 1;
-            select[3] = (now[1] + now[3] + now[5]) / 3 + 1;
-          } else {
-            select[2] = (now[0] + now[2] + now[4]) / 3;
-            select[3] = (now[1] + now[3] + now[5]) / 3;
-          }
-          r.redrawHint("select", true);
-          r.redraw();
-        } else if (capture && e.touches[1] && !r.touchData.didSelect && cy.zoomingEnabled() && cy.panningEnabled() && cy.userZoomingEnabled() && cy.userPanningEnabled()) {
-          e.preventDefault();
-          r.data.bgActivePosistion = void 0;
-          r.redrawHint("select", true);
-          var draggedEles = r.dragData.touchDragEles;
-          if (draggedEles) {
-            r.redrawHint("drag", true);
-            for (var i2 = 0; i2 < draggedEles.length; i2++) {
-              var de_p = draggedEles[i2]._private;
-              de_p.grabbed = false;
-              de_p.rscratch.inDragLayer = false;
-            }
-          }
-          var _start = r.touchData.start;
-          var f1x2 = e.touches[0].clientX - offsetLeft, f1y2 = e.touches[0].clientY - offsetTop;
-          var f2x2 = e.touches[1].clientX - offsetLeft, f2y2 = e.touches[1].clientY - offsetTop;
-          var distance2 = distance(f1x2, f1y2, f2x2, f2y2);
-          var factor = distance2 / distance1;
-          if (twoFingersStartInside) {
-            var df1x = f1x2 - f1x1;
-            var df1y = f1y2 - f1y1;
-            var df2x = f2x2 - f2x1;
-            var df2y = f2y2 - f2y1;
-            var tx = (df1x + df2x) / 2;
-            var ty = (df1y + df2y) / 2;
-            var zoom1 = cy.zoom();
-            var zoom2 = zoom1 * factor;
-            var pan1 = cy.pan();
-            var ctrx = modelCenter1[0] * zoom1 + pan1.x;
-            var ctry = modelCenter1[1] * zoom1 + pan1.y;
-            var pan2 = {
-              x: -zoom2 / zoom1 * (ctrx - pan1.x - tx) + ctrx,
-              y: -zoom2 / zoom1 * (ctry - pan1.y - ty) + ctry
-            };
-            if (_start && _start.active()) {
-              var draggedEles = r.dragData.touchDragEles;
-              freeDraggedElements(draggedEles);
-              r.redrawHint("drag", true);
-              r.redrawHint("eles", true);
-              _start.unactivate().emit("freeon");
-              draggedEles.emit("free");
-              if (r.dragData.didDrag) {
-                _start.emit("dragfreeon");
-                draggedEles.emit("dragfree");
-              }
-            }
-            cy.viewport({
-              zoom: zoom2,
-              pan: pan2,
-              cancelOnFailedZoom: true
-            });
-            cy.emit("pinchzoom");
-            distance1 = distance2;
-            f1x1 = f1x2;
-            f1y1 = f1y2;
-            f2x1 = f2x2;
-            f2y1 = f2y2;
-            r.pinching = true;
-          }
+          var cy = r.cy;
+          var now = r.touchData.now;
+          var earlier = r.touchData.earlier;
           if (e.touches[0]) {
-            var pos = r.projectIntoViewport(e.touches[0].clientX, e.touches[0].clientY);
+            var pos = r.projectIntoViewport(
+              e.touches[0].clientX,
+              e.touches[0].clientY,
+            );
             now[0] = pos[0];
             now[1] = pos[1];
           }
           if (e.touches[1]) {
-            var pos = r.projectIntoViewport(e.touches[1].clientX, e.touches[1].clientY);
+            var pos = r.projectIntoViewport(
+              e.touches[1].clientX,
+              e.touches[1].clientY,
+            );
             now[2] = pos[0];
             now[3] = pos[1];
           }
           if (e.touches[2]) {
-            var pos = r.projectIntoViewport(e.touches[2].clientX, e.touches[2].clientY);
+            var pos = r.projectIntoViewport(
+              e.touches[2].clientX,
+              e.touches[2].clientY,
+            );
             now[4] = pos[0];
             now[5] = pos[1];
           }
-        } else if (e.touches[0] && !r.touchData.didSelect) {
-          var start = r.touchData.start;
-          var last = r.touchData.last;
-          var near;
-          if (!r.hoverData.draggingEles && !r.swipePanning) {
-            near = r.findNearestElement(now[0], now[1], true, true);
-          }
-          if (capture && start != null) {
-            e.preventDefault();
-          }
-          if (capture && start != null && r.nodeIsDraggable(start)) {
-            if (isOverThresholdDrag) {
-              var draggedEles = r.dragData.touchDragEles;
-              var justStartedDrag = !r.dragData.didDrag;
-              if (justStartedDrag) {
-                addNodesToDrag(draggedEles, {
-                  inDragLayer: true
+          if (e.touches[1]) {
+            r.touchData.singleTouchMoved = true;
+            freeDraggedElements(r.dragData.touchDragEles);
+            var offsets = r.findContainerClientCoords();
+            offsetLeft = offsets[0];
+            offsetTop = offsets[1];
+            containerWidth = offsets[2];
+            containerHeight = offsets[3];
+            f1x1 = e.touches[0].clientX - offsetLeft;
+            f1y1 = e.touches[0].clientY - offsetTop;
+            f2x1 = e.touches[1].clientX - offsetLeft;
+            f2y1 = e.touches[1].clientY - offsetTop;
+            twoFingersStartInside =
+              0 <= f1x1 &&
+              f1x1 <= containerWidth &&
+              0 <= f2x1 &&
+              f2x1 <= containerWidth &&
+              0 <= f1y1 &&
+              f1y1 <= containerHeight &&
+              0 <= f2y1 &&
+              f2y1 <= containerHeight;
+            var pan = cy.pan();
+            var zoom = cy.zoom();
+            distance1 = distance(f1x1, f1y1, f2x1, f2y1);
+            distance1Sq = distanceSq(f1x1, f1y1, f2x1, f2y1);
+            center1 = [(f1x1 + f2x1) / 2, (f1y1 + f2y1) / 2];
+            modelCenter1 = [
+              (center1[0] - pan.x) / zoom,
+              (center1[1] - pan.y) / zoom,
+            ];
+            var cxtDistThreshold = 200;
+            var cxtDistThresholdSq = cxtDistThreshold * cxtDistThreshold;
+            if (distance1Sq < cxtDistThresholdSq && !e.touches[2]) {
+              var near1 = r.findNearestElement(now[0], now[1], true, true);
+              var near2 = r.findNearestElement(now[2], now[3], true, true);
+              if (near1 && near1.isNode()) {
+                near1.activate().emit({
+                  originalEvent: e,
+                  type: "cxttapstart",
+                  position: {
+                    x: now[0],
+                    y: now[1],
+                  },
                 });
-              }
-              r.dragData.didDrag = true;
-              var totalShift = {
-                x: 0,
-                y: 0
-              };
-              if (number$1(disp[0]) && number$1(disp[1])) {
-                totalShift.x += disp[0];
-                totalShift.y += disp[1];
-                if (justStartedDrag) {
-                  r.redrawHint("eles", true);
-                  var dragDelta = r.touchData.dragDelta;
-                  if (dragDelta && number$1(dragDelta[0]) && number$1(dragDelta[1])) {
-                    totalShift.x += dragDelta[0];
-                    totalShift.y += dragDelta[1];
-                  }
-                }
-              }
-              r.hoverData.draggingEles = true;
-              draggedEles.silentShift(totalShift).emit("position drag");
-              r.redrawHint("drag", true);
-              if (r.touchData.startPosition[0] == earlier[0] && r.touchData.startPosition[1] == earlier[1]) {
-                r.redrawHint("eles", true);
-              }
-              r.redraw();
-            } else {
-              var dragDelta = r.touchData.dragDelta = r.touchData.dragDelta || [];
-              if (dragDelta.length === 0) {
-                dragDelta.push(disp[0]);
-                dragDelta.push(disp[1]);
+                r.touchData.start = near1;
+              } else if (near2 && near2.isNode()) {
+                near2.activate().emit({
+                  originalEvent: e,
+                  type: "cxttapstart",
+                  position: {
+                    x: now[0],
+                    y: now[1],
+                  },
+                });
+                r.touchData.start = near2;
               } else {
-                dragDelta[0] += disp[0];
-                dragDelta[1] += disp[1];
-              }
-            }
-          }
-          {
-            triggerEvents(start || near, ["touchmove", "tapdrag", "vmousemove"], e, {
-              x: now[0],
-              y: now[1]
-            });
-            if ((!start || !start.grabbed()) && near != last) {
-              if (last) {
-                last.emit({
+                cy.emit({
                   originalEvent: e,
-                  type: "tapdragout",
+                  type: "cxttapstart",
                   position: {
                     x: now[0],
-                    y: now[1]
-                  }
+                    y: now[1],
+                  },
                 });
               }
-              if (near) {
-                near.emit({
-                  originalEvent: e,
-                  type: "tapdragover",
-                  position: {
-                    x: now[0],
-                    y: now[1]
-                  }
-                });
+              if (r.touchData.start) {
+                r.touchData.start._private.grabbed = false;
               }
-            }
-            r.touchData.last = near;
-          }
-          if (capture) {
-            for (var i2 = 0; i2 < now.length; i2++) {
-              if (now[i2] && r.touchData.startPosition[i2] && isOverThresholdDrag) {
-                r.touchData.singleTouchMoved = true;
-              }
+              r.touchData.cxt = true;
+              r.touchData.cxtDragged = false;
+              r.data.bgActivePosistion = void 0;
+              r.redraw();
+              return;
             }
           }
-          if (capture && (start == null || start.pannable()) && cy.panningEnabled() && cy.userPanningEnabled()) {
-            var allowPassthrough = allowPanningPassthrough(start, r.touchData.starts);
-            if (allowPassthrough) {
+          if (e.touches[2]) {
+            if (cy.boxSelectionEnabled()) {
               e.preventDefault();
-              if (!r.data.bgActivePosistion) {
-                r.data.bgActivePosistion = array2point(r.touchData.startPosition);
-              }
-              if (r.swipePanning) {
-                cy.panBy({
-                  x: disp[0] * zoom,
-                  y: disp[1] * zoom
-                });
-                cy.emit("dragpan");
-              } else if (isOverThresholdDrag) {
-                r.swipePanning = true;
-                cy.panBy({
-                  x: dx * zoom,
-                  y: dy * zoom
-                });
-                cy.emit("dragpan");
-                if (start) {
-                  start.unactivate();
-                  r.redrawHint("select", true);
-                  r.touchData.start = null;
+            }
+          } else if (e.touches[1]);
+          else if (e.touches[0]) {
+            var nears = r.findNearestElements(now[0], now[1], true, true);
+            var near = nears[0];
+            if (near != null) {
+              near.activate();
+              r.touchData.start = near;
+              r.touchData.starts = nears;
+              if (r.nodeIsGrabbable(near)) {
+                var draggedEles = (r.dragData.touchDragEles = cy.collection());
+                var selectedNodes = null;
+                r.redrawHint("eles", true);
+                r.redrawHint("drag", true);
+                if (near.selected()) {
+                  selectedNodes = cy.$(function (ele) {
+                    return ele.selected() && r.nodeIsGrabbable(ele);
+                  });
+                  addNodesToDrag(selectedNodes, {
+                    addToList: draggedEles,
+                  });
+                } else {
+                  addNodeToDrag(near, {
+                    addToList: draggedEles,
+                  });
+                }
+                setGrabTarget(near);
+                var makeEvent = function makeEvent2(type) {
+                  return {
+                    originalEvent: e,
+                    type,
+                    position: {
+                      x: now[0],
+                      y: now[1],
+                    },
+                  };
+                };
+                near.emit(makeEvent("grabon"));
+                if (selectedNodes) {
+                  selectedNodes.forEach(function (n) {
+                    n.emit(makeEvent("grab"));
+                  });
+                } else {
+                  near.emit(makeEvent("grab"));
                 }
               }
             }
-            var pos = r.projectIntoViewport(e.touches[0].clientX, e.touches[0].clientY);
+            triggerEvents(near, ["touchstart", "tapstart", "vmousedown"], e, {
+              x: now[0],
+              y: now[1],
+            });
+            if (near == null) {
+              r.data.bgActivePosistion = {
+                x: pos[0],
+                y: pos[1],
+              };
+              r.redrawHint("select", true);
+              r.redraw();
+            }
+            r.touchData.singleTouchMoved = false;
+            r.touchData.singleTouchStartTime = +(/* @__PURE__ */ new Date());
+            clearTimeout(r.touchData.tapholdTimeout);
+            r.touchData.tapholdTimeout = setTimeout(function () {
+              if (
+                r.touchData.singleTouchMoved === false &&
+                !r.pinching &&
+                !r.touchData.selecting
+              ) {
+                triggerEvents(r.touchData.start, ["taphold"], e, {
+                  x: now[0],
+                  y: now[1],
+                });
+              }
+            }, r.tapholdDuration);
+          }
+          if (e.touches.length >= 1) {
+            var sPos = (r.touchData.startPosition = [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+            ]);
+            for (var i2 = 0; i2 < now.length; i2++) {
+              sPos[i2] = earlier[i2] = now[i2];
+            }
+            var touch0 = e.touches[0];
+            r.touchData.startGPosition = [touch0.clientX, touch0.clientY];
+          }
+        }),
+        false,
+      );
+      var touchmoveHandler;
+      r.registerBinding(
+        window,
+        "touchmove",
+        (touchmoveHandler = function touchmoveHandler2(e) {
+          var capture = r.touchData.capture;
+          if (!capture && !eventInContainer(e)) {
+            return;
+          }
+          var select = r.selection;
+          var cy = r.cy;
+          var now = r.touchData.now;
+          var earlier = r.touchData.earlier;
+          var zoom = cy.zoom();
+          if (e.touches[0]) {
+            var pos = r.projectIntoViewport(
+              e.touches[0].clientX,
+              e.touches[0].clientY,
+            );
             now[0] = pos[0];
             now[1] = pos[1];
           }
-        }
-        for (var j = 0; j < now.length; j++) {
-          earlier[j] = now[j];
-        }
-        if (capture && e.touches.length > 0 && !r.hoverData.draggingEles && !r.swipePanning && r.data.bgActivePosistion != null) {
-          r.data.bgActivePosistion = void 0;
-          r.redrawHint("select", true);
-          r.redraw();
-        }
-      }, false);
-      var touchcancelHandler;
-      r.registerBinding(containerWindow, "touchcancel", touchcancelHandler = function touchcancelHandler2(e) {
-        var start = r.touchData.start;
-        r.touchData.capture = false;
-        if (start) {
-          start.unactivate();
-        }
-      });
-      var touchendHandler, didDoubleTouch, touchTimeout, prevTouchTimeStamp;
-      r.registerBinding(containerWindow, "touchend", touchendHandler = function touchendHandler2(e) {
-        var start = r.touchData.start;
-        var capture = r.touchData.capture;
-        if (capture) {
-          if (e.touches.length === 0) {
-            r.touchData.capture = false;
+          if (e.touches[1]) {
+            var pos = r.projectIntoViewport(
+              e.touches[1].clientX,
+              e.touches[1].clientY,
+            );
+            now[2] = pos[0];
+            now[3] = pos[1];
           }
-          e.preventDefault();
-        } else {
-          return;
-        }
-        var select = r.selection;
-        r.swipePanning = false;
-        r.hoverData.draggingEles = false;
-        var cy = r.cy;
-        var zoom = cy.zoom();
-        var now = r.touchData.now;
-        var earlier = r.touchData.earlier;
-        if (e.touches[0]) {
-          var pos = r.projectIntoViewport(e.touches[0].clientX, e.touches[0].clientY);
-          now[0] = pos[0];
-          now[1] = pos[1];
-        }
-        if (e.touches[1]) {
-          var pos = r.projectIntoViewport(e.touches[1].clientX, e.touches[1].clientY);
-          now[2] = pos[0];
-          now[3] = pos[1];
-        }
-        if (e.touches[2]) {
-          var pos = r.projectIntoViewport(e.touches[2].clientX, e.touches[2].clientY);
-          now[4] = pos[0];
-          now[5] = pos[1];
-        }
-        if (start) {
-          start.unactivate();
-        }
-        var ctxTapend;
-        if (r.touchData.cxt) {
-          ctxTapend = {
-            originalEvent: e,
-            type: "cxttapend",
-            position: {
-              x: now[0],
-              y: now[1]
+          if (e.touches[2]) {
+            var pos = r.projectIntoViewport(
+              e.touches[2].clientX,
+              e.touches[2].clientY,
+            );
+            now[4] = pos[0];
+            now[5] = pos[1];
+          }
+          var startGPos = r.touchData.startGPosition;
+          var isOverThresholdDrag;
+          if (capture && e.touches[0] && startGPos) {
+            var disp = [];
+            for (var j = 0; j < now.length; j++) {
+              disp[j] = now[j] - earlier[j];
             }
-          };
-          if (start) {
-            start.emit(ctxTapend);
-          } else {
-            cy.emit(ctxTapend);
+            var dx = e.touches[0].clientX - startGPos[0];
+            var dx2 = dx * dx;
+            var dy = e.touches[0].clientY - startGPos[1];
+            var dy2 = dy * dy;
+            var dist2 = dx2 + dy2;
+            isOverThresholdDrag = dist2 >= r.touchTapThreshold2;
           }
-          if (!r.touchData.cxtDragged) {
-            var ctxTap = {
+          if (capture && r.touchData.cxt) {
+            e.preventDefault();
+            var f1x2 = e.touches[0].clientX - offsetLeft,
+              f1y2 = e.touches[0].clientY - offsetTop;
+            var f2x2 = e.touches[1].clientX - offsetLeft,
+              f2y2 = e.touches[1].clientY - offsetTop;
+            var distance2Sq = distanceSq(f1x2, f1y2, f2x2, f2y2);
+            var factorSq = distance2Sq / distance1Sq;
+            var distThreshold = 150;
+            var distThresholdSq = distThreshold * distThreshold;
+            var factorThreshold = 1.5;
+            var factorThresholdSq = factorThreshold * factorThreshold;
+            if (
+              factorSq >= factorThresholdSq ||
+              distance2Sq >= distThresholdSq
+            ) {
+              r.touchData.cxt = false;
+              r.data.bgActivePosistion = void 0;
+              r.redrawHint("select", true);
+              var cxtEvt = {
+                originalEvent: e,
+                type: "cxttapend",
+                position: {
+                  x: now[0],
+                  y: now[1],
+                },
+              };
+              if (r.touchData.start) {
+                r.touchData.start.unactivate().emit(cxtEvt);
+                r.touchData.start = null;
+              } else {
+                cy.emit(cxtEvt);
+              }
+            }
+          }
+          if (capture && r.touchData.cxt) {
+            var cxtEvt = {
               originalEvent: e,
-              type: "cxttap",
+              type: "cxtdrag",
               position: {
                 x: now[0],
-                y: now[1]
+                y: now[1],
+              },
+            };
+            r.data.bgActivePosistion = void 0;
+            r.redrawHint("select", true);
+            if (r.touchData.start) {
+              r.touchData.start.emit(cxtEvt);
+            } else {
+              cy.emit(cxtEvt);
+            }
+            if (r.touchData.start) {
+              r.touchData.start._private.grabbed = false;
+            }
+            r.touchData.cxtDragged = true;
+            var near = r.findNearestElement(now[0], now[1], true, true);
+            if (!r.touchData.cxtOver || near !== r.touchData.cxtOver) {
+              if (r.touchData.cxtOver) {
+                r.touchData.cxtOver.emit({
+                  originalEvent: e,
+                  type: "cxtdragout",
+                  position: {
+                    x: now[0],
+                    y: now[1],
+                  },
+                });
               }
+              r.touchData.cxtOver = near;
+              if (near) {
+                near.emit({
+                  originalEvent: e,
+                  type: "cxtdragover",
+                  position: {
+                    x: now[0],
+                    y: now[1],
+                  },
+                });
+              }
+            }
+          } else if (capture && e.touches[2] && cy.boxSelectionEnabled()) {
+            e.preventDefault();
+            r.data.bgActivePosistion = void 0;
+            this.lastThreeTouch = +(/* @__PURE__ */ new Date());
+            if (!r.touchData.selecting) {
+              cy.emit({
+                originalEvent: e,
+                type: "boxstart",
+                position: {
+                  x: now[0],
+                  y: now[1],
+                },
+              });
+            }
+            r.touchData.selecting = true;
+            r.touchData.didSelect = true;
+            select[4] = 1;
+            if (!select || select.length === 0 || select[0] === void 0) {
+              select[0] = (now[0] + now[2] + now[4]) / 3;
+              select[1] = (now[1] + now[3] + now[5]) / 3;
+              select[2] = (now[0] + now[2] + now[4]) / 3 + 1;
+              select[3] = (now[1] + now[3] + now[5]) / 3 + 1;
+            } else {
+              select[2] = (now[0] + now[2] + now[4]) / 3;
+              select[3] = (now[1] + now[3] + now[5]) / 3;
+            }
+            r.redrawHint("select", true);
+            r.redraw();
+          } else if (
+            capture &&
+            e.touches[1] &&
+            !r.touchData.didSelect &&
+            cy.zoomingEnabled() &&
+            cy.panningEnabled() &&
+            cy.userZoomingEnabled() &&
+            cy.userPanningEnabled()
+          ) {
+            e.preventDefault();
+            r.data.bgActivePosistion = void 0;
+            r.redrawHint("select", true);
+            var draggedEles = r.dragData.touchDragEles;
+            if (draggedEles) {
+              r.redrawHint("drag", true);
+              for (var i2 = 0; i2 < draggedEles.length; i2++) {
+                var de_p = draggedEles[i2]._private;
+                de_p.grabbed = false;
+                de_p.rscratch.inDragLayer = false;
+              }
+            }
+            var _start = r.touchData.start;
+            var f1x2 = e.touches[0].clientX - offsetLeft,
+              f1y2 = e.touches[0].clientY - offsetTop;
+            var f2x2 = e.touches[1].clientX - offsetLeft,
+              f2y2 = e.touches[1].clientY - offsetTop;
+            var distance2 = distance(f1x2, f1y2, f2x2, f2y2);
+            var factor = distance2 / distance1;
+            if (twoFingersStartInside) {
+              var df1x = f1x2 - f1x1;
+              var df1y = f1y2 - f1y1;
+              var df2x = f2x2 - f2x1;
+              var df2y = f2y2 - f2y1;
+              var tx = (df1x + df2x) / 2;
+              var ty = (df1y + df2y) / 2;
+              var zoom1 = cy.zoom();
+              var zoom2 = zoom1 * factor;
+              var pan1 = cy.pan();
+              var ctrx = modelCenter1[0] * zoom1 + pan1.x;
+              var ctry = modelCenter1[1] * zoom1 + pan1.y;
+              var pan2 = {
+                x: (-zoom2 / zoom1) * (ctrx - pan1.x - tx) + ctrx,
+                y: (-zoom2 / zoom1) * (ctry - pan1.y - ty) + ctry,
+              };
+              if (_start && _start.active()) {
+                var draggedEles = r.dragData.touchDragEles;
+                freeDraggedElements(draggedEles);
+                r.redrawHint("drag", true);
+                r.redrawHint("eles", true);
+                _start.unactivate().emit("freeon");
+                draggedEles.emit("free");
+                if (r.dragData.didDrag) {
+                  _start.emit("dragfreeon");
+                  draggedEles.emit("dragfree");
+                }
+              }
+              cy.viewport({
+                zoom: zoom2,
+                pan: pan2,
+                cancelOnFailedZoom: true,
+              });
+              cy.emit("pinchzoom");
+              distance1 = distance2;
+              f1x1 = f1x2;
+              f1y1 = f1y2;
+              f2x1 = f2x2;
+              f2y1 = f2y2;
+              r.pinching = true;
+            }
+            if (e.touches[0]) {
+              var pos = r.projectIntoViewport(
+                e.touches[0].clientX,
+                e.touches[0].clientY,
+              );
+              now[0] = pos[0];
+              now[1] = pos[1];
+            }
+            if (e.touches[1]) {
+              var pos = r.projectIntoViewport(
+                e.touches[1].clientX,
+                e.touches[1].clientY,
+              );
+              now[2] = pos[0];
+              now[3] = pos[1];
+            }
+            if (e.touches[2]) {
+              var pos = r.projectIntoViewport(
+                e.touches[2].clientX,
+                e.touches[2].clientY,
+              );
+              now[4] = pos[0];
+              now[5] = pos[1];
+            }
+          } else if (e.touches[0] && !r.touchData.didSelect) {
+            var start = r.touchData.start;
+            var last = r.touchData.last;
+            var near;
+            if (!r.hoverData.draggingEles && !r.swipePanning) {
+              near = r.findNearestElement(now[0], now[1], true, true);
+            }
+            if (capture && start != null) {
+              e.preventDefault();
+            }
+            if (capture && start != null && r.nodeIsDraggable(start)) {
+              if (isOverThresholdDrag) {
+                var draggedEles = r.dragData.touchDragEles;
+                var justStartedDrag = !r.dragData.didDrag;
+                if (justStartedDrag) {
+                  addNodesToDrag(draggedEles, {
+                    inDragLayer: true,
+                  });
+                }
+                r.dragData.didDrag = true;
+                var totalShift = {
+                  x: 0,
+                  y: 0,
+                };
+                if (number$1(disp[0]) && number$1(disp[1])) {
+                  totalShift.x += disp[0];
+                  totalShift.y += disp[1];
+                  if (justStartedDrag) {
+                    r.redrawHint("eles", true);
+                    var dragDelta = r.touchData.dragDelta;
+                    if (
+                      dragDelta &&
+                      number$1(dragDelta[0]) &&
+                      number$1(dragDelta[1])
+                    ) {
+                      totalShift.x += dragDelta[0];
+                      totalShift.y += dragDelta[1];
+                    }
+                  }
+                }
+                r.hoverData.draggingEles = true;
+                draggedEles.silentShift(totalShift).emit("position drag");
+                r.redrawHint("drag", true);
+                if (
+                  r.touchData.startPosition[0] == earlier[0] &&
+                  r.touchData.startPosition[1] == earlier[1]
+                ) {
+                  r.redrawHint("eles", true);
+                }
+                r.redraw();
+              } else {
+                var dragDelta = (r.touchData.dragDelta =
+                  r.touchData.dragDelta || []);
+                if (dragDelta.length === 0) {
+                  dragDelta.push(disp[0]);
+                  dragDelta.push(disp[1]);
+                } else {
+                  dragDelta[0] += disp[0];
+                  dragDelta[1] += disp[1];
+                }
+              }
+            }
+            {
+              triggerEvents(
+                start || near,
+                ["touchmove", "tapdrag", "vmousemove"],
+                e,
+                {
+                  x: now[0],
+                  y: now[1],
+                },
+              );
+              if ((!start || !start.grabbed()) && near != last) {
+                if (last) {
+                  last.emit({
+                    originalEvent: e,
+                    type: "tapdragout",
+                    position: {
+                      x: now[0],
+                      y: now[1],
+                    },
+                  });
+                }
+                if (near) {
+                  near.emit({
+                    originalEvent: e,
+                    type: "tapdragover",
+                    position: {
+                      x: now[0],
+                      y: now[1],
+                    },
+                  });
+                }
+              }
+              r.touchData.last = near;
+            }
+            if (capture) {
+              for (var i2 = 0; i2 < now.length; i2++) {
+                if (
+                  now[i2] &&
+                  r.touchData.startPosition[i2] &&
+                  isOverThresholdDrag
+                ) {
+                  r.touchData.singleTouchMoved = true;
+                }
+              }
+            }
+            if (
+              capture &&
+              (start == null || start.pannable()) &&
+              cy.panningEnabled() &&
+              cy.userPanningEnabled()
+            ) {
+              var allowPassthrough = allowPanningPassthrough(
+                start,
+                r.touchData.starts,
+              );
+              if (allowPassthrough) {
+                e.preventDefault();
+                if (!r.data.bgActivePosistion) {
+                  r.data.bgActivePosistion = array2point(
+                    r.touchData.startPosition,
+                  );
+                }
+                if (r.swipePanning) {
+                  cy.panBy({
+                    x: disp[0] * zoom,
+                    y: disp[1] * zoom,
+                  });
+                  cy.emit("dragpan");
+                } else if (isOverThresholdDrag) {
+                  r.swipePanning = true;
+                  cy.panBy({
+                    x: dx * zoom,
+                    y: dy * zoom,
+                  });
+                  cy.emit("dragpan");
+                  if (start) {
+                    start.unactivate();
+                    r.redrawHint("select", true);
+                    r.touchData.start = null;
+                  }
+                }
+              }
+              var pos = r.projectIntoViewport(
+                e.touches[0].clientX,
+                e.touches[0].clientY,
+              );
+              now[0] = pos[0];
+              now[1] = pos[1];
+            }
+          }
+          for (var j = 0; j < now.length; j++) {
+            earlier[j] = now[j];
+          }
+          if (
+            capture &&
+            e.touches.length > 0 &&
+            !r.hoverData.draggingEles &&
+            !r.swipePanning &&
+            r.data.bgActivePosistion != null
+          ) {
+            r.data.bgActivePosistion = void 0;
+            r.redrawHint("select", true);
+            r.redraw();
+          }
+        }),
+        false,
+      );
+      var touchcancelHandler;
+      r.registerBinding(
+        containerWindow,
+        "touchcancel",
+        (touchcancelHandler = function touchcancelHandler2(e) {
+          var start = r.touchData.start;
+          r.touchData.capture = false;
+          if (start) {
+            start.unactivate();
+          }
+        }),
+      );
+      var touchendHandler, didDoubleTouch, touchTimeout, prevTouchTimeStamp;
+      r.registerBinding(
+        containerWindow,
+        "touchend",
+        (touchendHandler = function touchendHandler2(e) {
+          var start = r.touchData.start;
+          var capture = r.touchData.capture;
+          if (capture) {
+            if (e.touches.length === 0) {
+              r.touchData.capture = false;
+            }
+            e.preventDefault();
+          } else {
+            return;
+          }
+          var select = r.selection;
+          r.swipePanning = false;
+          r.hoverData.draggingEles = false;
+          var cy = r.cy;
+          var zoom = cy.zoom();
+          var now = r.touchData.now;
+          var earlier = r.touchData.earlier;
+          if (e.touches[0]) {
+            var pos = r.projectIntoViewport(
+              e.touches[0].clientX,
+              e.touches[0].clientY,
+            );
+            now[0] = pos[0];
+            now[1] = pos[1];
+          }
+          if (e.touches[1]) {
+            var pos = r.projectIntoViewport(
+              e.touches[1].clientX,
+              e.touches[1].clientY,
+            );
+            now[2] = pos[0];
+            now[3] = pos[1];
+          }
+          if (e.touches[2]) {
+            var pos = r.projectIntoViewport(
+              e.touches[2].clientX,
+              e.touches[2].clientY,
+            );
+            now[4] = pos[0];
+            now[5] = pos[1];
+          }
+          if (start) {
+            start.unactivate();
+          }
+          var ctxTapend;
+          if (r.touchData.cxt) {
+            ctxTapend = {
+              originalEvent: e,
+              type: "cxttapend",
+              position: {
+                x: now[0],
+                y: now[1],
+              },
             };
             if (start) {
-              start.emit(ctxTap);
+              start.emit(ctxTapend);
             } else {
-              cy.emit(ctxTap);
+              cy.emit(ctxTapend);
             }
-          }
-          if (r.touchData.start) {
-            r.touchData.start._private.grabbed = false;
-          }
-          r.touchData.cxt = false;
-          r.touchData.start = null;
-          r.redraw();
-          return;
-        }
-        if (!e.touches[2] && cy.boxSelectionEnabled() && r.touchData.selecting) {
-          r.touchData.selecting = false;
-          var box = cy.collection(r.getAllInBox(select[0], select[1], select[2], select[3]));
-          select[0] = void 0;
-          select[1] = void 0;
-          select[2] = void 0;
-          select[3] = void 0;
-          select[4] = 0;
-          r.redrawHint("select", true);
-          cy.emit({
-            type: "boxend",
-            originalEvent: e,
-            position: {
-              x: now[0],
-              y: now[1]
-            }
-          });
-          var eleWouldBeSelected = function eleWouldBeSelected2(ele) {
-            return ele.selectable() && !ele.selected();
-          };
-          box.emit("box").stdFilter(eleWouldBeSelected).select().emit("boxselect");
-          if (box.nonempty()) {
-            r.redrawHint("eles", true);
-          }
-          r.redraw();
-        }
-        if (start != null) {
-          start.unactivate();
-        }
-        if (e.touches[2]) {
-          r.data.bgActivePosistion = void 0;
-          r.redrawHint("select", true);
-        } else if (e.touches[1])
-          ;
-        else if (e.touches[0])
-          ;
-        else if (!e.touches[0]) {
-          r.data.bgActivePosistion = void 0;
-          r.redrawHint("select", true);
-          var draggedEles = r.dragData.touchDragEles;
-          if (start != null) {
-            var startWasGrabbed = start._private.grabbed;
-            freeDraggedElements(draggedEles);
-            r.redrawHint("drag", true);
-            r.redrawHint("eles", true);
-            if (startWasGrabbed) {
-              start.emit("freeon");
-              draggedEles.emit("free");
-              if (r.dragData.didDrag) {
-                start.emit("dragfreeon");
-                draggedEles.emit("dragfree");
-              }
-            }
-            triggerEvents(start, ["touchend", "tapend", "vmouseup", "tapdragout"], e, {
-              x: now[0],
-              y: now[1]
-            });
-            start.unactivate();
-            r.touchData.start = null;
-          } else {
-            var near = r.findNearestElement(now[0], now[1], true, true);
-            triggerEvents(near, ["touchend", "tapend", "vmouseup", "tapdragout"], e, {
-              x: now[0],
-              y: now[1]
-            });
-          }
-          var dx = r.touchData.startPosition[0] - now[0];
-          var dx2 = dx * dx;
-          var dy = r.touchData.startPosition[1] - now[1];
-          var dy2 = dy * dy;
-          var dist2 = dx2 + dy2;
-          var rdist2 = dist2 * zoom * zoom;
-          if (!r.touchData.singleTouchMoved) {
-            if (!start) {
-              cy.$(":selected").unselect(["tapunselect"]);
-            }
-            triggerEvents(start, ["tap", "vclick"], e, {
-              x: now[0],
-              y: now[1]
-            });
-            didDoubleTouch = false;
-            if (e.timeStamp - prevTouchTimeStamp <= cy.multiClickDebounceTime()) {
-              touchTimeout && clearTimeout(touchTimeout);
-              didDoubleTouch = true;
-              prevTouchTimeStamp = null;
-              triggerEvents(start, ["dbltap", "vdblclick"], e, {
-                x: now[0],
-                y: now[1]
-              });
-            } else {
-              touchTimeout = setTimeout(function() {
-                if (didDoubleTouch)
-                  return;
-                triggerEvents(start, ["onetap", "voneclick"], e, {
+            if (!r.touchData.cxtDragged) {
+              var ctxTap = {
+                originalEvent: e,
+                type: "cxttap",
+                position: {
                   x: now[0],
-                  y: now[1]
-                });
-              }, cy.multiClickDebounceTime());
-              prevTouchTimeStamp = e.timeStamp;
-            }
-          }
-          if (start != null && !r.dragData.didDrag && start._private.selectable && rdist2 < r.touchTapThreshold2 && !r.pinching) {
-            if (cy.selectionType() === "single") {
-              cy.$(isSelected).unmerge(start).unselect(["tapunselect"]);
-              start.select(["tapselect"]);
-            } else {
-              if (start.selected()) {
-                start.unselect(["tapunselect"]);
+                  y: now[1],
+                },
+              };
+              if (start) {
+                start.emit(ctxTap);
               } else {
-                start.select(["tapselect"]);
+                cy.emit(ctxTap);
               }
             }
+            if (r.touchData.start) {
+              r.touchData.start._private.grabbed = false;
+            }
+            r.touchData.cxt = false;
+            r.touchData.start = null;
+            r.redraw();
+            return;
+          }
+          if (
+            !e.touches[2] &&
+            cy.boxSelectionEnabled() &&
+            r.touchData.selecting
+          ) {
+            r.touchData.selecting = false;
+            var box = cy.collection(
+              r.getAllInBox(select[0], select[1], select[2], select[3]),
+            );
+            select[0] = void 0;
+            select[1] = void 0;
+            select[2] = void 0;
+            select[3] = void 0;
+            select[4] = 0;
+            r.redrawHint("select", true);
+            cy.emit({
+              type: "boxend",
+              originalEvent: e,
+              position: {
+                x: now[0],
+                y: now[1],
+              },
+            });
+            var eleWouldBeSelected = function eleWouldBeSelected2(ele) {
+              return ele.selectable() && !ele.selected();
+            };
+            box
+              .emit("box")
+              .stdFilter(eleWouldBeSelected)
+              .select()
+              .emit("boxselect");
+            if (box.nonempty()) {
+              r.redrawHint("eles", true);
+            }
+            r.redraw();
+          }
+          if (start != null) {
+            start.unactivate();
+          }
+          if (e.touches[2]) {
+            r.data.bgActivePosistion = void 0;
+            r.redrawHint("select", true);
+          } else if (e.touches[1]);
+          else if (e.touches[0]);
+          else if (!e.touches[0]) {
+            r.data.bgActivePosistion = void 0;
+            r.redrawHint("select", true);
+            var draggedEles = r.dragData.touchDragEles;
+            if (start != null) {
+              var startWasGrabbed = start._private.grabbed;
+              freeDraggedElements(draggedEles);
+              r.redrawHint("drag", true);
+              r.redrawHint("eles", true);
+              if (startWasGrabbed) {
+                start.emit("freeon");
+                draggedEles.emit("free");
+                if (r.dragData.didDrag) {
+                  start.emit("dragfreeon");
+                  draggedEles.emit("dragfree");
+                }
+              }
+              triggerEvents(
+                start,
+                ["touchend", "tapend", "vmouseup", "tapdragout"],
+                e,
+                {
+                  x: now[0],
+                  y: now[1],
+                },
+              );
+              start.unactivate();
+              r.touchData.start = null;
+            } else {
+              var near = r.findNearestElement(now[0], now[1], true, true);
+              triggerEvents(
+                near,
+                ["touchend", "tapend", "vmouseup", "tapdragout"],
+                e,
+                {
+                  x: now[0],
+                  y: now[1],
+                },
+              );
+            }
+            var dx = r.touchData.startPosition[0] - now[0];
+            var dx2 = dx * dx;
+            var dy = r.touchData.startPosition[1] - now[1];
+            var dy2 = dy * dy;
+            var dist2 = dx2 + dy2;
+            var rdist2 = dist2 * zoom * zoom;
+            if (!r.touchData.singleTouchMoved) {
+              if (!start) {
+                cy.$(":selected").unselect(["tapunselect"]);
+              }
+              triggerEvents(start, ["tap", "vclick"], e, {
+                x: now[0],
+                y: now[1],
+              });
+              didDoubleTouch = false;
+              if (
+                e.timeStamp - prevTouchTimeStamp <=
+                cy.multiClickDebounceTime()
+              ) {
+                touchTimeout && clearTimeout(touchTimeout);
+                didDoubleTouch = true;
+                prevTouchTimeStamp = null;
+                triggerEvents(start, ["dbltap", "vdblclick"], e, {
+                  x: now[0],
+                  y: now[1],
+                });
+              } else {
+                touchTimeout = setTimeout(function () {
+                  if (didDoubleTouch) return;
+                  triggerEvents(start, ["onetap", "voneclick"], e, {
+                    x: now[0],
+                    y: now[1],
+                  });
+                }, cy.multiClickDebounceTime());
+                prevTouchTimeStamp = e.timeStamp;
+              }
+            }
+            if (
+              start != null &&
+              !r.dragData.didDrag &&
+              start._private.selectable &&
+              rdist2 < r.touchTapThreshold2 &&
+              !r.pinching
+            ) {
+              if (cy.selectionType() === "single") {
+                cy.$(isSelected).unmerge(start).unselect(["tapunselect"]);
+                start.select(["tapselect"]);
+              } else {
+                if (start.selected()) {
+                  start.unselect(["tapunselect"]);
+                } else {
+                  start.select(["tapselect"]);
+                }
+              }
+              r.redrawHint("eles", true);
+            }
+            r.touchData.singleTouchMoved = true;
+          }
+          for (var j = 0; j < now.length; j++) {
+            earlier[j] = now[j];
+          }
+          r.dragData.didDrag = false;
+          if (e.touches.length === 0) {
+            r.touchData.dragDelta = [];
+            r.touchData.startPosition = [null, null, null, null, null, null];
+            r.touchData.startGPosition = null;
+            r.touchData.didSelect = false;
+          }
+          if (e.touches.length < 2) {
+            if (e.touches.length === 1) {
+              r.touchData.startGPosition = [
+                e.touches[0].clientX,
+                e.touches[0].clientY,
+              ];
+            }
+            r.pinching = false;
             r.redrawHint("eles", true);
+            r.redraw();
           }
-          r.touchData.singleTouchMoved = true;
-        }
-        for (var j = 0; j < now.length; j++) {
-          earlier[j] = now[j];
-        }
-        r.dragData.didDrag = false;
-        if (e.touches.length === 0) {
-          r.touchData.dragDelta = [];
-          r.touchData.startPosition = [null, null, null, null, null, null];
-          r.touchData.startGPosition = null;
-          r.touchData.didSelect = false;
-        }
-        if (e.touches.length < 2) {
-          if (e.touches.length === 1) {
-            r.touchData.startGPosition = [e.touches[0].clientX, e.touches[0].clientY];
-          }
-          r.pinching = false;
-          r.redrawHint("eles", true);
-          r.redraw();
-        }
-      }, false);
+        }),
+        false,
+      );
       if (typeof TouchEvent === "undefined") {
         var pointers = [];
         var makeTouch = function makeTouch2(e) {
@@ -22395,13 +26024,13 @@ var require_cytoscape_cjs = __commonJS({
             radiusY: e.height / 2,
             screenX: e.screenX,
             screenY: e.screenY,
-            target: e.target
+            target: e.target,
           };
         };
         var makePointer = function makePointer2(e) {
           return {
             event: e,
-            touch: makeTouch(e)
+            touch: makeTouch(e),
           };
         };
         var addPointer = function addPointer2(e) {
@@ -22417,21 +26046,21 @@ var require_cytoscape_cjs = __commonJS({
           }
         };
         var updatePointer = function updatePointer2(e) {
-          var p2 = pointers.filter(function(p3) {
+          var p2 = pointers.filter(function (p3) {
             return p3.event.pointerId === e.pointerId;
           })[0];
           p2.event = e;
           p2.touch = makeTouch(e);
         };
         var addTouchesToEvent = function addTouchesToEvent2(e) {
-          e.touches = pointers.map(function(p2) {
+          e.touches = pointers.map(function (p2) {
             return p2.touch;
           });
         };
         var pointerIsMouse = function pointerIsMouse2(e) {
           return e.pointerType === "mouse" || e.pointerType === 4;
         };
-        r.registerBinding(r.container, "pointerdown", function(e) {
+        r.registerBinding(r.container, "pointerdown", function (e) {
           if (pointerIsMouse(e)) {
             return;
           }
@@ -22440,7 +26069,7 @@ var require_cytoscape_cjs = __commonJS({
           addTouchesToEvent(e);
           touchstartHandler(e);
         });
-        r.registerBinding(r.container, "pointerup", function(e) {
+        r.registerBinding(r.container, "pointerup", function (e) {
           if (pointerIsMouse(e)) {
             return;
           }
@@ -22448,7 +26077,7 @@ var require_cytoscape_cjs = __commonJS({
           addTouchesToEvent(e);
           touchendHandler(e);
         });
-        r.registerBinding(r.container, "pointercancel", function(e) {
+        r.registerBinding(r.container, "pointercancel", function (e) {
           if (pointerIsMouse(e)) {
             return;
           }
@@ -22456,7 +26085,7 @@ var require_cytoscape_cjs = __commonJS({
           addTouchesToEvent(e);
           touchcancelHandler(e);
         });
-        r.registerBinding(r.container, "pointermove", function(e) {
+        r.registerBinding(r.container, "pointermove", function (e) {
           if (pointerIsMouse(e)) {
             return;
           }
@@ -22468,38 +26097,111 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var BRp$2 = {};
-    BRp$2.generatePolygon = function(name, points) {
-      return this.nodeShapes[name] = {
+    BRp$2.generatePolygon = function (name, points) {
+      return (this.nodeShapes[name] = {
         renderer: this,
         name,
         points,
         draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl("polygon", context, centerX, centerY, width, height, this.points);
+          this.renderer.nodeShapeImpl(
+            "polygon",
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+            this.points,
+          );
         },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          return polygonIntersectLine(x, y, this.points, nodeX, nodeY, width / 2, height / 2, padding);
+        intersectLine: function intersectLine(
+          nodeX,
+          nodeY,
+          width,
+          height,
+          x,
+          y,
+          padding,
+        ) {
+          return polygonIntersectLine(
+            x,
+            y,
+            this.points,
+            nodeX,
+            nodeY,
+            width / 2,
+            height / 2,
+            padding,
+          );
         },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
-          return pointInsidePolygon(x, y, this.points, centerX, centerY, width, height, [0, -1], padding);
-        }
-      };
+        checkPoint: function checkPoint(
+          x,
+          y,
+          padding,
+          width,
+          height,
+          centerX,
+          centerY,
+        ) {
+          return pointInsidePolygon(
+            x,
+            y,
+            this.points,
+            centerX,
+            centerY,
+            width,
+            height,
+            [0, -1],
+            padding,
+          );
+        },
+      });
     };
-    BRp$2.generateEllipse = function() {
-      return this.nodeShapes["ellipse"] = {
+    BRp$2.generateEllipse = function () {
+      return (this.nodeShapes["ellipse"] = {
         renderer: this,
         name: "ellipse",
         draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl(this.name, context, centerX, centerY, width, height);
+          this.renderer.nodeShapeImpl(
+            this.name,
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
         },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          return intersectLineEllipse(x, y, nodeX, nodeY, width / 2 + padding, height / 2 + padding);
+        intersectLine: function intersectLine(
+          nodeX,
+          nodeY,
+          width,
+          height,
+          x,
+          y,
+          padding,
+        ) {
+          return intersectLineEllipse(
+            x,
+            y,
+            nodeX,
+            nodeY,
+            width / 2 + padding,
+            height / 2 + padding,
+          );
         },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
+        checkPoint: function checkPoint(
+          x,
+          y,
+          padding,
+          width,
+          height,
+          centerX,
+          centerY,
+        ) {
           return checkInEllipse(x, y, width, height, centerX, centerY, padding);
-        }
-      };
+        },
+      });
     };
-    BRp$2.generateRoundPolygon = function(name, points) {
+    BRp$2.generateRoundPolygon = function (name, points) {
       var allPoints = new Array(points.length * 2);
       for (var i2 = 0; i2 < points.length / 2; i2++) {
         var sourceIndex = i2 * 2;
@@ -22517,148 +26219,450 @@ var require_cytoscape_cjs = __commonJS({
         allPoints[i2 * 4 + 2] = xDest / norm;
         allPoints[i2 * 4 + 3] = yDest / norm;
       }
-      return this.nodeShapes[name] = {
+      return (this.nodeShapes[name] = {
         renderer: this,
         name,
         points: allPoints,
         draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl("round-polygon", context, centerX, centerY, width, height, this.points);
+          this.renderer.nodeShapeImpl(
+            "round-polygon",
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+            this.points,
+          );
         },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          return roundPolygonIntersectLine(x, y, this.points, nodeX, nodeY, width, height);
+        intersectLine: function intersectLine(
+          nodeX,
+          nodeY,
+          width,
+          height,
+          x,
+          y,
+          padding,
+        ) {
+          return roundPolygonIntersectLine(
+            x,
+            y,
+            this.points,
+            nodeX,
+            nodeY,
+            width,
+            height,
+          );
         },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
-          return pointInsideRoundPolygon(x, y, this.points, centerX, centerY, width, height);
-        }
-      };
+        checkPoint: function checkPoint(
+          x,
+          y,
+          padding,
+          width,
+          height,
+          centerX,
+          centerY,
+        ) {
+          return pointInsideRoundPolygon(
+            x,
+            y,
+            this.points,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
+        },
+      });
     };
-    BRp$2.generateRoundRectangle = function() {
-      return this.nodeShapes["round-rectangle"] = this.nodeShapes["roundrectangle"] = {
-        renderer: this,
-        name: "round-rectangle",
-        points: generateUnitNgonPointsFitToSquare(4, 0),
-        draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl(this.name, context, centerX, centerY, width, height);
-        },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          return roundRectangleIntersectLine(x, y, nodeX, nodeY, width, height, padding);
-        },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
-          var cornerRadius = getRoundRectangleRadius(width, height);
-          var diam = cornerRadius * 2;
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width, height - diam, [0, -1], padding)) {
-            return true;
-          }
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width - diam, height, [0, -1], padding)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX - width / 2 + cornerRadius, centerY - height / 2 + cornerRadius, padding)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX + width / 2 - cornerRadius, centerY - height / 2 + cornerRadius, padding)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX + width / 2 - cornerRadius, centerY + height / 2 - cornerRadius, padding)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX - width / 2 + cornerRadius, centerY + height / 2 - cornerRadius, padding)) {
-            return true;
-          }
-          return false;
-        }
-      };
+    BRp$2.generateRoundRectangle = function () {
+      return (this.nodeShapes["round-rectangle"] = this.nodeShapes[
+        "roundrectangle"
+      ] =
+        {
+          renderer: this,
+          name: "round-rectangle",
+          points: generateUnitNgonPointsFitToSquare(4, 0),
+          draw: function draw(context, centerX, centerY, width, height) {
+            this.renderer.nodeShapeImpl(
+              this.name,
+              context,
+              centerX,
+              centerY,
+              width,
+              height,
+            );
+          },
+          intersectLine: function intersectLine(
+            nodeX,
+            nodeY,
+            width,
+            height,
+            x,
+            y,
+            padding,
+          ) {
+            return roundRectangleIntersectLine(
+              x,
+              y,
+              nodeX,
+              nodeY,
+              width,
+              height,
+              padding,
+            );
+          },
+          checkPoint: function checkPoint(
+            x,
+            y,
+            padding,
+            width,
+            height,
+            centerX,
+            centerY,
+          ) {
+            var cornerRadius = getRoundRectangleRadius(width, height);
+            var diam = cornerRadius * 2;
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width,
+                height - diam,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width - diam,
+                height,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX - width / 2 + cornerRadius,
+                centerY - height / 2 + cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX + width / 2 - cornerRadius,
+                centerY - height / 2 + cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX + width / 2 - cornerRadius,
+                centerY + height / 2 - cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX - width / 2 + cornerRadius,
+                centerY + height / 2 - cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            return false;
+          },
+        });
     };
-    BRp$2.generateCutRectangle = function() {
-      return this.nodeShapes["cut-rectangle"] = this.nodeShapes["cutrectangle"] = {
-        renderer: this,
-        name: "cut-rectangle",
-        cornerLength: getCutRectangleCornerLength(),
-        points: generateUnitNgonPointsFitToSquare(4, 0),
-        draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl(this.name, context, centerX, centerY, width, height);
-        },
-        generateCutTrianglePts: function generateCutTrianglePts(width, height, centerX, centerY) {
-          var cl = this.cornerLength;
-          var hh = height / 2;
-          var hw = width / 2;
-          var xBegin = centerX - hw;
-          var xEnd = centerX + hw;
-          var yBegin = centerY - hh;
-          var yEnd = centerY + hh;
-          return {
-            topLeft: [xBegin, yBegin + cl, xBegin + cl, yBegin, xBegin + cl, yBegin + cl],
-            topRight: [xEnd - cl, yBegin, xEnd, yBegin + cl, xEnd - cl, yBegin + cl],
-            bottomRight: [xEnd, yEnd - cl, xEnd - cl, yEnd, xEnd - cl, yEnd - cl],
-            bottomLeft: [xBegin + cl, yEnd, xBegin, yEnd - cl, xBegin + cl, yEnd - cl]
-          };
-        },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          var cPts = this.generateCutTrianglePts(width + 2 * padding, height + 2 * padding, nodeX, nodeY);
-          var pts2 = [].concat.apply([], [cPts.topLeft.splice(0, 4), cPts.topRight.splice(0, 4), cPts.bottomRight.splice(0, 4), cPts.bottomLeft.splice(0, 4)]);
-          return polygonIntersectLine(x, y, pts2, nodeX, nodeY);
-        },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width, height - 2 * this.cornerLength, [0, -1], padding)) {
-            return true;
-          }
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width - 2 * this.cornerLength, height, [0, -1], padding)) {
-            return true;
-          }
-          var cutTrianglePts = this.generateCutTrianglePts(width, height, centerX, centerY);
-          return pointInsidePolygonPoints(x, y, cutTrianglePts.topLeft) || pointInsidePolygonPoints(x, y, cutTrianglePts.topRight) || pointInsidePolygonPoints(x, y, cutTrianglePts.bottomRight) || pointInsidePolygonPoints(x, y, cutTrianglePts.bottomLeft);
-        }
-      };
+    BRp$2.generateCutRectangle = function () {
+      return (this.nodeShapes["cut-rectangle"] = this.nodeShapes[
+        "cutrectangle"
+      ] =
+        {
+          renderer: this,
+          name: "cut-rectangle",
+          cornerLength: getCutRectangleCornerLength(),
+          points: generateUnitNgonPointsFitToSquare(4, 0),
+          draw: function draw(context, centerX, centerY, width, height) {
+            this.renderer.nodeShapeImpl(
+              this.name,
+              context,
+              centerX,
+              centerY,
+              width,
+              height,
+            );
+          },
+          generateCutTrianglePts: function generateCutTrianglePts(
+            width,
+            height,
+            centerX,
+            centerY,
+          ) {
+            var cl = this.cornerLength;
+            var hh = height / 2;
+            var hw = width / 2;
+            var xBegin = centerX - hw;
+            var xEnd = centerX + hw;
+            var yBegin = centerY - hh;
+            var yEnd = centerY + hh;
+            return {
+              topLeft: [
+                xBegin,
+                yBegin + cl,
+                xBegin + cl,
+                yBegin,
+                xBegin + cl,
+                yBegin + cl,
+              ],
+              topRight: [
+                xEnd - cl,
+                yBegin,
+                xEnd,
+                yBegin + cl,
+                xEnd - cl,
+                yBegin + cl,
+              ],
+              bottomRight: [
+                xEnd,
+                yEnd - cl,
+                xEnd - cl,
+                yEnd,
+                xEnd - cl,
+                yEnd - cl,
+              ],
+              bottomLeft: [
+                xBegin + cl,
+                yEnd,
+                xBegin,
+                yEnd - cl,
+                xBegin + cl,
+                yEnd - cl,
+              ],
+            };
+          },
+          intersectLine: function intersectLine(
+            nodeX,
+            nodeY,
+            width,
+            height,
+            x,
+            y,
+            padding,
+          ) {
+            var cPts = this.generateCutTrianglePts(
+              width + 2 * padding,
+              height + 2 * padding,
+              nodeX,
+              nodeY,
+            );
+            var pts2 = [].concat.apply(
+              [],
+              [
+                cPts.topLeft.splice(0, 4),
+                cPts.topRight.splice(0, 4),
+                cPts.bottomRight.splice(0, 4),
+                cPts.bottomLeft.splice(0, 4),
+              ],
+            );
+            return polygonIntersectLine(x, y, pts2, nodeX, nodeY);
+          },
+          checkPoint: function checkPoint(
+            x,
+            y,
+            padding,
+            width,
+            height,
+            centerX,
+            centerY,
+          ) {
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width,
+                height - 2 * this.cornerLength,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width - 2 * this.cornerLength,
+                height,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            var cutTrianglePts = this.generateCutTrianglePts(
+              width,
+              height,
+              centerX,
+              centerY,
+            );
+            return (
+              pointInsidePolygonPoints(x, y, cutTrianglePts.topLeft) ||
+              pointInsidePolygonPoints(x, y, cutTrianglePts.topRight) ||
+              pointInsidePolygonPoints(x, y, cutTrianglePts.bottomRight) ||
+              pointInsidePolygonPoints(x, y, cutTrianglePts.bottomLeft)
+            );
+          },
+        });
     };
-    BRp$2.generateBarrel = function() {
-      return this.nodeShapes["barrel"] = {
+    BRp$2.generateBarrel = function () {
+      return (this.nodeShapes["barrel"] = {
         renderer: this,
         name: "barrel",
         points: generateUnitNgonPointsFitToSquare(4, 0),
         draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl(this.name, context, centerX, centerY, width, height);
+          this.renderer.nodeShapeImpl(
+            this.name,
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
         },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
+        intersectLine: function intersectLine(
+          nodeX,
+          nodeY,
+          width,
+          height,
+          x,
+          y,
+          padding,
+        ) {
           var t0 = 0.15;
           var t1 = 0.5;
           var t2 = 0.85;
-          var bPts = this.generateBarrelBezierPts(width + 2 * padding, height + 2 * padding, nodeX, nodeY);
-          var approximateBarrelCurvePts = function approximateBarrelCurvePts2(pts3) {
-            var m0 = qbezierPtAt({
-              x: pts3[0],
-              y: pts3[1]
-            }, {
-              x: pts3[2],
-              y: pts3[3]
-            }, {
-              x: pts3[4],
-              y: pts3[5]
-            }, t0);
-            var m1 = qbezierPtAt({
-              x: pts3[0],
-              y: pts3[1]
-            }, {
-              x: pts3[2],
-              y: pts3[3]
-            }, {
-              x: pts3[4],
-              y: pts3[5]
-            }, t1);
-            var m2 = qbezierPtAt({
-              x: pts3[0],
-              y: pts3[1]
-            }, {
-              x: pts3[2],
-              y: pts3[3]
-            }, {
-              x: pts3[4],
-              y: pts3[5]
-            }, t2);
-            return [pts3[0], pts3[1], m0.x, m0.y, m1.x, m1.y, m2.x, m2.y, pts3[4], pts3[5]];
+          var bPts = this.generateBarrelBezierPts(
+            width + 2 * padding,
+            height + 2 * padding,
+            nodeX,
+            nodeY,
+          );
+          var approximateBarrelCurvePts = function approximateBarrelCurvePts2(
+            pts3,
+          ) {
+            var m0 = qbezierPtAt(
+              {
+                x: pts3[0],
+                y: pts3[1],
+              },
+              {
+                x: pts3[2],
+                y: pts3[3],
+              },
+              {
+                x: pts3[4],
+                y: pts3[5],
+              },
+              t0,
+            );
+            var m1 = qbezierPtAt(
+              {
+                x: pts3[0],
+                y: pts3[1],
+              },
+              {
+                x: pts3[2],
+                y: pts3[3],
+              },
+              {
+                x: pts3[4],
+                y: pts3[5],
+              },
+              t1,
+            );
+            var m2 = qbezierPtAt(
+              {
+                x: pts3[0],
+                y: pts3[1],
+              },
+              {
+                x: pts3[2],
+                y: pts3[3],
+              },
+              {
+                x: pts3[4],
+                y: pts3[5],
+              },
+              t2,
+            );
+            return [
+              pts3[0],
+              pts3[1],
+              m0.x,
+              m0.y,
+              m1.x,
+              m1.y,
+              m2.x,
+              m2.y,
+              pts3[4],
+              pts3[5],
+            ];
           };
-          var pts2 = [].concat(approximateBarrelCurvePts(bPts.topLeft), approximateBarrelCurvePts(bPts.topRight), approximateBarrelCurvePts(bPts.bottomRight), approximateBarrelCurvePts(bPts.bottomLeft));
+          var pts2 = [].concat(
+            approximateBarrelCurvePts(bPts.topLeft),
+            approximateBarrelCurvePts(bPts.topRight),
+            approximateBarrelCurvePts(bPts.bottomRight),
+            approximateBarrelCurvePts(bPts.bottomLeft),
+          );
           return polygonIntersectLine(x, y, pts2, nodeX, nodeY);
         },
-        generateBarrelBezierPts: function generateBarrelBezierPts(width, height, centerX, centerY) {
+        generateBarrelBezierPts: function generateBarrelBezierPts(
+          width,
+          height,
+          centerX,
+          centerY,
+        ) {
           var hh = height / 2;
           var hw = width / 2;
           var xBegin = centerX - hw;
@@ -22670,10 +26674,38 @@ var require_cytoscape_cjs = __commonJS({
           var wOffset = curveConstants.widthOffset;
           var ctrlPtXOffset = curveConstants.ctrlPtOffsetPct * width;
           var pts2 = {
-            topLeft: [xBegin, yBegin + hOffset, xBegin + ctrlPtXOffset, yBegin, xBegin + wOffset, yBegin],
-            topRight: [xEnd - wOffset, yBegin, xEnd - ctrlPtXOffset, yBegin, xEnd, yBegin + hOffset],
-            bottomRight: [xEnd, yEnd - hOffset, xEnd - ctrlPtXOffset, yEnd, xEnd - wOffset, yEnd],
-            bottomLeft: [xBegin + wOffset, yEnd, xBegin + ctrlPtXOffset, yEnd, xBegin, yEnd - hOffset]
+            topLeft: [
+              xBegin,
+              yBegin + hOffset,
+              xBegin + ctrlPtXOffset,
+              yBegin,
+              xBegin + wOffset,
+              yBegin,
+            ],
+            topRight: [
+              xEnd - wOffset,
+              yBegin,
+              xEnd - ctrlPtXOffset,
+              yBegin,
+              xEnd,
+              yBegin + hOffset,
+            ],
+            bottomRight: [
+              xEnd,
+              yEnd - hOffset,
+              xEnd - ctrlPtXOffset,
+              yEnd,
+              xEnd - wOffset,
+              yEnd,
+            ],
+            bottomLeft: [
+              xBegin + wOffset,
+              yEnd,
+              xBegin + ctrlPtXOffset,
+              yEnd,
+              xBegin,
+              yEnd - hOffset,
+            ],
           };
           pts2.topLeft.isTop = true;
           pts2.topRight.isTop = true;
@@ -22681,17 +26713,54 @@ var require_cytoscape_cjs = __commonJS({
           pts2.bottomRight.isBottom = true;
           return pts2;
         },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
+        checkPoint: function checkPoint(
+          x,
+          y,
+          padding,
+          width,
+          height,
+          centerX,
+          centerY,
+        ) {
           var curveConstants = getBarrelCurveConstants(width, height);
           var hOffset = curveConstants.heightOffset;
           var wOffset = curveConstants.widthOffset;
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width, height - 2 * hOffset, [0, -1], padding)) {
+          if (
+            pointInsidePolygon(
+              x,
+              y,
+              this.points,
+              centerX,
+              centerY,
+              width,
+              height - 2 * hOffset,
+              [0, -1],
+              padding,
+            )
+          ) {
             return true;
           }
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width - 2 * wOffset, height, [0, -1], padding)) {
+          if (
+            pointInsidePolygon(
+              x,
+              y,
+              this.points,
+              centerX,
+              centerY,
+              width - 2 * wOffset,
+              height,
+              [0, -1],
+              padding,
+            )
+          ) {
             return true;
           }
-          var barrelCurvePts = this.generateBarrelBezierPts(width, height, centerX, centerY);
+          var barrelCurvePts = this.generateBarrelBezierPts(
+            width,
+            height,
+            centerX,
+            centerY,
+          );
           var getCurveT = function getCurveT2(x2, y3, curvePts) {
             var x0 = curvePts[4];
             var x1 = curvePts[2];
@@ -22705,7 +26774,7 @@ var require_cytoscape_cjs = __commonJS({
             if (xMin <= x2 && x2 <= xMax && yMin <= y3 && y3 <= yMax) {
               var coeff = bezierPtsToQuadCoeff(x0, x1, x22);
               var roots = solveQuadratic(coeff[0], coeff[1], coeff[2], x2);
-              var validRoots = roots.filter(function(r) {
+              var validRoots = roots.filter(function (r) {
                 return 0 <= r && r <= 1;
               });
               if (validRoots.length > 0) {
@@ -22734,60 +26803,163 @@ var require_cytoscape_cjs = __commonJS({
             }
           }
           return false;
-        }
-      };
-    };
-    BRp$2.generateBottomRoundrectangle = function() {
-      return this.nodeShapes["bottom-round-rectangle"] = this.nodeShapes["bottomroundrectangle"] = {
-        renderer: this,
-        name: "bottom-round-rectangle",
-        points: generateUnitNgonPointsFitToSquare(4, 0),
-        draw: function draw(context, centerX, centerY, width, height) {
-          this.renderer.nodeShapeImpl(this.name, context, centerX, centerY, width, height);
         },
-        intersectLine: function intersectLine(nodeX, nodeY, width, height, x, y, padding) {
-          var topStartX = nodeX - (width / 2 + padding);
-          var topStartY = nodeY - (height / 2 + padding);
-          var topEndY = topStartY;
-          var topEndX = nodeX + (width / 2 + padding);
-          var topIntersections = finiteLinesIntersect(x, y, nodeX, nodeY, topStartX, topStartY, topEndX, topEndY, false);
-          if (topIntersections.length > 0) {
-            return topIntersections;
-          }
-          return roundRectangleIntersectLine(x, y, nodeX, nodeY, width, height, padding);
-        },
-        checkPoint: function checkPoint(x, y, padding, width, height, centerX, centerY) {
-          var cornerRadius = getRoundRectangleRadius(width, height);
-          var diam = 2 * cornerRadius;
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width, height - diam, [0, -1], padding)) {
-            return true;
-          }
-          if (pointInsidePolygon(x, y, this.points, centerX, centerY, width - diam, height, [0, -1], padding)) {
-            return true;
-          }
-          var outerWidth = width / 2 + 2 * padding;
-          var outerHeight = height / 2 + 2 * padding;
-          var points = [centerX - outerWidth, centerY - outerHeight, centerX - outerWidth, centerY, centerX + outerWidth, centerY, centerX + outerWidth, centerY - outerHeight];
-          if (pointInsidePolygonPoints(x, y, points)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX + width / 2 - cornerRadius, centerY + height / 2 - cornerRadius, padding)) {
-            return true;
-          }
-          if (checkInEllipse(x, y, diam, diam, centerX - width / 2 + cornerRadius, centerY + height / 2 - cornerRadius, padding)) {
-            return true;
-          }
-          return false;
-        }
-      };
+      });
     };
-    BRp$2.registerNodeShapes = function() {
-      var nodeShapes = this.nodeShapes = {};
+    BRp$2.generateBottomRoundrectangle = function () {
+      return (this.nodeShapes["bottom-round-rectangle"] = this.nodeShapes[
+        "bottomroundrectangle"
+      ] =
+        {
+          renderer: this,
+          name: "bottom-round-rectangle",
+          points: generateUnitNgonPointsFitToSquare(4, 0),
+          draw: function draw(context, centerX, centerY, width, height) {
+            this.renderer.nodeShapeImpl(
+              this.name,
+              context,
+              centerX,
+              centerY,
+              width,
+              height,
+            );
+          },
+          intersectLine: function intersectLine(
+            nodeX,
+            nodeY,
+            width,
+            height,
+            x,
+            y,
+            padding,
+          ) {
+            var topStartX = nodeX - (width / 2 + padding);
+            var topStartY = nodeY - (height / 2 + padding);
+            var topEndY = topStartY;
+            var topEndX = nodeX + (width / 2 + padding);
+            var topIntersections = finiteLinesIntersect(
+              x,
+              y,
+              nodeX,
+              nodeY,
+              topStartX,
+              topStartY,
+              topEndX,
+              topEndY,
+              false,
+            );
+            if (topIntersections.length > 0) {
+              return topIntersections;
+            }
+            return roundRectangleIntersectLine(
+              x,
+              y,
+              nodeX,
+              nodeY,
+              width,
+              height,
+              padding,
+            );
+          },
+          checkPoint: function checkPoint(
+            x,
+            y,
+            padding,
+            width,
+            height,
+            centerX,
+            centerY,
+          ) {
+            var cornerRadius = getRoundRectangleRadius(width, height);
+            var diam = 2 * cornerRadius;
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width,
+                height - diam,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              pointInsidePolygon(
+                x,
+                y,
+                this.points,
+                centerX,
+                centerY,
+                width - diam,
+                height,
+                [0, -1],
+                padding,
+              )
+            ) {
+              return true;
+            }
+            var outerWidth = width / 2 + 2 * padding;
+            var outerHeight = height / 2 + 2 * padding;
+            var points = [
+              centerX - outerWidth,
+              centerY - outerHeight,
+              centerX - outerWidth,
+              centerY,
+              centerX + outerWidth,
+              centerY,
+              centerX + outerWidth,
+              centerY - outerHeight,
+            ];
+            if (pointInsidePolygonPoints(x, y, points)) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX + width / 2 - cornerRadius,
+                centerY + height / 2 - cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            if (
+              checkInEllipse(
+                x,
+                y,
+                diam,
+                diam,
+                centerX - width / 2 + cornerRadius,
+                centerY + height / 2 - cornerRadius,
+                padding,
+              )
+            ) {
+              return true;
+            }
+            return false;
+          },
+        });
+    };
+    BRp$2.registerNodeShapes = function () {
+      var nodeShapes = (this.nodeShapes = {});
       var renderer2 = this;
       this.generateEllipse();
       this.generatePolygon("triangle", generateUnitNgonPointsFitToSquare(3, 0));
-      this.generateRoundPolygon("round-triangle", generateUnitNgonPointsFitToSquare(3, 0));
-      this.generatePolygon("rectangle", generateUnitNgonPointsFitToSquare(4, 0));
+      this.generateRoundPolygon(
+        "round-triangle",
+        generateUnitNgonPointsFitToSquare(3, 0),
+      );
+      this.generatePolygon(
+        "rectangle",
+        generateUnitNgonPointsFitToSquare(4, 0),
+      );
       nodeShapes["square"] = nodeShapes["rectangle"];
       this.generateRoundRectangle();
       this.generateCutRectangle();
@@ -22799,13 +26971,25 @@ var require_cytoscape_cjs = __commonJS({
         this.generateRoundPolygon("round-diamond", diamondPoints);
       }
       this.generatePolygon("pentagon", generateUnitNgonPointsFitToSquare(5, 0));
-      this.generateRoundPolygon("round-pentagon", generateUnitNgonPointsFitToSquare(5, 0));
+      this.generateRoundPolygon(
+        "round-pentagon",
+        generateUnitNgonPointsFitToSquare(5, 0),
+      );
       this.generatePolygon("hexagon", generateUnitNgonPointsFitToSquare(6, 0));
-      this.generateRoundPolygon("round-hexagon", generateUnitNgonPointsFitToSquare(6, 0));
+      this.generateRoundPolygon(
+        "round-hexagon",
+        generateUnitNgonPointsFitToSquare(6, 0),
+      );
       this.generatePolygon("heptagon", generateUnitNgonPointsFitToSquare(7, 0));
-      this.generateRoundPolygon("round-heptagon", generateUnitNgonPointsFitToSquare(7, 0));
+      this.generateRoundPolygon(
+        "round-heptagon",
+        generateUnitNgonPointsFitToSquare(7, 0),
+      );
       this.generatePolygon("octagon", generateUnitNgonPointsFitToSquare(8, 0));
-      this.generateRoundPolygon("round-octagon", generateUnitNgonPointsFitToSquare(8, 0));
+      this.generateRoundPolygon(
+        "round-octagon",
+        generateUnitNgonPointsFitToSquare(8, 0),
+      );
       var star5Points = new Array(20);
       {
         var outerPoints = generateUnitNgonPoints(5, 0);
@@ -22827,28 +27011,34 @@ var require_cytoscape_cjs = __commonJS({
       this.generatePolygon("star", star5Points);
       this.generatePolygon("vee", [-1, -1, 0, -0.333, 1, -1, 0, 1]);
       this.generatePolygon("rhomboid", [-1, -1, 0.333, -1, 1, 1, -0.333, 1]);
-      this.generatePolygon("right-rhomboid", [-0.333, -1, 1, -1, 0.333, 1, -1, 1]);
-      this.nodeShapes["concavehexagon"] = this.generatePolygon("concave-hexagon", [-1, -0.95, -0.75, 0, -1, 0.95, 1, 0.95, 0.75, 0, 1, -0.95]);
+      this.generatePolygon(
+        "right-rhomboid",
+        [-0.333, -1, 1, -1, 0.333, 1, -1, 1],
+      );
+      this.nodeShapes["concavehexagon"] = this.generatePolygon(
+        "concave-hexagon",
+        [-1, -0.95, -0.75, 0, -1, 0.95, 1, 0.95, 0.75, 0, 1, -0.95],
+      );
       {
         var tagPoints = [-1, -1, 0.25, -1, 1, 0, 0.25, 1, -1, 1];
         this.generatePolygon("tag", tagPoints);
         this.generateRoundPolygon("round-tag", tagPoints);
       }
-      nodeShapes.makePolygon = function(points) {
+      nodeShapes.makePolygon = function (points) {
         var key = points.join("$");
         var name = "polygon-" + key;
         var shape;
-        if (shape = this[name]) {
+        if ((shape = this[name])) {
           return shape;
         }
         return renderer2.generatePolygon(name, points);
       };
     };
     var BRp$1 = {};
-    BRp$1.timeToRender = function() {
+    BRp$1.timeToRender = function () {
       return this.redrawTotalTime / this.redrawCount;
     };
-    BRp$1.redraw = function(options) {
+    BRp$1.redraw = function (options) {
       options = options || staticEmptyObject();
       var r = this;
       if (r.averageRedrawTime === void 0) {
@@ -22863,7 +27053,7 @@ var require_cytoscape_cjs = __commonJS({
       r.requestedFrame = true;
       r.renderOptions = options;
     };
-    BRp$1.beforeRender = function(fn2, priority) {
+    BRp$1.beforeRender = function (fn2, priority) {
       if (this.destroyed) {
         return;
       }
@@ -22873,19 +27063,23 @@ var require_cytoscape_cjs = __commonJS({
       var cbs = this.beforeRenderCallbacks;
       cbs.push({
         fn: fn2,
-        priority
+        priority,
       });
-      cbs.sort(function(a, b) {
+      cbs.sort(function (a, b) {
         return b.priority - a.priority;
       });
     };
-    var beforeRenderCallbacks = function beforeRenderCallbacks2(r, willDraw, startTime) {
+    var beforeRenderCallbacks = function beforeRenderCallbacks2(
+      r,
+      willDraw,
+      startTime,
+    ) {
       var cbs = r.beforeRenderCallbacks;
       for (var i2 = 0; i2 < cbs.length; i2++) {
         cbs[i2].fn(willDraw, startTime);
       }
     };
-    BRp$1.startRenderLoop = function() {
+    BRp$1.startRenderLoop = function () {
       var r = this;
       var cy = r.cy;
       if (r.renderLoopStarted) {
@@ -22897,13 +27091,12 @@ var require_cytoscape_cjs = __commonJS({
         if (r.destroyed) {
           return;
         }
-        if (cy.batching())
-          ;
+        if (cy.batching());
         else if (r.requestedFrame && !r.skipFrame) {
           beforeRenderCallbacks(r, true, requestTime);
           var startTime = performanceNow();
           r.render(r.renderOptions);
-          var endTime = r.lastDrawTime = performanceNow();
+          var endTime = (r.lastDrawTime = performanceNow());
           if (r.averageRedrawTime === void 0) {
             r.averageRedrawTime = endTime - startTime;
           }
@@ -22932,32 +27125,43 @@ var require_cytoscape_cjs = __commonJS({
     };
     var BR = BaseRenderer;
     var BRp = BR.prototype;
-    BRp.clientFunctions = ["redrawHint", "render", "renderTo", "matchCanvasSize", "nodeShapeImpl", "arrowShapeImpl"];
-    BRp.init = function(options) {
+    BRp.clientFunctions = [
+      "redrawHint",
+      "render",
+      "renderTo",
+      "matchCanvasSize",
+      "nodeShapeImpl",
+      "arrowShapeImpl",
+    ];
+    BRp.init = function (options) {
       var r = this;
       r.options = options;
       r.cy = options.cy;
-      var ctr = r.container = options.cy.container();
+      var ctr = (r.container = options.cy.container());
       var containerWindow = r.cy.window();
       if (containerWindow) {
         var document2 = containerWindow.document;
         var head = document2.head;
         var stylesheetId = "__________cytoscape_stylesheet";
         var className = "__________cytoscape_container";
-        var stylesheetAlreadyExists = document2.getElementById(stylesheetId) != null;
+        var stylesheetAlreadyExists =
+          document2.getElementById(stylesheetId) != null;
         if (ctr.className.indexOf(className) < 0) {
           ctr.className = (ctr.className || "") + " " + className;
         }
         if (!stylesheetAlreadyExists) {
           var stylesheet2 = document2.createElement("style");
           stylesheet2.id = stylesheetId;
-          stylesheet2.textContent = "." + className + " { position: relative; }";
+          stylesheet2.textContent =
+            "." + className + " { position: relative; }";
           head.insertBefore(stylesheet2, head.children[0]);
         }
         var computedStyle = containerWindow.getComputedStyle(ctr);
         var position2 = computedStyle.getPropertyValue("position");
         if (position2 === "static") {
-          warn("A Cytoscape container has style position:static and so can not use UI extensions properly");
+          warn(
+            "A Cytoscape container has style position:static and so can not use UI extensions properly",
+          );
         }
       }
       r.selection = [void 0, void 0, void 0, void 0, 0];
@@ -22969,10 +27173,10 @@ var require_cytoscape_cjs = __commonJS({
         triggerMode: null,
         dragging: false,
         initialPan: [null, null],
-        capture: false
+        capture: false,
       };
       r.dragData = {
-        possibleDragElements: []
+        possibleDragElements: [],
       };
       r.touchData = {
         start: null,
@@ -22982,7 +27186,7 @@ var require_cytoscape_cjs = __commonJS({
         singleTouchStartTime: null,
         singleTouchMoved: true,
         now: [null, null, null, null, null, null],
-        earlier: [null, null, null, null, null, null]
+        earlier: [null, null, null, null, null, null],
       };
       r.redraws = 0;
       r.showFps = options.showFps;
@@ -22991,7 +27195,9 @@ var require_cytoscape_cjs = __commonJS({
       r.textureOnViewport = options.textureOnViewport;
       r.wheelSensitivity = options.wheelSensitivity;
       r.motionBlurEnabled = options.motionBlur;
-      r.forcedPixelRatio = number$1(options.pixelRatio) ? options.pixelRatio : null;
+      r.forcedPixelRatio = number$1(options.pixelRatio)
+        ? options.pixelRatio
+        : null;
       r.motionBlur = options.motionBlur;
       r.motionBlurOpacity = options.motionBlurOpacity;
       r.motionBlurTransparency = 1 - r.motionBlurOpacity;
@@ -23001,9 +27207,11 @@ var require_cytoscape_cjs = __commonJS({
       r.fullQualityMb = false;
       r.clearedForMotionBlur = [];
       r.desktopTapThreshold = options.desktopTapThreshold;
-      r.desktopTapThreshold2 = options.desktopTapThreshold * options.desktopTapThreshold;
+      r.desktopTapThreshold2 =
+        options.desktopTapThreshold * options.desktopTapThreshold;
       r.touchTapThreshold = options.touchTapThreshold;
-      r.touchTapThreshold2 = options.touchTapThreshold * options.touchTapThreshold;
+      r.touchTapThreshold2 =
+        options.touchTapThreshold * options.touchTapThreshold;
       r.tapholdDuration = 500;
       r.bindings = [];
       r.beforeRenderCallbacks = [];
@@ -23013,13 +27221,13 @@ var require_cytoscape_cjs = __commonJS({
         eleCalcs: 300,
         eleTxrDeq: 200,
         lyrTxrDeq: 150,
-        lyrTxrSkip: 100
+        lyrTxrSkip: 100,
       };
       r.registerNodeShapes();
       r.registerArrowShapes();
       r.registerCalculationListeners();
     };
-    BRp.notify = function(eventName, eles) {
+    BRp.notify = function (eventName, eles) {
       var r = this;
       var cy = r.cy;
       if (this.destroyed) {
@@ -23033,13 +27241,24 @@ var require_cytoscape_cjs = __commonJS({
         r.destroy();
         return;
       }
-      if (eventName === "add" || eventName === "remove" || eventName === "move" && cy.hasCompoundNodes() || eventName === "load" || eventName === "zorder" || eventName === "mount") {
+      if (
+        eventName === "add" ||
+        eventName === "remove" ||
+        (eventName === "move" && cy.hasCompoundNodes()) ||
+        eventName === "load" ||
+        eventName === "zorder" ||
+        eventName === "mount"
+      ) {
         r.invalidateCachedZSortedEles();
       }
       if (eventName === "viewport") {
         r.redrawHint("select", true);
       }
-      if (eventName === "load" || eventName === "resize" || eventName === "mount") {
+      if (
+        eventName === "load" ||
+        eventName === "resize" ||
+        eventName === "mount"
+      ) {
         r.invalidateContainerClientCoordsCache();
         r.matchCanvasSize(r.container);
       }
@@ -23048,7 +27267,7 @@ var require_cytoscape_cjs = __commonJS({
       this.startRenderLoop();
       this.redraw();
     };
-    BRp.destroy = function() {
+    BRp.destroy = function () {
       var r = this;
       r.destroyed = true;
       r.cy.stopAnimationLoop();
@@ -23073,14 +27292,13 @@ var require_cytoscape_cjs = __commonJS({
       if (r.labelCalcDiv) {
         try {
           document.body.removeChild(r.labelCalcDiv);
-        } catch (e) {
-        }
+        } catch (e) {}
       }
     };
-    BRp.isHeadless = function() {
+    BRp.isHeadless = function () {
       return false;
     };
-    [BRp$f, BRp$5, BRp$4, BRp$3, BRp$2, BRp$1].forEach(function(props) {
+    [BRp$f, BRp$5, BRp$4, BRp$3, BRp$2, BRp$1].forEach(function (props) {
       extend(BRp, props);
     });
     var fullFpsTime = 1e3 / 60;
@@ -23094,7 +27312,7 @@ var require_cytoscape_cjs = __commonJS({
           } else {
             self2.dequeueingSetup = true;
           }
-          var queueRedraw = debounce__default["default"](function() {
+          var queueRedraw = debounce__default["default"](function () {
             r.redrawHint("eles", true);
             r.redrawHint("drag", true);
             r.redraw();
@@ -23114,13 +27332,17 @@ var require_cytoscape_cjs = __commonJS({
               var duration = now - startTime;
               var frameDuration = now - frameStartTime;
               if (renderTime < fullFpsTime) {
-                var timeAvailable = fullFpsTime - (willDraw ? avgRenderTime : 0);
+                var timeAvailable =
+                  fullFpsTime - (willDraw ? avgRenderTime : 0);
                 if (frameDuration >= opts.deqFastCost * timeAvailable) {
                   break;
                 }
               } else {
                 if (willDraw) {
-                  if (duration >= opts.deqCost * renderTime || duration >= opts.deqAvgCost * avgRenderTime) {
+                  if (
+                    duration >= opts.deqCost * renderTime ||
+                    duration >= opts.deqAvgCost * avgRenderTime
+                  ) {
                     break;
                   }
                 } else if (frameDuration >= opts.deqNoDrawCost * fullFpsTime) {
@@ -23138,7 +27360,10 @@ var require_cytoscape_cjs = __commonJS({
             }
             if (deqd.length > 0) {
               opts.onDeqd(self2, deqd);
-              if (!willDraw && opts.shouldRedraw(self2, deqd, pixelRatio, extent)) {
+              if (
+                !willDraw &&
+                opts.shouldRedraw(self2, deqd, pixelRatio, extent)
+              ) {
                 queueRedraw();
               }
             }
@@ -23146,11 +27371,14 @@ var require_cytoscape_cjs = __commonJS({
           var priority = opts.priority || noop$1;
           r.beforeRender(dequeue, priority(self2));
         };
-      }
+      },
     };
-    var ElementTextureCacheLookup = function() {
+    var ElementTextureCacheLookup = (function () {
       function ElementTextureCacheLookup2(getKey2) {
-        var doesEleInvalidateKey = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : falsify;
+        var doesEleInvalidateKey =
+          arguments.length > 1 && arguments[1] !== void 0
+            ? arguments[1]
+            : falsify;
         _classCallCheck(this, ElementTextureCacheLookup2);
         this.idsByKey = new Map$1();
         this.keyForId = new Map$1();
@@ -23159,167 +27387,189 @@ var require_cytoscape_cjs = __commonJS({
         this.getKey = getKey2;
         this.doesEleInvalidateKey = doesEleInvalidateKey;
       }
-      _createClass(ElementTextureCacheLookup2, [{
-        key: "getIdsFor",
-        value: function getIdsFor(key) {
-          if (key == null) {
-            error("Can not get id list for null key");
-          }
-          var idsByKey = this.idsByKey;
-          var ids = this.idsByKey.get(key);
-          if (!ids) {
-            ids = new Set$1();
-            idsByKey.set(key, ids);
-          }
-          return ids;
-        }
-      }, {
-        key: "addIdForKey",
-        value: function addIdForKey(key, id) {
-          if (key != null) {
-            this.getIdsFor(key).add(id);
-          }
-        }
-      }, {
-        key: "deleteIdForKey",
-        value: function deleteIdForKey(key, id) {
-          if (key != null) {
-            this.getIdsFor(key)["delete"](id);
-          }
-        }
-      }, {
-        key: "getNumberOfIdsForKey",
-        value: function getNumberOfIdsForKey(key) {
-          if (key == null) {
-            return 0;
-          } else {
-            return this.getIdsFor(key).size;
-          }
-        }
-      }, {
-        key: "updateKeyMappingFor",
-        value: function updateKeyMappingFor(ele) {
-          var id = ele.id();
-          var prevKey = this.keyForId.get(id);
-          var currKey = this.getKey(ele);
-          this.deleteIdForKey(prevKey, id);
-          this.addIdForKey(currKey, id);
-          this.keyForId.set(id, currKey);
-        }
-      }, {
-        key: "deleteKeyMappingFor",
-        value: function deleteKeyMappingFor(ele) {
-          var id = ele.id();
-          var prevKey = this.keyForId.get(id);
-          this.deleteIdForKey(prevKey, id);
-          this.keyForId["delete"](id);
-        }
-      }, {
-        key: "keyHasChangedFor",
-        value: function keyHasChangedFor(ele) {
-          var id = ele.id();
-          var prevKey = this.keyForId.get(id);
-          var newKey = this.getKey(ele);
-          return prevKey !== newKey;
-        }
-      }, {
-        key: "isInvalid",
-        value: function isInvalid(ele) {
-          return this.keyHasChangedFor(ele) || this.doesEleInvalidateKey(ele);
-        }
-      }, {
-        key: "getCachesAt",
-        value: function getCachesAt(lvl) {
-          var cachesByLvl = this.cachesByLvl, lvls = this.lvls;
-          var caches = cachesByLvl.get(lvl);
-          if (!caches) {
-            caches = new Map$1();
-            cachesByLvl.set(lvl, caches);
-            lvls.push(lvl);
-          }
-          return caches;
-        }
-      }, {
-        key: "getCache",
-        value: function getCache(key, lvl) {
-          return this.getCachesAt(lvl).get(key);
-        }
-      }, {
-        key: "get",
-        value: function get2(ele, lvl) {
-          var key = this.getKey(ele);
-          var cache2 = this.getCache(key, lvl);
-          if (cache2 != null) {
+      _createClass(ElementTextureCacheLookup2, [
+        {
+          key: "getIdsFor",
+          value: function getIdsFor(key) {
+            if (key == null) {
+              error("Can not get id list for null key");
+            }
+            var idsByKey = this.idsByKey;
+            var ids = this.idsByKey.get(key);
+            if (!ids) {
+              ids = new Set$1();
+              idsByKey.set(key, ids);
+            }
+            return ids;
+          },
+        },
+        {
+          key: "addIdForKey",
+          value: function addIdForKey(key, id) {
+            if (key != null) {
+              this.getIdsFor(key).add(id);
+            }
+          },
+        },
+        {
+          key: "deleteIdForKey",
+          value: function deleteIdForKey(key, id) {
+            if (key != null) {
+              this.getIdsFor(key)["delete"](id);
+            }
+          },
+        },
+        {
+          key: "getNumberOfIdsForKey",
+          value: function getNumberOfIdsForKey(key) {
+            if (key == null) {
+              return 0;
+            } else {
+              return this.getIdsFor(key).size;
+            }
+          },
+        },
+        {
+          key: "updateKeyMappingFor",
+          value: function updateKeyMappingFor(ele) {
+            var id = ele.id();
+            var prevKey = this.keyForId.get(id);
+            var currKey = this.getKey(ele);
+            this.deleteIdForKey(prevKey, id);
+            this.addIdForKey(currKey, id);
+            this.keyForId.set(id, currKey);
+          },
+        },
+        {
+          key: "deleteKeyMappingFor",
+          value: function deleteKeyMappingFor(ele) {
+            var id = ele.id();
+            var prevKey = this.keyForId.get(id);
+            this.deleteIdForKey(prevKey, id);
+            this.keyForId["delete"](id);
+          },
+        },
+        {
+          key: "keyHasChangedFor",
+          value: function keyHasChangedFor(ele) {
+            var id = ele.id();
+            var prevKey = this.keyForId.get(id);
+            var newKey = this.getKey(ele);
+            return prevKey !== newKey;
+          },
+        },
+        {
+          key: "isInvalid",
+          value: function isInvalid(ele) {
+            return this.keyHasChangedFor(ele) || this.doesEleInvalidateKey(ele);
+          },
+        },
+        {
+          key: "getCachesAt",
+          value: function getCachesAt(lvl) {
+            var cachesByLvl = this.cachesByLvl,
+              lvls = this.lvls;
+            var caches = cachesByLvl.get(lvl);
+            if (!caches) {
+              caches = new Map$1();
+              cachesByLvl.set(lvl, caches);
+              lvls.push(lvl);
+            }
+            return caches;
+          },
+        },
+        {
+          key: "getCache",
+          value: function getCache(key, lvl) {
+            return this.getCachesAt(lvl).get(key);
+          },
+        },
+        {
+          key: "get",
+          value: function get2(ele, lvl) {
+            var key = this.getKey(ele);
+            var cache2 = this.getCache(key, lvl);
+            if (cache2 != null) {
+              this.updateKeyMappingFor(ele);
+            }
+            return cache2;
+          },
+        },
+        {
+          key: "getForCachedKey",
+          value: function getForCachedKey(ele, lvl) {
+            var key = this.keyForId.get(ele.id());
+            var cache2 = this.getCache(key, lvl);
+            return cache2;
+          },
+        },
+        {
+          key: "hasCache",
+          value: function hasCache(key, lvl) {
+            return this.getCachesAt(lvl).has(key);
+          },
+        },
+        {
+          key: "has",
+          value: function has(ele, lvl) {
+            var key = this.getKey(ele);
+            return this.hasCache(key, lvl);
+          },
+        },
+        {
+          key: "setCache",
+          value: function setCache(key, lvl, cache2) {
+            cache2.key = key;
+            this.getCachesAt(lvl).set(key, cache2);
+          },
+        },
+        {
+          key: "set",
+          value: function set2(ele, lvl, cache2) {
+            var key = this.getKey(ele);
+            this.setCache(key, lvl, cache2);
             this.updateKeyMappingFor(ele);
-          }
-          return cache2;
-        }
-      }, {
-        key: "getForCachedKey",
-        value: function getForCachedKey(ele, lvl) {
-          var key = this.keyForId.get(ele.id());
-          var cache2 = this.getCache(key, lvl);
-          return cache2;
-        }
-      }, {
-        key: "hasCache",
-        value: function hasCache(key, lvl) {
-          return this.getCachesAt(lvl).has(key);
-        }
-      }, {
-        key: "has",
-        value: function has(ele, lvl) {
-          var key = this.getKey(ele);
-          return this.hasCache(key, lvl);
-        }
-      }, {
-        key: "setCache",
-        value: function setCache(key, lvl, cache2) {
-          cache2.key = key;
-          this.getCachesAt(lvl).set(key, cache2);
-        }
-      }, {
-        key: "set",
-        value: function set2(ele, lvl, cache2) {
-          var key = this.getKey(ele);
-          this.setCache(key, lvl, cache2);
-          this.updateKeyMappingFor(ele);
-        }
-      }, {
-        key: "deleteCache",
-        value: function deleteCache(key, lvl) {
-          this.getCachesAt(lvl)["delete"](key);
-        }
-      }, {
-        key: "delete",
-        value: function _delete(ele, lvl) {
-          var key = this.getKey(ele);
-          this.deleteCache(key, lvl);
-        }
-      }, {
-        key: "invalidateKey",
-        value: function invalidateKey(key) {
-          var _this = this;
-          this.lvls.forEach(function(lvl) {
-            return _this.deleteCache(key, lvl);
-          });
-        }
-        // returns true if no other eles reference the invalidated cache (n.b. other eles may need the cache with the same key)
-      }, {
-        key: "invalidate",
-        value: function invalidate(ele) {
-          var id = ele.id();
-          var key = this.keyForId.get(id);
-          this.deleteKeyMappingFor(ele);
-          var entireKeyInvalidated = this.doesEleInvalidateKey(ele);
-          if (entireKeyInvalidated) {
-            this.invalidateKey(key);
-          }
-          return entireKeyInvalidated || this.getNumberOfIdsForKey(key) === 0;
-        }
-      }]);
+          },
+        },
+        {
+          key: "deleteCache",
+          value: function deleteCache(key, lvl) {
+            this.getCachesAt(lvl)["delete"](key);
+          },
+        },
+        {
+          key: "delete",
+          value: function _delete(ele, lvl) {
+            var key = this.getKey(ele);
+            this.deleteCache(key, lvl);
+          },
+        },
+        {
+          key: "invalidateKey",
+          value: function invalidateKey(key) {
+            var _this = this;
+            this.lvls.forEach(function (lvl) {
+              return _this.deleteCache(key, lvl);
+            });
+          },
+          // returns true if no other eles reference the invalidated cache (n.b. other eles may need the cache with the same key)
+        },
+        {
+          key: "invalidate",
+          value: function invalidate(ele) {
+            var id = ele.id();
+            var key = this.keyForId.get(id);
+            this.deleteKeyMappingFor(ele);
+            var entireKeyInvalidated = this.doesEleInvalidateKey(ele);
+            if (entireKeyInvalidated) {
+              this.invalidateKey(key);
+            }
+            return entireKeyInvalidated || this.getNumberOfIdsForKey(key) === 0;
+          },
+        },
+      ]);
       return ElementTextureCacheLookup2;
-    }();
+    })();
     var minTxrH = 25;
     var txrStepH = 50;
     var minLvl$1 = -4;
@@ -23341,7 +27591,7 @@ var require_cytoscape_cjs = __commonJS({
     var getTxrReasons = {
       dequeue: "dequeue",
       downscale: "downscale",
-      highQuality: "highQuality"
+      highQuality: "highQuality",
     };
     var initDefaults = defaults$g({
       getKey: null,
@@ -23352,51 +27602,71 @@ var require_cytoscape_cjs = __commonJS({
       getRotationOffset: null,
       isVisible: trueify,
       allowEdgeTxrCaching: true,
-      allowParentTxrCaching: true
+      allowParentTxrCaching: true,
     });
-    var ElementTextureCache = function ElementTextureCache2(renderer2, initOptions) {
+    var ElementTextureCache = function ElementTextureCache2(
+      renderer2,
+      initOptions,
+    ) {
       var self2 = this;
       self2.renderer = renderer2;
       self2.onDequeues = [];
       var opts = initDefaults(initOptions);
       extend(self2, opts);
-      self2.lookup = new ElementTextureCacheLookup(opts.getKey, opts.doesEleInvalidateKey);
+      self2.lookup = new ElementTextureCacheLookup(
+        opts.getKey,
+        opts.doesEleInvalidateKey,
+      );
       self2.setupDequeueing();
     };
     var ETCp = ElementTextureCache.prototype;
     ETCp.reasons = getTxrReasons;
-    ETCp.getTextureQueue = function(txrH) {
+    ETCp.getTextureQueue = function (txrH) {
       var self2 = this;
       self2.eleImgCaches = self2.eleImgCaches || {};
-      return self2.eleImgCaches[txrH] = self2.eleImgCaches[txrH] || [];
+      return (self2.eleImgCaches[txrH] = self2.eleImgCaches[txrH] || []);
     };
-    ETCp.getRetiredTextureQueue = function(txrH) {
+    ETCp.getRetiredTextureQueue = function (txrH) {
       var self2 = this;
-      var rtxtrQs = self2.eleImgCaches.retired = self2.eleImgCaches.retired || {};
-      var rtxtrQ = rtxtrQs[txrH] = rtxtrQs[txrH] || [];
+      var rtxtrQs = (self2.eleImgCaches.retired =
+        self2.eleImgCaches.retired || {});
+      var rtxtrQ = (rtxtrQs[txrH] = rtxtrQs[txrH] || []);
       return rtxtrQ;
     };
-    ETCp.getElementQueue = function() {
+    ETCp.getElementQueue = function () {
       var self2 = this;
-      var q = self2.eleCacheQueue = self2.eleCacheQueue || new Heap__default["default"](function(a, b) {
-        return b.reqs - a.reqs;
-      });
+      var q = (self2.eleCacheQueue =
+        self2.eleCacheQueue ||
+        new Heap__default["default"](function (a, b) {
+          return b.reqs - a.reqs;
+        }));
       return q;
     };
-    ETCp.getElementKeyToQueue = function() {
+    ETCp.getElementKeyToQueue = function () {
       var self2 = this;
-      var k2q = self2.eleKeyToCacheQueue = self2.eleKeyToCacheQueue || {};
+      var k2q = (self2.eleKeyToCacheQueue = self2.eleKeyToCacheQueue || {});
       return k2q;
     };
-    ETCp.getElement = function(ele, bb, pxRatio, lvl, reason) {
+    ETCp.getElement = function (ele, bb, pxRatio, lvl, reason) {
       var self2 = this;
       var r = this.renderer;
       var zoom = r.cy.zoom();
       var lookup2 = this.lookup;
-      if (!bb || bb.w === 0 || bb.h === 0 || isNaN(bb.w) || isNaN(bb.h) || !ele.visible() || ele.removed()) {
+      if (
+        !bb ||
+        bb.w === 0 ||
+        bb.h === 0 ||
+        isNaN(bb.w) ||
+        isNaN(bb.h) ||
+        !ele.visible() ||
+        ele.removed()
+      ) {
         return null;
       }
-      if (!self2.allowEdgeTxrCaching && ele.isEdge() || !self2.allowParentTxrCaching && ele.isParent()) {
+      if (
+        (!self2.allowEdgeTxrCaching && ele.isEdge()) ||
+        (!self2.allowParentTxrCaching && ele.isParent())
+      ) {
         return null;
       }
       if (lvl == null) {
@@ -23436,7 +27706,10 @@ var require_cytoscape_cjs = __commonJS({
       var txrQ = self2.getTextureQueue(txrH);
       var txr = txrQ[txrQ.length - 2];
       var addNewTxr = function addNewTxr2() {
-        return self2.recycleTexture(txrH, eleScaledW) || self2.addTexture(txrH, eleScaledW);
+        return (
+          self2.recycleTexture(txrH, eleScaledW) ||
+          self2.addTexture(txrH, eleScaledW)
+        );
       };
       if (!txr) {
         txr = txrQ[txrQ.length - 1];
@@ -23461,9 +27734,20 @@ var require_cytoscape_cjs = __commonJS({
           break;
         }
       }
-      var oneUpCache = higherCache && higherCache.level === lvl + 1 ? higherCache : null;
+      var oneUpCache =
+        higherCache && higherCache.level === lvl + 1 ? higherCache : null;
       var downscale = function downscale2() {
-        txr.context.drawImage(oneUpCache.texture.canvas, oneUpCache.x, 0, oneUpCache.width, oneUpCache.height, txr.usedWidth, 0, eleScaledW, eleScaledH);
+        txr.context.drawImage(
+          oneUpCache.texture.canvas,
+          oneUpCache.x,
+          0,
+          oneUpCache.width,
+          oneUpCache.height,
+          txr.usedWidth,
+          0,
+          eleScaledW,
+          eleScaledH,
+        );
       };
       txr.context.setTransform(1, 0, 0, 1, 0, 0);
       txr.context.clearRect(txr.usedWidth, 0, eleScaledW, txrH);
@@ -23472,7 +27756,13 @@ var require_cytoscape_cjs = __commonJS({
       } else if (scalableFrom(higherCache)) {
         if (highQualityReq) {
           for (var _l = higherCache.level; _l > lvl; _l--) {
-            oneUpCache = self2.getElement(ele, bb, pxRatio, _l, getTxrReasons.downscale);
+            oneUpCache = self2.getElement(
+              ele,
+              bb,
+              pxRatio,
+              _l,
+              getTxrReasons.downscale,
+            );
           }
           downscale();
         } else {
@@ -23507,7 +27797,7 @@ var require_cytoscape_cjs = __commonJS({
         scale,
         width: eleScaledW,
         height: eleScaledH,
-        scaledLabelShown
+        scaledLabelShown,
       };
       txr.usedWidth += Math.ceil(eleScaledW + eleTxrSpacing);
       txr.eleCaches.push(eleCache);
@@ -23515,12 +27805,12 @@ var require_cytoscape_cjs = __commonJS({
       self2.checkTextureFullness(txr);
       return eleCache;
     };
-    ETCp.invalidateElements = function(eles) {
+    ETCp.invalidateElements = function (eles) {
       for (var i2 = 0; i2 < eles.length; i2++) {
         this.invalidateElement(eles[i2]);
       }
     };
-    ETCp.invalidateElement = function(ele) {
+    ETCp.invalidateElement = function (ele) {
       var self2 = this;
       var lookup2 = self2.lookup;
       var caches = [];
@@ -23546,21 +27836,24 @@ var require_cytoscape_cjs = __commonJS({
       }
       self2.removeFromQueue(ele);
     };
-    ETCp.checkTextureUtility = function(txr) {
+    ETCp.checkTextureUtility = function (txr) {
       if (txr.invalidatedWidth >= minUtility * txr.width) {
         this.retireTexture(txr);
       }
     };
-    ETCp.checkTextureFullness = function(txr) {
+    ETCp.checkTextureFullness = function (txr) {
       var self2 = this;
       var txrQ = self2.getTextureQueue(txr.height);
-      if (txr.usedWidth / txr.width > maxFullness && txr.fullnessChecks >= maxFullnessChecks) {
+      if (
+        txr.usedWidth / txr.width > maxFullness &&
+        txr.fullnessChecks >= maxFullnessChecks
+      ) {
         removeFromArray(txrQ, txr);
       } else {
         txr.fullnessChecks++;
       }
     };
-    ETCp.retireTexture = function(txr) {
+    ETCp.retireTexture = function (txr) {
       var self2 = this;
       var txrH = txr.height;
       var txrQ = self2.getTextureQueue(txrH);
@@ -23576,7 +27869,7 @@ var require_cytoscape_cjs = __commonJS({
       var rtxtrQ = self2.getRetiredTextureQueue(txrH);
       rtxtrQ.push(txr);
     };
-    ETCp.addTexture = function(txrH, minW) {
+    ETCp.addTexture = function (txrH, minW) {
       var self2 = this;
       var txrQ = self2.getTextureQueue(txrH);
       var txr = {};
@@ -23591,7 +27884,7 @@ var require_cytoscape_cjs = __commonJS({
       txr.context = txr.canvas.getContext("2d");
       return txr;
     };
-    ETCp.recycleTexture = function(txrH, minW) {
+    ETCp.recycleTexture = function (txrH, minW) {
       var self2 = this;
       var txrQ = self2.getTextureQueue(txrH);
       var rtxtrQ = self2.getRetiredTextureQueue(txrH);
@@ -23611,7 +27904,7 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    ETCp.queueElement = function(ele, lvl) {
+    ETCp.queueElement = function (ele, lvl) {
       var self2 = this;
       var q = self2.getElementQueue();
       var k2q = self2.getElementKeyToQueue();
@@ -23627,13 +27920,13 @@ var require_cytoscape_cjs = __commonJS({
           eles: ele.spawn().merge(ele),
           level: lvl,
           reqs: 1,
-          key
+          key,
         };
         q.push(req);
         k2q[key] = req;
       }
     };
-    ETCp.dequeue = function(pxRatio) {
+    ETCp.dequeue = function (pxRatio) {
       var self2 = this;
       var q = self2.getElementQueue();
       var k2q = self2.getElementKeyToQueue();
@@ -23658,7 +27951,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return dequeued;
     };
-    ETCp.removeFromQueue = function(ele) {
+    ETCp.removeFromQueue = function (ele) {
       var self2 = this;
       var q = self2.getElementQueue();
       var k2q = self2.getElementKeyToQueue();
@@ -23675,10 +27968,10 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    ETCp.onDequeue = function(fn2) {
+    ETCp.onDequeue = function (fn2) {
       this.onDequeues.push(fn2);
     };
-    ETCp.offDequeue = function(fn2) {
+    ETCp.offDequeue = function (fn2) {
       removeFromArray(this.onDequeues, fn2);
     };
     ETCp.setupDequeueing = defs.setupDequeueing({
@@ -23710,7 +28003,7 @@ var require_cytoscape_cjs = __commonJS({
       },
       priority: function priority(self2) {
         return self2.renderer.beforeRenderPriorities.eleTxrDeq;
-      }
+      },
     });
     var defNumLayers = 1;
     var minLvl = -4;
@@ -23728,18 +28021,21 @@ var require_cytoscape_cjs = __commonJS({
     var useHighQualityEleTxrReqs = true;
     var LayeredTextureCache = function LayeredTextureCache2(renderer2) {
       var self2 = this;
-      var r = self2.renderer = renderer2;
+      var r = (self2.renderer = renderer2);
       var cy = r.cy;
       self2.layersByLevel = {};
       self2.firstGet = true;
       self2.lastInvalidationTime = performanceNow() - 2 * invalidThreshold;
       self2.skipping = false;
       self2.eleTxrDeqs = cy.collection();
-      self2.scheduleElementRefinement = debounce__default["default"](function() {
-        self2.refineElementTextures(self2.eleTxrDeqs);
-        self2.eleTxrDeqs.unmerge(self2.eleTxrDeqs);
-      }, refineEleDebounceTime);
-      r.beforeRender(function(willDraw, now) {
+      self2.scheduleElementRefinement = debounce__default["default"](
+        function () {
+          self2.refineElementTextures(self2.eleTxrDeqs);
+          self2.eleTxrDeqs.unmerge(self2.eleTxrDeqs);
+        },
+        refineEleDebounceTime,
+      );
+      r.beforeRender(function (willDraw, now) {
         if (now - self2.lastInvalidationTime <= invalidThreshold) {
           self2.skipping = true;
         } else {
@@ -23755,13 +28051,13 @@ var require_cytoscape_cjs = __commonJS({
     var LTCp = LayeredTextureCache.prototype;
     var layerIdPool = 0;
     var MAX_INT = Math.pow(2, 53) - 1;
-    LTCp.makeLayer = function(bb, lvl) {
+    LTCp.makeLayer = function (bb, lvl) {
       var scale = Math.pow(2, lvl);
       var w = Math.ceil(bb.w * scale);
       var h = Math.ceil(bb.h * scale);
       var canvas = this.renderer.makeOffscreenCanvas(w, h);
       var layer = {
-        id: layerIdPool = ++layerIdPool % MAX_INT,
+        id: (layerIdPool = ++layerIdPool % MAX_INT),
         bb,
         level: lvl,
         width: w,
@@ -23770,7 +28066,7 @@ var require_cytoscape_cjs = __commonJS({
         context: canvas.getContext("2d"),
         eles: [],
         elesQueue: [],
-        reqs: 0
+        reqs: 0,
       };
       var cxt = layer.context;
       var dx = -layer.bb.x1;
@@ -23779,7 +28075,7 @@ var require_cytoscape_cjs = __commonJS({
       cxt.translate(dx, dy);
       return layer;
     };
-    LTCp.getLayers = function(eles, pxRatio, lvl) {
+    LTCp.getLayers = function (eles, pxRatio, lvl) {
       var self2 = this;
       var r = self2.renderer;
       var cy = r.cy;
@@ -23797,7 +28093,7 @@ var require_cytoscape_cjs = __commonJS({
       self2.validateLayersElesOrdering(lvl, eles);
       var layersByLvl = self2.layersByLevel;
       var scale = Math.pow(2, lvl);
-      var layers = layersByLvl[lvl] = layersByLvl[lvl] || [];
+      var layers = (layersByLvl[lvl] = layersByLvl[lvl] || []);
       var bb;
       var lvlComplete = self2.levelIsComplete(lvl, eles);
       var tmpLayers;
@@ -23868,16 +28164,20 @@ var require_cytoscape_cjs = __commonJS({
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
         var rs = ele._private.rscratch;
-        var caches = rs.imgLayerCaches = rs.imgLayerCaches || {};
+        var caches = (rs.imgLayerCaches = rs.imgLayerCaches || {});
         var existingLayer = caches[lvl];
         if (existingLayer) {
           layer = existingLayer;
           continue;
         }
-        if (!layer || layer.eles.length >= maxElesPerLayer || !boundingBoxInBoundingBox(layer.bb, ele.boundingBox())) {
+        if (
+          !layer ||
+          layer.eles.length >= maxElesPerLayer ||
+          !boundingBoxInBoundingBox(layer.bb, ele.boundingBox())
+        ) {
           layer = makeLayer({
             insert: true,
-            after: layer
+            after: layer,
           });
           if (!layer) {
             return null;
@@ -23899,10 +28199,10 @@ var require_cytoscape_cjs = __commonJS({
       }
       return layers;
     };
-    LTCp.getEleLevelForLayerLevel = function(lvl, pxRatio) {
+    LTCp.getEleLevelForLayerLevel = function (lvl, pxRatio) {
       return lvl;
     };
-    LTCp.drawEleInLayer = function(layer, ele, lvl, pxRatio) {
+    LTCp.drawEleInLayer = function (layer, ele, lvl, pxRatio) {
       var self2 = this;
       var r = this.renderer;
       var context = layer.context;
@@ -23915,13 +28215,20 @@ var require_cytoscape_cjs = __commonJS({
         r.setImgSmoothing(context, false);
       }
       {
-        r.drawCachedElement(context, ele, null, null, lvl, useHighQualityEleTxrReqs);
+        r.drawCachedElement(
+          context,
+          ele,
+          null,
+          null,
+          lvl,
+          useHighQualityEleTxrReqs,
+        );
       }
       {
         r.setImgSmoothing(context, true);
       }
     };
-    LTCp.levelIsComplete = function(lvl, eles) {
+    LTCp.levelIsComplete = function (lvl, eles) {
       var self2 = this;
       var layers = self2.layersByLevel[lvl];
       if (!layers || layers.length === 0) {
@@ -23943,7 +28250,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return true;
     };
-    LTCp.validateLayersElesOrdering = function(lvl, eles) {
+    LTCp.validateLayersElesOrdering = function (lvl, eles) {
       var layers = this.layersByLevel[lvl];
       if (!layers) {
         return;
@@ -23970,27 +28277,30 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    LTCp.updateElementsInLayers = function(eles, update) {
+    LTCp.updateElementsInLayers = function (eles, update) {
       var self2 = this;
       var isEles = element(eles[0]);
       for (var i2 = 0; i2 < eles.length; i2++) {
         var req = isEles ? null : eles[i2];
         var ele = isEles ? eles[i2] : eles[i2].ele;
         var rs = ele._private.rscratch;
-        var caches = rs.imgLayerCaches = rs.imgLayerCaches || {};
+        var caches = (rs.imgLayerCaches = rs.imgLayerCaches || {});
         for (var l = minLvl; l <= maxLvl; l++) {
           var layer = caches[l];
           if (!layer) {
             continue;
           }
-          if (req && self2.getEleLevelForLayerLevel(layer.level) !== req.level) {
+          if (
+            req &&
+            self2.getEleLevelForLayerLevel(layer.level) !== req.level
+          ) {
             continue;
           }
           update(layer, ele, req);
         }
       }
     };
-    LTCp.haveLayers = function() {
+    LTCp.haveLayers = function () {
       var self2 = this;
       var haveLayers = false;
       for (var l = minLvl; l <= maxLvl; l++) {
@@ -24002,7 +28312,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return haveLayers;
     };
-    LTCp.invalidateElements = function(eles) {
+    LTCp.invalidateElements = function (eles) {
       var self2 = this;
       if (eles.length === 0) {
         return;
@@ -24011,11 +28321,14 @@ var require_cytoscape_cjs = __commonJS({
       if (eles.length === 0 || !self2.haveLayers()) {
         return;
       }
-      self2.updateElementsInLayers(eles, function invalAssocLayers(layer, ele, req) {
-        self2.invalidateLayer(layer);
-      });
+      self2.updateElementsInLayers(
+        eles,
+        function invalAssocLayers(layer, ele, req) {
+          self2.invalidateLayer(layer);
+        },
+      );
     };
-    LTCp.invalidateLayer = function(layer) {
+    LTCp.invalidateLayer = function (layer) {
       this.lastInvalidationTime = performanceNow();
       if (layer.invalid) {
         return;
@@ -24036,31 +28349,34 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
     };
-    LTCp.refineElementTextures = function(eles) {
+    LTCp.refineElementTextures = function (eles) {
       var self2 = this;
-      self2.updateElementsInLayers(eles, function refineEachEle(layer, ele, req) {
-        var rLyr = layer.replacement;
-        if (!rLyr) {
-          rLyr = layer.replacement = self2.makeLayer(layer.bb, layer.level);
-          rLyr.replaces = layer;
-          rLyr.eles = layer.eles;
-        }
-        if (!rLyr.reqs) {
-          for (var i2 = 0; i2 < rLyr.eles.length; i2++) {
-            self2.queueLayer(rLyr, rLyr.eles[i2]);
+      self2.updateElementsInLayers(
+        eles,
+        function refineEachEle(layer, ele, req) {
+          var rLyr = layer.replacement;
+          if (!rLyr) {
+            rLyr = layer.replacement = self2.makeLayer(layer.bb, layer.level);
+            rLyr.replaces = layer;
+            rLyr.eles = layer.eles;
           }
-        }
-      });
+          if (!rLyr.reqs) {
+            for (var i2 = 0; i2 < rLyr.eles.length; i2++) {
+              self2.queueLayer(rLyr, rLyr.eles[i2]);
+            }
+          }
+        },
+      );
     };
-    LTCp.enqueueElementRefinement = function(ele) {
+    LTCp.enqueueElementRefinement = function (ele) {
       this.eleTxrDeqs.merge(ele);
       this.scheduleElementRefinement();
     };
-    LTCp.queueLayer = function(layer, ele) {
+    LTCp.queueLayer = function (layer, ele) {
       var self2 = this;
       var q = self2.layersQueue;
       var elesQ = layer.elesQueue;
-      var hasId = elesQ.hasId = elesQ.hasId || {};
+      var hasId = (elesQ.hasId = elesQ.hasId || {});
       if (layer.replacement) {
         return;
       }
@@ -24079,7 +28395,7 @@ var require_cytoscape_cjs = __commonJS({
         q.push(layer);
       }
     };
-    LTCp.dequeue = function(pxRatio) {
+    LTCp.dequeue = function (pxRatio) {
       var self2 = this;
       var q = self2.layersQueue;
       var deqd = [];
@@ -24120,7 +28436,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       return deqd;
     };
-    LTCp.applyLayerReplacement = function(layer) {
+    LTCp.applyLayerReplacement = function (layer) {
       var self2 = this;
       var layersInLevel = self2.layersByLevel[layer.level];
       var replaced = layer.replaces;
@@ -24131,14 +28447,14 @@ var require_cytoscape_cjs = __commonJS({
       layersInLevel[index] = layer;
       for (var i2 = 0; i2 < layer.eles.length; i2++) {
         var _p = layer.eles[i2]._private;
-        var cache2 = _p.imgLayerCaches = _p.imgLayerCaches || {};
+        var cache2 = (_p.imgLayerCaches = _p.imgLayerCaches || {});
         if (cache2) {
           cache2[layer.level] = layer;
         }
       }
       self2.requestRedraw();
     };
-    LTCp.requestRedraw = debounce__default["default"](function() {
+    LTCp.requestRedraw = debounce__default["default"](function () {
       var r = this.renderer;
       r.redrawHint("eles", true);
       r.redrawHint("drag", true);
@@ -24157,7 +28473,7 @@ var require_cytoscape_cjs = __commonJS({
       shouldRedraw: trueify,
       priority: function priority(self2) {
         return self2.renderer.beforeRenderPriorities.lyrTxrDeq;
-      }
+      },
     });
     var CRp$a = {};
     var impl;
@@ -24176,7 +28492,12 @@ var require_cytoscape_cjs = __commonJS({
         }
         context.lineTo(pt.x, pt.y);
       }
-      context.quadraticCurveTo(controlPoint.x, controlPoint.y, firstPt.x, firstPt.y);
+      context.quadraticCurveTo(
+        controlPoint.x,
+        controlPoint.y,
+        firstPt.x,
+        firstPt.y,
+      );
     }
     function triangleTee(context, trianglePoints, teePoints) {
       if (context.beginPath) {
@@ -24217,26 +28538,48 @@ var require_cytoscape_cjs = __commonJS({
     function circle(context, rx, ry, r) {
       context.arc(rx, ry, r, 0, Math.PI * 2, false);
     }
-    CRp$a.arrowShapeImpl = function(name) {
-      return (impl || (impl = {
-        "polygon": polygon,
-        "triangle-backcurve": triangleBackcurve,
-        "triangle-tee": triangleTee,
-        "circle-triangle": circleTriangle,
-        "triangle-cross": triangleTee,
-        "circle": circle
-      }))[name];
+    CRp$a.arrowShapeImpl = function (name) {
+      return (impl ||
+        (impl = {
+          polygon: polygon,
+          "triangle-backcurve": triangleBackcurve,
+          "triangle-tee": triangleTee,
+          "circle-triangle": circleTriangle,
+          "triangle-cross": triangleTee,
+          circle: circle,
+        }))[name];
     };
     var CRp$9 = {};
-    CRp$9.drawElement = function(context, ele, shiftToOriginWithBb, showLabel, showOverlay, showOpacity) {
+    CRp$9.drawElement = function (
+      context,
+      ele,
+      shiftToOriginWithBb,
+      showLabel,
+      showOverlay,
+      showOpacity,
+    ) {
       var r = this;
       if (ele.isNode()) {
-        r.drawNode(context, ele, shiftToOriginWithBb, showLabel, showOverlay, showOpacity);
+        r.drawNode(
+          context,
+          ele,
+          shiftToOriginWithBb,
+          showLabel,
+          showOverlay,
+          showOpacity,
+        );
       } else {
-        r.drawEdge(context, ele, shiftToOriginWithBb, showLabel, showOverlay, showOpacity);
+        r.drawEdge(
+          context,
+          ele,
+          shiftToOriginWithBb,
+          showLabel,
+          showOverlay,
+          showOpacity,
+        );
       }
     };
-    CRp$9.drawElementOverlay = function(context, ele) {
+    CRp$9.drawElementOverlay = function (context, ele) {
       var r = this;
       if (ele.isNode()) {
         r.drawNodeOverlay(context, ele);
@@ -24244,7 +28587,7 @@ var require_cytoscape_cjs = __commonJS({
         r.drawEdgeOverlay(context, ele);
       }
     };
-    CRp$9.drawElementUnderlay = function(context, ele) {
+    CRp$9.drawElementUnderlay = function (context, ele) {
       var r = this;
       if (ele.isNode()) {
         r.drawNodeUnderlay(context, ele);
@@ -24252,7 +28595,16 @@ var require_cytoscape_cjs = __commonJS({
         r.drawEdgeUnderlay(context, ele);
       }
     };
-    CRp$9.drawCachedElementPortion = function(context, ele, eleTxrCache, pxRatio, lvl, reason, getRotation, getOpacity2) {
+    CRp$9.drawCachedElementPortion = function (
+      context,
+      ele,
+      eleTxrCache,
+      pxRatio,
+      lvl,
+      reason,
+      getRotation,
+      getOpacity2,
+    ) {
       var r = this;
       var bb = eleTxrCache.getBoundingBox(ele);
       if (bb.w === 0 || bb.h === 0) {
@@ -24265,7 +28617,10 @@ var require_cytoscape_cjs = __commonJS({
           return;
         }
         var theta = getRotation(r, ele);
-        var x1 = bb.x1, y1 = bb.y1, w = bb.w, h = bb.h;
+        var x1 = bb.x1,
+          y1 = bb.y1,
+          w = bb.w,
+          h = bb.h;
         var x, y, sx, sy, smooth;
         if (theta !== 0) {
           var rotPt = eleTxrCache.getRotationPoint(ele);
@@ -24289,7 +28644,17 @@ var require_cytoscape_cjs = __commonJS({
           oldGlobalAlpha = context.globalAlpha;
           context.globalAlpha = oldGlobalAlpha * opacity;
         }
-        context.drawImage(eleCache.texture.canvas, eleCache.x, 0, eleCache.width, eleCache.height, x, y, w, h);
+        context.drawImage(
+          eleCache.texture.canvas,
+          eleCache.x,
+          0,
+          eleCache.width,
+          eleCache.height,
+          x,
+          y,
+          w,
+          h,
+        );
         if (opacity !== 1) {
           context.globalAlpha = oldGlobalAlpha;
         }
@@ -24322,11 +28687,23 @@ var require_cytoscape_cjs = __commonJS({
     var getTextOpacity = function getTextOpacity2(e, ele) {
       return ele.pstyle("text-opacity").pfValue * ele.effectiveOpacity();
     };
-    CRp$9.drawCachedElement = function(context, ele, pxRatio, extent, lvl, requestHighQuality) {
+    CRp$9.drawCachedElement = function (
+      context,
+      ele,
+      pxRatio,
+      extent,
+      lvl,
+      requestHighQuality,
+    ) {
       var r = this;
-      var _r$data = r.data, eleTxrCache = _r$data.eleTxrCache, lblTxrCache = _r$data.lblTxrCache, slbTxrCache = _r$data.slbTxrCache, tlbTxrCache = _r$data.tlbTxrCache;
+      var _r$data = r.data,
+        eleTxrCache = _r$data.eleTxrCache,
+        lblTxrCache = _r$data.lblTxrCache,
+        slbTxrCache = _r$data.slbTxrCache,
+        tlbTxrCache = _r$data.tlbTxrCache;
       var bb = ele.boundingBox();
-      var reason = requestHighQuality === true ? eleTxrCache.reasons.highQuality : null;
+      var reason =
+        requestHighQuality === true ? eleTxrCache.reasons.highQuality : null;
       if (bb.w === 0 || bb.h === 0 || !ele.visible()) {
         return;
       }
@@ -24334,32 +28711,68 @@ var require_cytoscape_cjs = __commonJS({
         var isEdge = ele.isEdge();
         var badLine = ele.element()._private.rscratch.badLine;
         r.drawElementUnderlay(context, ele);
-        r.drawCachedElementPortion(context, ele, eleTxrCache, pxRatio, lvl, reason, getZeroRotation, getOpacity);
+        r.drawCachedElementPortion(
+          context,
+          ele,
+          eleTxrCache,
+          pxRatio,
+          lvl,
+          reason,
+          getZeroRotation,
+          getOpacity,
+        );
         if (!isEdge || !badLine) {
-          r.drawCachedElementPortion(context, ele, lblTxrCache, pxRatio, lvl, reason, getLabelRotation, getTextOpacity);
+          r.drawCachedElementPortion(
+            context,
+            ele,
+            lblTxrCache,
+            pxRatio,
+            lvl,
+            reason,
+            getLabelRotation,
+            getTextOpacity,
+          );
         }
         if (isEdge && !badLine) {
-          r.drawCachedElementPortion(context, ele, slbTxrCache, pxRatio, lvl, reason, getSourceLabelRotation, getTextOpacity);
-          r.drawCachedElementPortion(context, ele, tlbTxrCache, pxRatio, lvl, reason, getTargetLabelRotation, getTextOpacity);
+          r.drawCachedElementPortion(
+            context,
+            ele,
+            slbTxrCache,
+            pxRatio,
+            lvl,
+            reason,
+            getSourceLabelRotation,
+            getTextOpacity,
+          );
+          r.drawCachedElementPortion(
+            context,
+            ele,
+            tlbTxrCache,
+            pxRatio,
+            lvl,
+            reason,
+            getTargetLabelRotation,
+            getTextOpacity,
+          );
         }
         r.drawElementOverlay(context, ele);
       }
     };
-    CRp$9.drawElements = function(context, eles) {
+    CRp$9.drawElements = function (context, eles) {
       var r = this;
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
         r.drawElement(context, ele);
       }
     };
-    CRp$9.drawCachedElements = function(context, eles, pxRatio, extent) {
+    CRp$9.drawCachedElements = function (context, eles, pxRatio, extent) {
       var r = this;
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
         r.drawCachedElement(context, ele, pxRatio, extent);
       }
     };
-    CRp$9.drawCachedNodes = function(context, eles, pxRatio, extent) {
+    CRp$9.drawCachedNodes = function (context, eles, pxRatio, extent) {
       var r = this;
       for (var i2 = 0; i2 < eles.length; i2++) {
         var ele = eles[i2];
@@ -24369,7 +28782,7 @@ var require_cytoscape_cjs = __commonJS({
         r.drawCachedElement(context, ele, pxRatio, extent);
       }
     };
-    CRp$9.drawLayeredElements = function(context, eles, pxRatio, extent) {
+    CRp$9.drawLayeredElements = function (context, eles, pxRatio, extent) {
       var r = this;
       var layers = r.data.lyrTxrCache.getLayers(eles, pxRatio);
       if (layers) {
@@ -24386,10 +28799,13 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var CRp$8 = {};
-    CRp$8.drawEdge = function(context, edge, shiftToOriginWithBb) {
-      var drawLabel = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
-      var shouldDrawOverlay = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
-      var shouldDrawOpacity = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
+    CRp$8.drawEdge = function (context, edge, shiftToOriginWithBb) {
+      var drawLabel =
+        arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
+      var shouldDrawOverlay =
+        arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
+      var shouldDrawOpacity =
+        arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
       var r = this;
       var rs = edge._private.rscratch;
       if (shouldDrawOpacity && !edge.visible()) {
@@ -24404,7 +28820,9 @@ var require_cytoscape_cjs = __commonJS({
         context.translate(-bb.x1, -bb.y1);
       }
       var opacity = shouldDrawOpacity ? edge.pstyle("opacity").value : 1;
-      var lineOpacity = shouldDrawOpacity ? edge.pstyle("line-opacity").value : 1;
+      var lineOpacity = shouldDrawOpacity
+        ? edge.pstyle("line-opacity").value
+        : 1;
       var curveStyle = edge.pstyle("curve-style").value;
       var lineStyle = edge.pstyle("line-style").value;
       var edgeWidth = edge.pstyle("width").pfValue;
@@ -24412,7 +28830,10 @@ var require_cytoscape_cjs = __commonJS({
       var effectiveLineOpacity = opacity * lineOpacity;
       var effectiveArrowOpacity = opacity * lineOpacity;
       var drawLine = function drawLine2() {
-        var strokeOpacity = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : effectiveLineOpacity;
+        var strokeOpacity =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : effectiveLineOpacity;
         if (curveStyle === "straight-triangle") {
           r.eleStrokeStyle(context, edge, strokeOpacity);
           r.drawEdgeTrianglePath(edge, context, rs.allpts);
@@ -24437,7 +28858,10 @@ var require_cytoscape_cjs = __commonJS({
         r.drawEdgeUnderlay(context, edge);
       };
       var drawArrows = function drawArrows2() {
-        var arrowOpacity = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : effectiveArrowOpacity;
+        var arrowOpacity =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : effectiveArrowOpacity;
         r.drawArrowheads(context, edge, arrowOpacity);
       };
       var drawText = function drawText2() {
@@ -24464,22 +28888,28 @@ var require_cytoscape_cjs = __commonJS({
         context.translate(bb.x1, bb.y1);
       }
     };
-    var drawEdgeOverlayUnderlay = function drawEdgeOverlayUnderlay2(overlayOrUnderlay) {
+    var drawEdgeOverlayUnderlay = function drawEdgeOverlayUnderlay2(
+      overlayOrUnderlay,
+    ) {
       if (!["overlay", "underlay"].includes(overlayOrUnderlay)) {
         throw new Error("Invalid state");
       }
-      return function(context, edge) {
+      return function (context, edge) {
         if (!edge.visible()) {
           return;
         }
-        var opacity = edge.pstyle("".concat(overlayOrUnderlay, "-opacity")).value;
+        var opacity = edge.pstyle(
+          "".concat(overlayOrUnderlay, "-opacity"),
+        ).value;
         if (opacity === 0) {
           return;
         }
         var r = this;
         var usePaths = r.usePaths();
         var rs = edge._private.rscratch;
-        var padding = edge.pstyle("".concat(overlayOrUnderlay, "-padding")).pfValue;
+        var padding = edge.pstyle(
+          "".concat(overlayOrUnderlay, "-padding"),
+        ).pfValue;
         var width = 2 * padding;
         var color = edge.pstyle("".concat(overlayOrUnderlay, "-color")).value;
         context.lineWidth = width;
@@ -24494,7 +28924,7 @@ var require_cytoscape_cjs = __commonJS({
     };
     CRp$8.drawEdgeOverlay = drawEdgeOverlayUnderlay("overlay");
     CRp$8.drawEdgeUnderlay = drawEdgeOverlayUnderlay("underlay");
-    CRp$8.drawEdgePath = function(edge, context, pts2, type) {
+    CRp$8.drawEdgePath = function (edge, context, pts2, type) {
       var rs = edge._private.rscratch;
       var canvasCxt = context;
       var path;
@@ -24539,7 +28969,12 @@ var require_cytoscape_cjs = __commonJS({
           case "compound":
           case "multibezier":
             for (var i2 = 2; i2 + 3 < pts2.length; i2 += 4) {
-              context.quadraticCurveTo(pts2[i2], pts2[i2 + 1], pts2[i2 + 2], pts2[i2 + 3]);
+              context.quadraticCurveTo(
+                pts2[i2],
+                pts2[i2 + 1],
+                pts2[i2 + 2],
+                pts2[i2 + 3],
+              );
             }
             break;
           case "straight":
@@ -24561,36 +28996,92 @@ var require_cytoscape_cjs = __commonJS({
         context.setLineDash([]);
       }
     };
-    CRp$8.drawEdgeTrianglePath = function(edge, context, pts2) {
+    CRp$8.drawEdgeTrianglePath = function (edge, context, pts2) {
       context.fillStyle = context.strokeStyle;
       var edgeWidth = edge.pstyle("width").pfValue;
       for (var i2 = 0; i2 + 1 < pts2.length; i2 += 2) {
         var vector = [pts2[i2 + 2] - pts2[i2], pts2[i2 + 3] - pts2[i2 + 1]];
         var length = Math.sqrt(vector[0] * vector[0] + vector[1] * vector[1]);
         var normal = [vector[1] / length, -vector[0] / length];
-        var triangleHead = [normal[0] * edgeWidth / 2, normal[1] * edgeWidth / 2];
+        var triangleHead = [
+          (normal[0] * edgeWidth) / 2,
+          (normal[1] * edgeWidth) / 2,
+        ];
         context.beginPath();
-        context.moveTo(pts2[i2] - triangleHead[0], pts2[i2 + 1] - triangleHead[1]);
-        context.lineTo(pts2[i2] + triangleHead[0], pts2[i2 + 1] + triangleHead[1]);
+        context.moveTo(
+          pts2[i2] - triangleHead[0],
+          pts2[i2 + 1] - triangleHead[1],
+        );
+        context.lineTo(
+          pts2[i2] + triangleHead[0],
+          pts2[i2 + 1] + triangleHead[1],
+        );
         context.lineTo(pts2[i2 + 2], pts2[i2 + 3]);
         context.closePath();
         context.fill();
       }
     };
-    CRp$8.drawArrowheads = function(context, edge, opacity) {
+    CRp$8.drawArrowheads = function (context, edge, opacity) {
       var rs = edge._private.rscratch;
       var isHaystack = rs.edgeType === "haystack";
       if (!isHaystack) {
-        this.drawArrowhead(context, edge, "source", rs.arrowStartX, rs.arrowStartY, rs.srcArrowAngle, opacity);
+        this.drawArrowhead(
+          context,
+          edge,
+          "source",
+          rs.arrowStartX,
+          rs.arrowStartY,
+          rs.srcArrowAngle,
+          opacity,
+        );
       }
-      this.drawArrowhead(context, edge, "mid-target", rs.midX, rs.midY, rs.midtgtArrowAngle, opacity);
-      this.drawArrowhead(context, edge, "mid-source", rs.midX, rs.midY, rs.midsrcArrowAngle, opacity);
+      this.drawArrowhead(
+        context,
+        edge,
+        "mid-target",
+        rs.midX,
+        rs.midY,
+        rs.midtgtArrowAngle,
+        opacity,
+      );
+      this.drawArrowhead(
+        context,
+        edge,
+        "mid-source",
+        rs.midX,
+        rs.midY,
+        rs.midsrcArrowAngle,
+        opacity,
+      );
       if (!isHaystack) {
-        this.drawArrowhead(context, edge, "target", rs.arrowEndX, rs.arrowEndY, rs.tgtArrowAngle, opacity);
+        this.drawArrowhead(
+          context,
+          edge,
+          "target",
+          rs.arrowEndX,
+          rs.arrowEndY,
+          rs.tgtArrowAngle,
+          opacity,
+        );
       }
     };
-    CRp$8.drawArrowhead = function(context, edge, prefix, x, y, angle, opacity) {
-      if (isNaN(x) || x == null || isNaN(y) || y == null || isNaN(angle) || angle == null) {
+    CRp$8.drawArrowhead = function (
+      context,
+      edge,
+      prefix,
+      x,
+      y,
+      angle,
+      opacity,
+    ) {
+      if (
+        isNaN(x) ||
+        x == null ||
+        isNaN(y) ||
+        y == null ||
+        isNaN(angle) ||
+        angle == null
+      ) {
         return;
       }
       var self2 = this;
@@ -24598,13 +29089,16 @@ var require_cytoscape_cjs = __commonJS({
       if (arrowShape === "none") {
         return;
       }
-      var arrowClearFill = edge.pstyle(prefix + "-arrow-fill").value === "hollow" ? "both" : "filled";
+      var arrowClearFill =
+        edge.pstyle(prefix + "-arrow-fill").value === "hollow"
+          ? "both"
+          : "filled";
       var arrowFill = edge.pstyle(prefix + "-arrow-fill").value;
       var edgeWidth = edge.pstyle("width").pfValue;
       var pArrowWidth = edge.pstyle(prefix + "-arrow-width");
-      var arrowWidth = pArrowWidth.value === "match-line" ? edgeWidth : pArrowWidth.pfValue;
-      if (pArrowWidth.units === "%")
-        arrowWidth *= edgeWidth;
+      var arrowWidth =
+        pArrowWidth.value === "match-line" ? edgeWidth : pArrowWidth.pfValue;
+      if (pArrowWidth.units === "%") arrowWidth *= edgeWidth;
       var edgeOpacity = edge.pstyle("opacity").value;
       if (opacity === void 0) {
         opacity = edgeOpacity;
@@ -24614,15 +29108,45 @@ var require_cytoscape_cjs = __commonJS({
         context.globalCompositeOperation = "destination-out";
         self2.colorFillStyle(context, 255, 255, 255, 1);
         self2.colorStrokeStyle(context, 255, 255, 255, 1);
-        self2.drawArrowShape(edge, context, arrowClearFill, edgeWidth, arrowShape, arrowWidth, x, y, angle);
+        self2.drawArrowShape(
+          edge,
+          context,
+          arrowClearFill,
+          edgeWidth,
+          arrowShape,
+          arrowWidth,
+          x,
+          y,
+          angle,
+        );
         context.globalCompositeOperation = gco;
       }
       var color = edge.pstyle(prefix + "-arrow-color").value;
       self2.colorFillStyle(context, color[0], color[1], color[2], opacity);
       self2.colorStrokeStyle(context, color[0], color[1], color[2], opacity);
-      self2.drawArrowShape(edge, context, arrowFill, edgeWidth, arrowShape, arrowWidth, x, y, angle);
+      self2.drawArrowShape(
+        edge,
+        context,
+        arrowFill,
+        edgeWidth,
+        arrowShape,
+        arrowWidth,
+        x,
+        y,
+        angle,
+      );
     };
-    CRp$8.drawArrowShape = function(edge, context, fill, edgeWidth, shape, shapeWidth, x, y, angle) {
+    CRp$8.drawArrowShape = function (
+      edge,
+      context,
+      fill,
+      edgeWidth,
+      shape,
+      shapeWidth,
+      x,
+      y,
+      angle,
+    ) {
       var r = this;
       var usePaths = this.usePaths() && shape !== "triangle-cross";
       var pathCacheHit = false;
@@ -24630,13 +29154,13 @@ var require_cytoscape_cjs = __commonJS({
       var canvasContext = context;
       var translation = {
         x,
-        y
+        y,
       };
       var scale = edge.pstyle("arrow-scale").value;
       var size = this.getArrowWidth(edgeWidth, scale);
       var shapeImpl = r.arrowShapes[shape];
       if (usePaths) {
-        var cache2 = r.arrowPathCache = r.arrowPathCache || [];
+        var cache2 = (r.arrowPathCache = r.arrowPathCache || []);
         var key = hashString(shape);
         var cachedPath = cache2[key];
         if (cachedPath != null) {
@@ -24652,10 +29176,16 @@ var require_cytoscape_cjs = __commonJS({
           context.beginPath();
         }
         if (usePaths) {
-          shapeImpl.draw(context, 1, 0, {
-            x: 0,
-            y: 0
-          }, 1);
+          shapeImpl.draw(
+            context,
+            1,
+            0,
+            {
+              x: 0,
+              y: 0,
+            },
+            1,
+          );
         } else {
           shapeImpl.draw(context, size, angle, translation, edgeWidth);
         }
@@ -24692,7 +29222,7 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var CRp$7 = {};
-    CRp$7.safeDrawImage = function(context, img, ix, iy, iw, ih, x, y, w, h) {
+    CRp$7.safeDrawImage = function (context, img, ix, iy, iw, ih, x, y, w, h) {
       if (iw <= 0 || ih <= 0 || w <= 0 || h <= 0) {
         return;
       }
@@ -24702,7 +29232,13 @@ var require_cytoscape_cjs = __commonJS({
         warn(e);
       }
     };
-    CRp$7.drawInscribedImage = function(context, img, node, index, nodeOpacity) {
+    CRp$7.drawInscribedImage = function (
+      context,
+      img,
+      node,
+      index,
+      nodeOpacity,
+    ) {
       var r = this;
       var pos = node.position();
       var nodeX = pos.x;
@@ -24714,13 +29250,38 @@ var require_cytoscape_cjs = __commonJS({
       var nodeW = node.width();
       var nodeH = node.height();
       var paddingX2 = node.padding() * 2;
-      var nodeTW = nodeW + (getIndexedStyle(node, "background-width-relative-to", "value", index) === "inner" ? 0 : paddingX2);
-      var nodeTH = nodeH + (getIndexedStyle(node, "background-height-relative-to", "value", index) === "inner" ? 0 : paddingX2);
+      var nodeTW =
+        nodeW +
+        (getIndexedStyle(
+          node,
+          "background-width-relative-to",
+          "value",
+          index,
+        ) === "inner"
+          ? 0
+          : paddingX2);
+      var nodeTH =
+        nodeH +
+        (getIndexedStyle(
+          node,
+          "background-height-relative-to",
+          "value",
+          index,
+        ) === "inner"
+          ? 0
+          : paddingX2);
       var rs = node._private.rscratch;
       var clip = getIndexedStyle(node, "background-clip", "value", index);
       var shouldClip = clip === "node";
-      var imgOpacity = getIndexedStyle(node, "background-image-opacity", "value", index) * nodeOpacity;
-      var smooth = getIndexedStyle(node, "background-image-smoothing", "value", index);
+      var imgOpacity =
+        getIndexedStyle(node, "background-image-opacity", "value", index) *
+        nodeOpacity;
+      var smooth = getIndexedStyle(
+        node,
+        "background-image-smoothing",
+        "value",
+        index,
+      );
       var imgW = img.width || img.cachedW;
       var imgH = img.height || img.cachedH;
       if (null == imgW || null == imgH) {
@@ -24731,16 +29292,26 @@ var require_cytoscape_cjs = __commonJS({
       }
       var w = imgW;
       var h = imgH;
-      if (getIndexedStyle(node, "background-width", "value", index) !== "auto") {
+      if (
+        getIndexedStyle(node, "background-width", "value", index) !== "auto"
+      ) {
         if (getIndexedStyle(node, "background-width", "units", index) === "%") {
-          w = getIndexedStyle(node, "background-width", "pfValue", index) * nodeTW;
+          w =
+            getIndexedStyle(node, "background-width", "pfValue", index) *
+            nodeTW;
         } else {
           w = getIndexedStyle(node, "background-width", "pfValue", index);
         }
       }
-      if (getIndexedStyle(node, "background-height", "value", index) !== "auto") {
-        if (getIndexedStyle(node, "background-height", "units", index) === "%") {
-          h = getIndexedStyle(node, "background-height", "pfValue", index) * nodeTH;
+      if (
+        getIndexedStyle(node, "background-height", "value", index) !== "auto"
+      ) {
+        if (
+          getIndexedStyle(node, "background-height", "units", index) === "%"
+        ) {
+          h =
+            getIndexedStyle(node, "background-height", "pfValue", index) *
+            nodeTH;
         } else {
           h = getIndexedStyle(node, "background-height", "pfValue", index);
         }
@@ -24758,30 +29329,70 @@ var require_cytoscape_cjs = __commonJS({
         h *= scale;
       }
       var x = nodeX - nodeTW / 2;
-      var posXUnits = getIndexedStyle(node, "background-position-x", "units", index);
-      var posXPfVal = getIndexedStyle(node, "background-position-x", "pfValue", index);
+      var posXUnits = getIndexedStyle(
+        node,
+        "background-position-x",
+        "units",
+        index,
+      );
+      var posXPfVal = getIndexedStyle(
+        node,
+        "background-position-x",
+        "pfValue",
+        index,
+      );
       if (posXUnits === "%") {
         x += (nodeTW - w) * posXPfVal;
       } else {
         x += posXPfVal;
       }
-      var offXUnits = getIndexedStyle(node, "background-offset-x", "units", index);
-      var offXPfVal = getIndexedStyle(node, "background-offset-x", "pfValue", index);
+      var offXUnits = getIndexedStyle(
+        node,
+        "background-offset-x",
+        "units",
+        index,
+      );
+      var offXPfVal = getIndexedStyle(
+        node,
+        "background-offset-x",
+        "pfValue",
+        index,
+      );
       if (offXUnits === "%") {
         x += (nodeTW - w) * offXPfVal;
       } else {
         x += offXPfVal;
       }
       var y = nodeY - nodeTH / 2;
-      var posYUnits = getIndexedStyle(node, "background-position-y", "units", index);
-      var posYPfVal = getIndexedStyle(node, "background-position-y", "pfValue", index);
+      var posYUnits = getIndexedStyle(
+        node,
+        "background-position-y",
+        "units",
+        index,
+      );
+      var posYPfVal = getIndexedStyle(
+        node,
+        "background-position-y",
+        "pfValue",
+        index,
+      );
       if (posYUnits === "%") {
         y += (nodeTH - h) * posYPfVal;
       } else {
         y += posYPfVal;
       }
-      var offYUnits = getIndexedStyle(node, "background-offset-y", "units", index);
-      var offYPfVal = getIndexedStyle(node, "background-offset-y", "pfValue", index);
+      var offYUnits = getIndexedStyle(
+        node,
+        "background-offset-y",
+        "units",
+        index,
+      );
+      var offYPfVal = getIndexedStyle(
+        node,
+        "background-offset-y",
+        "pfValue",
+        index,
+      );
       if (offYUnits === "%") {
         y += (nodeTH - h) * offYPfVal;
       } else {
@@ -24810,7 +29421,13 @@ var require_cytoscape_cjs = __commonJS({
           if (rs.pathCache) {
             context.clip(rs.pathCache);
           } else {
-            r.nodeShapes[r.getNodeShape(node)].draw(context, nodeX, nodeY, nodeTW, nodeTH);
+            r.nodeShapes[r.getNodeShape(node)].draw(
+              context,
+              nodeX,
+              nodeY,
+              nodeTW,
+              nodeTH,
+            );
             context.clip();
           }
         }
@@ -24821,7 +29438,13 @@ var require_cytoscape_cjs = __commonJS({
       } else {
         var pattern = context.createPattern(img, repeat);
         context.fillStyle = pattern;
-        r.nodeShapes[r.getNodeShape(node)].draw(context, nodeX, nodeY, nodeTW, nodeTH);
+        r.nodeShapes[r.getNodeShape(node)].draw(
+          context,
+          nodeX,
+          nodeY,
+          nodeTW,
+          nodeTH,
+        );
         context.translate(x, y);
         context.fill();
         context.translate(-x, -y);
@@ -24832,7 +29455,7 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var CRp$6 = {};
-    CRp$6.eleTextBiggerThanMin = function(ele, scale) {
+    CRp$6.eleTextBiggerThanMin = function (ele, scale) {
       if (!scale) {
         var zoom = ele.cy().zoom();
         var pxRatio = this.getPixelRatio();
@@ -24846,8 +29469,15 @@ var require_cytoscape_cjs = __commonJS({
       }
       return true;
     };
-    CRp$6.drawElementText = function(context, ele, shiftToOriginWithBb, force, prefix) {
-      var useEleOpacity = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
+    CRp$6.drawElementText = function (
+      context,
+      ele,
+      shiftToOriginWithBb,
+      force,
+      prefix,
+    ) {
+      var useEleOpacity =
+        arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
       var r = this;
       if (force == null) {
         if (useEleOpacity && !r.eleTextBiggerThanMin(ele)) {
@@ -24869,7 +29499,12 @@ var require_cytoscape_cjs = __commonJS({
         var _label = ele.pstyle("label");
         var srcLabel = ele.pstyle("source-label");
         var tgtLabel = ele.pstyle("target-label");
-        if (badLine || (!_label || !_label.value) && (!srcLabel || !srcLabel.value) && (!tgtLabel || !tgtLabel.value)) {
+        if (
+          badLine ||
+          ((!_label || !_label.value) &&
+            (!srcLabel || !srcLabel.value) &&
+            (!tgtLabel || !tgtLabel.value))
+        ) {
           return;
         }
         context.textAlign = "center";
@@ -24894,7 +29529,7 @@ var require_cytoscape_cjs = __commonJS({
         context.translate(bb.x1, bb.y1);
       }
     };
-    CRp$6.getFontCache = function(context) {
+    CRp$6.getFontCache = function (context) {
       var cache2;
       this.fontCaches = this.fontCaches || [];
       for (var i2 = 0; i2 < this.fontCaches.length; i2++) {
@@ -24904,46 +29539,60 @@ var require_cytoscape_cjs = __commonJS({
         }
       }
       cache2 = {
-        context
+        context,
       };
       this.fontCaches.push(cache2);
       return cache2;
     };
-    CRp$6.setupTextStyle = function(context, ele) {
-      var useEleOpacity = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : true;
+    CRp$6.setupTextStyle = function (context, ele) {
+      var useEleOpacity =
+        arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : true;
       var labelStyle = ele.pstyle("font-style").strValue;
       var labelSize = ele.pstyle("font-size").pfValue + "px";
       var labelFamily = ele.pstyle("font-family").strValue;
       var labelWeight = ele.pstyle("font-weight").strValue;
-      var opacity = useEleOpacity ? ele.effectiveOpacity() * ele.pstyle("text-opacity").value : 1;
+      var opacity = useEleOpacity
+        ? ele.effectiveOpacity() * ele.pstyle("text-opacity").value
+        : 1;
       var outlineOpacity = ele.pstyle("text-outline-opacity").value * opacity;
       var color = ele.pstyle("color").value;
       var outlineColor = ele.pstyle("text-outline-color").value;
-      context.font = labelStyle + " " + labelWeight + " " + labelSize + " " + labelFamily;
+      context.font =
+        labelStyle + " " + labelWeight + " " + labelSize + " " + labelFamily;
       context.lineJoin = "round";
       this.colorFillStyle(context, color[0], color[1], color[2], opacity);
-      this.colorStrokeStyle(context, outlineColor[0], outlineColor[1], outlineColor[2], outlineOpacity);
+      this.colorStrokeStyle(
+        context,
+        outlineColor[0],
+        outlineColor[1],
+        outlineColor[2],
+        outlineOpacity,
+      );
     };
     function roundRect(ctx, x, y, width, height) {
-      var radius = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : 5;
+      var radius =
+        arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : 5;
       var stroke = arguments.length > 6 ? arguments[6] : void 0;
       ctx.beginPath();
       ctx.moveTo(x + radius, y);
       ctx.lineTo(x + width - radius, y);
       ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
       ctx.lineTo(x + width, y + height - radius);
-      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.quadraticCurveTo(
+        x + width,
+        y + height,
+        x + width - radius,
+        y + height,
+      );
       ctx.lineTo(x + radius, y + height);
       ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
       ctx.lineTo(x, y + radius);
       ctx.quadraticCurveTo(x, y, x + radius, y);
       ctx.closePath();
-      if (stroke)
-        ctx.stroke();
-      else
-        ctx.fill();
+      if (stroke) ctx.stroke();
+      else ctx.fill();
     }
-    CRp$6.getTextAngle = function(ele, prefix) {
+    CRp$6.getTextAngle = function (ele, prefix) {
       var theta;
       var _p = ele._private;
       var rscratch = _p.rscratch;
@@ -24959,13 +29608,18 @@ var require_cytoscape_cjs = __commonJS({
       }
       return theta;
     };
-    CRp$6.drawText = function(context, ele, prefix) {
-      var applyRotation = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
-      var useEleOpacity = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
+    CRp$6.drawText = function (context, ele, prefix) {
+      var applyRotation =
+        arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
+      var useEleOpacity =
+        arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
       var _p = ele._private;
       var rscratch = _p.rscratch;
       var parentOpacity = useEleOpacity ? ele.effectiveOpacity() : 1;
-      if (useEleOpacity && (parentOpacity === 0 || ele.pstyle("text-opacity").value === 0)) {
+      if (
+        useEleOpacity &&
+        (parentOpacity === 0 || ele.pstyle("text-opacity").value === 0)
+      ) {
         return;
       }
       if (prefix === "main") {
@@ -25022,7 +29676,10 @@ var require_cytoscape_cjs = __commonJS({
         var styleShape = ele.pstyle("text-background-shape").strValue;
         var rounded = styleShape.indexOf("round") === 0;
         var roundRadius = 2;
-        if (backgroundOpacity > 0 || textBorderWidth > 0 && borderOpacity > 0) {
+        if (
+          backgroundOpacity > 0 ||
+          (textBorderWidth > 0 && borderOpacity > 0)
+        ) {
           var bgX = textX - backgroundPadding;
           switch (halign) {
             case "left":
@@ -25038,7 +29695,16 @@ var require_cytoscape_cjs = __commonJS({
           if (backgroundOpacity > 0) {
             var textFill = context.fillStyle;
             var textBackgroundColor = ele.pstyle("text-background-color").value;
-            context.fillStyle = "rgba(" + textBackgroundColor[0] + "," + textBackgroundColor[1] + "," + textBackgroundColor[2] + "," + backgroundOpacity * parentOpacity + ")";
+            context.fillStyle =
+              "rgba(" +
+              textBackgroundColor[0] +
+              "," +
+              textBackgroundColor[1] +
+              "," +
+              textBackgroundColor[2] +
+              "," +
+              backgroundOpacity * parentOpacity +
+              ")";
             if (rounded) {
               roundRect(context, bgX, bgY, bgW, bgH, roundRadius);
             } else {
@@ -25051,7 +29717,16 @@ var require_cytoscape_cjs = __commonJS({
             var textLineWidth = context.lineWidth;
             var textBorderColor = ele.pstyle("text-border-color").value;
             var textBorderStyle = ele.pstyle("text-border-style").value;
-            context.strokeStyle = "rgba(" + textBorderColor[0] + "," + textBorderColor[1] + "," + textBorderColor[2] + "," + borderOpacity * parentOpacity + ")";
+            context.strokeStyle =
+              "rgba(" +
+              textBorderColor[0] +
+              "," +
+              textBorderColor[1] +
+              "," +
+              textBorderColor[2] +
+              "," +
+              borderOpacity * parentOpacity +
+              ")";
             context.lineWidth = textBorderWidth;
             if (context.setLineDash) {
               switch (textBorderStyle) {
@@ -25078,9 +29753,22 @@ var require_cytoscape_cjs = __commonJS({
             if (textBorderStyle === "double") {
               var whiteWidth = textBorderWidth / 2;
               if (rounded) {
-                roundRect(context, bgX + whiteWidth, bgY + whiteWidth, bgW - whiteWidth * 2, bgH - whiteWidth * 2, roundRadius, "stroke");
+                roundRect(
+                  context,
+                  bgX + whiteWidth,
+                  bgY + whiteWidth,
+                  bgW - whiteWidth * 2,
+                  bgH - whiteWidth * 2,
+                  roundRadius,
+                  "stroke",
+                );
               } else {
-                context.strokeRect(bgX + whiteWidth, bgY + whiteWidth, bgW - whiteWidth * 2, bgH - whiteWidth * 2);
+                context.strokeRect(
+                  bgX + whiteWidth,
+                  bgY + whiteWidth,
+                  bgW - whiteWidth * 2,
+                  bgH - whiteWidth * 2,
+                );
               }
             }
             if (context.setLineDash) {
@@ -25095,12 +29783,19 @@ var require_cytoscape_cjs = __commonJS({
           context.lineWidth = lineWidth;
         }
         if (ele.pstyle("text-wrap").value === "wrap") {
-          var lines = getPrefixedProperty(rscratch, "labelWrapCachedLines", prefix);
-          var lineHeight = getPrefixedProperty(rscratch, "labelLineHeight", prefix);
+          var lines = getPrefixedProperty(
+            rscratch,
+            "labelWrapCachedLines",
+            prefix,
+          );
+          var lineHeight = getPrefixedProperty(
+            rscratch,
+            "labelLineHeight",
+            prefix,
+          );
           var halfTextW = textW / 2;
           var justification = this.getLabelJustification(ele);
-          if (justification === "auto")
-            ;
+          if (justification === "auto");
           else if (halign === "left") {
             if (justification === "left") {
               textX += -textW;
@@ -25149,10 +29844,13 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var CRp$5 = {};
-    CRp$5.drawNode = function(context, node, shiftToOriginWithBb) {
-      var drawLabel = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
-      var shouldDrawOverlay = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
-      var shouldDrawOpacity = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
+    CRp$5.drawNode = function (context, node, shiftToOriginWithBb) {
+      var drawLabel =
+        arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : true;
+      var shouldDrawOverlay =
+        arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : true;
+      var shouldDrawOpacity =
+        arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : true;
       var r = this;
       var nodeWidth, nodeHeight;
       var _p = node._private;
@@ -25183,11 +29881,14 @@ var require_cytoscape_cjs = __commonJS({
       var numImages = 0;
       for (var i2 = 0; i2 < urls.length; i2++) {
         var url = urls[i2];
-        var defd = urlDefined[i2] = url != null && url !== "none";
+        var defd = (urlDefined[i2] = url != null && url !== "none");
         if (defd) {
-          var bgImgCrossOrigin = node.cy().style().getIndexedStyle(node, "background-image-crossorigin", "value", i2);
+          var bgImgCrossOrigin = node
+            .cy()
+            .style()
+            .getIndexedStyle(node, "background-image-crossorigin", "value", i2);
           numImages++;
-          image[i2] = r.getCachedImage(url, bgImgCrossOrigin, function() {
+          image[i2] = r.getCachedImage(url, bgImgCrossOrigin, function () {
             _p.backgroundTimestamp = Date.now();
             node.emitAndNotify("background");
           });
@@ -25206,20 +29907,45 @@ var require_cytoscape_cjs = __commonJS({
       var outlineOffset = node.pstyle("outline-offset").value;
       context.lineJoin = "miter";
       var setupShapeColor = function setupShapeColor2() {
-        var bgOpy = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : bgOpacity;
+        var bgOpy =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : bgOpacity;
         r.eleFillStyle(context, node, bgOpy);
       };
       var setupBorderColor = function setupBorderColor2() {
-        var bdrOpy = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : borderOpacity;
-        r.colorStrokeStyle(context, borderColor[0], borderColor[1], borderColor[2], bdrOpy);
+        var bdrOpy =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : borderOpacity;
+        r.colorStrokeStyle(
+          context,
+          borderColor[0],
+          borderColor[1],
+          borderColor[2],
+          bdrOpy,
+        );
       };
       var setupOutlineColor = function setupOutlineColor2() {
-        var otlnOpy = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : outlineOpacity;
-        r.colorStrokeStyle(context, outlineColor[0], outlineColor[1], outlineColor[2], otlnOpy);
+        var otlnOpy =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : outlineOpacity;
+        r.colorStrokeStyle(
+          context,
+          outlineColor[0],
+          outlineColor[1],
+          outlineColor[2],
+          otlnOpy,
+        );
       };
       var getPath = function getPath2(width, height, shape, points) {
-        var pathCache = r.nodePathCache = r.nodePathCache || [];
-        var key = hashStrings(shape === "polygon" ? shape + "," + points.join(",") : shape, "" + height, "" + width);
+        var pathCache = (r.nodePathCache = r.nodePathCache || []);
+        var key = hashStrings(
+          shape === "polygon" ? shape + "," + points.join(",") : shape,
+          "" + height,
+          "" + width,
+        );
         var cachedPath = pathCache[key];
         var path2;
         var cacheHit = false;
@@ -25233,7 +29959,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return {
           path: path2,
-          cacheHit
+          cacheHit,
         };
       };
       var styleShape = node.pstyle("shape").strValue;
@@ -25250,10 +29976,16 @@ var require_cytoscape_cjs = __commonJS({
           if (usePaths) {
             npos = {
               x: 0,
-              y: 0
+              y: 0,
             };
           }
-          r.nodeShapes[r.getNodeShape(node)].draw(path || context, npos.x, npos.y, nodeWidth, nodeHeight);
+          r.nodeShapes[r.getNodeShape(node)].draw(
+            path || context,
+            npos.x,
+            npos.y,
+            nodeWidth,
+            nodeHeight,
+          );
         }
         if (usePaths) {
           context.fill(path);
@@ -25262,13 +29994,23 @@ var require_cytoscape_cjs = __commonJS({
         }
       };
       var drawImages = function drawImages2() {
-        var nodeOpacity = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : eleOpacity;
-        var inside = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+        var nodeOpacity =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : eleOpacity;
+        var inside =
+          arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
         var prevBging = _p.backgrounding;
         var totalCompleted = 0;
         for (var _i = 0; _i < image.length; _i++) {
-          var bgContainment = node.cy().style().getIndexedStyle(node, "background-image-containment", "value", _i);
-          if (inside && bgContainment === "over" || !inside && bgContainment === "inside") {
+          var bgContainment = node
+            .cy()
+            .style()
+            .getIndexedStyle(node, "background-image-containment", "value", _i);
+          if (
+            (inside && bgContainment === "over") ||
+            (!inside && bgContainment === "inside")
+          ) {
             totalCompleted++;
             continue;
           }
@@ -25283,19 +30025,34 @@ var require_cytoscape_cjs = __commonJS({
         }
       };
       var drawPie = function drawPie2() {
-        var redrawShape = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
-        var pieOpacity = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : eleOpacity;
+        var redrawShape =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : false;
+        var pieOpacity =
+          arguments.length > 1 && arguments[1] !== void 0
+            ? arguments[1]
+            : eleOpacity;
         if (r.hasPie(node)) {
           r.drawPie(context, node, pieOpacity);
           if (redrawShape) {
             if (!usePaths) {
-              r.nodeShapes[r.getNodeShape(node)].draw(context, pos.x, pos.y, nodeWidth, nodeHeight);
+              r.nodeShapes[r.getNodeShape(node)].draw(
+                context,
+                pos.x,
+                pos.y,
+                nodeWidth,
+                nodeHeight,
+              );
             }
           }
         }
       };
       var darken = function darken2() {
-        var darkenOpacity = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : eleOpacity;
+        var darkenOpacity =
+          arguments.length > 0 && arguments[0] !== void 0
+            ? arguments[0]
+            : eleOpacity;
         var opacity = (darkness > 0 ? darkness : -darkness) * darkenOpacity;
         var c = darkness > 0 ? 0 : 255;
         if (darkness !== 0) {
@@ -25368,12 +30125,16 @@ var require_cytoscape_cjs = __commonJS({
           if (usePaths) {
             npos = {
               x: 0,
-              y: 0
+              y: 0,
             };
           }
           var shape = r.getNodeShape(node);
-          var scaleX = (nodeWidth + borderWidth + (outlineWidth + outlineOffset)) / nodeWidth;
-          var scaleY = (nodeHeight + borderWidth + (outlineWidth + outlineOffset)) / nodeHeight;
+          var scaleX =
+            (nodeWidth + borderWidth + (outlineWidth + outlineOffset)) /
+            nodeWidth;
+          var scaleY =
+            (nodeHeight + borderWidth + (outlineWidth + outlineOffset)) /
+            nodeHeight;
           var sWidth = nodeWidth * scaleX;
           var sHeight = nodeHeight * scaleY;
           var points = r.nodeShapes[shape].points;
@@ -25383,8 +30144,25 @@ var require_cytoscape_cjs = __commonJS({
             _path = outlinePath.path;
           }
           if (shape === "ellipse") {
-            r.drawEllipsePath(_path || context, npos.x, npos.y, sWidth, sHeight);
-          } else if (["round-diamond", "round-heptagon", "round-hexagon", "round-octagon", "round-pentagon", "round-polygon", "round-triangle", "round-tag"].includes(shape)) {
+            r.drawEllipsePath(
+              _path || context,
+              npos.x,
+              npos.y,
+              sWidth,
+              sHeight,
+            );
+          } else if (
+            [
+              "round-diamond",
+              "round-heptagon",
+              "round-hexagon",
+              "round-octagon",
+              "round-pentagon",
+              "round-polygon",
+              "round-triangle",
+              "round-tag",
+            ].includes(shape)
+          ) {
             var sMult = 0;
             var offsetX = 0;
             var offsetY = 0;
@@ -25402,30 +30180,78 @@ var require_cytoscape_cjs = __commonJS({
               sMult = (borderWidth + outlineOffset + outlineWidth) * 1.12;
               offsetX = (borderWidth / 2 + outlineWidth + outlineOffset) * 0.07;
             } else if (shape === "round-triangle") {
-              sMult = (borderWidth + outlineOffset + outlineWidth) * (Math.PI / 2);
-              offsetY = -(borderWidth + outlineOffset / 2 + outlineWidth) / Math.PI;
+              sMult =
+                (borderWidth + outlineOffset + outlineWidth) * (Math.PI / 2);
+              offsetY =
+                -(borderWidth + outlineOffset / 2 + outlineWidth) / Math.PI;
             }
             if (sMult !== 0) {
               scaleX = (nodeWidth + sMult) / nodeWidth;
               scaleY = (nodeHeight + sMult) / nodeHeight;
             }
-            r.drawRoundPolygonPath(_path || context, npos.x + offsetX, npos.y + offsetY, nodeWidth * scaleX, nodeHeight * scaleY, points);
+            r.drawRoundPolygonPath(
+              _path || context,
+              npos.x + offsetX,
+              npos.y + offsetY,
+              nodeWidth * scaleX,
+              nodeHeight * scaleY,
+              points,
+            );
           } else if (["roundrectangle", "round-rectangle"].includes(shape)) {
-            r.drawRoundRectanglePath(_path || context, npos.x, npos.y, sWidth, sHeight);
+            r.drawRoundRectanglePath(
+              _path || context,
+              npos.x,
+              npos.y,
+              sWidth,
+              sHeight,
+            );
           } else if (["cutrectangle", "cut-rectangle"].includes(shape)) {
-            r.drawCutRectanglePath(_path || context, npos.x, npos.y, sWidth, sHeight);
-          } else if (["bottomroundrectangle", "bottom-round-rectangle"].includes(shape)) {
-            r.drawBottomRoundRectanglePath(_path || context, npos.x, npos.y, sWidth, sHeight);
+            r.drawCutRectanglePath(
+              _path || context,
+              npos.x,
+              npos.y,
+              sWidth,
+              sHeight,
+            );
+          } else if (
+            ["bottomroundrectangle", "bottom-round-rectangle"].includes(shape)
+          ) {
+            r.drawBottomRoundRectanglePath(
+              _path || context,
+              npos.x,
+              npos.y,
+              sWidth,
+              sHeight,
+            );
           } else if (shape === "barrel") {
             r.drawBarrelPath(_path || context, npos.x, npos.y, sWidth, sHeight);
-          } else if (shape.startsWith("polygon") || ["rhomboid", "right-rhomboid", "round-tag", "tag", "vee"].includes(shape)) {
+          } else if (
+            shape.startsWith("polygon") ||
+            ["rhomboid", "right-rhomboid", "round-tag", "tag", "vee"].includes(
+              shape,
+            )
+          ) {
             var pad = (borderWidth + outlineWidth + outlineOffset) / nodeWidth;
             points = joinLines(expandPolygon(points, pad));
-            r.drawPolygonPath(_path || context, npos.x, npos.y, nodeWidth, nodeHeight, points);
+            r.drawPolygonPath(
+              _path || context,
+              npos.x,
+              npos.y,
+              nodeWidth,
+              nodeHeight,
+              points,
+            );
           } else {
             var _pad = (borderWidth + outlineWidth + outlineOffset) / nodeWidth;
             points = joinLines(expandPolygon(points, -_pad));
-            r.drawPolygonPath(_path || context, npos.x, npos.y, nodeWidth, nodeHeight, points);
+            r.drawPolygonPath(
+              _path || context,
+              npos.x,
+              npos.y,
+              nodeWidth,
+              nodeHeight,
+              points,
+            );
           }
           if (usePaths) {
             context.stroke(_path);
@@ -25506,17 +30332,23 @@ var require_cytoscape_cjs = __commonJS({
         context.translate(bb.x1, bb.y1);
       }
     };
-    var drawNodeOverlayUnderlay = function drawNodeOverlayUnderlay2(overlayOrUnderlay) {
+    var drawNodeOverlayUnderlay = function drawNodeOverlayUnderlay2(
+      overlayOrUnderlay,
+    ) {
       if (!["overlay", "underlay"].includes(overlayOrUnderlay)) {
         throw new Error("Invalid state");
       }
-      return function(context, node, pos, nodeWidth, nodeHeight) {
+      return function (context, node, pos, nodeWidth, nodeHeight) {
         var r = this;
         if (!node.visible()) {
           return;
         }
-        var padding = node.pstyle("".concat(overlayOrUnderlay, "-padding")).pfValue;
-        var opacity = node.pstyle("".concat(overlayOrUnderlay, "-opacity")).value;
+        var padding = node.pstyle(
+          "".concat(overlayOrUnderlay, "-padding"),
+        ).pfValue;
+        var opacity = node.pstyle(
+          "".concat(overlayOrUnderlay, "-opacity"),
+        ).value;
         var color = node.pstyle("".concat(overlayOrUnderlay, "-color")).value;
         var shape = node.pstyle("".concat(overlayOrUnderlay, "-shape")).value;
         if (opacity > 0) {
@@ -25527,18 +30359,24 @@ var require_cytoscape_cjs = __commonJS({
             nodeHeight = node.height() + 2 * _padding;
           }
           r.colorFillStyle(context, color[0], color[1], color[2], opacity);
-          r.nodeShapes[shape].draw(context, pos.x, pos.y, nodeWidth + padding * 2, nodeHeight + padding * 2);
+          r.nodeShapes[shape].draw(
+            context,
+            pos.x,
+            pos.y,
+            nodeWidth + padding * 2,
+            nodeHeight + padding * 2,
+          );
           context.fill();
         }
       };
     };
     CRp$5.drawNodeOverlay = drawNodeOverlayUnderlay("overlay");
     CRp$5.drawNodeUnderlay = drawNodeOverlayUnderlay("underlay");
-    CRp$5.hasPie = function(node) {
+    CRp$5.hasPie = function (node) {
       node = node[0];
       return node._private.hasPie;
     };
-    CRp$5.drawPie = function(context, node, nodeOpacity, pos) {
+    CRp$5.drawPie = function (context, node, nodeOpacity, pos) {
       node = node[0];
       pos = pos || node.position();
       var cyStyle = node.cy().style();
@@ -25562,7 +30400,8 @@ var require_cytoscape_cjs = __commonJS({
       for (var i2 = 1; i2 <= cyStyle.pieBackgroundN; i2++) {
         var size = node.pstyle("pie-" + i2 + "-background-size").value;
         var color = node.pstyle("pie-" + i2 + "-background-color").value;
-        var opacity = node.pstyle("pie-" + i2 + "-background-opacity").value * nodeOpacity;
+        var opacity =
+          node.pstyle("pie-" + i2 + "-background-opacity").value * nodeOpacity;
         var percent = size / 100;
         if (percent + lastPercent > 1) {
           percent = 1 - lastPercent;
@@ -25584,16 +30423,23 @@ var require_cytoscape_cjs = __commonJS({
     };
     var CRp$4 = {};
     var motionBlurDelay = 100;
-    CRp$4.getPixelRatio = function() {
+    CRp$4.getPixelRatio = function () {
       var context = this.data.contexts[0];
       if (this.forcedPixelRatio != null) {
         return this.forcedPixelRatio;
       }
-      var backingStore = context.backingStorePixelRatio || context.webkitBackingStorePixelRatio || context.mozBackingStorePixelRatio || context.msBackingStorePixelRatio || context.oBackingStorePixelRatio || context.backingStorePixelRatio || 1;
+      var backingStore =
+        context.backingStorePixelRatio ||
+        context.webkitBackingStorePixelRatio ||
+        context.mozBackingStorePixelRatio ||
+        context.msBackingStorePixelRatio ||
+        context.oBackingStorePixelRatio ||
+        context.backingStorePixelRatio ||
+        1;
       return (window.devicePixelRatio || 1) / backingStore;
     };
-    CRp$4.paintCache = function(context) {
-      var caches = this.paintCaches = this.paintCaches || [];
+    CRp$4.paintCache = function (context) {
+      var caches = (this.paintCaches = this.paintCaches || []);
       var needToCreateCache = true;
       var cache2;
       for (var i2 = 0; i2 < caches.length; i2++) {
@@ -25605,117 +30451,233 @@ var require_cytoscape_cjs = __commonJS({
       }
       if (needToCreateCache) {
         cache2 = {
-          context
+          context,
         };
         caches.push(cache2);
       }
       return cache2;
     };
-    CRp$4.createGradientStyleFor = function(context, shapeStyleName, ele, fill, opacity) {
+    CRp$4.createGradientStyleFor = function (
+      context,
+      shapeStyleName,
+      ele,
+      fill,
+      opacity,
+    ) {
       var gradientStyle;
       var usePaths = this.usePaths();
-      var colors2 = ele.pstyle(shapeStyleName + "-gradient-stop-colors").value, positions = ele.pstyle(shapeStyleName + "-gradient-stop-positions").pfValue;
+      var colors2 = ele.pstyle(shapeStyleName + "-gradient-stop-colors").value,
+        positions = ele.pstyle(
+          shapeStyleName + "-gradient-stop-positions",
+        ).pfValue;
       if (fill === "radial-gradient") {
         if (ele.isEdge()) {
-          var start = ele.sourceEndpoint(), end = ele.targetEndpoint(), mid = ele.midpoint();
+          var start = ele.sourceEndpoint(),
+            end = ele.targetEndpoint(),
+            mid = ele.midpoint();
           var d1 = dist(start, mid);
           var d2 = dist(end, mid);
-          gradientStyle = context.createRadialGradient(mid.x, mid.y, 0, mid.x, mid.y, Math.max(d1, d2));
+          gradientStyle = context.createRadialGradient(
+            mid.x,
+            mid.y,
+            0,
+            mid.x,
+            mid.y,
+            Math.max(d1, d2),
+          );
         } else {
-          var pos = usePaths ? {
-            x: 0,
-            y: 0
-          } : ele.position(), width = ele.paddedWidth(), height = ele.paddedHeight();
-          gradientStyle = context.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, Math.max(width, height));
+          var pos = usePaths
+              ? {
+                  x: 0,
+                  y: 0,
+                }
+              : ele.position(),
+            width = ele.paddedWidth(),
+            height = ele.paddedHeight();
+          gradientStyle = context.createRadialGradient(
+            pos.x,
+            pos.y,
+            0,
+            pos.x,
+            pos.y,
+            Math.max(width, height),
+          );
         }
       } else {
         if (ele.isEdge()) {
-          var _start = ele.sourceEndpoint(), _end = ele.targetEndpoint();
-          gradientStyle = context.createLinearGradient(_start.x, _start.y, _end.x, _end.y);
+          var _start = ele.sourceEndpoint(),
+            _end = ele.targetEndpoint();
+          gradientStyle = context.createLinearGradient(
+            _start.x,
+            _start.y,
+            _end.x,
+            _end.y,
+          );
         } else {
-          var _pos = usePaths ? {
-            x: 0,
-            y: 0
-          } : ele.position(), _width = ele.paddedWidth(), _height = ele.paddedHeight(), halfWidth = _width / 2, halfHeight = _height / 2;
+          var _pos = usePaths
+              ? {
+                  x: 0,
+                  y: 0,
+                }
+              : ele.position(),
+            _width = ele.paddedWidth(),
+            _height = ele.paddedHeight(),
+            halfWidth = _width / 2,
+            halfHeight = _height / 2;
           var direction = ele.pstyle("background-gradient-direction").value;
           switch (direction) {
             case "to-bottom":
-              gradientStyle = context.createLinearGradient(_pos.x, _pos.y - halfHeight, _pos.x, _pos.y + halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x,
+                _pos.y - halfHeight,
+                _pos.x,
+                _pos.y + halfHeight,
+              );
               break;
             case "to-top":
-              gradientStyle = context.createLinearGradient(_pos.x, _pos.y + halfHeight, _pos.x, _pos.y - halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x,
+                _pos.y + halfHeight,
+                _pos.x,
+                _pos.y - halfHeight,
+              );
               break;
             case "to-left":
-              gradientStyle = context.createLinearGradient(_pos.x + halfWidth, _pos.y, _pos.x - halfWidth, _pos.y);
+              gradientStyle = context.createLinearGradient(
+                _pos.x + halfWidth,
+                _pos.y,
+                _pos.x - halfWidth,
+                _pos.y,
+              );
               break;
             case "to-right":
-              gradientStyle = context.createLinearGradient(_pos.x - halfWidth, _pos.y, _pos.x + halfWidth, _pos.y);
+              gradientStyle = context.createLinearGradient(
+                _pos.x - halfWidth,
+                _pos.y,
+                _pos.x + halfWidth,
+                _pos.y,
+              );
               break;
             case "to-bottom-right":
             case "to-right-bottom":
-              gradientStyle = context.createLinearGradient(_pos.x - halfWidth, _pos.y - halfHeight, _pos.x + halfWidth, _pos.y + halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x - halfWidth,
+                _pos.y - halfHeight,
+                _pos.x + halfWidth,
+                _pos.y + halfHeight,
+              );
               break;
             case "to-top-right":
             case "to-right-top":
-              gradientStyle = context.createLinearGradient(_pos.x - halfWidth, _pos.y + halfHeight, _pos.x + halfWidth, _pos.y - halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x - halfWidth,
+                _pos.y + halfHeight,
+                _pos.x + halfWidth,
+                _pos.y - halfHeight,
+              );
               break;
             case "to-bottom-left":
             case "to-left-bottom":
-              gradientStyle = context.createLinearGradient(_pos.x + halfWidth, _pos.y - halfHeight, _pos.x - halfWidth, _pos.y + halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x + halfWidth,
+                _pos.y - halfHeight,
+                _pos.x - halfWidth,
+                _pos.y + halfHeight,
+              );
               break;
             case "to-top-left":
             case "to-left-top":
-              gradientStyle = context.createLinearGradient(_pos.x + halfWidth, _pos.y + halfHeight, _pos.x - halfWidth, _pos.y - halfHeight);
+              gradientStyle = context.createLinearGradient(
+                _pos.x + halfWidth,
+                _pos.y + halfHeight,
+                _pos.x - halfWidth,
+                _pos.y - halfHeight,
+              );
               break;
           }
         }
       }
-      if (!gradientStyle)
-        return null;
+      if (!gradientStyle) return null;
       var hasPositions = positions.length === colors2.length;
       var length = colors2.length;
       for (var i2 = 0; i2 < length; i2++) {
-        gradientStyle.addColorStop(hasPositions ? positions[i2] : i2 / (length - 1), "rgba(" + colors2[i2][0] + "," + colors2[i2][1] + "," + colors2[i2][2] + "," + opacity + ")");
+        gradientStyle.addColorStop(
+          hasPositions ? positions[i2] : i2 / (length - 1),
+          "rgba(" +
+            colors2[i2][0] +
+            "," +
+            colors2[i2][1] +
+            "," +
+            colors2[i2][2] +
+            "," +
+            opacity +
+            ")",
+        );
       }
       return gradientStyle;
     };
-    CRp$4.gradientFillStyle = function(context, ele, fill, opacity) {
-      var gradientStyle = this.createGradientStyleFor(context, "background", ele, fill, opacity);
-      if (!gradientStyle)
-        return null;
+    CRp$4.gradientFillStyle = function (context, ele, fill, opacity) {
+      var gradientStyle = this.createGradientStyleFor(
+        context,
+        "background",
+        ele,
+        fill,
+        opacity,
+      );
+      if (!gradientStyle) return null;
       context.fillStyle = gradientStyle;
     };
-    CRp$4.colorFillStyle = function(context, r, g, b, a) {
+    CRp$4.colorFillStyle = function (context, r, g, b, a) {
       context.fillStyle = "rgba(" + r + "," + g + "," + b + "," + a + ")";
     };
-    CRp$4.eleFillStyle = function(context, ele, opacity) {
+    CRp$4.eleFillStyle = function (context, ele, opacity) {
       var backgroundFill = ele.pstyle("background-fill").value;
-      if (backgroundFill === "linear-gradient" || backgroundFill === "radial-gradient") {
+      if (
+        backgroundFill === "linear-gradient" ||
+        backgroundFill === "radial-gradient"
+      ) {
         this.gradientFillStyle(context, ele, backgroundFill, opacity);
       } else {
         var backgroundColor = ele.pstyle("background-color").value;
-        this.colorFillStyle(context, backgroundColor[0], backgroundColor[1], backgroundColor[2], opacity);
+        this.colorFillStyle(
+          context,
+          backgroundColor[0],
+          backgroundColor[1],
+          backgroundColor[2],
+          opacity,
+        );
       }
     };
-    CRp$4.gradientStrokeStyle = function(context, ele, fill, opacity) {
-      var gradientStyle = this.createGradientStyleFor(context, "line", ele, fill, opacity);
-      if (!gradientStyle)
-        return null;
+    CRp$4.gradientStrokeStyle = function (context, ele, fill, opacity) {
+      var gradientStyle = this.createGradientStyleFor(
+        context,
+        "line",
+        ele,
+        fill,
+        opacity,
+      );
+      if (!gradientStyle) return null;
       context.strokeStyle = gradientStyle;
     };
-    CRp$4.colorStrokeStyle = function(context, r, g, b, a) {
+    CRp$4.colorStrokeStyle = function (context, r, g, b, a) {
       context.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + a + ")";
     };
-    CRp$4.eleStrokeStyle = function(context, ele, opacity) {
+    CRp$4.eleStrokeStyle = function (context, ele, opacity) {
       var lineFill = ele.pstyle("line-fill").value;
       if (lineFill === "linear-gradient" || lineFill === "radial-gradient") {
         this.gradientStrokeStyle(context, ele, lineFill, opacity);
       } else {
         var lineColor = ele.pstyle("line-color").value;
-        this.colorStrokeStyle(context, lineColor[0], lineColor[1], lineColor[2], opacity);
+        this.colorStrokeStyle(
+          context,
+          lineColor[0],
+          lineColor[1],
+          lineColor[2],
+          opacity,
+        );
       }
     };
-    CRp$4.matchCanvasSize = function(container) {
+    CRp$4.matchCanvasSize = function (container) {
       var r = this;
       var data2 = r.data;
       var bb = r.findContainerClientCoords();
@@ -25723,7 +30685,10 @@ var require_cytoscape_cjs = __commonJS({
       var height = bb[3];
       var pixelRatio = r.getPixelRatio();
       var mbPxRatio = r.motionBlurPxRatio;
-      if (container === r.data.bufferCanvases[r.MOTIONBLUR_BUFFER_NODE] || container === r.data.bufferCanvases[r.MOTIONBLUR_BUFFER_DRAG]) {
+      if (
+        container === r.data.bufferCanvases[r.MOTIONBLUR_BUFFER_NODE] ||
+        container === r.data.bufferCanvases[r.MOTIONBLUR_BUFFER_DRAG]
+      ) {
         pixelRatio = mbPxRatio;
       }
       var canvasWidth = width * pixelRatio;
@@ -25760,16 +30725,16 @@ var require_cytoscape_cjs = __commonJS({
       r.canvasWidth = canvasWidth;
       r.canvasHeight = canvasHeight;
     };
-    CRp$4.renderTo = function(cxt, zoom, pan, pxRatio) {
+    CRp$4.renderTo = function (cxt, zoom, pan, pxRatio) {
       this.render({
         forcedContext: cxt,
         forcedZoom: zoom,
         forcedPan: pan,
         drawAllLayers: true,
-        forcedPxRatio: pxRatio
+        forcedPxRatio: pxRatio,
       });
     };
-    CRp$4.render = function(options) {
+    CRp$4.render = function (options) {
       options = options || staticEmptyObject();
       var forcedContext = options.forcedContext;
       var drawAllLayers = options.drawAllLayers;
@@ -25777,17 +30742,29 @@ var require_cytoscape_cjs = __commonJS({
       var forcedZoom = options.forcedZoom;
       var forcedPan = options.forcedPan;
       var r = this;
-      var pixelRatio = options.forcedPxRatio === void 0 ? this.getPixelRatio() : options.forcedPxRatio;
+      var pixelRatio =
+        options.forcedPxRatio === void 0
+          ? this.getPixelRatio()
+          : options.forcedPxRatio;
       var cy = r.cy;
       var data2 = r.data;
       var needDraw = data2.canvasNeedsRedraw;
-      var textureDraw = r.textureOnViewport && !forcedContext && (r.pinching || r.hoverData.dragging || r.swipePanning || r.data.wheelZooming);
-      var motionBlur = options.motionBlur !== void 0 ? options.motionBlur : r.motionBlur;
+      var textureDraw =
+        r.textureOnViewport &&
+        !forcedContext &&
+        (r.pinching ||
+          r.hoverData.dragging ||
+          r.swipePanning ||
+          r.data.wheelZooming);
+      var motionBlur =
+        options.motionBlur !== void 0 ? options.motionBlur : r.motionBlur;
       var mbPxRatio = r.motionBlurPxRatio;
       var hasCompoundNodes = cy.hasCompoundNodes();
       var inNodeDragGesture = r.hoverData.draggingEles;
-      var inBoxSelection = r.hoverData.selecting || r.touchData.selecting ? true : false;
-      motionBlur = motionBlur && !forcedContext && r.motionBlurEnabled && !inBoxSelection;
+      var inBoxSelection =
+        r.hoverData.selecting || r.touchData.selecting ? true : false;
+      motionBlur =
+        motionBlur && !forcedContext && r.motionBlurEnabled && !inBoxSelection;
       var motionBlurFadeEffect = motionBlur;
       if (!forcedContext) {
         if (r.prevPxRatio !== pixelRatio) {
@@ -25826,17 +30803,21 @@ var require_cytoscape_cjs = __commonJS({
       var pan = cy.pan();
       var effectivePan = {
         x: pan.x,
-        y: pan.y
+        y: pan.y,
       };
       var vp = {
         zoom,
         pan: {
           x: pan.x,
-          y: pan.y
-        }
+          y: pan.y,
+        },
       };
       var prevVp = r.prevViewport;
-      var viewportIsDiff = prevVp === void 0 || vp.zoom !== prevVp.zoom || vp.pan.x !== prevVp.pan.x || vp.pan.y !== prevVp.pan.y;
+      var viewportIsDiff =
+        prevVp === void 0 ||
+        vp.zoom !== prevVp.zoom ||
+        vp.pan.x !== prevVp.pan.x ||
+        vp.pan.y !== prevVp.pan.y;
       if (!viewportIsDiff && !(inNodeDragGesture && !hasCompoundNodes)) {
         r.motionBlurPxRatio = 1;
       }
@@ -25856,10 +30837,14 @@ var require_cytoscape_cjs = __commonJS({
       }
       function setContextTransform(context2, clear2) {
         var ePan, eZoom, w, h;
-        if (!r.clearingMotionBlur && (context2 === data2.bufferContexts[r.MOTIONBLUR_BUFFER_NODE] || context2 === data2.bufferContexts[r.MOTIONBLUR_BUFFER_DRAG])) {
+        if (
+          !r.clearingMotionBlur &&
+          (context2 === data2.bufferContexts[r.MOTIONBLUR_BUFFER_NODE] ||
+            context2 === data2.bufferContexts[r.MOTIONBLUR_BUFFER_DRAG])
+        ) {
           ePan = {
             x: pan.x * mbPxRatio,
-            y: pan.y * mbPxRatio
+            y: pan.y * mbPxRatio,
           };
           eZoom = zoom * mbPxRatio;
           w = r.canvasWidth * mbPxRatio;
@@ -25898,21 +30883,26 @@ var require_cytoscape_cjs = __commonJS({
           r.textureCache.texture = r.data.bufferCanvases[r.TEXTURE_BUFFER];
           var cxt = r.data.bufferContexts[r.TEXTURE_BUFFER];
           cxt.setTransform(1, 0, 0, 1, 0, 0);
-          cxt.clearRect(0, 0, r.canvasWidth * r.textureMult, r.canvasHeight * r.textureMult);
+          cxt.clearRect(
+            0,
+            0,
+            r.canvasWidth * r.textureMult,
+            r.canvasHeight * r.textureMult,
+          );
           r.render({
             forcedContext: cxt,
             drawOnlyNodeLayer: true,
-            forcedPxRatio: pixelRatio * r.textureMult
+            forcedPxRatio: pixelRatio * r.textureMult,
           });
-          var vp = r.textureCache.viewport = {
+          var vp = (r.textureCache.viewport = {
             zoom: cy.zoom(),
             pan: cy.pan(),
             width: r.canvasWidth,
-            height: r.canvasHeight
-          };
+            height: r.canvasHeight,
+          });
           vp.mpan = {
             x: (0 - vp.pan.x) / vp.zoom,
-            y: (0 - vp.pan.y) / vp.zoom
+            y: (0 - vp.pan.y) / vp.zoom,
           };
         }
         needDraw[r.DRAG] = false;
@@ -25928,30 +30918,66 @@ var require_cytoscape_cjs = __commonJS({
         }
         var outsideBgColor = style.core("outside-texture-bg-color").value;
         var outsideBgOpacity = style.core("outside-texture-bg-opacity").value;
-        r.colorFillStyle(context, outsideBgColor[0], outsideBgColor[1], outsideBgColor[2], outsideBgOpacity);
+        r.colorFillStyle(
+          context,
+          outsideBgColor[0],
+          outsideBgColor[1],
+          outsideBgColor[2],
+          outsideBgOpacity,
+        );
         context.fillRect(0, 0, vp.width, vp.height);
         var zoom = cy.zoom();
         setContextTransform(context, false);
-        context.clearRect(vp.mpan.x, vp.mpan.y, vp.width / vp.zoom / pixelRatio, vp.height / vp.zoom / pixelRatio);
-        context.drawImage(texture, vp.mpan.x, vp.mpan.y, vp.width / vp.zoom / pixelRatio, vp.height / vp.zoom / pixelRatio);
+        context.clearRect(
+          vp.mpan.x,
+          vp.mpan.y,
+          vp.width / vp.zoom / pixelRatio,
+          vp.height / vp.zoom / pixelRatio,
+        );
+        context.drawImage(
+          texture,
+          vp.mpan.x,
+          vp.mpan.y,
+          vp.width / vp.zoom / pixelRatio,
+          vp.height / vp.zoom / pixelRatio,
+        );
       } else if (r.textureOnViewport && !forcedContext) {
         r.textureCache = null;
       }
       var extent = cy.extent();
-      var vpManip = r.pinching || r.hoverData.dragging || r.swipePanning || r.data.wheelZooming || r.hoverData.draggingEles || r.cy.animated();
+      var vpManip =
+        r.pinching ||
+        r.hoverData.dragging ||
+        r.swipePanning ||
+        r.data.wheelZooming ||
+        r.hoverData.draggingEles ||
+        r.cy.animated();
       var hideEdges = r.hideEdgesOnViewport && vpManip;
       var needMbClear = [];
-      needMbClear[r.NODE] = !needDraw[r.NODE] && motionBlur && !r.clearedForMotionBlur[r.NODE] || r.clearingMotionBlur;
+      needMbClear[r.NODE] =
+        (!needDraw[r.NODE] && motionBlur && !r.clearedForMotionBlur[r.NODE]) ||
+        r.clearingMotionBlur;
       if (needMbClear[r.NODE]) {
         r.clearedForMotionBlur[r.NODE] = true;
       }
-      needMbClear[r.DRAG] = !needDraw[r.DRAG] && motionBlur && !r.clearedForMotionBlur[r.DRAG] || r.clearingMotionBlur;
+      needMbClear[r.DRAG] =
+        (!needDraw[r.DRAG] && motionBlur && !r.clearedForMotionBlur[r.DRAG]) ||
+        r.clearingMotionBlur;
       if (needMbClear[r.DRAG]) {
         r.clearedForMotionBlur[r.DRAG] = true;
       }
-      if (needDraw[r.NODE] || drawAllLayers || drawOnlyNodeLayer || needMbClear[r.NODE]) {
+      if (
+        needDraw[r.NODE] ||
+        drawAllLayers ||
+        drawOnlyNodeLayer ||
+        needMbClear[r.NODE]
+      ) {
         var useBuffer = motionBlur && !needMbClear[r.NODE] && mbPxRatio !== 1;
-        var context = forcedContext || (useBuffer ? r.data.bufferContexts[r.MOTIONBLUR_BUFFER_NODE] : data2.contexts[r.NODE]);
+        var context =
+          forcedContext ||
+          (useBuffer
+            ? r.data.bufferContexts[r.MOTIONBLUR_BUFFER_NODE]
+            : data2.contexts[r.NODE]);
         var clear = motionBlur && !useBuffer ? "motionBlur" : void 0;
         setContextTransform(context, clear);
         if (hideEdges) {
@@ -25966,10 +30992,20 @@ var require_cytoscape_cjs = __commonJS({
           needDraw[r.NODE] = false;
         }
       }
-      if (!drawOnlyNodeLayer && (needDraw[r.DRAG] || drawAllLayers || needMbClear[r.DRAG])) {
+      if (
+        !drawOnlyNodeLayer &&
+        (needDraw[r.DRAG] || drawAllLayers || needMbClear[r.DRAG])
+      ) {
         var useBuffer = motionBlur && !needMbClear[r.DRAG] && mbPxRatio !== 1;
-        var context = forcedContext || (useBuffer ? r.data.bufferContexts[r.MOTIONBLUR_BUFFER_DRAG] : data2.contexts[r.DRAG]);
-        setContextTransform(context, motionBlur && !useBuffer ? "motionBlur" : void 0);
+        var context =
+          forcedContext ||
+          (useBuffer
+            ? r.data.bufferContexts[r.MOTIONBLUR_BUFFER_DRAG]
+            : data2.contexts[r.DRAG]);
+        setContextTransform(
+          context,
+          motionBlur && !useBuffer ? "motionBlur" : void 0,
+        );
         if (hideEdges) {
           r.drawCachedNodes(context, eles.drag, pixelRatio, extent);
         } else {
@@ -25982,26 +31018,76 @@ var require_cytoscape_cjs = __commonJS({
           needDraw[r.DRAG] = false;
         }
       }
-      if (r.showFps || !drawOnlyNodeLayer && needDraw[r.SELECT_BOX] && !drawAllLayers) {
+      if (
+        r.showFps ||
+        (!drawOnlyNodeLayer && needDraw[r.SELECT_BOX] && !drawAllLayers)
+      ) {
         var context = forcedContext || data2.contexts[r.SELECT_BOX];
         setContextTransform(context);
-        if (r.selection[4] == 1 && (r.hoverData.selecting || r.touchData.selecting)) {
+        if (
+          r.selection[4] == 1 &&
+          (r.hoverData.selecting || r.touchData.selecting)
+        ) {
           var zoom = r.cy.zoom();
-          var borderWidth = style.core("selection-box-border-width").value / zoom;
+          var borderWidth =
+            style.core("selection-box-border-width").value / zoom;
           context.lineWidth = borderWidth;
-          context.fillStyle = "rgba(" + style.core("selection-box-color").value[0] + "," + style.core("selection-box-color").value[1] + "," + style.core("selection-box-color").value[2] + "," + style.core("selection-box-opacity").value + ")";
-          context.fillRect(r.selection[0], r.selection[1], r.selection[2] - r.selection[0], r.selection[3] - r.selection[1]);
+          context.fillStyle =
+            "rgba(" +
+            style.core("selection-box-color").value[0] +
+            "," +
+            style.core("selection-box-color").value[1] +
+            "," +
+            style.core("selection-box-color").value[2] +
+            "," +
+            style.core("selection-box-opacity").value +
+            ")";
+          context.fillRect(
+            r.selection[0],
+            r.selection[1],
+            r.selection[2] - r.selection[0],
+            r.selection[3] - r.selection[1],
+          );
           if (borderWidth > 0) {
-            context.strokeStyle = "rgba(" + style.core("selection-box-border-color").value[0] + "," + style.core("selection-box-border-color").value[1] + "," + style.core("selection-box-border-color").value[2] + "," + style.core("selection-box-opacity").value + ")";
-            context.strokeRect(r.selection[0], r.selection[1], r.selection[2] - r.selection[0], r.selection[3] - r.selection[1]);
+            context.strokeStyle =
+              "rgba(" +
+              style.core("selection-box-border-color").value[0] +
+              "," +
+              style.core("selection-box-border-color").value[1] +
+              "," +
+              style.core("selection-box-border-color").value[2] +
+              "," +
+              style.core("selection-box-opacity").value +
+              ")";
+            context.strokeRect(
+              r.selection[0],
+              r.selection[1],
+              r.selection[2] - r.selection[0],
+              r.selection[3] - r.selection[1],
+            );
           }
         }
         if (data2.bgActivePosistion && !r.hoverData.selecting) {
           var zoom = r.cy.zoom();
           var pos = data2.bgActivePosistion;
-          context.fillStyle = "rgba(" + style.core("active-bg-color").value[0] + "," + style.core("active-bg-color").value[1] + "," + style.core("active-bg-color").value[2] + "," + style.core("active-bg-opacity").value + ")";
+          context.fillStyle =
+            "rgba(" +
+            style.core("active-bg-color").value[0] +
+            "," +
+            style.core("active-bg-color").value[1] +
+            "," +
+            style.core("active-bg-color").value[2] +
+            "," +
+            style.core("active-bg-opacity").value +
+            ")";
           context.beginPath();
-          context.arc(pos.x, pos.y, style.core("active-bg-size").pfValue / zoom, 0, 2 * Math.PI);
+          context.arc(
+            pos.x,
+            pos.y,
+            style.core("active-bg-size").pfValue / zoom,
+            0,
+            2 * Math.PI,
+          );
           context.fill();
         }
         var timeToRender = r.lastRedrawTime;
@@ -26012,7 +31098,11 @@ var require_cytoscape_cjs = __commonJS({
           context.fillStyle = "rgba(255, 0, 0, 0.75)";
           context.strokeStyle = "rgba(255, 0, 0, 0.75)";
           context.lineWidth = 1;
-          context.fillText("1 frame = " + timeToRender + " ms = " + fps + " fps", 0, 20);
+          context.fillText(
+            "1 frame = " + timeToRender + " ms = " + fps + " fps",
+            0,
+            20,
+          );
           var maxFps = 60;
           context.strokeRect(0, 30, 250, 20);
           context.fillRect(0, 30, 250 * Math.min(fps / maxFps, 1), 20);
@@ -26047,7 +31137,7 @@ var require_cytoscape_cjs = __commonJS({
             0,
             // x, y
             r.canvasWidth,
-            r.canvasHeight
+            r.canvasHeight,
             // w, h
           );
         };
@@ -26067,7 +31157,7 @@ var require_cytoscape_cjs = __commonJS({
         r.motionBlur = true;
       }
       if (motionBlur) {
-        r.motionBlurTimeout = setTimeout(function() {
+        r.motionBlurTimeout = setTimeout(function () {
           r.motionBlurTimeout = null;
           r.clearedForMotionBlur[r.NODE] = false;
           r.clearedForMotionBlur[r.DRAG] = false;
@@ -26084,7 +31174,7 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var CRp$3 = {};
-    CRp$3.drawPolygonPath = function(context, x, y, width, height, points) {
+    CRp$3.drawPolygonPath = function (context, x, y, width, height, points) {
       var halfW = width / 2;
       var halfH = height / 2;
       if (context.beginPath) {
@@ -26092,11 +31182,21 @@ var require_cytoscape_cjs = __commonJS({
       }
       context.moveTo(x + halfW * points[0], y + halfH * points[1]);
       for (var i2 = 1; i2 < points.length / 2; i2++) {
-        context.lineTo(x + halfW * points[i2 * 2], y + halfH * points[i2 * 2 + 1]);
+        context.lineTo(
+          x + halfW * points[i2 * 2],
+          y + halfH * points[i2 * 2 + 1],
+        );
       }
       context.closePath();
     };
-    CRp$3.drawRoundPolygonPath = function(context, x, y, width, height, points) {
+    CRp$3.drawRoundPolygonPath = function (
+      context,
+      x,
+      y,
+      width,
+      height,
+      points,
+    ) {
       var halfW = width / 2;
       var halfH = height / 2;
       var cornerRadius = getRoundPolygonRadius(width, height);
@@ -26104,7 +31204,8 @@ var require_cytoscape_cjs = __commonJS({
         context.beginPath();
       }
       for (var _i = 0; _i < points.length / 4; _i++) {
-        var sourceUv = void 0, destUv = void 0;
+        var sourceUv = void 0,
+          destUv = void 0;
         if (_i === 0) {
           sourceUv = points.length - 2;
         } else {
@@ -26113,7 +31214,9 @@ var require_cytoscape_cjs = __commonJS({
         destUv = _i * 4 + 2;
         var px = x + halfW * points[_i * 4];
         var py = y + halfH * points[_i * 4 + 1];
-        var cosTheta = -points[sourceUv] * points[destUv] - points[sourceUv + 1] * points[destUv + 1];
+        var cosTheta =
+          -points[sourceUv] * points[destUv] -
+          points[sourceUv + 1] * points[destUv + 1];
         var offset = cornerRadius / Math.tan(Math.acos(cosTheta) / 2);
         var cp0x = px - offset * points[sourceUv];
         var cp0y = py - offset * points[sourceUv + 1];
@@ -26128,7 +31231,7 @@ var require_cytoscape_cjs = __commonJS({
       }
       context.closePath();
     };
-    CRp$3.drawRoundRectanglePath = function(context, x, y, width, height) {
+    CRp$3.drawRoundRectanglePath = function (context, x, y, width, height) {
       var halfWidth = width / 2;
       var halfHeight = height / 2;
       var cornerRadius = getRoundRectangleRadius(width, height);
@@ -26136,14 +31239,44 @@ var require_cytoscape_cjs = __commonJS({
         context.beginPath();
       }
       context.moveTo(x, y - halfHeight);
-      context.arcTo(x + halfWidth, y - halfHeight, x + halfWidth, y, cornerRadius);
-      context.arcTo(x + halfWidth, y + halfHeight, x, y + halfHeight, cornerRadius);
-      context.arcTo(x - halfWidth, y + halfHeight, x - halfWidth, y, cornerRadius);
-      context.arcTo(x - halfWidth, y - halfHeight, x, y - halfHeight, cornerRadius);
+      context.arcTo(
+        x + halfWidth,
+        y - halfHeight,
+        x + halfWidth,
+        y,
+        cornerRadius,
+      );
+      context.arcTo(
+        x + halfWidth,
+        y + halfHeight,
+        x,
+        y + halfHeight,
+        cornerRadius,
+      );
+      context.arcTo(
+        x - halfWidth,
+        y + halfHeight,
+        x - halfWidth,
+        y,
+        cornerRadius,
+      );
+      context.arcTo(
+        x - halfWidth,
+        y - halfHeight,
+        x,
+        y - halfHeight,
+        cornerRadius,
+      );
       context.lineTo(x, y - halfHeight);
       context.closePath();
     };
-    CRp$3.drawBottomRoundRectanglePath = function(context, x, y, width, height) {
+    CRp$3.drawBottomRoundRectanglePath = function (
+      context,
+      x,
+      y,
+      width,
+      height,
+    ) {
       var halfWidth = width / 2;
       var halfHeight = height / 2;
       var cornerRadius = getRoundRectangleRadius(width, height);
@@ -26153,13 +31286,25 @@ var require_cytoscape_cjs = __commonJS({
       context.moveTo(x, y - halfHeight);
       context.lineTo(x + halfWidth, y - halfHeight);
       context.lineTo(x + halfWidth, y);
-      context.arcTo(x + halfWidth, y + halfHeight, x, y + halfHeight, cornerRadius);
-      context.arcTo(x - halfWidth, y + halfHeight, x - halfWidth, y, cornerRadius);
+      context.arcTo(
+        x + halfWidth,
+        y + halfHeight,
+        x,
+        y + halfHeight,
+        cornerRadius,
+      );
+      context.arcTo(
+        x - halfWidth,
+        y + halfHeight,
+        x - halfWidth,
+        y,
+        cornerRadius,
+      );
       context.lineTo(x - halfWidth, y - halfHeight);
       context.lineTo(x, y - halfHeight);
       context.closePath();
     };
-    CRp$3.drawCutRectanglePath = function(context, x, y, width, height) {
+    CRp$3.drawCutRectanglePath = function (context, x, y, width, height) {
       var halfWidth = width / 2;
       var halfHeight = height / 2;
       var cornerLength = getCutRectangleCornerLength();
@@ -26176,7 +31321,7 @@ var require_cytoscape_cjs = __commonJS({
       context.lineTo(x - halfWidth, y - halfHeight + cornerLength);
       context.closePath();
     };
-    CRp$3.drawBarrelPath = function(context, x, y, width, height) {
+    CRp$3.drawBarrelPath = function (context, x, y, width, height) {
       var halfWidth = width / 2;
       var halfHeight = height / 2;
       var xBegin = x - halfWidth;
@@ -26192,13 +31337,33 @@ var require_cytoscape_cjs = __commonJS({
       }
       context.moveTo(xBegin, yBegin + hOffset);
       context.lineTo(xBegin, yEnd - hOffset);
-      context.quadraticCurveTo(xBegin + ctrlPtXOffset, yEnd, xBegin + wOffset, yEnd);
+      context.quadraticCurveTo(
+        xBegin + ctrlPtXOffset,
+        yEnd,
+        xBegin + wOffset,
+        yEnd,
+      );
       context.lineTo(xEnd - wOffset, yEnd);
-      context.quadraticCurveTo(xEnd - ctrlPtXOffset, yEnd, xEnd, yEnd - hOffset);
+      context.quadraticCurveTo(
+        xEnd - ctrlPtXOffset,
+        yEnd,
+        xEnd,
+        yEnd - hOffset,
+      );
       context.lineTo(xEnd, yBegin + hOffset);
-      context.quadraticCurveTo(xEnd - ctrlPtXOffset, yBegin, xEnd - wOffset, yBegin);
+      context.quadraticCurveTo(
+        xEnd - ctrlPtXOffset,
+        yBegin,
+        xEnd - wOffset,
+        yBegin,
+      );
       context.lineTo(xBegin + wOffset, yBegin);
-      context.quadraticCurveTo(xBegin + ctrlPtXOffset, yBegin, xBegin, yBegin + hOffset);
+      context.quadraticCurveTo(
+        xBegin + ctrlPtXOffset,
+        yBegin,
+        xBegin,
+        yBegin + hOffset,
+      );
       context.closePath();
     };
     var sin0 = Math.sin(0);
@@ -26211,12 +31376,26 @@ var require_cytoscape_cjs = __commonJS({
       cos[i] = Math.cos(i);
     }
     var i;
-    CRp$3.drawEllipsePath = function(context, centerX, centerY, width, height) {
+    CRp$3.drawEllipsePath = function (
+      context,
+      centerX,
+      centerY,
+      width,
+      height,
+    ) {
       if (context.beginPath) {
         context.beginPath();
       }
       if (context.ellipse) {
-        context.ellipse(centerX, centerY, width / 2, height / 2, 0, 0, 2 * Math.PI);
+        context.ellipse(
+          centerX,
+          centerY,
+          width / 2,
+          height / 2,
+          0,
+          0,
+          2 * Math.PI,
+        );
       } else {
         var xPos, yPos;
         var rw = width / 2;
@@ -26234,20 +31413,21 @@ var require_cytoscape_cjs = __commonJS({
       context.closePath();
     };
     var CRp$2 = {};
-    CRp$2.createBuffer = function(w, h) {
+    CRp$2.createBuffer = function (w, h) {
       var buffer = document.createElement("canvas");
       buffer.width = w;
       buffer.height = h;
       return [buffer, buffer.getContext("2d")];
     };
-    CRp$2.bufferCanvasImage = function(options) {
+    CRp$2.bufferCanvasImage = function (options) {
       var cy = this.cy;
       var eles = cy.mutableElements();
       var bb = eles.boundingBox();
       var ctrRect = this.findContainerClientCoords();
       var width = options.full ? Math.ceil(bb.w) : ctrRect[2];
       var height = options.full ? Math.ceil(bb.h) : ctrRect[3];
-      var specdMaxDims = number$1(options.maxWidth) || number$1(options.maxHeight);
+      var specdMaxDims =
+        number$1(options.maxWidth) || number$1(options.maxHeight);
       var pxRatio = this.getPixelRatio();
       var scale = 1;
       if (options.scale !== void 0) {
@@ -26258,10 +31438,10 @@ var require_cytoscape_cjs = __commonJS({
         var maxScaleW = Infinity;
         var maxScaleH = Infinity;
         if (number$1(options.maxWidth)) {
-          maxScaleW = scale * options.maxWidth / width;
+          maxScaleW = (scale * options.maxWidth) / width;
         }
         if (number$1(options.maxHeight)) {
-          maxScaleH = scale * options.maxHeight / height;
+          maxScaleH = (scale * options.maxHeight) / height;
         }
         scale = Math.min(maxScaleW, maxScaleH);
         width *= scale;
@@ -26292,7 +31472,7 @@ var require_cytoscape_cjs = __commonJS({
           var pan = cy.pan();
           var translation = {
             x: pan.x * scale,
-            y: pan.y * scale
+            y: pan.y * scale,
           };
           scale *= cy.zoom();
           buffCxt.translate(translation.x, translation.y);
@@ -26318,7 +31498,7 @@ var require_cytoscape_cjs = __commonJS({
         buffUint8[i2] = bytes.charCodeAt(i2);
       }
       return new Blob([buff], {
-        type: mimeType
+        type: mimeType,
       });
     }
     function b64UriToB64(b64uri) {
@@ -26331,15 +31511,23 @@ var require_cytoscape_cjs = __commonJS({
       };
       switch (options.output) {
         case "blob-promise":
-          return new Promise$1(function(resolve2, reject) {
+          return new Promise$1(function (resolve2, reject) {
             try {
-              canvas.toBlob(function(blob) {
-                if (blob != null) {
-                  resolve2(blob);
-                } else {
-                  reject(new Error("`canvas.toBlob()` sent a null value in its callback"));
-                }
-              }, mimeType, options.quality);
+              canvas.toBlob(
+                function (blob) {
+                  if (blob != null) {
+                    resolve2(blob);
+                  } else {
+                    reject(
+                      new Error(
+                        "`canvas.toBlob()` sent a null value in its callback",
+                      ),
+                    );
+                  }
+                },
+                mimeType,
+                options.quality,
+              );
             } catch (err) {
               reject(err);
             }
@@ -26353,30 +31541,70 @@ var require_cytoscape_cjs = __commonJS({
           return getB64Uri();
       }
     }
-    CRp$2.png = function(options) {
+    CRp$2.png = function (options) {
       return output(options, this.bufferCanvasImage(options), "image/png");
     };
-    CRp$2.jpg = function(options) {
+    CRp$2.jpg = function (options) {
       return output(options, this.bufferCanvasImage(options), "image/jpeg");
     };
     var CRp$1 = {};
-    CRp$1.nodeShapeImpl = function(name, context, centerX, centerY, width, height, points) {
+    CRp$1.nodeShapeImpl = function (
+      name,
+      context,
+      centerX,
+      centerY,
+      width,
+      height,
+      points,
+    ) {
       switch (name) {
         case "ellipse":
           return this.drawEllipsePath(context, centerX, centerY, width, height);
         case "polygon":
-          return this.drawPolygonPath(context, centerX, centerY, width, height, points);
+          return this.drawPolygonPath(
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+            points,
+          );
         case "round-polygon":
-          return this.drawRoundPolygonPath(context, centerX, centerY, width, height, points);
+          return this.drawRoundPolygonPath(
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+            points,
+          );
         case "roundrectangle":
         case "round-rectangle":
-          return this.drawRoundRectanglePath(context, centerX, centerY, width, height);
+          return this.drawRoundRectanglePath(
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
         case "cutrectangle":
         case "cut-rectangle":
-          return this.drawCutRectanglePath(context, centerX, centerY, width, height);
+          return this.drawCutRectanglePath(
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
         case "bottomroundrectangle":
         case "bottom-round-rectangle":
-          return this.drawBottomRoundRectanglePath(context, centerX, centerY, width, height);
+          return this.drawBottomRoundRectanglePath(
+            context,
+            centerX,
+            centerY,
+            width,
+            height,
+          );
         case "barrel":
           return this.drawBarrelPath(context, centerX, centerY, width, height);
       }
@@ -26398,7 +31626,7 @@ var require_cytoscape_cjs = __commonJS({
         contexts: new Array(CRp.CANVAS_LAYERS),
         canvasNeedsRedraw: new Array(CRp.CANVAS_LAYERS),
         bufferCanvases: new Array(CRp.BUFFER_COUNT),
-        bufferContexts: new Array(CRp.CANVAS_LAYERS)
+        bufferContexts: new Array(CRp.CANVAS_LAYERS),
       };
       var tapHlOffAttr = "-webkit-tap-highlight-color";
       var tapHlOffStyle = "rgba(0,0,0,0)";
@@ -26416,16 +31644,16 @@ var require_cytoscape_cjs = __commonJS({
         "-moz-user-select": "-moz-none",
         "user-select": "none",
         "-webkit-tap-highlight-color": "rgba(0,0,0,0)",
-        "outline-style": "none"
+        "outline-style": "none",
       };
       if (ms()) {
         styleMap["-ms-touch-action"] = "none";
         styleMap["touch-action"] = "none";
       }
       for (var i2 = 0; i2 < CRp.CANVAS_LAYERS; i2++) {
-        var canvas = r.data.canvases[i2] = document.createElement("canvas");
+        var canvas = (r.data.canvases[i2] = document.createElement("canvas"));
         r.data.contexts[i2] = canvas.getContext("2d");
-        Object.keys(styleMap).forEach(function(k) {
+        Object.keys(styleMap).forEach(function (k) {
           canvas.style[k] = styleMap[k];
         });
         canvas.style.position = "absolute";
@@ -26435,9 +31663,18 @@ var require_cytoscape_cjs = __commonJS({
         r.data.canvasNeedsRedraw[i2] = false;
       }
       r.data.topCanvas = r.data.canvases[0];
-      r.data.canvases[CRp.NODE].setAttribute("data-id", "layer" + CRp.NODE + "-node");
-      r.data.canvases[CRp.SELECT_BOX].setAttribute("data-id", "layer" + CRp.SELECT_BOX + "-selectbox");
-      r.data.canvases[CRp.DRAG].setAttribute("data-id", "layer" + CRp.DRAG + "-drag");
+      r.data.canvases[CRp.NODE].setAttribute(
+        "data-id",
+        "layer" + CRp.NODE + "-node",
+      );
+      r.data.canvases[CRp.SELECT_BOX].setAttribute(
+        "data-id",
+        "layer" + CRp.SELECT_BOX + "-selectbox",
+      );
+      r.data.canvases[CRp.DRAG].setAttribute(
+        "data-id",
+        "layer" + CRp.DRAG + "-drag",
+      );
       for (var i2 = 0; i2 < CRp.BUFFER_COUNT; i2++) {
         r.data.bufferCanvases[i2] = document.createElement("canvas");
         r.data.bufferContexts[i2] = r.data.bufferCanvases[i2].getContext("2d");
@@ -26451,20 +31688,21 @@ var require_cytoscape_cjs = __commonJS({
       var getBoxCenter = function getBoxCenter2(bb) {
         return {
           x: (bb.x1 + bb.x2) / 2,
-          y: (bb.y1 + bb.y2) / 2
+          y: (bb.y1 + bb.y2) / 2,
         };
       };
       var getCenterOffset = function getCenterOffset2(bb) {
         return {
           x: -bb.w / 2,
-          y: -bb.h / 2
+          y: -bb.h / 2,
         };
       };
-      var backgroundTimestampHasChanged = function backgroundTimestampHasChanged2(ele) {
-        var _p = ele[0]._private;
-        var same = _p.oldBackgroundTimestamp === _p.backgroundTimestamp;
-        return !same;
-      };
+      var backgroundTimestampHasChanged =
+        function backgroundTimestampHasChanged2(ele) {
+          var _p = ele[0]._private;
+          var same = _p.oldBackgroundTimestamp === _p.backgroundTimestamp;
+          return !same;
+        };
       var getStyleKey = function getStyleKey2(ele) {
         return ele[0]._private.nodeKey;
       };
@@ -26477,17 +31715,62 @@ var require_cytoscape_cjs = __commonJS({
       var getTargetLabelKey = function getTargetLabelKey2(ele) {
         return ele[0]._private.targetLabelStyleKey;
       };
-      var drawElement = function drawElement2(context, ele, bb, scaledLabelShown, useEleOpacity) {
+      var drawElement = function drawElement2(
+        context,
+        ele,
+        bb,
+        scaledLabelShown,
+        useEleOpacity,
+      ) {
         return r.drawElement(context, ele, bb, false, false, useEleOpacity);
       };
-      var drawLabel = function drawLabel2(context, ele, bb, scaledLabelShown, useEleOpacity) {
-        return r.drawElementText(context, ele, bb, scaledLabelShown, "main", useEleOpacity);
+      var drawLabel = function drawLabel2(
+        context,
+        ele,
+        bb,
+        scaledLabelShown,
+        useEleOpacity,
+      ) {
+        return r.drawElementText(
+          context,
+          ele,
+          bb,
+          scaledLabelShown,
+          "main",
+          useEleOpacity,
+        );
       };
-      var drawSourceLabel = function drawSourceLabel2(context, ele, bb, scaledLabelShown, useEleOpacity) {
-        return r.drawElementText(context, ele, bb, scaledLabelShown, "source", useEleOpacity);
+      var drawSourceLabel = function drawSourceLabel2(
+        context,
+        ele,
+        bb,
+        scaledLabelShown,
+        useEleOpacity,
+      ) {
+        return r.drawElementText(
+          context,
+          ele,
+          bb,
+          scaledLabelShown,
+          "source",
+          useEleOpacity,
+        );
       };
-      var drawTargetLabel = function drawTargetLabel2(context, ele, bb, scaledLabelShown, useEleOpacity) {
-        return r.drawElementText(context, ele, bb, scaledLabelShown, "target", useEleOpacity);
+      var drawTargetLabel = function drawTargetLabel2(
+        context,
+        ele,
+        bb,
+        scaledLabelShown,
+        useEleOpacity,
+      ) {
+        return r.drawElementText(
+          context,
+          ele,
+          bb,
+          scaledLabelShown,
+          "target",
+          useEleOpacity,
+        );
       };
       var getElementBox = function getElementBox2(ele) {
         ele.boundingBox();
@@ -26505,7 +31788,10 @@ var require_cytoscape_cjs = __commonJS({
         ele.boundingBox();
         return ele[0]._private.labelBounds.target || emptyBb;
       };
-      var isLabelVisibleAtScale = function isLabelVisibleAtScale2(ele, scaledLabelShown) {
+      var isLabelVisibleAtScale = function isLabelVisibleAtScale2(
+        ele,
+        scaledLabelShown,
+      ) {
         return scaledLabelShown;
       };
       var getElementRotationPoint = function getElementRotationPoint2(ele) {
@@ -26515,32 +31801,48 @@ var require_cytoscape_cjs = __commonJS({
         var pre = prefix ? prefix + "-" : "";
         return {
           x: pt.x + ele.pstyle(pre + "text-margin-x").pfValue,
-          y: pt.y + ele.pstyle(pre + "text-margin-y").pfValue
+          y: pt.y + ele.pstyle(pre + "text-margin-y").pfValue,
         };
       };
       var getRsPt = function getRsPt2(ele, x, y) {
         var rs = ele[0]._private.rscratch;
         return {
           x: rs[x],
-          y: rs[y]
+          y: rs[y],
         };
       };
       var getLabelRotationPoint = function getLabelRotationPoint2(ele) {
         return addTextMargin("", getRsPt(ele, "labelX", "labelY"), ele);
       };
-      var getSourceLabelRotationPoint = function getSourceLabelRotationPoint2(ele) {
-        return addTextMargin("source", getRsPt(ele, "sourceLabelX", "sourceLabelY"), ele);
+      var getSourceLabelRotationPoint = function getSourceLabelRotationPoint2(
+        ele,
+      ) {
+        return addTextMargin(
+          "source",
+          getRsPt(ele, "sourceLabelX", "sourceLabelY"),
+          ele,
+        );
       };
-      var getTargetLabelRotationPoint = function getTargetLabelRotationPoint2(ele) {
-        return addTextMargin("target", getRsPt(ele, "targetLabelX", "targetLabelY"), ele);
+      var getTargetLabelRotationPoint = function getTargetLabelRotationPoint2(
+        ele,
+      ) {
+        return addTextMargin(
+          "target",
+          getRsPt(ele, "targetLabelX", "targetLabelY"),
+          ele,
+        );
       };
       var getElementRotationOffset = function getElementRotationOffset2(ele) {
         return getCenterOffset(getElementBox(ele));
       };
-      var getSourceLabelRotationOffset = function getSourceLabelRotationOffset2(ele) {
+      var getSourceLabelRotationOffset = function getSourceLabelRotationOffset2(
+        ele,
+      ) {
         return getCenterOffset(getSourceLabelBox(ele));
       };
-      var getTargetLabelRotationOffset = function getTargetLabelRotationOffset2(ele) {
+      var getTargetLabelRotationOffset = function getTargetLabelRotationOffset2(
+        ele,
+      ) {
         return getCenterOffset(getTargetLabelBox(ele));
       };
       var getLabelRotationOffset = function getLabelRotationOffset2(ele) {
@@ -26566,7 +31868,7 @@ var require_cytoscape_cjs = __commonJS({
         }
         return p2;
       };
-      var eleTxrCache = r.data.eleTxrCache = new ElementTextureCache(r, {
+      var eleTxrCache = (r.data.eleTxrCache = new ElementTextureCache(r, {
         getKey: getStyleKey,
         doesEleInvalidateKey: backgroundTimestampHasChanged,
         drawElement,
@@ -26574,33 +31876,33 @@ var require_cytoscape_cjs = __commonJS({
         getRotationPoint: getElementRotationPoint,
         getRotationOffset: getElementRotationOffset,
         allowEdgeTxrCaching: false,
-        allowParentTxrCaching: false
-      });
-      var lblTxrCache = r.data.lblTxrCache = new ElementTextureCache(r, {
+        allowParentTxrCaching: false,
+      }));
+      var lblTxrCache = (r.data.lblTxrCache = new ElementTextureCache(r, {
         getKey: getLabelKey,
         drawElement: drawLabel,
         getBoundingBox: getLabelBox,
         getRotationPoint: getLabelRotationPoint,
         getRotationOffset: getLabelRotationOffset,
-        isVisible: isLabelVisibleAtScale
-      });
-      var slbTxrCache = r.data.slbTxrCache = new ElementTextureCache(r, {
+        isVisible: isLabelVisibleAtScale,
+      }));
+      var slbTxrCache = (r.data.slbTxrCache = new ElementTextureCache(r, {
         getKey: getSourceLabelKey,
         drawElement: drawSourceLabel,
         getBoundingBox: getSourceLabelBox,
         getRotationPoint: getSourceLabelRotationPoint,
         getRotationOffset: getSourceLabelRotationOffset,
-        isVisible: isLabelVisibleAtScale
-      });
-      var tlbTxrCache = r.data.tlbTxrCache = new ElementTextureCache(r, {
+        isVisible: isLabelVisibleAtScale,
+      }));
+      var tlbTxrCache = (r.data.tlbTxrCache = new ElementTextureCache(r, {
         getKey: getTargetLabelKey,
         drawElement: drawTargetLabel,
         getBoundingBox: getTargetLabelBox,
         getRotationPoint: getTargetLabelRotationPoint,
         getRotationOffset: getTargetLabelRotationOffset,
-        isVisible: isLabelVisibleAtScale
-      });
-      var lyrTxrCache = r.data.lyrTxrCache = new LayeredTextureCache(r);
+        isVisible: isLabelVisibleAtScale,
+      }));
+      var lyrTxrCache = (r.data.lyrTxrCache = new LayeredTextureCache(r));
       r.onUpdateEleCalcs(function invalidateTextureCaches(willDraw, eles) {
         eleTxrCache.invalidateElements(eles);
         lblTxrCache.invalidateElements(eles);
@@ -26622,7 +31924,7 @@ var require_cytoscape_cjs = __commonJS({
       slbTxrCache.onDequeue(refineInLayers);
       tlbTxrCache.onDequeue(refineInLayers);
     }
-    CRp.redrawHint = function(group, bool) {
+    CRp.redrawHint = function (group, bool) {
       var r = this;
       switch (group) {
         case "eles":
@@ -26637,16 +31939,16 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     var pathsImpld = typeof Path2D !== "undefined";
-    CRp.path2dEnabled = function(on) {
+    CRp.path2dEnabled = function (on) {
       if (on === void 0) {
         return this.pathsEnabled;
       }
       this.pathsEnabled = on ? true : false;
     };
-    CRp.usePaths = function() {
+    CRp.usePaths = function () {
       return pathsImpld && this.pathsEnabled;
     };
-    CRp.setImgSmoothing = function(context, bool) {
+    CRp.setImgSmoothing = function (context, bool) {
       if (context.imageSmoothingEnabled != null) {
         context.imageSmoothingEnabled = bool;
       } else {
@@ -26655,16 +31957,24 @@ var require_cytoscape_cjs = __commonJS({
         context.msImageSmoothingEnabled = bool;
       }
     };
-    CRp.getImgSmoothing = function(context) {
+    CRp.getImgSmoothing = function (context) {
       if (context.imageSmoothingEnabled != null) {
         return context.imageSmoothingEnabled;
       } else {
-        return context.webkitImageSmoothingEnabled || context.mozImageSmoothingEnabled || context.msImageSmoothingEnabled;
+        return (
+          context.webkitImageSmoothingEnabled ||
+          context.mozImageSmoothingEnabled ||
+          context.msImageSmoothingEnabled
+        );
       }
     };
-    CRp.makeOffscreenCanvas = function(width, height) {
+    CRp.makeOffscreenCanvas = function (width, height) {
       var canvas;
-      if ((typeof OffscreenCanvas === "undefined" ? "undefined" : _typeof(OffscreenCanvas)) !== "undefined") {
+      if (
+        (typeof OffscreenCanvas === "undefined"
+          ? "undefined"
+          : _typeof(OffscreenCanvas)) !== "undefined"
+      ) {
         canvas = new OffscreenCanvas(width, height);
       } else {
         canvas = document.createElement("canvas");
@@ -26673,32 +31983,58 @@ var require_cytoscape_cjs = __commonJS({
       }
       return canvas;
     };
-    [CRp$a, CRp$9, CRp$8, CRp$7, CRp$6, CRp$5, CRp$4, CRp$3, CRp$2, CRp$1].forEach(function(props) {
+    [
+      CRp$a,
+      CRp$9,
+      CRp$8,
+      CRp$7,
+      CRp$6,
+      CRp$5,
+      CRp$4,
+      CRp$3,
+      CRp$2,
+      CRp$1,
+    ].forEach(function (props) {
       extend(CRp, props);
     });
-    var renderer = [{
-      name: "null",
-      impl: NullRenderer
-    }, {
-      name: "base",
-      impl: BR
-    }, {
-      name: "canvas",
-      impl: CR
-    }];
-    var incExts = [{
-      type: "layout",
-      extensions: layout
-    }, {
-      type: "renderer",
-      extensions: renderer
-    }];
+    var renderer = [
+      {
+        name: "null",
+        impl: NullRenderer,
+      },
+      {
+        name: "base",
+        impl: BR,
+      },
+      {
+        name: "canvas",
+        impl: CR,
+      },
+    ];
+    var incExts = [
+      {
+        type: "layout",
+        extensions: layout,
+      },
+      {
+        type: "renderer",
+        extensions: renderer,
+      },
+    ];
     var extensions = {};
     var modules = {};
     function setExtension(type, name, registrant) {
       var ext = registrant;
       var overrideErr = function overrideErr2(field) {
-        warn("Can not register `" + name + "` for `" + type + "` since `" + field + "` already exists in the prototype and can not be overridden");
+        warn(
+          "Can not register `" +
+            name +
+            "` for `" +
+            type +
+            "` since `" +
+            field +
+            "` already exists in the prototype and can not be overridden",
+        );
       };
       if (type === "core") {
         if (Core.prototype[name]) {
@@ -26723,27 +32059,31 @@ var require_cytoscape_cjs = __commonJS({
           this._private.listeners = [];
           this.createEmitter();
         };
-        var layoutProto = Layout.prototype = Object.create(registrant.prototype);
+        var layoutProto = (Layout.prototype = Object.create(
+          registrant.prototype,
+        ));
         var optLayoutFns = [];
         for (var i2 = 0; i2 < optLayoutFns.length; i2++) {
           var fnName = optLayoutFns[i2];
-          layoutProto[fnName] = layoutProto[fnName] || function() {
-            return this;
-          };
+          layoutProto[fnName] =
+            layoutProto[fnName] ||
+            function () {
+              return this;
+            };
         }
         if (layoutProto.start && !layoutProto.run) {
-          layoutProto.run = function() {
+          layoutProto.run = function () {
             this.start();
             return this;
           };
         } else if (!layoutProto.start && layoutProto.run) {
-          layoutProto.start = function() {
+          layoutProto.start = function () {
             this.run();
             return this;
           };
         }
         var regStop = registrant.prototype.stop;
-        layoutProto.stop = function() {
+        layoutProto.stop = function () {
           var opts = this.options;
           if (opts && opts.animate) {
             var anis = this.animations;
@@ -26761,11 +32101,11 @@ var require_cytoscape_cjs = __commonJS({
           return this;
         };
         if (!layoutProto.destroy) {
-          layoutProto.destroy = function() {
+          layoutProto.destroy = function () {
             return this;
           };
         }
-        layoutProto.cy = function() {
+        layoutProto.cy = function () {
           return this._private.cy;
         };
         var getCy = function getCy2(layout2) {
@@ -26782,7 +32122,7 @@ var require_cytoscape_cjs = __commonJS({
           },
           parent: function parent(layout2) {
             return getCy(layout2);
-          }
+          },
         };
         extend(layoutProto, {
           createEmitter: function createEmitter() {
@@ -26815,7 +32155,7 @@ var require_cytoscape_cjs = __commonJS({
           emit: function emit(evt, params) {
             this.emitter().emit(evt, params);
             return this;
-          }
+          },
         });
         define2.eventAliasesOn(layoutProto);
         ext = Layout;
@@ -26840,38 +32180,51 @@ var require_cytoscape_cjs = __commonJS({
         for (var _pName in rProto) {
           proto[_pName] = rProto[_pName];
         }
-        bProto.clientFunctions.forEach(function(name2) {
-          proto[name2] = proto[name2] || function() {
-            error("Renderer does not implement `renderer." + name2 + "()` on its prototype");
-          };
+        bProto.clientFunctions.forEach(function (name2) {
+          proto[name2] =
+            proto[name2] ||
+            function () {
+              error(
+                "Renderer does not implement `renderer." +
+                  name2 +
+                  "()` on its prototype",
+              );
+            };
         });
         ext = Renderer;
-      } else if (type === "__proto__" || type === "constructor" || type === "prototype") {
-        return error(type + " is an illegal type to be registered, possibly lead to prototype pollutions");
+      } else if (
+        type === "__proto__" ||
+        type === "constructor" ||
+        type === "prototype"
+      ) {
+        return error(
+          type +
+            " is an illegal type to be registered, possibly lead to prototype pollutions",
+        );
       }
       return setMap({
         map: extensions,
         keys: [type, name],
-        value: ext
+        value: ext,
       });
     }
     function getExtension(type, name) {
       return getMap({
         map: extensions,
-        keys: [type, name]
+        keys: [type, name],
       });
     }
     function setModule(type, name, moduleType, moduleName, registrant) {
       return setMap({
         map: modules,
         keys: [type, name, moduleType, moduleName],
-        value: registrant
+        value: registrant,
       });
     }
     function getModule(type, name, moduleType, moduleName) {
       return getMap({
         map: modules,
-        keys: [type, name, moduleType, moduleName]
+        keys: [type, name, moduleType, moduleName],
       });
     }
     var extension = function extension2() {
@@ -26888,8 +32241,8 @@ var require_cytoscape_cjs = __commonJS({
       }
     };
     Core.prototype.extension = extension;
-    incExts.forEach(function(group) {
-      group.extensions.forEach(function(ext) {
+    incExts.forEach(function (group) {
+      group.extensions.forEach(function (ext) {
         setExtension(group.type, ext.name, ext.impl);
       });
     });
@@ -26900,23 +32253,23 @@ var require_cytoscape_cjs = __commonJS({
       this.length = 0;
     };
     var sheetfn = Stylesheet.prototype;
-    sheetfn.instanceString = function() {
+    sheetfn.instanceString = function () {
       return "stylesheet";
     };
-    sheetfn.selector = function(selector) {
+    sheetfn.selector = function (selector) {
       var i2 = this.length++;
       this[i2] = {
         selector,
-        properties: []
+        properties: [],
       };
       return this;
     };
-    sheetfn.css = function(name, value) {
+    sheetfn.css = function (name, value) {
       var i2 = this.length - 1;
       if (string(name)) {
         this[i2].properties.push({
           name,
-          value
+          value,
         });
       } else if (plainObject(name)) {
         var map = name;
@@ -26935,18 +32288,18 @@ var require_cytoscape_cjs = __commonJS({
           var _value = mapVal;
           this[i2].properties.push({
             name: _name,
-            value: _value
+            value: _value,
           });
         }
       }
       return this;
     };
     sheetfn.style = sheetfn.css;
-    sheetfn.generateStyle = function(cy) {
+    sheetfn.generateStyle = function (cy) {
       var style = new Style(cy);
       return this.appendToStyle(style);
     };
-    sheetfn.appendToStyle = function(style) {
+    sheetfn.appendToStyle = function (style) {
       for (var i2 = 0; i2 < this.length; i2++) {
         var context = this[i2];
         var selector = context.selector;
@@ -26970,19 +32323,19 @@ var require_cytoscape_cjs = __commonJS({
         return extension.apply(extension, arguments);
       }
     };
-    cytoscape.use = function(ext) {
+    cytoscape.use = function (ext) {
       var args = Array.prototype.slice.call(arguments, 1);
       args.unshift(cytoscape);
       ext.apply(null, args);
       return this;
     };
-    cytoscape.warnings = function(bool) {
+    cytoscape.warnings = function (bool) {
       return warnings(bool);
     };
     cytoscape.version = version;
     cytoscape.stylesheet = cytoscape.Stylesheet = Stylesheet;
     module.exports = cytoscape;
-  }
+  },
 });
 export default require_cytoscape_cjs();
 /*! Bundled license information:
