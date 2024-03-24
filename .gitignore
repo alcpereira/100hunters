@@ -1,5 +1,8 @@
 node_modules
 
+# viteoress cache file
+/docs/.vitepress/cache
+
 /.cache
 /build
 .env

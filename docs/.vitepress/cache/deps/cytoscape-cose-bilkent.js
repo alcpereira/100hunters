@@ -1,50 +1,47 @@
-import { __commonJS } from "./chunk-Y2F7D3TJ.js";
+import {
+  __commonJS
+} from "./chunk-Y2F7D3TJ.js";
 
 // node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js
 var require_layout_base = __commonJS({
-  "node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"(
-    exports,
-    module,
-  ) {
+  "node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"(exports, module) {
     (function webpackUniversalModuleDefinition(root, factory) {
       if (typeof exports === "object" && typeof module === "object")
         module.exports = factory();
-      else if (typeof define === "function" && define.amd) define([], factory);
-      else if (typeof exports === "object") exports["layoutBase"] = factory();
-      else root["layoutBase"] = factory();
-    })(exports, function () {
+      else if (typeof define === "function" && define.amd)
+        define([], factory);
+      else if (typeof exports === "object")
+        exports["layoutBase"] = factory();
+      else
+        root["layoutBase"] = factory();
+    })(exports, function() {
       return (
         /******/
-        (function (modules) {
+        function(modules) {
           var installedModules = {};
           function __webpack_require__(moduleId) {
             if (installedModules[moduleId]) {
               return installedModules[moduleId].exports;
             }
-            var module2 = (installedModules[moduleId] = {
+            var module2 = installedModules[moduleId] = {
               /******/
               i: moduleId,
               /******/
               l: false,
               /******/
-              exports: {},
+              exports: {}
               /******/
-            });
-            modules[moduleId].call(
-              module2.exports,
-              module2,
-              module2.exports,
-              __webpack_require__,
-            );
+            };
+            modules[moduleId].call(module2.exports, module2, module2.exports, __webpack_require__);
             module2.l = true;
             return module2.exports;
           }
           __webpack_require__.m = modules;
           __webpack_require__.c = installedModules;
-          __webpack_require__.i = function (value) {
+          __webpack_require__.i = function(value) {
             return value;
           };
-          __webpack_require__.d = function (exports2, name, getter) {
+          __webpack_require__.d = function(exports2, name, getter) {
             if (!__webpack_require__.o(exports2, name)) {
               Object.defineProperty(exports2, name, {
                 /******/
@@ -52,36 +49,38 @@ var require_layout_base = __commonJS({
                 /******/
                 enumerable: true,
                 /******/
-                get: getter,
+                get: getter
                 /******/
               });
             }
           };
-          __webpack_require__.n = function (module2) {
-            var getter =
-              module2 && module2.__esModule
-                ? /******/
-                  function getDefault() {
-                    return module2["default"];
-                  }
-                : /******/
-                  function getModuleExports() {
-                    return module2;
-                  };
+          __webpack_require__.n = function(module2) {
+            var getter = module2 && module2.__esModule ? (
+              /******/
+              function getDefault() {
+                return module2["default"];
+              }
+            ) : (
+              /******/
+              function getModuleExports() {
+                return module2;
+              }
+            );
             __webpack_require__.d(getter, "a", getter);
             return getter;
           };
-          __webpack_require__.o = function (object, property) {
+          __webpack_require__.o = function(object, property) {
             return Object.prototype.hasOwnProperty.call(object, property);
           };
           __webpack_require__.p = "";
-          return __webpack_require__((__webpack_require__.s = 26));
-        })([
+          return __webpack_require__(__webpack_require__.s = 26);
+        }([
           /* 0 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            function LayoutConstants() {}
+            function LayoutConstants() {
+            }
             LayoutConstants.QUALITY = 1;
             LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED = false;
             LayoutConstants.DEFAULT_INCREMENTAL = false;
@@ -92,20 +91,18 @@ var require_layout_base = __commonJS({
             LayoutConstants.DEFAULT_GRAPH_MARGIN = 15;
             LayoutConstants.NODE_DIMENSIONS_INCLUDE_LABELS = false;
             LayoutConstants.SIMPLE_NODE_SIZE = 40;
-            LayoutConstants.SIMPLE_NODE_HALF_SIZE =
-              LayoutConstants.SIMPLE_NODE_SIZE / 2;
+            LayoutConstants.SIMPLE_NODE_HALF_SIZE = LayoutConstants.SIMPLE_NODE_SIZE / 2;
             LayoutConstants.EMPTY_COMPOUND_NODE_SIZE = 40;
             LayoutConstants.MIN_EDGE_LENGTH = 1;
             LayoutConstants.WORLD_BOUNDARY = 1e6;
-            LayoutConstants.INITIAL_WORLD_BOUNDARY =
-              LayoutConstants.WORLD_BOUNDARY / 1e3;
+            LayoutConstants.INITIAL_WORLD_BOUNDARY = LayoutConstants.WORLD_BOUNDARY / 1e3;
             LayoutConstants.WORLD_CENTER_X = 1200;
             LayoutConstants.WORLD_CENTER_Y = 900;
             module2.exports = LayoutConstants;
           },
           /* 1 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraphObject = __webpack_require__(2);
             var IGeometry = __webpack_require__(8);
@@ -122,34 +119,34 @@ var require_layout_base = __commonJS({
             for (var prop in LGraphObject) {
               LEdge[prop] = LGraphObject[prop];
             }
-            LEdge.prototype.getSource = function () {
+            LEdge.prototype.getSource = function() {
               return this.source;
             };
-            LEdge.prototype.getTarget = function () {
+            LEdge.prototype.getTarget = function() {
               return this.target;
             };
-            LEdge.prototype.isInterGraph = function () {
+            LEdge.prototype.isInterGraph = function() {
               return this.isInterGraph;
             };
-            LEdge.prototype.getLength = function () {
+            LEdge.prototype.getLength = function() {
               return this.length;
             };
-            LEdge.prototype.isOverlapingSourceAndTarget = function () {
+            LEdge.prototype.isOverlapingSourceAndTarget = function() {
               return this.isOverlapingSourceAndTarget;
             };
-            LEdge.prototype.getBendpoints = function () {
+            LEdge.prototype.getBendpoints = function() {
               return this.bendpoints;
             };
-            LEdge.prototype.getLca = function () {
+            LEdge.prototype.getLca = function() {
               return this.lca;
             };
-            LEdge.prototype.getSourceInLca = function () {
+            LEdge.prototype.getSourceInLca = function() {
               return this.sourceInLca;
             };
-            LEdge.prototype.getTargetInLca = function () {
+            LEdge.prototype.getTargetInLca = function() {
               return this.targetInLca;
             };
-            LEdge.prototype.getOtherEnd = function (node) {
+            LEdge.prototype.getOtherEnd = function(node) {
               if (this.source === node) {
                 return this.target;
               } else if (this.target === node) {
@@ -158,7 +155,7 @@ var require_layout_base = __commonJS({
                 throw "Node is not incident with this edge";
               }
             };
-            LEdge.prototype.getOtherEndInGraph = function (node, graph) {
+            LEdge.prototype.getOtherEndInGraph = function(node, graph) {
               var otherEnd = this.getOtherEnd(node);
               var root = graph.getGraphManager().getRoot();
               while (true) {
@@ -172,49 +169,37 @@ var require_layout_base = __commonJS({
               }
               return null;
             };
-            LEdge.prototype.updateLength = function () {
+            LEdge.prototype.updateLength = function() {
               var clipPointCoordinates = new Array(4);
-              this.isOverlapingSourceAndTarget = IGeometry.getIntersection(
-                this.target.getRect(),
-                this.source.getRect(),
-                clipPointCoordinates,
-              );
+              this.isOverlapingSourceAndTarget = IGeometry.getIntersection(this.target.getRect(), this.source.getRect(), clipPointCoordinates);
               if (!this.isOverlapingSourceAndTarget) {
-                this.lengthX =
-                  clipPointCoordinates[0] - clipPointCoordinates[2];
-                this.lengthY =
-                  clipPointCoordinates[1] - clipPointCoordinates[3];
+                this.lengthX = clipPointCoordinates[0] - clipPointCoordinates[2];
+                this.lengthY = clipPointCoordinates[1] - clipPointCoordinates[3];
                 if (Math.abs(this.lengthX) < 1) {
                   this.lengthX = IMath.sign(this.lengthX);
                 }
                 if (Math.abs(this.lengthY) < 1) {
                   this.lengthY = IMath.sign(this.lengthY);
                 }
-                this.length = Math.sqrt(
-                  this.lengthX * this.lengthX + this.lengthY * this.lengthY,
-                );
+                this.length = Math.sqrt(this.lengthX * this.lengthX + this.lengthY * this.lengthY);
               }
             };
-            LEdge.prototype.updateLengthSimple = function () {
-              this.lengthX =
-                this.target.getCenterX() - this.source.getCenterX();
-              this.lengthY =
-                this.target.getCenterY() - this.source.getCenterY();
+            LEdge.prototype.updateLengthSimple = function() {
+              this.lengthX = this.target.getCenterX() - this.source.getCenterX();
+              this.lengthY = this.target.getCenterY() - this.source.getCenterY();
               if (Math.abs(this.lengthX) < 1) {
                 this.lengthX = IMath.sign(this.lengthX);
               }
               if (Math.abs(this.lengthY) < 1) {
                 this.lengthY = IMath.sign(this.lengthY);
               }
-              this.length = Math.sqrt(
-                this.lengthX * this.lengthX + this.lengthY * this.lengthY,
-              );
+              this.length = Math.sqrt(this.lengthX * this.lengthX + this.lengthY * this.lengthY);
             };
             module2.exports = LEdge;
           },
           /* 2 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function LGraphObject(vGraphObject) {
               this.vGraphObject = vGraphObject;
@@ -223,7 +208,7 @@ var require_layout_base = __commonJS({
           },
           /* 3 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraphObject = __webpack_require__(2);
             var Integer = __webpack_require__(10);
@@ -236,113 +221,100 @@ var require_layout_base = __commonJS({
                 vNode = loc;
               }
               LGraphObject.call(this, vNode);
-              if (gm.graphManager != null) gm = gm.graphManager;
+              if (gm.graphManager != null)
+                gm = gm.graphManager;
               this.estimatedSize = Integer.MIN_VALUE;
               this.inclusionTreeDepth = Integer.MAX_VALUE;
               this.vGraphObject = vNode;
               this.edges = [];
               this.graphManager = gm;
               if (size != null && loc != null)
-                this.rect = new RectangleD(
-                  loc.x,
-                  loc.y,
-                  size.width,
-                  size.height,
-                );
-              else this.rect = new RectangleD();
+                this.rect = new RectangleD(loc.x, loc.y, size.width, size.height);
+              else
+                this.rect = new RectangleD();
             }
             LNode.prototype = Object.create(LGraphObject.prototype);
             for (var prop in LGraphObject) {
               LNode[prop] = LGraphObject[prop];
             }
-            LNode.prototype.getEdges = function () {
+            LNode.prototype.getEdges = function() {
               return this.edges;
             };
-            LNode.prototype.getChild = function () {
+            LNode.prototype.getChild = function() {
               return this.child;
             };
-            LNode.prototype.getOwner = function () {
+            LNode.prototype.getOwner = function() {
               return this.owner;
             };
-            LNode.prototype.getWidth = function () {
+            LNode.prototype.getWidth = function() {
               return this.rect.width;
             };
-            LNode.prototype.setWidth = function (width) {
+            LNode.prototype.setWidth = function(width) {
               this.rect.width = width;
             };
-            LNode.prototype.getHeight = function () {
+            LNode.prototype.getHeight = function() {
               return this.rect.height;
             };
-            LNode.prototype.setHeight = function (height) {
+            LNode.prototype.setHeight = function(height) {
               this.rect.height = height;
             };
-            LNode.prototype.getCenterX = function () {
+            LNode.prototype.getCenterX = function() {
               return this.rect.x + this.rect.width / 2;
             };
-            LNode.prototype.getCenterY = function () {
+            LNode.prototype.getCenterY = function() {
               return this.rect.y + this.rect.height / 2;
             };
-            LNode.prototype.getCenter = function () {
-              return new PointD(
-                this.rect.x + this.rect.width / 2,
-                this.rect.y + this.rect.height / 2,
-              );
+            LNode.prototype.getCenter = function() {
+              return new PointD(this.rect.x + this.rect.width / 2, this.rect.y + this.rect.height / 2);
             };
-            LNode.prototype.getLocation = function () {
+            LNode.prototype.getLocation = function() {
               return new PointD(this.rect.x, this.rect.y);
             };
-            LNode.prototype.getRect = function () {
+            LNode.prototype.getRect = function() {
               return this.rect;
             };
-            LNode.prototype.getDiagonal = function () {
-              return Math.sqrt(
-                this.rect.width * this.rect.width +
-                  this.rect.height * this.rect.height,
-              );
+            LNode.prototype.getDiagonal = function() {
+              return Math.sqrt(this.rect.width * this.rect.width + this.rect.height * this.rect.height);
             };
-            LNode.prototype.getHalfTheDiagonal = function () {
-              return (
-                Math.sqrt(
-                  this.rect.height * this.rect.height +
-                    this.rect.width * this.rect.width,
-                ) / 2
-              );
+            LNode.prototype.getHalfTheDiagonal = function() {
+              return Math.sqrt(this.rect.height * this.rect.height + this.rect.width * this.rect.width) / 2;
             };
-            LNode.prototype.setRect = function (upperLeft, dimension) {
+            LNode.prototype.setRect = function(upperLeft, dimension) {
               this.rect.x = upperLeft.x;
               this.rect.y = upperLeft.y;
               this.rect.width = dimension.width;
               this.rect.height = dimension.height;
             };
-            LNode.prototype.setCenter = function (cx, cy) {
+            LNode.prototype.setCenter = function(cx, cy) {
               this.rect.x = cx - this.rect.width / 2;
               this.rect.y = cy - this.rect.height / 2;
             };
-            LNode.prototype.setLocation = function (x, y) {
+            LNode.prototype.setLocation = function(x, y) {
               this.rect.x = x;
               this.rect.y = y;
             };
-            LNode.prototype.moveBy = function (dx, dy) {
+            LNode.prototype.moveBy = function(dx, dy) {
               this.rect.x += dx;
               this.rect.y += dy;
             };
-            LNode.prototype.getEdgeListToNode = function (to) {
+            LNode.prototype.getEdgeListToNode = function(to) {
               var edgeList = [];
               var edge;
               var self = this;
-              self.edges.forEach(function (edge2) {
+              self.edges.forEach(function(edge2) {
                 if (edge2.target == to) {
-                  if (edge2.source != self) throw "Incorrect edge source!";
+                  if (edge2.source != self)
+                    throw "Incorrect edge source!";
                   edgeList.push(edge2);
                 }
               });
               return edgeList;
             };
-            LNode.prototype.getEdgesBetween = function (other) {
+            LNode.prototype.getEdgesBetween = function(other) {
               var edgeList = [];
               var edge;
               var self = this;
-              self.edges.forEach(function (edge2) {
+              self.edges.forEach(function(edge2) {
                 if (!(edge2.source == self || edge2.target == self))
                   throw "Incorrect edge source and/or target";
                 if (edge2.target == other || edge2.source == other) {
@@ -351,10 +323,10 @@ var require_layout_base = __commonJS({
               });
               return edgeList;
             };
-            LNode.prototype.getNeighborsList = function () {
+            LNode.prototype.getNeighborsList = function() {
               var neighbors = /* @__PURE__ */ new Set();
               var self = this;
-              self.edges.forEach(function (edge) {
+              self.edges.forEach(function(edge) {
                 if (edge.source == self) {
                   neighbors.add(edge.target);
                 } else {
@@ -366,7 +338,7 @@ var require_layout_base = __commonJS({
               });
               return neighbors;
             };
-            LNode.prototype.withChildren = function () {
+            LNode.prototype.withChildren = function() {
               var withNeighborsList = /* @__PURE__ */ new Set();
               var childNode;
               var children;
@@ -376,14 +348,14 @@ var require_layout_base = __commonJS({
                 for (var i = 0; i < nodes.length; i++) {
                   childNode = nodes[i];
                   children = childNode.withChildren();
-                  children.forEach(function (node) {
+                  children.forEach(function(node) {
                     withNeighborsList.add(node);
                   });
                 }
               }
               return withNeighborsList;
             };
-            LNode.prototype.getNoOfChildren = function () {
+            LNode.prototype.getNoOfChildren = function() {
               var noOfChildren = 0;
               var childNode;
               if (this.child == null) {
@@ -400,16 +372,15 @@ var require_layout_base = __commonJS({
               }
               return noOfChildren;
             };
-            LNode.prototype.getEstimatedSize = function () {
+            LNode.prototype.getEstimatedSize = function() {
               if (this.estimatedSize == Integer.MIN_VALUE) {
                 throw "assert failed";
               }
               return this.estimatedSize;
             };
-            LNode.prototype.calcEstimatedSize = function () {
+            LNode.prototype.calcEstimatedSize = function() {
               if (this.child == null) {
-                return (this.estimatedSize =
-                  (this.rect.width + this.rect.height) / 2);
+                return this.estimatedSize = (this.rect.width + this.rect.height) / 2;
               } else {
                 this.estimatedSize = this.child.calcEstimatedSize();
                 this.rect.width = this.estimatedSize;
@@ -417,25 +388,19 @@ var require_layout_base = __commonJS({
                 return this.estimatedSize;
               }
             };
-            LNode.prototype.scatter = function () {
+            LNode.prototype.scatter = function() {
               var randomCenterX;
               var randomCenterY;
               var minX = -LayoutConstants.INITIAL_WORLD_BOUNDARY;
               var maxX = LayoutConstants.INITIAL_WORLD_BOUNDARY;
-              randomCenterX =
-                LayoutConstants.WORLD_CENTER_X +
-                RandomSeed.nextDouble() * (maxX - minX) +
-                minX;
+              randomCenterX = LayoutConstants.WORLD_CENTER_X + RandomSeed.nextDouble() * (maxX - minX) + minX;
               var minY = -LayoutConstants.INITIAL_WORLD_BOUNDARY;
               var maxY = LayoutConstants.INITIAL_WORLD_BOUNDARY;
-              randomCenterY =
-                LayoutConstants.WORLD_CENTER_Y +
-                RandomSeed.nextDouble() * (maxY - minY) +
-                minY;
+              randomCenterY = LayoutConstants.WORLD_CENTER_Y + RandomSeed.nextDouble() * (maxY - minY) + minY;
               this.rect.x = randomCenterX;
               this.rect.y = randomCenterY;
             };
-            LNode.prototype.updateBounds = function () {
+            LNode.prototype.updateBounds = function() {
               if (this.getChild() == null) {
                 throw "assert failed";
               }
@@ -464,13 +429,13 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            LNode.prototype.getInclusionTreeDepth = function () {
+            LNode.prototype.getInclusionTreeDepth = function() {
               if (this.inclusionTreeDepth == Integer.MAX_VALUE) {
                 throw "assert failed";
               }
               return this.inclusionTreeDepth;
             };
-            LNode.prototype.transform = function (trans) {
+            LNode.prototype.transform = function(trans) {
               var left = this.rect.x;
               if (left > LayoutConstants.WORLD_BOUNDARY) {
                 left = LayoutConstants.WORLD_BOUNDARY;
@@ -487,19 +452,19 @@ var require_layout_base = __commonJS({
               var vLeftTop = trans.inverseTransformPoint(leftTop);
               this.setLocation(vLeftTop.x, vLeftTop.y);
             };
-            LNode.prototype.getLeft = function () {
+            LNode.prototype.getLeft = function() {
               return this.rect.x;
             };
-            LNode.prototype.getRight = function () {
+            LNode.prototype.getRight = function() {
               return this.rect.x + this.rect.width;
             };
-            LNode.prototype.getTop = function () {
+            LNode.prototype.getTop = function() {
               return this.rect.y;
             };
-            LNode.prototype.getBottom = function () {
+            LNode.prototype.getBottom = function() {
               return this.rect.y + this.rect.height;
             };
-            LNode.prototype.getParent = function () {
+            LNode.prototype.getParent = function() {
               if (this.owner == null) {
                 return null;
               }
@@ -509,7 +474,7 @@ var require_layout_base = __commonJS({
           },
           /* 4 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function PointD(x, y) {
               if (x == null && y == null) {
@@ -520,25 +485,25 @@ var require_layout_base = __commonJS({
                 this.y = y;
               }
             }
-            PointD.prototype.getX = function () {
+            PointD.prototype.getX = function() {
               return this.x;
             };
-            PointD.prototype.getY = function () {
+            PointD.prototype.getY = function() {
               return this.y;
             };
-            PointD.prototype.setX = function (x) {
+            PointD.prototype.setX = function(x) {
               this.x = x;
             };
-            PointD.prototype.setY = function (y) {
+            PointD.prototype.setY = function(y) {
               this.y = y;
             };
-            PointD.prototype.getDifference = function (pt) {
+            PointD.prototype.getDifference = function(pt) {
               return new DimensionD(this.x - pt.x, this.y - pt.y);
             };
-            PointD.prototype.getCopy = function () {
+            PointD.prototype.getCopy = function() {
               return new PointD(this.x, this.y);
             };
-            PointD.prototype.translate = function (dim) {
+            PointD.prototype.translate = function(dim) {
               this.x += dim.width;
               this.y += dim.height;
               return this;
@@ -547,7 +512,7 @@ var require_layout_base = __commonJS({
           },
           /* 5 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraphObject = __webpack_require__(2);
             var Integer = __webpack_require__(10);
@@ -576,34 +541,34 @@ var require_layout_base = __commonJS({
             for (var prop in LGraphObject) {
               LGraph[prop] = LGraphObject[prop];
             }
-            LGraph.prototype.getNodes = function () {
+            LGraph.prototype.getNodes = function() {
               return this.nodes;
             };
-            LGraph.prototype.getEdges = function () {
+            LGraph.prototype.getEdges = function() {
               return this.edges;
             };
-            LGraph.prototype.getGraphManager = function () {
+            LGraph.prototype.getGraphManager = function() {
               return this.graphManager;
             };
-            LGraph.prototype.getParent = function () {
+            LGraph.prototype.getParent = function() {
               return this.parent;
             };
-            LGraph.prototype.getLeft = function () {
+            LGraph.prototype.getLeft = function() {
               return this.left;
             };
-            LGraph.prototype.getRight = function () {
+            LGraph.prototype.getRight = function() {
               return this.right;
             };
-            LGraph.prototype.getTop = function () {
+            LGraph.prototype.getTop = function() {
               return this.top;
             };
-            LGraph.prototype.getBottom = function () {
+            LGraph.prototype.getBottom = function() {
               return this.bottom;
             };
-            LGraph.prototype.isConnected = function () {
+            LGraph.prototype.isConnected = function() {
               return this.isConnected;
             };
-            LGraph.prototype.add = function (obj1, sourceNode, targetNode) {
+            LGraph.prototype.add = function(obj1, sourceNode, targetNode) {
               if (sourceNode == null && targetNode == null) {
                 var newNode = obj1;
                 if (this.graphManager == null) {
@@ -617,20 +582,10 @@ var require_layout_base = __commonJS({
                 return newNode;
               } else {
                 var newEdge = obj1;
-                if (
-                  !(
-                    this.getNodes().indexOf(sourceNode) > -1 &&
-                    this.getNodes().indexOf(targetNode) > -1
-                  )
-                ) {
+                if (!(this.getNodes().indexOf(sourceNode) > -1 && this.getNodes().indexOf(targetNode) > -1)) {
                   throw "Source or target not in graph!";
                 }
-                if (
-                  !(
-                    sourceNode.owner == targetNode.owner &&
-                    sourceNode.owner == this
-                  )
-                ) {
+                if (!(sourceNode.owner == targetNode.owner && sourceNode.owner == this)) {
                   throw "Both owners must be this graph!";
                 }
                 if (sourceNode.owner != targetNode.owner) {
@@ -647,7 +602,7 @@ var require_layout_base = __commonJS({
                 return newEdge;
               }
             };
-            LGraph.prototype.remove = function (obj) {
+            LGraph.prototype.remove = function(obj) {
               var node = obj;
               if (obj instanceof LNode) {
                 if (node == null) {
@@ -683,14 +638,7 @@ var require_layout_base = __commonJS({
                 if (!(edge.source != null && edge.target != null)) {
                   throw "Source and/or target is null!";
                 }
-                if (
-                  !(
-                    edge.source.owner != null &&
-                    edge.target.owner != null &&
-                    edge.source.owner == this &&
-                    edge.target.owner == this
-                  )
-                ) {
+                if (!(edge.source.owner != null && edge.target.owner != null && edge.source.owner == this && edge.target.owner == this)) {
                   throw "Source and/or target owner is invalid!";
                 }
                 var sourceIndex = edge.source.edges.indexOf(edge);
@@ -709,7 +657,7 @@ var require_layout_base = __commonJS({
                 edge.source.owner.getEdges().splice(index, 1);
               }
             };
-            LGraph.prototype.updateLeftTop = function () {
+            LGraph.prototype.updateLeftTop = function() {
               var top = Integer.MAX_VALUE;
               var left = Integer.MAX_VALUE;
               var nodeTop;
@@ -740,7 +688,7 @@ var require_layout_base = __commonJS({
               this.top = top - margin;
               return new Point2(this.left, this.top);
             };
-            LGraph.prototype.updateBounds = function (recursive) {
+            LGraph.prototype.updateBounds = function(recursive) {
               var left = Integer.MAX_VALUE;
               var right = -Integer.MAX_VALUE;
               var top = Integer.MAX_VALUE;
@@ -774,12 +722,7 @@ var require_layout_base = __commonJS({
                   bottom = nodeBottom;
                 }
               }
-              var boundingRect = new RectangleD(
-                left,
-                top,
-                right - left,
-                bottom - top,
-              );
+              var boundingRect = new RectangleD(left, top, right - left, bottom - top);
               if (left == Integer.MAX_VALUE) {
                 this.left = this.parent.getLeft();
                 this.right = this.parent.getRight();
@@ -796,7 +739,7 @@ var require_layout_base = __commonJS({
               this.top = boundingRect.y - margin;
               this.bottom = boundingRect.y + boundingRect.height + margin;
             };
-            LGraph.calculateBounds = function (nodes) {
+            LGraph.calculateBounds = function(nodes) {
               var left = Integer.MAX_VALUE;
               var right = -Integer.MAX_VALUE;
               var top = Integer.MAX_VALUE;
@@ -825,28 +768,23 @@ var require_layout_base = __commonJS({
                   bottom = nodeBottom;
                 }
               }
-              var boundingRect = new RectangleD(
-                left,
-                top,
-                right - left,
-                bottom - top,
-              );
+              var boundingRect = new RectangleD(left, top, right - left, bottom - top);
               return boundingRect;
             };
-            LGraph.prototype.getInclusionTreeDepth = function () {
+            LGraph.prototype.getInclusionTreeDepth = function() {
               if (this == this.graphManager.getRoot()) {
                 return 1;
               } else {
                 return this.parent.getInclusionTreeDepth();
               }
             };
-            LGraph.prototype.getEstimatedSize = function () {
+            LGraph.prototype.getEstimatedSize = function() {
               if (this.estimatedSize == Integer.MIN_VALUE) {
                 throw "assert failed";
               }
               return this.estimatedSize;
             };
-            LGraph.prototype.calcEstimatedSize = function () {
+            LGraph.prototype.calcEstimatedSize = function() {
               var size = 0;
               var nodes = this.nodes;
               var s = nodes.length;
@@ -861,7 +799,7 @@ var require_layout_base = __commonJS({
               }
               return this.estimatedSize;
             };
-            LGraph.prototype.updateConnected = function () {
+            LGraph.prototype.updateConnected = function() {
               var self = this;
               if (this.nodes.length == 0) {
                 this.isConnected = true;
@@ -873,7 +811,7 @@ var require_layout_base = __commonJS({
               var neighborEdges;
               var currentNeighbor;
               var childrenOfNode = currentNode.withChildren();
-              childrenOfNode.forEach(function (node) {
+              childrenOfNode.forEach(function(node) {
                 queue.push(node);
                 visited.add(node);
               });
@@ -883,16 +821,10 @@ var require_layout_base = __commonJS({
                 var size = neighborEdges.length;
                 for (var i = 0; i < size; i++) {
                   var neighborEdge = neighborEdges[i];
-                  currentNeighbor = neighborEdge.getOtherEndInGraph(
-                    currentNode,
-                    this,
-                  );
-                  if (
-                    currentNeighbor != null &&
-                    !visited.has(currentNeighbor)
-                  ) {
+                  currentNeighbor = neighborEdge.getOtherEndInGraph(currentNode, this);
+                  if (currentNeighbor != null && !visited.has(currentNeighbor)) {
                     var childrenOfNeighbor = currentNeighbor.withChildren();
-                    childrenOfNeighbor.forEach(function (node) {
+                    childrenOfNeighbor.forEach(function(node) {
                       queue.push(node);
                       visited.add(node);
                     });
@@ -902,7 +834,7 @@ var require_layout_base = __commonJS({
               this.isConnected = false;
               if (visited.size >= this.nodes.length) {
                 var noOfVisitedInThisGraph = 0;
-                visited.forEach(function (visitedNode) {
+                visited.forEach(function(visitedNode) {
                   if (visitedNode.owner == self) {
                     noOfVisitedInThisGraph++;
                   }
@@ -916,7 +848,7 @@ var require_layout_base = __commonJS({
           },
           /* 6 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraph;
             var LEdge = __webpack_require__(1);
@@ -926,20 +858,14 @@ var require_layout_base = __commonJS({
               this.graphs = [];
               this.edges = [];
             }
-            LGraphManager.prototype.addRoot = function () {
+            LGraphManager.prototype.addRoot = function() {
               var ngraph = this.layout.newGraph();
               var nnode = this.layout.newNode(null);
               var root = this.add(ngraph, nnode);
               this.setRootGraph(root);
               return this.rootGraph;
             };
-            LGraphManager.prototype.add = function (
-              newGraph,
-              parentNode,
-              newEdge,
-              sourceNode,
-              targetNode,
-            ) {
+            LGraphManager.prototype.add = function(newGraph, parentNode, newEdge, sourceNode, targetNode) {
               if (newEdge == null && sourceNode == null && targetNode == null) {
                 if (newGraph == null) {
                   throw "Graph is null!";
@@ -966,18 +892,10 @@ var require_layout_base = __commonJS({
                 newEdge = newGraph;
                 var sourceGraph = sourceNode.getOwner();
                 var targetGraph = targetNode.getOwner();
-                if (
-                  !(
-                    sourceGraph != null && sourceGraph.getGraphManager() == this
-                  )
-                ) {
+                if (!(sourceGraph != null && sourceGraph.getGraphManager() == this)) {
                   throw "Source not in this graph mgr!";
                 }
-                if (
-                  !(
-                    targetGraph != null && targetGraph.getGraphManager() == this
-                  )
-                ) {
+                if (!(targetGraph != null && targetGraph.getGraphManager() == this)) {
                   throw "Target not in this graph mgr!";
                 }
                 if (sourceGraph == targetGraph) {
@@ -994,12 +912,7 @@ var require_layout_base = __commonJS({
                   if (!(newEdge.source != null && newEdge.target != null)) {
                     throw "Edge source and/or target is null!";
                   }
-                  if (
-                    !(
-                      newEdge.source.edges.indexOf(newEdge) == -1 &&
-                      newEdge.target.edges.indexOf(newEdge) == -1
-                    )
-                  ) {
+                  if (!(newEdge.source.edges.indexOf(newEdge) == -1 && newEdge.target.edges.indexOf(newEdge) == -1)) {
                     throw "Edge already in source and/or target incidency list!";
                   }
                   newEdge.source.edges.push(newEdge);
@@ -1008,18 +921,13 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            LGraphManager.prototype.remove = function (lObj) {
+            LGraphManager.prototype.remove = function(lObj) {
               if (lObj instanceof LGraph) {
                 var graph = lObj;
                 if (graph.getGraphManager() != this) {
                   throw "Graph not in this graph mgr";
                 }
-                if (
-                  !(
-                    graph == this.rootGraph ||
-                    (graph.parent != null && graph.parent.graphManager == this)
-                  )
-                ) {
+                if (!(graph == this.rootGraph || graph.parent != null && graph.parent.graphManager == this)) {
                   throw "Invalid parent node!";
                 }
                 var edgesToBeRemoved = [];
@@ -1055,44 +963,30 @@ var require_layout_base = __commonJS({
                 if (!(edge.source != null && edge.target != null)) {
                   throw "Source and/or target is null!";
                 }
-                if (
-                  !(
-                    edge.source.edges.indexOf(edge) != -1 &&
-                    edge.target.edges.indexOf(edge) != -1
-                  )
-                ) {
+                if (!(edge.source.edges.indexOf(edge) != -1 && edge.target.edges.indexOf(edge) != -1)) {
                   throw "Source and/or target doesn't know this edge!";
                 }
                 var index = edge.source.edges.indexOf(edge);
                 edge.source.edges.splice(index, 1);
                 index = edge.target.edges.indexOf(edge);
                 edge.target.edges.splice(index, 1);
-                if (
-                  !(
-                    edge.source.owner != null &&
-                    edge.source.owner.getGraphManager() != null
-                  )
-                ) {
+                if (!(edge.source.owner != null && edge.source.owner.getGraphManager() != null)) {
                   throw "Edge owner graph or owner graph manager is null!";
                 }
-                if (
-                  edge.source.owner.getGraphManager().edges.indexOf(edge) == -1
-                ) {
+                if (edge.source.owner.getGraphManager().edges.indexOf(edge) == -1) {
                   throw "Not in owner graph manager's edge list!";
                 }
-                var index = edge.source.owner
-                  .getGraphManager()
-                  .edges.indexOf(edge);
+                var index = edge.source.owner.getGraphManager().edges.indexOf(edge);
                 edge.source.owner.getGraphManager().edges.splice(index, 1);
               }
             };
-            LGraphManager.prototype.updateBounds = function () {
+            LGraphManager.prototype.updateBounds = function() {
               this.rootGraph.updateBounds(true);
             };
-            LGraphManager.prototype.getGraphs = function () {
+            LGraphManager.prototype.getGraphs = function() {
               return this.graphs;
             };
-            LGraphManager.prototype.getAllNodes = function () {
+            LGraphManager.prototype.getAllNodes = function() {
               if (this.allNodes == null) {
                 var nodeList = [];
                 var graphs = this.getGraphs();
@@ -1104,17 +998,16 @@ var require_layout_base = __commonJS({
               }
               return this.allNodes;
             };
-            LGraphManager.prototype.resetAllNodes = function () {
+            LGraphManager.prototype.resetAllNodes = function() {
               this.allNodes = null;
             };
-            LGraphManager.prototype.resetAllEdges = function () {
+            LGraphManager.prototype.resetAllEdges = function() {
               this.allEdges = null;
             };
-            LGraphManager.prototype.resetAllNodesToApplyGravitation =
-              function () {
-                this.allNodesToApplyGravitation = null;
-              };
-            LGraphManager.prototype.getAllEdges = function () {
+            LGraphManager.prototype.resetAllNodesToApplyGravitation = function() {
+              this.allNodesToApplyGravitation = null;
+            };
+            LGraphManager.prototype.getAllEdges = function() {
               if (this.allEdges == null) {
                 var edgeList = [];
                 var graphs = this.getGraphs();
@@ -1127,22 +1020,19 @@ var require_layout_base = __commonJS({
               }
               return this.allEdges;
             };
-            LGraphManager.prototype.getAllNodesToApplyGravitation =
-              function () {
-                return this.allNodesToApplyGravitation;
-              };
-            LGraphManager.prototype.setAllNodesToApplyGravitation = function (
-              nodeList,
-            ) {
+            LGraphManager.prototype.getAllNodesToApplyGravitation = function() {
+              return this.allNodesToApplyGravitation;
+            };
+            LGraphManager.prototype.setAllNodesToApplyGravitation = function(nodeList) {
               if (this.allNodesToApplyGravitation != null) {
                 throw "assert failed";
               }
               this.allNodesToApplyGravitation = nodeList;
             };
-            LGraphManager.prototype.getRoot = function () {
+            LGraphManager.prototype.getRoot = function() {
               return this.rootGraph;
             };
-            LGraphManager.prototype.setRootGraph = function (graph) {
+            LGraphManager.prototype.setRootGraph = function(graph) {
               if (graph.getGraphManager() != this) {
                 throw "Root not in this graph mgr!";
               }
@@ -1151,13 +1041,10 @@ var require_layout_base = __commonJS({
                 graph.parent = this.layout.newNode("Root node");
               }
             };
-            LGraphManager.prototype.getLayout = function () {
+            LGraphManager.prototype.getLayout = function() {
               return this.layout;
             };
-            LGraphManager.prototype.isOneAncestorOfOther = function (
-              firstNode,
-              secondNode,
-            ) {
+            LGraphManager.prototype.isOneAncestorOfOther = function(firstNode, secondNode) {
               if (!(firstNode != null && secondNode != null)) {
                 throw "assert failed";
               }
@@ -1195,7 +1082,7 @@ var require_layout_base = __commonJS({
               } while (true);
               return false;
             };
-            LGraphManager.prototype.calcLowestCommonAncestors = function () {
+            LGraphManager.prototype.calcLowestCommonAncestors = function() {
               var edge;
               var sourceNode;
               var targetNode;
@@ -1245,10 +1132,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            LGraphManager.prototype.calcLowestCommonAncestor = function (
-              firstNode,
-              secondNode,
-            ) {
+            LGraphManager.prototype.calcLowestCommonAncestor = function(firstNode, secondNode) {
               if (firstNode == secondNode) {
                 return firstNode.getOwner();
               }
@@ -1271,10 +1155,7 @@ var require_layout_base = __commonJS({
               } while (true);
               return firstOwnerGraph;
             };
-            LGraphManager.prototype.calcInclusionTreeDepths = function (
-              graph,
-              depth,
-            ) {
+            LGraphManager.prototype.calcInclusionTreeDepths = function(graph, depth) {
               if (graph == null && depth == null) {
                 graph = this.rootGraph;
                 depth = 1;
@@ -1290,7 +1171,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            LGraphManager.prototype.includesInvalidEdge = function () {
+            LGraphManager.prototype.includesInvalidEdge = function() {
               var edge;
               var s = this.edges.length;
               for (var i = 0; i < s; i++) {
@@ -1305,10 +1186,11 @@ var require_layout_base = __commonJS({
           },
           /* 7 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LayoutConstants = __webpack_require__(0);
-            function FDLayoutConstants() {}
+            function FDLayoutConstants() {
+            }
             for (var prop in LayoutConstants) {
               FDLayoutConstants[prop] = LayoutConstants[prop];
             }
@@ -1327,10 +1209,8 @@ var require_layout_base = __commonJS({
             FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT = 1e3;
             FDLayoutConstants.ADAPTATION_UPPER_NODE_LIMIT = 5e3;
             FDLayoutConstants.MAX_NODE_DISPLACEMENT_INCREMENTAL = 100;
-            FDLayoutConstants.MAX_NODE_DISPLACEMENT =
-              FDLayoutConstants.MAX_NODE_DISPLACEMENT_INCREMENTAL * 3;
-            FDLayoutConstants.MIN_REPULSION_DIST =
-              FDLayoutConstants.DEFAULT_EDGE_LENGTH / 10;
+            FDLayoutConstants.MAX_NODE_DISPLACEMENT = FDLayoutConstants.MAX_NODE_DISPLACEMENT_INCREMENTAL * 3;
+            FDLayoutConstants.MIN_REPULSION_DIST = FDLayoutConstants.DEFAULT_EDGE_LENGTH / 10;
             FDLayoutConstants.CONVERGENCE_CHECK_PERIOD = 100;
             FDLayoutConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR = 0.1;
             FDLayoutConstants.MIN_EDGE_LENGTH = 1;
@@ -1339,73 +1219,31 @@ var require_layout_base = __commonJS({
           },
           /* 8 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var Point2 = __webpack_require__(12);
-            function IGeometry() {}
-            IGeometry.calcSeparationAmount = function (
-              rectA,
-              rectB,
-              overlapAmount,
-              separationBuffer,
-            ) {
+            function IGeometry() {
+            }
+            IGeometry.calcSeparationAmount = function(rectA, rectB, overlapAmount, separationBuffer) {
               if (!rectA.intersects(rectB)) {
                 throw "assert failed";
               }
               var directions = new Array(2);
-              this.decideDirectionsForOverlappingNodes(
-                rectA,
-                rectB,
-                directions,
-              );
-              overlapAmount[0] =
-                Math.min(rectA.getRight(), rectB.getRight()) -
-                Math.max(rectA.x, rectB.x);
-              overlapAmount[1] =
-                Math.min(rectA.getBottom(), rectB.getBottom()) -
-                Math.max(rectA.y, rectB.y);
-              if (
-                rectA.getX() <= rectB.getX() &&
-                rectA.getRight() >= rectB.getRight()
-              ) {
-                overlapAmount[0] += Math.min(
-                  rectB.getX() - rectA.getX(),
-                  rectA.getRight() - rectB.getRight(),
-                );
-              } else if (
-                rectB.getX() <= rectA.getX() &&
-                rectB.getRight() >= rectA.getRight()
-              ) {
-                overlapAmount[0] += Math.min(
-                  rectA.getX() - rectB.getX(),
-                  rectB.getRight() - rectA.getRight(),
-                );
+              this.decideDirectionsForOverlappingNodes(rectA, rectB, directions);
+              overlapAmount[0] = Math.min(rectA.getRight(), rectB.getRight()) - Math.max(rectA.x, rectB.x);
+              overlapAmount[1] = Math.min(rectA.getBottom(), rectB.getBottom()) - Math.max(rectA.y, rectB.y);
+              if (rectA.getX() <= rectB.getX() && rectA.getRight() >= rectB.getRight()) {
+                overlapAmount[0] += Math.min(rectB.getX() - rectA.getX(), rectA.getRight() - rectB.getRight());
+              } else if (rectB.getX() <= rectA.getX() && rectB.getRight() >= rectA.getRight()) {
+                overlapAmount[0] += Math.min(rectA.getX() - rectB.getX(), rectB.getRight() - rectA.getRight());
               }
-              if (
-                rectA.getY() <= rectB.getY() &&
-                rectA.getBottom() >= rectB.getBottom()
-              ) {
-                overlapAmount[1] += Math.min(
-                  rectB.getY() - rectA.getY(),
-                  rectA.getBottom() - rectB.getBottom(),
-                );
-              } else if (
-                rectB.getY() <= rectA.getY() &&
-                rectB.getBottom() >= rectA.getBottom()
-              ) {
-                overlapAmount[1] += Math.min(
-                  rectA.getY() - rectB.getY(),
-                  rectB.getBottom() - rectA.getBottom(),
-                );
+              if (rectA.getY() <= rectB.getY() && rectA.getBottom() >= rectB.getBottom()) {
+                overlapAmount[1] += Math.min(rectB.getY() - rectA.getY(), rectA.getBottom() - rectB.getBottom());
+              } else if (rectB.getY() <= rectA.getY() && rectB.getBottom() >= rectA.getBottom()) {
+                overlapAmount[1] += Math.min(rectA.getY() - rectB.getY(), rectB.getBottom() - rectA.getBottom());
               }
-              var slope = Math.abs(
-                (rectB.getCenterY() - rectA.getCenterY()) /
-                  (rectB.getCenterX() - rectA.getCenterX()),
-              );
-              if (
-                rectB.getCenterY() === rectA.getCenterY() &&
-                rectB.getCenterX() === rectA.getCenterX()
-              ) {
+              var slope = Math.abs((rectB.getCenterY() - rectA.getCenterY()) / (rectB.getCenterX() - rectA.getCenterX()));
+              if (rectB.getCenterY() === rectA.getCenterY() && rectB.getCenterX() === rectA.getCenterX()) {
                 slope = 1;
               }
               var moveByY = slope * overlapAmount[0];
@@ -1415,16 +1253,10 @@ var require_layout_base = __commonJS({
               } else {
                 moveByY = overlapAmount[1];
               }
-              overlapAmount[0] =
-                -1 * directions[0] * (moveByX / 2 + separationBuffer);
-              overlapAmount[1] =
-                -1 * directions[1] * (moveByY / 2 + separationBuffer);
+              overlapAmount[0] = -1 * directions[0] * (moveByX / 2 + separationBuffer);
+              overlapAmount[1] = -1 * directions[1] * (moveByY / 2 + separationBuffer);
             };
-            IGeometry.decideDirectionsForOverlappingNodes = function (
-              rectA,
-              rectB,
-              directions,
-            ) {
+            IGeometry.decideDirectionsForOverlappingNodes = function(rectA, rectB, directions) {
               if (rectA.getCenterX() < rectB.getCenterX()) {
                 directions[0] = -1;
               } else {
@@ -1436,7 +1268,7 @@ var require_layout_base = __commonJS({
                 directions[1] = 1;
               }
             };
-            IGeometry.getIntersection2 = function (rectA, rectB, result) {
+            IGeometry.getIntersection2 = function(rectA, rectB, result) {
               var p1x = rectA.getCenterX();
               var p1y = rectA.getCenterY();
               var p2x = rectB.getCenterX();
@@ -1553,51 +1385,19 @@ var require_layout_base = __commonJS({
                 }
                 if (p1x > p2x) {
                   if (p1y > p2y) {
-                    cardinalDirectionA = this.getCardinalDirection(
-                      slopeA,
-                      slopePrime,
-                      4,
-                    );
-                    cardinalDirectionB = this.getCardinalDirection(
-                      slopeB,
-                      slopePrime,
-                      2,
-                    );
+                    cardinalDirectionA = this.getCardinalDirection(slopeA, slopePrime, 4);
+                    cardinalDirectionB = this.getCardinalDirection(slopeB, slopePrime, 2);
                   } else {
-                    cardinalDirectionA = this.getCardinalDirection(
-                      -slopeA,
-                      slopePrime,
-                      3,
-                    );
-                    cardinalDirectionB = this.getCardinalDirection(
-                      -slopeB,
-                      slopePrime,
-                      1,
-                    );
+                    cardinalDirectionA = this.getCardinalDirection(-slopeA, slopePrime, 3);
+                    cardinalDirectionB = this.getCardinalDirection(-slopeB, slopePrime, 1);
                   }
                 } else {
                   if (p1y > p2y) {
-                    cardinalDirectionA = this.getCardinalDirection(
-                      -slopeA,
-                      slopePrime,
-                      1,
-                    );
-                    cardinalDirectionB = this.getCardinalDirection(
-                      -slopeB,
-                      slopePrime,
-                      3,
-                    );
+                    cardinalDirectionA = this.getCardinalDirection(-slopeA, slopePrime, 1);
+                    cardinalDirectionB = this.getCardinalDirection(-slopeB, slopePrime, 3);
                   } else {
-                    cardinalDirectionA = this.getCardinalDirection(
-                      slopeA,
-                      slopePrime,
-                      2,
-                    );
-                    cardinalDirectionB = this.getCardinalDirection(
-                      slopeB,
-                      slopePrime,
-                      4,
-                    );
+                    cardinalDirectionA = this.getCardinalDirection(slopeA, slopePrime, 2);
+                    cardinalDirectionB = this.getCardinalDirection(slopeB, slopePrime, 4);
                   }
                 }
                 if (!clipPointAFound) {
@@ -1659,18 +1459,14 @@ var require_layout_base = __commonJS({
               }
               return false;
             };
-            IGeometry.getCardinalDirection = function (
-              slope,
-              slopePrime,
-              line,
-            ) {
+            IGeometry.getCardinalDirection = function(slope, slopePrime, line) {
               if (slope > slopePrime) {
                 return line;
               } else {
-                return 1 + (line % 4);
+                return 1 + line % 4;
               }
             };
-            IGeometry.getIntersection = function (s1, s2, f1, f2) {
+            IGeometry.getIntersection = function(s1, s2, f1, f2) {
               if (f2 == null) {
                 return this.getIntersection2(s1, s2, f1);
               }
@@ -1682,14 +1478,8 @@ var require_layout_base = __commonJS({
               var y3 = f1.y;
               var x4 = f2.x;
               var y4 = f2.y;
-              var x = void 0,
-                y = void 0;
-              var a1 = void 0,
-                a2 = void 0,
-                b1 = void 0,
-                b2 = void 0,
-                c1 = void 0,
-                c2 = void 0;
+              var x = void 0, y = void 0;
+              var a1 = void 0, a2 = void 0, b1 = void 0, b2 = void 0, c1 = void 0, c2 = void 0;
               var denom = void 0;
               a1 = y2 - y1;
               b1 = x1 - x2;
@@ -1705,7 +1495,7 @@ var require_layout_base = __commonJS({
               y = (a2 * c1 - a1 * c2) / denom;
               return new Point2(x, y);
             };
-            IGeometry.angleOfVector = function (Cx, Cy, Nx, Ny) {
+            IGeometry.angleOfVector = function(Cx, Cy, Nx, Ny) {
               var C_angle = void 0;
               if (Cx !== Nx) {
                 C_angle = Math.atan((Ny - Cy) / (Nx - Cx));
@@ -1721,7 +1511,7 @@ var require_layout_base = __commonJS({
               }
               return C_angle;
             };
-            IGeometry.doIntersect = function (p1, p2, p3, p4) {
+            IGeometry.doIntersect = function(p1, p2, p3, p4) {
               var a = p1.x;
               var b = p1.y;
               var c = p2.x;
@@ -1747,10 +1537,11 @@ var require_layout_base = __commonJS({
           },
           /* 9 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            function IMath() {}
-            IMath.sign = function (value) {
+            function IMath() {
+            }
+            IMath.sign = function(value) {
               if (value > 0) {
                 return 1;
               } else if (value < 0) {
@@ -1759,44 +1550,47 @@ var require_layout_base = __commonJS({
                 return 0;
               }
             };
-            IMath.floor = function (value) {
+            IMath.floor = function(value) {
               return value < 0 ? Math.ceil(value) : Math.floor(value);
             };
-            IMath.ceil = function (value) {
+            IMath.ceil = function(value) {
               return value < 0 ? Math.floor(value) : Math.ceil(value);
             };
             module2.exports = IMath;
           },
           /* 10 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            function Integer() {}
+            function Integer() {
+            }
             Integer.MAX_VALUE = 2147483647;
             Integer.MIN_VALUE = -2147483648;
             module2.exports = Integer;
           },
           /* 11 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            var _createClass = /* @__PURE__ */ (function () {
+            var _createClass = /* @__PURE__ */ function() {
               function defineProperties(target, props) {
                 for (var i = 0; i < props.length; i++) {
                   var descriptor = props[i];
                   descriptor.enumerable = descriptor.enumerable || false;
                   descriptor.configurable = true;
-                  if ("value" in descriptor) descriptor.writable = true;
+                  if ("value" in descriptor)
+                    descriptor.writable = true;
                   Object.defineProperty(target, descriptor.key, descriptor);
                 }
               }
-              return function (Constructor, protoProps, staticProps) {
+              return function(Constructor, protoProps, staticProps) {
                 if (protoProps)
                   defineProperties(Constructor.prototype, protoProps);
-                if (staticProps) defineProperties(Constructor, staticProps);
+                if (staticProps)
+                  defineProperties(Constructor, staticProps);
                 return Constructor;
               };
-            })();
+            }();
             function _classCallCheck(instance2, Constructor) {
               if (!(instance2 instanceof Constructor)) {
                 throw new TypeError("Cannot call a class as a function");
@@ -1822,8 +1616,7 @@ var require_layout_base = __commonJS({
               return node;
             };
             var _remove = function _remove2(node, list) {
-              var prev = node.prev,
-                next2 = node.next;
+              var prev = node.prev, next2 = node.next;
               if (prev !== null) {
                 prev.next = next2;
               } else {
@@ -1838,7 +1631,7 @@ var require_layout_base = __commonJS({
               list.length--;
               return node;
             };
-            var LinkedList = (function () {
+            var LinkedList = function() {
               function LinkedList2(vals) {
                 var _this = this;
                 _classCallCheck(this, LinkedList2);
@@ -1846,120 +1639,105 @@ var require_layout_base = __commonJS({
                 this.head = null;
                 this.tail = null;
                 if (vals != null) {
-                  vals.forEach(function (v) {
+                  vals.forEach(function(v) {
                     return _this.push(v);
                   });
                 }
               }
-              _createClass(LinkedList2, [
-                {
-                  key: "size",
-                  value: function size() {
-                    return this.length;
-                  },
-                },
-                {
-                  key: "insertBefore",
-                  value: function insertBefore(val, otherNode) {
-                    return add(otherNode.prev, nodeFrom(val), otherNode, this);
-                  },
-                },
-                {
-                  key: "insertAfter",
-                  value: function insertAfter(val, otherNode) {
-                    return add(otherNode, nodeFrom(val), otherNode.next, this);
-                  },
-                },
-                {
-                  key: "insertNodeBefore",
-                  value: function insertNodeBefore(newNode, otherNode) {
-                    return add(otherNode.prev, newNode, otherNode, this);
-                  },
-                },
-                {
-                  key: "insertNodeAfter",
-                  value: function insertNodeAfter(newNode, otherNode) {
-                    return add(otherNode, newNode, otherNode.next, this);
-                  },
-                },
-                {
-                  key: "push",
-                  value: function push(val) {
-                    return add(this.tail, nodeFrom(val), null, this);
-                  },
-                },
-                {
-                  key: "unshift",
-                  value: function unshift(val) {
-                    return add(null, nodeFrom(val), this.head, this);
-                  },
-                },
-                {
-                  key: "remove",
-                  value: function remove(node) {
-                    return _remove(node, this);
-                  },
-                },
-                {
-                  key: "pop",
-                  value: function pop() {
-                    return _remove(this.tail, this).value;
-                  },
-                },
-                {
-                  key: "popNode",
-                  value: function popNode() {
-                    return _remove(this.tail, this);
-                  },
-                },
-                {
-                  key: "shift",
-                  value: function shift() {
-                    return _remove(this.head, this).value;
-                  },
-                },
-                {
-                  key: "shiftNode",
-                  value: function shiftNode() {
-                    return _remove(this.head, this);
-                  },
-                },
-                {
-                  key: "get_object_at",
-                  value: function get_object_at(index) {
-                    if (index <= this.length()) {
-                      var i = 1;
-                      var current = this.head;
-                      while (i < index) {
-                        current = current.next;
-                        i++;
-                      }
-                      return current.value;
+              _createClass(LinkedList2, [{
+                key: "size",
+                value: function size() {
+                  return this.length;
+                }
+              }, {
+                key: "insertBefore",
+                value: function insertBefore(val, otherNode) {
+                  return add(otherNode.prev, nodeFrom(val), otherNode, this);
+                }
+              }, {
+                key: "insertAfter",
+                value: function insertAfter(val, otherNode) {
+                  return add(otherNode, nodeFrom(val), otherNode.next, this);
+                }
+              }, {
+                key: "insertNodeBefore",
+                value: function insertNodeBefore(newNode, otherNode) {
+                  return add(otherNode.prev, newNode, otherNode, this);
+                }
+              }, {
+                key: "insertNodeAfter",
+                value: function insertNodeAfter(newNode, otherNode) {
+                  return add(otherNode, newNode, otherNode.next, this);
+                }
+              }, {
+                key: "push",
+                value: function push(val) {
+                  return add(this.tail, nodeFrom(val), null, this);
+                }
+              }, {
+                key: "unshift",
+                value: function unshift(val) {
+                  return add(null, nodeFrom(val), this.head, this);
+                }
+              }, {
+                key: "remove",
+                value: function remove(node) {
+                  return _remove(node, this);
+                }
+              }, {
+                key: "pop",
+                value: function pop() {
+                  return _remove(this.tail, this).value;
+                }
+              }, {
+                key: "popNode",
+                value: function popNode() {
+                  return _remove(this.tail, this);
+                }
+              }, {
+                key: "shift",
+                value: function shift() {
+                  return _remove(this.head, this).value;
+                }
+              }, {
+                key: "shiftNode",
+                value: function shiftNode() {
+                  return _remove(this.head, this);
+                }
+              }, {
+                key: "get_object_at",
+                value: function get_object_at(index) {
+                  if (index <= this.length()) {
+                    var i = 1;
+                    var current = this.head;
+                    while (i < index) {
+                      current = current.next;
+                      i++;
                     }
-                  },
-                },
-                {
-                  key: "set_object_at",
-                  value: function set_object_at(index, value) {
-                    if (index <= this.length()) {
-                      var i = 1;
-                      var current = this.head;
-                      while (i < index) {
-                        current = current.next;
-                        i++;
-                      }
-                      current.value = value;
+                    return current.value;
+                  }
+                }
+              }, {
+                key: "set_object_at",
+                value: function set_object_at(index, value) {
+                  if (index <= this.length()) {
+                    var i = 1;
+                    var current = this.head;
+                    while (i < index) {
+                      current = current.next;
+                      i++;
                     }
-                  },
-                },
-              ]);
+                    current.value = value;
+                  }
+                }
+              }]);
               return LinkedList2;
-            })();
+            }();
             module2.exports = LinkedList;
           },
           /* 12 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function Point2(x, y, p) {
               this.x = null;
@@ -1967,41 +1745,29 @@ var require_layout_base = __commonJS({
               if (x == null && y == null && p == null) {
                 this.x = 0;
                 this.y = 0;
-              } else if (
-                typeof x == "number" &&
-                typeof y == "number" &&
-                p == null
-              ) {
+              } else if (typeof x == "number" && typeof y == "number" && p == null) {
                 this.x = x;
                 this.y = y;
-              } else if (
-                x.constructor.name == "Point" &&
-                y == null &&
-                p == null
-              ) {
+              } else if (x.constructor.name == "Point" && y == null && p == null) {
                 p = x;
                 this.x = p.x;
                 this.y = p.y;
               }
             }
-            Point2.prototype.getX = function () {
+            Point2.prototype.getX = function() {
               return this.x;
             };
-            Point2.prototype.getY = function () {
+            Point2.prototype.getY = function() {
               return this.y;
             };
-            Point2.prototype.getLocation = function () {
+            Point2.prototype.getLocation = function() {
               return new Point2(this.x, this.y);
             };
-            Point2.prototype.setLocation = function (x, y, p) {
+            Point2.prototype.setLocation = function(x, y, p) {
               if (x.constructor.name == "Point" && y == null && p == null) {
                 p = x;
                 this.setLocation(p.x, p.y);
-              } else if (
-                typeof x == "number" &&
-                typeof y == "number" &&
-                p == null
-              ) {
+              } else if (typeof x == "number" && typeof y == "number" && p == null) {
                 if (parseInt(x) == x && parseInt(y) == y) {
                   this.move(x, y);
                 } else {
@@ -2010,36 +1776,29 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            Point2.prototype.move = function (x, y) {
+            Point2.prototype.move = function(x, y) {
               this.x = x;
               this.y = y;
             };
-            Point2.prototype.translate = function (dx, dy) {
+            Point2.prototype.translate = function(dx, dy) {
               this.x += dx;
               this.y += dy;
             };
-            Point2.prototype.equals = function (obj) {
+            Point2.prototype.equals = function(obj) {
               if (obj.constructor.name == "Point") {
                 var pt = obj;
                 return this.x == pt.x && this.y == pt.y;
               }
               return this == obj;
             };
-            Point2.prototype.toString = function () {
-              return (
-                new Point2().constructor.name +
-                "[x=" +
-                this.x +
-                ",y=" +
-                this.y +
-                "]"
-              );
+            Point2.prototype.toString = function() {
+              return new Point2().constructor.name + "[x=" + this.x + ",y=" + this.y + "]";
             };
             module2.exports = Point2;
           },
           /* 13 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function RectangleD(x, y, width, height) {
               this.x = 0;
@@ -2053,37 +1812,37 @@ var require_layout_base = __commonJS({
                 this.height = height;
               }
             }
-            RectangleD.prototype.getX = function () {
+            RectangleD.prototype.getX = function() {
               return this.x;
             };
-            RectangleD.prototype.setX = function (x) {
+            RectangleD.prototype.setX = function(x) {
               this.x = x;
             };
-            RectangleD.prototype.getY = function () {
+            RectangleD.prototype.getY = function() {
               return this.y;
             };
-            RectangleD.prototype.setY = function (y) {
+            RectangleD.prototype.setY = function(y) {
               this.y = y;
             };
-            RectangleD.prototype.getWidth = function () {
+            RectangleD.prototype.getWidth = function() {
               return this.width;
             };
-            RectangleD.prototype.setWidth = function (width) {
+            RectangleD.prototype.setWidth = function(width) {
               this.width = width;
             };
-            RectangleD.prototype.getHeight = function () {
+            RectangleD.prototype.getHeight = function() {
               return this.height;
             };
-            RectangleD.prototype.setHeight = function (height) {
+            RectangleD.prototype.setHeight = function(height) {
               this.height = height;
             };
-            RectangleD.prototype.getRight = function () {
+            RectangleD.prototype.getRight = function() {
               return this.x + this.width;
             };
-            RectangleD.prototype.getBottom = function () {
+            RectangleD.prototype.getBottom = function() {
               return this.y + this.height;
             };
-            RectangleD.prototype.intersects = function (a) {
+            RectangleD.prototype.intersects = function(a) {
               if (this.getRight() < a.x) {
                 return false;
               }
@@ -2098,53 +1857,45 @@ var require_layout_base = __commonJS({
               }
               return true;
             };
-            RectangleD.prototype.getCenterX = function () {
+            RectangleD.prototype.getCenterX = function() {
               return this.x + this.width / 2;
             };
-            RectangleD.prototype.getMinX = function () {
+            RectangleD.prototype.getMinX = function() {
               return this.getX();
             };
-            RectangleD.prototype.getMaxX = function () {
+            RectangleD.prototype.getMaxX = function() {
               return this.getX() + this.width;
             };
-            RectangleD.prototype.getCenterY = function () {
+            RectangleD.prototype.getCenterY = function() {
               return this.y + this.height / 2;
             };
-            RectangleD.prototype.getMinY = function () {
+            RectangleD.prototype.getMinY = function() {
               return this.getY();
             };
-            RectangleD.prototype.getMaxY = function () {
+            RectangleD.prototype.getMaxY = function() {
               return this.getY() + this.height;
             };
-            RectangleD.prototype.getWidthHalf = function () {
+            RectangleD.prototype.getWidthHalf = function() {
               return this.width / 2;
             };
-            RectangleD.prototype.getHeightHalf = function () {
+            RectangleD.prototype.getHeightHalf = function() {
               return this.height / 2;
             };
             module2.exports = RectangleD;
           },
           /* 14 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            var _typeof =
-              typeof Symbol === "function" &&
-              typeof Symbol.iterator === "symbol"
-                ? function (obj) {
-                    return typeof obj;
-                  }
-                : function (obj) {
-                    return obj &&
-                      typeof Symbol === "function" &&
-                      obj.constructor === Symbol &&
-                      obj !== Symbol.prototype
-                      ? "symbol"
-                      : typeof obj;
-                  };
-            function UniqueIDGeneretor() {}
+            var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
+              return typeof obj;
+            } : function(obj) {
+              return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+            };
+            function UniqueIDGeneretor() {
+            }
             UniqueIDGeneretor.lastID = 0;
-            UniqueIDGeneretor.createID = function (obj) {
+            UniqueIDGeneretor.createID = function(obj) {
               if (UniqueIDGeneretor.isPrimitive(obj)) {
                 return obj;
               }
@@ -2155,20 +1906,20 @@ var require_layout_base = __commonJS({
               UniqueIDGeneretor.lastID++;
               return obj.uniqueID;
             };
-            UniqueIDGeneretor.getString = function (id) {
-              if (id == null) id = UniqueIDGeneretor.lastID;
+            UniqueIDGeneretor.getString = function(id) {
+              if (id == null)
+                id = UniqueIDGeneretor.lastID;
               return "Object#" + id;
             };
-            UniqueIDGeneretor.isPrimitive = function (arg) {
-              var type =
-                typeof arg === "undefined" ? "undefined" : _typeof(arg);
-              return arg == null || (type != "object" && type != "function");
+            UniqueIDGeneretor.isPrimitive = function(arg) {
+              var type = typeof arg === "undefined" ? "undefined" : _typeof(arg);
+              return arg == null || type != "object" && type != "function";
             };
             module2.exports = UniqueIDGeneretor;
           },
           /* 15 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function _toConsumableArray(arr) {
               if (Array.isArray(arr)) {
@@ -2191,16 +1942,12 @@ var require_layout_base = __commonJS({
             function Layout2(isRemoteUse) {
               Emitter.call(this);
               this.layoutQuality = LayoutConstants.QUALITY;
-              this.createBendsAsNeeded =
-                LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
+              this.createBendsAsNeeded = LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
               this.incremental = LayoutConstants.DEFAULT_INCREMENTAL;
-              this.animationOnLayout =
-                LayoutConstants.DEFAULT_ANIMATION_ON_LAYOUT;
-              this.animationDuringLayout =
-                LayoutConstants.DEFAULT_ANIMATION_DURING_LAYOUT;
+              this.animationOnLayout = LayoutConstants.DEFAULT_ANIMATION_ON_LAYOUT;
+              this.animationDuringLayout = LayoutConstants.DEFAULT_ANIMATION_DURING_LAYOUT;
               this.animationPeriod = LayoutConstants.DEFAULT_ANIMATION_PERIOD;
-              this.uniformLeafNodeSizes =
-                LayoutConstants.DEFAULT_UNIFORM_LEAF_NODE_SIZES;
+              this.uniformLeafNodeSizes = LayoutConstants.DEFAULT_UNIFORM_LEAF_NODE_SIZES;
               this.edgeToDummyNodes = /* @__PURE__ */ new Map();
               this.graphManager = new LGraphManager(this);
               this.isLayoutFinished = false;
@@ -2212,40 +1959,36 @@ var require_layout_base = __commonJS({
             }
             Layout2.RANDOM_SEED = 1;
             Layout2.prototype = Object.create(Emitter.prototype);
-            Layout2.prototype.getGraphManager = function () {
+            Layout2.prototype.getGraphManager = function() {
               return this.graphManager;
             };
-            Layout2.prototype.getAllNodes = function () {
+            Layout2.prototype.getAllNodes = function() {
               return this.graphManager.getAllNodes();
             };
-            Layout2.prototype.getAllEdges = function () {
+            Layout2.prototype.getAllEdges = function() {
               return this.graphManager.getAllEdges();
             };
-            Layout2.prototype.getAllNodesToApplyGravitation = function () {
+            Layout2.prototype.getAllNodesToApplyGravitation = function() {
               return this.graphManager.getAllNodesToApplyGravitation();
             };
-            Layout2.prototype.newGraphManager = function () {
+            Layout2.prototype.newGraphManager = function() {
               var gm = new LGraphManager(this);
               this.graphManager = gm;
               return gm;
             };
-            Layout2.prototype.newGraph = function (vGraph) {
+            Layout2.prototype.newGraph = function(vGraph) {
               return new LGraph(null, this.graphManager, vGraph);
             };
-            Layout2.prototype.newNode = function (vNode) {
+            Layout2.prototype.newNode = function(vNode) {
               return new LNode(this.graphManager, vNode);
             };
-            Layout2.prototype.newEdge = function (vEdge) {
+            Layout2.prototype.newEdge = function(vEdge) {
               return new LEdge(null, null, vEdge);
             };
-            Layout2.prototype.checkLayoutSuccess = function () {
-              return (
-                this.graphManager.getRoot() == null ||
-                this.graphManager.getRoot().getNodes().length == 0 ||
-                this.graphManager.includesInvalidEdge()
-              );
+            Layout2.prototype.checkLayoutSuccess = function() {
+              return this.graphManager.getRoot() == null || this.graphManager.getRoot().getNodes().length == 0 || this.graphManager.includesInvalidEdge();
             };
-            Layout2.prototype.runLayout = function () {
+            Layout2.prototype.runLayout = function() {
               this.isLayoutFinished = false;
               if (this.tilingPreLayout) {
                 this.tilingPreLayout();
@@ -2271,13 +2014,13 @@ var require_layout_base = __commonJS({
               this.isLayoutFinished = true;
               return isLayoutSuccessfull;
             };
-            Layout2.prototype.doPostLayout = function () {
+            Layout2.prototype.doPostLayout = function() {
               if (!this.incremental) {
                 this.transform();
               }
               this.update();
             };
-            Layout2.prototype.update2 = function () {
+            Layout2.prototype.update2 = function() {
               if (this.createBendsAsNeeded) {
                 this.createBendpointsFromDummyNodes();
                 this.graphManager.resetAllEdges();
@@ -2296,7 +2039,7 @@ var require_layout_base = __commonJS({
                 this.update(this.graphManager.getRoot());
               }
             };
-            Layout2.prototype.update = function (obj) {
+            Layout2.prototype.update = function(obj) {
               if (obj == null) {
                 this.update2();
               } else if (obj instanceof LNode) {
@@ -2325,25 +2068,21 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            Layout2.prototype.initParameters = function () {
+            Layout2.prototype.initParameters = function() {
               if (!this.isSubLayout) {
                 this.layoutQuality = LayoutConstants.QUALITY;
-                this.animationDuringLayout =
-                  LayoutConstants.DEFAULT_ANIMATION_DURING_LAYOUT;
+                this.animationDuringLayout = LayoutConstants.DEFAULT_ANIMATION_DURING_LAYOUT;
                 this.animationPeriod = LayoutConstants.DEFAULT_ANIMATION_PERIOD;
-                this.animationOnLayout =
-                  LayoutConstants.DEFAULT_ANIMATION_ON_LAYOUT;
+                this.animationOnLayout = LayoutConstants.DEFAULT_ANIMATION_ON_LAYOUT;
                 this.incremental = LayoutConstants.DEFAULT_INCREMENTAL;
-                this.createBendsAsNeeded =
-                  LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
-                this.uniformLeafNodeSizes =
-                  LayoutConstants.DEFAULT_UNIFORM_LEAF_NODE_SIZES;
+                this.createBendsAsNeeded = LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
+                this.uniformLeafNodeSizes = LayoutConstants.DEFAULT_UNIFORM_LEAF_NODE_SIZES;
               }
               if (this.animationDuringLayout) {
                 this.animationOnLayout = false;
               }
             };
-            Layout2.prototype.transform = function (newLeftTop) {
+            Layout2.prototype.transform = function(newLeftTop) {
               if (newLeftTop == void 0) {
                 this.transform(new PointD(0, 0));
               } else {
@@ -2363,7 +2102,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            Layout2.prototype.positionNodesRandomly = function (graph) {
+            Layout2.prototype.positionNodesRandomly = function(graph) {
               if (graph == void 0) {
                 this.positionNodesRandomly(this.getGraphManager().getRoot());
                 this.getGraphManager().getRoot().updateBounds(true);
@@ -2385,7 +2124,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            Layout2.prototype.getFlatForest = function () {
+            Layout2.prototype.getFlatForest = function() {
               var flatForest = [];
               var isForest = true;
               var allNodes = this.graphManager.getRoot().getNodes();
@@ -2411,8 +2150,7 @@ var require_layout_base = __commonJS({
                   visited.add(currentNode);
                   var neighborEdges = currentNode.getEdges();
                   for (var i = 0; i < neighborEdges.length; i++) {
-                    var currentNeighbor =
-                      neighborEdges[i].getOtherEnd(currentNode);
+                    var currentNeighbor = neighborEdges[i].getOtherEnd(currentNode);
                     if (parents.get(currentNode) != currentNeighbor) {
                       if (!visited.has(currentNeighbor)) {
                         toBeVisited.push(currentNeighbor);
@@ -2442,13 +2180,10 @@ var require_layout_base = __commonJS({
               }
               return flatForest;
             };
-            Layout2.prototype.createDummyNodesForBendpoints = function (edge) {
+            Layout2.prototype.createDummyNodesForBendpoints = function(edge) {
               var dummyNodes = [];
               var prev = edge.source;
-              var graph = this.graphManager.calcLowestCommonAncestor(
-                edge.source,
-                edge.target,
-              );
+              var graph = this.graphManager.calcLowestCommonAncestor(edge.source, edge.target);
               for (var i = 0; i < edge.bendpoints.length; i++) {
                 var dummyNode = this.newNode(null);
                 dummyNode.setRect(new Point(0, 0), new Dimension(1, 1));
@@ -2468,22 +2203,17 @@ var require_layout_base = __commonJS({
               }
               return dummyNodes;
             };
-            Layout2.prototype.createBendpointsFromDummyNodes = function () {
+            Layout2.prototype.createBendpointsFromDummyNodes = function() {
               var edges = [];
               edges = edges.concat(this.graphManager.getAllEdges());
-              edges = []
-                .concat(_toConsumableArray(this.edgeToDummyNodes.keys()))
-                .concat(edges);
+              edges = [].concat(_toConsumableArray(this.edgeToDummyNodes.keys())).concat(edges);
               for (var k = 0; k < edges.length; k++) {
                 var lEdge = edges[k];
                 if (lEdge.bendpoints.length > 0) {
                   var path = this.edgeToDummyNodes.get(lEdge);
                   for (var i = 0; i < path.length; i++) {
                     var dummyNode = path[i];
-                    var p = new PointD(
-                      dummyNode.getCenterX(),
-                      dummyNode.getCenterY(),
-                    );
+                    var p = new PointD(dummyNode.getCenterX(), dummyNode.getCenterY());
                     var ebp = lEdge.bendpoints.get(i);
                     ebp.x = p.x;
                     ebp.y = p.y;
@@ -2493,37 +2223,30 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            Layout2.transform = function (
-              sliderValue,
-              defaultValue,
-              minDiv,
-              maxMul,
-            ) {
+            Layout2.transform = function(sliderValue, defaultValue, minDiv, maxMul) {
               if (minDiv != void 0 && maxMul != void 0) {
                 var value = defaultValue;
                 if (sliderValue <= 50) {
                   var minValue = defaultValue / minDiv;
-                  value -=
-                    ((defaultValue - minValue) / 50) * (50 - sliderValue);
+                  value -= (defaultValue - minValue) / 50 * (50 - sliderValue);
                 } else {
                   var maxValue = defaultValue * maxMul;
-                  value +=
-                    ((maxValue - defaultValue) / 50) * (sliderValue - 50);
+                  value += (maxValue - defaultValue) / 50 * (sliderValue - 50);
                 }
                 return value;
               } else {
                 var a, b;
                 if (sliderValue <= 50) {
-                  a = (9 * defaultValue) / 500;
+                  a = 9 * defaultValue / 500;
                   b = defaultValue / 10;
                 } else {
-                  a = (9 * defaultValue) / 50;
+                  a = 9 * defaultValue / 50;
                   b = -8 * defaultValue;
                 }
                 return a * sliderValue + b;
               }
             };
-            Layout2.findCenterOfTree = function (nodes) {
+            Layout2.findCenterOfTree = function(nodes) {
               var list = [];
               list = list.concat(nodes);
               var removedNodes = [];
@@ -2555,7 +2278,7 @@ var require_layout_base = __commonJS({
                     list.splice(index, 1);
                   }
                   var neighbours = node.getNeighborsList();
-                  neighbours.forEach(function (neighbour) {
+                  neighbours.forEach(function(neighbour) {
                     if (removedNodes.indexOf(neighbour) < 0) {
                       var otherDegree = remainingDegrees.get(neighbour);
                       var newDegree = otherDegree - 1;
@@ -2574,19 +2297,20 @@ var require_layout_base = __commonJS({
               }
               return centerNode;
             };
-            Layout2.prototype.setGraphManager = function (gm) {
+            Layout2.prototype.setGraphManager = function(gm) {
               this.graphManager = gm;
             };
             module2.exports = Layout2;
           },
           /* 16 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            function RandomSeed() {}
+            function RandomSeed() {
+            }
             RandomSeed.seed = 1;
             RandomSeed.x = 0;
-            RandomSeed.nextDouble = function () {
+            RandomSeed.nextDouble = function() {
               RandomSeed.x = Math.sin(RandomSeed.seed++) * 1e4;
               return RandomSeed.x - Math.floor(RandomSeed.x);
             };
@@ -2594,7 +2318,7 @@ var require_layout_base = __commonJS({
           },
           /* 17 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var PointD = __webpack_require__(4);
             function Transform(x, y) {
@@ -2607,106 +2331,95 @@ var require_layout_base = __commonJS({
               this.ldeviceExtX = 1;
               this.ldeviceExtY = 1;
             }
-            Transform.prototype.getWorldOrgX = function () {
+            Transform.prototype.getWorldOrgX = function() {
               return this.lworldOrgX;
             };
-            Transform.prototype.setWorldOrgX = function (wox) {
+            Transform.prototype.setWorldOrgX = function(wox) {
               this.lworldOrgX = wox;
             };
-            Transform.prototype.getWorldOrgY = function () {
+            Transform.prototype.getWorldOrgY = function() {
               return this.lworldOrgY;
             };
-            Transform.prototype.setWorldOrgY = function (woy) {
+            Transform.prototype.setWorldOrgY = function(woy) {
               this.lworldOrgY = woy;
             };
-            Transform.prototype.getWorldExtX = function () {
+            Transform.prototype.getWorldExtX = function() {
               return this.lworldExtX;
             };
-            Transform.prototype.setWorldExtX = function (wex) {
+            Transform.prototype.setWorldExtX = function(wex) {
               this.lworldExtX = wex;
             };
-            Transform.prototype.getWorldExtY = function () {
+            Transform.prototype.getWorldExtY = function() {
               return this.lworldExtY;
             };
-            Transform.prototype.setWorldExtY = function (wey) {
+            Transform.prototype.setWorldExtY = function(wey) {
               this.lworldExtY = wey;
             };
-            Transform.prototype.getDeviceOrgX = function () {
+            Transform.prototype.getDeviceOrgX = function() {
               return this.ldeviceOrgX;
             };
-            Transform.prototype.setDeviceOrgX = function (dox) {
+            Transform.prototype.setDeviceOrgX = function(dox) {
               this.ldeviceOrgX = dox;
             };
-            Transform.prototype.getDeviceOrgY = function () {
+            Transform.prototype.getDeviceOrgY = function() {
               return this.ldeviceOrgY;
             };
-            Transform.prototype.setDeviceOrgY = function (doy) {
+            Transform.prototype.setDeviceOrgY = function(doy) {
               this.ldeviceOrgY = doy;
             };
-            Transform.prototype.getDeviceExtX = function () {
+            Transform.prototype.getDeviceExtX = function() {
               return this.ldeviceExtX;
             };
-            Transform.prototype.setDeviceExtX = function (dex) {
+            Transform.prototype.setDeviceExtX = function(dex) {
               this.ldeviceExtX = dex;
             };
-            Transform.prototype.getDeviceExtY = function () {
+            Transform.prototype.getDeviceExtY = function() {
               return this.ldeviceExtY;
             };
-            Transform.prototype.setDeviceExtY = function (dey) {
+            Transform.prototype.setDeviceExtY = function(dey) {
               this.ldeviceExtY = dey;
             };
-            Transform.prototype.transformX = function (x) {
+            Transform.prototype.transformX = function(x) {
               var xDevice = 0;
               var worldExtX = this.lworldExtX;
               if (worldExtX != 0) {
-                xDevice =
-                  this.ldeviceOrgX +
-                  ((x - this.lworldOrgX) * this.ldeviceExtX) / worldExtX;
+                xDevice = this.ldeviceOrgX + (x - this.lworldOrgX) * this.ldeviceExtX / worldExtX;
               }
               return xDevice;
             };
-            Transform.prototype.transformY = function (y) {
+            Transform.prototype.transformY = function(y) {
               var yDevice = 0;
               var worldExtY = this.lworldExtY;
               if (worldExtY != 0) {
-                yDevice =
-                  this.ldeviceOrgY +
-                  ((y - this.lworldOrgY) * this.ldeviceExtY) / worldExtY;
+                yDevice = this.ldeviceOrgY + (y - this.lworldOrgY) * this.ldeviceExtY / worldExtY;
               }
               return yDevice;
             };
-            Transform.prototype.inverseTransformX = function (x) {
+            Transform.prototype.inverseTransformX = function(x) {
               var xWorld = 0;
               var deviceExtX = this.ldeviceExtX;
               if (deviceExtX != 0) {
-                xWorld =
-                  this.lworldOrgX +
-                  ((x - this.ldeviceOrgX) * this.lworldExtX) / deviceExtX;
+                xWorld = this.lworldOrgX + (x - this.ldeviceOrgX) * this.lworldExtX / deviceExtX;
               }
               return xWorld;
             };
-            Transform.prototype.inverseTransformY = function (y) {
+            Transform.prototype.inverseTransformY = function(y) {
               var yWorld = 0;
               var deviceExtY = this.ldeviceExtY;
               if (deviceExtY != 0) {
-                yWorld =
-                  this.lworldOrgY +
-                  ((y - this.ldeviceOrgY) * this.lworldExtY) / deviceExtY;
+                yWorld = this.lworldOrgY + (y - this.ldeviceOrgY) * this.lworldExtY / deviceExtY;
               }
               return yWorld;
             };
-            Transform.prototype.inverseTransformPoint = function (inPoint) {
-              var outPoint = new PointD(
-                this.inverseTransformX(inPoint.x),
-                this.inverseTransformY(inPoint.y),
-              );
+            Transform.prototype.inverseTransformPoint = function(inPoint) {
+              var outPoint = new PointD(this.inverseTransformX(inPoint.x), this.inverseTransformY(inPoint.y));
               return outPoint;
             };
             module2.exports = Transform;
           },
           /* 18 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function _toConsumableArray(arr) {
               if (Array.isArray(arr)) {
@@ -2725,25 +2438,17 @@ var require_layout_base = __commonJS({
             var IMath = __webpack_require__(9);
             function FDLayout() {
               Layout2.call(this);
-              this.useSmartIdealEdgeLengthCalculation =
-                FDLayoutConstants.DEFAULT_USE_SMART_IDEAL_EDGE_LENGTH_CALCULATION;
+              this.useSmartIdealEdgeLengthCalculation = FDLayoutConstants.DEFAULT_USE_SMART_IDEAL_EDGE_LENGTH_CALCULATION;
               this.idealEdgeLength = FDLayoutConstants.DEFAULT_EDGE_LENGTH;
               this.springConstant = FDLayoutConstants.DEFAULT_SPRING_STRENGTH;
-              this.repulsionConstant =
-                FDLayoutConstants.DEFAULT_REPULSION_STRENGTH;
+              this.repulsionConstant = FDLayoutConstants.DEFAULT_REPULSION_STRENGTH;
               this.gravityConstant = FDLayoutConstants.DEFAULT_GRAVITY_STRENGTH;
-              this.compoundGravityConstant =
-                FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH;
-              this.gravityRangeFactor =
-                FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR;
-              this.compoundGravityRangeFactor =
-                FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR;
-              this.displacementThresholdPerNode =
-                (3 * FDLayoutConstants.DEFAULT_EDGE_LENGTH) / 100;
-              this.coolingFactor =
-                FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
-              this.initialCoolingFactor =
-                FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
+              this.compoundGravityConstant = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH;
+              this.gravityRangeFactor = FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR;
+              this.compoundGravityRangeFactor = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR;
+              this.displacementThresholdPerNode = 3 * FDLayoutConstants.DEFAULT_EDGE_LENGTH / 100;
+              this.coolingFactor = FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
+              this.initialCoolingFactor = FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
               this.totalDisplacement = 0;
               this.oldTotalDisplacement = 0;
               this.maxIterations = FDLayoutConstants.MAX_ITERATIONS;
@@ -2752,15 +2457,14 @@ var require_layout_base = __commonJS({
             for (var prop in Layout2) {
               FDLayout[prop] = Layout2[prop];
             }
-            FDLayout.prototype.initParameters = function () {
+            FDLayout.prototype.initParameters = function() {
               Layout2.prototype.initParameters.call(this, arguments);
               this.totalIterations = 0;
               this.notAnimatedIterations = 0;
-              this.useFRGridVariant =
-                FDLayoutConstants.DEFAULT_USE_SMART_REPULSION_RANGE_CALCULATION;
+              this.useFRGridVariant = FDLayoutConstants.DEFAULT_USE_SMART_REPULSION_RANGE_CALCULATION;
               this.grid = [];
             };
-            FDLayout.prototype.calcIdealEdgeLengths = function () {
+            FDLayout.prototype.calcIdealEdgeLengths = function() {
               var edge;
               var lcaDepth;
               var source;
@@ -2777,64 +2481,34 @@ var require_layout_base = __commonJS({
                   sizeOfSourceInLca = edge.getSourceInLca().getEstimatedSize();
                   sizeOfTargetInLca = edge.getTargetInLca().getEstimatedSize();
                   if (this.useSmartIdealEdgeLengthCalculation) {
-                    edge.idealLength +=
-                      sizeOfSourceInLca +
-                      sizeOfTargetInLca -
-                      2 * LayoutConstants.SIMPLE_NODE_SIZE;
+                    edge.idealLength += sizeOfSourceInLca + sizeOfTargetInLca - 2 * LayoutConstants.SIMPLE_NODE_SIZE;
                   }
                   lcaDepth = edge.getLca().getInclusionTreeDepth();
-                  edge.idealLength +=
-                    FDLayoutConstants.DEFAULT_EDGE_LENGTH *
-                    FDLayoutConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR *
-                    (source.getInclusionTreeDepth() +
-                      target.getInclusionTreeDepth() -
-                      2 * lcaDepth);
+                  edge.idealLength += FDLayoutConstants.DEFAULT_EDGE_LENGTH * FDLayoutConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR * (source.getInclusionTreeDepth() + target.getInclusionTreeDepth() - 2 * lcaDepth);
                 }
               }
             };
-            FDLayout.prototype.initSpringEmbedder = function () {
+            FDLayout.prototype.initSpringEmbedder = function() {
               var s = this.getAllNodes().length;
               if (this.incremental) {
                 if (s > FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) {
-                  this.coolingFactor = Math.max(
-                    this.coolingFactor *
-                      FDLayoutConstants.COOLING_ADAPTATION_FACTOR,
-                    this.coolingFactor -
-                      ((s - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) /
-                        (FDLayoutConstants.ADAPTATION_UPPER_NODE_LIMIT -
-                          FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT)) *
-                        this.coolingFactor *
-                        (1 - FDLayoutConstants.COOLING_ADAPTATION_FACTOR),
-                  );
+                  this.coolingFactor = Math.max(this.coolingFactor * FDLayoutConstants.COOLING_ADAPTATION_FACTOR, this.coolingFactor - (s - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) / (FDLayoutConstants.ADAPTATION_UPPER_NODE_LIMIT - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) * this.coolingFactor * (1 - FDLayoutConstants.COOLING_ADAPTATION_FACTOR));
                 }
-                this.maxNodeDisplacement =
-                  FDLayoutConstants.MAX_NODE_DISPLACEMENT_INCREMENTAL;
+                this.maxNodeDisplacement = FDLayoutConstants.MAX_NODE_DISPLACEMENT_INCREMENTAL;
               } else {
                 if (s > FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) {
-                  this.coolingFactor = Math.max(
-                    FDLayoutConstants.COOLING_ADAPTATION_FACTOR,
-                    1 -
-                      ((s - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) /
-                        (FDLayoutConstants.ADAPTATION_UPPER_NODE_LIMIT -
-                          FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT)) *
-                        (1 - FDLayoutConstants.COOLING_ADAPTATION_FACTOR),
-                  );
+                  this.coolingFactor = Math.max(FDLayoutConstants.COOLING_ADAPTATION_FACTOR, 1 - (s - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) / (FDLayoutConstants.ADAPTATION_UPPER_NODE_LIMIT - FDLayoutConstants.ADAPTATION_LOWER_NODE_LIMIT) * (1 - FDLayoutConstants.COOLING_ADAPTATION_FACTOR));
                 } else {
                   this.coolingFactor = 1;
                 }
                 this.initialCoolingFactor = this.coolingFactor;
-                this.maxNodeDisplacement =
-                  FDLayoutConstants.MAX_NODE_DISPLACEMENT;
+                this.maxNodeDisplacement = FDLayoutConstants.MAX_NODE_DISPLACEMENT;
               }
-              this.maxIterations = Math.max(
-                this.getAllNodes().length * 5,
-                this.maxIterations,
-              );
-              this.totalDisplacementThreshold =
-                this.displacementThresholdPerNode * this.getAllNodes().length;
+              this.maxIterations = Math.max(this.getAllNodes().length * 5, this.maxIterations);
+              this.totalDisplacementThreshold = this.displacementThresholdPerNode * this.getAllNodes().length;
               this.repulsionRange = this.calcRepulsionRange();
             };
-            FDLayout.prototype.calcSpringForces = function () {
+            FDLayout.prototype.calcSpringForces = function() {
               var lEdges = this.getAllEdges();
               var edge;
               for (var i = 0; i < lEdges.length; i++) {
@@ -2842,37 +2516,21 @@ var require_layout_base = __commonJS({
                 this.calcSpringForce(edge, edge.idealLength);
               }
             };
-            FDLayout.prototype.calcRepulsionForces = function () {
-              var gridUpdateAllowed =
-                arguments.length > 0 && arguments[0] !== void 0
-                  ? arguments[0]
-                  : true;
-              var forceToNodeSurroundingUpdate =
-                arguments.length > 1 && arguments[1] !== void 0
-                  ? arguments[1]
-                  : false;
+            FDLayout.prototype.calcRepulsionForces = function() {
+              var gridUpdateAllowed = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : true;
+              var forceToNodeSurroundingUpdate = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
               var i, j;
               var nodeA, nodeB;
               var lNodes = this.getAllNodes();
               var processedNodeSet;
               if (this.useFRGridVariant) {
-                if (
-                  this.totalIterations %
-                    FDLayoutConstants.GRID_CALCULATION_CHECK_PERIOD ==
-                    1 &&
-                  gridUpdateAllowed
-                ) {
+                if (this.totalIterations % FDLayoutConstants.GRID_CALCULATION_CHECK_PERIOD == 1 && gridUpdateAllowed) {
                   this.updateGrid();
                 }
                 processedNodeSet = /* @__PURE__ */ new Set();
                 for (i = 0; i < lNodes.length; i++) {
                   nodeA = lNodes[i];
-                  this.calculateRepulsionForceOfANode(
-                    nodeA,
-                    processedNodeSet,
-                    gridUpdateAllowed,
-                    forceToNodeSurroundingUpdate,
-                  );
+                  this.calculateRepulsionForceOfANode(nodeA, processedNodeSet, gridUpdateAllowed, forceToNodeSurroundingUpdate);
                   processedNodeSet.add(nodeA);
                 }
               } else {
@@ -2888,7 +2546,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            FDLayout.prototype.calcGravitationalForces = function () {
+            FDLayout.prototype.calcGravitationalForces = function() {
               var node;
               var lNodes = this.getAllNodesToApplyGravitation();
               for (var i = 0; i < lNodes.length; i++) {
@@ -2896,7 +2554,7 @@ var require_layout_base = __commonJS({
                 this.calcGravitationalForce(node);
               }
             };
-            FDLayout.prototype.moveNodes = function () {
+            FDLayout.prototype.moveNodes = function() {
               var lNodes = this.getAllNodes();
               var node;
               for (var i = 0; i < lNodes.length; i++) {
@@ -2904,18 +2562,14 @@ var require_layout_base = __commonJS({
                 node.move();
               }
             };
-            FDLayout.prototype.calcSpringForce = function (edge, idealLength) {
+            FDLayout.prototype.calcSpringForce = function(edge, idealLength) {
               var sourceNode = edge.getSource();
               var targetNode = edge.getTarget();
               var length;
               var springForce;
               var springForceX;
               var springForceY;
-              if (
-                this.uniformLeafNodeSizes &&
-                sourceNode.getChild() == null &&
-                targetNode.getChild() == null
-              ) {
+              if (this.uniformLeafNodeSizes && sourceNode.getChild() == null && targetNode.getChild() == null) {
                 edge.updateLengthSimple();
               } else {
                 edge.updateLength();
@@ -2924,7 +2578,8 @@ var require_layout_base = __commonJS({
                 }
               }
               length = edge.getLength();
-              if (length == 0) return;
+              if (length == 0)
+                return;
               springForce = this.springConstant * (length - idealLength);
               springForceX = springForce * (edge.lengthX / length);
               springForceY = springForce * (edge.lengthY / length);
@@ -2933,7 +2588,7 @@ var require_layout_base = __commonJS({
               targetNode.springForceX -= springForceX;
               targetNode.springForceY -= springForceY;
             };
-            FDLayout.prototype.calcRepulsionForce = function (nodeA, nodeB) {
+            FDLayout.prototype.calcRepulsionForce = function(nodeA, nodeB) {
               var rectA = nodeA.getRect();
               var rectB = nodeB.getRect();
               var overlapAmount = new Array(2);
@@ -2946,27 +2601,16 @@ var require_layout_base = __commonJS({
               var repulsionForceX;
               var repulsionForceY;
               if (rectA.intersects(rectB)) {
-                IGeometry.calcSeparationAmount(
-                  rectA,
-                  rectB,
-                  overlapAmount,
-                  FDLayoutConstants.DEFAULT_EDGE_LENGTH / 2,
-                );
+                IGeometry.calcSeparationAmount(rectA, rectB, overlapAmount, FDLayoutConstants.DEFAULT_EDGE_LENGTH / 2);
                 repulsionForceX = 2 * overlapAmount[0];
                 repulsionForceY = 2 * overlapAmount[1];
-                var childrenConstant =
-                  (nodeA.noOfChildren * nodeB.noOfChildren) /
-                  (nodeA.noOfChildren + nodeB.noOfChildren);
+                var childrenConstant = nodeA.noOfChildren * nodeB.noOfChildren / (nodeA.noOfChildren + nodeB.noOfChildren);
                 nodeA.repulsionForceX -= childrenConstant * repulsionForceX;
                 nodeA.repulsionForceY -= childrenConstant * repulsionForceY;
                 nodeB.repulsionForceX += childrenConstant * repulsionForceX;
                 nodeB.repulsionForceY += childrenConstant * repulsionForceY;
               } else {
-                if (
-                  this.uniformLeafNodeSizes &&
-                  nodeA.getChild() == null &&
-                  nodeB.getChild() == null
-                ) {
+                if (this.uniformLeafNodeSizes && nodeA.getChild() == null && nodeB.getChild() == null) {
                   distanceX = rectB.getCenterX() - rectA.getCenterX();
                   distanceY = rectB.getCenterY() - rectA.getCenterY();
                 } else {
@@ -2974,36 +2618,24 @@ var require_layout_base = __commonJS({
                   distanceX = clipPoints[2] - clipPoints[0];
                   distanceY = clipPoints[3] - clipPoints[1];
                 }
-                if (
-                  Math.abs(distanceX) < FDLayoutConstants.MIN_REPULSION_DIST
-                ) {
-                  distanceX =
-                    IMath.sign(distanceX) *
-                    FDLayoutConstants.MIN_REPULSION_DIST;
+                if (Math.abs(distanceX) < FDLayoutConstants.MIN_REPULSION_DIST) {
+                  distanceX = IMath.sign(distanceX) * FDLayoutConstants.MIN_REPULSION_DIST;
                 }
-                if (
-                  Math.abs(distanceY) < FDLayoutConstants.MIN_REPULSION_DIST
-                ) {
-                  distanceY =
-                    IMath.sign(distanceY) *
-                    FDLayoutConstants.MIN_REPULSION_DIST;
+                if (Math.abs(distanceY) < FDLayoutConstants.MIN_REPULSION_DIST) {
+                  distanceY = IMath.sign(distanceY) * FDLayoutConstants.MIN_REPULSION_DIST;
                 }
                 distanceSquared = distanceX * distanceX + distanceY * distanceY;
                 distance = Math.sqrt(distanceSquared);
-                repulsionForce =
-                  (this.repulsionConstant *
-                    nodeA.noOfChildren *
-                    nodeB.noOfChildren) /
-                  distanceSquared;
-                repulsionForceX = (repulsionForce * distanceX) / distance;
-                repulsionForceY = (repulsionForce * distanceY) / distance;
+                repulsionForce = this.repulsionConstant * nodeA.noOfChildren * nodeB.noOfChildren / distanceSquared;
+                repulsionForceX = repulsionForce * distanceX / distance;
+                repulsionForceY = repulsionForce * distanceY / distance;
                 nodeA.repulsionForceX -= repulsionForceX;
                 nodeA.repulsionForceY -= repulsionForceY;
                 nodeB.repulsionForceX += repulsionForceX;
                 nodeB.repulsionForceY += repulsionForceY;
               }
             };
-            FDLayout.prototype.calcGravitationalForce = function (node) {
+            FDLayout.prototype.calcGravitationalForce = function(node) {
               var ownerGraph;
               var ownerCenterX;
               var ownerCenterY;
@@ -3020,48 +2652,30 @@ var require_layout_base = __commonJS({
               absDistanceX = Math.abs(distanceX) + node.getWidth() / 2;
               absDistanceY = Math.abs(distanceY) + node.getHeight() / 2;
               if (node.getOwner() == this.graphManager.getRoot()) {
-                estimatedSize =
-                  ownerGraph.getEstimatedSize() * this.gravityRangeFactor;
-                if (
-                  absDistanceX > estimatedSize ||
-                  absDistanceY > estimatedSize
-                ) {
+                estimatedSize = ownerGraph.getEstimatedSize() * this.gravityRangeFactor;
+                if (absDistanceX > estimatedSize || absDistanceY > estimatedSize) {
                   node.gravitationForceX = -this.gravityConstant * distanceX;
                   node.gravitationForceY = -this.gravityConstant * distanceY;
                 }
               } else {
-                estimatedSize =
-                  ownerGraph.getEstimatedSize() *
-                  this.compoundGravityRangeFactor;
-                if (
-                  absDistanceX > estimatedSize ||
-                  absDistanceY > estimatedSize
-                ) {
-                  node.gravitationForceX =
-                    -this.gravityConstant *
-                    distanceX *
-                    this.compoundGravityConstant;
-                  node.gravitationForceY =
-                    -this.gravityConstant *
-                    distanceY *
-                    this.compoundGravityConstant;
+                estimatedSize = ownerGraph.getEstimatedSize() * this.compoundGravityRangeFactor;
+                if (absDistanceX > estimatedSize || absDistanceY > estimatedSize) {
+                  node.gravitationForceX = -this.gravityConstant * distanceX * this.compoundGravityConstant;
+                  node.gravitationForceY = -this.gravityConstant * distanceY * this.compoundGravityConstant;
                 }
               }
             };
-            FDLayout.prototype.isConverged = function () {
+            FDLayout.prototype.isConverged = function() {
               var converged;
               var oscilating = false;
               if (this.totalIterations > this.maxIterations / 3) {
-                oscilating =
-                  Math.abs(this.totalDisplacement - this.oldTotalDisplacement) <
-                  2;
+                oscilating = Math.abs(this.totalDisplacement - this.oldTotalDisplacement) < 2;
               }
-              converged =
-                this.totalDisplacement < this.totalDisplacementThreshold;
+              converged = this.totalDisplacement < this.totalDisplacementThreshold;
               this.oldTotalDisplacement = this.totalDisplacement;
               return converged || oscilating;
             };
-            FDLayout.prototype.animate = function () {
+            FDLayout.prototype.animate = function() {
               if (this.animationDuringLayout && !this.isSubLayout) {
                 if (this.notAnimatedIterations == this.animationPeriod) {
                   this.update();
@@ -3071,7 +2685,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            FDLayout.prototype.calcNoOfChildrenForAllNodes = function () {
+            FDLayout.prototype.calcNoOfChildrenForAllNodes = function() {
               var node;
               var allNodes = this.graphManager.getAllNodes();
               for (var i = 0; i < allNodes.length; i++) {
@@ -3079,19 +2693,11 @@ var require_layout_base = __commonJS({
                 node.noOfChildren = node.getNoOfChildren();
               }
             };
-            FDLayout.prototype.calcGrid = function (graph) {
+            FDLayout.prototype.calcGrid = function(graph) {
               var sizeX = 0;
               var sizeY = 0;
-              sizeX = parseInt(
-                Math.ceil(
-                  (graph.getRight() - graph.getLeft()) / this.repulsionRange,
-                ),
-              );
-              sizeY = parseInt(
-                Math.ceil(
-                  (graph.getBottom() - graph.getTop()) / this.repulsionRange,
-                ),
-              );
+              sizeX = parseInt(Math.ceil((graph.getRight() - graph.getLeft()) / this.repulsionRange));
+              sizeY = parseInt(Math.ceil((graph.getBottom() - graph.getTop()) / this.repulsionRange));
               var grid = new Array(sizeX);
               for (var i = 0; i < sizeX; i++) {
                 grid[i] = new Array(sizeY);
@@ -3103,29 +2709,15 @@ var require_layout_base = __commonJS({
               }
               return grid;
             };
-            FDLayout.prototype.addNodeToGrid = function (v, left, top) {
+            FDLayout.prototype.addNodeToGrid = function(v, left, top) {
               var startX = 0;
               var finishX = 0;
               var startY = 0;
               var finishY = 0;
-              startX = parseInt(
-                Math.floor((v.getRect().x - left) / this.repulsionRange),
-              );
-              finishX = parseInt(
-                Math.floor(
-                  (v.getRect().width + v.getRect().x - left) /
-                    this.repulsionRange,
-                ),
-              );
-              startY = parseInt(
-                Math.floor((v.getRect().y - top) / this.repulsionRange),
-              );
-              finishY = parseInt(
-                Math.floor(
-                  (v.getRect().height + v.getRect().y - top) /
-                    this.repulsionRange,
-                ),
-              );
+              startX = parseInt(Math.floor((v.getRect().x - left) / this.repulsionRange));
+              finishX = parseInt(Math.floor((v.getRect().width + v.getRect().x - left) / this.repulsionRange));
+              startY = parseInt(Math.floor((v.getRect().y - top) / this.repulsionRange));
+              finishY = parseInt(Math.floor((v.getRect().height + v.getRect().y - top) / this.repulsionRange));
               for (var i = startX; i <= finishX; i++) {
                 for (var j = startY; j <= finishY; j++) {
                   this.grid[i][j].push(v);
@@ -3133,69 +2725,34 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            FDLayout.prototype.updateGrid = function () {
+            FDLayout.prototype.updateGrid = function() {
               var i;
               var nodeA;
               var lNodes = this.getAllNodes();
               this.grid = this.calcGrid(this.graphManager.getRoot());
               for (i = 0; i < lNodes.length; i++) {
                 nodeA = lNodes[i];
-                this.addNodeToGrid(
-                  nodeA,
-                  this.graphManager.getRoot().getLeft(),
-                  this.graphManager.getRoot().getTop(),
-                );
+                this.addNodeToGrid(nodeA, this.graphManager.getRoot().getLeft(), this.graphManager.getRoot().getTop());
               }
             };
-            FDLayout.prototype.calculateRepulsionForceOfANode = function (
-              nodeA,
-              processedNodeSet,
-              gridUpdateAllowed,
-              forceToNodeSurroundingUpdate,
-            ) {
-              if (
-                (this.totalIterations %
-                  FDLayoutConstants.GRID_CALCULATION_CHECK_PERIOD ==
-                  1 &&
-                  gridUpdateAllowed) ||
-                forceToNodeSurroundingUpdate
-              ) {
+            FDLayout.prototype.calculateRepulsionForceOfANode = function(nodeA, processedNodeSet, gridUpdateAllowed, forceToNodeSurroundingUpdate) {
+              if (this.totalIterations % FDLayoutConstants.GRID_CALCULATION_CHECK_PERIOD == 1 && gridUpdateAllowed || forceToNodeSurroundingUpdate) {
                 var surrounding = /* @__PURE__ */ new Set();
                 nodeA.surrounding = new Array();
                 var nodeB;
                 var grid = this.grid;
                 for (var i = nodeA.startX - 1; i < nodeA.finishX + 2; i++) {
                   for (var j = nodeA.startY - 1; j < nodeA.finishY + 2; j++) {
-                    if (
-                      !(
-                        i < 0 ||
-                        j < 0 ||
-                        i >= grid.length ||
-                        j >= grid[0].length
-                      )
-                    ) {
+                    if (!(i < 0 || j < 0 || i >= grid.length || j >= grid[0].length)) {
                       for (var k = 0; k < grid[i][j].length; k++) {
                         nodeB = grid[i][j][k];
-                        if (
-                          nodeA.getOwner() != nodeB.getOwner() ||
-                          nodeA == nodeB
-                        ) {
+                        if (nodeA.getOwner() != nodeB.getOwner() || nodeA == nodeB) {
                           continue;
                         }
-                        if (
-                          !processedNodeSet.has(nodeB) &&
-                          !surrounding.has(nodeB)
-                        ) {
-                          var distanceX =
-                            Math.abs(nodeA.getCenterX() - nodeB.getCenterX()) -
-                            (nodeA.getWidth() / 2 + nodeB.getWidth() / 2);
-                          var distanceY =
-                            Math.abs(nodeA.getCenterY() - nodeB.getCenterY()) -
-                            (nodeA.getHeight() / 2 + nodeB.getHeight() / 2);
-                          if (
-                            distanceX <= this.repulsionRange &&
-                            distanceY <= this.repulsionRange
-                          ) {
+                        if (!processedNodeSet.has(nodeB) && !surrounding.has(nodeB)) {
+                          var distanceX = Math.abs(nodeA.getCenterX() - nodeB.getCenterX()) - (nodeA.getWidth() / 2 + nodeB.getWidth() / 2);
+                          var distanceY = Math.abs(nodeA.getCenterY() - nodeB.getCenterY()) - (nodeA.getHeight() / 2 + nodeB.getHeight() / 2);
+                          if (distanceX <= this.repulsionRange && distanceY <= this.repulsionRange) {
                             surrounding.add(nodeB);
                           }
                         }
@@ -3209,14 +2766,14 @@ var require_layout_base = __commonJS({
                 this.calcRepulsionForce(nodeA, nodeA.surrounding[i]);
               }
             };
-            FDLayout.prototype.calcRepulsionRange = function () {
+            FDLayout.prototype.calcRepulsionRange = function() {
               return 0;
             };
             module2.exports = FDLayout;
           },
           /* 19 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LEdge = __webpack_require__(1);
             var FDLayoutConstants = __webpack_require__(7);
@@ -3232,7 +2789,7 @@ var require_layout_base = __commonJS({
           },
           /* 20 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LNode = __webpack_require__(3);
             function FDLayoutNode(gm, loc, size, vNode) {
@@ -3255,12 +2812,7 @@ var require_layout_base = __commonJS({
             for (var prop in LNode) {
               FDLayoutNode[prop] = LNode[prop];
             }
-            FDLayoutNode.prototype.setGridCoordinates = function (
-              _startX,
-              _finishX,
-              _startY,
-              _finishY,
-            ) {
+            FDLayoutNode.prototype.setGridCoordinates = function(_startX, _finishX, _startY, _finishY) {
               this.startX = _startX;
               this.finishX = _finishX;
               this.startY = _startY;
@@ -3270,7 +2822,7 @@ var require_layout_base = __commonJS({
           },
           /* 21 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function DimensionD2(width, height) {
               this.width = 0;
@@ -3280,87 +2832,89 @@ var require_layout_base = __commonJS({
                 this.width = width;
               }
             }
-            DimensionD2.prototype.getWidth = function () {
+            DimensionD2.prototype.getWidth = function() {
               return this.width;
             };
-            DimensionD2.prototype.setWidth = function (width) {
+            DimensionD2.prototype.setWidth = function(width) {
               this.width = width;
             };
-            DimensionD2.prototype.getHeight = function () {
+            DimensionD2.prototype.getHeight = function() {
               return this.height;
             };
-            DimensionD2.prototype.setHeight = function (height) {
+            DimensionD2.prototype.setHeight = function(height) {
               this.height = height;
             };
             module2.exports = DimensionD2;
           },
           /* 22 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var UniqueIDGeneretor = __webpack_require__(14);
             function HashMap() {
               this.map = {};
               this.keys = [];
             }
-            HashMap.prototype.put = function (key, value) {
+            HashMap.prototype.put = function(key, value) {
               var theId = UniqueIDGeneretor.createID(key);
               if (!this.contains(theId)) {
                 this.map[theId] = value;
                 this.keys.push(key);
               }
             };
-            HashMap.prototype.contains = function (key) {
+            HashMap.prototype.contains = function(key) {
               var theId = UniqueIDGeneretor.createID(key);
               return this.map[key] != null;
             };
-            HashMap.prototype.get = function (key) {
+            HashMap.prototype.get = function(key) {
               var theId = UniqueIDGeneretor.createID(key);
               return this.map[theId];
             };
-            HashMap.prototype.keySet = function () {
+            HashMap.prototype.keySet = function() {
               return this.keys;
             };
             module2.exports = HashMap;
           },
           /* 23 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var UniqueIDGeneretor = __webpack_require__(14);
             function HashSet() {
               this.set = {};
             }
-            HashSet.prototype.add = function (obj) {
+            ;
+            HashSet.prototype.add = function(obj) {
               var theId = UniqueIDGeneretor.createID(obj);
-              if (!this.contains(theId)) this.set[theId] = obj;
+              if (!this.contains(theId))
+                this.set[theId] = obj;
             };
-            HashSet.prototype.remove = function (obj) {
+            HashSet.prototype.remove = function(obj) {
               delete this.set[UniqueIDGeneretor.createID(obj)];
             };
-            HashSet.prototype.clear = function () {
+            HashSet.prototype.clear = function() {
               this.set = {};
             };
-            HashSet.prototype.contains = function (obj) {
+            HashSet.prototype.contains = function(obj) {
               return this.set[UniqueIDGeneretor.createID(obj)] == obj;
             };
-            HashSet.prototype.isEmpty = function () {
+            HashSet.prototype.isEmpty = function() {
               return this.size() === 0;
             };
-            HashSet.prototype.size = function () {
+            HashSet.prototype.size = function() {
               return Object.keys(this.set).length;
             };
-            HashSet.prototype.addAllTo = function (list) {
+            HashSet.prototype.addAllTo = function(list) {
               var keys = Object.keys(this.set);
               var length = keys.length;
               for (var i = 0; i < length; i++) {
                 list.push(this.set[keys[i]]);
               }
             };
-            HashSet.prototype.size = function () {
+            HashSet.prototype.size = function() {
               return Object.keys(this.set).length;
             };
-            HashSet.prototype.addAll = function (list) {
+            HashSet.prototype.addAll = function(list) {
               var s = list.length;
               for (var i = 0; i < s; i++) {
                 var v = list[i];
@@ -3371,148 +2925,141 @@ var require_layout_base = __commonJS({
           },
           /* 24 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            var _createClass = /* @__PURE__ */ (function () {
+            var _createClass = /* @__PURE__ */ function() {
               function defineProperties(target, props) {
                 for (var i = 0; i < props.length; i++) {
                   var descriptor = props[i];
                   descriptor.enumerable = descriptor.enumerable || false;
                   descriptor.configurable = true;
-                  if ("value" in descriptor) descriptor.writable = true;
+                  if ("value" in descriptor)
+                    descriptor.writable = true;
                   Object.defineProperty(target, descriptor.key, descriptor);
                 }
               }
-              return function (Constructor, protoProps, staticProps) {
+              return function(Constructor, protoProps, staticProps) {
                 if (protoProps)
                   defineProperties(Constructor.prototype, protoProps);
-                if (staticProps) defineProperties(Constructor, staticProps);
+                if (staticProps)
+                  defineProperties(Constructor, staticProps);
                 return Constructor;
               };
-            })();
+            }();
             function _classCallCheck(instance2, Constructor) {
               if (!(instance2 instanceof Constructor)) {
                 throw new TypeError("Cannot call a class as a function");
               }
             }
             var LinkedList = __webpack_require__(11);
-            var Quicksort = (function () {
+            var Quicksort = function() {
               function Quicksort2(A, compareFunction) {
                 _classCallCheck(this, Quicksort2);
                 if (compareFunction !== null || compareFunction !== void 0)
                   this.compareFunction = this._defaultCompareFunction;
                 var length = void 0;
-                if (A instanceof LinkedList) length = A.size();
-                else length = A.length;
+                if (A instanceof LinkedList)
+                  length = A.size();
+                else
+                  length = A.length;
                 this._quicksort(A, 0, length - 1);
               }
-              _createClass(Quicksort2, [
-                {
-                  key: "_quicksort",
-                  value: function _quicksort(A, p, r) {
-                    if (p < r) {
-                      var q = this._partition(A, p, r);
-                      this._quicksort(A, p, q);
-                      this._quicksort(A, q + 1, r);
+              _createClass(Quicksort2, [{
+                key: "_quicksort",
+                value: function _quicksort(A, p, r) {
+                  if (p < r) {
+                    var q = this._partition(A, p, r);
+                    this._quicksort(A, p, q);
+                    this._quicksort(A, q + 1, r);
+                  }
+                }
+              }, {
+                key: "_partition",
+                value: function _partition(A, p, r) {
+                  var x = this._get(A, p);
+                  var i = p;
+                  var j = r;
+                  while (true) {
+                    while (this.compareFunction(x, this._get(A, j))) {
+                      j--;
                     }
-                  },
-                },
-                {
-                  key: "_partition",
-                  value: function _partition(A, p, r) {
-                    var x = this._get(A, p);
-                    var i = p;
-                    var j = r;
-                    while (true) {
-                      while (this.compareFunction(x, this._get(A, j))) {
-                        j--;
-                      }
-                      while (this.compareFunction(this._get(A, i), x)) {
-                        i++;
-                      }
-                      if (i < j) {
-                        this._swap(A, i, j);
-                        i++;
-                        j--;
-                      } else return j;
+                    while (this.compareFunction(this._get(A, i), x)) {
+                      i++;
                     }
-                  },
-                },
-                {
-                  key: "_get",
-                  value: function _get(object, index) {
-                    if (object instanceof LinkedList)
-                      return object.get_object_at(index);
-                    else return object[index];
-                  },
-                },
-                {
-                  key: "_set",
-                  value: function _set(object, index, value) {
-                    if (object instanceof LinkedList)
-                      object.set_object_at(index, value);
-                    else object[index] = value;
-                  },
-                },
-                {
-                  key: "_swap",
-                  value: function _swap(A, i, j) {
-                    var temp = this._get(A, i);
-                    this._set(A, i, this._get(A, j));
-                    this._set(A, j, temp);
-                  },
-                },
-                {
-                  key: "_defaultCompareFunction",
-                  value: function _defaultCompareFunction(a, b) {
-                    return b > a;
-                  },
-                },
-              ]);
+                    if (i < j) {
+                      this._swap(A, i, j);
+                      i++;
+                      j--;
+                    } else
+                      return j;
+                  }
+                }
+              }, {
+                key: "_get",
+                value: function _get(object, index) {
+                  if (object instanceof LinkedList)
+                    return object.get_object_at(index);
+                  else
+                    return object[index];
+                }
+              }, {
+                key: "_set",
+                value: function _set(object, index, value) {
+                  if (object instanceof LinkedList)
+                    object.set_object_at(index, value);
+                  else
+                    object[index] = value;
+                }
+              }, {
+                key: "_swap",
+                value: function _swap(A, i, j) {
+                  var temp = this._get(A, i);
+                  this._set(A, i, this._get(A, j));
+                  this._set(A, j, temp);
+                }
+              }, {
+                key: "_defaultCompareFunction",
+                value: function _defaultCompareFunction(a, b) {
+                  return b > a;
+                }
+              }]);
               return Quicksort2;
-            })();
+            }();
             module2.exports = Quicksort;
           },
           /* 25 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            var _createClass = /* @__PURE__ */ (function () {
+            var _createClass = /* @__PURE__ */ function() {
               function defineProperties(target, props) {
                 for (var i = 0; i < props.length; i++) {
                   var descriptor = props[i];
                   descriptor.enumerable = descriptor.enumerable || false;
                   descriptor.configurable = true;
-                  if ("value" in descriptor) descriptor.writable = true;
+                  if ("value" in descriptor)
+                    descriptor.writable = true;
                   Object.defineProperty(target, descriptor.key, descriptor);
                 }
               }
-              return function (Constructor, protoProps, staticProps) {
+              return function(Constructor, protoProps, staticProps) {
                 if (protoProps)
                   defineProperties(Constructor.prototype, protoProps);
-                if (staticProps) defineProperties(Constructor, staticProps);
+                if (staticProps)
+                  defineProperties(Constructor, staticProps);
                 return Constructor;
               };
-            })();
+            }();
             function _classCallCheck(instance2, Constructor) {
               if (!(instance2 instanceof Constructor)) {
                 throw new TypeError("Cannot call a class as a function");
               }
             }
-            var NeedlemanWunsch = (function () {
+            var NeedlemanWunsch = function() {
               function NeedlemanWunsch2(sequence1, sequence2) {
-                var match_score =
-                  arguments.length > 2 && arguments[2] !== void 0
-                    ? arguments[2]
-                    : 1;
-                var mismatch_penalty =
-                  arguments.length > 3 && arguments[3] !== void 0
-                    ? arguments[3]
-                    : -1;
-                var gap_penalty =
-                  arguments.length > 4 && arguments[4] !== void 0
-                    ? arguments[4]
-                    : -1;
+                var match_score = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 1;
+                var mismatch_penalty = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : -1;
+                var gap_penalty = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : -1;
                 _classCallCheck(this, NeedlemanWunsch2);
                 this.sequence1 = sequence1;
                 this.sequence2 = sequence2;
@@ -3539,132 +3086,111 @@ var require_layout_base = __commonJS({
                 this.score = -1;
                 this.computeGrids();
               }
-              _createClass(NeedlemanWunsch2, [
-                {
-                  key: "getScore",
-                  value: function getScore() {
-                    return this.score;
-                  },
-                },
-                {
-                  key: "getAlignments",
-                  value: function getAlignments() {
-                    return this.alignments;
-                  },
-                  // Main dynamic programming procedure
-                },
-                {
-                  key: "computeGrids",
-                  value: function computeGrids() {
-                    for (var j = 1; j < this.jMax; j++) {
-                      this.grid[0][j] = this.grid[0][j - 1] + this.gap_penalty;
-                      this.tracebackGrid[0][j] = [false, false, true];
+              _createClass(NeedlemanWunsch2, [{
+                key: "getScore",
+                value: function getScore() {
+                  return this.score;
+                }
+              }, {
+                key: "getAlignments",
+                value: function getAlignments() {
+                  return this.alignments;
+                }
+                // Main dynamic programming procedure
+              }, {
+                key: "computeGrids",
+                value: function computeGrids() {
+                  for (var j = 1; j < this.jMax; j++) {
+                    this.grid[0][j] = this.grid[0][j - 1] + this.gap_penalty;
+                    this.tracebackGrid[0][j] = [false, false, true];
+                  }
+                  for (var i = 1; i < this.iMax; i++) {
+                    this.grid[i][0] = this.grid[i - 1][0] + this.gap_penalty;
+                    this.tracebackGrid[i][0] = [false, true, false];
+                  }
+                  for (var _i2 = 1; _i2 < this.iMax; _i2++) {
+                    for (var _j2 = 1; _j2 < this.jMax; _j2++) {
+                      var diag = void 0;
+                      if (this.sequence1[_i2 - 1] === this.sequence2[_j2 - 1])
+                        diag = this.grid[_i2 - 1][_j2 - 1] + this.match_score;
+                      else
+                        diag = this.grid[_i2 - 1][_j2 - 1] + this.mismatch_penalty;
+                      var up = this.grid[_i2 - 1][_j2] + this.gap_penalty;
+                      var left = this.grid[_i2][_j2 - 1] + this.gap_penalty;
+                      var maxOf = [diag, up, left];
+                      var indices = this.arrayAllMaxIndexes(maxOf);
+                      this.grid[_i2][_j2] = maxOf[indices[0]];
+                      this.tracebackGrid[_i2][_j2] = [indices.includes(0), indices.includes(1), indices.includes(2)];
                     }
-                    for (var i = 1; i < this.iMax; i++) {
-                      this.grid[i][0] = this.grid[i - 1][0] + this.gap_penalty;
-                      this.tracebackGrid[i][0] = [false, true, false];
+                  }
+                  this.score = this.grid[this.iMax - 1][this.jMax - 1];
+                }
+                // Gets all possible valid sequence combinations
+              }, {
+                key: "alignmentTraceback",
+                value: function alignmentTraceback() {
+                  var inProcessAlignments = [];
+                  inProcessAlignments.push({
+                    pos: [this.sequence1.length, this.sequence2.length],
+                    seq1: "",
+                    seq2: ""
+                  });
+                  while (inProcessAlignments[0]) {
+                    var current = inProcessAlignments[0];
+                    var directions = this.tracebackGrid[current.pos[0]][current.pos[1]];
+                    if (directions[0]) {
+                      inProcessAlignments.push({
+                        pos: [current.pos[0] - 1, current.pos[1] - 1],
+                        seq1: this.sequence1[current.pos[0] - 1] + current.seq1,
+                        seq2: this.sequence2[current.pos[1] - 1] + current.seq2
+                      });
                     }
-                    for (var _i2 = 1; _i2 < this.iMax; _i2++) {
-                      for (var _j2 = 1; _j2 < this.jMax; _j2++) {
-                        var diag = void 0;
-                        if (this.sequence1[_i2 - 1] === this.sequence2[_j2 - 1])
-                          diag = this.grid[_i2 - 1][_j2 - 1] + this.match_score;
-                        else
-                          diag =
-                            this.grid[_i2 - 1][_j2 - 1] + this.mismatch_penalty;
-                        var up = this.grid[_i2 - 1][_j2] + this.gap_penalty;
-                        var left = this.grid[_i2][_j2 - 1] + this.gap_penalty;
-                        var maxOf = [diag, up, left];
-                        var indices = this.arrayAllMaxIndexes(maxOf);
-                        this.grid[_i2][_j2] = maxOf[indices[0]];
-                        this.tracebackGrid[_i2][_j2] = [
-                          indices.includes(0),
-                          indices.includes(1),
-                          indices.includes(2),
-                        ];
-                      }
+                    if (directions[1]) {
+                      inProcessAlignments.push({
+                        pos: [current.pos[0] - 1, current.pos[1]],
+                        seq1: this.sequence1[current.pos[0] - 1] + current.seq1,
+                        seq2: "-" + current.seq2
+                      });
                     }
-                    this.score = this.grid[this.iMax - 1][this.jMax - 1];
-                  },
-                  // Gets all possible valid sequence combinations
-                },
-                {
-                  key: "alignmentTraceback",
-                  value: function alignmentTraceback() {
-                    var inProcessAlignments = [];
-                    inProcessAlignments.push({
-                      pos: [this.sequence1.length, this.sequence2.length],
-                      seq1: "",
-                      seq2: "",
-                    });
-                    while (inProcessAlignments[0]) {
-                      var current = inProcessAlignments[0];
-                      var directions =
-                        this.tracebackGrid[current.pos[0]][current.pos[1]];
-                      if (directions[0]) {
-                        inProcessAlignments.push({
-                          pos: [current.pos[0] - 1, current.pos[1] - 1],
-                          seq1:
-                            this.sequence1[current.pos[0] - 1] + current.seq1,
-                          seq2:
-                            this.sequence2[current.pos[1] - 1] + current.seq2,
-                        });
-                      }
-                      if (directions[1]) {
-                        inProcessAlignments.push({
-                          pos: [current.pos[0] - 1, current.pos[1]],
-                          seq1:
-                            this.sequence1[current.pos[0] - 1] + current.seq1,
-                          seq2: "-" + current.seq2,
-                        });
-                      }
-                      if (directions[2]) {
-                        inProcessAlignments.push({
-                          pos: [current.pos[0], current.pos[1] - 1],
-                          seq1: "-" + current.seq1,
-                          seq2:
-                            this.sequence2[current.pos[1] - 1] + current.seq2,
-                        });
-                      }
-                      if (current.pos[0] === 0 && current.pos[1] === 0)
-                        this.alignments.push({
-                          sequence1: current.seq1,
-                          sequence2: current.seq2,
-                        });
-                      inProcessAlignments.shift();
+                    if (directions[2]) {
+                      inProcessAlignments.push({
+                        pos: [current.pos[0], current.pos[1] - 1],
+                        seq1: "-" + current.seq1,
+                        seq2: this.sequence2[current.pos[1] - 1] + current.seq2
+                      });
                     }
-                    return this.alignments;
-                  },
-                  // Helper Functions
-                },
-                {
-                  key: "getAllIndexes",
-                  value: function getAllIndexes(arr, val) {
-                    var indexes = [],
-                      i = -1;
-                    while ((i = arr.indexOf(val, i + 1)) !== -1) {
-                      indexes.push(i);
-                    }
-                    return indexes;
-                  },
-                },
-                {
-                  key: "arrayAllMaxIndexes",
-                  value: function arrayAllMaxIndexes(array) {
-                    return this.getAllIndexes(
-                      array,
-                      Math.max.apply(null, array),
-                    );
-                  },
-                },
-              ]);
+                    if (current.pos[0] === 0 && current.pos[1] === 0)
+                      this.alignments.push({
+                        sequence1: current.seq1,
+                        sequence2: current.seq2
+                      });
+                    inProcessAlignments.shift();
+                  }
+                  return this.alignments;
+                }
+                // Helper Functions
+              }, {
+                key: "getAllIndexes",
+                value: function getAllIndexes(arr, val) {
+                  var indexes = [], i = -1;
+                  while ((i = arr.indexOf(val, i + 1)) !== -1) {
+                    indexes.push(i);
+                  }
+                  return indexes;
+                }
+              }, {
+                key: "arrayAllMaxIndexes",
+                value: function arrayAllMaxIndexes(array) {
+                  return this.getAllIndexes(array, Math.max.apply(null, array));
+                }
+              }]);
               return NeedlemanWunsch2;
-            })();
+            }();
             module2.exports = NeedlemanWunsch;
           },
           /* 26 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var layoutBase = function layoutBase2() {
               return;
@@ -3699,19 +3225,19 @@ var require_layout_base = __commonJS({
           },
           /* 27 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             function Emitter() {
               this.listeners = [];
             }
             var p = Emitter.prototype;
-            p.addListener = function (event, callback) {
+            p.addListener = function(event, callback) {
               this.listeners.push({
                 event,
-                callback,
+                callback
               });
             };
-            p.removeListener = function (event, callback) {
+            p.removeListener = function(event, callback) {
               for (var i = this.listeners.length; i >= 0; i--) {
                 var l = this.listeners[i];
                 if (l.event === event && l.callback === callback) {
@@ -3719,7 +3245,7 @@ var require_layout_base = __commonJS({
                 }
               }
             };
-            p.emit = function (event, data) {
+            p.emit = function(event, data) {
               for (var i = 0; i < this.listeners.length; i++) {
                 var l = this.listeners[i];
                 if (event === l.event) {
@@ -3728,20 +3254,17 @@ var require_layout_base = __commonJS({
               }
             };
             module2.exports = Emitter;
-          },
+          }
           /******/
         ])
       );
     });
-  },
+  }
 });
 
 // node_modules/.pnpm/cose-base@1.0.3/node_modules/cose-base/cose-base.js
 var require_cose_base = __commonJS({
-  "node_modules/.pnpm/cose-base@1.0.3/node_modules/cose-base/cose-base.js"(
-    exports,
-    module,
-  ) {
+  "node_modules/.pnpm/cose-base@1.0.3/node_modules/cose-base/cose-base.js"(exports, module) {
     (function webpackUniversalModuleDefinition(root, factory) {
       if (typeof exports === "object" && typeof module === "object")
         module.exports = factory(require_layout_base());
@@ -3749,40 +3272,36 @@ var require_cose_base = __commonJS({
         define(["layout-base"], factory);
       else if (typeof exports === "object")
         exports["coseBase"] = factory(require_layout_base());
-      else root["coseBase"] = factory(root["layoutBase"]);
-    })(exports, function (__WEBPACK_EXTERNAL_MODULE_0__) {
+      else
+        root["coseBase"] = factory(root["layoutBase"]);
+    })(exports, function(__WEBPACK_EXTERNAL_MODULE_0__) {
       return (
         /******/
-        (function (modules) {
+        function(modules) {
           var installedModules = {};
           function __webpack_require__(moduleId) {
             if (installedModules[moduleId]) {
               return installedModules[moduleId].exports;
             }
-            var module2 = (installedModules[moduleId] = {
+            var module2 = installedModules[moduleId] = {
               /******/
               i: moduleId,
               /******/
               l: false,
               /******/
-              exports: {},
+              exports: {}
               /******/
-            });
-            modules[moduleId].call(
-              module2.exports,
-              module2,
-              module2.exports,
-              __webpack_require__,
-            );
+            };
+            modules[moduleId].call(module2.exports, module2, module2.exports, __webpack_require__);
             module2.l = true;
             return module2.exports;
           }
           __webpack_require__.m = modules;
           __webpack_require__.c = installedModules;
-          __webpack_require__.i = function (value) {
+          __webpack_require__.i = function(value) {
             return value;
           };
-          __webpack_require__.d = function (exports2, name, getter) {
+          __webpack_require__.d = function(exports2, name, getter) {
             if (!__webpack_require__.o(exports2, name)) {
               Object.defineProperty(exports2, name, {
                 /******/
@@ -3790,48 +3309,49 @@ var require_cose_base = __commonJS({
                 /******/
                 enumerable: true,
                 /******/
-                get: getter,
+                get: getter
                 /******/
               });
             }
           };
-          __webpack_require__.n = function (module2) {
-            var getter =
-              module2 && module2.__esModule
-                ? /******/
-                  function getDefault() {
-                    return module2["default"];
-                  }
-                : /******/
-                  function getModuleExports() {
-                    return module2;
-                  };
+          __webpack_require__.n = function(module2) {
+            var getter = module2 && module2.__esModule ? (
+              /******/
+              function getDefault() {
+                return module2["default"];
+              }
+            ) : (
+              /******/
+              function getModuleExports() {
+                return module2;
+              }
+            );
             __webpack_require__.d(getter, "a", getter);
             return getter;
           };
-          __webpack_require__.o = function (object, property) {
+          __webpack_require__.o = function(object, property) {
             return Object.prototype.hasOwnProperty.call(object, property);
           };
           __webpack_require__.p = "";
-          return __webpack_require__((__webpack_require__.s = 7));
-        })([
+          return __webpack_require__(__webpack_require__.s = 7);
+        }([
           /* 0 */
           /***/
-          function (module2, exports2) {
+          function(module2, exports2) {
             module2.exports = __WEBPACK_EXTERNAL_MODULE_0__;
           },
           /* 1 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var FDLayoutConstants = __webpack_require__(0).FDLayoutConstants;
-            function CoSEConstants() {}
+            function CoSEConstants() {
+            }
             for (var prop in FDLayoutConstants) {
               CoSEConstants[prop] = FDLayoutConstants[prop];
             }
             CoSEConstants.DEFAULT_USE_MULTI_LEVEL_SCALING = false;
-            CoSEConstants.DEFAULT_RADIAL_SEPARATION =
-              FDLayoutConstants.DEFAULT_EDGE_LENGTH;
+            CoSEConstants.DEFAULT_RADIAL_SEPARATION = FDLayoutConstants.DEFAULT_EDGE_LENGTH;
             CoSEConstants.DEFAULT_COMPONENT_SEPERATION = 60;
             CoSEConstants.TILE = true;
             CoSEConstants.TILING_PADDING_VERTICAL = 10;
@@ -3841,7 +3361,7 @@ var require_cose_base = __commonJS({
           },
           /* 2 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var FDLayoutEdge = __webpack_require__(0).FDLayoutEdge;
             function CoSEEdge(source, target, vEdge) {
@@ -3855,7 +3375,7 @@ var require_cose_base = __commonJS({
           },
           /* 3 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraph = __webpack_require__(0).LGraph;
             function CoSEGraph(parent, graphMgr, vGraph) {
@@ -3869,7 +3389,7 @@ var require_cose_base = __commonJS({
           },
           /* 4 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var LGraphManager = __webpack_require__(0).LGraphManager;
             function CoSEGraphManager(layout) {
@@ -3883,7 +3403,7 @@ var require_cose_base = __commonJS({
           },
           /* 5 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var FDLayoutNode = __webpack_require__(0).FDLayoutNode;
             var IMath = __webpack_require__(0).IMath;
@@ -3894,50 +3414,24 @@ var require_cose_base = __commonJS({
             for (var prop in FDLayoutNode) {
               CoSENode[prop] = FDLayoutNode[prop];
             }
-            CoSENode.prototype.move = function () {
+            CoSENode.prototype.move = function() {
               var layout = this.graphManager.getLayout();
-              this.displacementX =
-                (layout.coolingFactor *
-                  (this.springForceX +
-                    this.repulsionForceX +
-                    this.gravitationForceX)) /
-                this.noOfChildren;
-              this.displacementY =
-                (layout.coolingFactor *
-                  (this.springForceY +
-                    this.repulsionForceY +
-                    this.gravitationForceY)) /
-                this.noOfChildren;
-              if (
-                Math.abs(this.displacementX) >
-                layout.coolingFactor * layout.maxNodeDisplacement
-              ) {
-                this.displacementX =
-                  layout.coolingFactor *
-                  layout.maxNodeDisplacement *
-                  IMath.sign(this.displacementX);
+              this.displacementX = layout.coolingFactor * (this.springForceX + this.repulsionForceX + this.gravitationForceX) / this.noOfChildren;
+              this.displacementY = layout.coolingFactor * (this.springForceY + this.repulsionForceY + this.gravitationForceY) / this.noOfChildren;
+              if (Math.abs(this.displacementX) > layout.coolingFactor * layout.maxNodeDisplacement) {
+                this.displacementX = layout.coolingFactor * layout.maxNodeDisplacement * IMath.sign(this.displacementX);
               }
-              if (
-                Math.abs(this.displacementY) >
-                layout.coolingFactor * layout.maxNodeDisplacement
-              ) {
-                this.displacementY =
-                  layout.coolingFactor *
-                  layout.maxNodeDisplacement *
-                  IMath.sign(this.displacementY);
+              if (Math.abs(this.displacementY) > layout.coolingFactor * layout.maxNodeDisplacement) {
+                this.displacementY = layout.coolingFactor * layout.maxNodeDisplacement * IMath.sign(this.displacementY);
               }
               if (this.child == null) {
                 this.moveBy(this.displacementX, this.displacementY);
               } else if (this.child.getNodes().length == 0) {
                 this.moveBy(this.displacementX, this.displacementY);
               } else {
-                this.propogateDisplacementToChildren(
-                  this.displacementX,
-                  this.displacementY,
-                );
+                this.propogateDisplacementToChildren(this.displacementX, this.displacementY);
               }
-              layout.totalDisplacement +=
-                Math.abs(this.displacementX) + Math.abs(this.displacementY);
+              layout.totalDisplacement += Math.abs(this.displacementX) + Math.abs(this.displacementY);
               this.springForceX = 0;
               this.springForceY = 0;
               this.repulsionForceX = 0;
@@ -3947,10 +3441,7 @@ var require_cose_base = __commonJS({
               this.displacementX = 0;
               this.displacementY = 0;
             };
-            CoSENode.prototype.propogateDisplacementToChildren = function (
-              dX,
-              dY,
-            ) {
+            CoSENode.prototype.propogateDisplacementToChildren = function(dX, dY) {
               var nodes = this.getChild().getNodes();
               var node;
               for (var i = 0; i < nodes.length; i++) {
@@ -3964,32 +3455,32 @@ var require_cose_base = __commonJS({
                 }
               }
             };
-            CoSENode.prototype.setPred1 = function (pred12) {
+            CoSENode.prototype.setPred1 = function(pred12) {
               this.pred1 = pred12;
             };
-            CoSENode.prototype.getPred1 = function () {
+            CoSENode.prototype.getPred1 = function() {
               return pred1;
             };
-            CoSENode.prototype.getPred2 = function () {
+            CoSENode.prototype.getPred2 = function() {
               return pred2;
             };
-            CoSENode.prototype.setNext = function (next2) {
+            CoSENode.prototype.setNext = function(next2) {
               this.next = next2;
             };
-            CoSENode.prototype.getNext = function () {
+            CoSENode.prototype.getNext = function() {
               return next;
             };
-            CoSENode.prototype.setProcessed = function (processed2) {
+            CoSENode.prototype.setProcessed = function(processed2) {
               this.processed = processed2;
             };
-            CoSENode.prototype.isProcessed = function () {
+            CoSENode.prototype.isProcessed = function() {
               return processed;
             };
             module2.exports = CoSENode;
           },
           /* 6 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var FDLayout = __webpack_require__(0).FDLayout;
             var CoSEGraphManager = __webpack_require__(4);
@@ -4014,21 +3505,21 @@ var require_cose_base = __commonJS({
             for (var prop in FDLayout) {
               CoSELayout[prop] = FDLayout[prop];
             }
-            CoSELayout.prototype.newGraphManager = function () {
+            CoSELayout.prototype.newGraphManager = function() {
               var gm = new CoSEGraphManager(this);
               this.graphManager = gm;
               return gm;
             };
-            CoSELayout.prototype.newGraph = function (vGraph) {
+            CoSELayout.prototype.newGraph = function(vGraph) {
               return new CoSEGraph(null, this.graphManager, vGraph);
             };
-            CoSELayout.prototype.newNode = function (vNode) {
+            CoSELayout.prototype.newNode = function(vNode) {
               return new CoSENode(this.graphManager, vNode);
             };
-            CoSELayout.prototype.newEdge = function (vEdge) {
+            CoSELayout.prototype.newEdge = function(vEdge) {
               return new CoSEEdge(null, null, vEdge);
             };
-            CoSELayout.prototype.initParameters = function () {
+            CoSELayout.prototype.initParameters = function() {
               FDLayout.prototype.initParameters.call(this, arguments);
               if (!this.isSubLayout) {
                 if (CoSEConstants.DEFAULT_EDGE_LENGTH < 10) {
@@ -4036,37 +3527,26 @@ var require_cose_base = __commonJS({
                 } else {
                   this.idealEdgeLength = CoSEConstants.DEFAULT_EDGE_LENGTH;
                 }
-                this.useSmartIdealEdgeLengthCalculation =
-                  CoSEConstants.DEFAULT_USE_SMART_IDEAL_EDGE_LENGTH_CALCULATION;
+                this.useSmartIdealEdgeLengthCalculation = CoSEConstants.DEFAULT_USE_SMART_IDEAL_EDGE_LENGTH_CALCULATION;
                 this.springConstant = FDLayoutConstants.DEFAULT_SPRING_STRENGTH;
-                this.repulsionConstant =
-                  FDLayoutConstants.DEFAULT_REPULSION_STRENGTH;
-                this.gravityConstant =
-                  FDLayoutConstants.DEFAULT_GRAVITY_STRENGTH;
-                this.compoundGravityConstant =
-                  FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH;
-                this.gravityRangeFactor =
-                  FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR;
-                this.compoundGravityRangeFactor =
-                  FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR;
+                this.repulsionConstant = FDLayoutConstants.DEFAULT_REPULSION_STRENGTH;
+                this.gravityConstant = FDLayoutConstants.DEFAULT_GRAVITY_STRENGTH;
+                this.compoundGravityConstant = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH;
+                this.gravityRangeFactor = FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR;
+                this.compoundGravityRangeFactor = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR;
                 this.prunedNodesAll = [];
                 this.growTreeIterations = 0;
                 this.afterGrowthIterations = 0;
                 this.isTreeGrowing = false;
                 this.isGrowthFinished = false;
                 this.coolingCycle = 0;
-                this.maxCoolingCycle =
-                  this.maxIterations /
-                  FDLayoutConstants.CONVERGENCE_CHECK_PERIOD;
-                this.finalTemperature =
-                  FDLayoutConstants.CONVERGENCE_CHECK_PERIOD /
-                  this.maxIterations;
+                this.maxCoolingCycle = this.maxIterations / FDLayoutConstants.CONVERGENCE_CHECK_PERIOD;
+                this.finalTemperature = FDLayoutConstants.CONVERGENCE_CHECK_PERIOD / this.maxIterations;
                 this.coolingAdjuster = 1;
               }
             };
-            CoSELayout.prototype.layout = function () {
-              var createBendsAsNeeded =
-                LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
+            CoSELayout.prototype.layout = function() {
+              var createBendsAsNeeded = LayoutConstants.DEFAULT_CREATE_BENDS_AS_NEEDED;
               if (createBendsAsNeeded) {
                 this.createBendpoints();
                 this.graphManager.resetAllEdges();
@@ -4074,11 +3554,9 @@ var require_cose_base = __commonJS({
               this.level = 0;
               return this.classicLayout();
             };
-            CoSELayout.prototype.classicLayout = function () {
+            CoSELayout.prototype.classicLayout = function() {
               this.nodesWithGravity = this.calculateNodesToApplyGravitationTo();
-              this.graphManager.setAllNodesToApplyGravitation(
-                this.nodesWithGravity,
-              );
+              this.graphManager.setAllNodesToApplyGravitation(this.nodesWithGravity);
               this.calcNoOfChildrenForAllNodes();
               this.graphManager.calcLowestCommonAncestors();
               this.graphManager.calcInclusionTreeDepths();
@@ -4092,7 +3570,7 @@ var require_cose_base = __commonJS({
                   this.reduceTrees();
                   this.graphManager.resetAllNodesToApplyGravitation();
                   var allNodes = new Set(this.getAllNodes());
-                  var intersection = this.nodesWithGravity.filter(function (x) {
+                  var intersection = this.nodesWithGravity.filter(function(x) {
                     return allNodes.has(x);
                   });
                   this.graphManager.setAllNodesToApplyGravitation(intersection);
@@ -4103,7 +3581,7 @@ var require_cose_base = __commonJS({
                   this.reduceTrees();
                   this.graphManager.resetAllNodesToApplyGravitation();
                   var allNodes = new Set(this.getAllNodes());
-                  var intersection = this.nodesWithGravity.filter(function (x) {
+                  var intersection = this.nodesWithGravity.filter(function(x) {
                     return allNodes.has(x);
                   });
                   this.graphManager.setAllNodesToApplyGravitation(intersection);
@@ -4113,26 +3591,16 @@ var require_cose_base = __commonJS({
               this.runSpringEmbedder();
               return true;
             };
-            CoSELayout.prototype.tick = function () {
+            CoSELayout.prototype.tick = function() {
               this.totalIterations++;
-              if (
-                this.totalIterations === this.maxIterations &&
-                !this.isTreeGrowing &&
-                !this.isGrowthFinished
-              ) {
+              if (this.totalIterations === this.maxIterations && !this.isTreeGrowing && !this.isGrowthFinished) {
                 if (this.prunedNodesAll.length > 0) {
                   this.isTreeGrowing = true;
                 } else {
                   return true;
                 }
               }
-              if (
-                this.totalIterations %
-                  FDLayoutConstants.CONVERGENCE_CHECK_PERIOD ==
-                  0 &&
-                !this.isTreeGrowing &&
-                !this.isGrowthFinished
-              ) {
+              if (this.totalIterations % FDLayoutConstants.CONVERGENCE_CHECK_PERIOD == 0 && !this.isTreeGrowing && !this.isGrowthFinished) {
                 if (this.isConverged()) {
                   if (this.prunedNodesAll.length > 0) {
                     this.isTreeGrowing = true;
@@ -4146,22 +3614,8 @@ var require_cose_base = __commonJS({
                 } else if (this.layoutQuality == 1) {
                   this.coolingAdjuster = this.coolingCycle / 3;
                 }
-                this.coolingFactor = Math.max(
-                  this.initialCoolingFactor -
-                    (Math.pow(
-                      this.coolingCycle,
-                      Math.log(
-                        100 *
-                          (this.initialCoolingFactor - this.finalTemperature),
-                      ) / Math.log(this.maxCoolingCycle),
-                    ) /
-                      100) *
-                      this.coolingAdjuster,
-                  this.finalTemperature,
-                );
-                this.animationPeriod = Math.ceil(
-                  this.initialAnimationPeriod * Math.sqrt(this.coolingFactor),
-                );
+                this.coolingFactor = Math.max(this.initialCoolingFactor - Math.pow(this.coolingCycle, Math.log(100 * (this.initialCoolingFactor - this.finalTemperature)) / Math.log(this.maxCoolingCycle)) / 100 * this.coolingAdjuster, this.finalTemperature);
+                this.animationPeriod = Math.ceil(this.initialAnimationPeriod * Math.sqrt(this.coolingFactor));
               }
               if (this.isTreeGrowing) {
                 if (this.growTreeIterations % 10 == 0) {
@@ -4171,18 +3625,13 @@ var require_cose_base = __commonJS({
                     this.growTree(this.prunedNodesAll);
                     this.graphManager.resetAllNodesToApplyGravitation();
                     var allNodes = new Set(this.getAllNodes());
-                    var intersection = this.nodesWithGravity.filter(
-                      function (x) {
-                        return allNodes.has(x);
-                      },
-                    );
-                    this.graphManager.setAllNodesToApplyGravitation(
-                      intersection,
-                    );
+                    var intersection = this.nodesWithGravity.filter(function(x) {
+                      return allNodes.has(x);
+                    });
+                    this.graphManager.setAllNodesToApplyGravitation(intersection);
                     this.graphManager.updateBounds();
                     this.updateGrid();
-                    this.coolingFactor =
-                      FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
+                    this.coolingFactor = FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL;
                   } else {
                     this.isTreeGrowing = false;
                     this.isGrowthFinished = true;
@@ -4198,29 +3647,21 @@ var require_cose_base = __commonJS({
                   this.graphManager.updateBounds();
                   this.updateGrid();
                 }
-                this.coolingFactor =
-                  FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL *
-                  ((100 - this.afterGrowthIterations) / 100);
+                this.coolingFactor = FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL * ((100 - this.afterGrowthIterations) / 100);
                 this.afterGrowthIterations++;
               }
-              var gridUpdateAllowed =
-                !this.isTreeGrowing && !this.isGrowthFinished;
-              var forceToNodeSurroundingUpdate =
-                (this.growTreeIterations % 10 == 1 && this.isTreeGrowing) ||
-                (this.afterGrowthIterations % 10 == 1 && this.isGrowthFinished);
+              var gridUpdateAllowed = !this.isTreeGrowing && !this.isGrowthFinished;
+              var forceToNodeSurroundingUpdate = this.growTreeIterations % 10 == 1 && this.isTreeGrowing || this.afterGrowthIterations % 10 == 1 && this.isGrowthFinished;
               this.totalDisplacement = 0;
               this.graphManager.updateBounds();
               this.calcSpringForces();
-              this.calcRepulsionForces(
-                gridUpdateAllowed,
-                forceToNodeSurroundingUpdate,
-              );
+              this.calcRepulsionForces(gridUpdateAllowed, forceToNodeSurroundingUpdate);
               this.calcGravitationalForces();
               this.moveNodes();
               this.animate();
               return false;
             };
-            CoSELayout.prototype.getPositionsData = function () {
+            CoSELayout.prototype.getPositionsData = function() {
               var allNodes = this.graphManager.getAllNodes();
               var pData = {};
               for (var i = 0; i < allNodes.length; i++) {
@@ -4231,12 +3672,12 @@ var require_cose_base = __commonJS({
                   x: rect.getCenterX(),
                   y: rect.getCenterY(),
                   w: rect.width,
-                  h: rect.height,
+                  h: rect.height
                 };
               }
               return pData;
             };
-            CoSELayout.prototype.runSpringEmbedder = function () {
+            CoSELayout.prototype.runSpringEmbedder = function() {
               this.initialAnimationPeriod = 25;
               this.animationPeriod = this.initialAnimationPeriod;
               var layoutEnded = false;
@@ -4249,23 +3690,22 @@ var require_cose_base = __commonJS({
                 this.graphManager.updateBounds();
               }
             };
-            CoSELayout.prototype.calculateNodesToApplyGravitationTo =
-              function () {
-                var nodeList = [];
-                var graph;
-                var graphs = this.graphManager.getGraphs();
-                var size = graphs.length;
-                var i;
-                for (i = 0; i < size; i++) {
-                  graph = graphs[i];
-                  graph.updateConnected();
-                  if (!graph.isConnected) {
-                    nodeList = nodeList.concat(graph.getNodes());
-                  }
+            CoSELayout.prototype.calculateNodesToApplyGravitationTo = function() {
+              var nodeList = [];
+              var graph;
+              var graphs = this.graphManager.getGraphs();
+              var size = graphs.length;
+              var i;
+              for (i = 0; i < size; i++) {
+                graph = graphs[i];
+                graph.updateConnected();
+                if (!graph.isConnected) {
+                  nodeList = nodeList.concat(graph.getNodes());
                 }
-                return nodeList;
-              };
-            CoSELayout.prototype.createBendpoints = function () {
+              }
+              return nodeList;
+            };
+            CoSELayout.prototype.createBendpoints = function() {
               var edges = [];
               edges = edges.concat(this.graphManager.getAllEdges());
               var visited = /* @__PURE__ */ new Set();
@@ -4282,12 +3722,8 @@ var require_cose_base = __commonJS({
                     visited.add(edge);
                   } else {
                     var edgeList = [];
-                    edgeList = edgeList.concat(
-                      source.getEdgeListToNode(target),
-                    );
-                    edgeList = edgeList.concat(
-                      target.getEdgeListToNode(source),
-                    );
+                    edgeList = edgeList.concat(source.getEdgeListToNode(target));
+                    edgeList = edgeList.concat(target.getEdgeListToNode(source));
                     if (!visited.has(edgeList[0])) {
                       if (edgeList.length > 1) {
                         var k;
@@ -4297,7 +3733,7 @@ var require_cose_base = __commonJS({
                           this.createDummyNodesForBendpoints(multiEdge);
                         }
                       }
-                      edgeList.forEach(function (edge2) {
+                      edgeList.forEach(function(edge2) {
                         visited.add(edge2);
                       });
                     }
@@ -4308,7 +3744,7 @@ var require_cose_base = __commonJS({
                 }
               }
             };
-            CoSELayout.prototype.positionNodesRadially = function (forest) {
+            CoSELayout.prototype.positionNodesRadially = function(forest) {
               var currentStartingPoint = new Point2(0, 0);
               var numberOfColumns = Math.ceil(Math.sqrt(forest.length));
               var height = 0;
@@ -4328,42 +3764,17 @@ var require_cose_base = __commonJS({
                 var centerNode = Layout2.findCenterOfTree(tree);
                 currentStartingPoint.x = currentX;
                 currentStartingPoint.y = currentY;
-                point = CoSELayout.radialLayout(
-                  tree,
-                  centerNode,
-                  currentStartingPoint,
-                );
+                point = CoSELayout.radialLayout(tree, centerNode, currentStartingPoint);
                 if (point.y > height) {
                   height = Math.floor(point.y);
                 }
-                currentX = Math.floor(
-                  point.x + CoSEConstants.DEFAULT_COMPONENT_SEPERATION,
-                );
+                currentX = Math.floor(point.x + CoSEConstants.DEFAULT_COMPONENT_SEPERATION);
               }
-              this.transform(
-                new PointD(
-                  LayoutConstants.WORLD_CENTER_X - point.x / 2,
-                  LayoutConstants.WORLD_CENTER_Y - point.y / 2,
-                ),
-              );
+              this.transform(new PointD(LayoutConstants.WORLD_CENTER_X - point.x / 2, LayoutConstants.WORLD_CENTER_Y - point.y / 2));
             };
-            CoSELayout.radialLayout = function (
-              tree,
-              centerNode,
-              startingPoint,
-            ) {
-              var radialSep = Math.max(
-                this.maxDiagonalInTree(tree),
-                CoSEConstants.DEFAULT_RADIAL_SEPARATION,
-              );
-              CoSELayout.branchRadialLayout(
-                centerNode,
-                null,
-                0,
-                359,
-                0,
-                radialSep,
-              );
+            CoSELayout.radialLayout = function(tree, centerNode, startingPoint) {
+              var radialSep = Math.max(this.maxDiagonalInTree(tree), CoSEConstants.DEFAULT_RADIAL_SEPARATION);
+              CoSELayout.branchRadialLayout(centerNode, null, 0, 359, 0, radialSep);
               var bounds = LGraph.calculateBounds(tree);
               var transform = new Transform();
               transform.setDeviceOrgX(bounds.getMinX());
@@ -4377,20 +3788,13 @@ var require_cose_base = __commonJS({
               var bottomRight = new PointD(bounds.getMaxX(), bounds.getMaxY());
               return transform.inverseTransformPoint(bottomRight);
             };
-            CoSELayout.branchRadialLayout = function (
-              node,
-              parentOfNode,
-              startAngle,
-              endAngle,
-              distance,
-              radialSeparation,
-            ) {
+            CoSELayout.branchRadialLayout = function(node, parentOfNode, startAngle, endAngle, distance, radialSeparation) {
               var halfInterval = (endAngle - startAngle + 1) / 2;
               if (halfInterval < 0) {
                 halfInterval += 180;
               }
               var nodeAngle = (halfInterval + startAngle) % 360;
-              var teta = (nodeAngle * IGeometry.TWO_PI) / 360;
+              var teta = nodeAngle * IGeometry.TWO_PI / 360;
               var cos_teta = Math.cos(teta);
               var x_ = distance * Math.cos(teta);
               var y_ = distance * Math.sin(teta);
@@ -4416,36 +3820,23 @@ var require_cose_base = __commonJS({
                 childCount--;
               }
               if (parentOfNode != null) {
-                startIndex =
-                  (neighborEdges.indexOf(edges[0]) + 1) % incEdgesCount;
+                startIndex = (neighborEdges.indexOf(edges[0]) + 1) % incEdgesCount;
               } else {
                 startIndex = 0;
               }
               var stepAngle = Math.abs(endAngle - startAngle) / childCount;
-              for (
-                var i = startIndex;
-                branchCount != childCount;
-                i = ++i % incEdgesCount
-              ) {
+              for (var i = startIndex; branchCount != childCount; i = ++i % incEdgesCount) {
                 var currentNeighbor = neighborEdges[i].getOtherEnd(node);
                 if (currentNeighbor == parentOfNode) {
                   continue;
                 }
-                var childStartAngle =
-                  (startAngle + branchCount * stepAngle) % 360;
+                var childStartAngle = (startAngle + branchCount * stepAngle) % 360;
                 var childEndAngle = (childStartAngle + stepAngle) % 360;
-                CoSELayout.branchRadialLayout(
-                  currentNeighbor,
-                  node,
-                  childStartAngle,
-                  childEndAngle,
-                  distance + radialSeparation,
-                  radialSeparation,
-                );
+                CoSELayout.branchRadialLayout(currentNeighbor, node, childStartAngle, childEndAngle, distance + radialSeparation, radialSeparation);
                 branchCount++;
               }
             };
-            CoSELayout.maxDiagonalInTree = function (tree) {
+            CoSELayout.maxDiagonalInTree = function(tree) {
               var maxDiagonal = Integer.MIN_VALUE;
               for (var i = 0; i < tree.length; i++) {
                 var node = tree[i];
@@ -4456,10 +3847,10 @@ var require_cose_base = __commonJS({
               }
               return maxDiagonal;
             };
-            CoSELayout.prototype.calcRepulsionRange = function () {
+            CoSELayout.prototype.calcRepulsionRange = function() {
               return 2 * (this.level + 1) * this.idealEdgeLength;
             };
-            CoSELayout.prototype.groupZeroDegreeMembers = function () {
+            CoSELayout.prototype.groupZeroDegreeMembers = function() {
               var self = this;
               var tempMemberGroups = {};
               this.memberGroups = {};
@@ -4469,10 +3860,7 @@ var require_cose_base = __commonJS({
               for (var i = 0; i < allNodes.length; i++) {
                 var node = allNodes[i];
                 var parent = node.getParent();
-                if (
-                  this.getNodeDegreeWithChildren(node) === 0 &&
-                  (parent.id == void 0 || !this.getToBeTiled(parent))
-                ) {
+                if (this.getNodeDegreeWithChildren(node) === 0 && (parent.id == void 0 || !this.getToBeTiled(parent))) {
                   zeroDegree.push(node);
                 }
               }
@@ -4483,7 +3871,7 @@ var require_cose_base = __commonJS({
                   tempMemberGroups[p_id] = [];
                 tempMemberGroups[p_id] = tempMemberGroups[p_id].concat(node);
               }
-              Object.keys(tempMemberGroups).forEach(function (p_id2) {
+              Object.keys(tempMemberGroups).forEach(function(p_id2) {
                 if (tempMemberGroups[p_id2].length > 1) {
                   var dummyCompoundId = "DummyCompound_" + p_id2;
                   self.memberGroups[dummyCompoundId] = tempMemberGroups[p_id2];
@@ -4495,9 +3883,7 @@ var require_cose_base = __commonJS({
                   dummyCompound.paddingBottom = parent2.paddingBottom || 0;
                   dummyCompound.paddingTop = parent2.paddingTop || 0;
                   self.idToDummyNode[dummyCompoundId] = dummyCompound;
-                  var dummyParentGraph = self
-                    .getGraphManager()
-                    .add(self.newGraph(), dummyCompound);
+                  var dummyParentGraph = self.getGraphManager().add(self.newGraph(), dummyCompound);
                   var parentGraph = parent2.getChild();
                   parentGraph.add(dummyCompound);
                   for (var i2 = 0; i2 < tempMemberGroups[p_id2].length; i2++) {
@@ -4508,66 +3894,49 @@ var require_cose_base = __commonJS({
                 }
               });
             };
-            CoSELayout.prototype.clearCompounds = function () {
+            CoSELayout.prototype.clearCompounds = function() {
               var childGraphMap = {};
               var idToNode = {};
               this.performDFSOnCompounds();
               for (var i = 0; i < this.compoundOrder.length; i++) {
                 idToNode[this.compoundOrder[i].id] = this.compoundOrder[i];
-                childGraphMap[this.compoundOrder[i].id] = [].concat(
-                  this.compoundOrder[i].getChild().getNodes(),
-                );
+                childGraphMap[this.compoundOrder[i].id] = [].concat(this.compoundOrder[i].getChild().getNodes());
                 this.graphManager.remove(this.compoundOrder[i].getChild());
                 this.compoundOrder[i].child = null;
               }
               this.graphManager.resetAllNodes();
               this.tileCompoundMembers(childGraphMap, idToNode);
             };
-            CoSELayout.prototype.clearZeroDegreeMembers = function () {
+            CoSELayout.prototype.clearZeroDegreeMembers = function() {
               var self = this;
-              var tiledZeroDegreePack = (this.tiledZeroDegreePack = []);
-              Object.keys(this.memberGroups).forEach(function (id) {
+              var tiledZeroDegreePack = this.tiledZeroDegreePack = [];
+              Object.keys(this.memberGroups).forEach(function(id) {
                 var compoundNode = self.idToDummyNode[id];
-                tiledZeroDegreePack[id] = self.tileNodes(
-                  self.memberGroups[id],
-                  compoundNode.paddingLeft + compoundNode.paddingRight,
-                );
+                tiledZeroDegreePack[id] = self.tileNodes(self.memberGroups[id], compoundNode.paddingLeft + compoundNode.paddingRight);
                 compoundNode.rect.width = tiledZeroDegreePack[id].width;
                 compoundNode.rect.height = tiledZeroDegreePack[id].height;
               });
             };
-            CoSELayout.prototype.repopulateCompounds = function () {
+            CoSELayout.prototype.repopulateCompounds = function() {
               for (var i = this.compoundOrder.length - 1; i >= 0; i--) {
                 var lCompoundNode = this.compoundOrder[i];
                 var id = lCompoundNode.id;
                 var horizontalMargin = lCompoundNode.paddingLeft;
                 var verticalMargin = lCompoundNode.paddingTop;
-                this.adjustLocations(
-                  this.tiledMemberPack[id],
-                  lCompoundNode.rect.x,
-                  lCompoundNode.rect.y,
-                  horizontalMargin,
-                  verticalMargin,
-                );
+                this.adjustLocations(this.tiledMemberPack[id], lCompoundNode.rect.x, lCompoundNode.rect.y, horizontalMargin, verticalMargin);
               }
             };
-            CoSELayout.prototype.repopulateZeroDegreeMembers = function () {
+            CoSELayout.prototype.repopulateZeroDegreeMembers = function() {
               var self = this;
               var tiledPack = this.tiledZeroDegreePack;
-              Object.keys(tiledPack).forEach(function (id) {
+              Object.keys(tiledPack).forEach(function(id) {
                 var compoundNode = self.idToDummyNode[id];
                 var horizontalMargin = compoundNode.paddingLeft;
                 var verticalMargin = compoundNode.paddingTop;
-                self.adjustLocations(
-                  tiledPack[id],
-                  compoundNode.rect.x,
-                  compoundNode.rect.y,
-                  horizontalMargin,
-                  verticalMargin,
-                );
+                self.adjustLocations(tiledPack[id], compoundNode.rect.x, compoundNode.rect.y, horizontalMargin, verticalMargin);
               });
             };
-            CoSELayout.prototype.getToBeTiled = function (node) {
+            CoSELayout.prototype.getToBeTiled = function(node) {
               var id = node.id;
               if (this.toBeTiled[id] != null) {
                 return this.toBeTiled[id];
@@ -4596,7 +3965,7 @@ var require_cose_base = __commonJS({
               this.toBeTiled[id] = true;
               return true;
             };
-            CoSELayout.prototype.getNodeDegree = function (node) {
+            CoSELayout.prototype.getNodeDegree = function(node) {
               var id = node.id;
               var edges = node.getEdges();
               var degree = 0;
@@ -4608,7 +3977,7 @@ var require_cose_base = __commonJS({
               }
               return degree;
             };
-            CoSELayout.prototype.getNodeDegreeWithChildren = function (node) {
+            CoSELayout.prototype.getNodeDegreeWithChildren = function(node) {
               var degree = this.getNodeDegree(node);
               if (node.getChild() == null) {
                 return degree;
@@ -4620,11 +3989,11 @@ var require_cose_base = __commonJS({
               }
               return degree;
             };
-            CoSELayout.prototype.performDFSOnCompounds = function () {
+            CoSELayout.prototype.performDFSOnCompounds = function() {
               this.compoundOrder = [];
               this.fillCompexOrderByDFS(this.graphManager.getRoot().getNodes());
             };
-            CoSELayout.prototype.fillCompexOrderByDFS = function (children) {
+            CoSELayout.prototype.fillCompexOrderByDFS = function(children) {
               for (var i = 0; i < children.length; i++) {
                 var child = children[i];
                 if (child.getChild() != null) {
@@ -4635,13 +4004,7 @@ var require_cose_base = __commonJS({
                 }
               }
             };
-            CoSELayout.prototype.adjustLocations = function (
-              organization,
-              x,
-              y,
-              compoundHorizontalMargin,
-              compoundVerticalMargin,
-            ) {
+            CoSELayout.prototype.adjustLocations = function(organization, x, y, compoundHorizontalMargin, compoundVerticalMargin) {
               x += compoundHorizontalMargin;
               y += compoundVerticalMargin;
               var left = x;
@@ -4660,23 +4023,17 @@ var require_cose_base = __commonJS({
                 y += maxHeight + organization.verticalPadding;
               }
             };
-            CoSELayout.prototype.tileCompoundMembers = function (
-              childGraphMap,
-              idToNode,
-            ) {
+            CoSELayout.prototype.tileCompoundMembers = function(childGraphMap, idToNode) {
               var self = this;
               this.tiledMemberPack = [];
-              Object.keys(childGraphMap).forEach(function (id) {
+              Object.keys(childGraphMap).forEach(function(id) {
                 var compoundNode = idToNode[id];
-                self.tiledMemberPack[id] = self.tileNodes(
-                  childGraphMap[id],
-                  compoundNode.paddingLeft + compoundNode.paddingRight,
-                );
+                self.tiledMemberPack[id] = self.tileNodes(childGraphMap[id], compoundNode.paddingLeft + compoundNode.paddingRight);
                 compoundNode.rect.width = self.tiledMemberPack[id].width;
                 compoundNode.rect.height = self.tiledMemberPack[id].height;
               });
             };
-            CoSELayout.prototype.tileNodes = function (nodes, minWidth) {
+            CoSELayout.prototype.tileNodes = function(nodes, minWidth) {
               var verticalPadding = CoSEConstants.TILING_PADDING_VERTICAL;
               var horizontalPadding = CoSEConstants.TILING_PADDING_HORIZONTAL;
               var organization = {
@@ -4687,18 +4044,12 @@ var require_cose_base = __commonJS({
                 height: minWidth,
                 // assume minHeight equals to minWidth
                 verticalPadding,
-                horizontalPadding,
+                horizontalPadding
               };
-              nodes.sort(function (n1, n2) {
-                if (
-                  n1.rect.width * n1.rect.height >
-                  n2.rect.width * n2.rect.height
-                )
+              nodes.sort(function(n1, n2) {
+                if (n1.rect.width * n1.rect.height > n2.rect.width * n2.rect.height)
                   return -1;
-                if (
-                  n1.rect.width * n1.rect.height <
-                  n2.rect.width * n2.rect.height
-                )
+                if (n1.rect.width * n1.rect.height < n2.rect.width * n2.rect.height)
                   return 1;
                 return 0;
               });
@@ -4706,37 +4057,16 @@ var require_cose_base = __commonJS({
                 var lNode = nodes[i];
                 if (organization.rows.length == 0) {
                   this.insertNodeToRow(organization, lNode, 0, minWidth);
-                } else if (
-                  this.canAddHorizontal(
-                    organization,
-                    lNode.rect.width,
-                    lNode.rect.height,
-                  )
-                ) {
-                  this.insertNodeToRow(
-                    organization,
-                    lNode,
-                    this.getShortestRowIndex(organization),
-                    minWidth,
-                  );
+                } else if (this.canAddHorizontal(organization, lNode.rect.width, lNode.rect.height)) {
+                  this.insertNodeToRow(organization, lNode, this.getShortestRowIndex(organization), minWidth);
                 } else {
-                  this.insertNodeToRow(
-                    organization,
-                    lNode,
-                    organization.rows.length,
-                    minWidth,
-                  );
+                  this.insertNodeToRow(organization, lNode, organization.rows.length, minWidth);
                 }
                 this.shiftToLastRow(organization);
               }
               return organization;
             };
-            CoSELayout.prototype.insertNodeToRow = function (
-              organization,
-              node,
-              rowIndex,
-              minWidth,
-            ) {
+            CoSELayout.prototype.insertNodeToRow = function(organization, node, rowIndex, minWidth) {
               var minCompoundSize = minWidth;
               if (rowIndex == organization.rows.length) {
                 var secondDimension = [];
@@ -4753,7 +4083,8 @@ var require_cose_base = __commonJS({
                 organization.width = w;
               }
               var h = node.rect.height;
-              if (rowIndex > 0) h += organization.verticalPadding;
+              if (rowIndex > 0)
+                h += organization.verticalPadding;
               var extraHeight = 0;
               if (h > organization.rowHeight[rowIndex]) {
                 extraHeight = organization.rowHeight[rowIndex];
@@ -4763,7 +4094,7 @@ var require_cose_base = __commonJS({
               organization.height += extraHeight;
               organization.rows[rowIndex].push(node);
             };
-            CoSELayout.prototype.getShortestRowIndex = function (organization) {
+            CoSELayout.prototype.getShortestRowIndex = function(organization) {
               var r = -1;
               var min = Number.MAX_VALUE;
               for (var i = 0; i < organization.rows.length; i++) {
@@ -4774,7 +4105,7 @@ var require_cose_base = __commonJS({
               }
               return r;
             };
-            CoSELayout.prototype.getLongestRowIndex = function (organization) {
+            CoSELayout.prototype.getLongestRowIndex = function(organization) {
               var r = -1;
               var max = Number.MIN_VALUE;
               for (var i = 0; i < organization.rows.length; i++) {
@@ -4785,110 +4116,80 @@ var require_cose_base = __commonJS({
               }
               return r;
             };
-            CoSELayout.prototype.canAddHorizontal = function (
-              organization,
-              extraWidth,
-              extraHeight,
-            ) {
+            CoSELayout.prototype.canAddHorizontal = function(organization, extraWidth, extraHeight) {
               var sri = this.getShortestRowIndex(organization);
               if (sri < 0) {
                 return true;
               }
               var min = organization.rowWidth[sri];
-              if (
-                min + organization.horizontalPadding + extraWidth <=
-                organization.width
-              )
+              if (min + organization.horizontalPadding + extraWidth <= organization.width)
                 return true;
               var hDiff = 0;
               if (organization.rowHeight[sri] < extraHeight) {
                 if (sri > 0)
-                  hDiff =
-                    extraHeight +
-                    organization.verticalPadding -
-                    organization.rowHeight[sri];
+                  hDiff = extraHeight + organization.verticalPadding - organization.rowHeight[sri];
               }
               var add_to_row_ratio;
-              if (
-                organization.width - min >=
-                extraWidth + organization.horizontalPadding
-              ) {
-                add_to_row_ratio =
-                  (organization.height + hDiff) /
-                  (min + extraWidth + organization.horizontalPadding);
+              if (organization.width - min >= extraWidth + organization.horizontalPadding) {
+                add_to_row_ratio = (organization.height + hDiff) / (min + extraWidth + organization.horizontalPadding);
               } else {
-                add_to_row_ratio =
-                  (organization.height + hDiff) / organization.width;
+                add_to_row_ratio = (organization.height + hDiff) / organization.width;
               }
               hDiff = extraHeight + organization.verticalPadding;
               var add_new_row_ratio;
               if (organization.width < extraWidth) {
                 add_new_row_ratio = (organization.height + hDiff) / extraWidth;
               } else {
-                add_new_row_ratio =
-                  (organization.height + hDiff) / organization.width;
+                add_new_row_ratio = (organization.height + hDiff) / organization.width;
               }
               if (add_new_row_ratio < 1)
                 add_new_row_ratio = 1 / add_new_row_ratio;
-              if (add_to_row_ratio < 1) add_to_row_ratio = 1 / add_to_row_ratio;
+              if (add_to_row_ratio < 1)
+                add_to_row_ratio = 1 / add_to_row_ratio;
               return add_to_row_ratio < add_new_row_ratio;
             };
-            CoSELayout.prototype.shiftToLastRow = function (organization) {
+            CoSELayout.prototype.shiftToLastRow = function(organization) {
               var longest = this.getLongestRowIndex(organization);
               var last = organization.rowWidth.length - 1;
               var row = organization.rows[longest];
               var node = row[row.length - 1];
               var diff = node.width + organization.horizontalPadding;
-              if (
-                organization.width - organization.rowWidth[last] > diff &&
-                longest != last
-              ) {
+              if (organization.width - organization.rowWidth[last] > diff && longest != last) {
                 row.splice(-1, 1);
                 organization.rows[last].push(node);
-                organization.rowWidth[longest] =
-                  organization.rowWidth[longest] - diff;
-                organization.rowWidth[last] =
-                  organization.rowWidth[last] + diff;
-                organization.width =
-                  organization.rowWidth[
-                    instance.getLongestRowIndex(organization)
-                  ];
+                organization.rowWidth[longest] = organization.rowWidth[longest] - diff;
+                organization.rowWidth[last] = organization.rowWidth[last] + diff;
+                organization.width = organization.rowWidth[instance.getLongestRowIndex(organization)];
                 var maxHeight = Number.MIN_VALUE;
                 for (var i = 0; i < row.length; i++) {
-                  if (row[i].height > maxHeight) maxHeight = row[i].height;
+                  if (row[i].height > maxHeight)
+                    maxHeight = row[i].height;
                 }
-                if (longest > 0) maxHeight += organization.verticalPadding;
-                var prevTotal =
-                  organization.rowHeight[longest] +
-                  organization.rowHeight[last];
+                if (longest > 0)
+                  maxHeight += organization.verticalPadding;
+                var prevTotal = organization.rowHeight[longest] + organization.rowHeight[last];
                 organization.rowHeight[longest] = maxHeight;
-                if (
-                  organization.rowHeight[last] <
-                  node.height + organization.verticalPadding
-                )
-                  organization.rowHeight[last] =
-                    node.height + organization.verticalPadding;
-                var finalTotal =
-                  organization.rowHeight[longest] +
-                  organization.rowHeight[last];
+                if (organization.rowHeight[last] < node.height + organization.verticalPadding)
+                  organization.rowHeight[last] = node.height + organization.verticalPadding;
+                var finalTotal = organization.rowHeight[longest] + organization.rowHeight[last];
                 organization.height += finalTotal - prevTotal;
                 this.shiftToLastRow(organization);
               }
             };
-            CoSELayout.prototype.tilingPreLayout = function () {
+            CoSELayout.prototype.tilingPreLayout = function() {
               if (CoSEConstants.TILE) {
                 this.groupZeroDegreeMembers();
                 this.clearCompounds();
                 this.clearZeroDegreeMembers();
               }
             };
-            CoSELayout.prototype.tilingPostLayout = function () {
+            CoSELayout.prototype.tilingPostLayout = function() {
               if (CoSEConstants.TILE) {
                 this.repopulateZeroDegreeMembers();
                 this.repopulateCompounds();
               }
             };
-            CoSELayout.prototype.reduceTrees = function () {
+            CoSELayout.prototype.reduceTrees = function() {
               var prunedNodesAll = [];
               var containsLeaf = true;
               var node;
@@ -4898,16 +4199,8 @@ var require_cose_base = __commonJS({
                 containsLeaf = false;
                 for (var i = 0; i < allNodes.length; i++) {
                   node = allNodes[i];
-                  if (
-                    node.getEdges().length == 1 &&
-                    !node.getEdges()[0].isInterGraph &&
-                    node.getChild() == null
-                  ) {
-                    prunedNodesInStepTemp.push([
-                      node,
-                      node.getEdges()[0],
-                      node.getOwner(),
-                    ]);
+                  if (node.getEdges().length == 1 && !node.getEdges()[0].isInterGraph && node.getChild() == null) {
+                    prunedNodesInStepTemp.push([node, node.getEdges()[0], node.getOwner()]);
                     containsLeaf = true;
                   }
                 }
@@ -4916,9 +4209,7 @@ var require_cose_base = __commonJS({
                   for (var j = 0; j < prunedNodesInStepTemp.length; j++) {
                     if (prunedNodesInStepTemp[j][0].getEdges().length == 1) {
                       prunedNodesInStep.push(prunedNodesInStepTemp[j]);
-                      prunedNodesInStepTemp[j][0]
-                        .getOwner()
-                        .remove(prunedNodesInStepTemp[j][0]);
+                      prunedNodesInStepTemp[j][0].getOwner().remove(prunedNodesInStepTemp[j][0]);
                     }
                   }
                   prunedNodesAll.push(prunedNodesInStep);
@@ -4928,26 +4219,21 @@ var require_cose_base = __commonJS({
               }
               this.prunedNodesAll = prunedNodesAll;
             };
-            CoSELayout.prototype.growTree = function (prunedNodesAll) {
+            CoSELayout.prototype.growTree = function(prunedNodesAll) {
               var lengthOfPrunedNodesInStep = prunedNodesAll.length;
-              var prunedNodesInStep =
-                prunedNodesAll[lengthOfPrunedNodesInStep - 1];
+              var prunedNodesInStep = prunedNodesAll[lengthOfPrunedNodesInStep - 1];
               var nodeData;
               for (var i = 0; i < prunedNodesInStep.length; i++) {
                 nodeData = prunedNodesInStep[i];
                 this.findPlaceforPrunedNode(nodeData);
                 nodeData[2].add(nodeData[0]);
-                nodeData[2].add(
-                  nodeData[1],
-                  nodeData[1].source,
-                  nodeData[1].target,
-                );
+                nodeData[2].add(nodeData[1], nodeData[1].source, nodeData[1].target);
               }
               prunedNodesAll.splice(prunedNodesAll.length - 1, 1);
               this.graphManager.resetAllNodes();
               this.graphManager.resetAllEdges();
             };
-            CoSELayout.prototype.findPlaceforPrunedNode = function (nodeData) {
+            CoSELayout.prototype.findPlaceforPrunedNode = function(nodeData) {
               var gridForPrunedNode;
               var nodeToConnect;
               var prunedNode = nodeData[0];
@@ -4964,42 +4250,25 @@ var require_cose_base = __commonJS({
               var downNodeCount = 0;
               var rightNodeCount = 0;
               var leftNodeCount = 0;
-              var controlRegions = [
-                upNodeCount,
-                rightNodeCount,
-                downNodeCount,
-                leftNodeCount,
-              ];
+              var controlRegions = [upNodeCount, rightNodeCount, downNodeCount, leftNodeCount];
               if (startGridY > 0) {
                 for (var i = startGridX; i <= finishGridX; i++) {
-                  controlRegions[0] +=
-                    this.grid[i][startGridY - 1].length +
-                    this.grid[i][startGridY].length -
-                    1;
+                  controlRegions[0] += this.grid[i][startGridY - 1].length + this.grid[i][startGridY].length - 1;
                 }
               }
               if (finishGridX < this.grid.length - 1) {
                 for (var i = startGridY; i <= finishGridY; i++) {
-                  controlRegions[1] +=
-                    this.grid[finishGridX + 1][i].length +
-                    this.grid[finishGridX][i].length -
-                    1;
+                  controlRegions[1] += this.grid[finishGridX + 1][i].length + this.grid[finishGridX][i].length - 1;
                 }
               }
               if (finishGridY < this.grid[0].length - 1) {
                 for (var i = startGridX; i <= finishGridX; i++) {
-                  controlRegions[2] +=
-                    this.grid[i][finishGridY + 1].length +
-                    this.grid[i][finishGridY].length -
-                    1;
+                  controlRegions[2] += this.grid[i][finishGridY + 1].length + this.grid[i][finishGridY].length - 1;
                 }
               }
               if (startGridX > 0) {
                 for (var i = startGridY; i <= finishGridY; i++) {
-                  controlRegions[3] +=
-                    this.grid[startGridX - 1][i].length +
-                    this.grid[startGridX][i].length -
-                    1;
+                  controlRegions[3] += this.grid[startGridX - 1][i].length + this.grid[startGridX][i].length - 1;
                 }
               }
               var min = Integer.MAX_VALUE;
@@ -5015,34 +4284,19 @@ var require_cose_base = __commonJS({
                 }
               }
               if (minCount == 3 && min == 0) {
-                if (
-                  controlRegions[0] == 0 &&
-                  controlRegions[1] == 0 &&
-                  controlRegions[2] == 0
-                ) {
+                if (controlRegions[0] == 0 && controlRegions[1] == 0 && controlRegions[2] == 0) {
                   gridForPrunedNode = 1;
-                } else if (
-                  controlRegions[0] == 0 &&
-                  controlRegions[1] == 0 &&
-                  controlRegions[3] == 0
-                ) {
+                } else if (controlRegions[0] == 0 && controlRegions[1] == 0 && controlRegions[3] == 0) {
                   gridForPrunedNode = 0;
-                } else if (
-                  controlRegions[0] == 0 &&
-                  controlRegions[2] == 0 &&
-                  controlRegions[3] == 0
-                ) {
+                } else if (controlRegions[0] == 0 && controlRegions[2] == 0 && controlRegions[3] == 0) {
                   gridForPrunedNode = 3;
-                } else if (
-                  controlRegions[1] == 0 &&
-                  controlRegions[2] == 0 &&
-                  controlRegions[3] == 0
-                ) {
+                } else if (controlRegions[1] == 0 && controlRegions[2] == 0 && controlRegions[3] == 0) {
                   gridForPrunedNode = 2;
                 }
               } else if (minCount == 2 && min == 0) {
                 var random = Math.floor(Math.random() * 2);
                 if (controlRegions[0] == 0 && controlRegions[1] == 0) {
+                  ;
                   if (random == 0) {
                     gridForPrunedNode = 0;
                   } else {
@@ -5086,44 +4340,20 @@ var require_cose_base = __commonJS({
                 gridForPrunedNode = minIndex;
               }
               if (gridForPrunedNode == 0) {
-                prunedNode.setCenter(
-                  nodeToConnect.getCenterX(),
-                  nodeToConnect.getCenterY() -
-                    nodeToConnect.getHeight() / 2 -
-                    FDLayoutConstants.DEFAULT_EDGE_LENGTH -
-                    prunedNode.getHeight() / 2,
-                );
+                prunedNode.setCenter(nodeToConnect.getCenterX(), nodeToConnect.getCenterY() - nodeToConnect.getHeight() / 2 - FDLayoutConstants.DEFAULT_EDGE_LENGTH - prunedNode.getHeight() / 2);
               } else if (gridForPrunedNode == 1) {
-                prunedNode.setCenter(
-                  nodeToConnect.getCenterX() +
-                    nodeToConnect.getWidth() / 2 +
-                    FDLayoutConstants.DEFAULT_EDGE_LENGTH +
-                    prunedNode.getWidth() / 2,
-                  nodeToConnect.getCenterY(),
-                );
+                prunedNode.setCenter(nodeToConnect.getCenterX() + nodeToConnect.getWidth() / 2 + FDLayoutConstants.DEFAULT_EDGE_LENGTH + prunedNode.getWidth() / 2, nodeToConnect.getCenterY());
               } else if (gridForPrunedNode == 2) {
-                prunedNode.setCenter(
-                  nodeToConnect.getCenterX(),
-                  nodeToConnect.getCenterY() +
-                    nodeToConnect.getHeight() / 2 +
-                    FDLayoutConstants.DEFAULT_EDGE_LENGTH +
-                    prunedNode.getHeight() / 2,
-                );
+                prunedNode.setCenter(nodeToConnect.getCenterX(), nodeToConnect.getCenterY() + nodeToConnect.getHeight() / 2 + FDLayoutConstants.DEFAULT_EDGE_LENGTH + prunedNode.getHeight() / 2);
               } else {
-                prunedNode.setCenter(
-                  nodeToConnect.getCenterX() -
-                    nodeToConnect.getWidth() / 2 -
-                    FDLayoutConstants.DEFAULT_EDGE_LENGTH -
-                    prunedNode.getWidth() / 2,
-                  nodeToConnect.getCenterY(),
-                );
+                prunedNode.setCenter(nodeToConnect.getCenterX() - nodeToConnect.getWidth() / 2 - FDLayoutConstants.DEFAULT_EDGE_LENGTH - prunedNode.getWidth() / 2, nodeToConnect.getCenterY());
               }
             };
             module2.exports = CoSELayout;
           },
           /* 7 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
             var coseBase = {};
             coseBase.layoutBase = __webpack_require__(0);
@@ -5134,20 +4364,17 @@ var require_cose_base = __commonJS({
             coseBase.CoSELayout = __webpack_require__(6);
             coseBase.CoSENode = __webpack_require__(5);
             module2.exports = coseBase;
-          },
+          }
           /******/
         ])
       );
     });
-  },
+  }
 });
 
 // node_modules/.pnpm/cytoscape-cose-bilkent@4.1.0_cytoscape@3.28.1/node_modules/cytoscape-cose-bilkent/cytoscape-cose-bilkent.js
 var require_cytoscape_cose_bilkent = __commonJS({
-  "node_modules/.pnpm/cytoscape-cose-bilkent@4.1.0_cytoscape@3.28.1/node_modules/cytoscape-cose-bilkent/cytoscape-cose-bilkent.js"(
-    exports,
-    module,
-  ) {
+  "node_modules/.pnpm/cytoscape-cose-bilkent@4.1.0_cytoscape@3.28.1/node_modules/cytoscape-cose-bilkent/cytoscape-cose-bilkent.js"(exports, module) {
     (function webpackUniversalModuleDefinition(root, factory) {
       if (typeof exports === "object" && typeof module === "object")
         module.exports = factory(require_cose_base());
@@ -5155,40 +4382,36 @@ var require_cytoscape_cose_bilkent = __commonJS({
         define(["cose-base"], factory);
       else if (typeof exports === "object")
         exports["cytoscapeCoseBilkent"] = factory(require_cose_base());
-      else root["cytoscapeCoseBilkent"] = factory(root["coseBase"]);
-    })(exports, function (__WEBPACK_EXTERNAL_MODULE_0__) {
+      else
+        root["cytoscapeCoseBilkent"] = factory(root["coseBase"]);
+    })(exports, function(__WEBPACK_EXTERNAL_MODULE_0__) {
       return (
         /******/
-        (function (modules) {
+        function(modules) {
           var installedModules = {};
           function __webpack_require__(moduleId) {
             if (installedModules[moduleId]) {
               return installedModules[moduleId].exports;
             }
-            var module2 = (installedModules[moduleId] = {
+            var module2 = installedModules[moduleId] = {
               /******/
               i: moduleId,
               /******/
               l: false,
               /******/
-              exports: {},
+              exports: {}
               /******/
-            });
-            modules[moduleId].call(
-              module2.exports,
-              module2,
-              module2.exports,
-              __webpack_require__,
-            );
+            };
+            modules[moduleId].call(module2.exports, module2, module2.exports, __webpack_require__);
             module2.l = true;
             return module2.exports;
           }
           __webpack_require__.m = modules;
           __webpack_require__.c = installedModules;
-          __webpack_require__.i = function (value) {
+          __webpack_require__.i = function(value) {
             return value;
           };
-          __webpack_require__.d = function (exports2, name, getter) {
+          __webpack_require__.d = function(exports2, name, getter) {
             if (!__webpack_require__.o(exports2, name)) {
               Object.defineProperty(exports2, name, {
                 /******/
@@ -5196,44 +4419,43 @@ var require_cytoscape_cose_bilkent = __commonJS({
                 /******/
                 enumerable: true,
                 /******/
-                get: getter,
+                get: getter
                 /******/
               });
             }
           };
-          __webpack_require__.n = function (module2) {
-            var getter =
-              module2 && module2.__esModule
-                ? /******/
-                  function getDefault() {
-                    return module2["default"];
-                  }
-                : /******/
-                  function getModuleExports() {
-                    return module2;
-                  };
+          __webpack_require__.n = function(module2) {
+            var getter = module2 && module2.__esModule ? (
+              /******/
+              function getDefault() {
+                return module2["default"];
+              }
+            ) : (
+              /******/
+              function getModuleExports() {
+                return module2;
+              }
+            );
             __webpack_require__.d(getter, "a", getter);
             return getter;
           };
-          __webpack_require__.o = function (object, property) {
+          __webpack_require__.o = function(object, property) {
             return Object.prototype.hasOwnProperty.call(object, property);
           };
           __webpack_require__.p = "";
-          return __webpack_require__((__webpack_require__.s = 1));
-        })([
+          return __webpack_require__(__webpack_require__.s = 1);
+        }([
           /* 0 */
           /***/
-          function (module2, exports2) {
+          function(module2, exports2) {
             module2.exports = __WEBPACK_EXTERNAL_MODULE_0__;
           },
           /* 1 */
           /***/
-          function (module2, exports2, __webpack_require__) {
+          function(module2, exports2, __webpack_require__) {
             "use strict";
-            var LayoutConstants =
-              __webpack_require__(0).layoutBase.LayoutConstants;
-            var FDLayoutConstants =
-              __webpack_require__(0).layoutBase.FDLayoutConstants;
+            var LayoutConstants = __webpack_require__(0).layoutBase.LayoutConstants;
+            var FDLayoutConstants = __webpack_require__(0).layoutBase.FDLayoutConstants;
             var CoSEConstants = __webpack_require__(0).CoSEConstants;
             var CoSELayout = __webpack_require__(0).CoSELayout;
             var CoSENode = __webpack_require__(0).CoSENode;
@@ -5241,12 +4463,14 @@ var require_cytoscape_cose_bilkent = __commonJS({
             var DimensionD2 = __webpack_require__(0).layoutBase.DimensionD;
             var defaults = {
               // Called on `layoutready`
-              ready: function ready() {},
+              ready: function ready() {
+              },
               // Called on `layoutstop`
-              stop: function stop() {},
-              // 'draft', 'default' or 'proof"
-              // - 'draft' fast cooling rate
-              // - 'default' moderate cooling rate
+              stop: function stop() {
+              },
+              // 'draft', 'default' or 'proof" 
+              // - 'draft' fast cooling rate 
+              // - 'default' moderate cooling rate 
               // - "proof" slow cooling rate
               quality: "default",
               // include labels in node dimensions
@@ -5288,7 +4512,7 @@ var require_cytoscape_cose_bilkent = __commonJS({
               // Gravity range (constant)
               gravityRange: 3.8,
               // Initial cooling factor for incremental layout
-              initialEnergyOnIncremental: 0.5,
+              initialEnergyOnIncremental: 0.5
             };
             function extend(defaults2, options) {
               var obj = {};
@@ -5300,80 +4524,51 @@ var require_cytoscape_cose_bilkent = __commonJS({
               }
               return obj;
             }
+            ;
             function _CoSELayout(_options) {
               this.options = extend(defaults, _options);
               getUserOptions(this.options);
             }
             var getUserOptions = function getUserOptions2(options) {
               if (options.nodeRepulsion != null)
-                CoSEConstants.DEFAULT_REPULSION_STRENGTH =
-                  FDLayoutConstants.DEFAULT_REPULSION_STRENGTH =
-                    options.nodeRepulsion;
+                CoSEConstants.DEFAULT_REPULSION_STRENGTH = FDLayoutConstants.DEFAULT_REPULSION_STRENGTH = options.nodeRepulsion;
               if (options.idealEdgeLength != null)
-                CoSEConstants.DEFAULT_EDGE_LENGTH =
-                  FDLayoutConstants.DEFAULT_EDGE_LENGTH =
-                    options.idealEdgeLength;
+                CoSEConstants.DEFAULT_EDGE_LENGTH = FDLayoutConstants.DEFAULT_EDGE_LENGTH = options.idealEdgeLength;
               if (options.edgeElasticity != null)
-                CoSEConstants.DEFAULT_SPRING_STRENGTH =
-                  FDLayoutConstants.DEFAULT_SPRING_STRENGTH =
-                    options.edgeElasticity;
+                CoSEConstants.DEFAULT_SPRING_STRENGTH = FDLayoutConstants.DEFAULT_SPRING_STRENGTH = options.edgeElasticity;
               if (options.nestingFactor != null)
-                CoSEConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR =
-                  FDLayoutConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR =
-                    options.nestingFactor;
+                CoSEConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR = FDLayoutConstants.PER_LEVEL_IDEAL_EDGE_LENGTH_FACTOR = options.nestingFactor;
               if (options.gravity != null)
-                CoSEConstants.DEFAULT_GRAVITY_STRENGTH =
-                  FDLayoutConstants.DEFAULT_GRAVITY_STRENGTH = options.gravity;
+                CoSEConstants.DEFAULT_GRAVITY_STRENGTH = FDLayoutConstants.DEFAULT_GRAVITY_STRENGTH = options.gravity;
               if (options.numIter != null)
-                CoSEConstants.MAX_ITERATIONS =
-                  FDLayoutConstants.MAX_ITERATIONS = options.numIter;
+                CoSEConstants.MAX_ITERATIONS = FDLayoutConstants.MAX_ITERATIONS = options.numIter;
               if (options.gravityRange != null)
-                CoSEConstants.DEFAULT_GRAVITY_RANGE_FACTOR =
-                  FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR =
-                    options.gravityRange;
+                CoSEConstants.DEFAULT_GRAVITY_RANGE_FACTOR = FDLayoutConstants.DEFAULT_GRAVITY_RANGE_FACTOR = options.gravityRange;
               if (options.gravityCompound != null)
-                CoSEConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH =
-                  FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH =
-                    options.gravityCompound;
+                CoSEConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_STRENGTH = options.gravityCompound;
               if (options.gravityRangeCompound != null)
-                CoSEConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR =
-                  FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR =
-                    options.gravityRangeCompound;
+                CoSEConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR = FDLayoutConstants.DEFAULT_COMPOUND_GRAVITY_RANGE_FACTOR = options.gravityRangeCompound;
               if (options.initialEnergyOnIncremental != null)
-                CoSEConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL =
-                  FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL =
-                    options.initialEnergyOnIncremental;
-              if (options.quality == "draft") LayoutConstants.QUALITY = 0;
-              else if (options.quality == "proof") LayoutConstants.QUALITY = 2;
-              else LayoutConstants.QUALITY = 1;
-              CoSEConstants.NODE_DIMENSIONS_INCLUDE_LABELS =
-                FDLayoutConstants.NODE_DIMENSIONS_INCLUDE_LABELS =
-                LayoutConstants.NODE_DIMENSIONS_INCLUDE_LABELS =
-                  options.nodeDimensionsIncludeLabels;
-              CoSEConstants.DEFAULT_INCREMENTAL =
-                FDLayoutConstants.DEFAULT_INCREMENTAL =
-                LayoutConstants.DEFAULT_INCREMENTAL =
-                  !options.randomize;
-              CoSEConstants.ANIMATE =
-                FDLayoutConstants.ANIMATE =
-                LayoutConstants.ANIMATE =
-                  options.animate;
+                CoSEConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL = FDLayoutConstants.DEFAULT_COOLING_FACTOR_INCREMENTAL = options.initialEnergyOnIncremental;
+              if (options.quality == "draft")
+                LayoutConstants.QUALITY = 0;
+              else if (options.quality == "proof")
+                LayoutConstants.QUALITY = 2;
+              else
+                LayoutConstants.QUALITY = 1;
+              CoSEConstants.NODE_DIMENSIONS_INCLUDE_LABELS = FDLayoutConstants.NODE_DIMENSIONS_INCLUDE_LABELS = LayoutConstants.NODE_DIMENSIONS_INCLUDE_LABELS = options.nodeDimensionsIncludeLabels;
+              CoSEConstants.DEFAULT_INCREMENTAL = FDLayoutConstants.DEFAULT_INCREMENTAL = LayoutConstants.DEFAULT_INCREMENTAL = !options.randomize;
+              CoSEConstants.ANIMATE = FDLayoutConstants.ANIMATE = LayoutConstants.ANIMATE = options.animate;
               CoSEConstants.TILE = options.tile;
-              CoSEConstants.TILING_PADDING_VERTICAL =
-                typeof options.tilingPaddingVertical === "function"
-                  ? options.tilingPaddingVertical.call()
-                  : options.tilingPaddingVertical;
-              CoSEConstants.TILING_PADDING_HORIZONTAL =
-                typeof options.tilingPaddingHorizontal === "function"
-                  ? options.tilingPaddingHorizontal.call()
-                  : options.tilingPaddingHorizontal;
+              CoSEConstants.TILING_PADDING_VERTICAL = typeof options.tilingPaddingVertical === "function" ? options.tilingPaddingVertical.call() : options.tilingPaddingVertical;
+              CoSEConstants.TILING_PADDING_HORIZONTAL = typeof options.tilingPaddingHorizontal === "function" ? options.tilingPaddingHorizontal.call() : options.tilingPaddingHorizontal;
             };
-            _CoSELayout.prototype.run = function () {
+            _CoSELayout.prototype.run = function() {
               var ready;
               var frameId;
               var options = this.options;
-              var idToLNode = (this.idToLNode = {});
-              var layout = (this.layout = new CoSELayout());
+              var idToLNode = this.idToLNode = {};
+              var layout = this.layout = new CoSELayout();
               var self = this;
               self.stopped = false;
               this.cy = this.options.cy;
@@ -5383,19 +4578,12 @@ var require_cytoscape_cose_bilkent = __commonJS({
               var nodes = this.options.eles.nodes();
               var edges = this.options.eles.edges();
               this.root = gm.addRoot();
-              this.processChildrenList(
-                this.root,
-                this.getTopMostNodes(nodes),
-                layout,
-              );
+              this.processChildrenList(this.root, this.getTopMostNodes(nodes), layout);
               for (var i = 0; i < edges.length; i++) {
                 var edge = edges[i];
                 var sourceNode = this.idToLNode[edge.data("source")];
                 var targetNode = this.idToLNode[edge.data("target")];
-                if (
-                  sourceNode !== targetNode &&
-                  sourceNode.getEdgesBetween(targetNode).length == 0
-                ) {
+                if (sourceNode !== targetNode && sourceNode.getEdgesBetween(targetNode).length == 0) {
                   var e1 = gm.add(layout.newEdge(), sourceNode, targetNode);
                   e1.id = edge.id();
                 }
@@ -5408,7 +4596,7 @@ var require_cytoscape_cose_bilkent = __commonJS({
                 var lNode = self.idToLNode[theId];
                 return {
                   x: lNode.getRect().getCenterX(),
-                  y: lNode.getRect().getCenterY(),
+                  y: lNode.getRect().getCenterY()
                 };
               };
               var iterateAnimated = function iterateAnimated2() {
@@ -5446,7 +4634,7 @@ var require_cytoscape_cose_bilkent = __commonJS({
                   return;
                 }
                 var animationData = self.layout.getPositionsData();
-                options.eles.nodes().positions(function (ele, i3) {
+                options.eles.nodes().positions(function(ele, i3) {
                   if (typeof ele === "number") {
                     ele = i3;
                   }
@@ -5455,9 +4643,7 @@ var require_cytoscape_cose_bilkent = __commonJS({
                     var pNode = animationData[theId];
                     var temp = ele;
                     while (pNode == null) {
-                      pNode =
-                        animationData[temp.data("parent")] ||
-                        animationData["DummyCompound_" + temp.data("parent")];
+                      pNode = animationData[temp.data("parent")] || animationData["DummyCompound_" + temp.data("parent")];
                       animationData[theId] = pNode;
                       temp = temp.parent()[0];
                       if (temp == void 0) {
@@ -5467,12 +4653,12 @@ var require_cytoscape_cose_bilkent = __commonJS({
                     if (pNode != null) {
                       return {
                         x: pNode.x,
-                        y: pNode.y,
+                        y: pNode.y
                       };
                     } else {
                       return {
                         x: ele.position("x"),
-                        y: ele.position("y"),
+                        y: ele.position("y")
                       };
                     }
                   }
@@ -5480,27 +4666,24 @@ var require_cytoscape_cose_bilkent = __commonJS({
                 afterReposition();
                 frameId = requestAnimationFrame(iterateAnimated2);
               };
-              layout.addListener("layoutstarted", function () {
+              layout.addListener("layoutstarted", function() {
                 if (self.options.animate === "during") {
                   frameId = requestAnimationFrame(iterateAnimated);
                 }
               });
               layout.runLayout();
               if (this.options.animate !== "during") {
-                self.options.eles
-                  .nodes()
-                  .not(":parent")
-                  .layoutPositions(self, self.options, getPositions);
+                self.options.eles.nodes().not(":parent").layoutPositions(self, self.options, getPositions);
                 ready = false;
               }
               return this;
             };
-            _CoSELayout.prototype.getTopMostNodes = function (nodes) {
+            _CoSELayout.prototype.getTopMostNodes = function(nodes) {
               var nodesMap = {};
               for (var i = 0; i < nodes.length; i++) {
                 nodesMap[nodes[i].id()] = true;
               }
-              var roots = nodes.filter(function (ele, i2) {
+              var roots = nodes.filter(function(ele, i2) {
                 if (typeof ele === "number") {
                   ele = i2;
                 }
@@ -5515,37 +4698,17 @@ var require_cytoscape_cose_bilkent = __commonJS({
               });
               return roots;
             };
-            _CoSELayout.prototype.processChildrenList = function (
-              parent,
-              children,
-              layout,
-            ) {
+            _CoSELayout.prototype.processChildrenList = function(parent, children, layout) {
               var size = children.length;
               for (var i = 0; i < size; i++) {
                 var theChild = children[i];
                 var children_of_children = theChild.children();
                 var theNode;
                 var dimensions = theChild.layoutDimensions({
-                  nodeDimensionsIncludeLabels:
-                    this.options.nodeDimensionsIncludeLabels,
+                  nodeDimensionsIncludeLabels: this.options.nodeDimensionsIncludeLabels
                 });
-                if (
-                  theChild.outerWidth() != null &&
-                  theChild.outerHeight() != null
-                ) {
-                  theNode = parent.add(
-                    new CoSENode(
-                      layout.graphManager,
-                      new PointD(
-                        theChild.position("x") - dimensions.w / 2,
-                        theChild.position("y") - dimensions.h / 2,
-                      ),
-                      new DimensionD2(
-                        parseFloat(dimensions.w),
-                        parseFloat(dimensions.h),
-                      ),
-                    ),
-                  );
+                if (theChild.outerWidth() != null && theChild.outerHeight() != null) {
+                  theNode = parent.add(new CoSENode(layout.graphManager, new PointD(theChild.position("x") - dimensions.w / 2, theChild.position("y") - dimensions.h / 2), new DimensionD2(parseFloat(dimensions.w), parseFloat(dimensions.h))));
                 } else {
                   theNode = parent.add(new CoSENode(this.graphManager));
                 }
@@ -5556,14 +4719,8 @@ var require_cytoscape_cose_bilkent = __commonJS({
                 theNode.paddingBottom = parseInt(theChild.css("padding"));
                 if (this.options.nodeDimensionsIncludeLabels) {
                   if (theChild.isParent()) {
-                    var labelWidth = theChild.boundingBox({
-                      includeLabels: true,
-                      includeNodes: false,
-                    }).w;
-                    var labelHeight = theChild.boundingBox({
-                      includeLabels: true,
-                      includeNodes: false,
-                    }).h;
+                    var labelWidth = theChild.boundingBox({ includeLabels: true, includeNodes: false }).w;
+                    var labelHeight = theChild.boundingBox({ includeLabels: true, includeNodes: false }).h;
                     var labelPos = theChild.css("text-halign");
                     theNode.labelWidth = labelWidth;
                     theNode.labelHeight = labelHeight;
@@ -5577,23 +4734,14 @@ var require_cytoscape_cose_bilkent = __commonJS({
                 if (isNaN(theNode.rect.y)) {
                   theNode.rect.y = 0;
                 }
-                if (
-                  children_of_children != null &&
-                  children_of_children.length > 0
-                ) {
+                if (children_of_children != null && children_of_children.length > 0) {
                   var theNewGraph;
-                  theNewGraph = layout
-                    .getGraphManager()
-                    .add(layout.newGraph(), theNode);
-                  this.processChildrenList(
-                    theNewGraph,
-                    children_of_children,
-                    layout,
-                  );
+                  theNewGraph = layout.getGraphManager().add(layout.newGraph(), theNode);
+                  this.processChildrenList(theNewGraph, children_of_children, layout);
                 }
               }
             };
-            _CoSELayout.prototype.stop = function () {
+            _CoSELayout.prototype.stop = function() {
               this.stopped = true;
               return this;
             };
@@ -5604,12 +4752,12 @@ var require_cytoscape_cose_bilkent = __commonJS({
               register(cytoscape);
             }
             module2.exports = register;
-          },
+          }
           /******/
         ])
       );
     });
-  },
+  }
 });
 export default require_cytoscape_cose_bilkent();
 //# sourceMappingURL=cytoscape-cose-bilkent.js.map
