@@ -2,6 +2,7 @@ node_modules
 
 # viteoress cache file
 /docs/.vitepress/cache
+/docs/.vitepress/cache/deps
 
 /.cache
 /build
