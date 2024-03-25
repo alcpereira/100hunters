@@ -21,7 +21,12 @@ module.exports = {
   },
 
   // ⚠️ Keep "prettier" last to avoid conflicts with other configs ⚠️
-  extends: ["eslint:recommended", "plugin:storybook/recommended", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:md/recommended",
+    "prettier",
+  ],
 
   overrides: [
     // React
