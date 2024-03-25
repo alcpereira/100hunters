@@ -21,9 +21,7 @@ const remixHandler = createRequestHandler({
         viteDevServer.ssrLoadModule(
           "virtual:remix/server-build",
         ) as unknown as Promise<ServerBuild>
-    : /* eslint-disable */
-      await import("./build/server/index.js"),
-  /* eslint-enable */
+    : await import("./build/server/index.js"),
 });
 
 const app = express();

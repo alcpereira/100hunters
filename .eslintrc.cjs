@@ -21,44 +21,9 @@ module.exports = {
   },
 
   // ⚠️ Keep "prettier" last to avoid conflicts with other configs ⚠️
-  extends: [
-    "eslint:recommended",
-    "plugin:storybook/recommended",
-    "plugin:md/recommended",
-    "prettier",
-  ],
-
-  plugins: ["prettier"],
-  rules: {
-    "md/remark": [
-      "warn",
-      {
-        // This object corresponds to object you would export in .remarkrc file
-        plugins: [
-          "preset-lint-markdown-style-guide",
-          "frontmatter",
-          "remark-lint-alphabetize-lists",
-        ],
-      },
-    ],
-  },
+  extends: ["eslint:recommended", "plugin:storybook/recommended", "prettier"],
 
   overrides: [
-    // markdown
-    {
-      files: ["*.md"],
-      parser: "markdown-eslint-parser",
-      rules: {
-        "prettier/prettier": [
-          "error",
-          // Important to force prettier to use "markdown" parser - otherwise it wouldn't be able to parse *.md files.
-          // You also can configure other options supported by prettier here - "prose-wrap" is
-          // particularly useful for *.md files
-          { parser: "markdown" },
-        ],
-      },
-    },
-
     // React
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
