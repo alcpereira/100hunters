@@ -38,6 +38,11 @@ body?
 footer?
 ```
 
+** Important **
+We are using lint-stage with a pre-commit hook to check for errors and formatting issues.
+As such, we recommand you to build the project at least one time to not have problems
+with "/build/server/index.js" file missing from eslint parser.
+
 ### Documentation
 
 **Type**:
