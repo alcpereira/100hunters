@@ -1,7 +1,17 @@
+# npm related
 node_modules
 
+# Vite cache
 /.cache
+
+# remix build folder
 /build
+
+# vitest coverage
+coverage
+
+# environment files
 .env
 
+# misc
 **/.DS_Store
