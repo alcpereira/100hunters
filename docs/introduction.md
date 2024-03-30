@@ -1,19 +1,3 @@
-# 100Hunters
-
-# Table of contents
-
-- [100Hunters](#100hunters)
-- [Table of contents](#table-of-contents)
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies used](#technologies-used)
-- [Folder structure](#folder-structure)
-- [Setup Instructions](#setup-instructions)
-- [Contribute](#contribute)
-- [License](#license)
-
----
-
 # Overview
 
 This project aims to create a Kanban board tailored specifically for managing the job hunt process after completing the 100 Devs program. The Kanban board will provide a visual representation of the job search pipeline, allowing users to track their progress, manage tasks efficiently, and stay organized throughout the job hunt journey.
@@ -52,16 +36,6 @@ This project aims to create a Kanban board tailored specifically for managing th
     ├── mermaid
     └── seed
 ```
-
-# Setup Instructions
-
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies using npm install.
-4. Set up the backend server and database.
-5. Run the frontend application using npm start.
-6. Access the application through your web browser.
-7. Sign up or log in to start using the Kanban board for managing your job hunt.
 
 # Contribute
 
